@@ -18,8 +18,8 @@ import p658rx.Scheduler;
 import p658rx.Subscriber;
 import p658rx.Subscription;
 
-/* compiled from: OnDelayedEmissionHandler.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: OnDelayedEmissionHandler.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OnDelayedEmissionHandler<T> implements Observable.InterfaceC13006b<T, T> {
     private Subscription delaySubscription;
     private final AtomicBoolean hasFinished;
@@ -28,8 +28,8 @@ public final class OnDelayedEmissionHandler<T> implements Observable.InterfaceC1
     private final long timeout;
     private final TimeUnit unit;
 
-    /* compiled from: OnDelayedEmissionHandler.kt */
-    /* renamed from: com.discord.utilities.rx.OnDelayedEmissionHandler$call$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.OnDelayedEmissionHandler$call$1 */
+    /* JADX INFO: compiled from: OnDelayedEmissionHandler.kt */
     public static final class C68941 extends Lambda implements Function1<Long, Unit> {
         public C68941() {
             super(1);
@@ -41,7 +41,7 @@ public final class OnDelayedEmissionHandler<T> implements Observable.InterfaceC1
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             if (OnDelayedEmissionHandler.access$getHasFinished$p(OnDelayedEmissionHandler.this).get()) {
                 return;
@@ -50,8 +50,8 @@ public final class OnDelayedEmissionHandler<T> implements Observable.InterfaceC1
         }
     }
 
-    /* compiled from: OnDelayedEmissionHandler.kt */
-    /* renamed from: com.discord.utilities.rx.OnDelayedEmissionHandler$call$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.OnDelayedEmissionHandler$call$2 */
+    /* JADX INFO: compiled from: OnDelayedEmissionHandler.kt */
     public static final class C68952 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ OnDelayedEmissionHandler2 $wrappedSubscriber;
 
@@ -67,7 +67,7 @@ public final class OnDelayedEmissionHandler<T> implements Observable.InterfaceC1
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             OnDelayedEmissionHandler2 onDelayedEmissionHandler2 = this.$wrappedSubscriber;
@@ -77,8 +77,8 @@ public final class OnDelayedEmissionHandler<T> implements Observable.InterfaceC1
         }
     }
 
-    /* compiled from: OnDelayedEmissionHandler.kt */
-    /* renamed from: com.discord.utilities.rx.OnDelayedEmissionHandler$call$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.OnDelayedEmissionHandler$call$3 */
+    /* JADX INFO: compiled from: OnDelayedEmissionHandler.kt */
     public static final class C68963 extends Lambda implements Function1<Subscription, Unit> {
         public C68963() {
             super(1);
@@ -90,7 +90,7 @@ public final class OnDelayedEmissionHandler<T> implements Observable.InterfaceC1
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             OnDelayedEmissionHandler.access$setDelaySubscription$p(OnDelayedEmissionHandler.this, subscription);

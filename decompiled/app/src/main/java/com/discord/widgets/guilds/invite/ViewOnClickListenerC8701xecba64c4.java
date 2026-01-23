@@ -1,12 +1,11 @@
 package com.discord.widgets.guilds.invite;
 
-import android.content.res.Resources;
 import android.view.View;
 import com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel;
 
-/* compiled from: WidgetGuildInviteShareSheet.kt */
-/* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareSheet$configureNormalUI$$inlined$with$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareSheet$configureNormalUI$$inlined$with$lambda$1 */
+/* JADX INFO: compiled from: WidgetGuildInviteShareSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewOnClickListenerC8701xecba64c4 implements View.OnClickListener {
     public final /* synthetic */ GuildInvite $invite;
     public final /* synthetic */ String $searchQuery$inlined;
@@ -21,7 +20,7 @@ public final class ViewOnClickListenerC8701xecba64c4 implements View.OnClickList
     }
 
     @Override // android.view.View.OnClickListener
-    public final void onClick(View view) throws Resources.NotFoundException {
+    public final void onClick(View view) {
         GuildInviteUiHelper.shareLinkClick(this.this$0.getContext(), this.$invite, this.$viewState$inlined.getChannel());
     }
 }

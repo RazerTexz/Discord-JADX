@@ -50,8 +50,8 @@ import p658rx.Observable;
 import p658rx.functions.Func2;
 import p659s.p660a.Dispatchers;
 
-/* compiled from: StoreNotifications.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreNotifications.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreNotifications extends Store {
     private static final long INAPP_MESSAGE_WINDOW_MS = 10000;
     private String authToken;
@@ -62,8 +62,8 @@ public final class StoreNotifications extends Store {
     private String pushTokenPersisted;
     private final StoreStream stream;
 
-    /* compiled from: StoreNotifications.kt */
-    /* renamed from: com.discord.stores.StoreNotifications$configureContextSetter$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotifications$configureContextSetter$1 */
+    /* JADX INFO: compiled from: StoreNotifications.kt */
     public static final class C62931 extends ActivityLifecycleCallbacks {
         public C62931() {
         }
@@ -83,8 +83,8 @@ public final class StoreNotifications extends Store {
         }
     }
 
-    /* compiled from: StoreNotifications.kt */
-    /* renamed from: com.discord.stores.StoreNotifications$configureNotificationClient$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotifications$configureNotificationClient$1 */
+    /* JADX INFO: compiled from: StoreNotifications.kt */
     public static final /* synthetic */ class C62941 extends FunctionReferenceImpl implements Function1<String, Unit> {
         public C62941(StoreNotifications storeNotifications) {
             super(1, storeNotifications, StoreNotifications.class, "handleRegistrationToken", "handleRegistrationToken(Ljava/lang/String;)V", 0);
@@ -96,14 +96,14 @@ public final class StoreNotifications extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             StoreNotifications.access$handleRegistrationToken((StoreNotifications) this.receiver, str);
         }
     }
 
-    /* compiled from: StoreNotifications.kt */
-    /* renamed from: com.discord.stores.StoreNotifications$configureNotificationClient$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotifications$configureNotificationClient$2 */
+    /* JADX INFO: compiled from: StoreNotifications.kt */
     public static final class C62952<T1, T2, R> implements Func2<NotificationClient.SettingsV2, Boolean, Tuples2<? extends NotificationClient.SettingsV2, ? extends Boolean>> {
         public static final C62952 INSTANCE = new C62952();
 
@@ -112,14 +112,14 @@ public final class StoreNotifications extends Store {
             return call2(settingsV2, bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Tuples2<NotificationClient.SettingsV2, Boolean> call2(NotificationClient.SettingsV2 settingsV2, Boolean bool) {
             return Tuples.m10073to(settingsV2, bool);
         }
     }
 
-    /* compiled from: StoreNotifications.kt */
-    /* renamed from: com.discord.stores.StoreNotifications$configureNotificationClient$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotifications$configureNotificationClient$3 */
+    /* JADX INFO: compiled from: StoreNotifications.kt */
     public static final class C62963 extends Lambda implements Function1<Tuples2<? extends NotificationClient.SettingsV2, ? extends Boolean>, Unit> {
         public static final C62963 INSTANCE = new C62963();
 
@@ -133,7 +133,7 @@ public final class StoreNotifications extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Tuples2<NotificationClient.SettingsV2, Boolean> tuples2) {
             NotificationClient.SettingsV2 settingsV2Component1 = tuples2.component1();
             Boolean boolComponent2 = tuples2.component2();
@@ -144,8 +144,8 @@ public final class StoreNotifications extends Store {
         }
     }
 
-    /* compiled from: StoreNotifications.kt */
-    /* renamed from: com.discord.stores.StoreNotifications$displayPopup$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotifications$displayPopup$1 */
+    /* JADX INFO: compiled from: StoreNotifications.kt */
     public static final class C62991 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ Message $message;
@@ -163,7 +163,7 @@ public final class StoreNotifications extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "view");
             Intent intentSelectChannel = IntentUtils.RouteBuilders.selectChannel(this.$channel.getId(), this.$channel.getGuildId(), Long.valueOf(this.$message.getId()));
@@ -175,9 +175,9 @@ public final class StoreNotifications extends Store {
         }
     }
 
-    /* compiled from: StoreNotifications.kt */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotifications$handleChannelSelected$1 */
+    /* JADX INFO: compiled from: StoreNotifications.kt */
     @DebugMetadata(m10084c = "com.discord.stores.StoreNotifications$handleChannelSelected$1", m10085f = "StoreNotifications.kt", m10086l = {}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.stores.StoreNotifications$handleChannelSelected$1 */
     public static final class C63001 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ long $channelId;
         public int label;
@@ -211,8 +211,8 @@ public final class StoreNotifications extends Store {
         }
     }
 
-    /* compiled from: StoreNotifications.kt */
-    /* renamed from: com.discord.stores.StoreNotifications$setEnabled$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotifications$setEnabled$1 */
+    /* JADX INFO: compiled from: StoreNotifications.kt */
     public static final class C63011 extends Lambda implements Function1<NotificationClient.SettingsV2, NotificationClient.SettingsV2> {
         public final /* synthetic */ boolean $enabled;
 
@@ -227,15 +227,15 @@ public final class StoreNotifications extends Store {
             return invoke2(settingsV2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NotificationClient.SettingsV2 invoke2(NotificationClient.SettingsV2 settingsV2) {
             Intrinsics3.checkNotNullParameter(settingsV2, "it");
             return NotificationClient.SettingsV2.copy$default(settingsV2, this.$enabled, false, false, false, false, false, null, null, null, 510, null);
         }
     }
 
-    /* compiled from: StoreNotifications.kt */
-    /* renamed from: com.discord.stores.StoreNotifications$setNotificationLightDisabled$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotifications$setNotificationLightDisabled$1 */
+    /* JADX INFO: compiled from: StoreNotifications.kt */
     public static final class C63021 extends Lambda implements Function1<NotificationClient.SettingsV2, NotificationClient.SettingsV2> {
         public final /* synthetic */ boolean $notificationLightDisabled;
 
@@ -250,15 +250,15 @@ public final class StoreNotifications extends Store {
             return invoke2(settingsV2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NotificationClient.SettingsV2 invoke2(NotificationClient.SettingsV2 settingsV2) {
             Intrinsics3.checkNotNullParameter(settingsV2, "it");
             return NotificationClient.SettingsV2.copy$default(settingsV2, false, false, false, this.$notificationLightDisabled, false, false, null, null, null, 503, null);
         }
     }
 
-    /* compiled from: StoreNotifications.kt */
-    /* renamed from: com.discord.stores.StoreNotifications$setNotificationSoundDisabled$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotifications$setNotificationSoundDisabled$1 */
+    /* JADX INFO: compiled from: StoreNotifications.kt */
     public static final class C63031 extends Lambda implements Function1<NotificationClient.SettingsV2, NotificationClient.SettingsV2> {
         public final /* synthetic */ boolean $notificationSoundDisabled;
 
@@ -273,15 +273,15 @@ public final class StoreNotifications extends Store {
             return invoke2(settingsV2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NotificationClient.SettingsV2 invoke2(NotificationClient.SettingsV2 settingsV2) {
             Intrinsics3.checkNotNullParameter(settingsV2, "it");
             return NotificationClient.SettingsV2.copy$default(settingsV2, false, false, false, false, this.$notificationSoundDisabled, false, null, null, null, 495, null);
         }
     }
 
-    /* compiled from: StoreNotifications.kt */
-    /* renamed from: com.discord.stores.StoreNotifications$setNotificationsVibrateDisabled$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotifications$setNotificationsVibrateDisabled$1 */
+    /* JADX INFO: compiled from: StoreNotifications.kt */
     public static final class C63041 extends Lambda implements Function1<NotificationClient.SettingsV2, NotificationClient.SettingsV2> {
         public final /* synthetic */ boolean $notificationsVibrateDisabled;
 
@@ -296,15 +296,15 @@ public final class StoreNotifications extends Store {
             return invoke2(settingsV2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NotificationClient.SettingsV2 invoke2(NotificationClient.SettingsV2 settingsV2) {
             Intrinsics3.checkNotNullParameter(settingsV2, "it");
             return NotificationClient.SettingsV2.copy$default(settingsV2, false, false, false, false, false, this.$notificationsVibrateDisabled, null, null, null, 479, null);
         }
     }
 
-    /* compiled from: StoreNotifications.kt */
-    /* renamed from: com.discord.stores.StoreNotifications$tryTokenPersist$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotifications$tryTokenPersist$1 */
+    /* JADX INFO: compiled from: StoreNotifications.kt */
     public static final class C63051 extends Lambda implements Function1<Void, Unit> {
         public C63051() {
             super(1);
@@ -316,7 +316,7 @@ public final class StoreNotifications extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
             StoreNotifications storeNotifications = StoreNotifications.this;
             StoreNotifications.access$handleRegistrationTokenPersisted(storeNotifications, StoreNotifications.access$getPushToken$p(storeNotifications));

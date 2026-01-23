@@ -7,12 +7,12 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GifCategoryItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GifCategoryItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class GifCategoryItem implements DiffKeyProvider, Serializable {
     private final String key;
 
-    /* compiled from: GifCategoryItem.kt */
+    /* JADX INFO: compiled from: GifCategoryItem.kt */
     public static final /* data */ class Standard extends GifCategoryItem {
         private final ModelGifCategory gifCategory;
 
@@ -30,7 +30,7 @@ public abstract class GifCategoryItem implements DiffKeyProvider, Serializable {
             return standard.copy(modelGifCategory);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ModelGifCategory getGifCategory() {
             return this.gifCategory;
         }
@@ -67,7 +67,7 @@ public abstract class GifCategoryItem implements DiffKeyProvider, Serializable {
         }
     }
 
-    /* compiled from: GifCategoryItem.kt */
+    /* JADX INFO: compiled from: GifCategoryItem.kt */
     public static final /* data */ class Trending extends GifCategoryItem {
         private final String gifPreviewUrl;
 
@@ -85,7 +85,7 @@ public abstract class GifCategoryItem implements DiffKeyProvider, Serializable {
             return trending.copy(str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getGifPreviewUrl() {
             return this.gifPreviewUrl;
         }

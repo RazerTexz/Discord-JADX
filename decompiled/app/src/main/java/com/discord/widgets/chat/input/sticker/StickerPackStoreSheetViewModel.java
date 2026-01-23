@@ -33,18 +33,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StickerPackStoreSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StickerPackStoreSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StickerPackStoreSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final StickerPackStoreSheetViewModel2 analytics;
     private final long stickerPackId;
     private final StoreStickers stickersStore;
 
-    /* compiled from: StickerPackStoreSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.StickerPackStoreSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StickerPackStoreSheetViewModel$1 */
+    /* JADX INFO: compiled from: StickerPackStoreSheetViewModel.kt */
     public static final class C78931 extends Lambda implements Function1<StoreState, Unit> {
         public C78931() {
             super(1);
@@ -56,14 +56,14 @@ public final class StickerPackStoreSheetViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             StickerPackStoreSheetViewModel.access$handleStoreState(StickerPackStoreSheetViewModel.this, storeState);
         }
     }
 
-    /* compiled from: StickerPackStoreSheetViewModel.kt */
+    /* JADX INFO: compiled from: StickerPackStoreSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -99,7 +99,7 @@ public final class StickerPackStoreSheetViewModel extends AppViewModel<ViewState
         }
     }
 
-    /* compiled from: StickerPackStoreSheetViewModel.kt */
+    /* JADX INFO: compiled from: StickerPackStoreSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final User meUser;
         private final int stickerAnimationSettings;
@@ -126,17 +126,17 @@ public final class StickerPackStoreSheetViewModel extends AppViewModel<ViewState
             return storeState.copy(stickerPackState, i, user);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final StoreStickers.StickerPackState getStickerPack() {
             return this.stickerPack;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getStickerAnimationSettings() {
             return this.stickerAnimationSettings;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final User getMeUser() {
             return this.meUser;
         }
@@ -189,7 +189,7 @@ public final class StickerPackStoreSheetViewModel extends AppViewModel<ViewState
         }
     }
 
-    /* compiled from: StickerPackStoreSheetViewModel.kt */
+    /* JADX INFO: compiled from: StickerPackStoreSheetViewModel.kt */
     public static final /* data */ class ViewState {
         private final boolean isPackEnabled;
         private final PremiumTier meUserPremiumTier;
@@ -228,7 +228,7 @@ public final class StickerPackStoreSheetViewModel extends AppViewModel<ViewState
             return PremiumUtils3.grantsAccessToPremiumStickers(this.meUserPremiumTier);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ModelStickerPack getStickerPack() {
             return this.stickerPack;
         }
@@ -237,12 +237,12 @@ public final class StickerPackStoreSheetViewModel extends AppViewModel<ViewState
             return this.stickerItems;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final PremiumTier getMeUserPremiumTier() {
             return this.meUserPremiumTier;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsPackEnabled() {
             return this.isPackEnabled;
         }
@@ -278,6 +278,9 @@ public final class StickerPackStoreSheetViewModel extends AppViewModel<ViewState
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             ModelStickerPack modelStickerPack = this.stickerPack;
             int iHashCode = (modelStickerPack != null ? modelStickerPack.hashCode() : 0) * 31;
@@ -286,11 +289,11 @@ public final class StickerPackStoreSheetViewModel extends AppViewModel<ViewState
             PremiumTier premiumTier = this.meUserPremiumTier;
             int iHashCode3 = (iHashCode2 + (premiumTier != null ? premiumTier.hashCode() : 0)) * 31;
             boolean z2 = this.isPackEnabled;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode3 + i;
+            return iHashCode3 + r1;
         }
 
         public final boolean isPackEnabled() {

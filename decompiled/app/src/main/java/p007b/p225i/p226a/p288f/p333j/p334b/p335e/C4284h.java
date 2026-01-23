@@ -7,15 +7,15 @@ import android.os.Bundle;
 import android.os.RemoteException;
 import android.util.Log;
 
+/* JADX INFO: renamed from: b.i.a.f.j.b.e.h */
+/* JADX INFO: loaded from: classes3.dex */
 @TargetApi(14)
-/* renamed from: b.i.a.f.j.b.e.h */
-/* loaded from: classes3.dex */
 public final class C4284h implements Application.ActivityLifecycleCallbacks {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Activity f11411j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final C4280f f11412k;
 
     public C4284h(Activity activity, C4280f c4280f, C4282g c4282g) {

@@ -40,8 +40,8 @@ import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 import p658rx.subjects.Subject;
 
-/* compiled from: Persister.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Persister.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Persister<T> {
     private static Clock clock;
 
@@ -56,14 +56,14 @@ public final class Persister<T> {
     private Subject<T, T> valueSubject;
     private boolean valueUnset;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static Function3<? super Integer, ? super String, ? super Exception, Unit> logger = Persister6.INSTANCE;
     private static Function1<? super Kryo, Unit> kryoConfig = Persister4.INSTANCE;
     private static final Persister5 kryos = new Persister5();
     private static final List<WeakReference<Persister<?>>> preferences = new CopyOnWriteArrayList();
 
-    /* compiled from: Persister.kt */
+    /* JADX INFO: compiled from: Persister.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -160,14 +160,14 @@ public final class Persister<T> {
         }
     }
 
-    /* compiled from: Persister.kt */
+    /* JADX INFO: compiled from: Persister.kt */
     public static final class Preloader {
         private final List<String> preloadCacheKeys;
         private final SerializedSubject<Persister<?>, Persister<?>> preloadSubject;
         private final TimeElapsed preloadTime;
 
-        /* compiled from: Persister.kt */
-        /* renamed from: com.discord.utilities.persister.Persister$Preloader$1 */
+        /* JADX INFO: renamed from: com.discord.utilities.persister.Persister$Preloader$1 */
+        /* JADX INFO: compiled from: Persister.kt */
         public static final class C68301<T, R> implements Func1<Persister<?>, Boolean> {
             public static final C68301 INSTANCE = new C68301();
 
@@ -176,14 +176,14 @@ public final class Persister<T> {
                 return call2(persister);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Boolean call2(Persister<?> persister) {
                 return Boolean.valueOf(persister == null);
             }
         }
 
-        /* compiled from: Persister.kt */
-        /* renamed from: com.discord.utilities.persister.Persister$Preloader$2 */
+        /* JADX INFO: renamed from: com.discord.utilities.persister.Persister$Preloader$2 */
+        /* JADX INFO: compiled from: Persister.kt */
         public static final class C68312 extends Lambda implements Function1<Persister<?>, Unit> {
             public C68312() {
                 super(1);
@@ -195,7 +195,7 @@ public final class Persister<T> {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Persister<?> persister) {
                 if (persister != null) {
                     Preloader.access$handlePreload(Preloader.this, persister);
@@ -243,12 +243,12 @@ public final class Persister<T> {
         }
     }
 
-    /* compiled from: Persister.kt */
-    /* renamed from: com.discord.utilities.persister.Persister$getObservable$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.persister.Persister$getObservable$1 */
+    /* JADX INFO: compiled from: Persister.kt */
     public static final class C68321 extends Lambda implements Function0<Subject<T, T>> {
 
-        /* compiled from: Persister.kt */
-        /* renamed from: com.discord.utilities.persister.Persister$getObservable$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.persister.Persister$getObservable$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: Persister.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1 {
             public final /* synthetic */ SerializedSubject $subject;
 

@@ -5,8 +5,8 @@ import androidx.annotation.RestrictTo;
 import androidx.sqlite.p006db.SupportSQLiteDatabase;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ViewInfo {
     public final String name;
     public final String sql;

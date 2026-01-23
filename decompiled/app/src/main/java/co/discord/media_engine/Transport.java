@@ -5,8 +5,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Statistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Statistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Transport {
     private final int availableOutgoingBitrate;
     private final long bytesReceived;
@@ -30,37 +30,37 @@ public final /* data */ class Transport {
         return transport.copy((i3 & 1) != 0 ? transport.availableOutgoingBitrate : i, (i3 & 2) != 0 ? transport.bytesReceived : j, (i3 & 4) != 0 ? transport.bytesSent : j2, (i3 & 8) != 0 ? transport.ping : i2, (i3 & 16) != 0 ? transport.decryptionFailures : num, (i3 & 32) != 0 ? transport.localAddress : str, (i3 & 64) != 0 ? transport.receiverReports : receiverReportArr);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getAvailableOutgoingBitrate() {
         return this.availableOutgoingBitrate;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getBytesReceived() {
         return this.bytesReceived;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getBytesSent() {
         return this.bytesSent;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getPing() {
         return this.ping;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final Integer getDecryptionFailures() {
         return this.decryptionFailures;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final String getLocalAddress() {
         return this.localAddress;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final ReceiverReport[] getReceiverReports() {
         return this.receiverReports;
     }

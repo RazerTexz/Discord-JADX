@@ -17,8 +17,8 @@ import kotlin.jvm.functions.Function2;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StageCallAdapter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StageCallAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class StageCallAdapter extends MGRecyclerAdapterSimple<StageCallItem> {
     public static final int AUDIENCE_SPAN_COUNT = 3;
     public static final int SPAN_COUNT = 12;

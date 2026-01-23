@@ -9,15 +9,15 @@ import java.util.Locale;
 import java.util.Objects;
 import java.util.TimeZone;
 
-/* compiled from: JsonFormat.java */
+/* JADX INFO: renamed from: b.g.a.a.i, reason: use source file name */
+/* JADX INFO: compiled from: JsonFormat.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.ANNOTATION_TYPE, ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: b.g.a.a.i, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface JsonFormat {
 
-    /* compiled from: JsonFormat.java */
-    /* renamed from: b.g.a.a.i$a */
+    /* JADX INFO: renamed from: b.g.a.a.i$a */
+    /* JADX INFO: compiled from: JsonFormat.java */
     public enum a {
         ACCEPT_SINGLE_VALUE_AS_ARRAY,
         ACCEPT_CASE_INSENSITIVE_PROPERTIES,
@@ -29,17 +29,17 @@ public @interface JsonFormat {
         ADJUST_DATES_TO_CONTEXT_TIME_ZONE
     }
 
-    /* compiled from: JsonFormat.java */
-    /* renamed from: b.g.a.a.i$b */
+    /* JADX INFO: renamed from: b.g.a.a.i$b */
+    /* JADX INFO: compiled from: JsonFormat.java */
     public static class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final b f4406a = new b(0, 0);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f4407b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f4408c;
 
         public b(int i, int i2) {
@@ -67,8 +67,8 @@ public @interface JsonFormat {
         }
     }
 
-    /* compiled from: JsonFormat.java */
-    /* renamed from: b.g.a.a.i$c */
+    /* JADX INFO: renamed from: b.g.a.a.i$c */
+    /* JADX INFO: compiled from: JsonFormat.java */
     public enum c {
         ANY,
         NATURAL,
@@ -82,17 +82,17 @@ public @interface JsonFormat {
         BOOLEAN,
         BINARY;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean m1596f() {
             return this == NUMBER || this == NUMBER_INT || this == NUMBER_FLOAT;
         }
     }
 
-    /* compiled from: JsonFormat.java */
-    /* renamed from: b.g.a.a.i$d */
+    /* JADX INFO: renamed from: b.g.a.a.i$d */
+    /* JADX INFO: compiled from: JsonFormat.java */
     public static class d implements Serializable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final d f4421j = new d("", c.ANY, "", "", b.f4406a, null);
         private static final long serialVersionUID = 1;
         private final b _features;
@@ -102,14 +102,14 @@ public @interface JsonFormat {
         private final c _shape;
         private final String _timezoneStr;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public transient TimeZone f4422k;
 
         public d() {
             this("", c.ANY, "", "", b.f4406a, null);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static <T> boolean m1597a(T t, T t2) {
             if (t == null) {
                 return t2 == null;
@@ -120,7 +120,7 @@ public @interface JsonFormat {
             return t.equals(t2);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Boolean m1598b(a aVar) {
             b bVar = this._features;
             Objects.requireNonNull(bVar);
@@ -134,17 +134,17 @@ public @interface JsonFormat {
             return null;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Locale m1599c() {
             return this._locale;
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public String m1600d() {
             return this._pattern;
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public c m1601e() {
             return this._shape;
         }
@@ -160,7 +160,7 @@ public @interface JsonFormat {
             return this._shape == dVar._shape && this._features.equals(dVar._features) && m1597a(this._lenient, dVar._lenient) && m1597a(this._timezoneStr, dVar._timezoneStr) && m1597a(this._pattern, dVar._pattern) && m1597a(this.f4422k, dVar.f4422k) && m1597a(this._locale, dVar._locale);
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public TimeZone m1602f() {
             TimeZone timeZone = this.f4422k;
             if (timeZone != null) {
@@ -175,12 +175,12 @@ public @interface JsonFormat {
             return timeZone2;
         }
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public boolean m1603g() {
             return this._locale != null;
         }
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public boolean m1604h() {
             String str = this._pattern;
             return str != null && str.length() > 0;
@@ -205,18 +205,18 @@ public @interface JsonFormat {
             return this._features.hashCode() ^ iHashCode2;
         }
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public boolean m1605i() {
             return this._shape != c.ANY;
         }
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public boolean m1606j() {
             String str;
             return (this.f4422k == null && ((str = this._timezoneStr) == null || str.isEmpty())) ? false : true;
         }
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final d m1607k(d dVar) {
             d dVar2;
             String str;

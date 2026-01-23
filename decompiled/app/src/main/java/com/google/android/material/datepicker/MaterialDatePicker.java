@@ -43,7 +43,7 @@ import p007b.p225i.p226a.p341g.p345d.MonthAdapter;
 import p007b.p225i.p226a.p341g.p345d.PickerFragment;
 import p007b.p225i.p226a.p341g.p345d.UtcDates;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MaterialDatePicker<S> extends DialogFragment {
     private static final String CALENDAR_CONSTRAINTS_KEY = "CALENDAR_CONSTRAINTS_KEY";
     private static final String DATE_SELECTOR_KEY = "DATE_SELECTOR_KEY";
@@ -89,7 +89,7 @@ public final class MaterialDatePicker<S> extends DialogFragment {
     public @interface InputMode {
     }
 
-    /* renamed from: com.google.android.material.datepicker.MaterialDatePicker$a */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.MaterialDatePicker$a */
     public class ViewOnClickListenerC10897a implements View.OnClickListener {
         public ViewOnClickListenerC10897a() {
         }
@@ -105,7 +105,7 @@ public final class MaterialDatePicker<S> extends DialogFragment {
         }
     }
 
-    /* renamed from: com.google.android.material.datepicker.MaterialDatePicker$b */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.MaterialDatePicker$b */
     public class ViewOnClickListenerC10898b implements View.OnClickListener {
         public ViewOnClickListenerC10898b() {
         }
@@ -120,7 +120,7 @@ public final class MaterialDatePicker<S> extends DialogFragment {
         }
     }
 
-    /* renamed from: com.google.android.material.datepicker.MaterialDatePicker$c */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.MaterialDatePicker$c */
     public class C10899c extends OnSelectionChangedListener<S> {
         public C10899c() {
         }
@@ -137,7 +137,7 @@ public final class MaterialDatePicker<S> extends DialogFragment {
         }
     }
 
-    /* renamed from: com.google.android.material.datepicker.MaterialDatePicker$d */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.MaterialDatePicker$d */
     public class ViewOnClickListenerC10900d implements View.OnClickListener {
         public ViewOnClickListenerC10900d() {
         }
@@ -192,7 +192,7 @@ public final class MaterialDatePicker<S> extends DialogFragment {
         return stateListDrawable;
     }
 
-    private static int getDialogPickerHeight(@NonNull Context context) throws Resources.NotFoundException {
+    private static int getDialogPickerHeight(@NonNull Context context) {
         Resources resources = context.getResources();
         int dimensionPixelOffset = resources.getDimensionPixelOffset(C10817R.dimen.mtrl_calendar_navigation_bottom_padding) + resources.getDimensionPixelOffset(C10817R.dimen.mtrl_calendar_navigation_top_padding) + resources.getDimensionPixelSize(C10817R.dimen.mtrl_calendar_navigation_height);
         int dimensionPixelSize = resources.getDimensionPixelSize(C10817R.dimen.mtrl_calendar_days_of_week_height);
@@ -200,7 +200,7 @@ public final class MaterialDatePicker<S> extends DialogFragment {
         return dimensionPixelOffset + dimensionPixelSize + (resources.getDimensionPixelOffset(C10817R.dimen.mtrl_calendar_month_vertical_padding) * (i - 1)) + (resources.getDimensionPixelSize(C10817R.dimen.mtrl_calendar_day_height) * i) + resources.getDimensionPixelOffset(C10817R.dimen.mtrl_calendar_bottom_padding);
     }
 
-    private static int getPaddedPickerWidth(@NonNull Context context) throws Resources.NotFoundException {
+    private static int getPaddedPickerWidth(@NonNull Context context) {
         Resources resources = context.getResources();
         int dimensionPixelOffset = resources.getDimensionPixelOffset(C10817R.dimen.mtrl_calendar_content_padding);
         int i = Month.m9133i().f20987m;
@@ -243,7 +243,7 @@ public final class MaterialDatePicker<S> extends DialogFragment {
         return materialDatePicker;
     }
 
-    public static boolean readMaterialCalendarStyleBoolean(@NonNull Context context, int i) throws Resources.NotFoundException {
+    public static boolean readMaterialCalendarStyleBoolean(@NonNull Context context, int i) {
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(MaterialAttributes.resolveOrThrow(context, C10817R.attr.materialCalendarStyle, MaterialCalendar.class.getCanonicalName()), new int[]{i});
         boolean z2 = typedArrayObtainStyledAttributes.getBoolean(0, false);
         typedArrayObtainStyledAttributes.recycle();
@@ -425,7 +425,7 @@ public final class MaterialDatePicker<S> extends DialogFragment {
     }
 
     @Override // androidx.fragment.app.DialogFragment, androidx.fragment.app.Fragment
-    public void onStart() throws Resources.NotFoundException {
+    public void onStart() {
         super.onStart();
         Window window = requireDialog().getWindow();
         if (this.fullscreen) {

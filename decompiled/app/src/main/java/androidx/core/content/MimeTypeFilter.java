@@ -5,7 +5,7 @@ import androidx.annotation.Nullable;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import java.util.ArrayList;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class MimeTypeFilter {
     private MimeTypeFilter() {
     }

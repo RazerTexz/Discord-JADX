@@ -3,8 +3,8 @@ package com.discord.analytics.generated.traits;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackStoreSkuMetadata.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackStoreSkuMetadata.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackStoreSkuMetadata {
     private final Long skuId = null;
     private final Long skuType = null;

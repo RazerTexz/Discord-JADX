@@ -3,9 +3,9 @@ package com.discord.widgets.guildcommunicationdisabled.start;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetDisableGuildCommunication.kt */
-/* renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetDisableGuildCommunication$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetDisableGuildCommunication$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDisableGuildCommunication.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDisableGuildCommunication6 extends Lambda implements Function0<DisableGuildCommunicationViewModel> {
     public final /* synthetic */ WidgetDisableGuildCommunication this$0;
 

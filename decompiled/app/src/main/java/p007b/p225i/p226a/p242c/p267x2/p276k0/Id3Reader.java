@@ -8,31 +8,31 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: Id3Reader.java */
-/* renamed from: b.i.a.c.x2.k0.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.t, reason: use source file name */
+/* JADX INFO: compiled from: Id3Reader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Id3Reader implements ElementaryStreamReader {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public TrackOutput2 f8865b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f8866c;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f8868e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f8869f;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ParsableByteArray f8864a = new ParsableByteArray(10);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public long f8867d = -9223372036854775807L;
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo3758b(ParsableByteArray parsableByteArray) {
         AnimatableValueParser.m438H(this.f8865b);
         if (this.f8866c) {
@@ -60,14 +60,14 @@ public final class Id3Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3759c() {
         this.f8866c = false;
         this.f8867d = -9223372036854775807L;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo3760d() {
         int i;
         AnimatableValueParser.m438H(this.f8865b);
@@ -81,7 +81,7 @@ public final class Id3Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3761e(ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         dVar.m3765a();
         TrackOutput2 trackOutput2Mo2492p = extractorOutput.mo2492p(dVar.m3767c(), 5);
@@ -93,7 +93,7 @@ public final class Id3Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3762f(long j, int i) {
         if ((i & 4) == 0) {
             return;

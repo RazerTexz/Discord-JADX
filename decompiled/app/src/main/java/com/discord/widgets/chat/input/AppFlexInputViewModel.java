@@ -54,12 +54,12 @@ import p507d0.p592z.p594d.TypeIntrinsics;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: AppFlexInputViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AppFlexInputViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AppFlexInputViewModel extends AppViewModel<FlexInputState> implements FlexInputViewModel {
     private static final String CHAT_GIFTING_NOTICE = "CHAT_GIFTING_NOTICE";
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private boolean attachmentView;
     private PublishSubject<FlexInputEvent> eventSubject;
@@ -70,8 +70,8 @@ public final class AppFlexInputViewModel extends AppViewModel<FlexInputState> im
     private final StoreExpressionSuggestions storeExpressionSuggestions;
     private final StoreStickers storeStickers;
 
-    /* compiled from: AppFlexInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.AppFlexInputViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.AppFlexInputViewModel$1 */
+    /* JADX INFO: compiled from: AppFlexInputViewModel.kt */
     public static final /* synthetic */ class C76771 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C76771(AppFlexInputViewModel appFlexInputViewModel) {
             super(1, appFlexInputViewModel, AppFlexInputViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/chat/input/AppFlexInputViewModel$StoreState;)V", 0);
@@ -83,14 +83,14 @@ public final class AppFlexInputViewModel extends AppViewModel<FlexInputState> im
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             AppFlexInputViewModel.access$handleStoreState((AppFlexInputViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: AppFlexInputViewModel.kt */
+    /* JADX INFO: compiled from: AppFlexInputViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -110,7 +110,7 @@ public final class AppFlexInputViewModel extends AppViewModel<FlexInputState> im
         }
     }
 
-    /* compiled from: AppFlexInputViewModel.kt */
+    /* JADX INFO: compiled from: AppFlexInputViewModel.kt */
     public static final /* data */ class StoreState {
         private final Long channelPermission;
         private final boolean isThreadCreation;
@@ -162,37 +162,37 @@ public final class AppFlexInputViewModel extends AppViewModel<FlexInputState> im
             return storeState.copy(panelState, panelState3, channel2, l2, notice2, z4, z3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final PanelState getLeftPanelState() {
             return this.leftPanelState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final PanelState getRightPanelState() {
             return this.rightPanelState;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Channel getSelectedChannel() {
             return this.selectedChannel;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Long getChannelPermission() {
             return this.channelPermission;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final StoreNotices.Notice getNotice() {
             return this.notice;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getStickerSuggestionsEnabled() {
             return this.stickerSuggestionsEnabled;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getIsThreadCreation() {
             return this.isThreadCreation;
         }
@@ -239,6 +239,12 @@ public final class AppFlexInputViewModel extends AppViewModel<FlexInputState> im
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5 */
+        /* JADX WARN: Type inference failed for: r1v7 */
+        /* JADX WARN: Type inference failed for: r2v10 */
+        /* JADX WARN: Type inference failed for: r2v11, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v12 */
         public int hashCode() {
             PanelState panelState = this.leftPanelState;
             int iHashCode = (panelState != null ? panelState.hashCode() : 0) * 31;
@@ -251,13 +257,13 @@ public final class AppFlexInputViewModel extends AppViewModel<FlexInputState> im
             StoreNotices.Notice notice = this.notice;
             int iHashCode5 = (iHashCode4 + (notice != null ? notice.hashCode() : 0)) * 31;
             boolean z2 = this.stickerSuggestionsEnabled;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode5 + i) * 31;
+            int i = (iHashCode5 + r1) * 31;
             boolean z3 = this.isThreadCreation;
-            return i2 + (z3 ? 1 : z3 ? 1 : 0);
+            return i + (z3 ? 1 : z3);
         }
 
         public final boolean isThreadCreation() {
@@ -282,8 +288,8 @@ public final class AppFlexInputViewModel extends AppViewModel<FlexInputState> im
         }
     }
 
-    /* compiled from: AppFlexInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.AppFlexInputViewModel$getMatchingStickers$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.AppFlexInputViewModel$getMatchingStickers$1 */
+    /* JADX INFO: compiled from: AppFlexInputViewModel.kt */
     public static final class C76791 extends Lambda implements Function1<String, Set<? extends Sticker>> {
         public static final C76791 INSTANCE = new C76791();
 
@@ -296,7 +302,7 @@ public final class AppFlexInputViewModel extends AppViewModel<FlexInputState> im
             return invoke2(str);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<Sticker> invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "inputText");
             StickerUtils stickerUtils = StickerUtils.INSTANCE;
@@ -304,8 +310,8 @@ public final class AppFlexInputViewModel extends AppViewModel<FlexInputState> im
         }
     }
 
-    /* compiled from: AppFlexInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.AppFlexInputViewModel$onGiftButtonClicked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.AppFlexInputViewModel$onGiftButtonClicked$1 */
+    /* JADX INFO: compiled from: AppFlexInputViewModel.kt */
     public static final class C76801 extends Lambda implements Function1<FragmentActivity, Boolean> {
         public static final C76801 INSTANCE = new C76801();
 
@@ -318,7 +324,7 @@ public final class AppFlexInputViewModel extends AppViewModel<FlexInputState> im
             return Boolean.valueOf(invoke2(fragmentActivity));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(FragmentActivity fragmentActivity) {
             Intrinsics3.checkNotNullParameter(fragmentActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
             StoreStream.Companion companion = StoreStream.INSTANCE;
@@ -329,8 +335,8 @@ public final class AppFlexInputViewModel extends AppViewModel<FlexInputState> im
         }
     }
 
-    /* compiled from: AppFlexInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.AppFlexInputViewModel$onSendButtonClicked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.AppFlexInputViewModel$onSendButtonClicked$1 */
+    /* JADX INFO: compiled from: AppFlexInputViewModel.kt */
     public static final class C76811 extends Lambda implements Function1<Boolean, Unit> {
         public C76811() {
             super(1);

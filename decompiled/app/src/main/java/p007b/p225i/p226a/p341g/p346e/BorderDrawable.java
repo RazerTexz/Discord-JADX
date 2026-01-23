@@ -22,70 +22,70 @@ import androidx.core.graphics.ColorUtils;
 import com.google.android.material.shape.ShapeAppearanceModel;
 import com.google.android.material.shape.ShapeAppearancePathProvider;
 
-/* compiled from: BorderDrawable.java */
+/* JADX INFO: renamed from: b.i.a.g.e.c, reason: use source file name */
+/* JADX INFO: compiled from: BorderDrawable.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* renamed from: b.i.a.g.e.c, reason: use source file name */
-/* loaded from: classes3.dex */
 public class BorderDrawable extends Drawable {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final Paint f11629b;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @Dimension
     public float f11635h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @ColorInt
     public int f11636i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @ColorInt
     public int f11637j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @ColorInt
     public int f11638k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @ColorInt
     public int f11639l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @ColorInt
     public int f11640m;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public ShapeAppearanceModel f11642o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public ColorStateList f11643p;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ShapeAppearancePathProvider f11628a = ShapeAppearancePathProvider.getInstance();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Path f11630c = new Path();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Rect f11631d = new Rect();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final RectF f11632e = new RectF();
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final RectF f11633f = new RectF();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final b f11634g = new b(null);
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f11641n = true;
 
-    /* compiled from: BorderDrawable.java */
-    /* renamed from: b.i.a.g.e.c$b */
+    /* JADX INFO: renamed from: b.i.a.g.e.c$b */
+    /* JADX INFO: compiled from: BorderDrawable.java */
     public class b extends Drawable.ConstantState {
         public b(a aVar) {
         }
@@ -110,13 +110,13 @@ public class BorderDrawable extends Drawable {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public RectF m6083a() {
         this.f11633f.set(getBounds());
         return this.f11633f;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m6084b(@Nullable ColorStateList colorStateList) {
         if (colorStateList != null) {
             this.f11640m = colorStateList.getColorForState(getState(), this.f11640m);

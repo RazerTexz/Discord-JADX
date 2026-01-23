@@ -5,18 +5,18 @@ import p007b.p225i.p361c.p369m.p370d.p379p.ByteString2;
 import p007b.p225i.p361c.p369m.p370d.p379p.CodedOutputStream2;
 import p007b.p225i.p361c.p369m.p370d.p379p.SessionProtobufHelper;
 
-/* compiled from: CrashlyticsController.java */
-/* renamed from: b.i.c.m.d.k.u */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.u */
+/* JADX INFO: compiled from: CrashlyticsController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4657u implements C4663x.g {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ String f12395a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ String f12396b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ long f12397c;
 
     public C4657u(C4663x c4663x, String str, String str2, long j) {
@@ -26,7 +26,7 @@ public class C4657u implements C4663x.g {
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p373k.C4663x.g
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6454a(CodedOutputStream2 codedOutputStream2) throws Exception {
         String str = this.f12395a;
         String str2 = this.f12396b;

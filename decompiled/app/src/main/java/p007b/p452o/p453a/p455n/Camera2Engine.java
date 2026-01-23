@@ -91,65 +91,65 @@ import p007b.p452o.p453a.p473x.SizeSelectors2;
 import p007b.p452o.p453a.p473x.SizeSelectors3;
 import p007b.p452o.p453a.p473x.SizeSelectors9;
 
-/* compiled from: Camera2Engine.java */
+/* JADX INFO: renamed from: b.o.a.n.d, reason: use source file name */
+/* JADX INFO: compiled from: Camera2Engine.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.d, reason: use source file name */
-/* loaded from: classes3.dex */
 public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnImageAvailableListener, ActionHolder {
 
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public final CameraManager f13802d0;
 
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public String f13803e0;
 
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public CameraDevice f13804f0;
 
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public CameraCharacteristics f13805g0;
 
-    /* renamed from: h0 */
+    /* JADX INFO: renamed from: h0 */
     public CameraCaptureSession f13806h0;
 
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public CaptureRequest.Builder f13807i0;
 
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public TotalCaptureResult f13808j0;
 
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public final Camera2Mapper f13809k0;
 
-    /* renamed from: l0 */
+    /* JADX INFO: renamed from: l0 */
     public ImageReader f13810l0;
 
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     public Surface f13811m0;
 
-    /* renamed from: n0 */
+    /* JADX INFO: renamed from: n0 */
     public Surface f13812n0;
 
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public ImageReader f13813o0;
 
-    /* renamed from: p0 */
+    /* JADX INFO: renamed from: p0 */
     public final List<Action2> f13814p0;
 
-    /* renamed from: q0 */
+    /* JADX INFO: renamed from: q0 */
     public MeterAction f13815q0;
 
-    /* renamed from: r0 */
+    /* JADX INFO: renamed from: r0 */
     public final CameraCaptureSession.CaptureCallback f13816r0;
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$a */
+    /* JADX INFO: renamed from: b.o.a.n.d$a */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Flash f13817j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Flash f13818k;
 
         public a(Flash flash, Flash flash2) {
@@ -184,11 +184,11 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$b */
+    /* JADX INFO: renamed from: b.o.a.n.d$b */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class b implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Location f13820j;
 
         public b(Location location) {
@@ -207,11 +207,11 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$c */
+    /* JADX INFO: renamed from: b.o.a.n.d$c */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class c implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ WhiteBalance f13822j;
 
         public c(WhiteBalance whiteBalance) {
@@ -227,11 +227,11 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$d */
+    /* JADX INFO: renamed from: b.o.a.n.d$d */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class d implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Hdr f13824j;
 
         public d(Hdr hdr) {
@@ -247,20 +247,20 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$e */
+    /* JADX INFO: renamed from: b.o.a.n.d$e */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class e implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ float f13826j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ boolean f13827k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ float f13828l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final /* synthetic */ PointF[] f13829m;
 
         public e(float f, boolean z2, float f2, PointF[] pointFArr) {
@@ -282,23 +282,23 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$f */
+    /* JADX INFO: renamed from: b.o.a.n.d$f */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class f implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ float f13831j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ boolean f13832k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ float f13833l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final /* synthetic */ float[] f13834m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final /* synthetic */ PointF[] f13835n;
 
         public f(float f, boolean z2, float f2, float[] fArr, PointF[] pointFArr) {
@@ -321,11 +321,11 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$g */
+    /* JADX INFO: renamed from: b.o.a.n.d$g */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class g implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ float f13837j;
 
         public g(float f) {
@@ -341,8 +341,8 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$h */
+    /* JADX INFO: renamed from: b.o.a.n.d$h */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class h implements Runnable {
         public h() {
         }
@@ -353,8 +353,8 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$i */
+    /* JADX INFO: renamed from: b.o.a.n.d$i */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class i extends CameraCaptureSession.CaptureCallback {
         public i() {
         }
@@ -386,11 +386,11 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$j */
+    /* JADX INFO: renamed from: b.o.a.n.d$j */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class j implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ boolean f13841j;
 
         public j(boolean z2) {
@@ -413,11 +413,11 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$k */
+    /* JADX INFO: renamed from: b.o.a.n.d$k */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class k implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f13843j;
 
         public k(int i) {
@@ -444,28 +444,28 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$l */
+    /* JADX INFO: renamed from: b.o.a.n.d$l */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class l implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Gesture f13845j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ PointF f13846k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ MeteringRegions f13847l;
 
-        /* compiled from: Camera2Engine.java */
-        /* renamed from: b.o.a.n.d$l$a */
+        /* JADX INFO: renamed from: b.o.a.n.d$l$a */
+        /* JADX INFO: compiled from: Camera2Engine.java */
         public class a extends CompletionCallback {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final /* synthetic */ MeterAction f13849a;
 
-            /* compiled from: Camera2Engine.java */
-            /* renamed from: b.o.a.n.d$l$a$a, reason: collision with other inner class name */
+            /* JADX INFO: renamed from: b.o.a.n.d$l$a$a, reason: collision with other inner class name */
+            /* JADX INFO: compiled from: Camera2Engine.java */
             public class RunnableC13244a implements Runnable {
                 public RunnableC13244a() {
                 }
@@ -481,7 +481,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
             }
 
             @Override // p007b.p452o.p453a.p455n.p456o.CompletionCallback
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public void mo7247b(@NonNull Action2 action2) {
                 boolean z2;
                 l lVar = l.this;
@@ -528,11 +528,11 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$m */
+    /* JADX INFO: renamed from: b.o.a.n.d$m */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class m extends CameraDevice.StateCallback {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ TaskCompletionSource f13852a;
 
         public m(TaskCompletionSource taskCompletionSource) {
@@ -594,11 +594,11 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$n */
+    /* JADX INFO: renamed from: b.o.a.n.d$n */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class n implements Callable<Void> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Object f13854j;
 
         public n(Object obj) {
@@ -614,11 +614,11 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$o */
+    /* JADX INFO: renamed from: b.o.a.n.d$o */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class o extends CameraCaptureSession.StateCallback {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ TaskCompletionSource f13856a;
 
         public o(TaskCompletionSource taskCompletionSource) {
@@ -648,11 +648,11 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$p */
+    /* JADX INFO: renamed from: b.o.a.n.d$p */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class p extends BaseAction {
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final /* synthetic */ TaskCompletionSource f13858e;
 
         public p(Camera2Engine camera2Engine, TaskCompletionSource taskCompletionSource) {
@@ -660,18 +660,18 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
 
         @Override // p007b.p452o.p453a.p455n.p456o.BaseAction, p007b.p452o.p453a.p455n.p456o.Action2
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo7248b(@NonNull ActionHolder actionHolder, @NonNull CaptureRequest captureRequest, @NonNull TotalCaptureResult totalCaptureResult) {
             m7341l(Integer.MAX_VALUE);
             this.f13858e.m9126b(null);
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$q */
+    /* JADX INFO: renamed from: b.o.a.n.d$q */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class q extends CompletionCallback {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ PictureResult.a f13859a;
 
         public q(PictureResult.a aVar) {
@@ -679,7 +679,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
 
         @Override // p007b.p452o.p453a.p455n.p456o.CompletionCallback
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo7247b(@NonNull Action2 action2) {
             Camera2Engine camera2Engine = Camera2Engine.this;
             camera2Engine.f13873H = false;
@@ -688,11 +688,11 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$r */
+    /* JADX INFO: renamed from: b.o.a.n.d$r */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class r extends CompletionCallback {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ PictureResult.a f13861a;
 
         public r(PictureResult.a aVar) {
@@ -700,7 +700,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
 
         @Override // p007b.p452o.p453a.p455n.p456o.CompletionCallback
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo7247b(@NonNull Action2 action2) {
             Camera2Engine camera2Engine = Camera2Engine.this;
             camera2Engine.f13872G = false;
@@ -709,8 +709,8 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* compiled from: Camera2Engine.java */
-    /* renamed from: b.o.a.n.d$s */
+    /* JADX INFO: renamed from: b.o.a.n.d$s */
+    /* JADX INFO: compiled from: Camera2Engine.java */
     public class s implements Runnable {
         public s() {
         }
@@ -733,14 +733,14 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         new LogAction().mo7333e(this);
     }
 
-    /* renamed from: b1 */
+    /* JADX INFO: renamed from: b1 */
     public static void m7226b1(Camera2Engine camera2Engine) {
         Objects.requireNonNull(camera2Engine);
         new SequenceAction(Arrays.asList(new Camera2Engine3(camera2Engine), new MeterResetAction())).mo7333e(camera2Engine);
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
-    /* renamed from: F0 */
+    /* JADX INFO: renamed from: F0 */
     public void mo7190F0(@NonNull WhiteBalance whiteBalance) {
         WhiteBalance whiteBalance2 = this.f13904x;
         this.f13904x = whiteBalance;
@@ -749,7 +749,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
-    /* renamed from: G0 */
+    /* JADX INFO: renamed from: G0 */
     public void mo7191G0(float f2, @Nullable PointF[] pointFArr, boolean z2) {
         float f3 = this.f13869D;
         this.f13869D = f2;
@@ -759,7 +759,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
-    /* renamed from: I0 */
+    /* JADX INFO: renamed from: I0 */
     public void mo7192I0(@Nullable Gesture gesture, @NonNull MeteringRegions meteringRegions, @NonNull PointF pointF) {
         CameraStateOrchestrator cameraStateOrchestrator = this.f13922n;
         cameraStateOrchestrator.m7363b("autofocus (" + gesture + ")", true, new CameraStateOrchestrator3(cameraStateOrchestrator, CameraState2.PREVIEW, new l(gesture, pointF, meteringRegions)));
@@ -767,7 +767,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
     @NonNull
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public Task<Void> mo7193P() {
         Handler handler;
         int i2;
@@ -876,7 +876,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     @Override // p007b.p452o.p453a.p455n.CameraEngine
     @NonNull
     @SuppressLint({"MissingPermission"})
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public Task<CameraOptions> mo7194Q() {
         TaskCompletionSource taskCompletionSource = new TaskCompletionSource();
         try {
@@ -889,7 +889,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
     @NonNull
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public Task<Void> mo7195R() {
         CameraLogger cameraLogger = CameraEngine.f13918j;
         cameraLogger.m7159a(1, "onStartPreview:", "Dispatching onCameraPreviewStreamSizeChanged.");
@@ -915,7 +915,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
     @NonNull
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public Task<Void> mo7196S() {
         CameraLogger cameraLogger = CameraEngine.f13918j;
         cameraLogger.m7159a(1, "onStopBind:", "About to clean up.");
@@ -942,7 +942,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
     @NonNull
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public Task<Void> mo7197T() {
         try {
             CameraLogger cameraLogger = CameraEngine.f13918j;
@@ -967,7 +967,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
 
     @Override // p007b.p452o.p453a.p455n.CameraBaseEngine
     @NonNull
-    /* renamed from: T0 */
+    /* JADX INFO: renamed from: T0 */
     public List<Size3> mo7198T0() {
         try {
             StreamConfigurationMap streamConfigurationMap = (StreamConfigurationMap) this.f13802d0.getCameraCharacteristics(this.f13803e0).get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
@@ -990,7 +990,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
     @NonNull
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public Task<Void> mo7199U() {
         CameraLogger cameraLogger = CameraEngine.f13918j;
         cameraLogger.m7159a(1, "onStopPreview:", "Started.");
@@ -1010,20 +1010,20 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
 
     @Override // p007b.p452o.p453a.p455n.CameraBaseEngine
     @NonNull
-    /* renamed from: V0 */
+    /* JADX INFO: renamed from: V0 */
     public FrameManager mo7200V0(int i2) {
         return new ImageFrameManager(i2);
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraBaseEngine
-    /* renamed from: X0 */
+    /* JADX INFO: renamed from: X0 */
     public void mo7201X0() {
         CameraEngine.f13918j.m7159a(1, "onPreviewStreamSizeChanged:", "Calling restartBind().");
         m7328Y();
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraBaseEngine
-    /* renamed from: Y0 */
+    /* JADX INFO: renamed from: Y0 */
     public void mo7202Y0(@NonNull PictureResult.a aVar, boolean z2) {
         if (z2) {
             CameraEngine.f13918j.m7159a(1, "onTakePicture:", "doMetering is true. Delaying.");
@@ -1050,7 +1050,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraBaseEngine
-    /* renamed from: Z0 */
+    /* JADX INFO: renamed from: Z0 */
     public void mo7203Z0(@NonNull PictureResult.a aVar, @NonNull AspectRatio2 aspectRatio2, boolean z2) {
         if (z2) {
             CameraEngine.f13918j.m7159a(1, "onTakePictureSnapshot:", "doMetering is true. Delaying.");
@@ -1072,7 +1072,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraBaseEngine, p007b.p452o.p453a.p471v.PictureRecorder.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo7227a(@Nullable PictureResult.a aVar, @Nullable Exception exc) {
         boolean z2 = this.f13897q instanceof Full2PictureRecorder;
         super.mo7227a(aVar, exc);
@@ -1083,9 +1083,8 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean mo7205c(@NonNull Facing facing) {
-        CameraCharacteristics cameraCharacteristics;
         Objects.requireNonNull(this.f13809k0);
         int iIntValue = Camera2Mapper.f13962b.get(facing).intValue();
         try {
@@ -1093,15 +1092,15 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
             CameraEngine.f13918j.m7159a(1, "collectCameraInfo", "Facing:", facing, "Internal:", Integer.valueOf(iIntValue), "Cameras:", Integer.valueOf(cameraIdList.length));
             for (String str : cameraIdList) {
                 try {
-                    cameraCharacteristics = this.f13802d0.getCameraCharacteristics(str);
+                    CameraCharacteristics cameraCharacteristics = this.f13802d0.getCameraCharacteristics(str);
+                    if (iIntValue == ((Integer) m7246u1(cameraCharacteristics, CameraCharacteristics.LENS_FACING, -99)).intValue()) {
+                        this.f13803e0 = str;
+                        this.f13877L.m7361f(facing, ((Integer) m7246u1(cameraCharacteristics, CameraCharacteristics.SENSOR_ORIENTATION, 0)).intValue());
+                        return true;
+                    }
+                    continue;
                 } catch (CameraAccessException unused) {
                 }
-                if (iIntValue == ((Integer) m7246u1(cameraCharacteristics, CameraCharacteristics.LENS_FACING, -99)).intValue()) {
-                    this.f13803e0 = str;
-                    this.f13877L.m7361f(facing, ((Integer) m7246u1(cameraCharacteristics, CameraCharacteristics.SENSOR_ORIENTATION, 0)).intValue());
-                    return true;
-                }
-                continue;
             }
             return false;
         } catch (CameraAccessException e2) {
@@ -1109,7 +1108,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* renamed from: c1 */
+    /* JADX INFO: renamed from: c1 */
     public final void m7228c1(@NonNull Surface... surfaceArr) {
         this.f13807i0.addTarget(this.f13812n0);
         Surface surface = this.f13811m0;
@@ -1125,7 +1124,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public void mo7207d0(float f2, @NonNull float[] fArr, @Nullable PointF[] pointFArr, boolean z2) {
         float f3 = this.f13870E;
         this.f13870E = f2;
@@ -1134,7 +1133,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         cameraStateOrchestrator.m7363b("exposure correction", true, new CameraStateOrchestrator3(cameraStateOrchestrator, CameraState2.ENGINE, new f(f3, z2, f2, fArr, pointFArr)));
     }
 
-    /* renamed from: d1 */
+    /* JADX INFO: renamed from: d1 */
     public final void m7229d1(@NonNull CaptureRequest.Builder builder, @Nullable CaptureRequest.Builder builder2) {
         CameraEngine.f13918j.m7159a(1, "applyAllParameters:", "called for tag", builder.build().getTag());
         builder.set(CaptureRequest.CONTROL_MODE, 1);
@@ -1161,7 +1160,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
     }
 
-    /* renamed from: e1 */
+    /* JADX INFO: renamed from: e1 */
     public void m7230e1(@NonNull Action2 action2, @NonNull CaptureRequest.Builder builder) throws CameraAccessException {
         if (this.f13922n.f14028f != CameraState2.PREVIEW || m7324O()) {
             return;
@@ -1170,7 +1169,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public void mo7210f0(@NonNull Flash flash) {
         Flash flash2 = this.f13903w;
         this.f13903w = flash;
@@ -1178,7 +1177,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         cameraStateOrchestrator.m7363b("flash (" + flash + ")", true, new CameraStateOrchestrator3(cameraStateOrchestrator, CameraState2.ENGINE, new a(flash2, flash)));
     }
 
-    /* renamed from: f1 */
+    /* JADX INFO: renamed from: f1 */
     public void m7231f1(@NonNull CaptureRequest.Builder builder) {
         int[] iArr = (int[]) m7245t1(CameraCharacteristics.CONTROL_AF_AVAILABLE_MODES, new int[0]);
         ArrayList arrayList = new ArrayList();
@@ -1202,7 +1201,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public void mo7212g0(int i2) {
         if (this.f13901u == 0) {
             this.f13901u = 35;
@@ -1210,7 +1209,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         this.f13922n.m7363b(outline.m873r("frame processing format (", i2, ")"), true, new k(i2));
     }
 
-    /* renamed from: g1 */
+    /* JADX INFO: renamed from: g1 */
     public boolean m7232g1(@NonNull CaptureRequest.Builder builder, float f2) {
         if (!this.f13896p.f13693l) {
             this.f13870E = f2;
@@ -1221,7 +1220,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         return true;
     }
 
-    /* renamed from: h1 */
+    /* JADX INFO: renamed from: h1 */
     public boolean m7233h1(@NonNull CaptureRequest.Builder builder, @NonNull Flash flash) {
         if (this.f13896p.m7163c(this.f13903w)) {
             int[] iArr = (int[]) m7245t1(CameraCharacteristics.CONTROL_AE_AVAILABLE_MODES, new int[0]);
@@ -1261,7 +1260,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         return false;
     }
 
-    /* renamed from: i1 */
+    /* JADX INFO: renamed from: i1 */
     public boolean m7234i1(@NonNull CaptureRequest.Builder builder, @NonNull Hdr hdr) {
         if (!this.f13896p.m7163c(this.f13866A)) {
             this.f13866A = hdr;
@@ -1274,7 +1273,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         return true;
     }
 
-    /* renamed from: j1 */
+    /* JADX INFO: renamed from: j1 */
     public boolean m7235j1(@NonNull CaptureRequest.Builder builder, float f2) {
         Range<Integer>[] rangeArr = (Range[]) m7245t1(CameraCharacteristics.CONTROL_AE_AVAILABLE_TARGET_FPS_RANGES, new Range[0]);
         Arrays.sort(rangeArr, new Camera2Engine2(this, this.f13875J && this.f13874I != 0.0f));
@@ -1302,18 +1301,18 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public void mo7217k0(boolean z2) {
         this.f13922n.m7363b("has frame processors (" + z2 + ")", true, new j(z2));
     }
 
-    /* renamed from: k1 */
+    /* JADX INFO: renamed from: k1 */
     public void m7236k1() {
         m7237l1(true, 3);
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
-    /* renamed from: l0 */
+    /* JADX INFO: renamed from: l0 */
     public void mo7219l0(@NonNull Hdr hdr) {
         Hdr hdr2 = this.f13866A;
         this.f13866A = hdr;
@@ -1321,7 +1320,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         cameraStateOrchestrator.m7363b("hdr (" + hdr + ")", true, new CameraStateOrchestrator3(cameraStateOrchestrator, CameraState2.ENGINE, new d(hdr2)));
     }
 
-    /* renamed from: l1 */
+    /* JADX INFO: renamed from: l1 */
     public final void m7237l1(boolean z2, int i2) {
         if ((this.f13922n.f14028f != CameraState2.PREVIEW || m7324O()) && z2) {
             return;
@@ -1339,7 +1338,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     public void mo7221m0(@Nullable Location location) {
         Location location2 = this.f13868C;
         this.f13868C = location;
@@ -1347,7 +1346,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         cameraStateOrchestrator.m7363b(ModelAuditLogEntry.CHANGE_KEY_LOCATION, true, new CameraStateOrchestrator3(cameraStateOrchestrator, CameraState2.ENGINE, new b(location2)));
     }
 
-    /* renamed from: m1 */
+    /* JADX INFO: renamed from: m1 */
     public boolean m7238m1(@NonNull CaptureRequest.Builder builder, @NonNull WhiteBalance whiteBalance) {
         if (!this.f13896p.m7163c(this.f13904x)) {
             this.f13904x = whiteBalance;
@@ -1360,7 +1359,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         return true;
     }
 
-    /* renamed from: n1 */
+    /* JADX INFO: renamed from: n1 */
     public boolean m7239n1(@NonNull CaptureRequest.Builder builder, float f2) {
         if (!this.f13896p.f13692k) {
             this.f13869D = f2;
@@ -1382,7 +1381,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
 
     /* JADX WARN: Removed duplicated region for block: B:12:0x0015  */
     @NonNull
-    /* renamed from: o1 */
+    /* JADX INFO: renamed from: o1 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1426,7 +1425,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
-    /* renamed from: p0 */
+    /* JADX INFO: renamed from: p0 */
     public void mo7223p0(@NonNull PictureFormat pictureFormat) {
         if (pictureFormat != this.f13867B) {
             this.f13867B = pictureFormat;
@@ -1436,7 +1435,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @NonNull
-    /* renamed from: p1 */
+    /* JADX INFO: renamed from: p1 */
     public final MeterAction m7241p1(@Nullable MeteringRegions meteringRegions) {
         MeterAction meterAction = this.f13815q0;
         if (meterAction != null) {
@@ -1461,7 +1460,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @NonNull
-    /* renamed from: q1 */
+    /* JADX INFO: renamed from: q1 */
     public final CaptureRequest.Builder m7242q1(int i2) throws CameraAccessException {
         CaptureRequest.Builder builder = this.f13807i0;
         CaptureRequest.Builder builderCreateCaptureRequest = this.f13804f0.createCaptureRequest(i2);
@@ -1472,7 +1471,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @NonNull
-    /* renamed from: r1 */
+    /* JADX INFO: renamed from: r1 */
     public List<Range<Integer>> m7243r1(@NonNull Range<Integer>[] rangeArr) {
         ArrayList arrayList = new ArrayList();
         int iRound = Math.round(this.f13896p.f13697p);
@@ -1498,7 +1497,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @NonNull
-    /* renamed from: s1 */
+    /* JADX INFO: renamed from: s1 */
     public List<Size3> m7244s1() {
         try {
             StreamConfigurationMap streamConfigurationMap = (StreamConfigurationMap) this.f13802d0.getCameraCharacteristics(this.f13803e0).get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
@@ -1520,7 +1519,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
-    /* renamed from: t0 */
+    /* JADX INFO: renamed from: t0 */
     public void mo7224t0(boolean z2) {
         this.f13871F = z2;
         C3404f.m4264Z(null);
@@ -1528,21 +1527,21 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
 
     @NonNull
     @VisibleForTesting
-    /* renamed from: t1 */
+    /* JADX INFO: renamed from: t1 */
     public <T> T m7245t1(@NonNull CameraCharacteristics.Key<T> key, @NonNull T t) {
         T t2 = (T) this.f13805g0.get(key);
         return t2 == null ? t : t2;
     }
 
     @NonNull
-    /* renamed from: u1 */
+    /* JADX INFO: renamed from: u1 */
     public final <T> T m7246u1(@NonNull CameraCharacteristics cameraCharacteristics, @NonNull CameraCharacteristics.Key<T> key, @NonNull T t) {
         T t2 = (T) cameraCharacteristics.get(key);
         return t2 == null ? t : t2;
     }
 
     @Override // p007b.p452o.p453a.p455n.CameraEngine
-    /* renamed from: v0 */
+    /* JADX INFO: renamed from: v0 */
     public void mo7225v0(float f2) {
         float f3 = this.f13874I;
         this.f13874I = f2;

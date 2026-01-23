@@ -5,8 +5,8 @@ import org.webrtc.MediaStreamTrack;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NativeStatistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NativeStatistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Inbound {
     private final InboundAudio audio;
     private final String id;
@@ -38,22 +38,22 @@ public final /* data */ class Inbound {
         return inbound.copy(str, inboundAudio, inboundVideo, inboundPlayout);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getId() {
         return this.id;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final InboundAudio getAudio() {
         return this.audio;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final InboundVideo getVideo() {
         return this.video;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final InboundPlayout getPlayout() {
         return this.playout;
     }

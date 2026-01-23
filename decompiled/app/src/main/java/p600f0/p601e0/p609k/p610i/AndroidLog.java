@@ -10,18 +10,18 @@ import p600f0.OkHttpClient;
 import p600f0.p601e0.p604f.TaskRunner;
 import p600f0.p601e0.p608j.Http2;
 
-/* compiled from: AndroidLog.kt */
-/* renamed from: f0.e0.k.i.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.k.i.c, reason: use source file name */
+/* JADX INFO: compiled from: AndroidLog.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AndroidLog {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CopyOnWriteArraySet<Logger> f25788a = new CopyOnWriteArraySet<>();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Map<String, String> f25789b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final AndroidLog f25790c = null;
 
     static {

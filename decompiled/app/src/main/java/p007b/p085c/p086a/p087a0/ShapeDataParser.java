@@ -10,19 +10,19 @@ import p007b.p085c.p086a.p089b0.MiscUtils;
 import p007b.p085c.p086a.p095y.CubicCurveData;
 import p007b.p085c.p086a.p095y.p097l.ShapeData;
 
-/* compiled from: ShapeDataParser.java */
-/* renamed from: b.c.a.a0.b0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.a0.b0, reason: use source file name */
+/* JADX INFO: compiled from: ShapeDataParser.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ShapeDataParser implements ValueParser<ShapeData> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ShapeDataParser f2211a = new ShapeDataParser();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final JsonReader2.a f2212b = JsonReader2.a.m616a("c", "v", "i", "o");
 
     @Override // p007b.p085c.p086a.p087a0.ValueParser
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ShapeData mo413a(JsonReader2 jsonReader2, float f) throws IOException {
         if (jsonReader2.mo613u() == JsonReader2.b.BEGIN_ARRAY) {
             jsonReader2.mo603a();

@@ -6,7 +6,7 @@ import com.discord.models.domain.Model;
 import java.io.IOException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelGuildIntegration implements Model {
     public static final String[] SUPPORTED_TYPES = {"twitch", "youtube"};
     private static final String TWITCH_URL_PREFIX = "twitch.tv/";
@@ -18,7 +18,7 @@ public class ModelGuildIntegration implements Model {
     private int expireBehavior;
     private int expireGracePeriod;
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     private long f18568id;
     private String name;
     private long roleId;
@@ -30,7 +30,7 @@ public class ModelGuildIntegration implements Model {
 
     public static class IntegrationAccount implements Model {
 
-        /* renamed from: id */
+        /* JADX INFO: renamed from: id */
         private String f18569id;
         private String name;
 

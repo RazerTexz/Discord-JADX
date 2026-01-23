@@ -13,9 +13,9 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RtcConnection.kt */
-/* renamed from: b.a.q.a0 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.a0 */
+/* JADX INFO: compiled from: RtcConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class C1189a0 extends FunctionReferenceImpl implements Function1<Tuples2<? extends Map<String, ? extends MediaSinkWantsManager9>, ? extends RtcConnection.State>, Unit> {
     public C1189a0(RtcConnection rtcConnection) {
         super(1, rtcConnection, RtcConnection.class, "onLocalMediaSinkWants", "onLocalMediaSinkWants(Lkotlin/Pair;)V", 0);

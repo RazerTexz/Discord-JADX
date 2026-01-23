@@ -1,7 +1,6 @@
 package androidx.constraintlayout.widget;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.content.res.XmlResourceParser;
 import android.util.Log;
@@ -14,7 +13,7 @@ import java.util.ArrayList;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ConstraintLayoutStates {
     private static final boolean DEBUG = false;
     public static final String TAG = "ConstraintLayoutStates";
@@ -32,7 +31,7 @@ public class ConstraintLayoutStates {
         public int mId;
         public ArrayList<Variant> mVariants = new ArrayList<>();
 
-        public State(Context context, XmlPullParser xmlPullParser) throws Resources.NotFoundException {
+        public State(Context context, XmlPullParser xmlPullParser) {
             this.mConstraintID = -1;
             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(Xml.asAttributeSet(xmlPullParser), C0201R.styleable.State);
             int indexCount = typedArrayObtainStyledAttributes.getIndexCount();
@@ -77,7 +76,7 @@ public class ConstraintLayoutStates {
         public float mMinHeight;
         public float mMinWidth;
 
-        public Variant(Context context, XmlPullParser xmlPullParser) throws Resources.NotFoundException {
+        public Variant(Context context, XmlPullParser xmlPullParser) {
             this.mMinWidth = Float.NaN;
             this.mMinHeight = Float.NaN;
             this.mMaxWidth = Float.NaN;
@@ -125,13 +124,13 @@ public class ConstraintLayoutStates {
         }
     }
 
-    public ConstraintLayoutStates(Context context, ConstraintLayout constraintLayout, int i) throws Resources.NotFoundException, NumberFormatException {
+    public ConstraintLayoutStates(Context context, ConstraintLayout constraintLayout, int i) {
         this.mConstraintLayout = constraintLayout;
         load(context, i);
     }
 
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
-    private void load(Context context, int i) throws Resources.NotFoundException, NumberFormatException {
+    private void load(Context context, int i) {
         XmlResourceParser xml = context.getResources().getXml(i);
         State state = null;
         try {
@@ -140,44 +139,44 @@ public class ConstraintLayoutStates {
                     xml.getName();
                 } else if (eventType == 2) {
                     String name = xml.getName();
-                    char c = 65535;
+                    byte b2 = -1;
                     switch (name.hashCode()) {
                         case -1349929691:
                             if (name.equals("ConstraintSet")) {
-                                c = 4;
+                                b2 = 4;
                             }
                             break;
                         case 80204913:
                             if (name.equals("State")) {
-                                c = 2;
+                                b2 = 2;
                             }
                             break;
                         case 1382829617:
                             if (name.equals("StateSet")) {
-                                c = 1;
+                                b2 = 1;
                             }
                             break;
                         case 1657696882:
                             if (name.equals("layoutDescription")) {
-                                c = 0;
+                                b2 = 0;
                             }
                             break;
                         case 1901439077:
                             if (name.equals("Variant")) {
-                                c = 3;
+                                b2 = 3;
                             }
                             break;
                     }
-                    if (c != 0 && c != 1) {
-                        if (c == 2) {
+                    if (b2 != 0 && b2 != 1) {
+                        if (b2 == 2) {
                             state = new State(context, xml);
                             this.mStateList.put(state.mId, state);
-                        } else if (c == 3) {
+                        } else if (b2 == 3) {
                             Variant variant = new Variant(context, xml);
                             if (state != null) {
                                 state.add(variant);
                             }
-                        } else if (c != 4) {
+                        } else if (b2 != 4) {
                             Log.v("ConstraintLayoutStates", "unknown tag " + name);
                         } else {
                             parseConstraintSet(context, xml);
@@ -192,7 +191,7 @@ public class ConstraintLayoutStates {
         }
     }
 
-    private void parseConstraintSet(Context context, XmlPullParser xmlPullParser) throws NumberFormatException {
+    private void parseConstraintSet(Context context, XmlPullParser xmlPullParser) {
         ConstraintSet constraintSet = new ConstraintSet();
         int attributeCount = xmlPullParser.getAttributeCount();
         for (int i = 0; i < attributeCount; i++) {

@@ -13,12 +13,12 @@ import kotlin.jvm.functions.Function0;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildEventPromptListView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildEventPromptListView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildEventPromptListView extends LinearLayout {
     private final GuildEventPromptListViewBinding binding;
 
-    /* compiled from: GuildEventPromptListView.kt */
+    /* JADX INFO: compiled from: GuildEventPromptListView.kt */
     public static final /* data */ class ScheduledEventData {
         private final GuildScheduledEvent guildScheduledEvent;
         private final Function0<Unit> onScheduledEventClick;
@@ -41,7 +41,7 @@ public final class GuildEventPromptListView extends LinearLayout {
             return scheduledEventData.copy(guildScheduledEvent, function0);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final GuildScheduledEvent getGuildScheduledEvent() {
             return this.guildScheduledEvent;
         }

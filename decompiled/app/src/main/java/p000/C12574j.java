@@ -4,18 +4,18 @@ import java.util.Map;
 import java.util.Set;
 import p637j0.p641k.Func1;
 
-/* compiled from: java-style lambda group */
-/* renamed from: j */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: j */
+/* JADX INFO: compiled from: java-style lambda group */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C12574j<T, R> implements Func1<Map<Long, ? extends Integer>, Set<? extends Long>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final C12574j f26680j = new C12574j(0);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final C12574j f26681k = new C12574j(1);
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ int f26682l;
 
     public C12574j(int i) {

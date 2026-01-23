@@ -19,18 +19,18 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UnsendableStickerPremiumUpsellDialog.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: UnsendableStickerPremiumUpsellDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UnsendableStickerPremiumUpsellDialog extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(UnsendableStickerPremiumUpsellDialog.class, "binding", "getBinding()Lcom/discord/databinding/StickerPremiumUpsellDialogBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: UnsendableStickerPremiumUpsellDialog.kt */
+    /* JADX INFO: compiled from: UnsendableStickerPremiumUpsellDialog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -46,8 +46,8 @@ public final class UnsendableStickerPremiumUpsellDialog extends AppDialog {
         }
     }
 
-    /* compiled from: UnsendableStickerPremiumUpsellDialog.kt */
-    /* renamed from: com.discord.widgets.stickers.UnsendableStickerPremiumUpsellDialog$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stickers.UnsendableStickerPremiumUpsellDialog$onViewBound$1 */
+    /* JADX INFO: compiled from: UnsendableStickerPremiumUpsellDialog.kt */
     public static final class ViewOnClickListenerC101311 implements View.OnClickListener {
         public ViewOnClickListenerC101311() {
         }
@@ -58,8 +58,8 @@ public final class UnsendableStickerPremiumUpsellDialog extends AppDialog {
         }
     }
 
-    /* compiled from: UnsendableStickerPremiumUpsellDialog.kt */
-    /* renamed from: com.discord.widgets.stickers.UnsendableStickerPremiumUpsellDialog$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.stickers.UnsendableStickerPremiumUpsellDialog$onViewBound$2 */
+    /* JADX INFO: compiled from: UnsendableStickerPremiumUpsellDialog.kt */
     public static final class ViewOnClickListenerC101322 implements View.OnClickListener {
         public ViewOnClickListenerC101322() {
         }

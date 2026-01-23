@@ -12,19 +12,19 @@ import java.util.Map;
 import java.util.UUID;
 import p007b.p225i.p226a.p242c.p265v2.CryptoConfig;
 
-/* compiled from: ExoMediaDrm.java */
-/* renamed from: b.i.a.c.w2.a0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.w2.a0, reason: use source file name */
+/* JADX INFO: compiled from: ExoMediaDrm.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface ExoMediaDrm {
 
-    /* compiled from: ExoMediaDrm.java */
-    /* renamed from: b.i.a.c.w2.a0$a */
+    /* JADX INFO: renamed from: b.i.a.c.w2.a0$a */
+    /* JADX INFO: compiled from: ExoMediaDrm.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final byte[] f7967a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final String f7968b;
 
         public a(byte[] bArr, String str, int i) {
@@ -33,26 +33,26 @@ public interface ExoMediaDrm {
         }
     }
 
-    /* compiled from: ExoMediaDrm.java */
-    /* renamed from: b.i.a.c.w2.a0$b */
+    /* JADX INFO: renamed from: b.i.a.c.w2.a0$b */
+    /* JADX INFO: compiled from: ExoMediaDrm.java */
     public interface b {
     }
 
-    /* compiled from: ExoMediaDrm.java */
-    /* renamed from: b.i.a.c.w2.a0$c */
+    /* JADX INFO: renamed from: b.i.a.c.w2.a0$c */
+    /* JADX INFO: compiled from: ExoMediaDrm.java */
     public interface c {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         ExoMediaDrm mo3581a(UUID uuid);
     }
 
-    /* compiled from: ExoMediaDrm.java */
-    /* renamed from: b.i.a.c.w2.a0$d */
+    /* JADX INFO: renamed from: b.i.a.c.w2.a0$d */
+    /* JADX INFO: compiled from: ExoMediaDrm.java */
     public static final class d {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final byte[] f7969a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final String f7970b;
 
         public d(byte[] bArr, String str) {
@@ -61,41 +61,41 @@ public interface ExoMediaDrm {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     Map<String, String> mo3569a(byte[] bArr);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     d mo3570b();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     CryptoConfig mo3571c(byte[] bArr) throws MediaCryptoException;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     byte[] mo3572d() throws MediaDrmException;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     boolean mo3573e(byte[] bArr, String str);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     void mo3574f(byte[] bArr, byte[] bArr2);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     void mo3575g(byte[] bArr);
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     void mo3576h(@Nullable b bVar);
 
     @Nullable
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     byte[] mo3577i(byte[] bArr, byte[] bArr2) throws DeniedByServerException, NotProvisionedException;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     void mo3578j(byte[] bArr) throws DeniedByServerException;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     a mo3579k(byte[] bArr, @Nullable List<DrmInitData.SchemeData> list, int i, @Nullable HashMap<String, String> map) throws NotProvisionedException;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     int mo3580l();
 
     void release();

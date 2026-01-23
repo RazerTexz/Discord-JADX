@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ChainRun extends WidgetRun {
     private int chainStyle;
     public ArrayList<WidgetRun> widgets;
@@ -155,7 +155,8 @@ public class ChainRun extends WidgetRun {
         int size = this.widgets.size();
         long wrapDimension = 0;
         for (int i = 0; i < size; i++) {
-            wrapDimension = r4.end.margin + this.widgets.get(i).getWrapDimension() + wrapDimension + r4.start.margin;
+            WidgetRun widgetRun = this.widgets.get(i);
+            wrapDimension = ((long) widgetRun.end.margin) + widgetRun.getWrapDimension() + wrapDimension + ((long) widgetRun.start.margin);
         }
         return wrapDimension;
     }

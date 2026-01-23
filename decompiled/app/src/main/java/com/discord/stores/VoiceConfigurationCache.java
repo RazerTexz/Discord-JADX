@@ -11,13 +11,13 @@ import p507d0.Tuples;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: VoiceConfigurationCache.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: VoiceConfigurationCache.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VoiceConfigurationCache {
     private final SharedPreferences sharedPreferences;
 
-    /* compiled from: VoiceConfigurationCache.kt */
-    /* renamed from: com.discord.stores.VoiceConfigurationCache$read$1 */
+    /* JADX INFO: renamed from: com.discord.stores.VoiceConfigurationCache$read$1 */
+    /* JADX INFO: compiled from: VoiceConfigurationCache.kt */
     public static final class C66301 extends Lambda implements Function2<String, String, Tuples2<? extends Long, ? extends Boolean>> {
         public static final C66301 INSTANCE = new C66301();
 
@@ -30,7 +30,7 @@ public final class VoiceConfigurationCache {
             return invoke2(str, str2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Tuples2<Long, Boolean> invoke2(String str, String str2) {
             Intrinsics3.checkNotNullParameter(str, "key");
             Intrinsics3.checkNotNullParameter(str2, "value");
@@ -38,8 +38,8 @@ public final class VoiceConfigurationCache {
         }
     }
 
-    /* compiled from: VoiceConfigurationCache.kt */
-    /* renamed from: com.discord.stores.VoiceConfigurationCache$read$2 */
+    /* JADX INFO: renamed from: com.discord.stores.VoiceConfigurationCache$read$2 */
+    /* JADX INFO: compiled from: VoiceConfigurationCache.kt */
     public static final class C66312 extends Lambda implements Function2<String, String, Tuples2<? extends Long, ? extends Float>> {
         public static final C66312 INSTANCE = new C66312();
 
@@ -52,7 +52,7 @@ public final class VoiceConfigurationCache {
             return invoke2(str, str2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Tuples2<Long, Float> invoke2(String str, String str2) {
             Intrinsics3.checkNotNullParameter(str, "key");
             Intrinsics3.checkNotNullParameter(str2, "value");

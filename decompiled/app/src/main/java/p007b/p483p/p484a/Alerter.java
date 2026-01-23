@@ -3,12 +3,12 @@ package p007b.p483p.p484a;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 
-/* compiled from: Alerter.kt */
-/* renamed from: b.p.a.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.p.a.g, reason: use source file name */
+/* JADX INFO: compiled from: Alerter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Alerter implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ ViewOnClickListenerC5272b f14364j;
 
     public Alerter(ViewOnClickListenerC5272b viewOnClickListenerC5272b) {

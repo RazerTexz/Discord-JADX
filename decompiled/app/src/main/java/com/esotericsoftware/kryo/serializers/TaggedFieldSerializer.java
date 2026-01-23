@@ -17,7 +17,7 @@ import java.util.Comparator;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p106e.p107a.Log;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TaggedFieldSerializer<T> extends FieldSerializer<T> {
     private static final Comparator<FieldSerializer.CachedField> TAGGED_VALUE_COMPARATOR = new C106271();
     private boolean[] annexed;
@@ -25,14 +25,14 @@ public class TaggedFieldSerializer<T> extends FieldSerializer<T> {
     private int[] tags;
     private int writeFieldCount;
 
-    /* renamed from: com.esotericsoftware.kryo.serializers.TaggedFieldSerializer$1 */
+    /* JADX INFO: renamed from: com.esotericsoftware.kryo.serializers.TaggedFieldSerializer$1 */
     public static class C106271 implements Comparator<FieldSerializer.CachedField> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(FieldSerializer.CachedField cachedField, FieldSerializer.CachedField cachedField2) {
             return compare2(cachedField, cachedField2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(FieldSerializer.CachedField cachedField, FieldSerializer.CachedField cachedField2) {
             return ((Tag) cachedField.getField().getAnnotation(Tag.class)).value() - ((Tag) cachedField2.getField().getAnnotation(Tag.class)).value();
         }
@@ -98,7 +98,7 @@ public class TaggedFieldSerializer<T> extends FieldSerializer<T> {
     }
 
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializer, com.esotericsoftware.kryo.Serializer
-    public T read(Kryo kryo, Input input, Class<T> cls) throws KryoException {
+    public T read(Kryo kryo, Input input, Class<T> cls) {
         boolean z2;
         FieldSerializer.CachedField cachedField;
         T tCreate = create(kryo, input, cls);
@@ -165,7 +165,7 @@ public class TaggedFieldSerializer<T> extends FieldSerializer<T> {
     }
 
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializer, com.esotericsoftware.kryo.Serializer
-    public void write(Kryo kryo, Output output, T t) throws KryoException {
+    public void write(Kryo kryo, Output output, T t) {
         FieldSerializer.CachedField[] fields = getFields();
         output.writeVarInt(this.writeFieldCount, true);
         int length = fields.length;

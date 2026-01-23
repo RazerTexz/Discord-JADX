@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import p668x.p669a.p670a.p671d.ITrustedWebActivityCallback;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TrustedWebActivityCallbackRemote {
     private final ITrustedWebActivityCallback mCallbackBinder;
 

@@ -2,7 +2,6 @@ package androidx.viewpager.widget;
 
 import android.R;
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.database.DataSetObserver;
 import android.graphics.drawable.Drawable;
@@ -23,8 +22,8 @@ import androidx.viewpager.widget.ViewPager;
 import java.lang.ref.WeakReference;
 import java.util.Locale;
 
+/* JADX INFO: loaded from: classes.dex */
 @ViewPager.DecorView
-/* loaded from: classes.dex */
 public class PagerTitleStrip extends ViewGroup {
     private static final float SIDE_ALPHA = 0.6f;
     private static final int TEXT_SPACING = 16;
@@ -347,7 +346,7 @@ public class PagerTitleStrip extends ViewGroup {
         this.mUpdatingPositions = false;
     }
 
-    public PagerTitleStrip(@NonNull Context context, @Nullable AttributeSet attributeSet) throws Resources.NotFoundException {
+    public PagerTitleStrip(@NonNull Context context, @Nullable AttributeSet attributeSet) {
         super(context, attributeSet);
         this.mLastKnownCurrentPage = -1;
         this.mLastKnownPositionOffset = -1.0f;

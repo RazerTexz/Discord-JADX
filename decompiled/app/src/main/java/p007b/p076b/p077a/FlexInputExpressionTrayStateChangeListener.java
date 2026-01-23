@@ -1,8 +1,8 @@
 package p007b.p076b.p077a;
 
-/* compiled from: FlexInputExpressionTrayStateChangeListener.kt */
-/* renamed from: b.b.a.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.c, reason: use source file name */
+/* JADX INFO: compiled from: FlexInputExpressionTrayStateChangeListener.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface FlexInputExpressionTrayStateChangeListener {
     void isShown(boolean z2);
 }

@@ -3,9 +3,9 @@ package com.discord.widgets.guild_role_subscriptions.setup;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanSetup$subscriptionPlanDetailsViewModel$2 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanSetup$subscriptionPlanDetailsViewModel$2 */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8474x77ee71a8 extends Lambda implements Function0<GuildRoleSubscriptionPlanDetailsViewModel> {
     public static final C8474x77ee71a8 INSTANCE = new C8474x77ee71a8();
 

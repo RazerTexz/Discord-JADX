@@ -15,8 +15,8 @@ import java.util.List;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func6;
 
-/* compiled from: WidgetCreateChannel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetCreateChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetCreateChannel$Model$Companion$get$1<T1, T2, T3, T4, T5, T6, R> implements Func6<MeUser, Guild, Long, Long, List<? extends GuildRole>, Boolean, WidgetCreateChannel.Model> {
     public static final WidgetCreateChannel$Model$Companion$get$1 INSTANCE = new WidgetCreateChannel$Model$Companion$get$1();
 
@@ -25,7 +25,7 @@ public final class WidgetCreateChannel$Model$Companion$get$1<T1, T2, T3, T4, T5,
         return call2(meUser, guild, l, l2, (List<GuildRole>) list, bool);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetCreateChannel.Model call2(MeUser meUser, Guild guild, Long l, Long l2, List<GuildRole> list, Boolean bool) {
         if (guild == null || l == null || list == null) {
             return null;

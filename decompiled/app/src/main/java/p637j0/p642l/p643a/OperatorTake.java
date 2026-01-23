@@ -6,31 +6,31 @@ import p658rx.Producer;
 import p658rx.Subscriber;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: OperatorTake.java */
-/* renamed from: j0.l.a.b2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.b2, reason: use source file name */
+/* JADX INFO: compiled from: OperatorTake.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OperatorTake<T> extends Subscriber<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f26743j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f26744k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ Subscriber f26745l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ OperatorTake2 f26746m;
 
-    /* compiled from: OperatorTake.java */
-    /* renamed from: j0.l.a.b2$a */
+    /* JADX INFO: renamed from: j0.l.a.b2$a */
+    /* JADX INFO: compiled from: OperatorTake.java */
     public class a implements Producer {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final AtomicLong f26747j = new AtomicLong(0);
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Producer f26748k;
 
         public a(Producer producer) {
@@ -38,7 +38,7 @@ public class OperatorTake<T> extends Subscriber<T> {
         }
 
         @Override // p658rx.Producer
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public void mo10704j(long j) {
             long j2;
             long jMin;
@@ -47,7 +47,7 @@ public class OperatorTake<T> extends Subscriber<T> {
             }
             do {
                 j2 = this.f26747j.get();
-                jMin = Math.min(j, OperatorTake.this.f26746m.f26758j - j2);
+                jMin = Math.min(j, ((long) OperatorTake.this.f26746m.f26758j) - j2);
                 if (jMin == 0) {
                     return;
                 }

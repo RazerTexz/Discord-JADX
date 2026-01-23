@@ -7,7 +7,7 @@ import java.util.List;
 import p007b.p008a.p033m.p034a.C1144h;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelAuditLogEntry implements Model {
     public static final int ACTION_ALL = 0;
     public static final int ACTION_BOT_ADD = 28;
@@ -136,7 +136,7 @@ public class ModelAuditLogEntry implements Model {
     private List<Change> changes;
     private Long guildId;
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     private long f18561id;
     private Options options;
     private String reason;
@@ -144,7 +144,7 @@ public class ModelAuditLogEntry implements Model {
     private Long timestampEnd;
     private long userId;
 
-    /* renamed from: com.discord.models.domain.ModelAuditLogEntry$1 */
+    /* JADX INFO: renamed from: com.discord.models.domain.ModelAuditLogEntry$1 */
     public static /* synthetic */ class C55331 {
         public static final /* synthetic */ int[] $SwitchMap$com$google$gson$stream$JsonToken;
 
@@ -280,7 +280,7 @@ public class ModelAuditLogEntry implements Model {
 
     public static class ChangeNameId implements Model {
 
-        /* renamed from: id */
+        /* JADX INFO: renamed from: id */
         private long f18562id;
         private String name;
 
@@ -346,7 +346,7 @@ public class ModelAuditLogEntry implements Model {
         private int count;
         private int deleteMemberDays;
 
-        /* renamed from: id */
+        /* JADX INFO: renamed from: id */
         private long f18563id;
         private int membersRemoved;
         private String roleName;

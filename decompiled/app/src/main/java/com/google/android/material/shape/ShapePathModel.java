@@ -1,7 +1,7 @@
 package com.google.android.material.shape;
 
+/* JADX INFO: loaded from: classes3.dex */
 @Deprecated
-/* loaded from: classes3.dex */
 public class ShapePathModel extends ShapeAppearanceModel {
     @Deprecated
     public void setAllCorners(CornerTreatment cornerTreatment) {

@@ -14,9 +14,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StickerView.kt */
-/* renamed from: b.a.y.q0.d, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.q0.d, reason: use source file name */
+/* JADX INFO: compiled from: StickerView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StickerView5 extends Lambda implements Function1<Tuples2<? extends DownloadUtils.DownloadState, ? extends Integer>, Unit> {
     public final /* synthetic */ Integer $localAnimationSettings;
     public final /* synthetic */ BaseSticker $sticker;

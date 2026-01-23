@@ -18,10 +18,10 @@ import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
-/* loaded from: discord-126021.apk:lombok/patcher/PatchScript.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/PatchScript.SCL.lombok */
 public abstract class PatchScript {
 
-    /* loaded from: discord-126021.apk:lombok/patcher/PatchScript$MethodPatcherFactory.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/PatchScript$MethodPatcherFactory.SCL.lombok */
     public interface MethodPatcherFactory {
         MethodVisitor createMethodVisitor(String str, String str2, MethodVisitor methodVisitor, MethodLogistics methodLogistics);
     }
@@ -45,7 +45,7 @@ public abstract class PatchScript {
         return false;
     }
 
-    /* loaded from: discord-126021.apk:lombok/patcher/PatchScript$FixedClassWriter.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/PatchScript$FixedClassWriter.SCL.lombok */
     private static class FixedClassWriter extends ClassWriter {
         FixedClassWriter(ClassReader classReader, int flags) {
             super(classReader, flags);
@@ -117,7 +117,7 @@ public abstract class PatchScript {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/patcher/PatchScript$NoopClassVisitor.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/PatchScript$NoopClassVisitor.SCL.lombok */
     private static abstract class NoopClassVisitor extends ClassVisitor {
         public NoopClassVisitor() {
             super(Opcodes.ASM7);
@@ -170,8 +170,8 @@ public abstract class PatchScript {
         reader.accept(methodFinder, 0);
     }
 
-    /* renamed from: lombok.patcher.PatchScript$1 */
-    /* loaded from: discord-126021.apk:lombok/patcher/PatchScript$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.patcher.PatchScript$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/PatchScript$1.SCL.lombok */
     class C129111 extends NoopClassVisitor {
         private final /* synthetic */ Hook val$methodToInsert;
         private final /* synthetic */ MethodVisitor val$target;
@@ -197,8 +197,8 @@ public abstract class PatchScript {
         reader.accept(methodFinder, 0);
     }
 
-    /* renamed from: lombok.patcher.PatchScript$2 */
-    /* loaded from: discord-126021.apk:lombok/patcher/PatchScript$2.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.patcher.PatchScript$2 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/PatchScript$2.SCL.lombok */
     class C129122 extends NoopClassVisitor {
         private final /* synthetic */ Hook val$methodToTransplant;
         private final /* synthetic */ ClassVisitor val$target;
@@ -217,7 +217,7 @@ public abstract class PatchScript {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/patcher/PatchScript$InsertBodyOfMethodIntoAnotherVisitor.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/PatchScript$InsertBodyOfMethodIntoAnotherVisitor.SCL.lombok */
     private static final class InsertBodyOfMethodIntoAnotherVisitor extends MethodVisitor {
         /* synthetic */ InsertBodyOfMethodIntoAnotherVisitor(MethodVisitor methodVisitor, InsertBodyOfMethodIntoAnotherVisitor insertBodyOfMethodIntoAnotherVisitor) {
             this(methodVisitor);
@@ -275,7 +275,7 @@ public abstract class PatchScript {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/patcher/PatchScript$MethodPatcher.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/PatchScript$MethodPatcher.SCL.lombok */
     protected static class MethodPatcher extends ClassVisitor {
         private List<TargetMatcher> targets;
         private String ownClassSpec;

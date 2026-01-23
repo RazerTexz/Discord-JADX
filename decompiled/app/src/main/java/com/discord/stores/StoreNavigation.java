@@ -32,15 +32,15 @@ import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: StoreNavigation.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreNavigation.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreNavigation {
     private final BehaviorSubject<PanelState> leftPanelStateSubject;
     private final SerializedSubject<PanelAction, PanelAction> navigationPanelActionSubject;
     private final BehaviorSubject<PanelState> rightPanelStateSubject;
     private final StoreStream stream;
 
-    /* compiled from: StoreNavigation.kt */
+    /* JADX INFO: compiled from: StoreNavigation.kt */
     public static final class ActivityNavigationLifecycleCallbacks extends ActivityLifecycleCallbacks {
         private final Function2<AppActivity, ModelGlobalNavigation, Boolean> ageGateNavHandler;
         private final Function2<AppActivity, ModelGlobalNavigation, Boolean> authNavHandler;
@@ -56,7 +56,7 @@ public final class StoreNavigation {
         private final Function2<AppActivity, ModelGlobalNavigation, Boolean> tosNavHandler;
         private final Function2<AppActivity, ModelGlobalNavigation, Boolean> verificationNavHandler;
 
-        /* compiled from: StoreNavigation.kt */
+        /* JADX INFO: compiled from: StoreNavigation.kt */
         public static final /* data */ class ModelGlobalNavigation {
             private final AuthState authState;
             private final boolean clientOutdated;
@@ -98,72 +98,72 @@ public final class StoreNavigation {
                 return modelGlobalNavigation.copy((i & 1) != 0 ? modelGlobalNavigation.nuxState : nuxState, (i & 2) != 0 ? modelGlobalNavigation.initialized : z2, (i & 4) != 0 ? modelGlobalNavigation.authState : authState, (i & 8) != 0 ? modelGlobalNavigation.isInitializedForAuthedUser : z3, (i & 16) != 0 ? modelGlobalNavigation.incomingCall : z4, (i & 32) != 0 ? modelGlobalNavigation.userRequiredAction : requiredAction, (i & 64) != 0 ? modelGlobalNavigation.clientOutdated : z5, (i & 128) != 0 ? modelGlobalNavigation.inviteCode : inviteCode, (i & 256) != 0 ? modelGlobalNavigation.guildTemplateCode : str, (i & 512) != 0 ? modelGlobalNavigation.notice : notice, (i & 1024) != 0 ? modelGlobalNavigation.shouldShowAgeGate : ageGate, (i & 2048) != 0 ? modelGlobalNavigation.oAuthUri : uri, (i & 4096) != 0 ? modelGlobalNavigation.navigationTab : navigationTab, (i & 8192) != 0 ? modelGlobalNavigation.userHasPhone : z6);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final StoreNux.NuxState getNuxState() {
                 return this.nuxState;
             }
 
-            /* renamed from: component10, reason: from getter */
+            /* JADX INFO: renamed from: component10, reason: from getter */
             public final StoreNotices.Notice getNotice() {
                 return this.notice;
             }
 
-            /* renamed from: component11, reason: from getter */
+            /* JADX INFO: renamed from: component11, reason: from getter */
             public final AgeGate getShouldShowAgeGate() {
                 return this.shouldShowAgeGate;
             }
 
-            /* renamed from: component12, reason: from getter */
+            /* JADX INFO: renamed from: component12, reason: from getter */
             public final Uri getOAuthUri() {
                 return this.oAuthUri;
             }
 
-            /* renamed from: component13, reason: from getter */
+            /* JADX INFO: renamed from: component13, reason: from getter */
             public final NavigationTab getNavigationTab() {
                 return this.navigationTab;
             }
 
-            /* renamed from: component14, reason: from getter */
+            /* JADX INFO: renamed from: component14, reason: from getter */
             public final boolean getUserHasPhone() {
                 return this.userHasPhone;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getInitialized() {
                 return this.initialized;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final AuthState getAuthState() {
                 return this.authState;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getIsInitializedForAuthedUser() {
                 return this.isInitializedForAuthedUser;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final boolean getIncomingCall() {
                 return this.incomingCall;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final RequiredAction getUserRequiredAction() {
                 return this.userRequiredAction;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final boolean getClientOutdated() {
                 return this.clientOutdated;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final StoreInviteSettings.InviteCode getInviteCode() {
                 return this.inviteCode;
             }
 
-            /* renamed from: component9, reason: from getter */
+            /* JADX INFO: renamed from: component9, reason: from getter */
             public final String getGuildTemplateCode() {
                 return this.guildTemplateCode;
             }
@@ -240,39 +240,54 @@ public final class StoreNavigation {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v13, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v35 */
+            /* JADX WARN: Type inference failed for: r2v37 */
+            /* JADX WARN: Type inference failed for: r2v38 */
+            /* JADX WARN: Type inference failed for: r2v40 */
+            /* JADX WARN: Type inference failed for: r2v41 */
+            /* JADX WARN: Type inference failed for: r2v42 */
+            /* JADX WARN: Type inference failed for: r2v43 */
+            /* JADX WARN: Type inference failed for: r2v44 */
+            /* JADX WARN: Type inference failed for: r2v6, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v8, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 StoreNux.NuxState nuxState = this.nuxState;
                 int iHashCode = (nuxState != null ? nuxState.hashCode() : 0) * 31;
                 boolean z2 = this.initialized;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r2) * 31;
                 AuthState authState = this.authState;
-                int iHashCode2 = (i2 + (authState != null ? authState.hashCode() : 0)) * 31;
+                int iHashCode2 = (i + (authState != null ? authState.hashCode() : 0)) * 31;
                 boolean z3 = this.isInitializedForAuthedUser;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r22 = z3;
+                if (z3) {
+                    r22 = 1;
                 }
-                int i4 = (iHashCode2 + i3) * 31;
+                int i2 = (iHashCode2 + r22) * 31;
                 boolean z4 = this.incomingCall;
-                int i5 = z4;
-                if (z4 != 0) {
-                    i5 = 1;
+                ?? r23 = z4;
+                if (z4) {
+                    r23 = 1;
                 }
-                int i6 = (i4 + i5) * 31;
+                int i3 = (i2 + r23) * 31;
                 RequiredAction requiredAction = this.userRequiredAction;
-                int iHashCode3 = (i6 + (requiredAction != null ? requiredAction.hashCode() : 0)) * 31;
+                int iHashCode3 = (i3 + (requiredAction != null ? requiredAction.hashCode() : 0)) * 31;
                 boolean z5 = this.clientOutdated;
-                int i7 = z5;
-                if (z5 != 0) {
-                    i7 = 1;
+                ?? r24 = z5;
+                if (z5) {
+                    r24 = 1;
                 }
-                int i8 = (iHashCode3 + i7) * 31;
+                int i4 = (iHashCode3 + r24) * 31;
                 StoreInviteSettings.InviteCode inviteCode = this.inviteCode;
-                int iHashCode4 = (i8 + (inviteCode != null ? inviteCode.hashCode() : 0)) * 31;
+                int iHashCode4 = (i4 + (inviteCode != null ? inviteCode.hashCode() : 0)) * 31;
                 String str = this.guildTemplateCode;
                 int iHashCode5 = (iHashCode4 + (str != null ? str.hashCode() : 0)) * 31;
                 StoreNotices.Notice notice = this.notice;
@@ -284,7 +299,7 @@ public final class StoreNavigation {
                 NavigationTab navigationTab = this.navigationTab;
                 int iHashCode9 = (iHashCode8 + (navigationTab != null ? navigationTab.hashCode() : 0)) * 31;
                 boolean z6 = this.userHasPhone;
-                return iHashCode9 + (z6 ? 1 : z6 ? 1 : 0);
+                return iHashCode9 + (z6 ? 1 : z6);
             }
 
             public final boolean isInitializedForAuthedUser() {
@@ -449,13 +464,13 @@ public final class StoreNavigation {
         }
     }
 
-    /* compiled from: StoreNavigation.kt */
+    /* JADX INFO: compiled from: StoreNavigation.kt */
     public enum AgeGate {
         REGISTER_AGE_GATE,
         NSFW_CHANNEL_AGE_GATE
     }
 
-    /* compiled from: StoreNavigation.kt */
+    /* JADX INFO: compiled from: StoreNavigation.kt */
     public enum PanelAction {
         NOOP,
         OPEN,

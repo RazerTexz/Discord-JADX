@@ -1,23 +1,23 @@
 package p007b.p225i.p414e.p430r.p431d.p432k;
 
-/* compiled from: ModulusGF.java */
-/* renamed from: b.i.e.r.d.k.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.r.d.k.b, reason: use source file name */
+/* JADX INFO: compiled from: ModulusGF.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ModulusGF {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ModulusGF f13497a = new ModulusGF(929, 3);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int[] f13498b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int[] f13499c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ModulusPoly f13500d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ModulusPoly f13501e;
 
     public ModulusGF(int i, int i2) {
@@ -35,12 +35,12 @@ public final class ModulusGF {
         this.f13501e = new ModulusPoly(this, new int[]{1});
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int m7066a(int i, int i2) {
         return (i + i2) % 929;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ModulusPoly m7067b(int i, int i2) {
         if (i < 0) {
             throw new IllegalArgumentException();
@@ -53,7 +53,7 @@ public final class ModulusGF {
         return new ModulusPoly(this, iArr);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int m7068c(int i) {
         if (i != 0) {
             return this.f13498b[(929 - this.f13499c[i]) - 1];
@@ -61,7 +61,7 @@ public final class ModulusGF {
         throw new ArithmeticException();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int m7069d(int i, int i2) {
         if (i == 0 || i2 == 0) {
             return 0;
@@ -71,7 +71,7 @@ public final class ModulusGF {
         return iArr[(iArr2[i] + iArr2[i2]) % 928];
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int m7070e(int i, int i2) {
         return ((i + 929) - i2) % 929;
     }

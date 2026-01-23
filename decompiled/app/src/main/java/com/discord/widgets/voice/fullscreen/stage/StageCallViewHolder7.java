@@ -12,9 +12,9 @@ import com.discord.widgets.voice.fullscreen.stage.StageCallItem;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StageCallViewHolder.kt */
-/* renamed from: com.discord.widgets.voice.fullscreen.stage.PrestartDetailsViewHolder, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.stage.PrestartDetailsViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: StageCallViewHolder.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class StageCallViewHolder7 extends StageCallViewHolder {
     private final WidgetStageChannelPrestartDetailsBinding binding;
 
@@ -43,7 +43,7 @@ public final class StageCallViewHolder7 extends StageCallViewHolder {
         onConfigure2(i, stageCallItem);
     }
 
-    /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, StageCallItem data) {
         Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);

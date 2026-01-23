@@ -10,16 +10,16 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p292c.p293a.p294d.C3194i;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class IdToken extends AbstractSafeParcelable implements ReflectedParcelable {
     public static final Parcelable.Creator<IdToken> CREATOR = new C3194i();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @NonNull
     public final String f20414j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @NonNull
     public final String f20415k;
 

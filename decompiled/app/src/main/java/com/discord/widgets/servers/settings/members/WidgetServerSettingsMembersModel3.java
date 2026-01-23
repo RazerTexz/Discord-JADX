@@ -5,9 +5,9 @@ import java.util.Comparator;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsMembersModel.kt */
-/* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembersModel$Companion$sortMembersComparator$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembersModel$Companion$sortMembersComparator$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsMembersModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsMembersModel3<T> implements Comparator<WidgetServerSettingsMembersModel.MemberItem> {
     public static final WidgetServerSettingsMembersModel3 INSTANCE = new WidgetServerSettingsMembersModel3();
 
@@ -16,7 +16,7 @@ public final class WidgetServerSettingsMembersModel3<T> implements Comparator<Wi
         return compare2(memberItem, memberItem2);
     }
 
-    /* renamed from: compare, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
     public final int compare2(WidgetServerSettingsMembersModel.MemberItem memberItem, WidgetServerSettingsMembersModel.MemberItem memberItem2) {
         Intrinsics3.checkNotNullParameter(memberItem, "member1");
         Intrinsics3.checkNotNullParameter(memberItem2, "member2");

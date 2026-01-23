@@ -4,18 +4,18 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmailVerification.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: EmailVerification.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class EmailVerification {
     private final List<EmailVerification3> guildsInfo;
     private final boolean hasMatchingGuild;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<EmailVerification3> m7998a() {
         return this.guildsInfo;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final boolean getHasMatchingGuild() {
         return this.hasMatchingGuild;
     }
@@ -32,15 +32,18 @@ public final /* data */ class EmailVerification {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r1v3 */
     public int hashCode() {
         List<EmailVerification3> list = this.guildsInfo;
         int iHashCode = (list != null ? list.hashCode() : 0) * 31;
         boolean z2 = this.hasMatchingGuild;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode + i;
+        return iHashCode + r1;
     }
 
     public String toString() {

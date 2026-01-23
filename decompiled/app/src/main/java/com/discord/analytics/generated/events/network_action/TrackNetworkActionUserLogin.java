@@ -10,8 +10,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackNetworkActionUserLogin.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackNetworkActionUserLogin.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackNetworkActionUserLogin implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackNetworkMetadata2 {
     private final transient String analyticsSchemaTypeName;
     private final CharSequence inviteCode;
@@ -32,13 +32,13 @@ public final /* data */ class TrackNetworkActionUserLogin implements AnalyticsSc
     }
 
     @Override // com.discord.analytics.generated.traits.TrackNetworkMetadata2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo7529b(TrackNetworkMetadata trackNetworkMetadata) {
         this.trackNetworkMetadata = trackNetworkMetadata;
     }
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

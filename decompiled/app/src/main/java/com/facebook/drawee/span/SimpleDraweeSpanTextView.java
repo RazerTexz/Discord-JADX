@@ -4,13 +4,13 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SimpleDraweeSpanTextView extends TextView {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public DraweeSpanStringBuilder f19521j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f19522k;
 
     public SimpleDraweeSpanTextView(Context context, AttributeSet attributeSet) {

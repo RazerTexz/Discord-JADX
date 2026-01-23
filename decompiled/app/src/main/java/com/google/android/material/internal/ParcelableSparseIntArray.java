@@ -6,12 +6,12 @@ import android.util.SparseIntArray;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class ParcelableSparseIntArray extends SparseIntArray implements Parcelable {
     public static final Parcelable.Creator<ParcelableSparseIntArray> CREATOR = new C10942a();
 
-    /* renamed from: com.google.android.material.internal.ParcelableSparseIntArray$a */
+    /* JADX INFO: renamed from: com.google.android.material.internal.ParcelableSparseIntArray$a */
     public static class C10942a implements Parcelable.Creator<ParcelableSparseIntArray> {
         @Override // android.os.Parcelable.Creator
         @NonNull

@@ -6,8 +6,8 @@ import com.discord.widgets.user.WidgetUserMentions;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetUserMentions.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserMentions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserMentions$WidgetUserMentionFilter$onResume$3<T> implements Action1<Boolean> {
     public final /* synthetic */ WidgetUserMentions.WidgetUserMentionFilter this$0;
 
@@ -20,7 +20,7 @@ public final class WidgetUserMentions$WidgetUserMentionFilter$onResume$3<T> impl
         call2(bool);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(Boolean bool) {
         WidgetUserMentions.WidgetUserMentionFilter widgetUserMentionFilter = this.this$0;
         WidgetUserMentions.Model.MessageLoader.Filters filtersAccess$getFilters$p = WidgetUserMentions.WidgetUserMentionFilter.access$getFilters$p(widgetUserMentionFilter);

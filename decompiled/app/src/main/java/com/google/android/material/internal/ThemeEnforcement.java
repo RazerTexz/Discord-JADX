@@ -14,8 +14,8 @@ import androidx.appcompat.widget.TintTypedArray;
 import com.google.android.material.C10817R;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public final class ThemeEnforcement {
     private static final String APPCOMPAT_THEME_NAME = "Theme.AppCompat";
     private static final String MATERIAL_THEME_NAME = "Theme.MaterialComponents";

@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VideoInputDeviceDescription.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: VideoInputDeviceDescription.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class VideoInputDeviceDescription {
     private final VideoInputDeviceFacing facing;
     private final String guid;
@@ -33,17 +33,17 @@ public final /* data */ class VideoInputDeviceDescription {
         return videoInputDeviceDescription.copy(str, str2, videoInputDeviceFacing);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getGuid() {
         return this.guid;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final VideoInputDeviceFacing getFacing() {
         return this.facing;
     }

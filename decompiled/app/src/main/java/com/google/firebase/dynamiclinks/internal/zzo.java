@@ -8,18 +8,18 @@ import java.util.List;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p361c.p391o.p392b.C4780m;
 
-/* compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzo extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzo> CREATOR = new C4780m();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Uri f21428j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Uri f21429k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final List<zzr> f21430l;
 
     public zzo(Uri uri, Uri uri2, List<zzr> list) {

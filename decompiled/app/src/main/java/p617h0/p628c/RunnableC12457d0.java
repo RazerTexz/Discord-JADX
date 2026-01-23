@@ -2,12 +2,12 @@ package p617h0.p628c;
 
 import org.webrtc.VideoFileRenderer;
 
-/* compiled from: lambda */
-/* renamed from: h0.c.d0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.c.d0 */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC12457d0 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ VideoFileRenderer f26415j;
 
     public /* synthetic */ RunnableC12457d0(VideoFileRenderer videoFileRenderer) {

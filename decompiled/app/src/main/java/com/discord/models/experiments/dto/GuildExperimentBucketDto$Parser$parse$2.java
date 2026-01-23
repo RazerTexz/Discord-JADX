@@ -7,14 +7,14 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import kotlin.ranges.Ranges2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildExperimentDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildExperimentBucketDto$Parser$parse$2 implements Runnable {
     public final /* synthetic */ Ref$ObjectRef $positions;
     public final /* synthetic */ Model.JsonReader $reader;
 
-    /* compiled from: GuildExperimentDto.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentBucketDto$Parser$parse$2$1 */
+    /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentBucketDto$Parser$parse$2$1 */
+    /* JADX INFO: compiled from: GuildExperimentDto.kt */
     public static final class C55461<T> implements Model.JsonReader.ItemFactory<Ranges2> {
         public C55461() {
         }
@@ -25,7 +25,7 @@ public final class GuildExperimentBucketDto$Parser$parse$2 implements Runnable {
         }
 
         @Override // com.discord.models.domain.Model.JsonReader.ItemFactory
-        /* renamed from: get, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
         public final Ranges2 get2() {
             return GuildExperimentBucketDto.Parser.access$parsePosition(GuildExperimentBucketDto.Parser.INSTANCE, GuildExperimentBucketDto$Parser$parse$2.this.$reader);
         }

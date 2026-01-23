@@ -13,8 +13,8 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: View.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: View.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UserAkaView$configure$$inlined$doOnPreDraw$1 implements Runnable {
     public final /* synthetic */ List $guildMembers$inlined;
     public final /* synthetic */ View $this_doOnPreDraw;

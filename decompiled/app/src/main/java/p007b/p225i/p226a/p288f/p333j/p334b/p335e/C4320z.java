@@ -5,14 +5,14 @@ import android.app.Application;
 import android.os.Bundle;
 import android.util.Log;
 
-/* renamed from: b.i.a.f.j.b.e.z */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.j.b.e.z */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4320z implements Application.ActivityLifecycleCallbacks {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Activity f11441j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final C4286i f11442k;
 
     public C4320z(Activity activity, C4286i c4286i, C4302q c4302q) {

@@ -7,12 +7,12 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Animator.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Animator.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AnimatorKt {
 
-    /* compiled from: Animator.kt */
-    /* renamed from: androidx.core.animation.AnimatorKt$addListener$1 */
+    /* JADX INFO: renamed from: androidx.core.animation.AnimatorKt$addListener$1 */
+    /* JADX INFO: compiled from: Animator.kt */
     public static final class C02061 extends Lambda implements Function1<Animator, Unit> {
         public static final C02061 INSTANCE = new C02061();
 
@@ -26,14 +26,14 @@ public final class AnimatorKt {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Animator animator) {
             Intrinsics3.checkNotNullParameter(animator, "it");
         }
     }
 
-    /* compiled from: Animator.kt */
-    /* renamed from: androidx.core.animation.AnimatorKt$addListener$2 */
+    /* JADX INFO: renamed from: androidx.core.animation.AnimatorKt$addListener$2 */
+    /* JADX INFO: compiled from: Animator.kt */
     public static final class C02072 extends Lambda implements Function1<Animator, Unit> {
         public static final C02072 INSTANCE = new C02072();
 
@@ -47,14 +47,14 @@ public final class AnimatorKt {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Animator animator) {
             Intrinsics3.checkNotNullParameter(animator, "it");
         }
     }
 
-    /* compiled from: Animator.kt */
-    /* renamed from: androidx.core.animation.AnimatorKt$addListener$3 */
+    /* JADX INFO: renamed from: androidx.core.animation.AnimatorKt$addListener$3 */
+    /* JADX INFO: compiled from: Animator.kt */
     public static final class C02083 extends Lambda implements Function1<Animator, Unit> {
         public static final C02083 INSTANCE = new C02083();
 
@@ -68,14 +68,14 @@ public final class AnimatorKt {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Animator animator) {
             Intrinsics3.checkNotNullParameter(animator, "it");
         }
     }
 
-    /* compiled from: Animator.kt */
-    /* renamed from: androidx.core.animation.AnimatorKt$addListener$4 */
+    /* JADX INFO: renamed from: androidx.core.animation.AnimatorKt$addListener$4 */
+    /* JADX INFO: compiled from: Animator.kt */
     public static final class C02094 extends Lambda implements Function1<Animator, Unit> {
         public static final C02094 INSTANCE = new C02094();
 
@@ -89,14 +89,14 @@ public final class AnimatorKt {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Animator animator) {
             Intrinsics3.checkNotNullParameter(animator, "it");
         }
     }
 
-    /* compiled from: Animator.kt */
-    /* renamed from: androidx.core.animation.AnimatorKt$addPauseListener$1 */
+    /* JADX INFO: renamed from: androidx.core.animation.AnimatorKt$addPauseListener$1 */
+    /* JADX INFO: compiled from: Animator.kt */
     public static final class C02101 extends Lambda implements Function1<Animator, Unit> {
         public static final C02101 INSTANCE = new C02101();
 
@@ -110,14 +110,14 @@ public final class AnimatorKt {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Animator animator) {
             Intrinsics3.checkNotNullParameter(animator, "it");
         }
     }
 
-    /* compiled from: Animator.kt */
-    /* renamed from: androidx.core.animation.AnimatorKt$addPauseListener$2 */
+    /* JADX INFO: renamed from: androidx.core.animation.AnimatorKt$addPauseListener$2 */
+    /* JADX INFO: compiled from: Animator.kt */
     public static final class C02112 extends Lambda implements Function1<Animator, Unit> {
         public static final C02112 INSTANCE = new C02112();
 
@@ -131,7 +131,7 @@ public final class AnimatorKt {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Animator animator) {
             Intrinsics3.checkNotNullParameter(animator, "it");
         }

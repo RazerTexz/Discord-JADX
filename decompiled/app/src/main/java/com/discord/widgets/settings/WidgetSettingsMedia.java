@@ -34,21 +34,21 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetSettingsMedia.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsMedia.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsMedia extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsMedia.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsMediaBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String PREVIEW_MAX_SIZE_MB = "10";
     private StoreAccessibility accessibilitySettings;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private StoreUserSettings userSettings;
 
-    /* compiled from: WidgetSettingsMedia.kt */
+    /* JADX INFO: compiled from: WidgetSettingsMedia.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -63,8 +63,8 @@ public final class WidgetSettingsMedia extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsMedia.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsMedia$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsMedia$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetSettingsMedia.kt */
     public static final class C96461<T> implements Action1<Boolean> {
         public C96461() {
         }
@@ -74,7 +74,7 @@ public final class WidgetSettingsMedia extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreUserSettings storeUserSettingsAccess$getUserSettings$p = WidgetSettingsMedia.access$getUserSettings$p(WidgetSettingsMedia.this);
             AppActivity appActivity = WidgetSettingsMedia.this.getAppActivity();
@@ -83,8 +83,8 @@ public final class WidgetSettingsMedia extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsMedia.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsMedia$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsMedia$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetSettingsMedia.kt */
     public static final class C96472<T> implements Action1<Boolean> {
         public C96472() {
         }
@@ -94,7 +94,7 @@ public final class WidgetSettingsMedia extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreUserSettings storeUserSettingsAccess$getUserSettings$p = WidgetSettingsMedia.access$getUserSettings$p(WidgetSettingsMedia.this);
             Intrinsics3.checkNotNullExpressionValue(bool, "checked");
@@ -102,12 +102,12 @@ public final class WidgetSettingsMedia extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsMedia.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsMedia$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsMedia$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetSettingsMedia.kt */
     public static final class C96483 extends Lambda implements Function1<RenderContext, Unit> {
 
-        /* compiled from: WidgetSettingsMedia.kt */
-        /* renamed from: com.discord.widgets.settings.WidgetSettingsMedia$onViewBound$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsMedia$onViewBound$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsMedia.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -119,7 +119,7 @@ public final class WidgetSettingsMedia extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "it");
                 MultiValuePropPremiumUpsellDialog.Companion companion = MultiValuePropPremiumUpsellDialog.INSTANCE;
@@ -139,15 +139,15 @@ public final class WidgetSettingsMedia extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8423b("getNitro", new AnonymousClass1());
         }
     }
 
-    /* compiled from: WidgetSettingsMedia.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsMedia$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsMedia$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetSettingsMedia.kt */
     public static final class C96494<T> implements Action1<Boolean> {
         public C96494() {
         }
@@ -157,7 +157,7 @@ public final class WidgetSettingsMedia extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreUserSettings storeUserSettingsAccess$getUserSettings$p = WidgetSettingsMedia.access$getUserSettings$p(WidgetSettingsMedia.this);
             AppActivity appActivity = WidgetSettingsMedia.this.getAppActivity();
@@ -166,8 +166,8 @@ public final class WidgetSettingsMedia extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsMedia.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsMedia$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsMedia$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetSettingsMedia.kt */
     public static final class C96505<T> implements Action1<Boolean> {
         public C96505() {
         }
@@ -177,7 +177,7 @@ public final class WidgetSettingsMedia extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreUserSettings storeUserSettingsAccess$getUserSettings$p = WidgetSettingsMedia.access$getUserSettings$p(WidgetSettingsMedia.this);
             AppActivity appActivity = WidgetSettingsMedia.this.getAppActivity();
@@ -186,8 +186,8 @@ public final class WidgetSettingsMedia extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsMedia.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsMedia$onViewBound$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsMedia$onViewBound$6 */
+    /* JADX INFO: compiled from: WidgetSettingsMedia.kt */
     public static final class C96516<T> implements Action1<Boolean> {
         public C96516() {
         }
@@ -197,7 +197,7 @@ public final class WidgetSettingsMedia extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreUserSettings storeUserSettingsAccess$getUserSettings$p = WidgetSettingsMedia.access$getUserSettings$p(WidgetSettingsMedia.this);
             Intrinsics3.checkNotNullExpressionValue(bool, "checked");
@@ -205,8 +205,8 @@ public final class WidgetSettingsMedia extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsMedia.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsMedia$onViewBound$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsMedia$onViewBound$7 */
+    /* JADX INFO: compiled from: WidgetSettingsMedia.kt */
     public static final class C96527<T> implements Action1<Boolean> {
         public C96527() {
         }
@@ -216,7 +216,7 @@ public final class WidgetSettingsMedia extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
             Intrinsics3.checkNotNullExpressionValue(bool, "checked");

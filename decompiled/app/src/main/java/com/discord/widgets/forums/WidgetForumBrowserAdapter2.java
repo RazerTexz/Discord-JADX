@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.forums.ForumBrowserItem;
 import com.discord.widgets.forums.WidgetForumBrowserAdapter;
 
-/* compiled from: WidgetForumBrowserAdapter.kt */
-/* renamed from: com.discord.widgets.forums.WidgetForumBrowserAdapter$PostItem$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.forums.WidgetForumBrowserAdapter$PostItem$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetForumBrowserAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetForumBrowserAdapter2 implements View.OnClickListener {
     public final /* synthetic */ ForumBrowserItem.PostItem $item;
     public final /* synthetic */ WidgetForumBrowserAdapter.PostItem this$0;

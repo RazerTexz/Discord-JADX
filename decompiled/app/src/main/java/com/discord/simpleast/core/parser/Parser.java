@@ -18,14 +18,14 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.TypeIntrinsics;
 
-/* compiled from: Parser.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Parser.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class Parser<R, T extends Node<R>, S> {
     private static final String TAG = "Parser";
     private final boolean enableDebugging;
     private final ArrayList<Rule<R, ? extends T, S>> rules;
 
-    /* compiled from: Parser.kt */
+    /* JADX INFO: compiled from: Parser.kt */
     public static final class ParseException extends RuntimeException {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ParseException(String str, CharSequence charSequence, Throwable th) {

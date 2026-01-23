@@ -27,8 +27,8 @@ import p658rx.Observable;
 import p658rx.functions.Func2;
 import p658rx.functions.Func3;
 
-/* compiled from: InviteSuggestionsManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: InviteSuggestionsManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class InviteSuggestionsManager {
     private final StoreChannels storeChannels;
     private final StoreMessagesMostRecent storeMessagesMostRecent;
@@ -36,7 +36,7 @@ public final class InviteSuggestionsManager {
     private final StoreUserRelationships storeUserRelationships;
     private final StoreUser storeUsers;
 
-    /* compiled from: InviteSuggestionsManager.kt */
+    /* JADX INFO: compiled from: InviteSuggestionsManager.kt */
     public static final /* data */ class UserAffinityData {
         private final Map<Long, Integer> relationships;
         private final List<Long> userIds;
@@ -127,12 +127,12 @@ public final class InviteSuggestionsManager {
         }
     }
 
-    /* compiled from: InviteSuggestionsManager.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.InviteSuggestionsManager$observeInviteSuggestions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.InviteSuggestionsManager$observeInviteSuggestions$1 */
+    /* JADX INFO: compiled from: InviteSuggestionsManager.kt */
     public static final class C86371<T, R> implements Func1<List<? extends Long>, Observable<? extends UserAffinityData>> {
 
-        /* compiled from: InviteSuggestionsManager.kt */
-        /* renamed from: com.discord.widgets.guilds.invite.InviteSuggestionsManager$observeInviteSuggestions$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.InviteSuggestionsManager$observeInviteSuggestions$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: InviteSuggestionsManager.kt */
         public static final class AnonymousClass1<T1, T2, R> implements Func2<Map<Long, ? extends User>, Map<Long, ? extends Integer>, UserAffinityData> {
             public final /* synthetic */ List $affinityUserIds;
 
@@ -145,7 +145,7 @@ public final class InviteSuggestionsManager {
                 return call2(map, (Map<Long, Integer>) map2);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final UserAffinityData call2(Map<Long, ? extends User> map, Map<Long, Integer> map2) {
                 List list = this.$affinityUserIds;
                 Intrinsics3.checkNotNullExpressionValue(list, "affinityUserIds");
@@ -163,7 +163,7 @@ public final class InviteSuggestionsManager {
             return call2((List<Long>) list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends UserAffinityData> call2(List<Long> list) {
             StoreUser storeUserAccess$getStoreUsers$p = InviteSuggestionsManager.access$getStoreUsers$p(InviteSuggestionsManager.this);
             Intrinsics3.checkNotNullExpressionValue(list, "affinityUserIds");
@@ -171,8 +171,8 @@ public final class InviteSuggestionsManager {
         }
     }
 
-    /* compiled from: InviteSuggestionsManager.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.InviteSuggestionsManager$observeInviteSuggestions$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.InviteSuggestionsManager$observeInviteSuggestions$2 */
+    /* JADX INFO: compiled from: InviteSuggestionsManager.kt */
     public static final class C86382<T1, T2, T3, R> implements Func3<Map<Long, ? extends Channel>, Map<Long, ? extends Long>, UserAffinityData, List<? extends InviteSuggestion>> {
         public static final C86382 INSTANCE = new C86382();
 
@@ -181,7 +181,7 @@ public final class InviteSuggestionsManager {
             return call2((Map<Long, Channel>) map, (Map<Long, Long>) map2, userAffinityData);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<InviteSuggestion> call2(Map<Long, Channel> map, Map<Long, Long> map2, UserAffinityData userAffinityData) {
             User userM7677a;
             ArrayList arrayList = new ArrayList();

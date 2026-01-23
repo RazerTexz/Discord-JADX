@@ -25,15 +25,15 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GroupInviteFriendsSheetAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GroupInviteFriendsSheetAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GroupInviteFriendsSheetAdapter extends MGRecyclerAdapterSimple<FriendItem> {
     private final Function2<User, Boolean, Unit> onUserChecked;
 
-    /* compiled from: GroupInviteFriendsSheetAdapter.kt */
+    /* JADX INFO: compiled from: GroupInviteFriendsSheetAdapter.kt */
     public static final /* data */ class FriendItem implements MGRecyclerDataPayload {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         public static final int TYPE_FRIEND = 0;
         private final boolean isSelected;
@@ -41,7 +41,7 @@ public final class GroupInviteFriendsSheetAdapter extends MGRecyclerAdapterSimpl
         private final int type;
         private final User user;
 
-        /* compiled from: GroupInviteFriendsSheetAdapter.kt */
+        /* JADX INFO: compiled from: GroupInviteFriendsSheetAdapter.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -78,12 +78,12 @@ public final class GroupInviteFriendsSheetAdapter extends MGRecyclerAdapterSimpl
             return friendItem.copy(user, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final User getUser() {
             return this.user;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsSelected() {
             return this.isSelected;
         }
@@ -119,15 +119,18 @@ public final class GroupInviteFriendsSheetAdapter extends MGRecyclerAdapterSimpl
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             User user = this.user;
             int iHashCode = (user != null ? user.hashCode() : 0) * 31;
             boolean z2 = this.isSelected;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public final boolean isSelected() {
@@ -142,7 +145,7 @@ public final class GroupInviteFriendsSheetAdapter extends MGRecyclerAdapterSimpl
         }
     }
 
-    /* compiled from: GroupInviteFriendsSheetAdapter.kt */
+    /* JADX INFO: compiled from: GroupInviteFriendsSheetAdapter.kt */
     public static final class GroupInviteFriendsListItem extends MGRecyclerViewHolder<GroupInviteFriendsSheetAdapter, FriendItem> {
         private final GroupInviteFriendsSheetItemBinding binding;
 
@@ -183,7 +186,7 @@ public final class GroupInviteFriendsSheetAdapter extends MGRecyclerAdapterSimpl
             onConfigure2(i, friendItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, FriendItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

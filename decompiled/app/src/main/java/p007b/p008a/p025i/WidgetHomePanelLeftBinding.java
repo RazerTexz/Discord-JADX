@@ -8,20 +8,20 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: WidgetHomePanelLeftBinding.java */
-/* renamed from: b.a.i.l5, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.l5, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHomePanelLeftBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetHomePanelLeftBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final RelativeLayout f1035a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f1036b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final FragmentContainerView f1037c;
 

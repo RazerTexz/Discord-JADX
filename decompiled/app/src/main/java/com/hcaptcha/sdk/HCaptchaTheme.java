@@ -5,7 +5,7 @@ import com.discord.models.domain.ModelUserSettings;
 import java.io.Serializable;
 import p007b.p195g.p196a.p197a.JsonValue;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public enum HCaptchaTheme implements Serializable {
     DARK(ModelUserSettings.THEME_DARK),
     LIGHT(ModelUserSettings.THEME_LIGHT),

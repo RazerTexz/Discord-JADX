@@ -6,9 +6,9 @@ import com.discord.models.domain.emoji.EmojiSet;
 import java.util.List;
 import p637j0.p641k.Func1;
 
-/* compiled from: WidgetGuildProfileSheetViewModel.kt */
-/* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$Companion$observeStores$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$Companion$observeStores$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildProfileSheetViewModel3<T, R> implements Func1<EmojiSet, List<Emoji>> {
     public final /* synthetic */ long $guildId;
 
@@ -21,7 +21,7 @@ public final class WidgetGuildProfileSheetViewModel3<T, R> implements Func1<Emoj
         return call2(emojiSet);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final List<Emoji> call2(EmojiSet emojiSet) {
         return emojiSet.customEmojis.get(Long.valueOf(this.$guildId));
     }

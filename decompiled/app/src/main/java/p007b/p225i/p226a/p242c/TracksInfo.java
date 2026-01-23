@@ -9,31 +9,31 @@ import p007b.p225i.p355b.p357b.AbstractIndexedListIterator;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 import p007b.p225i.p355b.p357b.RegularImmutableList;
 
-/* compiled from: TracksInfo.java */
-/* renamed from: b.i.a.c.p2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.p2, reason: use source file name */
+/* JADX INFO: compiled from: TracksInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TracksInfo implements Bundleable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final TracksInfo f7433j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ImmutableList2<a> f7434k;
 
-    /* compiled from: TracksInfo.java */
-    /* renamed from: b.i.a.c.p2$a */
+    /* JADX INFO: renamed from: b.i.a.c.p2$a */
+    /* JADX INFO: compiled from: TracksInfo.java */
     public static final class a implements Bundleable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final TrackGroup f7435j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final int[] f7436k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final int f7437l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final boolean[] f7438m;
 
         public a(TrackGroup trackGroup, int[] iArr, int i, boolean[] zArr) {

@@ -10,24 +10,24 @@ import p007b.p225i.p226a.p288f.p299e.C3257c0;
 import p007b.p225i.p226a.p288f.p311f.BinderC3423b;
 import p007b.p225i.p226a.p288f.p311f.InterfaceC3422a;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzn extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzn> CREATOR = new C3257c0();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f20559j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f20560k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f20561l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Context f20562m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final boolean f20563n;
 
     public zzn(String str, boolean z2, boolean z3, IBinder iBinder, boolean z4) {

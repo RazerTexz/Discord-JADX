@@ -12,40 +12,40 @@ import p658rx.Subscriber;
 import p658rx.functions.Action0;
 import p658rx.observers.SerializedSubscriber;
 
-/* compiled from: OperatorBufferWithTime.java */
-/* renamed from: j0.l.a.n0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.n0, reason: use source file name */
+/* JADX INFO: compiled from: OperatorBufferWithTime.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorBufferWithTime2<T> implements Observable.InterfaceC13006b<List<T>, T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f26931j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final long f26932k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final TimeUnit f26933l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f26934m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Scheduler f26935n;
 
-    /* compiled from: OperatorBufferWithTime.java */
-    /* renamed from: j0.l.a.n0$a */
+    /* JADX INFO: renamed from: j0.l.a.n0$a */
+    /* JADX INFO: compiled from: OperatorBufferWithTime.java */
     public final class a extends Subscriber<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Subscriber<? super List<T>> f26936j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Scheduler.Worker f26937k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public List<T> f26938l = new ArrayList();
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public boolean f26939m;
 
         public a(Subscriber<? super List<T>> subscriber, Scheduler.Worker worker) {
@@ -109,27 +109,27 @@ public final class OperatorBufferWithTime2<T> implements Observable.InterfaceC13
         }
     }
 
-    /* compiled from: OperatorBufferWithTime.java */
-    /* renamed from: j0.l.a.n0$b */
+    /* JADX INFO: renamed from: j0.l.a.n0$b */
+    /* JADX INFO: compiled from: OperatorBufferWithTime.java */
     public final class b extends Subscriber<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Subscriber<? super List<T>> f26941j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Scheduler.Worker f26942k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final List<List<T>> f26943l = new LinkedList();
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public boolean f26944m;
 
-        /* compiled from: OperatorBufferWithTime.java */
-        /* renamed from: j0.l.a.n0$b$a */
+        /* JADX INFO: renamed from: j0.l.a.n0$b$a */
+        /* JADX INFO: compiled from: OperatorBufferWithTime.java */
         public class a implements Action0 {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ List f26946j;
 
             public a(List list) {
@@ -173,7 +173,7 @@ public final class OperatorBufferWithTime2<T> implements Observable.InterfaceC13
             this.f26942k = worker;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m10774a() {
             ArrayList arrayList = new ArrayList();
             synchronized (this) {

@@ -14,28 +14,28 @@ import p007b.p225i.p226a.p242c.p257e3.TransferListener;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 
-/* compiled from: IcyDataSource.java */
-/* renamed from: b.i.a.c.a3.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.s, reason: use source file name */
+/* JADX INFO: compiled from: IcyDataSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class IcyDataSource implements DataSource3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final DataSource3 f5698a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f5699b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final a f5700c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final byte[] f5701d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f5702e;
 
-    /* compiled from: IcyDataSource.java */
-    /* renamed from: b.i.a.c.a3.s$a */
+    /* JADX INFO: renamed from: b.i.a.c.a3.s$a */
+    /* JADX INFO: compiled from: IcyDataSource.java */
     public interface a {
     }
 
@@ -49,7 +49,7 @@ public final class IcyDataSource implements DataSource3 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long mo2586a(DataSpec dataSpec) {
         throw new UnsupportedOperationException();
     }
@@ -60,21 +60,21 @@ public final class IcyDataSource implements DataSource3 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo2587d(TransferListener transferListener) {
         Objects.requireNonNull(transferListener);
         this.f5698a.mo2587d(transferListener);
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Map<String, List<String>> mo2588j() {
         return this.f5698a.mo2588j();
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     @Nullable
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Uri mo2589n() {
         return this.f5698a.mo2589n();
     }

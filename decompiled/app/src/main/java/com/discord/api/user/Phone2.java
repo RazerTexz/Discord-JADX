@@ -9,9 +9,9 @@ import java.io.IOException;
 import kotlin.NoWhenBranchMatchedException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Phone.kt */
-/* renamed from: com.discord.api.user.PhoneTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.user.PhoneTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: Phone.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Phone2 extends TypeAdapter<Phone> {
     @Override // com.google.gson.TypeAdapter
     public Phone read(JsonReader jsonReader) throws IOException {

@@ -6,9 +6,9 @@ import p007b.p195g.p196a.p197a.JsonInclude;
 import p007b.p195g.p196a.p197a.JsonSetter;
 import p007b.p195g.p196a.p205c.p210c0.VisibilityChecker;
 
-/* compiled from: ConfigOverrides.java */
-/* renamed from: b.g.a.c.z.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.z.g, reason: use source file name */
+/* JADX INFO: compiled from: ConfigOverrides.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ConfigOverrides implements Serializable {
     private static final long serialVersionUID = 1;
     public JsonInclude.b _defaultInclusion;
@@ -31,7 +31,7 @@ public class ConfigOverrides implements Serializable {
         this._defaultLeniency = null;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ConfigOverride m2263a(Class<?> cls) {
         Map<Class<?>, ?> map = this._overrides;
         if (map == null) {

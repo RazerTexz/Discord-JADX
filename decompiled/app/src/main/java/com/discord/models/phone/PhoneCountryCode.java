@@ -5,11 +5,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PhoneCountryCode.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: PhoneCountryCode.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class PhoneCountryCode {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final PhoneCountryCode DEFAULT_COUNTRY_CODE = new PhoneCountryCode("United States", "US", "+1");
     private static final PhoneCountryCode MISSING_COUNTRY_CODE = new PhoneCountryCode("", "", "");
@@ -17,7 +17,7 @@ public final /* data */ class PhoneCountryCode {
     private final String name;
     private final String phoneCountryCode;
 
-    /* compiled from: PhoneCountryCode.kt */
+    /* JADX INFO: compiled from: PhoneCountryCode.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -63,17 +63,17 @@ public final /* data */ class PhoneCountryCode {
         return phoneCountryCode.copy(str, str2, str3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getAlpha2() {
         return this.alpha2;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getPhoneCountryCode() {
         return this.phoneCountryCode;
     }

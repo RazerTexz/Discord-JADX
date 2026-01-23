@@ -8,13 +8,13 @@ import p507d0.p513e0.p514p.p515d.p517m0.p548g.FqName;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.Name;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModuleDescriptor.kt */
-/* renamed from: d0.e0.p.d.m0.c.c0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.c0, reason: use source file name */
+/* JADX INFO: compiled from: ModuleDescriptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface ModuleDescriptor2 extends DeclarationDescriptor {
 
-    /* compiled from: ModuleDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.c.c0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.c0$a */
+    /* JADX INFO: compiled from: ModuleDescriptor.kt */
     public static final class a {
         public static <R, D> R accept(ModuleDescriptor2 moduleDescriptor2, DeclarationDescriptorVisitor<R, D> declarationDescriptorVisitor, D d) {
             Intrinsics3.checkNotNullParameter(moduleDescriptor2, "this");

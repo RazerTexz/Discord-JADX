@@ -6,9 +6,9 @@ import com.google.android.gms.auth.api.credentials.Credential;
 import com.google.android.gms.internal.p688authapi.zzz;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* renamed from: b.i.a.f.h.c.u */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.c.u */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3472u implements Parcelable.Creator<zzz> {
     @Override // android.os.Parcelable.Creator
     public final zzz createFromParcel(Parcel parcel) {

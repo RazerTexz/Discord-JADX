@@ -9,13 +9,13 @@ import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: FragmentExtensions.kt */
-/* renamed from: com.discord.utilities.fragment.FragmentExtensionsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.fragment.FragmentExtensionsKt, reason: use source file name */
+/* JADX INFO: compiled from: FragmentExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FragmentExtensions {
 
-    /* compiled from: FragmentExtensions.kt */
-    /* renamed from: com.discord.utilities.fragment.FragmentExtensionsKt$booleanExtra$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.fragment.FragmentExtensionsKt$booleanExtra$1 */
+    /* JADX INFO: compiled from: FragmentExtensions.kt */
     public static final class C67561 extends Lambda implements Function0<Boolean> {
         public final /* synthetic */ boolean $defaultValue;
         public final /* synthetic */ String $name;
@@ -34,7 +34,7 @@ public final class FragmentExtensions {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             Bundle arguments = this.$this_booleanExtra.getArguments();
             return arguments != null ? arguments.getBoolean(this.$name, this.$defaultValue) : this.$defaultValue;

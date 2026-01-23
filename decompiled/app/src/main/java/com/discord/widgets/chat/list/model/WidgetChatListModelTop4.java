@@ -22,9 +22,9 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func9;
 
-/* compiled from: WidgetChatListModelTop.kt */
-/* renamed from: com.discord.widgets.chat.list.model.WidgetChatListModelTop$Companion$getWelcomeEntry$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.model.WidgetChatListModelTop$Companion$getWelcomeEntry$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListModelTop.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListModelTop4<T1, T2, T3, T4, T5, T6, T7, T8, T9, R> implements Func9<Guild, MeUser, Long, Long, GuildMember, User, Map<Long, ? extends List<? extends Guild>>, Channel, Boolean, ChatListEntry> {
     public final /* synthetic */ Channel $channel;
 
@@ -37,7 +37,7 @@ public final class WidgetChatListModelTop4<T1, T2, T3, T4, T5, T6, T7, T8, T9, R
         return call2(guild, meUser, l, l2, guildMember, user, (Map<Long, ? extends List<Guild>>) map, channel, bool);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final ChatListEntry call2(Guild guild, MeUser meUser, Long l, Long l2, GuildMember guildMember, User user, Map<Long, ? extends List<Guild>> map, Channel channel, Boolean bool) {
         boolean z2 = l2 != null && this.$channel.getId() == l2.longValue();
         boolean z3 = guild != null && guild.hasIcon();

@@ -4,9 +4,9 @@ import com.discord.analytics.generated.traits.TrackGuild;
 import com.discord.models.guild.Guild;
 import com.discord.stores.StoreStream;
 
-/* compiled from: AnalyticsUtils.kt */
-/* renamed from: com.discord.utilities.analytics.AnalyticsUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: AnalyticsUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AnalyticsUtils6 {
     public static final /* synthetic */ TrackGuild access$fill(TrackGuild trackGuild) {
         return fill(trackGuild);

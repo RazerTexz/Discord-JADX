@@ -5,12 +5,12 @@ import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p369m.p370d.Logger3;
 
-/* compiled from: NativeSessionReport.java */
-/* renamed from: b.i.c.m.d.q.c.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.q.c.b, reason: use source file name */
+/* JADX INFO: compiled from: NativeSessionReport.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class NativeSessionReport implements Report2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final File f12712a;
 
     public NativeSessionReport(File file) {
@@ -18,37 +18,37 @@ public class NativeSessionReport implements Report2 {
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p380q.p381c.Report2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo6672a() {
         return this.f12712a.getName();
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p380q.p381c.Report2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Map<String, String> mo6673b() {
         return null;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p380q.p381c.Report2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public File mo6674c() {
         return null;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p380q.p381c.Report2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int mo6675d() {
         return 2;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p380q.p381c.Report2
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public File[] mo6676e() {
         return this.f12712a.listFiles();
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p380q.p381c.Report2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public String mo6677f() {
         return null;
     }

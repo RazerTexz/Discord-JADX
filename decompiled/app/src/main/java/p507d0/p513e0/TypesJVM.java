@@ -4,12 +4,12 @@ import java.lang.reflect.GenericArrayType;
 import java.lang.reflect.Type;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TypesJVM.kt */
-/* renamed from: d0.e0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.a, reason: use source file name */
+/* JADX INFO: compiled from: TypesJVM.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypesJVM implements GenericArrayType, Type {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Type f22295j;
 
     public TypesJVM(Type type) {

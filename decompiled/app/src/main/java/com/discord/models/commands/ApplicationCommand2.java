@@ -6,9 +6,9 @@ import java.util.List;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommand.kt */
-/* renamed from: com.discord.models.commands.ApplicationCommandKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.commands.ApplicationCommandKt, reason: use source file name */
+/* JADX INFO: compiled from: ApplicationCommand.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ApplicationCommand2 {
     public static final boolean hasPermission(ApplicationCommand applicationCommand, long j, List<Long> list) {
         Object next;

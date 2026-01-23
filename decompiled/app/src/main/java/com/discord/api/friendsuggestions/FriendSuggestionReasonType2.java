@@ -6,9 +6,9 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FriendSuggestionReasonType.kt */
-/* renamed from: com.discord.api.friendsuggestions.FriendSuggestionReasonTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.friendsuggestions.FriendSuggestionReasonTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: FriendSuggestionReasonType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class FriendSuggestionReasonType2 extends TypeAdapter<FriendSuggestionReasonType> {
     @Override // com.google.gson.TypeAdapter
     public FriendSuggestionReasonType read(JsonReader jsonReader) throws IOException {

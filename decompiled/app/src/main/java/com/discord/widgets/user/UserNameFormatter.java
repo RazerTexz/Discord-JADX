@@ -17,9 +17,9 @@ import java.util.List;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UserNameFormatter.kt */
-/* renamed from: com.discord.widgets.user.UserNameFormatterKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.UserNameFormatterKt, reason: use source file name */
+/* JADX INFO: compiled from: UserNameFormatter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserNameFormatter {
     public static final SpannableStringBuilder getSpannableForUserNameWithDiscrim(User user, String str, Context context, @AttrRes int i, @AttrRes int i2, @IntegerRes int i3, @AttrRes int i4, @AttrRes int i5, @IntegerRes int i6) {
         Intrinsics3.checkNotNullParameter(user, "user");

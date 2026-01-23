@@ -6,9 +6,9 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AllowedInSuggestionsType.kt */
-/* renamed from: com.discord.api.friendsuggestions.AllowedInSuggestionsTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.friendsuggestions.AllowedInSuggestionsTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: AllowedInSuggestionsType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AllowedInSuggestionsType2 extends TypeAdapter<AllowedInSuggestionsType> {
     @Override // com.google.gson.TypeAdapter
     public AllowedInSuggestionsType read(JsonReader jsonReader) throws IOException {

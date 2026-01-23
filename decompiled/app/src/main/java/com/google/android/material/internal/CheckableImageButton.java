@@ -18,8 +18,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.customview.view.AbsSavedState;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class CheckableImageButton extends AppCompatImageButton implements Checkable {
     private static final int[] DRAWABLE_STATE_CHECKED = {R.attr.state_checked};
     private boolean checkable;
@@ -29,10 +29,10 @@ public class CheckableImageButton extends AppCompatImageButton implements Checka
     public static class SavedState extends AbsSavedState {
         public static final Parcelable.Creator<SavedState> CREATOR = new C10923a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public boolean f21025j;
 
-        /* renamed from: com.google.android.material.internal.CheckableImageButton$SavedState$a */
+        /* JADX INFO: renamed from: com.google.android.material.internal.CheckableImageButton$SavedState$a */
         public static class C10923a implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.ClassLoaderCreator
             @NonNull
@@ -69,7 +69,7 @@ public class CheckableImageButton extends AppCompatImageButton implements Checka
         }
     }
 
-    /* renamed from: com.google.android.material.internal.CheckableImageButton$a */
+    /* JADX INFO: renamed from: com.google.android.material.internal.CheckableImageButton$a */
     public class C10924a extends AccessibilityDelegateCompat {
         public C10924a() {
         }

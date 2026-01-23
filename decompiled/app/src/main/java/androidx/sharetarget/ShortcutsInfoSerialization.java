@@ -25,7 +25,7 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlSerializer;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ShortcutsInfoSerialization {
     private static final String ATTR_ACTION = "action";
     private static final String ATTR_COMPONENT = "component";
@@ -98,6 +98,9 @@ public class ShortcutsInfoSerialization {
             }
         }
         fileInputStream.close();
+        return arrayMap;
+        file.delete();
+        Log.e("ShortcutInfoCompatSaver", "Failed to load saved values from file " + file.getAbsolutePath() + ". Old state removed, new added", e);
         return arrayMap;
     }
 
@@ -226,7 +229,7 @@ public class ShortcutsInfoSerialization {
     }
 
     @WorkerThread
-    private static void serializeAttribute(XmlSerializer xmlSerializer, String str, String str2) throws IllegalStateException, IOException, IllegalArgumentException {
+    private static void serializeAttribute(XmlSerializer xmlSerializer, String str, String str2) throws IOException {
         if (TextUtils.isEmpty(str2)) {
             return;
         }
@@ -234,7 +237,7 @@ public class ShortcutsInfoSerialization {
     }
 
     @WorkerThread
-    private static void serializeCategory(XmlSerializer xmlSerializer, String str) throws IllegalStateException, IOException, IllegalArgumentException {
+    private static void serializeCategory(XmlSerializer xmlSerializer, String str) throws IOException {
         if (TextUtils.isEmpty(str)) {
             return;
         }
@@ -244,7 +247,7 @@ public class ShortcutsInfoSerialization {
     }
 
     @WorkerThread
-    private static void serializeIntent(XmlSerializer xmlSerializer, Intent intent) throws IllegalStateException, IOException, IllegalArgumentException {
+    private static void serializeIntent(XmlSerializer xmlSerializer, Intent intent) throws IOException {
         xmlSerializer.startTag(null, TAG_INTENT);
         serializeAttribute(xmlSerializer, ATTR_ACTION, intent.getAction());
         if (intent.getComponent() != null) {
@@ -255,7 +258,7 @@ public class ShortcutsInfoSerialization {
     }
 
     @WorkerThread
-    private static void serializeShortcutContainer(XmlSerializer xmlSerializer, ShortcutContainer shortcutContainer) throws IllegalStateException, IOException, IllegalArgumentException {
+    private static void serializeShortcutContainer(XmlSerializer xmlSerializer, ShortcutContainer shortcutContainer) throws IOException {
         xmlSerializer.startTag(null, TAG_TARGET);
         ShortcutInfoCompat shortcutInfoCompat = shortcutContainer.mShortcutInfo;
         serializeAttribute(xmlSerializer, "id", shortcutInfoCompat.getId());

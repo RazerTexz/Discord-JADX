@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.ListIterator;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ExpressionPickerItemDecoration.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ExpressionPickerItemDecoration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ExpressionPickerItemDecoration extends RecyclerView.ItemDecoration {
     private final int bottomPaddingForLastRow;
     private final List<Integer> headerIndices;

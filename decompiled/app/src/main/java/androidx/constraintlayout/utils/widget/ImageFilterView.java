@@ -18,7 +18,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.C0201R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ImageFilterView extends AppCompatImageView {
     private float mCrossfade;
     private ImageMatrix mImageMatrix;
@@ -31,7 +31,7 @@ public class ImageFilterView extends AppCompatImageView {
     private float mRoundPercent;
     public ViewOutlineProvider mViewOutlineProvider;
 
-    /* renamed from: androidx.constraintlayout.utils.widget.ImageFilterView$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.utils.widget.ImageFilterView$1 */
     public class C01971 extends ViewOutlineProvider {
         public C01971() {
         }
@@ -42,7 +42,7 @@ public class ImageFilterView extends AppCompatImageView {
         }
     }
 
-    /* renamed from: androidx.constraintlayout.utils.widget.ImageFilterView$2 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.utils.widget.ImageFilterView$2 */
     public class C01982 extends ViewOutlineProvider {
         public C01982() {
         }
@@ -55,7 +55,7 @@ public class ImageFilterView extends AppCompatImageView {
 
     public static class ImageMatrix {
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public float[] f125m = new float[20];
         public ColorMatrix mColorMatrix = new ColorMatrix();
         public ColorMatrix mTmpColorMatrix = new ColorMatrix();

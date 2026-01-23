@@ -6,9 +6,9 @@ import com.discord.utilities.stickers.StickerUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickerAdapterItems.kt */
-/* renamed from: com.discord.widgets.chat.input.sticker.StickerItem, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StickerItem, reason: use source file name */
+/* JADX INFO: compiled from: StickerAdapterItems.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class StickerAdapterItems3 implements MGRecyclerDataPayload {
     private final String key;
     private final Mode mode;
@@ -17,8 +17,8 @@ public final /* data */ class StickerAdapterItems3 implements MGRecyclerDataPayl
     private final int stickerAnimationSettings;
     private final int type;
 
-    /* compiled from: StickerAdapterItems.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.StickerItem$Mode */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StickerItem$Mode */
+    /* JADX INFO: compiled from: StickerAdapterItems.kt */
     public enum Mode {
         OWNED,
         STORE
@@ -54,22 +54,22 @@ public final /* data */ class StickerAdapterItems3 implements MGRecyclerDataPayl
         return stickerAdapterItems3.copy(sticker, i, mode, stickerSendability);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Sticker getSticker() {
         return this.sticker;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getStickerAnimationSettings() {
         return this.stickerAnimationSettings;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Mode getMode() {
         return this.mode;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final StickerUtils.StickerSendability getSendability() {
         return this.sendability;
     }

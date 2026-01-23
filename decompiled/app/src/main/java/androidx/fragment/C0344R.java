@@ -2,11 +2,11 @@ package androidx.fragment;
 
 import com.discord.C5419R;
 
-/* renamed from: androidx.fragment.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.fragment.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0344R {
 
-    /* renamed from: androidx.fragment.R$anim */
+    /* JADX INFO: renamed from: androidx.fragment.R$anim */
     public static final class anim {
         public static final int fragment_fast_out_extra_slow_in = 2130772043;
 
@@ -14,7 +14,7 @@ public final class C0344R {
         }
     }
 
-    /* renamed from: androidx.fragment.R$animator */
+    /* JADX INFO: renamed from: androidx.fragment.R$animator */
     public static final class animator {
         public static final int fragment_close_enter = 2130837509;
         public static final int fragment_close_exit = 2130837510;
@@ -27,7 +27,7 @@ public final class C0344R {
         }
     }
 
-    /* renamed from: androidx.fragment.R$attr */
+    /* JADX INFO: renamed from: androidx.fragment.R$attr */
     public static final class attr {
         public static final int alpha = 2130968635;
         public static final int font = 2130969378;
@@ -46,7 +46,7 @@ public final class C0344R {
         }
     }
 
-    /* renamed from: androidx.fragment.R$color */
+    /* JADX INFO: renamed from: androidx.fragment.R$color */
     public static final class color {
         public static final int notification_action_color_filter = 2131100115;
         public static final int notification_icon_bg_color = 2131100116;
@@ -57,7 +57,7 @@ public final class C0344R {
         }
     }
 
-    /* renamed from: androidx.fragment.R$dimen */
+    /* JADX INFO: renamed from: androidx.fragment.R$dimen */
     public static final class dimen {
         public static final int compat_button_inset_horizontal_material = 2131165325;
         public static final int compat_button_inset_vertical_material = 2131165326;
@@ -86,7 +86,7 @@ public final class C0344R {
         }
     }
 
-    /* renamed from: androidx.fragment.R$drawable */
+    /* JADX INFO: renamed from: androidx.fragment.R$drawable */
     public static final class drawable {
         public static final int notification_action_background = 2131232491;
         public static final int notification_bg = 2131232492;
@@ -105,7 +105,7 @@ public final class C0344R {
         }
     }
 
-    /* renamed from: androidx.fragment.R$id */
+    /* JADX INFO: renamed from: androidx.fragment.R$id */
     public static final class id {
         public static final int accessibility_action_clickable_span = 2131361830;
         public static final int accessibility_custom_action_0 = 2131361831;
@@ -185,7 +185,7 @@ public final class C0344R {
         }
     }
 
-    /* renamed from: androidx.fragment.R$integer */
+    /* JADX INFO: renamed from: androidx.fragment.R$integer */
     public static final class integer {
         public static final int status_bar_notification_info_maxnum = 2131427355;
 
@@ -193,7 +193,7 @@ public final class C0344R {
         }
     }
 
-    /* renamed from: androidx.fragment.R$layout */
+    /* JADX INFO: renamed from: androidx.fragment.R$layout */
     public static final class layout {
         public static final int custom_dialog = 2131558460;
         public static final int notification_action = 2131558626;
@@ -207,7 +207,7 @@ public final class C0344R {
         }
     }
 
-    /* renamed from: androidx.fragment.R$string */
+    /* JADX INFO: renamed from: androidx.fragment.R$string */
     public static final class string {
         public static final int status_bar_notification_info_overflow = 2131895909;
 
@@ -215,7 +215,7 @@ public final class C0344R {
         }
     }
 
-    /* renamed from: androidx.fragment.R$style */
+    /* JADX INFO: renamed from: androidx.fragment.R$style */
     public static final class style {
         public static final int TextAppearance_Compat_Notification = 2131952217;
         public static final int TextAppearance_Compat_Notification_Info = 2131952218;
@@ -229,7 +229,7 @@ public final class C0344R {
         }
     }
 
-    /* renamed from: androidx.fragment.R$styleable */
+    /* JADX INFO: renamed from: androidx.fragment.R$styleable */
     public static final class styleable {
         public static final int ColorStateListItem_alpha = 2;
         public static final int ColorStateListItem_android_alpha = 1;

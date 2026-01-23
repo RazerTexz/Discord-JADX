@@ -55,21 +55,21 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetServerSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettings extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettings.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private long guildId;
     private final AppLogger2 loggingConfig;
 
-    /* compiled from: WidgetServerSettings.kt */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -84,17 +84,17 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean canManageGuildRoleSubscriptions;
         private final Guild guild;
         private final boolean hasGuildRoleSubscriptions;
         private final PermissionsContexts manageGuildContext;
 
-        /* compiled from: WidgetServerSettings.kt */
+        /* JADX INFO: compiled from: WidgetServerSettings.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -138,22 +138,22 @@ public final class WidgetServerSettings extends AppFragment {
             return model.copy(guild, permissionsContexts, z2, z3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final PermissionsContexts getManageGuildContext() {
             return this.manageGuildContext;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getCanManageGuildRoleSubscriptions() {
             return this.canManageGuildRoleSubscriptions;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getHasGuildRoleSubscriptions() {
             return this.hasGuildRoleSubscriptions;
         }
@@ -192,19 +192,25 @@ public final class WidgetServerSettings extends AppFragment {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5 */
+        /* JADX WARN: Type inference failed for: r1v7 */
+        /* JADX WARN: Type inference failed for: r2v1 */
+        /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v3 */
         public int hashCode() {
             Guild guild = this.guild;
             int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
             PermissionsContexts permissionsContexts = this.manageGuildContext;
             int iHashCode2 = (iHashCode + (permissionsContexts != null ? permissionsContexts.hashCode() : 0)) * 31;
             boolean z2 = this.canManageGuildRoleSubscriptions;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r1) * 31;
             boolean z3 = this.hasGuildRoleSubscriptions;
-            return i2 + (z3 ? 1 : z3 ? 1 : 0);
+            return i + (z3 ? 1 : z3);
         }
 
         public String toString() {
@@ -219,8 +225,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureToolbar$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureToolbar$1 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class C91701<T1, T2> implements Action2<MenuItem, Context> {
         public final /* synthetic */ Guild $guild;
 
@@ -233,7 +239,7 @@ public final class WidgetServerSettings extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != C5419R.id.menu_server_settings_delete) {
@@ -246,8 +252,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC91711 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -261,8 +267,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$10 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$10 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC917210 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -276,8 +282,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$11 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$11 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC917311 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -291,8 +297,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$12 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$12 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC917412 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -306,8 +312,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$13 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$13 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC917513 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -321,8 +327,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$14 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$14 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC917614 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -336,8 +342,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$15 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$15 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC917715 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -355,8 +361,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$16 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$16 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC917816 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -370,8 +376,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$17 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$17 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC917917 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -385,8 +391,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$18 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$18 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC918018 implements View.OnClickListener {
         public ViewOnClickListenerC918018() {
         }
@@ -397,8 +403,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC91812 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -412,8 +418,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC91823 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -427,8 +433,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC91834 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -442,8 +448,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC91845 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -457,8 +463,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$6 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC91856 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -472,8 +478,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$7 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC91867 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -487,8 +493,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$8 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC91878 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -502,8 +508,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$configureUI$9 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final class ViewOnClickListenerC91889 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -517,8 +523,8 @@ public final class WidgetServerSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettings.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettings.kt */
     public static final /* synthetic */ class C91891 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C91891(WidgetServerSettings widgetServerSettings) {
             super(1, widgetServerSettings, WidgetServerSettings.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/WidgetServerSettings$Model;)V", 0);
@@ -530,7 +536,7 @@ public final class WidgetServerSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetServerSettings.access$configureUI((WidgetServerSettings) this.receiver, model);
         }

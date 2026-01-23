@@ -3,9 +3,9 @@ package com.discord.widgets.voice.fullscreen.stage;
 import androidx.recyclerview.widget.GridLayoutManager;
 import com.discord.models.domain.ModelAuditLogEntry;
 
-/* compiled from: StageCallAdapter.kt */
-/* renamed from: com.discord.widgets.voice.fullscreen.stage.StageCallAdapter$spanSizeLookup$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.stage.StageCallAdapter$spanSizeLookup$1, reason: use source file name */
+/* JADX INFO: compiled from: StageCallAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class StageCallAdapter3 extends GridLayoutManager.SpanSizeLookup {
     public final /* synthetic */ StageCallAdapter this$0;
 

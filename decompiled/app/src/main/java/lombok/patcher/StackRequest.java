@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-/* loaded from: discord-126021.apk:lombok/patcher/StackRequest.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/StackRequest.SCL.lombok */
 public enum StackRequest {
     RETURN_VALUE(-1),
     THIS(-1),
@@ -18,7 +18,7 @@ public enum StackRequest {
     private final int paramPos;
     public static final List<StackRequest> PARAMS_IN_ORDER = Collections.unmodifiableList(Arrays.asList(PARAM1, PARAM2, PARAM3, PARAM4, PARAM5, PARAM6));
 
-    /* renamed from: values, reason: to resolve conflict with enum method */
+    /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
     public static StackRequest[] valuesCustom() {
         StackRequest[] stackRequestArrValuesCustom = values();
         int length = stackRequestArrValuesCustom.length;

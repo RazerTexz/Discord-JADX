@@ -6,7 +6,7 @@ import java.util.LinkedHashSet;
 import org.webrtc.EglBase;
 import p617h0.p628c.VideoDecoderFactory2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class DefaultVideoDecoderFactory implements VideoDecoderFactory {
     private final VideoDecoderFactory hardwareVideoDecoderFactory;
 

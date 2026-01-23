@@ -4,9 +4,9 @@ import com.discord.widgets.chat.input.MentionUtils;
 import java.lang.reflect.Field;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DebugMetadata.kt */
-/* renamed from: d0.w.i.a.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.w.i.a.f, reason: use source file name */
+/* JADX INFO: compiled from: DebugMetadata.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DebugMetadata2 {
     public static final StackTraceElement getStackTraceElement(ContinuationImpl continuationImpl) {
         int iIntValue;

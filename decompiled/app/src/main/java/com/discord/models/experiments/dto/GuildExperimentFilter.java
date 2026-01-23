@@ -21,11 +21,11 @@ import p507d0.p580t.Sets5;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildExperimentFilter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentFilter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class GuildExperimentFilter {
 
-    /* compiled from: GuildExperimentFilter.kt */
+    /* JADX INFO: compiled from: GuildExperimentFilter.kt */
     public static final /* data */ class GuildHasFeatureFilter extends GuildExperimentFilter {
         private final Set<GuildFeature> features;
 
@@ -78,7 +78,7 @@ public abstract class GuildExperimentFilter {
         }
     }
 
-    /* compiled from: GuildExperimentFilter.kt */
+    /* JADX INFO: compiled from: GuildExperimentFilter.kt */
     public static final /* data */ class GuildHubTypesFeatureFilter extends GuildExperimentFilter {
         private final Set<GuildHubType> hubTypes;
 
@@ -131,7 +131,7 @@ public abstract class GuildExperimentFilter {
         }
     }
 
-    /* compiled from: GuildExperimentFilter.kt */
+    /* JADX INFO: compiled from: GuildExperimentFilter.kt */
     public static final /* data */ class GuildIdRangeFilter extends GuildExperimentFilter {
         private final Ranges3 range;
 
@@ -149,7 +149,7 @@ public abstract class GuildExperimentFilter {
             return guildIdRangeFilter.copy(ranges3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Ranges3 getRange() {
             return this.range;
         }
@@ -186,7 +186,7 @@ public abstract class GuildExperimentFilter {
         }
     }
 
-    /* compiled from: GuildExperimentFilter.kt */
+    /* JADX INFO: compiled from: GuildExperimentFilter.kt */
     public static final /* data */ class GuildIdsFilter extends GuildExperimentFilter {
         private final Set<Long> guildIds;
 
@@ -238,7 +238,7 @@ public abstract class GuildExperimentFilter {
         }
     }
 
-    /* compiled from: GuildExperimentFilter.kt */
+    /* JADX INFO: compiled from: GuildExperimentFilter.kt */
     public static final /* data */ class GuildMemberCountRangeFilter extends GuildExperimentFilter {
         private final Ranges3 range;
 
@@ -256,7 +256,7 @@ public abstract class GuildExperimentFilter {
             return guildMemberCountRangeFilter.copy(ranges3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Ranges3 getRange() {
             return this.range;
         }
@@ -293,7 +293,7 @@ public abstract class GuildExperimentFilter {
         }
     }
 
-    /* compiled from: GuildExperimentFilter.kt */
+    /* JADX INFO: compiled from: GuildExperimentFilter.kt */
     public static final class Parser {
         public static final Parser INSTANCE;
         private static final long MAX_ID_HASH;

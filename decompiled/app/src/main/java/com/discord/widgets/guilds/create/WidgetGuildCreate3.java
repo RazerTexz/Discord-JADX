@@ -9,9 +9,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildCreate.kt */
-/* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$loggingConfig$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$loggingConfig$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildCreate.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildCreate3 extends Lambda implements Function0<AnalyticsSchema> {
     public final /* synthetic */ WidgetGuildCreate this$0;
 

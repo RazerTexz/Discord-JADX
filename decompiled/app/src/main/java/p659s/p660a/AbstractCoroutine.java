@@ -16,15 +16,15 @@ import p507d0.p584w.p586i.p587a.DebugProbes;
 import p507d0.p592z.p594d.TypeIntrinsics;
 import p659s.p660a.p661a.ThreadContext;
 
-/* compiled from: AbstractCoroutine.kt */
-/* renamed from: s.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.b, reason: use source file name */
+/* JADX INFO: compiled from: AbstractCoroutine.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractCoroutine<T> extends C13116h1 implements Job, Continuation<T>, CoroutineScope {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final CoroutineContext f27714k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final CoroutineContext f27715l;
 
     public AbstractCoroutine(CoroutineContext coroutineContext, boolean z2) {
@@ -34,19 +34,19 @@ public abstract class AbstractCoroutine<T> extends C13116h1 implements Job, Cont
     }
 
     @Override // p659s.p660a.C13116h1
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public String mo11182B() {
         return getClass().getSimpleName() + " was cancelled";
     }
 
     @Override // p659s.p660a.C13116h1
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final void mo11183O(Throwable th) {
         C3404f.m4348u0(this.f27714k, th);
     }
 
     @Override // p659s.p660a.C13116h1
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public String mo11184T() {
         boolean z2 = CoroutineContext2.f27923a;
         return super.mo11184T();
@@ -55,7 +55,7 @@ public abstract class AbstractCoroutine<T> extends C13116h1 implements Job, Cont
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r2v2, types: [boolean, int] */
     @Override // p659s.p660a.C13116h1
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public final void mo11185W(Object obj) {
         if (!(obj instanceof CompletionState2)) {
             m11189h0(obj);
@@ -66,28 +66,28 @@ public abstract class AbstractCoroutine<T> extends C13116h1 implements Job, Cont
     }
 
     @Override // p659s.p660a.C13116h1
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public final void mo11186X() {
         mo11190i0();
     }
 
     @Override // p659s.p660a.C13116h1, kotlinx.coroutines.Job
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo10910a() {
         return super.mo10910a();
     }
 
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public void mo11172e0(Object obj) {
         mo11173v(obj);
     }
 
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public final void m11187f0() {
         m11294P((Job) this.f27715l.get(Job.INSTANCE));
     }
 
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public void m11188g0(Throwable th, boolean z2) {
     }
 
@@ -101,15 +101,15 @@ public abstract class AbstractCoroutine<T> extends C13116h1 implements Job, Cont
         return this.f27714k;
     }
 
-    /* renamed from: h0 */
+    /* JADX INFO: renamed from: h0 */
     public void m11189h0(T t) {
     }
 
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public void mo11190i0() {
     }
 
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public final <R> void m11191j0(CoroutineStart coroutineStart, R r, Function2<? super R, ? super Continuation<? super T>, ? extends Object> function2) {
         m11187f0();
         int iOrdinal = coroutineStart.ordinal();

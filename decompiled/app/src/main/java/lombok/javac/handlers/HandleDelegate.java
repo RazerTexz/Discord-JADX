@@ -39,16 +39,16 @@ import lombok.javac.JavacResolution;
 import lombok.javac.JavacTreeMaker;
 import lombok.javac.ResolutionResetNeeded;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleDelegate.SCL.lombok */
 @HandlerPriority(65536)
 @ResolutionResetNeeded
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleDelegate.SCL.lombok */
 public class HandleDelegate extends JavacAnnotationHandler<Delegate> {
     private static final List<String> METHODS_IN_OBJECT = Collections.unmodifiableList(Arrays.asList("hashCode()", "canEqual(java.lang.Object)", "equals(java.lang.Object)", "wait()", "wait(long)", "wait(long, int)", "notify()", "notifyAll()", "toString()", "getClass()", "clone()", "finalize()"));
     private static final String LEGALITY_OF_DELEGATE = "@Delegate is legal only on instance fields or no-argument instance methods.";
     private static final String RECURSION_NOT_ALLOWED = "@Delegate does not support recursion (delegating to a type that itself has @Delegate members). Member \"%s\" is @Delegate in type \"%s\"";
     public static final int HANDLE_DELEGATE_PRIORITY = 65536;
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleDelegate$CantMakeDelegates.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleDelegate$CantMakeDelegates.SCL.lombok */
     public static class CantMakeDelegates extends Exception {
         Set<String> conflicted;
     }
@@ -277,7 +277,7 @@ public class HandleDelegate extends JavacAnnotationHandler<Delegate> {
         return collection == null ? com.sun.tools.javac.util.List.nil() : collection.toList();
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleDelegate$DelegateRecursion.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleDelegate$DelegateRecursion.SCL.lombok */
     private static class DelegateRecursion extends Throwable {
         final String type;
         final String member;
@@ -323,7 +323,7 @@ public class HandleDelegate extends JavacAnnotationHandler<Delegate> {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleDelegate$MethodSig.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleDelegate$MethodSig.SCL.lombok */
     public static class MethodSig {
         final Name name;
         final ExecutableType type;
@@ -371,7 +371,7 @@ public class HandleDelegate extends JavacAnnotationHandler<Delegate> {
 
     /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
     /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleDelegate$DelegateReceiver.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleDelegate$DelegateReceiver.SCL.lombok */
     public static abstract class DelegateReceiver {
         public static final DelegateReceiver METHOD = new C128921("METHOD", 0);
         public static final DelegateReceiver FIELD = new C128932("FIELD", 1);
@@ -391,8 +391,8 @@ public class HandleDelegate extends JavacAnnotationHandler<Delegate> {
             return (DelegateReceiver) Enum.valueOf(DelegateReceiver.class, str);
         }
 
-        /* renamed from: lombok.javac.handlers.HandleDelegate$DelegateReceiver$1 */
-        /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleDelegate$DelegateReceiver$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.javac.handlers.HandleDelegate$DelegateReceiver$1 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleDelegate$DelegateReceiver$1.SCL.lombok */
         enum C128921 extends DelegateReceiver {
             C128921(String str, int i) {
                 super(str, i, null);
@@ -413,8 +413,8 @@ public class HandleDelegate extends JavacAnnotationHandler<Delegate> {
             this(str, i);
         }
 
-        /* renamed from: lombok.javac.handlers.HandleDelegate$DelegateReceiver$2 */
-        /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleDelegate$DelegateReceiver$2.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.javac.handlers.HandleDelegate$DelegateReceiver$2 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleDelegate$DelegateReceiver$2.SCL.lombok */
         enum C128932 extends DelegateReceiver {
             C128932(String str, int i) {
                 super(str, i, null);
@@ -428,7 +428,7 @@ public class HandleDelegate extends JavacAnnotationHandler<Delegate> {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleDelegate$Unannotated.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleDelegate$Unannotated.SCL.lombok */
     private static class Unannotated {
         private static final Method unannotated;
 

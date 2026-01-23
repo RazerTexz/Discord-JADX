@@ -5,23 +5,23 @@ import android.graphics.Matrix;
 import android.graphics.RectF;
 import p007b.p085c.p086a.LottieDrawable;
 
-/* compiled from: NullLayer.java */
-/* renamed from: b.c.a.y.m.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.m.f, reason: use source file name */
+/* JADX INFO: compiled from: NullLayer.java */
+/* JADX INFO: loaded from: classes.dex */
 public class NullLayer extends BaseLayer2 {
     public NullLayer(LottieDrawable lottieDrawable, Layer2 layer2) {
         super(lottieDrawable, layer2);
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2, p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo712d(RectF rectF, Matrix matrix, boolean z2) {
         super.mo712d(rectF, matrix, z2);
         rectF.set(0.0f, 0.0f, 0.0f, 0.0f);
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo780j(Canvas canvas, Matrix matrix, int i) {
     }
 }

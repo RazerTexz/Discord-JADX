@@ -4,9 +4,9 @@ import java.util.Comparator;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PrivateChannelMemberListItemGenerator.kt */
-/* renamed from: com.discord.widgets.channels.memberlist.PrivateChannelMemberListItemGeneratorKt$sam$java_util_Comparator$0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.PrivateChannelMemberListItemGeneratorKt$sam$java_util_Comparator$0, reason: use source file name */
+/* JADX INFO: compiled from: PrivateChannelMemberListItemGenerator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PrivateChannelMemberListItemGenerator3 implements Comparator {
     private final /* synthetic */ Function2 function;
 

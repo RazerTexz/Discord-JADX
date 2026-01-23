@@ -12,9 +12,9 @@ import p617h0.p620b.p621a.p625e.PercInstantiator;
 import p617h0.p620b.p621a.p626f.SunReflectionFactoryInstantiator;
 import p617h0.p620b.p621a.p626f.UnsafeFactoryInstantiator;
 
-/* compiled from: StdInstantiatorStrategy.java */
-/* renamed from: h0.b.b.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.b.b.c, reason: use source file name */
+/* JADX INFO: compiled from: StdInstantiatorStrategy.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class StdInstantiatorStrategy implements InstantiatorStrategy {
     @Override // p617h0.p620b.p627b.InstantiatorStrategy
     public <T> ObjectInstantiator<T> newInstantiatorOf(Class<T> cls) {

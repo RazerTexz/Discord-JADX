@@ -2,12 +2,12 @@ package p617h0.p628c;
 
 import java.util.concurrent.CountDownLatch;
 
-/* compiled from: lambda */
-/* renamed from: h0.c.k0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.c.k0 */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC12471k0 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ CountDownLatch f26445j;
 
     public /* synthetic */ RunnableC12471k0(CountDownLatch countDownLatch) {

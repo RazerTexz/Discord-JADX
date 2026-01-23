@@ -4,19 +4,19 @@ import androidx.core.app.NotificationCompat;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NotificationData.kt */
-/* renamed from: com.discord.utilities.fcm.NotificationType, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.fcm.NotificationType, reason: use source file name */
+/* JADX INFO: compiled from: NotificationData.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public enum NotificationData3 {
     Reminder(NotificationCompat.CATEGORY_REMINDER);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final String value;
 
-    /* compiled from: NotificationData.kt */
-    /* renamed from: com.discord.utilities.fcm.NotificationType$Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.utilities.fcm.NotificationType$Companion, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: NotificationData.kt */
     public static final class Companion {
         private Companion() {
         }

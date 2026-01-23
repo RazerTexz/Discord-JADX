@@ -3,11 +3,11 @@ package p007b.p225i.p226a.p288f.p313h.p326m;
 import com.google.android.gms.common.api.Status;
 import p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3287e;
 
-/* renamed from: b.i.a.f.h.m.k */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.m.k */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3934k extends AbstractC3935l<InterfaceC3287e<Status>> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Status f10462a;
 
     public C3934k(Status status) {
@@ -15,7 +15,7 @@ public final class C3934k extends AbstractC3935l<InterfaceC3287e<Status>> {
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3301k.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ void mo4107a(Object obj) {
         InterfaceC3287e interfaceC3287e = (InterfaceC3287e) obj;
         if (this.f10462a.m9030w0()) {

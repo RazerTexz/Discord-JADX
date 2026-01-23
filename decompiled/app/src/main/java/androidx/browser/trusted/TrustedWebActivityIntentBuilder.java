@@ -19,7 +19,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TrustedWebActivityIntentBuilder {
 
     @SuppressLint({"ActionValue"})

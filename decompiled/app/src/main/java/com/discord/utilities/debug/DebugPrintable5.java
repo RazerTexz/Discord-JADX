@@ -3,9 +3,9 @@ package com.discord.utilities.debug;
 import java.lang.ref.WeakReference;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DebugPrintable.kt */
-/* renamed from: com.discord.utilities.debug.DebugPrintableRef, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.debug.DebugPrintableRef, reason: use source file name */
+/* JADX INFO: compiled from: DebugPrintable.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DebugPrintable5 {
     private final WeakReference<DebugPrintable> reference;
     private final String tag;

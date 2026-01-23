@@ -18,18 +18,18 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType2;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.Variance;
 
-/* compiled from: TypeParameterDescriptorImpl.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.k0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.k0, reason: use source file name */
+/* JADX INFO: compiled from: TypeParameterDescriptorImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TypeParameterDescriptorImpl extends AbstractTypeParameterDescriptor {
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final Function1<KotlinType, Void> f22893t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final List<KotlinType> f22894u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public boolean f22895v;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -68,7 +68,7 @@ public class TypeParameterDescriptorImpl extends AbstractTypeParameterDescriptor
         this.f22893t = function1;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9413a(int i) {
         String str = (i == 5 || i == 28) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 5 || i == 28) ? 2 : 3];
@@ -245,7 +245,7 @@ public class TypeParameterDescriptorImpl extends AbstractTypeParameterDescriptor
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.AbstractTypeParameterDescriptor
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo9400c(KotlinType kotlinType) {
         if (kotlinType == null) {
             m9413a(27);
@@ -259,7 +259,7 @@ public class TypeParameterDescriptorImpl extends AbstractTypeParameterDescriptor
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.AbstractTypeParameterDescriptor
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public List<KotlinType> mo9401d() {
         if (!this.f22895v) {
             StringBuilder sbM833U = outline.m833U("Type parameter descriptor is not initialized: ");
@@ -274,7 +274,7 @@ public class TypeParameterDescriptorImpl extends AbstractTypeParameterDescriptor
         throw null;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m9414e() {
         if (this.f22895v) {
             StringBuilder sbM833U = outline.m833U("Type parameter descriptor is already initialized: ");
@@ -283,7 +283,7 @@ public class TypeParameterDescriptorImpl extends AbstractTypeParameterDescriptor
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String m9415f() {
         return getName() + " declared in " + DescriptorUtils.getFqName(getContainingDeclaration());
     }

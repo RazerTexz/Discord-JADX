@@ -5,8 +5,8 @@ import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RtcRegion.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RtcRegion.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class RtcRegion {
     private final String[] ips;
     private final String region;
@@ -28,12 +28,12 @@ public final /* data */ class RtcRegion {
         return rtcRegion.copy(str, strArr);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getRegion() {
         return this.region;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String[] getIps() {
         return this.ips;
     }

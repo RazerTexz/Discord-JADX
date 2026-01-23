@@ -11,9 +11,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ContactSyncPermissionsSheet.kt */
-/* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: ContactSyncPermissionsSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class ContactSyncPermissionsSheet2 extends FunctionReferenceImpl implements Function1<View, ContactSyncPermissionsSheetBinding> {
     public static final ContactSyncPermissionsSheet2 INSTANCE = new ContactSyncPermissionsSheet2();
 
@@ -26,7 +26,7 @@ public final /* synthetic */ class ContactSyncPermissionsSheet2 extends Function
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final ContactSyncPermissionsSheetBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.contact_sync_permissions_discoverable_toggle;

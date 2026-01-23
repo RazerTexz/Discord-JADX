@@ -9,9 +9,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelsListItemChannelActions.kt */
-/* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemChannelActions$configureUI$$inlined$apply$lambda$4 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemChannelActions$configureUI$$inlined$apply$lambda$4 */
+/* JADX INFO: compiled from: WidgetChannelsListItemChannelActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7456x3de5455b extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ TextView $this_apply;
     public final /* synthetic */ WidgetChannelsListItemChannelActions.Model $this_configureUI$inlined;
@@ -31,7 +31,7 @@ public final class C7456x3de5455b extends Lambda implements Function1<View, Unit
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "it");
         WidgetThreadBrowser.INSTANCE.show(this.$this_apply.getContext(), this.$this_configureUI$inlined.getChannel().getGuildId(), this.$this_configureUI$inlined.getChannel().getId(), "Channel Context Menu");

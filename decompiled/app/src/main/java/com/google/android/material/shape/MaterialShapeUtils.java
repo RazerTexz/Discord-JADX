@@ -5,7 +5,7 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import com.google.android.material.internal.ViewUtils;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MaterialShapeUtils {
     private MaterialShapeUtils() {
     }

@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreMessagesLoader.kt */
-/* renamed from: com.discord.stores.StoreMessagesLoader$handleChatInteraction$1$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$handleChatInteraction$1$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreMessagesLoader.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMessagesLoader2 extends Lambda implements Function1<StoreMessagesLoader.ChannelLoadedState, StoreMessagesLoader.ChannelLoadedState> {
     public final /* synthetic */ StoreChat.InteractionState $this_apply;
 
@@ -23,7 +23,7 @@ public final class StoreMessagesLoader2 extends Lambda implements Function1<Stor
         return invoke2(channelLoadedState);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final StoreMessagesLoader.ChannelLoadedState invoke2(StoreMessagesLoader.ChannelLoadedState channelLoadedState) {
         Intrinsics3.checkNotNullParameter(channelLoadedState, "it");
         return StoreMessagesLoader.ChannelLoadedState.copy$default(channelLoadedState, false, false, false, this.$this_apply.isTouchedSinceLastJump(), null, 23, null);

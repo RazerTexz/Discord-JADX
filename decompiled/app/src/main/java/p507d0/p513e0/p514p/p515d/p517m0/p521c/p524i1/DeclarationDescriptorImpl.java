@@ -7,12 +7,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.p522g1.Annotations4;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.Name;
 import p507d0.p513e0.p514p.p515d.p517m0.p551j.DescriptorRenderer2;
 
-/* compiled from: DeclarationDescriptorImpl.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.k, reason: use source file name */
+/* JADX INFO: compiled from: DeclarationDescriptorImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class DeclarationDescriptorImpl extends AnnotatedImpl implements DeclarationDescriptor {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Name f22892k;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -29,7 +29,7 @@ public abstract class DeclarationDescriptorImpl extends AnnotatedImpl implements
         this.f22892k = name;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9412a(int i) {
         String str = (i == 2 || i == 3 || i == 5 || i == 6) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 2 || i == 3 || i == 5 || i == 6) ? 2 : 3];

@@ -8,9 +8,9 @@ import p507d0.p592z.p594d.ClassBasedDeclarationContainer;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: JvmClassMapping.kt */
-/* renamed from: d0.z.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.a, reason: use source file name */
+/* JADX INFO: compiled from: JvmClassMapping.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JvmClassMapping {
     public static final <T extends Annotation> KClass<? extends T> getAnnotationClass(T t) {
         Intrinsics3.checkNotNullParameter(t, "$this$annotationClass");
@@ -28,13 +28,7 @@ public final class JvmClassMapping {
         return cls;
     }
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-    java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-     */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     public static final <T> Class<T> getJavaObjectType(KClass<T> kClass) {
         Intrinsics3.checkNotNullParameter(kClass, "$this$javaObjectType");
         Class<T> cls = (Class<T>) ((ClassBasedDeclarationContainer) kClass).getJClass();
@@ -84,6 +78,7 @@ public final class JvmClassMapping {
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     public static final <T> Class<T> getJavaPrimitiveType(KClass<T> kClass) {
         Intrinsics3.checkNotNullParameter(kClass, "$this$javaPrimitiveType");
         Class<T> cls = (Class<T>) ((ClassBasedDeclarationContainer) kClass).getJClass();

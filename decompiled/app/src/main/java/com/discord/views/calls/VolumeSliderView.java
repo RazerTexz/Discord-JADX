@@ -16,18 +16,18 @@ import p007b.p008a.p025i.VolumeSliderViewBinding;
 import p007b.p008a.p062y.OnSeekBarChangeListenerAdapter;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VolumeSliderView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: VolumeSliderView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VolumeSliderView extends LinearLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final VolumeSliderViewBinding binding;
 
-    /* compiled from: VolumeSliderView.kt */
-    /* renamed from: com.discord.views.calls.VolumeSliderView$a */
+    /* JADX INFO: renamed from: com.discord.views.calls.VolumeSliderView$a */
+    /* JADX INFO: compiled from: VolumeSliderView.kt */
     public static final class C7111a extends OnSeekBarChangeListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Function2 f19260a;
 
         public C7111a(Function2 function2) {

@@ -5,8 +5,8 @@ import java.util.Set;
 import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ContactsFetcher.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ContactsFetcher.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ContactsFetcher {
     private final Context context;
 

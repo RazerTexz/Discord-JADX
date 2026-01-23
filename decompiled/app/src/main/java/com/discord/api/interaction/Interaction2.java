@@ -5,9 +5,9 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Interaction.kt */
-/* renamed from: com.discord.api.interaction.Member, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.interaction.Member, reason: use source file name */
+/* JADX INFO: compiled from: Interaction.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Interaction2 {
     private final boolean deaf;
     private final String joinedAt;
@@ -26,19 +26,25 @@ public final /* data */ class Interaction2 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    /* JADX WARN: Type inference failed for: r1v7 */
+    /* JADX WARN: Type inference failed for: r2v1 */
+    /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v3 */
     public int hashCode() {
         List<Long> list = this.roles;
         int iHashCode = (list != null ? list.hashCode() : 0) * 31;
         String str = this.joinedAt;
         int iHashCode2 = (iHashCode + (str != null ? str.hashCode() : 0)) * 31;
         boolean z2 = this.mute;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i2 = (iHashCode2 + i) * 31;
+        int i = (iHashCode2 + r1) * 31;
         boolean z3 = this.deaf;
-        return i2 + (z3 ? 1 : z3 ? 1 : 0);
+        return i + (z3 ? 1 : z3);
     }
 
     public String toString() {

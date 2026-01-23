@@ -5,15 +5,15 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.a */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3577a implements IInterface {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final IBinder f9839a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f9840b;
 
     public C3577a(IBinder iBinder, String str) {
@@ -26,14 +26,14 @@ public class C3577a implements IInterface {
         return this.f9839a;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Parcel m4518c() {
         Parcel parcelObtain = Parcel.obtain();
         parcelObtain.writeInterfaceToken(this.f9840b);
         return parcelObtain;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Parcel m4519g(int i, Parcel parcel) throws RemoteException {
         Parcel parcelObtain = Parcel.obtain();
         try {
@@ -50,7 +50,7 @@ public class C3577a implements IInterface {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m4520i(int i, Parcel parcel) throws RemoteException {
         Parcel parcelObtain = Parcel.obtain();
         try {

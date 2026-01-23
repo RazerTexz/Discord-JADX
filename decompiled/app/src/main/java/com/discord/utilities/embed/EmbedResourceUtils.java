@@ -30,8 +30,8 @@ import p507d0.p580t.CollectionsJVM;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmbedResourceUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmbedResourceUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmbedResourceUtils {
     public static final String FILE_SCHEME = "res:///";
     public static final int MAX_IMAGE_SIZE = 1440;
@@ -158,7 +158,7 @@ public final class EmbedResourceUtils {
         return Tuples.m10073to(Integer.valueOf(MathJVM.roundToInt(f11)), Integer.valueOf(MathJVM.roundToInt(f12)));
     }
 
-    public final int computeMaximumImageWidthPx(Context context) throws Resources.NotFoundException {
+    public final int computeMaximumImageWidthPx(Context context) {
         Intrinsics3.checkNotNullParameter(context, "context");
         Resources resources = context.getResources();
         return Math.min(1440, DisplayUtils.getScreenSize(context).width() - (resources.getDimensionPixelSize(C5419R.dimen.uikit_guideline_chat) + resources.getDimensionPixelSize(C5419R.dimen.chat_cell_horizontal_spacing_total)));

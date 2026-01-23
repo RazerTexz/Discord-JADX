@@ -42,8 +42,8 @@ import p630i0.p631d0.p632a.RxJavaCallAdapterFactory;
 import p630i0.p633e0.p634a.GsonConverterFactory;
 import p630i0.p633e0.p635b.ScalarsConverterFactory;
 
-/* compiled from: RestAPIBuilder.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RestAPIBuilder.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RestAPIBuilder {
     private static final int API_VERSION = 9;
     public static final String CONTENT_TYPE_JSON = "application/json";
@@ -52,11 +52,11 @@ public final class RestAPIBuilder {
     private final String baseApiUrl;
     private final CookieJar2 cookieJar;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static Function2<? super String, ? super OkHttpClient, Unit> clientCallback = RestAPIBuilder2.INSTANCE;
 
-    /* compiled from: RestAPIBuilder.kt */
+    /* JADX INFO: compiled from: RestAPIBuilder.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -94,11 +94,12 @@ public final class RestAPIBuilder {
         clientCallback = function2;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ Object build$default(RestAPIBuilder restAPIBuilder, Class cls, boolean z2, long j, List list, String str, boolean z3, String str2, int i, Object obj) {
         return restAPIBuilder.build(cls, (i & 2) != 0 ? false : z2, (i & 4) != 0 ? 10000L : j, (i & 8) != 0 ? null : list, (i & 16) == 0 ? str : null, (i & 32) != 0 ? true : z3, (i & 64) != 0 ? CONTENT_TYPE_JSON : str2);
     }
 
-    private final <T> T buildApi(OkHttpClient client, Class<T> api, String baseApiUrl, boolean serializeNulls, boolean addVersion, String contentType) throws SecurityException {
+    private final <T> T buildApi(OkHttpClient client, Class<T> api, String baseApiUrl, boolean serializeNulls, boolean addVersion, String contentType) {
         String str;
         String str2;
         GsonBuilder gsonBuilder = new GsonBuilder();

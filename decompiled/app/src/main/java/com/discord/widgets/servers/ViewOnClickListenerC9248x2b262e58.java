@@ -7,9 +7,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsEmojis.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsEmojis$Adapter$EmojiItemViewHolder$onConfigure$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEmojis$Adapter$EmojiItemViewHolder$onConfigure$1 */
+/* JADX INFO: compiled from: WidgetServerSettingsEmojis.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewOnClickListenerC9248x2b262e58 implements View.OnClickListener {
     public final /* synthetic */ WidgetServerSettingsEmojis.Item $data;
     public final /* synthetic */ WidgetServerSettingsEmojis.Adapter.EmojiItemViewHolder this$0;

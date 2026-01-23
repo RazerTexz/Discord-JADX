@@ -3,7 +3,7 @@ package androidx.preference;
 import androidx.annotation.Nullable;
 import java.util.Set;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class PreferenceDataStore {
     public boolean getBoolean(String str, boolean z2) {
         return z2;

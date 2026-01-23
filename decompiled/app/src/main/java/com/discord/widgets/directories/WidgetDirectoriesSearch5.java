@@ -17,9 +17,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetDirectoriesSearch.kt */
-/* renamed from: com.discord.widgets.directories.WidgetDirectoriesSearch$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoriesSearch$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDirectoriesSearch.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetDirectoriesSearch5 extends FunctionReferenceImpl implements Function1<View, WidgetDirectoriesSearchBinding> {
     public static final WidgetDirectoriesSearch5 INSTANCE = new WidgetDirectoriesSearch5();
 
@@ -32,7 +32,7 @@ public final /* synthetic */ class WidgetDirectoriesSearch5 extends FunctionRefe
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetDirectoriesSearchBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.action_bar_toolbar_layout;

@@ -3,7 +3,7 @@ package com.esotericsoftware.kryo.factories;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.Serializer;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PseudoSerializerFactory implements SerializerFactory {
     private final Serializer<?> serializer;
 

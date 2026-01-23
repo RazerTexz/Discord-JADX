@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class RemoteInput {
     public static final int EDIT_CHOICES_BEFORE_SENDING_AUTO = 0;
     public static final int EDIT_CHOICES_BEFORE_SENDING_DISABLED = 1;

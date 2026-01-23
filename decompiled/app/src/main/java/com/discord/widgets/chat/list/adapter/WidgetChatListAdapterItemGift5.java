@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift;
 import p007b.p008a.p009a.p011a0.WidgetGiftAcceptDialog;
 
-/* compiled from: WidgetChatListAdapterItemGift.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$configureResolvedUI$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$configureResolvedUI$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemGift.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemGift5 implements View.OnClickListener {
     public final /* synthetic */ WidgetChatListAdapterItemGift.Model.Resolved $model$inlined;
     public final /* synthetic */ WidgetChatListAdapterItemGift this$0;

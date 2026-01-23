@@ -1,7 +1,6 @@
 package com.discord.widgets.guildscheduledevent;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -42,19 +41,19 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventItemView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildScheduledEventItemView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventItemView extends ConstraintLayout {
     private final GuildScheduledEventItemViewBinding binding;
 
-    /* renamed from: descriptionParser$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: descriptionParser$delegate, reason: from kotlin metadata */
     private final Lazy descriptionParser;
 
-    /* renamed from: locationParser$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: locationParser$delegate, reason: from kotlin metadata */
     private final Lazy locationParser;
 
-    /* compiled from: GuildScheduledEventItemView.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventItemView$configureInChatList$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventItemView$configureInChatList$1 */
+    /* JADX INFO: compiled from: GuildScheduledEventItemView.kt */
     public static final class ViewOnClickListenerC88191 implements View.OnClickListener {
         public static final ViewOnClickListenerC88191 INSTANCE = new ViewOnClickListenerC88191();
 
@@ -63,8 +62,8 @@ public final class GuildScheduledEventItemView extends ConstraintLayout {
         }
     }
 
-    /* compiled from: GuildScheduledEventItemView.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventItemView$configureInChatList$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventItemView$configureInChatList$2 */
+    /* JADX INFO: compiled from: GuildScheduledEventItemView.kt */
     public static final class ViewOnClickListenerC88202 implements View.OnClickListener {
         public static final ViewOnClickListenerC88202 INSTANCE = new ViewOnClickListenerC88202();
 
@@ -73,8 +72,8 @@ public final class GuildScheduledEventItemView extends ConstraintLayout {
         }
     }
 
-    /* compiled from: GuildScheduledEventItemView.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventItemView$configureInDirectoryEventList$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventItemView$configureInDirectoryEventList$2 */
+    /* JADX INFO: compiled from: GuildScheduledEventItemView.kt */
     public static final class ViewOnClickListenerC88212 implements View.OnClickListener {
         public static final ViewOnClickListenerC88212 INSTANCE = new ViewOnClickListenerC88212();
 
@@ -103,11 +102,11 @@ public final class GuildScheduledEventItemView extends ConstraintLayout {
         getDescriptionParser().configureDescription(description, guildId);
     }
 
-    public static /* synthetic */ void configureInChatList$default(GuildScheduledEventItemView guildScheduledEventItemView, GuildScheduledEvent guildScheduledEvent, Channel channel, Guild guild, UserGuildMember userGuildMember, boolean z2, boolean z3, boolean z4, boolean z5, View.OnClickListener onClickListener, View.OnClickListener onClickListener2, View.OnClickListener onClickListener3, View.OnClickListener onClickListener4, int i, Object obj) throws Resources.NotFoundException {
+    public static /* synthetic */ void configureInChatList$default(GuildScheduledEventItemView guildScheduledEventItemView, GuildScheduledEvent guildScheduledEvent, Channel channel, Guild guild, UserGuildMember userGuildMember, boolean z2, boolean z3, boolean z4, boolean z5, View.OnClickListener onClickListener, View.OnClickListener onClickListener2, View.OnClickListener onClickListener3, View.OnClickListener onClickListener4, int i, Object obj) {
         guildScheduledEventItemView.configureInChatList(guildScheduledEvent, channel, guild, userGuildMember, z2, z3, z4, z5, onClickListener, (i & 512) != 0 ? ViewOnClickListenerC88191.INSTANCE : onClickListener2, (i & 1024) != 0 ? ViewOnClickListenerC88202.INSTANCE : onClickListener3, onClickListener4);
     }
 
-    private final void configureInternal(GuildScheduledEvent guildScheduledEvent, GuildScheduledEventLocationInfo locationInfo, ButtonConfiguration buttonConfiguration, Guild guild, UserGuildMember creator, View.OnClickListener onCardClicked) throws Resources.NotFoundException {
+    private final void configureInternal(GuildScheduledEvent guildScheduledEvent, GuildScheduledEventLocationInfo locationInfo, ButtonConfiguration buttonConfiguration, Guild guild, UserGuildMember creator, View.OnClickListener onCardClicked) {
         String str;
         GuildScheduledEventBottomButtonView guildScheduledEventBottomButtonView = this.binding.f15137b;
         Intrinsics3.checkNotNullExpressionValue(guildScheduledEventBottomButtonView, "binding.guildScheduledEventListItemButtomView");
@@ -137,7 +136,7 @@ public final class GuildScheduledEventItemView extends ConstraintLayout {
         this.binding.f15136a.setOnClickListener(onCardClicked);
     }
 
-    private final void configureLocation(GuildScheduledEventLocationInfo locationInfo, Guild guild) throws Resources.NotFoundException {
+    private final void configureLocation(GuildScheduledEventLocationInfo locationInfo, Guild guild) {
         CharSequence textFromLocation;
         int i;
         int locationIconSmall;
@@ -226,7 +225,7 @@ public final class GuildScheduledEventItemView extends ConstraintLayout {
         }
     }
 
-    public static /* synthetic */ void configureLocation$default(GuildScheduledEventItemView guildScheduledEventItemView, GuildScheduledEventLocationInfo guildScheduledEventLocationInfo, Guild guild, int i, Object obj) throws Resources.NotFoundException {
+    public static /* synthetic */ void configureLocation$default(GuildScheduledEventItemView guildScheduledEventItemView, GuildScheduledEventLocationInfo guildScheduledEventLocationInfo, Guild guild, int i, Object obj) {
         if ((i & 2) != 0) {
             guild = null;
         }
@@ -241,7 +240,7 @@ public final class GuildScheduledEventItemView extends ConstraintLayout {
         return (GuildScheduledEventExternalLocationParser) this.locationParser.getValue();
     }
 
-    public final void configureAsPreview(GuildScheduledEventModel eventModel, Channel channel, UserGuildMember creator) throws Resources.NotFoundException {
+    public final void configureAsPreview(GuildScheduledEventModel eventModel, Channel channel, UserGuildMember creator) {
         Long lValueOf;
         Intrinsics3.checkNotNullParameter(eventModel, "eventModel");
         GuildScheduledEventPickerDateTime guildScheduledEventPickerDateTime = GuildScheduledEventPickerDateTime.INSTANCE;
@@ -277,7 +276,7 @@ public final class GuildScheduledEventItemView extends ConstraintLayout {
         configureLocation$default(this, GuildScheduledEventLocationInfo.INSTANCE.buildLocationInfo(eventModel, channel), null, 2, null);
     }
 
-    public final void configureInChatList(GuildScheduledEvent guildScheduledEvent, Channel channel, Guild guild, UserGuildMember creator, boolean isInGuild, boolean isRsvped, boolean isConnected, boolean canConnect, View.OnClickListener cardClickListener, View.OnClickListener rsvpButtonClickListener, View.OnClickListener joinServerButtonClickListener, View.OnClickListener shareButtonClickListener) throws Resources.NotFoundException {
+    public final void configureInChatList(GuildScheduledEvent guildScheduledEvent, Channel channel, Guild guild, UserGuildMember creator, boolean isInGuild, boolean isRsvped, boolean isConnected, boolean canConnect, View.OnClickListener cardClickListener, View.OnClickListener rsvpButtonClickListener, View.OnClickListener joinServerButtonClickListener, View.OnClickListener shareButtonClickListener) {
         Intrinsics3.checkNotNullParameter(guildScheduledEvent, "guildScheduledEvent");
         Intrinsics3.checkNotNullParameter(rsvpButtonClickListener, "rsvpButtonClickListener");
         Intrinsics3.checkNotNullParameter(joinServerButtonClickListener, "joinServerButtonClickListener");
@@ -315,7 +314,7 @@ public final class GuildScheduledEventItemView extends ConstraintLayout {
         textView5.setVisibility(isInGuild ? 0 : 8);
     }
 
-    public final void configureInDirectoryEventList(WidgetHubEventsViewModel2 eventData, View.OnClickListener cardClickListener, View.OnClickListener secondaryButtonOnClickListener, View.OnClickListener primaryButtonOnClickListener, View.OnClickListener shareButtonOnClickListener) throws Resources.NotFoundException {
+    public final void configureInDirectoryEventList(WidgetHubEventsViewModel2 eventData, View.OnClickListener cardClickListener, View.OnClickListener secondaryButtonOnClickListener, View.OnClickListener primaryButtonOnClickListener, View.OnClickListener shareButtonOnClickListener) {
         Intrinsics3.checkNotNullParameter(eventData, "eventData");
         Intrinsics3.checkNotNullParameter(cardClickListener, "cardClickListener");
         Intrinsics3.checkNotNullParameter(secondaryButtonOnClickListener, "secondaryButtonOnClickListener");
@@ -326,17 +325,7 @@ public final class GuildScheduledEventItemView extends ConstraintLayout {
         configureInternal(event, null, new DirectoryButtonConfiguration(eventData.getEvent(), eventData.isInGuild(), eventData.isRsvped(), false, primaryButtonOnClickListener, secondaryButtonOnClickListener, shareButtonOnClickListener, ViewOnClickListenerC88212.INSTANCE), guild != null ? new Guild(guild) : null, null, cardClickListener);
     }
 
-    /* JADX WARN: Failed to analyze thrown exceptions
-    java.util.ConcurrentModificationException
-    	at java.base/java.util.ArrayList$Itr.checkForComodification(ArrayList.java:1095)
-    	at java.base/java.util.ArrayList$Itr.next(ArrayList.java:1049)
-    	at jadx.core.dex.visitors.MethodThrowsVisitor.processInstructions(MethodThrowsVisitor.java:131)
-    	at jadx.core.dex.visitors.MethodThrowsVisitor.visit(MethodThrowsVisitor.java:69)
-    	at jadx.core.dex.visitors.MethodThrowsVisitor.checkInsn(MethodThrowsVisitor.java:179)
-    	at jadx.core.dex.visitors.MethodThrowsVisitor.processInstructions(MethodThrowsVisitor.java:132)
-    	at jadx.core.dex.visitors.MethodThrowsVisitor.visit(MethodThrowsVisitor.java:69)
-     */
-    public final void configureInEventList(GuildScheduledEventListItem.Event item, View.OnClickListener cardClickListener, View.OnClickListener rsvpButtonClickListener, View.OnClickListener eventStartButtonClickListener, View.OnClickListener shareButtonClickListener, View.OnClickListener joinButtonClickListener) throws Resources.NotFoundException {
+    public final void configureInEventList(GuildScheduledEventListItem.Event item, View.OnClickListener cardClickListener, View.OnClickListener rsvpButtonClickListener, View.OnClickListener eventStartButtonClickListener, View.OnClickListener shareButtonClickListener, View.OnClickListener joinButtonClickListener) {
         Intrinsics3.checkNotNullParameter(item, "item");
         Intrinsics3.checkNotNullParameter(cardClickListener, "cardClickListener");
         Intrinsics3.checkNotNullParameter(rsvpButtonClickListener, "rsvpButtonClickListener");
@@ -349,7 +338,7 @@ public final class GuildScheduledEventItemView extends ConstraintLayout {
         constraintLayout.setBackground((item.isConnected() && item.getEvent().getStatus() == GuildScheduledEventStatus.ACTIVE) ? ContextCompat.getDrawable(getContext(), C5419R.drawable.bg_guild_scheduled_event_list_item_connected_primary) : ContextCompat.getDrawable(getContext(), C5419R.drawable.bg_guild_scheduled_event_list_item_primary));
     }
 
-    public final void configureInVoiceChannel(GuildScheduledEvent guildScheduledEvent, UserGuildMember creator, boolean canStartEvent, boolean isCollapsed, boolean isConnected, boolean isCallPreview, View.OnClickListener onCardClicked, View.OnClickListener onStartEventButtonClicked) throws Resources.NotFoundException {
+    public final void configureInVoiceChannel(GuildScheduledEvent guildScheduledEvent, UserGuildMember creator, boolean canStartEvent, boolean isCollapsed, boolean isConnected, boolean isCallPreview, View.OnClickListener onCardClicked, View.OnClickListener onStartEventButtonClicked) {
         Intrinsics3.checkNotNullParameter(guildScheduledEvent, "guildScheduledEvent");
         Intrinsics3.checkNotNullParameter(onCardClicked, "onCardClicked");
         Intrinsics3.checkNotNullParameter(onStartEventButtonClicked, "onStartEventButtonClicked");

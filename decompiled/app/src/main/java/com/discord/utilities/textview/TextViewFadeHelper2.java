@@ -2,9 +2,9 @@ package com.discord.utilities.textview;
 
 import android.view.View;
 
-/* compiled from: TextViewFadeHelper.kt */
-/* renamed from: com.discord.utilities.textview.TextViewFadeHelper$registerFadeHelper$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.textview.TextViewFadeHelper$registerFadeHelper$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: TextViewFadeHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TextViewFadeHelper2 implements View.OnLayoutChangeListener {
     public final /* synthetic */ TextViewFadeHelper this$0;
 

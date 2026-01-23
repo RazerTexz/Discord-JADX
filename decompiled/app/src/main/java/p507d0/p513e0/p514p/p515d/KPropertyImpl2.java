@@ -4,9 +4,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p513e0.p514p.p515d.KPropertyImpl;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: KPropertyImpl.kt */
-/* renamed from: d0.e0.p.d.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.t, reason: use source file name */
+/* JADX INFO: compiled from: KPropertyImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KPropertyImpl2 extends Lambda implements Function0<Boolean> {
     public final /* synthetic */ KPropertyImpl.a $this_computeCallerForAccessor;
 
@@ -21,7 +21,7 @@ public final class KPropertyImpl2 extends Lambda implements Function0<Boolean> {
         return Boolean.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2() {
         return this.$this_computeCallerForAccessor.getProperty().getDescriptor().getAnnotations().hasAnnotation(util2.getJVM_STATIC());
     }

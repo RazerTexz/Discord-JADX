@@ -11,14 +11,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType.SCL.lombok */
 public final class ConfigurationDataType {
     private static final Map<Class<?>, ConfigurationValueParser> SIMPLE_TYPES;
     private final boolean isList;
     private final ConfigurationValueParser parser;
 
-    /* renamed from: lombok.core.configuration.ConfigurationDataType$1 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.ConfigurationDataType$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$1.SCL.lombok */
     class C128231 implements ConfigurationValueParser {
         C128231() {
         }
@@ -49,8 +49,8 @@ public final class ConfigurationDataType {
         SIMPLE_TYPES = map;
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationDataType$2 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$2.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.ConfigurationDataType$2 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$2.SCL.lombok */
     class C128242 implements ConfigurationValueParser {
         C128242() {
         }
@@ -71,8 +71,8 @@ public final class ConfigurationDataType {
         }
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationDataType$3 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$3.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.ConfigurationDataType$3 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$3.SCL.lombok */
     class C128253 implements ConfigurationValueParser {
         C128253() {
         }
@@ -93,8 +93,8 @@ public final class ConfigurationDataType {
         }
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationDataType$4 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$4.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.ConfigurationDataType$4 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$4.SCL.lombok */
     class C128264 implements ConfigurationValueParser {
         C128264() {
         }
@@ -115,8 +115,8 @@ public final class ConfigurationDataType {
         }
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationDataType$5 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$5.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.ConfigurationDataType$5 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$5.SCL.lombok */
     class C128275 implements ConfigurationValueParser {
         C128275() {
         }
@@ -142,8 +142,8 @@ public final class ConfigurationDataType {
         return new C128286(type, type);
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationDataType$6 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$6.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.ConfigurationDataType$6 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$6.SCL.lombok */
     class C128286 implements ConfigurationValueParser {
         private final /* synthetic */ Class val$rawType;
         private final /* synthetic */ Class val$type;
@@ -190,8 +190,8 @@ public final class ConfigurationDataType {
         return new C128297(valueOfMethod, descriptionMethod, exampleValueMethod);
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationDataType$7 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$7.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.ConfigurationDataType$7 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$7.SCL.lombok */
     class C128297 implements ConfigurationValueParser {
         private final /* synthetic */ Method val$valueOfMethod;
         private final /* synthetic */ Method val$descriptionMethod;

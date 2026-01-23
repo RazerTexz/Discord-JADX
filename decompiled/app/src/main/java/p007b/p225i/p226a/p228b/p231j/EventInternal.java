@@ -6,49 +6,49 @@ import java.util.HashMap;
 import java.util.Map;
 import p007b.p225i.p226a.p228b.p231j.AutoValue_EventInternal;
 
-/* compiled from: EventInternal.java */
+/* JADX INFO: renamed from: b.i.a.b.j.f, reason: use source file name */
+/* JADX INFO: compiled from: EventInternal.java */
+/* JADX INFO: loaded from: classes3.dex */
 @AutoValue
-/* renamed from: b.i.a.b.j.f, reason: use source file name */
-/* loaded from: classes3.dex */
 public abstract class EventInternal {
 
-    /* compiled from: EventInternal.java */
+    /* JADX INFO: renamed from: b.i.a.b.j.f$a */
+    /* JADX INFO: compiled from: EventInternal.java */
     @AutoValue.Builder
-    /* renamed from: b.i.a.b.j.f$a */
     public static abstract class a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final a m2357a(String str, String str2) {
             mo2343c().put(str, str2);
             return this;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public abstract EventInternal mo2342b();
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public abstract Map<String, String> mo2343c();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String m2354a(String str) {
         String str2 = mo2336b().get(str);
         return str2 == null ? "" : str2;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract Map<String, String> mo2336b();
 
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract Integer mo2337c();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract EncodedPayload mo2338d();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public abstract long mo2339e();
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int m2355f(String str) {
         String str2 = mo2336b().get(str);
         if (str2 == null) {
@@ -57,13 +57,13 @@ public abstract class EventInternal {
         return Integer.valueOf(str2).intValue();
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public abstract String mo2340g();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public abstract long mo2341h();
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public a m2356i() {
         AutoValue_EventInternal.b bVar = new AutoValue_EventInternal.b();
         bVar.m2346f(mo2340g());

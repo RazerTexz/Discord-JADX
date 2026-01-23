@@ -2,11 +2,11 @@ package androidx.constraintlayout.widget;
 
 import com.discord.C5419R;
 
-/* renamed from: androidx.constraintlayout.widget.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.constraintlayout.widget.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0201R {
 
-    /* renamed from: androidx.constraintlayout.widget.R$anim */
+    /* JADX INFO: renamed from: androidx.constraintlayout.widget.R$anim */
     public static final class anim {
         public static final int abc_fade_in = 2130771968;
         public static final int abc_fade_out = 2130771969;
@@ -37,7 +37,7 @@ public final class C0201R {
         }
     }
 
-    /* renamed from: androidx.constraintlayout.widget.R$attr */
+    /* JADX INFO: renamed from: androidx.constraintlayout.widget.R$attr */
     public static final class attr {
         public static final int actionBarDivider = 2130968576;
         public static final int actionBarItemBackground = 2130968577;
@@ -508,7 +508,7 @@ public final class C0201R {
         }
     }
 
-    /* renamed from: androidx.constraintlayout.widget.R$bool */
+    /* JADX INFO: renamed from: androidx.constraintlayout.widget.R$bool */
     public static final class bool {
         public static final int abc_action_bar_embed_tabs = 2131034112;
         public static final int abc_allow_stacked_button_bar = 2131034113;
@@ -518,7 +518,7 @@ public final class C0201R {
         }
     }
 
-    /* renamed from: androidx.constraintlayout.widget.R$color */
+    /* JADX INFO: renamed from: androidx.constraintlayout.widget.R$color */
     public static final class color {
         public static final int abc_background_cache_hint_selector_material_dark = 2131099648;
         public static final int abc_background_cache_hint_selector_material_light = 2131099649;
@@ -612,7 +612,7 @@ public final class C0201R {
         }
     }
 
-    /* renamed from: androidx.constraintlayout.widget.R$dimen */
+    /* JADX INFO: renamed from: androidx.constraintlayout.widget.R$dimen */
     public static final class dimen {
         public static final int abc_action_bar_content_inset_material = 2131165184;
         public static final int abc_action_bar_content_inset_with_nav = 2131165185;
@@ -736,7 +736,7 @@ public final class C0201R {
         }
     }
 
-    /* renamed from: androidx.constraintlayout.widget.R$drawable */
+    /* JADX INFO: renamed from: androidx.constraintlayout.widget.R$drawable */
     public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha = 2131230859;
         public static final int abc_action_bar_item_background_material = 2131230860;
@@ -851,7 +851,7 @@ public final class C0201R {
         }
     }
 
-    /* renamed from: androidx.constraintlayout.widget.R$id */
+    /* JADX INFO: renamed from: androidx.constraintlayout.widget.R$id */
     public static final class id {
         public static final int NO_DEBUG = 2131361798;
         public static final int SHOW_ALL = 2131361800;
@@ -988,7 +988,7 @@ public final class C0201R {
         public static final int notification_main_column_container = 2131364559;
         public static final int off = 2131364616;
 
-        /* renamed from: on */
+        /* JADX INFO: renamed from: on */
         public static final int f128on = 2131364620;
         public static final int packed = 2131364659;
         public static final int parent = 2131364664;
@@ -1066,7 +1066,7 @@ public final class C0201R {
         public static final int unchecked = 2131365926;
         public static final int uniform = 2131365931;
 
-        /* renamed from: up */
+        /* JADX INFO: renamed from: up */
         public static final int f129up = 2131365940;
         public static final int visible = 2131366135;
         public static final int wrap = 2131366285;
@@ -1076,7 +1076,7 @@ public final class C0201R {
         }
     }
 
-    /* renamed from: androidx.constraintlayout.widget.R$integer */
+    /* JADX INFO: renamed from: androidx.constraintlayout.widget.R$integer */
     public static final class integer {
         public static final int abc_config_activityDefaultDur = 2131427328;
         public static final int abc_config_activityShortDur = 2131427329;
@@ -1088,7 +1088,7 @@ public final class C0201R {
         }
     }
 
-    /* renamed from: androidx.constraintlayout.widget.R$interpolator */
+    /* JADX INFO: renamed from: androidx.constraintlayout.widget.R$interpolator */
     public static final class interpolator {
         public static final int btn_checkbox_checked_mtrl_animation_interpolator_0 = 2131492864;
         public static final int btn_checkbox_checked_mtrl_animation_interpolator_1 = 2131492865;
@@ -1102,7 +1102,7 @@ public final class C0201R {
         }
     }
 
-    /* renamed from: androidx.constraintlayout.widget.R$layout */
+    /* JADX INFO: renamed from: androidx.constraintlayout.widget.R$layout */
     public static final class layout {
         public static final int abc_action_bar_title_item = 2131558400;
         public static final int abc_action_bar_up_container = 2131558401;
@@ -1148,7 +1148,7 @@ public final class C0201R {
         }
     }
 
-    /* renamed from: androidx.constraintlayout.widget.R$string */
+    /* JADX INFO: renamed from: androidx.constraintlayout.widget.R$string */
     public static final class string {
         public static final int abc_action_bar_home_description = 2131886099;
         public static final int abc_action_bar_up_description = 2131886100;
@@ -1184,7 +1184,7 @@ public final class C0201R {
         }
     }
 
-    /* renamed from: androidx.constraintlayout.widget.R$style */
+    /* JADX INFO: renamed from: androidx.constraintlayout.widget.R$style */
     public static final class style {
         public static final int AlertDialog_AppCompat = 2131951617;
         public static final int AlertDialog_AppCompat_Light = 2131951618;
@@ -1541,7 +1541,7 @@ public final class C0201R {
         }
     }
 
-    /* renamed from: androidx.constraintlayout.widget.R$styleable */
+    /* JADX INFO: renamed from: androidx.constraintlayout.widget.R$styleable */
     public static final class styleable {
         public static final int ActionBarLayout_android_layout_gravity = 0;
         public static final int ActionBar_background = 0;

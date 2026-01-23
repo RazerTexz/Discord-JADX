@@ -1,8 +1,8 @@
 package p507d0.p513e0.p514p.p515d.p517m0.p567n;
 
-/* compiled from: Variance.kt */
-/* renamed from: d0.e0.p.d.m0.n.j1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.j1, reason: use source file name */
+/* JADX INFO: compiled from: Variance.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public enum Variance {
     INVARIANT("", true, true, 0),
     IN_VARIANCE("in", true, false, -1),
@@ -20,7 +20,7 @@ public enum Variance {
         this.superpositionFactor = i;
     }
 
-    /* renamed from: values, reason: to resolve conflict with enum method */
+    /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
     public static Variance[] valuesCustom() {
         Variance[] varianceArrValuesCustom = values();
         Variance[] varianceArr = new Variance[varianceArrValuesCustom.length];

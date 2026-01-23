@@ -20,14 +20,14 @@ import p659s.p660a.Job2;
 import p659s.p660a.Supervisor;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: CoroutineLiveData.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CoroutineLiveData.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CoroutineLiveData<T> extends MediatorLiveData<T> {
     private CoroutineLiveData2<T> blockRunner;
     private CoroutineLiveData6 emittedSource;
 
-    /* compiled from: CoroutineLiveData.kt */
-    /* renamed from: androidx.lifecycle.CoroutineLiveData$1 */
+    /* JADX INFO: renamed from: androidx.lifecycle.CoroutineLiveData$1 */
+    /* JADX INFO: compiled from: CoroutineLiveData.kt */
     public static final class C04291 extends Lambda implements Function0<Unit> {
         public C04291() {
             super(0);
@@ -39,7 +39,7 @@ public final class CoroutineLiveData<T> extends MediatorLiveData<T> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             CoroutineLiveData.access$setBlockRunner$p(CoroutineLiveData.this, null);
         }
@@ -105,7 +105,8 @@ public final class CoroutineLiveData<T> extends MediatorLiveData<T> {
     public final Object emitSource$lifecycle_livedata_ktx_release(LiveData<T> liveData, Continuation<? super Job2> continuation) {
         CoroutineLiveData4 coroutineLiveData4;
         LiveData<T> liveData2;
-        CoroutineLiveData<T> coroutineLiveData;
+        CoroutineLiveData coroutineLiveData;
+        CoroutineLiveData coroutineLiveData2;
         if (continuation instanceof CoroutineLiveData4) {
             coroutineLiveData4 = (CoroutineLiveData4) continuation;
             int i = coroutineLiveData4.label;
@@ -133,27 +134,29 @@ public final class CoroutineLiveData<T> extends MediatorLiveData<T> {
                 if (i2 != 2) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                coroutineLiveData = (CoroutineLiveData) coroutineLiveData4.L$0;
+                CoroutineLiveData coroutineLiveData3 = (CoroutineLiveData) coroutineLiveData4.L$0;
                 Result3.throwOnFailure(objAddDisposableSource);
+                coroutineLiveData2 = coroutineLiveData3;
                 CoroutineLiveData6 coroutineLiveData6 = (CoroutineLiveData6) objAddDisposableSource;
-                coroutineLiveData.emittedSource = coroutineLiveData6;
+                coroutineLiveData2.emittedSource = coroutineLiveData6;
                 return coroutineLiveData6;
             }
             LiveData<T> liveData3 = (LiveData) coroutineLiveData4.L$1;
-            CoroutineLiveData<T> coroutineLiveData2 = (CoroutineLiveData) coroutineLiveData4.L$0;
+            CoroutineLiveData coroutineLiveData5 = (CoroutineLiveData) coroutineLiveData4.L$0;
             Result3.throwOnFailure(objAddDisposableSource);
             liveData2 = liveData3;
-            coroutineLiveData = coroutineLiveData2;
+            coroutineLiveData = coroutineLiveData5;
         }
         coroutineLiveData4.L$0 = coroutineLiveData;
         coroutineLiveData4.L$1 = null;
         coroutineLiveData4.label = 2;
         objAddDisposableSource = CoroutineLiveData5.addDisposableSource(coroutineLiveData, liveData2, coroutineLiveData4);
+        coroutineLiveData2 = coroutineLiveData;
         if (objAddDisposableSource == coroutine_suspended) {
             return coroutine_suspended;
         }
         CoroutineLiveData6 coroutineLiveData62 = (CoroutineLiveData6) objAddDisposableSource;
-        coroutineLiveData.emittedSource = coroutineLiveData62;
+        coroutineLiveData2.emittedSource = coroutineLiveData62;
         return coroutineLiveData62;
     }
 

@@ -17,38 +17,38 @@ import org.json.JSONObject;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.FirebaseApp2;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-/* renamed from: b.i.c.s.w */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.s.w */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4832w {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SharedPreferences f12901a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Context f12902b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @GuardedBy("this")
     public final Map<String, Long> f12903c = new ArrayMap();
 
-    /* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-    /* renamed from: b.i.c.s.w$a */
+    /* JADX INFO: renamed from: b.i.c.s.w$a */
+    /* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final long f12904a = TimeUnit.DAYS.toMillis(7);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final /* synthetic */ int f12905b = 0;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final String f12906c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final String f12907d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final long f12908e;
 
         public a(String str, String str2, long j) {
@@ -57,7 +57,7 @@ public class C4832w {
             this.f12908e = j;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static String m6742a(String str, String str2, long j) {
             try {
                 JSONObject jSONObject = new JSONObject();
@@ -72,7 +72,7 @@ public class C4832w {
             }
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static a m6743b(String str) {
             if (TextUtils.isEmpty(str)) {
                 return null;
@@ -123,25 +123,25 @@ public class C4832w {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m6738a(String str, String str2) {
         return outline.m859k(str2.length() + outline.m841b(str, 3), str, "|S|", str2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String m6739b(String str, String str2, String str3) {
         StringBuilder sbM831S = outline.m831S(outline.m841b(str3, outline.m841b(str2, outline.m841b(str, 4))), str, "|T|", str2, "|");
         sbM831S.append(str3);
         return sbM831S.toString();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public synchronized void m6740c() {
         this.f12903c.clear();
         this.f12901a.edit().clear().commit();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long m6741d(String str) {
         long jCurrentTimeMillis = System.currentTimeMillis();
         if (this.f12901a.contains(m6738a(str, "cre"))) {

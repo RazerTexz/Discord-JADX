@@ -24,29 +24,29 @@ import org.json.JSONObject;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p292c.p293a.p296f.C3218c;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.c.a.f.b.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.c.a.f.b.a */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3198a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Lock f9225a = new ReentrantLock();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public static C3198a f9226b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Lock f9227c = new ReentrantLock();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final SharedPreferences f9228d;
 
     public C3198a(Context context) {
         this.f9228d = context.getSharedPreferences("com.google.android.gms.signin", 0);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static C3198a m3973a(Context context) {
         Objects.requireNonNull(context, "null reference");
         Lock lock = f9225a;
@@ -64,13 +64,13 @@ public class C3198a {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static String m3974f(String str, String str2) {
         return outline.m859k(outline.m841b(str2, str.length() + 1), str, ":", str2);
     }
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public GoogleSignInAccount m3975b() {
         String strM3979g;
         String strM3979g2 = m3979g("defaultGoogleSignInAccount");
@@ -85,7 +85,7 @@ public class C3198a {
     }
 
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public GoogleSignInOptions m3976c() {
         String strM3979g;
         String strM3979g2 = m3979g("defaultGoogleSignInAccount");
@@ -99,7 +99,7 @@ public class C3198a {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m3977d(GoogleSignInAccount googleSignInAccount, GoogleSignInOptions googleSignInOptions) {
         Objects.requireNonNull(googleSignInAccount, "null reference");
         Objects.requireNonNull(googleSignInOptions, "null reference");
@@ -188,7 +188,7 @@ public class C3198a {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m3978e(String str, String str2) {
         this.f9227c.lock();
         try {
@@ -199,7 +199,7 @@ public class C3198a {
     }
 
     @Nullable
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final String m3979g(String str) {
         this.f9227c.lock();
         try {

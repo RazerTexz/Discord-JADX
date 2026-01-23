@@ -10,9 +10,9 @@ import p507d0.p580t._Collections;
 import p507d0.p580t._Sets;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: typeEnchancementUtils.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.l0.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.v, reason: use source file name */
+/* JADX INFO: compiled from: typeEnchancementUtils.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class typeEnchancementUtils {
     public static final typeQualifiers createJavaTypeQualifiers(typeQualifiers3 typequalifiers3, typeQualifiers2 typequalifiers2, boolean z2, boolean z3) {
         return (z3 && typequalifiers3 == typeQualifiers3.NOT_NULL) ? new typeQualifiers(typequalifiers3, typequalifiers2, true, z2) : new typeQualifiers(typequalifiers3, typequalifiers2, false, z2);

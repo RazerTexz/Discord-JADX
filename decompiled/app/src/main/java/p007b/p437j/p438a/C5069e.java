@@ -20,8 +20,8 @@ import p007b.p437j.p438a.p439f.InterfaceC5070a;
 import p007b.p437j.p438a.p439f.InterfaceC5071b;
 import p007b.p437j.p438a.p439f.InterfaceC5072c;
 
-/* renamed from: b.j.a.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.j.a.e */
+/* JADX INFO: loaded from: classes3.dex */
 public class C5069e implements Serializable {
     private final HCaptchaConfig hCaptchaConfig;
     private final InterfaceC5070a onFailureListener;

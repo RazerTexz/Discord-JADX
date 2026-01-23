@@ -7,9 +7,9 @@ import android.os.RemoteException;
 import com.google.android.gms.internal.measurement.zzae;
 import p007b.p225i.p226a.p288f.p311f.InterfaceC3422a;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.gc */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.gc */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3674gc extends C3577a implements InterfaceC3646ec {
     public C3674gc(IBinder iBinder) {
         super(iBinder, "com.google.android.gms.measurement.api.internal.IAppMeasurementDynamiteService");

@@ -5,21 +5,21 @@ import java.util.zip.Deflater;
 import p615g0.Buffer3;
 import p615g0.DeflaterSink;
 
-/* compiled from: MessageDeflater.kt */
-/* renamed from: f0.e0.n.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.n.a, reason: use source file name */
+/* JADX INFO: compiled from: MessageDeflater.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MessageDeflater implements Closeable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Buffer3 f25812j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Deflater f25813k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final DeflaterSink f25814l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f25815m;
 
     public MessageDeflater(boolean z2) {

@@ -2,9 +2,9 @@ package p507d0.p513e0.p514p.p515d.p517m0.p576p;
 
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: JavaTypeEnhancementState.kt */
-/* renamed from: d0.e0.p.d.m0.p.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.p.h, reason: use source file name */
+/* JADX INFO: compiled from: JavaTypeEnhancementState.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public enum JavaTypeEnhancementState2 {
     IGNORE("ignore"),
     WARN("warn"),
@@ -12,8 +12,8 @@ public enum JavaTypeEnhancementState2 {
 
     private final String description;
 
-    /* compiled from: JavaTypeEnhancementState.kt */
-    /* renamed from: d0.e0.p.d.m0.p.h$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.p.h$a */
+    /* JADX INFO: compiled from: JavaTypeEnhancementState.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -27,7 +27,7 @@ public enum JavaTypeEnhancementState2 {
         this.description = str;
     }
 
-    /* renamed from: values, reason: to resolve conflict with enum method */
+    /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
     public static JavaTypeEnhancementState2[] valuesCustom() {
         JavaTypeEnhancementState2[] javaTypeEnhancementState2ArrValuesCustom = values();
         JavaTypeEnhancementState2[] javaTypeEnhancementState2Arr = new JavaTypeEnhancementState2[javaTypeEnhancementState2ArrValuesCustom.length];

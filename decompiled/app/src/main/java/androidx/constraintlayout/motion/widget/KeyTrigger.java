@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class KeyTrigger extends Key {
     public static final int KEY_TYPE = 5;
     public static final String NAME = "KeyTrigger";

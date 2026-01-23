@@ -59,25 +59,25 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetGuildInviteShareCompact.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildInviteShareCompact.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildInviteShareCompact extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildInviteShareCompact.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildInviteShareCompactBinding;", 0)};
     private PrivateChannelAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private BottomSheetBehavior<ViewInviteSettingsSheet> bottomSheetBehavior;
     private boolean hasTrackedSuggestionsViewed;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildInviteShareCompact.kt */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareCompact.kt */
     public static final class PrivateChannelAdapter extends MGRecyclerAdapterSimple<InviteSuggestionItem> {
         private Function1<? super InviteSuggestionItem, Unit> onClick;
 
-        /* compiled from: WidgetGuildInviteShareCompact.kt */
+        /* JADX INFO: compiled from: WidgetGuildInviteShareCompact.kt */
         public static final class Item extends MGRecyclerViewHolder<PrivateChannelAdapter, InviteSuggestionItem> {
             private final WidgetGuildInviteShareItemBinding binding;
 
@@ -99,7 +99,7 @@ public final class WidgetGuildInviteShareCompact extends AppFragment {
                 onConfigure2(i, inviteSuggestionItem);
             }
 
-            /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, InviteSuggestionItem data) {
                 Intrinsics3.checkNotNullParameter(data, "data");
                 super.onConfigure(position, data);
@@ -167,8 +167,8 @@ public final class WidgetGuildInviteShareCompact extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareCompact.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareCompact.kt */
     public static final class C86723 extends Lambda implements Function1<InviteSuggestionItem, Unit> {
         public final /* synthetic */ ModelInvite $invite;
         public final /* synthetic */ WidgetGuildInviteShareViewModel.ViewState.Loaded $viewState;
@@ -186,15 +186,15 @@ public final class WidgetGuildInviteShareCompact extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(InviteSuggestionItem inviteSuggestionItem) {
             Intrinsics3.checkNotNullParameter(inviteSuggestionItem, "item");
             WidgetGuildInviteShareCompact.access$sendInvite(WidgetGuildInviteShareCompact.this, inviteSuggestionItem, this.$viewState, this.$invite);
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareCompact.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareCompact.kt */
     public static final class ViewOnClickListenerC86734 implements View.OnClickListener {
         public final /* synthetic */ ModelInvite $invite;
 
@@ -211,8 +211,8 @@ public final class WidgetGuildInviteShareCompact extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareCompact.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$initBottomSheet$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$initBottomSheet$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareCompact.kt */
     public static final class C86741 extends Lambda implements Function0<Unit> {
         public C86741() {
             super(0);
@@ -224,14 +224,14 @@ public final class WidgetGuildInviteShareCompact extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetGuildInviteShareCompact.access$getBottomSheetBehavior$p(WidgetGuildInviteShareCompact.this).setState(5);
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareCompact.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$initBottomSheetBehavior$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$initBottomSheetBehavior$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareCompact.kt */
     public static final class C86751 extends BottomSheetBehavior.BottomSheetCallback {
         public C86751() {
         }
@@ -251,8 +251,8 @@ public final class WidgetGuildInviteShareCompact extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareCompact.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareCompact.kt */
     public static final class C86761<R> implements Func0<Boolean> {
         public final /* synthetic */ boolean $isNuxFlow;
 
@@ -279,8 +279,8 @@ public final class WidgetGuildInviteShareCompact extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareCompact.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareCompact.kt */
     public static final class C86772 extends Lambda implements Function1<Editable, Unit> {
         public C86772() {
             super(1);
@@ -292,15 +292,15 @@ public final class WidgetGuildInviteShareCompact extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "editable");
             WidgetGuildInviteShareCompact.access$getViewModel$p(WidgetGuildInviteShareCompact.this).updateSearchQuery(editable.toString());
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareCompact.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareCompact.kt */
     public static final class ViewOnClickListenerC86783 implements View.OnClickListener {
         public ViewOnClickListenerC86783() {
         }
@@ -311,8 +311,8 @@ public final class WidgetGuildInviteShareCompact extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareCompact.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareCompact.kt */
     public static final class ViewOnClickListenerC86794 implements View.OnClickListener {
         public ViewOnClickListenerC86794() {
         }
@@ -323,8 +323,8 @@ public final class WidgetGuildInviteShareCompact extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareCompact.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareCompact.kt */
     public static final class ViewOnClickListenerC86805 implements View.OnClickListener {
         public ViewOnClickListenerC86805() {
         }
@@ -335,8 +335,8 @@ public final class WidgetGuildInviteShareCompact extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareCompact.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareCompact.kt */
     public static final /* synthetic */ class C86831 extends FunctionReferenceImpl implements Function1<WidgetGuildInviteShareViewModel.ViewState.Loaded, Unit> {
         public C86831(WidgetGuildInviteShareCompact widgetGuildInviteShareCompact) {
             super(1, widgetGuildInviteShareCompact, WidgetGuildInviteShareCompact.class, "configureUI", "configureUI(Lcom/discord/widgets/guilds/invite/WidgetGuildInviteShareViewModel$ViewState$Loaded;)V", 0);
@@ -348,7 +348,7 @@ public final class WidgetGuildInviteShareCompact extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildInviteShareViewModel.ViewState.Loaded loaded) {
             Intrinsics3.checkNotNullParameter(loaded, "p1");
             WidgetGuildInviteShareCompact.access$configureUI((WidgetGuildInviteShareCompact) this.receiver, loaded);

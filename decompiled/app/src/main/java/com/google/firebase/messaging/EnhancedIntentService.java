@@ -24,9 +24,9 @@ import p007b.p225i.p361c.p406w.C4868f;
 import p007b.p225i.p361c.p406w.ExecutorC4867e;
 import p007b.p225i.p361c.p406w.RunnableC4866d;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @SuppressLint({"UnwrappedWakefulBroadcastReceiver"})
-/* loaded from: classes3.dex */
 public abstract class EnhancedIntentService extends Service {
     private Binder binder;
 
@@ -36,8 +36,8 @@ public abstract class EnhancedIntentService extends Service {
     private final Object lock;
     private int runningTasks;
 
-    /* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-    /* renamed from: com.google.firebase.messaging.EnhancedIntentService$a */
+    /* JADX INFO: renamed from: com.google.firebase.messaging.EnhancedIntentService$a */
+    /* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
     public class C11087a implements BinderC4806a0.a {
         public C11087a() {
         }

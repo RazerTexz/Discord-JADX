@@ -36,15 +36,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Func0;
 
-/* compiled from: StatefulViews.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StatefulViews.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StatefulViews {
     private final List<Integer> ids;
     private final HashMap<Integer, Boolean> requiredFieldIds;
     private final HashMap<Integer, Object> viewValues;
     private final HashMap<Integer, Object> viewValuesEdited;
 
-    /* compiled from: StatefulViews.kt */
+    /* JADX INFO: compiled from: StatefulViews.kt */
     public static final class FragmentOnBackPressedHandler {
         private final Activity activity;
         private final AtomicBoolean discardConfirmed;
@@ -88,8 +88,8 @@ public final class StatefulViews {
         }
     }
 
-    /* compiled from: StatefulViews.kt */
-    /* renamed from: com.discord.utilities.stateful.StatefulViews$configureSaveActionView$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.stateful.StatefulViews$configureSaveActionView$1 */
+    /* JADX INFO: compiled from: StatefulViews.kt */
     public static final class C69181 extends Lambda implements Function1<View, Unit> {
         public static final C69181 INSTANCE = new C69181();
 
@@ -103,7 +103,7 @@ public final class StatefulViews {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "$this$smartHide");
             if (view instanceof FloatingActionButton) {
@@ -114,8 +114,8 @@ public final class StatefulViews {
         }
     }
 
-    /* compiled from: StatefulViews.kt */
-    /* renamed from: com.discord.utilities.stateful.StatefulViews$configureSaveActionView$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.stateful.StatefulViews$configureSaveActionView$2 */
+    /* JADX INFO: compiled from: StatefulViews.kt */
     public static final class C69192 extends Lambda implements Function1<View, Unit> {
         public static final C69192 INSTANCE = new C69192();
 
@@ -129,7 +129,7 @@ public final class StatefulViews {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "$this$smartShow");
             if (view instanceof FloatingActionButton) {
@@ -140,8 +140,8 @@ public final class StatefulViews {
         }
     }
 
-    /* compiled from: StatefulViews.kt */
-    /* renamed from: com.discord.utilities.stateful.StatefulViews$setupUnsavedChangesConfirmation$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.stateful.StatefulViews$setupUnsavedChangesConfirmation$1 */
+    /* JADX INFO: compiled from: StatefulViews.kt */
     public static final class C69241<R> implements Func0<Boolean> {
         public final /* synthetic */ FragmentOnBackPressedHandler $onBackPressedHandler;
 

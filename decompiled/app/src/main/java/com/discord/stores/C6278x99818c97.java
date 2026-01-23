@@ -12,9 +12,9 @@ import kotlin.jvm.functions.Function14;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreNavigation.kt */
-/* renamed from: com.discord.stores.StoreNavigation$ActivityNavigationLifecycleCallbacks$getGlobalNavigationData$2 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreNavigation$ActivityNavigationLifecycleCallbacks$getGlobalNavigationData$2 */
+/* JADX INFO: compiled from: StoreNavigation.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class C6278x99818c97 extends FunctionReferenceImpl implements Function14<StoreNux.NuxState, Boolean, AuthState, Boolean, Boolean, RequiredAction, Boolean, StoreInviteSettings.InviteCode, String, StoreNotices.Notice, StoreNavigation.AgeGate, Uri, NavigationTab, Boolean, StoreNavigation.ActivityNavigationLifecycleCallbacks.ModelGlobalNavigation> {
     public static final C6278x99818c97 INSTANCE = new C6278x99818c97();
 

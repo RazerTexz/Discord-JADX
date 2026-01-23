@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelSelector.kt */
-/* renamed from: com.discord.widgets.channels.WidgetChannelSelector$Companion$registerForResult$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSelector$Companion$registerForResult$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelSelector.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSelector3 extends Lambda implements Function2<String, Bundle, Unit> {
     public final /* synthetic */ boolean $allowNullChannel;
     public final /* synthetic */ Function2 $onChannelSelected;
@@ -28,7 +28,7 @@ public final class WidgetChannelSelector3 extends Lambda implements Function2<St
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(String str, Bundle bundle) {
         Intrinsics3.checkNotNullParameter(str, "resultRequestKey");
         Intrinsics3.checkNotNullParameter(bundle, "bundle");

@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ConstraintAnchor {
     private static final boolean ALLOW_BINARY = false;
     private static final int UNSET_GONE_MARGIN = -1;
@@ -23,10 +23,10 @@ public class ConstraintAnchor {
     public int mMargin = 0;
     public int mGoneMargin = -1;
 
-    /* renamed from: androidx.constraintlayout.solver.widgets.ConstraintAnchor$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.solver.widgets.ConstraintAnchor$1 */
     public static /* synthetic */ class C01891 {
 
-        /* renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintAnchor$Type */
+        /* JADX INFO: renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintAnchor$Type */
         public static final /* synthetic */ int[] f113x4c44d048;
 
         static {

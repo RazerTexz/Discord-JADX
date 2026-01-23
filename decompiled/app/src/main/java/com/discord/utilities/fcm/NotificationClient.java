@@ -38,9 +38,9 @@ import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: NotificationClient.kt */
+/* JADX INFO: compiled from: NotificationClient.kt */
+/* JADX INFO: loaded from: classes2.dex */
 @SuppressLint({"StaticFieldLeak"})
-/* loaded from: classes2.dex */
 public final class NotificationClient {
     public static final String IGNORED_NOTIFICATION_TYPE = "top_messages_push";
     public static final String NOTIF_CHANNEL_CALLS = "Calls";
@@ -61,7 +61,7 @@ public final class NotificationClient {
     private static Function1<? super String, Unit> tokenCallback = NotificationClient2.INSTANCE;
     private static boolean isBackgrounded = true;
 
-    /* compiled from: NotificationClient.kt */
+    /* JADX INFO: compiled from: NotificationClient.kt */
     public static final class FCMMessagingService extends FirebaseMessagingService {
         @Override // com.google.firebase.messaging.FirebaseMessagingService
         public void onMessageReceived(RemoteMessage remoteMessage) {
@@ -139,8 +139,8 @@ public final class NotificationClient {
         }
     }
 
-    /* compiled from: NotificationClient.kt */
-    /* renamed from: com.discord.utilities.fcm.NotificationClient$init$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.fcm.NotificationClient$init$1 */
+    /* JADX INFO: compiled from: NotificationClient.kt */
     public static final class C67451 extends Lambda implements Function0<String> {
         public static final C67451 INSTANCE = new C67451();
 
@@ -154,14 +154,14 @@ public final class NotificationClient {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2() {
             return NotificationClient.INSTANCE.getSettings$app_productionGoogleRelease().getToken();
         }
     }
 
-    /* compiled from: NotificationClient.kt */
-    /* renamed from: com.discord.utilities.fcm.NotificationClient$init$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.fcm.NotificationClient$init$2 */
+    /* JADX INFO: compiled from: NotificationClient.kt */
     public static final class C67462 extends Lambda implements Function0<String> {
         public static final C67462 INSTANCE = new C67462();
 
@@ -175,14 +175,14 @@ public final class NotificationClient {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2() {
             return NotificationClient.INSTANCE.getSettings$app_productionGoogleRelease().getLocale();
         }
     }
 
-    /* compiled from: NotificationClient.kt */
-    /* renamed from: com.discord.utilities.fcm.NotificationClient$init$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.fcm.NotificationClient$init$3 */
+    /* JADX INFO: compiled from: NotificationClient.kt */
     public static final class C67473<TResult> implements InterfaceC4357c<String> {
         public static final C67473 INSTANCE = new C67473();
 
@@ -293,7 +293,7 @@ public final class NotificationClient {
         isBackgrounded = isBackgrounded2;
     }
 
-    /* compiled from: NotificationClient.kt */
+    /* JADX INFO: compiled from: NotificationClient.kt */
     public static final /* data */ class SettingsV2 {
         private final boolean isAuthed;
         private final boolean isDisableBlink;
@@ -325,46 +325,47 @@ public final class NotificationClient {
             this.isAuthed = str != null;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ SettingsV2 copy$default(SettingsV2 settingsV2, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, String str, String str2, Set set, int i, Object obj) {
             return settingsV2.copy((i & 1) != 0 ? settingsV2.isEnabled : z2, (i & 2) != 0 ? settingsV2.isEnabledInApp : z3, (i & 4) != 0 ? settingsV2.isWake : z4, (i & 8) != 0 ? settingsV2.isDisableBlink : z5, (i & 16) != 0 ? settingsV2.isDisableSound : z6, (i & 32) != 0 ? settingsV2.isDisableVibrate : z7, (i & 64) != 0 ? settingsV2.token : str, (i & 128) != 0 ? settingsV2.locale : str2, (i & 256) != 0 ? settingsV2.sendBlockedChannels : set);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsEnabled() {
             return this.isEnabled;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsEnabledInApp() {
             return this.isEnabledInApp;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsWake() {
             return this.isWake;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsDisableBlink() {
             return this.isDisableBlink;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getIsDisableSound() {
             return this.isDisableSound;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getIsDisableVibrate() {
             return this.isDisableVibrate;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final String getToken() {
             return this.token;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final String getLocale() {
             return this.locale;
         }
@@ -406,10 +407,21 @@ public final class NotificationClient {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v18 */
         /* JADX WARN: Type inference failed for: r0v19 */
-        /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v2, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v4, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v6, types: [boolean] */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v11 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v12 */
+        /* JADX WARN: Type inference failed for: r2v13 */
+        /* JADX WARN: Type inference failed for: r2v14 */
+        /* JADX WARN: Type inference failed for: r2v15 */
+        /* JADX WARN: Type inference failed for: r2v16 */
+        /* JADX WARN: Type inference failed for: r2v17 */
+        /* JADX WARN: Type inference failed for: r2v18 */
+        /* JADX WARN: Type inference failed for: r2v19 */
+        /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v7, types: [int] */
         public int hashCode() {
             boolean z2 = this.isEnabled;
             ?? r0 = z2;
@@ -417,41 +429,41 @@ public final class NotificationClient {
                 r0 = 1;
             }
             int i = r0 * 31;
-            ?? r2 = this.isEnabledInApp;
-            int i2 = r2;
-            if (r2 != 0) {
-                i2 = 1;
+            boolean z3 = this.isEnabledInApp;
+            ?? r2 = z3;
+            if (z3) {
+                r2 = 1;
             }
-            int i3 = (i + i2) * 31;
-            ?? r22 = this.isWake;
-            int i4 = r22;
-            if (r22 != 0) {
-                i4 = 1;
+            int i2 = (i + r2) * 31;
+            boolean z4 = this.isWake;
+            ?? r22 = z4;
+            if (z4) {
+                r22 = 1;
             }
-            int i5 = (i3 + i4) * 31;
-            ?? r23 = this.isDisableBlink;
-            int i6 = r23;
-            if (r23 != 0) {
-                i6 = 1;
+            int i3 = (i2 + r22) * 31;
+            boolean z5 = this.isDisableBlink;
+            ?? r23 = z5;
+            if (z5) {
+                r23 = 1;
             }
-            int i7 = (i5 + i6) * 31;
-            ?? r24 = this.isDisableSound;
-            int i8 = r24;
-            if (r24 != 0) {
-                i8 = 1;
+            int i4 = (i3 + r23) * 31;
+            boolean z6 = this.isDisableSound;
+            ?? r24 = z6;
+            if (z6) {
+                r24 = 1;
             }
-            int i9 = (i7 + i8) * 31;
-            boolean z3 = this.isDisableVibrate;
-            int i10 = (i9 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+            int i5 = (i4 + r24) * 31;
+            boolean z7 = this.isDisableVibrate;
+            int i6 = (i5 + (z7 ? 1 : z7)) * 31;
             String str = this.token;
-            int iHashCode = (i10 + (str != null ? str.hashCode() : 0)) * 31;
+            int iHashCode = (i6 + (str != null ? str.hashCode() : 0)) * 31;
             String str2 = this.locale;
             int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
             Set<Long> set = this.sendBlockedChannels;
             return iHashCode2 + (set != null ? set.hashCode() : 0);
         }
 
-        /* renamed from: isAuthed, reason: from getter */
+        /* JADX INFO: renamed from: isAuthed, reason: from getter */
         public final boolean getIsAuthed() {
             return this.isAuthed;
         }

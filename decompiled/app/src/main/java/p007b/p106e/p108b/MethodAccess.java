@@ -12,19 +12,19 @@ import p617h0.p618a.p619a.Label2;
 import p617h0.p618a.p619a.MethodVisitor2;
 import p617h0.p618a.p619a.Type2;
 
-/* compiled from: MethodAccess.java */
-/* renamed from: b.e.b.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.e.b.d, reason: use source file name */
+/* JADX INFO: compiled from: MethodAccess.java */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class MethodAccess {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String[] f3014a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Class[][] f3015b;
 
-    /* renamed from: a */
-    public static void m923a(Class cls, ArrayList<Method> arrayList) throws SecurityException {
+    /* JADX INFO: renamed from: a */
+    public static void m923a(Class cls, ArrayList<Method> arrayList) {
         for (Method method : cls.getDeclaredMethods()) {
             if (!Modifier.isPrivate(method.getModifiers())) {
                 arrayList.add(method);
@@ -32,8 +32,8 @@ public abstract class MethodAccess {
         }
     }
 
-    /* renamed from: b */
-    public static MethodAccess m924b(Class cls) throws SecurityException {
+    /* JADX INFO: renamed from: b */
+    public static MethodAccess m924b(Class cls) {
         Class[][] clsArr;
         String str;
         MethodVisitor2 methodVisitor2;
@@ -295,15 +295,15 @@ public abstract class MethodAccess {
         }
     }
 
-    /* renamed from: e */
-    public static void m925e(Class cls, ArrayList<Method> arrayList) throws SecurityException {
+    /* JADX INFO: renamed from: e */
+    public static void m925e(Class cls, ArrayList<Method> arrayList) {
         m923a(cls, arrayList);
         for (Class<?> cls2 : cls.getInterfaces()) {
             m925e(cls2, arrayList);
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int m926c(String str, Class... clsArr) {
         int length = this.f3014a.length;
         for (int i = 0; i < length; i++) {
@@ -316,6 +316,6 @@ public abstract class MethodAccess {
         throw new IllegalArgumentException(sbM837Y.toString());
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract Object m927d(Object obj, int i, Object... objArr);
 }

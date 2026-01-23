@@ -5,12 +5,12 @@ import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.ClassId;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.FqName;
 
-/* compiled from: JvmClassName.java */
-/* renamed from: d0.e0.p.d.m0.k.y.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.y.c, reason: use source file name */
+/* JADX INFO: compiled from: JvmClassName.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class JvmClassName {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f24463a;
 
     public JvmClassName(String str) {
@@ -22,7 +22,7 @@ public class JvmClassName {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9945a(int i) {
         String str = (i == 3 || i == 6 || i == 7 || i == 8) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 3 || i == 6 || i == 7 || i == 8) ? 2 : 3];

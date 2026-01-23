@@ -11,8 +11,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StageChannel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StageChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class StageChannel {
     private final int audienceSize;
     private final boolean canAccess;
@@ -37,12 +37,13 @@ public final /* data */ class StageChannel {
         this.containsMe = z3;
     }
 
-    /* renamed from: copy-LcZnYPc$default, reason: not valid java name */
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX INFO: renamed from: copy-LcZnYPc$default, reason: not valid java name */
     public static /* synthetic */ StageChannel m11420copyLcZnYPc$default(StageChannel stageChannel, Channel channel, List list, StageRoles stageRoles, Set set, List list2, int i, StageInstance stageInstance, boolean z2, boolean z3, int i2, Object obj) {
         return stageChannel.m11422copyLcZnYPc((i2 & 1) != 0 ? stageChannel.channel : channel, (i2 & 2) != 0 ? stageChannel.participants : list, (i2 & 4) != 0 ? stageChannel.myRoles : stageRoles, (i2 & 8) != 0 ? stageChannel.speakerIds : set, (i2 & 16) != 0 ? stageChannel.speakers : list2, (i2 & 32) != 0 ? stageChannel.audienceSize : i, (i2 & 64) != 0 ? stageChannel.stageInstance : stageInstance, (i2 & 128) != 0 ? stageChannel.canAccess : z2, (i2 & 256) != 0 ? stageChannel.containsMe : z3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Channel getChannel() {
         return this.channel;
     }
@@ -51,7 +52,7 @@ public final /* data */ class StageChannel {
         return this.participants;
     }
 
-    /* renamed from: component3-twRsX-0, reason: not valid java name and from getter */
+    /* JADX INFO: renamed from: component3-twRsX-0, reason: not valid java name and from getter */
     public final StageRoles getMyRoles() {
         return this.myRoles;
     }
@@ -64,27 +65,27 @@ public final /* data */ class StageChannel {
         return this.speakers;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final int getAudienceSize() {
         return this.audienceSize;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final StageInstance getStageInstance() {
         return this.stageInstance;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getCanAccess() {
         return this.canAccess;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final boolean getContainsMe() {
         return this.containsMe;
     }
 
-    /* renamed from: copy-LcZnYPc, reason: not valid java name */
+    /* JADX INFO: renamed from: copy-LcZnYPc, reason: not valid java name */
     public final StageChannel m11422copyLcZnYPc(Channel channel, List<? extends User> participants, StageRoles myRoles, Set<Long> speakerIds, List<UserGuildMember> speakers, int audienceSize, StageInstance stageInstance, boolean canAccess, boolean containsMe) {
         Intrinsics3.checkNotNullParameter(channel, "channel");
         Intrinsics3.checkNotNullParameter(participants, "participants");
@@ -124,7 +125,7 @@ public final /* data */ class StageChannel {
         return this.stageInstance != null;
     }
 
-    /* renamed from: getMyRoles-twRsX-0, reason: not valid java name */
+    /* JADX INFO: renamed from: getMyRoles-twRsX-0, reason: not valid java name */
     public final StageRoles m11423getMyRolestwRsX0() {
         return this.myRoles;
     }
@@ -146,6 +147,12 @@ public final /* data */ class StageChannel {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    /* JADX WARN: Type inference failed for: r1v7 */
+    /* JADX WARN: Type inference failed for: r2v14 */
+    /* JADX WARN: Type inference failed for: r2v15, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v16 */
     public int hashCode() {
         Channel channel = this.channel;
         int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
@@ -160,13 +167,13 @@ public final /* data */ class StageChannel {
         StageInstance stageInstance = this.stageInstance;
         int iHashCode6 = (iHashCode5 + (stageInstance != null ? stageInstance.hashCode() : 0)) * 31;
         boolean z2 = this.canAccess;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i2 = (iHashCode6 + i) * 31;
+        int i = (iHashCode6 + r1) * 31;
         boolean z3 = this.containsMe;
-        return i2 + (z3 ? 1 : z3 ? 1 : 0);
+        return i + (z3 ? 1 : z3);
     }
 
     public String toString() {

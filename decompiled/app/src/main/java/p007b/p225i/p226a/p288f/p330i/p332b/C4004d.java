@@ -2,18 +2,18 @@ package p007b.p225i.p226a.p288f.p330i.p332b;
 
 import android.os.Bundle;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.d */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.d */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4004d {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final C4004d f10622a = new C4004d(null, null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Boolean f10623b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Boolean f10624c;
 
     public C4004d(Boolean bool, Boolean bool2) {
@@ -21,7 +21,7 @@ public final class C4004d {
         this.f10624c = bool2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m5562a(Boolean bool) {
         if (bool == null) {
             return 0;
@@ -31,7 +31,7 @@ public final class C4004d {
 
     /* JADX WARN: Removed duplicated region for block: B:12:0x001e  */
     /* JADX WARN: Removed duplicated region for block: B:15:0x0026  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -70,7 +70,7 @@ public final class C4004d {
         return new C4004d(bool4, bool);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static Boolean m5564c(Boolean bool, Boolean bool2) {
         if (bool == null) {
             return bool2;
@@ -81,17 +81,17 @@ public final class C4004d {
         return Boolean.valueOf(bool.booleanValue() && bool2.booleanValue());
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static boolean m5565e(int i, int i2) {
         return i <= i2;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static C4004d m5566g(Bundle bundle) {
         return bundle == null ? f10622a : new C4004d(m5567i(bundle.getString("ad_storage")), m5567i(bundle.getString("analytics_storage")));
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static Boolean m5567i(String str) {
         if (str == null) {
             return null;
@@ -105,7 +105,7 @@ public final class C4004d {
         return null;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String m5568d() {
         StringBuilder sb = new StringBuilder("G1");
         Boolean bool = this.f10623b;
@@ -129,7 +129,7 @@ public final class C4004d {
         return m5562a(this.f10623b) == m5562a(c4004d.f10623b) && m5562a(this.f10624c) == m5562a(c4004d.f10624c);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean m5569f(C4004d c4004d) {
         Boolean bool = this.f10623b;
         Boolean bool2 = Boolean.FALSE;
@@ -139,7 +139,7 @@ public final class C4004d {
         return true;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final C4004d m5570h(C4004d c4004d) {
         return new C4004d(m5564c(this.f10623b, c4004d.f10623b), m5564c(this.f10624c, c4004d.f10624c));
     }
@@ -148,13 +148,13 @@ public final class C4004d {
         return m5562a(this.f10624c) + ((m5562a(this.f10623b) + 527) * 31);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean m5571j() {
         Boolean bool = this.f10623b;
         return bool == null || bool.booleanValue();
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean m5572k() {
         Boolean bool = this.f10624c;
         return bool == null || bool.booleanValue();

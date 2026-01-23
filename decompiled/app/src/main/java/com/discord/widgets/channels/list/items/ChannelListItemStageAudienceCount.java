@@ -5,8 +5,8 @@ import com.discord.widgets.channels.list.items.ChannelListItem;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelListItemStageAudienceCount.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemStageAudienceCount.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelListItemStageAudienceCount implements ChannelListItem {
     private final int audienceSize;
     private final Channel channel;
@@ -29,12 +29,12 @@ public final /* data */ class ChannelListItemStageAudienceCount implements Chann
         return channelListItemStageAudienceCount.copy(channel, i);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Channel getChannel() {
         return this.channel;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getAudienceSize() {
         return this.audienceSize;
     }

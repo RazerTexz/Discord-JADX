@@ -6,17 +6,17 @@ import p007b.p109f.p160i.ImageFormat;
 import p007b.p109f.p161j.p184s.ImageTranscoder;
 import p007b.p109f.p161j.p184s.ImageTranscoderFactory;
 
+/* JADX INFO: loaded from: classes3.dex */
 @DoNotStrip
-/* loaded from: classes3.dex */
 public class NativeJpegTranscoderFactory implements ImageTranscoderFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f19571a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f19572b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f19573c;
 
     @DoNotStrip

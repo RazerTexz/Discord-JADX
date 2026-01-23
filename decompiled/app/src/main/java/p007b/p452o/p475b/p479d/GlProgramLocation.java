@@ -8,22 +8,22 @@ import p007b.p452o.p475b.p476a.Egloo;
 import p507d0.UInt;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GlProgramLocation.kt */
-/* renamed from: b.o.b.d.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.b.d.b, reason: use source file name */
+/* JADX INFO: compiled from: GlProgramLocation.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class GlProgramLocation {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f14310a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f14311b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f14312c;
 
-    /* compiled from: GlProgramLocation.kt */
-    /* renamed from: b.o.b.d.b$a */
+    /* JADX INFO: renamed from: b.o.b.d.b$a */
+    /* JADX INFO: compiled from: GlProgramLocation.kt */
     public enum a {
         ATTRIB,
         UNIFORM

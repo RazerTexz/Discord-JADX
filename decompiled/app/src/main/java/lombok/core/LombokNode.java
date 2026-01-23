@@ -10,7 +10,7 @@ import java.util.Map;
 import lombok.core.AST;
 import lombok.core.LombokNode;
 
-/* loaded from: discord-126021.apk:lombok/core/LombokNode.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/LombokNode.SCL.lombok */
 public abstract class LombokNode<A extends AST<A, L, N>, L extends LombokNode<A, L, N>, N> implements DiagnosticsReceiver {
     protected final AST.Kind kind;
     protected final N node;
@@ -93,7 +93,7 @@ public abstract class LombokNode<A extends AST<A, L, N>, L extends LombokNode<A,
         return this.kind;
     }
 
-    /* renamed from: up */
+    /* JADX INFO: renamed from: up */
     public L m10925up() {
         L result;
         L l = this.parent;

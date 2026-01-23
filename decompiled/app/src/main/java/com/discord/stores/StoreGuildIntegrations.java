@@ -24,8 +24,8 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: StoreGuildIntegrations.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuildIntegrations.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildIntegrations {
     private final HashMap<Long, Map<Long, ModelGuildIntegration>> allIntegrations;
     private Subscription closeIntegrationScreenSubscription;
@@ -33,8 +33,8 @@ public final class StoreGuildIntegrations {
     private final BehaviorSubject<Map<Long, Map<Long, ModelGuildIntegration>>> integrationsSubject;
     private boolean isOnIntegrationsScreen;
 
-    /* compiled from: StoreGuildIntegrations.kt */
-    /* renamed from: com.discord.stores.StoreGuildIntegrations$get$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildIntegrations$get$1 */
+    /* JADX INFO: compiled from: StoreGuildIntegrations.kt */
     public static final class C60221<T, R> implements Func1<Map<Long, ? extends Map<Long, ? extends ModelGuildIntegration>>, Map<Long, ? extends ModelGuildIntegration>> {
         public final /* synthetic */ long $guildId;
 
@@ -47,14 +47,14 @@ public final class StoreGuildIntegrations {
             return call2(map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, ModelGuildIntegration> call2(Map<Long, ? extends Map<Long, ? extends ModelGuildIntegration>> map) {
             return (Map) map.get(Long.valueOf(this.$guildId));
         }
     }
 
-    /* compiled from: StoreGuildIntegrations.kt */
-    /* renamed from: com.discord.stores.StoreGuildIntegrations$get$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildIntegrations$get$2 */
+    /* JADX INFO: compiled from: StoreGuildIntegrations.kt */
     public static final class C60232<T, R> implements Func1<Map<Long, ? extends ModelGuildIntegration>, ModelGuildIntegration> {
         public final /* synthetic */ long $integrationId;
 
@@ -67,7 +67,7 @@ public final class StoreGuildIntegrations {
             return call2(map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final ModelGuildIntegration call2(Map<Long, ? extends ModelGuildIntegration> map) {
             if (map != null) {
                 return map.get(Long.valueOf(this.$integrationId));
@@ -76,12 +76,12 @@ public final class StoreGuildIntegrations {
         }
     }
 
-    /* compiled from: StoreGuildIntegrations.kt */
-    /* renamed from: com.discord.stores.StoreGuildIntegrations$onIntegrationScreenClosed$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildIntegrations$onIntegrationScreenClosed$1 */
+    /* JADX INFO: compiled from: StoreGuildIntegrations.kt */
     public static final class C60241 extends Lambda implements Function1<Long, Unit> {
 
-        /* compiled from: StoreGuildIntegrations.kt */
-        /* renamed from: com.discord.stores.StoreGuildIntegrations$onIntegrationScreenClosed$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildIntegrations$onIntegrationScreenClosed$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildIntegrations.kt */
         public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function0<Unit> {
             public AnonymousClass1(StoreGuildIntegrations storeGuildIntegrations) {
                 super(0, storeGuildIntegrations, StoreGuildIntegrations.class, "handleIntegrationScreenClosed", "handleIntegrationScreenClosed()V", 0);
@@ -93,7 +93,7 @@ public final class StoreGuildIntegrations {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreGuildIntegrations.access$handleIntegrationScreenClosed((StoreGuildIntegrations) this.receiver);
             }
@@ -109,14 +109,14 @@ public final class StoreGuildIntegrations {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             StoreGuildIntegrations.access$getDispatcher$p(StoreGuildIntegrations.this).schedule(new AnonymousClass1(StoreGuildIntegrations.this));
         }
     }
 
-    /* compiled from: StoreGuildIntegrations.kt */
-    /* renamed from: com.discord.stores.StoreGuildIntegrations$onIntegrationScreenClosed$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildIntegrations$onIntegrationScreenClosed$2 */
+    /* JADX INFO: compiled from: StoreGuildIntegrations.kt */
     public static final class C60252 extends Lambda implements Function1<Subscription, Unit> {
         public C60252() {
             super(1);
@@ -128,15 +128,15 @@ public final class StoreGuildIntegrations {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             StoreGuildIntegrations.access$setCloseIntegrationScreenSubscription$p(StoreGuildIntegrations.this, subscription);
         }
     }
 
-    /* compiled from: StoreGuildIntegrations.kt */
-    /* renamed from: com.discord.stores.StoreGuildIntegrations$onIntegrationScreenOpened$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildIntegrations$onIntegrationScreenOpened$1 */
+    /* JADX INFO: compiled from: StoreGuildIntegrations.kt */
     public static final class C60261 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
@@ -152,19 +152,19 @@ public final class StoreGuildIntegrations {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuildIntegrations.access$handleIntegrationScreenOpened(StoreGuildIntegrations.this, this.$guildId);
         }
     }
 
-    /* compiled from: StoreGuildIntegrations.kt */
-    /* renamed from: com.discord.stores.StoreGuildIntegrations$requestGuildIntegrations$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildIntegrations$requestGuildIntegrations$1 */
+    /* JADX INFO: compiled from: StoreGuildIntegrations.kt */
     public static final class C60271 extends Lambda implements Function1<List<? extends ModelGuildIntegration>, Unit> {
         public final /* synthetic */ long $guildId;
 
-        /* compiled from: StoreGuildIntegrations.kt */
-        /* renamed from: com.discord.stores.StoreGuildIntegrations$requestGuildIntegrations$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildIntegrations$requestGuildIntegrations$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildIntegrations.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $integrations;
 
@@ -180,7 +180,7 @@ public final class StoreGuildIntegrations {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C60271 c60271 = C60271.this;
                 StoreGuildIntegrations.access$handleIntegrationsLoaded(StoreGuildIntegrations.this, c60271.$guildId, this.$integrations);
@@ -199,7 +199,7 @@ public final class StoreGuildIntegrations {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends ModelGuildIntegration> list) {
             Intrinsics3.checkNotNullParameter(list, "integrations");
             StoreGuildIntegrations.access$getDispatcher$p(StoreGuildIntegrations.this).schedule(new AnonymousClass1(list));

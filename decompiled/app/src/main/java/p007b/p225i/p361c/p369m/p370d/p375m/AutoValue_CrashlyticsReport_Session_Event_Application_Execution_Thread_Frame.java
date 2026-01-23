@@ -5,46 +5,46 @@ import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport;
 
-/* compiled from: AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame.java */
-/* renamed from: b.i.c.m.d.m.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.m.q, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame extends CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d.AbstractC13238a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long f12619a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f12620b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f12621c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long f12622d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f12623e;
 
-    /* compiled from: AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame.java */
-    /* renamed from: b.i.c.m.d.m.q$b */
+    /* JADX INFO: renamed from: b.i.c.m.d.m.q$b */
+    /* JADX INFO: compiled from: AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame.java */
     public static final class b extends CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d.AbstractC13238a.AbstractC13239a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Long f12624a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public String f12625b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public String f12626c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public Long f12627d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public Integer f12628e;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d.AbstractC13238a m6598a() {
             String strM883w = this.f12624a == null ? " pc" : "";
             if (this.f12625b == null) {
@@ -73,32 +73,32 @@ public final class AutoValue_CrashlyticsReport_Session_Event_Application_Executi
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d.AbstractC13238a
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo6593a() {
         return this.f12621c;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d.AbstractC13238a
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int mo6594b() {
         return this.f12623e;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d.AbstractC13238a
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long mo6595c() {
         return this.f12622d;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d.AbstractC13238a
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public long mo6596d() {
         return this.f12619a;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d.AbstractC13238a
     @NonNull
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String mo6597e() {
         return this.f12620b;
     }

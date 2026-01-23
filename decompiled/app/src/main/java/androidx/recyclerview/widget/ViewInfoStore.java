@@ -8,7 +8,7 @@ import androidx.collection.SimpleArrayMap;
 import androidx.core.util.Pools;
 import androidx.recyclerview.widget.RecyclerView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ViewInfoStore {
     private static final boolean DEBUG = false;
 

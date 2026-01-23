@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class ViewModel {
 
     @Nullable
@@ -55,17 +55,16 @@ public abstract class ViewModel {
     public void onCleared() {
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     public <T> T setTagIfAbsent(String str, T t) {
         Object obj;
         synchronized (this.mBagOfTags) {
             obj = this.mBagOfTags.get(str);
-            if (obj == 0) {
+            if (obj == null) {
                 this.mBagOfTags.put(str, t);
             }
         }
-        if (obj != 0) {
-            t = obj;
+        if (obj != null) {
+            t = (T) obj;
         }
         if (this.mCleared) {
             closeWithRuntimeException(t);

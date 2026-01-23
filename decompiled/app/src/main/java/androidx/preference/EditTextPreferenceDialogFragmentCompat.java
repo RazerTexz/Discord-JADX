@@ -6,7 +6,7 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class EditTextPreferenceDialogFragmentCompat extends PreferenceDialogFragmentCompat {
     private static final String SAVE_STATE_TEXT = "EditTextPreferenceDialogFragment.text";
     private EditText mEditText;

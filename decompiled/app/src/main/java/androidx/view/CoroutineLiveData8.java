@@ -17,16 +17,16 @@ import p659s.p660a.Dispatchers;
 import p659s.p660a.Job2;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: CoroutineLiveData.kt */
-/* renamed from: androidx.lifecycle.LiveDataScopeImpl, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.LiveDataScopeImpl, reason: use source file name */
+/* JADX INFO: compiled from: CoroutineLiveData.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CoroutineLiveData8<T> implements CoroutineLiveData7<T> {
     private final CoroutineContext coroutineContext;
     private CoroutineLiveData<T> target;
 
-    /* compiled from: CoroutineLiveData.kt */
+    /* JADX INFO: renamed from: androidx.lifecycle.LiveDataScopeImpl$emit$2 */
+    /* JADX INFO: compiled from: CoroutineLiveData.kt */
     @DebugMetadata(m10084c = "androidx.lifecycle.LiveDataScopeImpl$emit$2", m10085f = "CoroutineLiveData.kt", m10086l = {98}, m10087m = "invokeSuspend")
-    /* renamed from: androidx.lifecycle.LiveDataScopeImpl$emit$2 */
     public static final class C04442 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ Object $value;
         public int label;
@@ -71,9 +71,9 @@ public final class CoroutineLiveData8<T> implements CoroutineLiveData7<T> {
         }
     }
 
-    /* compiled from: CoroutineLiveData.kt */
+    /* JADX INFO: renamed from: androidx.lifecycle.LiveDataScopeImpl$emitSource$2 */
+    /* JADX INFO: compiled from: CoroutineLiveData.kt */
     @DebugMetadata(m10084c = "androidx.lifecycle.LiveDataScopeImpl$emitSource$2", m10085f = "CoroutineLiveData.kt", m10086l = {94}, m10087m = "invokeSuspend")
-    /* renamed from: androidx.lifecycle.LiveDataScopeImpl$emitSource$2 */
     public static final class C04452 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Job2>, Object> {
         public final /* synthetic */ LiveData $source;
         public int label;

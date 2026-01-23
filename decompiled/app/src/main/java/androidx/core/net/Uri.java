@@ -3,9 +3,9 @@ package androidx.core.net;
 import java.io.File;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Uri.kt */
-/* renamed from: androidx.core.net.UriKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.net.UriKt, reason: use source file name */
+/* JADX INFO: compiled from: Uri.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Uri {
     public static final File toFile(android.net.Uri uri) {
         Intrinsics3.checkNotNullParameter(uri, "<this>");

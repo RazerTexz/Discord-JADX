@@ -7,58 +7,58 @@ import p007b.p225i.p361c.p369m.p370d.Logger3;
 import p007b.p225i.p361c.p369m.p370d.p373k.C4663x;
 import p007b.p225i.p361c.p369m.p370d.p373k.CommonUtils;
 
-/* compiled from: LogFileManager.java */
-/* renamed from: b.i.c.m.d.l.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.l.b, reason: use source file name */
+/* JADX INFO: compiled from: LogFileManager.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LogFileManager {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final c f12470a = new c(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Context f12471b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final b f12472c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public FileLogStore f12473d = f12470a;
 
-    /* compiled from: LogFileManager.java */
-    /* renamed from: b.i.c.m.d.l.b$b */
+    /* JADX INFO: renamed from: b.i.c.m.d.l.b$b */
+    /* JADX INFO: compiled from: LogFileManager.java */
     public interface b {
     }
 
-    /* compiled from: LogFileManager.java */
-    /* renamed from: b.i.c.m.d.l.b$c */
+    /* JADX INFO: renamed from: b.i.c.m.d.l.b$c */
+    /* JADX INFO: compiled from: LogFileManager.java */
     public static final class c implements FileLogStore {
         public c(a aVar) {
         }
 
         @Override // p007b.p225i.p361c.p369m.p370d.p374l.FileLogStore
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo6491a() {
         }
 
         @Override // p007b.p225i.p361c.p369m.p370d.p374l.FileLogStore
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public String mo6492b() {
             return null;
         }
 
         @Override // p007b.p225i.p361c.p369m.p370d.p374l.FileLogStore
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public byte[] mo6493c() {
             return null;
         }
 
         @Override // p007b.p225i.p361c.p369m.p370d.p374l.FileLogStore
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public void mo6494d() {
         }
 
         @Override // p007b.p225i.p361c.p369m.p370d.p374l.FileLogStore
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public void mo6495e(long j, String str) {
         }
     }
@@ -69,7 +69,7 @@ public class LogFileManager {
         m6496a(null);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m6496a(String str) {
         this.f12473d.mo6491a();
         this.f12473d = f12470a;

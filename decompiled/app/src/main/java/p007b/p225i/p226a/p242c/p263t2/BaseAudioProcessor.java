@@ -5,30 +5,30 @@ import com.google.android.exoplayer2.audio.AudioProcessor;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
-/* compiled from: BaseAudioProcessor.java */
-/* renamed from: b.i.a.c.t2.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.v, reason: use source file name */
+/* JADX INFO: compiled from: BaseAudioProcessor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BaseAudioProcessor implements AudioProcessor {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public AudioProcessor.C10685a f7837b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public AudioProcessor.C10685a f7838c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public AudioProcessor.C10685a f7839d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public AudioProcessor.C10685a f7840e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public ByteBuffer f7841f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public ByteBuffer f7842g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f7843h;
 
     public BaseAudioProcessor() {
@@ -43,20 +43,20 @@ public abstract class BaseAudioProcessor implements AudioProcessor {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioProcessor
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo3472a() {
         return this.f7840e != AudioProcessor.C10685a.f19695a;
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioProcessor
     @CallSuper
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3485b() {
         return this.f7843h && this.f7842g == AudioProcessor.f19694a;
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioProcessor
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final AudioProcessor.C10685a mo3486d(AudioProcessor.C10685a c10685a) throws AudioProcessor.UnhandledAudioFormatException {
         this.f7839d = c10685a;
         this.f7840e = mo3471f(c10685a);
@@ -64,13 +64,13 @@ public abstract class BaseAudioProcessor implements AudioProcessor {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioProcessor
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void mo3487e() {
         this.f7843h = true;
         mo3474h();
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public abstract AudioProcessor.C10685a mo3471f(AudioProcessor.C10685a c10685a) throws AudioProcessor.UnhandledAudioFormatException;
 
     @Override // com.google.android.exoplayer2.audio.AudioProcessor
@@ -82,7 +82,7 @@ public abstract class BaseAudioProcessor implements AudioProcessor {
         mo3473g();
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3473g() {
     }
 
@@ -94,15 +94,15 @@ public abstract class BaseAudioProcessor implements AudioProcessor {
         return byteBuffer;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo3474h() {
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo3475i() {
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ByteBuffer m3511j(int i) {
         if (this.f7841f.capacity() < i) {
             this.f7841f = ByteBuffer.allocateDirect(i).order(ByteOrder.nativeOrder());

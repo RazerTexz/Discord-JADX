@@ -1,10 +1,10 @@
 package org.objectweb.asm;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/FieldVisitor.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/FieldVisitor.SCL.lombok */
 public abstract class FieldVisitor {
     protected final int api;
 
-    /* renamed from: fv */
+    /* JADX INFO: renamed from: fv */
     protected FieldVisitor f27599fv;
 
     public FieldVisitor(int api) {

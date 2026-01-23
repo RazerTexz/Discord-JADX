@@ -6,12 +6,12 @@ import com.lytefast.flexinput.utils.SelectionCoordinator;
 import com.lytefast.flexinput.viewmodel.FlexInputViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FlexInputFragment.kt */
-/* renamed from: b.b.a.a.m */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.a.m */
+/* JADX INFO: compiled from: FlexInputFragment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C1425m implements SelectionCoordinator.ItemSelectionListener<Attachment<? extends Object>> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ FlexInputFragment f2137a;
 
     public C1425m(FlexInputFragment flexInputFragment) {

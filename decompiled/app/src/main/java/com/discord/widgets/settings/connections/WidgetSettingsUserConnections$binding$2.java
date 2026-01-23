@@ -10,8 +10,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsUserConnections.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsUserConnections.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetSettingsUserConnections$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetSettingsConnectionsBinding> {
     public static final WidgetSettingsUserConnections$binding$2 INSTANCE = new WidgetSettingsUserConnections$binding$2();
 
@@ -24,7 +24,7 @@ public final /* synthetic */ class WidgetSettingsUserConnections$binding$2 exten
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetSettingsConnectionsBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.connections_empty;

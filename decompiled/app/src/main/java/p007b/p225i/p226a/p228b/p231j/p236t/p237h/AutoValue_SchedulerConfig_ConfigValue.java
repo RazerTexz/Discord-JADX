@@ -4,35 +4,35 @@ import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p228b.p231j.p236t.p237h.SchedulerConfig;
 
-/* compiled from: AutoValue_SchedulerConfig_ConfigValue.java */
-/* renamed from: b.i.a.b.j.t.h.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.h.c, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_SchedulerConfig_ConfigValue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_SchedulerConfig_ConfigValue extends SchedulerConfig.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long f5355a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f5356b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Set<SchedulerConfig.b> f5357c;
 
-    /* compiled from: AutoValue_SchedulerConfig_ConfigValue.java */
-    /* renamed from: b.i.a.b.j.t.h.c$b */
+    /* JADX INFO: renamed from: b.i.a.b.j.t.h.c$b */
+    /* JADX INFO: compiled from: AutoValue_SchedulerConfig_ConfigValue.java */
     public static final class b extends SchedulerConfig.a.AbstractC13221a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Long f5358a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Long f5359b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Set<SchedulerConfig.b> f5360c;
 
         @Override // p007b.p225i.p226a.p228b.p231j.p236t.p237h.SchedulerConfig.a.AbstractC13221a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public SchedulerConfig.a mo2379a() {
             String strM883w = this.f5358a == null ? " delta" : "";
             if (this.f5359b == null) {
@@ -48,14 +48,14 @@ public final class AutoValue_SchedulerConfig_ConfigValue extends SchedulerConfig
         }
 
         @Override // p007b.p225i.p226a.p228b.p231j.p236t.p237h.SchedulerConfig.a.AbstractC13221a
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public SchedulerConfig.a.AbstractC13221a mo2380b(long j) {
             this.f5358a = Long.valueOf(j);
             return this;
         }
 
         @Override // p007b.p225i.p226a.p228b.p231j.p236t.p237h.SchedulerConfig.a.AbstractC13221a
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public SchedulerConfig.a.AbstractC13221a mo2381c(long j) {
             this.f5359b = Long.valueOf(j);
             return this;
@@ -69,19 +69,19 @@ public final class AutoValue_SchedulerConfig_ConfigValue extends SchedulerConfig
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p237h.SchedulerConfig.a
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long mo2376b() {
         return this.f5355a;
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p237h.SchedulerConfig.a
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Set<SchedulerConfig.b> mo2377c() {
         return this.f5357c;
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p237h.SchedulerConfig.a
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public long mo2378d() {
         return this.f5356b;
     }

@@ -26,13 +26,13 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: NoticeBuilders.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: NoticeBuilders.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NoticeBuilders {
     public static final NoticeBuilders INSTANCE;
     private static final Map<StoreNotices.Dialog.Type, Function2<Context, StoreNotices.Dialog, DialogData>> noticeDataBuilders;
 
-    /* compiled from: NoticeBuilders.kt */
+    /* JADX INFO: compiled from: NoticeBuilders.kt */
     public static final /* data */ class DialogData {
         private final CharSequence bodyText;
         private final CharSequence cancelText;
@@ -53,6 +53,7 @@ public final class NoticeBuilders {
             this.extraLayoutId = num;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ DialogData copy$default(DialogData dialogData, CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3, CharSequence charSequence4, Map map, Integer num, int i, Object obj) {
             if ((i & 1) != 0) {
                 charSequence = dialogData.headerText;
@@ -79,22 +80,22 @@ public final class NoticeBuilders {
             return dialogData.copy(charSequence, charSequence5, charSequence6, charSequence7, map2, num);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final CharSequence getHeaderText() {
             return this.headerText;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final CharSequence getBodyText() {
             return this.bodyText;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final CharSequence getOkText() {
             return this.okText;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final CharSequence getCancelText() {
             return this.cancelText;
         }
@@ -103,7 +104,7 @@ public final class NoticeBuilders {
             return this.listenerMap;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Integer getExtraLayoutId() {
             return this.extraLayoutId;
         }
@@ -184,8 +185,8 @@ public final class NoticeBuilders {
         }
     }
 
-    /* compiled from: NoticeBuilders.kt */
-    /* renamed from: com.discord.utilities.notices.NoticeBuilders$deleteConnectionModalBuilder$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.notices.NoticeBuilders$deleteConnectionModalBuilder$1 */
+    /* JADX INFO: compiled from: NoticeBuilders.kt */
     public static final class C68251 extends Lambda implements Function1<RenderContext, Unit> {
         public static final C68251 INSTANCE = new C68251();
 
@@ -199,15 +200,15 @@ public final class NoticeBuilders {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.uppercase = true;
         }
     }
 
-    /* compiled from: NoticeBuilders.kt */
-    /* renamed from: com.discord.utilities.notices.NoticeBuilders$deleteConnectionModalBuilder$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.notices.NoticeBuilders$deleteConnectionModalBuilder$2 */
+    /* JADX INFO: compiled from: NoticeBuilders.kt */
     public static final class C68262 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ StoreNotices.Dialog $notice;
 
@@ -223,7 +224,7 @@ public final class NoticeBuilders {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             if (this.$notice.getMetadata() != null) {
@@ -243,8 +244,8 @@ public final class NoticeBuilders {
         }
     }
 
-    /* compiled from: NoticeBuilders.kt */
-    /* renamed from: com.discord.utilities.notices.NoticeBuilders$requestRatingModalBuilder$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.notices.NoticeBuilders$requestRatingModalBuilder$1 */
+    /* JADX INFO: compiled from: NoticeBuilders.kt */
     public static final class C68271 extends Lambda implements Function1<View, Unit> {
         public static final C68271 INSTANCE = new C68271();
 
@@ -258,15 +259,15 @@ public final class NoticeBuilders {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "<anonymous parameter 0>");
             StoreStream.INSTANCE.getReviewRequest().onReviewRequestShown();
         }
     }
 
-    /* compiled from: NoticeBuilders.kt */
-    /* renamed from: com.discord.utilities.notices.NoticeBuilders$requestRatingModalBuilder$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.notices.NoticeBuilders$requestRatingModalBuilder$2 */
+    /* JADX INFO: compiled from: NoticeBuilders.kt */
     public static final class C68282 extends Lambda implements Function1<View, Unit> {
         public static final C68282 INSTANCE = new C68282();
 
@@ -280,7 +281,7 @@ public final class NoticeBuilders {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "view");
             StoreStream.INSTANCE.getReviewRequest().onUserAcceptedRequest();
@@ -290,8 +291,8 @@ public final class NoticeBuilders {
         }
     }
 
-    /* compiled from: NoticeBuilders.kt */
-    /* renamed from: com.discord.utilities.notices.NoticeBuilders$requestRatingModalBuilder$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.notices.NoticeBuilders$requestRatingModalBuilder$3 */
+    /* JADX INFO: compiled from: NoticeBuilders.kt */
     public static final class C68293 extends Lambda implements Function1<View, Unit> {
         public static final C68293 INSTANCE = new C68293();
 
@@ -305,7 +306,7 @@ public final class NoticeBuilders {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "<anonymous parameter 0>");
             StoreStream.INSTANCE.getReviewRequest().onUserDismissedRequest();

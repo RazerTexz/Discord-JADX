@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class OrientationHelper {
     public static final int HORIZONTAL = 0;
     private static final int INVALID_SIZE = Integer.MIN_VALUE;
@@ -14,7 +14,7 @@ public abstract class OrientationHelper {
     public final RecyclerView.LayoutManager mLayoutManager;
     public final Rect mTmpRect;
 
-    /* renamed from: androidx.recyclerview.widget.OrientationHelper$1 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.OrientationHelper$1 */
     public class C05631 extends OrientationHelper {
         public C05631(RecyclerView.LayoutManager layoutManager) {
             super(layoutManager, null);
@@ -100,7 +100,7 @@ public abstract class OrientationHelper {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.OrientationHelper$2 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.OrientationHelper$2 */
     public class C05642 extends OrientationHelper {
         public C05642(RecyclerView.LayoutManager layoutManager) {
             super(layoutManager, null);

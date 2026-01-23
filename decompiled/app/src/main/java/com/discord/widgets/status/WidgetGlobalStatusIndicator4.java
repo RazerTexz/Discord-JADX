@@ -5,9 +5,9 @@ import androidx.vectordrawable.graphics.drawable.Animatable2Compat;
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGlobalStatusIndicator.kt */
-/* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$connectingVectorReplayCallback$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$connectingVectorReplayCallback$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGlobalStatusIndicator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGlobalStatusIndicator4 extends Animatable2Compat.AnimationCallback {
     public final /* synthetic */ WidgetGlobalStatusIndicator this$0;
 

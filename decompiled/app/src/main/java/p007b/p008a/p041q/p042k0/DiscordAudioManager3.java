@@ -5,12 +5,12 @@ import android.os.Handler;
 import com.discord.rtcconnection.audio.DiscordAudioManager;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: DiscordAudioManager.kt */
-/* renamed from: b.a.q.k0.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.k0.f, reason: use source file name */
+/* JADX INFO: compiled from: DiscordAudioManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class DiscordAudioManager3 extends ContentObserver {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ DiscordAudioManager f1659a;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

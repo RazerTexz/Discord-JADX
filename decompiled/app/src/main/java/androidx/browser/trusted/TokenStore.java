@@ -4,7 +4,7 @@ import androidx.annotation.BinderThread;
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface TokenStore {
     @Nullable
     @BinderThread

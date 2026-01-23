@@ -6,8 +6,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Statistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Statistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class InboundRtpVideo {
     private final int averageDecodeTime;
     private final int bitrate;
@@ -72,132 +72,132 @@ public final /* data */ class InboundRtpVideo {
         return inboundRtpVideo.copy((i11 & 1) != 0 ? inboundRtpVideo.type : str, (i11 & 2) != 0 ? inboundRtpVideo.ssrc : j, (i11 & 4) != 0 ? inboundRtpVideo.codec : statsCodec, (i11 & 8) != 0 ? inboundRtpVideo.bytesReceived : j2, (i11 & 16) != 0 ? inboundRtpVideo.packetsReceived : i, (i11 & 32) != 0 ? inboundRtpVideo.packetsLost : i2, (i11 & 64) != 0 ? inboundRtpVideo.bitrate : i3, (i11 & 128) != 0 ? inboundRtpVideo.averageDecodeTime : i4, (i11 & 256) != 0 ? inboundRtpVideo.resolution : resolution, (i11 & 512) != 0 ? inboundRtpVideo.decoderImplementationName : str2, (i11 & 1024) != 0 ? inboundRtpVideo.framesDecoded : i5, (i11 & 2048) != 0 ? inboundRtpVideo.framesDropped : i6, (i11 & 4096) != 0 ? inboundRtpVideo.framesReceived : i7, (i11 & 8192) != 0 ? inboundRtpVideo.frameRateDecode : i8, (i11 & 16384) != 0 ? inboundRtpVideo.frameRateNetwork : i9, (i11 & 32768) != 0 ? inboundRtpVideo.frameRateRender : i10, (i11 & 65536) != 0 ? inboundRtpVideo.firCount : j3, (i11 & 131072) != 0 ? inboundRtpVideo.nackCount : j4, (i11 & 262144) != 0 ? inboundRtpVideo.pliCount : j5, (i11 & 524288) != 0 ? inboundRtpVideo.qpSum : j6, (i11 & 1048576) != 0 ? inboundRtpVideo.freezeCount : j7, (i11 & 2097152) != 0 ? inboundRtpVideo.pauseCount : j8, (i11 & 4194304) != 0 ? inboundRtpVideo.totalFreezesDuration : j9, (i11 & 8388608) != 0 ? inboundRtpVideo.totalPausesDuration : j10, (i11 & 16777216) != 0 ? inboundRtpVideo.totalFramesDuration : j11, (i11 & 33554432) != 0 ? inboundRtpVideo.sumOfSquaredFramesDurations : d);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getType() {
         return this.type;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final String getDecoderImplementationName() {
         return this.decoderImplementationName;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final int getFramesDecoded() {
         return this.framesDecoded;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final int getFramesDropped() {
         return this.framesDropped;
     }
 
-    /* renamed from: component13, reason: from getter */
+    /* JADX INFO: renamed from: component13, reason: from getter */
     public final int getFramesReceived() {
         return this.framesReceived;
     }
 
-    /* renamed from: component14, reason: from getter */
+    /* JADX INFO: renamed from: component14, reason: from getter */
     public final int getFrameRateDecode() {
         return this.frameRateDecode;
     }
 
-    /* renamed from: component15, reason: from getter */
+    /* JADX INFO: renamed from: component15, reason: from getter */
     public final int getFrameRateNetwork() {
         return this.frameRateNetwork;
     }
 
-    /* renamed from: component16, reason: from getter */
+    /* JADX INFO: renamed from: component16, reason: from getter */
     public final int getFrameRateRender() {
         return this.frameRateRender;
     }
 
-    /* renamed from: component17, reason: from getter */
+    /* JADX INFO: renamed from: component17, reason: from getter */
     public final long getFirCount() {
         return this.firCount;
     }
 
-    /* renamed from: component18, reason: from getter */
+    /* JADX INFO: renamed from: component18, reason: from getter */
     public final long getNackCount() {
         return this.nackCount;
     }
 
-    /* renamed from: component19, reason: from getter */
+    /* JADX INFO: renamed from: component19, reason: from getter */
     public final long getPliCount() {
         return this.pliCount;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getSsrc() {
         return this.ssrc;
     }
 
-    /* renamed from: component20, reason: from getter */
+    /* JADX INFO: renamed from: component20, reason: from getter */
     public final long getQpSum() {
         return this.qpSum;
     }
 
-    /* renamed from: component21, reason: from getter */
+    /* JADX INFO: renamed from: component21, reason: from getter */
     public final long getFreezeCount() {
         return this.freezeCount;
     }
 
-    /* renamed from: component22, reason: from getter */
+    /* JADX INFO: renamed from: component22, reason: from getter */
     public final long getPauseCount() {
         return this.pauseCount;
     }
 
-    /* renamed from: component23, reason: from getter */
+    /* JADX INFO: renamed from: component23, reason: from getter */
     public final long getTotalFreezesDuration() {
         return this.totalFreezesDuration;
     }
 
-    /* renamed from: component24, reason: from getter */
+    /* JADX INFO: renamed from: component24, reason: from getter */
     public final long getTotalPausesDuration() {
         return this.totalPausesDuration;
     }
 
-    /* renamed from: component25, reason: from getter */
+    /* JADX INFO: renamed from: component25, reason: from getter */
     public final long getTotalFramesDuration() {
         return this.totalFramesDuration;
     }
 
-    /* renamed from: component26, reason: from getter */
+    /* JADX INFO: renamed from: component26, reason: from getter */
     public final double getSumOfSquaredFramesDurations() {
         return this.sumOfSquaredFramesDurations;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final StatsCodec getCodec() {
         return this.codec;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final long getBytesReceived() {
         return this.bytesReceived;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final int getPacketsReceived() {
         return this.packetsReceived;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final int getPacketsLost() {
         return this.packetsLost;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final int getBitrate() {
         return this.bitrate;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final int getAverageDecodeTime() {
         return this.averageDecodeTime;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final Resolution getResolution() {
         return this.resolution;
     }

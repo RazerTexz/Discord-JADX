@@ -3,12 +3,12 @@ package p007b.p225i.p226a.p242c.p245b3.p247o;
 import java.util.List;
 import p007b.p225i.p226a.p242c.p245b3.SimpleSubtitleDecoder2;
 
-/* compiled from: DvbDecoder.java */
-/* renamed from: b.i.a.c.b3.o.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.o.a, reason: use source file name */
+/* JADX INFO: compiled from: DvbDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DvbDecoder extends SimpleSubtitleDecoder2 {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final DvbParser f5915n;
 
     public DvbDecoder(List<byte[]> list) {
@@ -34,7 +34,7 @@ public final class DvbDecoder extends SimpleSubtitleDecoder2 {
         	at jadx.core.dex.visitors.ModVisitor.visit(ModVisitor.java:97)
         */
     @Override // p007b.p225i.p226a.p242c.p245b3.SimpleSubtitleDecoder2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public p007b.p225i.p226a.p242c.p245b3.Subtitle mo2617j(byte[] r48, int r49, boolean r50) {
         /*
             Method dump skipped, instruction units count: 1070

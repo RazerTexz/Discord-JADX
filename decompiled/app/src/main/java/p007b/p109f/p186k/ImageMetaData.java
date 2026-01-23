@@ -3,15 +3,15 @@ package p007b.p109f.p186k;
 import android.graphics.ColorSpace;
 import android.util.Pair;
 
-/* compiled from: ImageMetaData.java */
-/* renamed from: b.f.k.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.k.b, reason: use source file name */
+/* JADX INFO: compiled from: ImageMetaData.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ImageMetaData {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Pair<Integer, Integer> f4277a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ColorSpace f4278b;
 
     public ImageMetaData(int i, int i2, ColorSpace colorSpace) {

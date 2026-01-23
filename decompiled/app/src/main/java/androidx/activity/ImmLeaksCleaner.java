@@ -11,8 +11,8 @@ import androidx.view.LifecycleEventObserver;
 import androidx.view.LifecycleOwner;
 import java.lang.reflect.Field;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(19)
-/* loaded from: classes.dex */
 public final class ImmLeaksCleaner implements LifecycleEventObserver {
     private static final int INIT_FAILED = 2;
     private static final int INIT_SUCCESS = 1;
@@ -46,7 +46,7 @@ public final class ImmLeaksCleaner implements LifecycleEventObserver {
     }
 
     @Override // androidx.view.LifecycleEventObserver
-    public void onStateChanged(@NonNull LifecycleOwner lifecycleOwner, @NonNull Lifecycle.Event event) throws IllegalArgumentException {
+    public void onStateChanged(@NonNull LifecycleOwner lifecycleOwner, @NonNull Lifecycle.Event event) {
         if (event != Lifecycle.Event.ON_DESTROY) {
             return;
         }

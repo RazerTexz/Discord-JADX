@@ -14,16 +14,16 @@ import androidx.annotation.NonNull;
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.core.view.ViewCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Fade extends Visibility {
 
-    /* renamed from: IN */
+    /* JADX INFO: renamed from: IN */
     public static final int f159IN = 1;
     private static final String LOG_TAG = "Fade";
     public static final int OUT = 2;
     private static final String PROPNAME_TRANSITION_ALPHA = "android:fade:transitionAlpha";
 
-    /* renamed from: androidx.transition.Fade$1 */
+    /* JADX INFO: renamed from: androidx.transition.Fade$1 */
     public class C06511 extends TransitionListenerAdapter {
         public final /* synthetic */ View val$view;
 

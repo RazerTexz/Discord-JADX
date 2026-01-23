@@ -5,8 +5,8 @@ import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NativeStatistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NativeStatistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class NativeStats {
     private final Inbound[] inbound;
     private final Outbound outbound;
@@ -36,22 +36,22 @@ public final /* data */ class NativeStats {
         return nativeStats.copy(transport, outbound, screenshare, inboundArr);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Transport getTransport() {
         return this.transport;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Outbound getOutbound() {
         return this.outbound;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Screenshare getScreenshare() {
         return this.screenshare;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Inbound[] getInbound() {
         return this.inbound;
     }

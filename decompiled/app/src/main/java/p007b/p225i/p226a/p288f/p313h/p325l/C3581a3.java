@@ -5,15 +5,15 @@ import java.util.Objects;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.a3 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.a3 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3581a3<T> implements InterfaceC3914z2<T>, Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public volatile transient boolean f9844j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @NullableDecl
     public transient T f9845k;
     private final InterfaceC3914z2<T> zza;
@@ -24,7 +24,7 @@ public final class C3581a3<T> implements InterfaceC3914z2<T>, Serializable {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3914z2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final T mo4555a() {
         if (!this.f9844j) {
             synchronized (this) {

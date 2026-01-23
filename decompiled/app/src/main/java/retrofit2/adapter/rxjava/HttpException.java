@@ -2,8 +2,8 @@ package retrofit2.adapter.rxjava;
 
 import retrofit2.Response;
 
+/* JADX INFO: loaded from: classes3.dex */
 @Deprecated
-/* loaded from: classes3.dex */
 public final class HttpException extends retrofit2.HttpException {
     public HttpException(Response<?> response) {
         super(response);

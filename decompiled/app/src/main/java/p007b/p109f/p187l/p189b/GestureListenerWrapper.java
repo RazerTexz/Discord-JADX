@@ -3,12 +3,12 @@ package p007b.p109f.p187l.p189b;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 
-/* compiled from: GestureListenerWrapper.java */
-/* renamed from: b.f.l.b.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.l.b.d, reason: use source file name */
+/* JADX INFO: compiled from: GestureListenerWrapper.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class GestureListenerWrapper extends GestureDetector.SimpleOnGestureListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public GestureDetector.SimpleOnGestureListener f4311j = new GestureDetector.SimpleOnGestureListener();
 
     @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnDoubleTapListener

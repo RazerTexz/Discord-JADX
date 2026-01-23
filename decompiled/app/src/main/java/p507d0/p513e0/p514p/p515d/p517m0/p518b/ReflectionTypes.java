@@ -31,31 +31,31 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: ReflectionTypes.kt */
-/* renamed from: d0.e0.p.d.m0.b.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.j, reason: use source file name */
+/* JADX INFO: compiled from: ReflectionTypes.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReflectionTypes {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final b f22482a = new b(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final /* synthetic */ KProperty<Object>[] f22483b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final NotFoundClasses f22484c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Lazy f22485d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final a f22486e;
 
-    /* compiled from: ReflectionTypes.kt */
-    /* renamed from: d0.e0.p.d.m0.b.j$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.j$a */
+    /* JADX INFO: compiled from: ReflectionTypes.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f22487a;
 
         public a(int i) {
@@ -69,8 +69,8 @@ public final class ReflectionTypes {
         }
     }
 
-    /* compiled from: ReflectionTypes.kt */
-    /* renamed from: d0.e0.p.d.m0.b.j$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.j$b */
+    /* JADX INFO: compiled from: ReflectionTypes.kt */
     public static final class b {
         public b(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -91,8 +91,8 @@ public final class ReflectionTypes {
         }
     }
 
-    /* compiled from: ReflectionTypes.kt */
-    /* renamed from: d0.e0.p.d.m0.b.j$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.j$c */
+    /* JADX INFO: compiled from: ReflectionTypes.kt */
     public static final class c extends Lambda implements Function0<MemberScope3> {
         public final /* synthetic */ ModuleDescriptor2 $module;
 

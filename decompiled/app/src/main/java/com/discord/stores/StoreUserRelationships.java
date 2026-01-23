@@ -25,18 +25,18 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: StoreUserRelationships.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreUserRelationships.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUserRelationships extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final Persister<Map<Long, Integer>> relationshipsCache;
     private UserRelationshipsState relationshipsState;
     private UserRelationshipsState relationshipsStateSnapshot;
 
-    /* compiled from: StoreUserRelationships.kt */
+    /* JADX INFO: compiled from: StoreUserRelationships.kt */
     public static abstract class UserRelationshipsState {
 
-        /* compiled from: StoreUserRelationships.kt */
+        /* JADX INFO: compiled from: StoreUserRelationships.kt */
         public static final /* data */ class Loaded extends UserRelationshipsState {
             private final Map<Long, Integer> relationships;
 
@@ -88,7 +88,7 @@ public final class StoreUserRelationships extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreUserRelationships.kt */
+        /* JADX INFO: compiled from: StoreUserRelationships.kt */
         public static final class Unloaded extends UserRelationshipsState {
             public static final Unloaded INSTANCE = new Unloaded();
 
@@ -105,8 +105,8 @@ public final class StoreUserRelationships extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserRelationships.kt */
-    /* renamed from: com.discord.stores.StoreUserRelationships$observe$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserRelationships$observe$1 */
+    /* JADX INFO: compiled from: StoreUserRelationships.kt */
     public static final class C65911 extends Lambda implements Function0<Map<Long, ? extends Integer>> {
         public C65911() {
             super(0);
@@ -118,7 +118,7 @@ public final class StoreUserRelationships extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Integer> invoke2() {
             UserRelationshipsState userRelationshipsStateAccess$getRelationshipsStateSnapshot$p = StoreUserRelationships.access$getRelationshipsStateSnapshot$p(StoreUserRelationships.this);
             if (Intrinsics3.areEqual(userRelationshipsStateAccess$getRelationshipsStateSnapshot$p, UserRelationshipsState.Unloaded.INSTANCE)) {
@@ -133,8 +133,8 @@ public final class StoreUserRelationships extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserRelationships.kt */
-    /* renamed from: com.discord.stores.StoreUserRelationships$observe$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserRelationships$observe$2 */
+    /* JADX INFO: compiled from: StoreUserRelationships.kt */
     public static final class C65922<T, R> implements Func1<Map<Long, ? extends Integer>, Map<Long, ? extends Integer>> {
         public final /* synthetic */ Collection $userIds;
 
@@ -147,7 +147,7 @@ public final class StoreUserRelationships extends StoreV2 {
             return call2((Map<Long, Integer>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, Integer> call2(Map<Long, Integer> map) {
             Intrinsics3.checkNotNullExpressionValue(map, "it");
             LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -160,8 +160,8 @@ public final class StoreUserRelationships extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserRelationships.kt */
-    /* renamed from: com.discord.stores.StoreUserRelationships$observe$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserRelationships$observe$3 */
+    /* JADX INFO: compiled from: StoreUserRelationships.kt */
     public static final class C65933<T, R> implements Func1<Map<Long, ? extends Integer>, Integer> {
         public final /* synthetic */ long $userId;
 
@@ -174,14 +174,14 @@ public final class StoreUserRelationships extends StoreV2 {
             return call2((Map<Long, Integer>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Integer call2(Map<Long, Integer> map) {
             return map.get(Long.valueOf(this.$userId));
         }
     }
 
-    /* compiled from: StoreUserRelationships.kt */
-    /* renamed from: com.discord.stores.StoreUserRelationships$observeForType$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserRelationships$observeForType$1 */
+    /* JADX INFO: compiled from: StoreUserRelationships.kt */
     public static final class C65941<T, R> implements Func1<Map<Long, ? extends Integer>, Map<Long, ? extends Integer>> {
         public final /* synthetic */ int $relationshipType;
 
@@ -194,7 +194,7 @@ public final class StoreUserRelationships extends StoreV2 {
             return call2((Map<Long, Integer>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, Integer> call2(Map<Long, Integer> map) {
             Intrinsics3.checkNotNullExpressionValue(map, "relationships");
             LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -207,8 +207,8 @@ public final class StoreUserRelationships extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserRelationships.kt */
-    /* renamed from: com.discord.stores.StoreUserRelationships$observeUserRelationshipsState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserRelationships$observeUserRelationshipsState$1 */
+    /* JADX INFO: compiled from: StoreUserRelationships.kt */
     public static final class C65951 extends Lambda implements Function0<UserRelationshipsState> {
         public C65951() {
             super(0);
@@ -266,7 +266,7 @@ public final class StoreUserRelationships extends StoreV2 {
         return (loaded == null || (relationships = loaded.getRelationships()) == null) ? Maps6.emptyMap() : relationships;
     }
 
-    /* renamed from: getRelationshipsState, reason: from getter */
+    /* JADX INFO: renamed from: getRelationshipsState, reason: from getter */
     public final UserRelationshipsState getRelationshipsStateSnapshot() {
         return this.relationshipsStateSnapshot;
     }

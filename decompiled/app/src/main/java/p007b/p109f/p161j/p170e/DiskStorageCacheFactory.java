@@ -8,19 +8,19 @@ import p007b.p109f.p111b.p113b.DiskStorageCache;
 import p007b.p109f.p111b.p113b.DynamicDefaultDiskStorage;
 import p007b.p109f.p111b.p113b.FileCache;
 
-/* compiled from: DiskStorageCacheFactory.java */
-/* renamed from: b.f.j.e.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.e.c, reason: use source file name */
+/* JADX INFO: compiled from: DiskStorageCacheFactory.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DiskStorageCacheFactory implements FileCacheFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public DynamicDefaultDiskStorageFactory f3732a;
 
     public DiskStorageCacheFactory(DynamicDefaultDiskStorageFactory dynamicDefaultDiskStorageFactory) {
         this.f3732a = dynamicDefaultDiskStorageFactory;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public FileCache m1261a(DiskCacheConfig diskCacheConfig) {
         Objects.requireNonNull(this.f3732a);
         DynamicDefaultDiskStorage dynamicDefaultDiskStorage = new DynamicDefaultDiskStorage(diskCacheConfig.f19421a, diskCacheConfig.f19423c, diskCacheConfig.f19422b, diskCacheConfig.f19428h);

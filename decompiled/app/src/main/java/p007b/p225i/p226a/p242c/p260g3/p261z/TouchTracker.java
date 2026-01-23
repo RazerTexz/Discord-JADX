@@ -10,31 +10,31 @@ import androidx.annotation.BinderThread;
 import p007b.p225i.p226a.p242c.p260g3.p261z.OrientationListener;
 import p007b.p225i.p226a.p242c.p260g3.p261z.SphericalGLSurfaceView;
 
-/* compiled from: TouchTracker.java */
-/* renamed from: b.i.a.c.g3.z.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.z.l, reason: use source file name */
+/* JADX INFO: compiled from: TouchTracker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TouchTracker extends GestureDetector.SimpleOnGestureListener implements View.OnTouchListener, OrientationListener.a {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final a f7046l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final float f7047m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final GestureDetector f7048n;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final PointF f7044j = new PointF();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final PointF f7045k = new PointF();
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public volatile float f7049o = 3.1415927f;
 
-    /* compiled from: TouchTracker.java */
-    /* renamed from: b.i.a.c.g3.z.l$a */
+    /* JADX INFO: renamed from: b.i.a.c.g3.z.l$a */
+    /* JADX INFO: compiled from: TouchTracker.java */
     public interface a {
     }
 
@@ -46,7 +46,7 @@ public final class TouchTracker extends GestureDetector.SimpleOnGestureListener 
 
     @Override // p007b.p225i.p226a.p242c.p260g3.p261z.OrientationListener.a
     @BinderThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo3199a(float[] fArr, float f) {
         this.f7049o = -f;
     }

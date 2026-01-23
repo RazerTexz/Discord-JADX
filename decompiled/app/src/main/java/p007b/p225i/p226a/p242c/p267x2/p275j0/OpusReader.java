@@ -9,19 +9,19 @@ import p007b.p225i.p226a.p242c.Format2;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p267x2.p275j0.StreamReader;
 
-/* compiled from: OpusReader.java */
-/* renamed from: b.i.a.c.x2.j0.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.j0.h, reason: use source file name */
+/* JADX INFO: compiled from: OpusReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OpusReader extends StreamReader {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final byte[] f8538n = {79, 112, 117, 115, 72, 101, 97, 100};
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f8539o;
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.StreamReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long mo3737c(ParsableByteArray parsableByteArray) {
         byte[] bArr = parsableByteArray.f6793a;
         int i = bArr[0] & 255;
@@ -33,12 +33,13 @@ public final class OpusReader extends StreamReader {
             i3 = bArr[1] & 63;
         }
         int i4 = i >> 3;
-        return m3746a(i3 * (i4 >= 16 ? 2500 << r1 : i4 >= 12 ? 10000 << (r1 & 1) : (i4 & 3) == 3 ? 60000 : 10000 << r1));
+        int i5 = i4 & 3;
+        return m3746a(((long) i3) * ((long) (i4 >= 16 ? 2500 << i5 : i4 >= 12 ? 10000 << (i5 & 1) : i5 == 3 ? 60000 : 10000 << i5)));
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.StreamReader
     @EnsuresNonNullIf(expression = {"#3.format"}, result = false)
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo3738d(ParsableByteArray parsableByteArray, long j, StreamReader.b bVar) {
         if (this.f8539o) {
             Objects.requireNonNull(bVar.f8553a);
@@ -60,7 +61,7 @@ public final class OpusReader extends StreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.StreamReader
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3739e(boolean z2) {
         super.mo3739e(z2);
         if (z2) {

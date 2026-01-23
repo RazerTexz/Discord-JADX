@@ -8,9 +8,9 @@ import p007b.p008a.p018d.AppToast;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsRolesAdapter.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsRolesAdapter$RoleListItem$onConfigure$3, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRolesAdapter$RoleListItem$onConfigure$3, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsRolesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsRolesAdapter5 extends Lambda implements Function1<View, Unit> {
     public static final WidgetServerSettingsRolesAdapter5 INSTANCE = new WidgetServerSettingsRolesAdapter5();
 
@@ -24,7 +24,7 @@ public final class WidgetServerSettingsRolesAdapter5 extends Lambda implements F
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "view");
         AppToast.m169g(view.getContext(), C5419R.string.help_missing_manage_roles_permission, 0, null, 12);

@@ -27,15 +27,15 @@ import p659s.p660a.p664d2.Builders3;
 import p659s.p660a.p664d2.Flow3;
 import p659s.p660a.p664d2.FlowCollector;
 
-/* compiled from: FlowLiveData.kt */
-/* renamed from: androidx.lifecycle.FlowLiveDataConversions, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.FlowLiveDataConversions, reason: use source file name */
+/* JADX INFO: compiled from: FlowLiveData.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class FlowLiveData {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: FlowLiveData.kt */
+    /* JADX INFO: renamed from: androidx.lifecycle.FlowLiveDataConversions$asFlow$1 */
+    /* JADX INFO: compiled from: FlowLiveData.kt */
     @DebugMetadata(m10084c = "androidx.lifecycle.FlowLiveDataConversions$asFlow$1", m10085f = "FlowLiveData.kt", m10086l = {96, 100, 101}, m10087m = "invokeSuspend")
-    /* renamed from: androidx.lifecycle.FlowLiveDataConversions$asFlow$1 */
     public static final class C04331<T> extends ContinuationImpl6 implements Function2<FlowCollector<? super T>, Continuation<? super Unit>, Object> {
         public final /* synthetic */ LiveData $this_asFlow;
         private /* synthetic */ Object L$0;
@@ -43,9 +43,9 @@ public final class FlowLiveData {
         public Object L$2;
         public int label;
 
-        /* compiled from: FlowLiveData.kt */
+        /* JADX INFO: renamed from: androidx.lifecycle.FlowLiveDataConversions$asFlow$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: FlowLiveData.kt */
         @DebugMetadata(m10084c = "androidx.lifecycle.FlowLiveDataConversions$asFlow$1$1", m10085f = "FlowLiveData.kt", m10086l = {}, m10087m = "invokeSuspend")
-        /* renamed from: androidx.lifecycle.FlowLiveDataConversions$asFlow$1$1, reason: invalid class name */
         public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             public final /* synthetic */ Observer $observer;
             public int label;
@@ -79,9 +79,9 @@ public final class FlowLiveData {
             }
         }
 
-        /* compiled from: FlowLiveData.kt */
+        /* JADX INFO: renamed from: androidx.lifecycle.FlowLiveDataConversions$asFlow$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: FlowLiveData.kt */
         @DebugMetadata(m10084c = "androidx.lifecycle.FlowLiveDataConversions$asFlow$1$2", m10085f = "FlowLiveData.kt", m10086l = {}, m10087m = "invokeSuspend")
-        /* renamed from: androidx.lifecycle.FlowLiveDataConversions$asFlow$1$2, reason: invalid class name */
         public static final class AnonymousClass2 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             public final /* synthetic */ Observer $observer;
             public int label;
@@ -139,6 +139,7 @@ public final class FlowLiveData {
         /* JADX WARN: Removed duplicated region for block: B:28:0x0098  */
         /* JADX WARN: Removed duplicated region for block: B:31:0x00a5 A[Catch: all -> 0x00d4, TRY_LEAVE, TryCatch #0 {all -> 0x00d4, blocks: (B:29:0x009d, B:31:0x00a5), top: B:45:0x009d }] */
         /* JADX WARN: Removed duplicated region for block: B:35:0x00bc  */
+        /* JADX WARN: Type inference failed for: r13v0 */
         /* JADX WARN: Type inference failed for: r4v0 */
         /* JADX WARN: Type inference failed for: r4v12 */
         /* JADX WARN: Type inference failed for: r4v22 */
@@ -147,6 +148,12 @@ public final class FlowLiveData {
         /* JADX WARN: Type inference failed for: r4v6 */
         /* JADX WARN: Type inference failed for: r4v7 */
         /* JADX WARN: Type inference failed for: r4v8, types: [java.lang.Object] */
+        /* JADX WARN: Type inference failed for: r6v11 */
+        /* JADX WARN: Type inference failed for: r6v20 */
+        /* JADX WARN: Type inference failed for: r6v3, types: [androidx.lifecycle.Observer, java.lang.Object] */
+        /* JADX WARN: Type inference failed for: r6v4 */
+        /* JADX WARN: Type inference failed for: r6v5, types: [java.lang.Object] */
+        /* JADX WARN: Type inference failed for: r6v6 */
         /* JADX WARN: Type inference failed for: r7v4, types: [java.lang.Object, s.a.d2.e] */
         /* JADX WARN: Type inference failed for: r7v7 */
         /* JADX WARN: Type inference failed for: r7v8 */
@@ -156,17 +163,18 @@ public final class FlowLiveData {
             Code decompiled incorrectly, please refer to instructions dump.
         */
         public final Object invokeSuspend(Object obj) throws Throwable {
-            FlowCollector flowCollector;
             Observer flowLiveData2;
             Channel4 channel4;
             Throwable th;
             C04331<T> c04331;
             ?? r7;
-            Observer observer;
+            ?? r6;
             Channel5 channel5;
             Channel5 it;
             Object objMo11207a;
-            Observer observer2;
+            FlowCollector flowCollector;
+            Observer observer;
+            FlowCollector flowCollector2;
             Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
             int i = this.label;
             ?? r4 = 1;
@@ -174,13 +182,13 @@ public final class FlowLiveData {
                 try {
                     if (i == 0) {
                         Result3.throwOnFailure(obj);
-                        flowCollector = (FlowCollector) this.L$0;
+                        FlowCollector flowCollector3 = (FlowCollector) this.L$0;
                         Channel4 channel4M4271b = C3404f.m4271b(-1, null, null, 6);
                         flowLiveData2 = new FlowLiveData2(channel4M4271b);
                         CoroutineDispatcher coroutineDispatcher = Dispatchers.f27866a;
                         MainCoroutineDispatcher mainCoroutineDispatcherMo11194H = MainDispatchers.f27700b.mo11194H();
                         AnonymousClass1 anonymousClass1 = new AnonymousClass1(flowLiveData2, null);
-                        this.L$0 = flowCollector;
+                        this.L$0 = flowCollector3;
                         this.L$1 = channel4M4271b;
                         this.L$2 = flowLiveData2;
                         this.label = 1;
@@ -188,15 +196,16 @@ public final class FlowLiveData {
                             return coroutine_suspended;
                         }
                         channel4 = channel4M4271b;
+                        flowCollector2 = flowCollector3;
                     } else if (i != 1) {
                         try {
                             if (i == 2) {
                                 Channel5 channel52 = (Channel5) this.L$2;
-                                Observer observer3 = (Observer) this.L$1;
-                                FlowCollector flowCollector2 = (FlowCollector) this.L$0;
+                                Observer observer2 = (Observer) this.L$1;
+                                FlowCollector flowCollector4 = (FlowCollector) this.L$0;
                                 Result3.throwOnFailure(obj);
-                                r7 = flowCollector2;
-                                observer = observer3;
+                                r7 = flowCollector4;
+                                r6 = observer2;
                                 channel5 = channel52;
                                 c04331 = this;
                                 if (((Boolean) obj).booleanValue()) {
@@ -206,14 +215,16 @@ public final class FlowLiveData {
                                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                                 }
                                 Channel5 channel53 = (Channel5) this.L$2;
-                                Observer observer4 = (Observer) this.L$1;
-                                flowCollector = (FlowCollector) this.L$0;
+                                Observer observer3 = (Observer) this.L$1;
+                                FlowCollector flowCollector5 = (FlowCollector) this.L$0;
                                 Result3.throwOnFailure(obj);
                                 it = channel53;
-                                observer2 = observer4;
+                                observer = observer3;
+                                flowCollector = flowCollector5;
                                 c04331 = this;
-                                r4 = observer2;
-                                c04331.L$0 = flowCollector;
+                                r4 = observer;
+                                ?? r62 = flowCollector;
+                                c04331.L$0 = r62;
                                 c04331.L$1 = r4;
                                 c04331.L$2 = it;
                                 c04331.label = 2;
@@ -221,30 +232,30 @@ public final class FlowLiveData {
                                 if (objMo11207a == coroutine_suspended) {
                                     return coroutine_suspended;
                                 }
-                                Observer observer5 = r4;
+                                ?? r13 = r4;
                                 channel5 = it;
                                 obj = objMo11207a;
-                                r7 = flowCollector;
-                                observer = observer5;
+                                r7 = r62;
+                                r6 = r13;
                                 try {
                                     if (((Boolean) obj).booleanValue()) {
                                         CoroutineScope2 coroutineScope2 = CoroutineScope2.f27919j;
                                         CoroutineDispatcher coroutineDispatcher2 = Dispatchers.f27866a;
-                                        C3404f.m4211H0(coroutineScope2, MainDispatchers.f27700b.mo11194H(), null, c04331.new AnonymousClass2(observer, null), 2, null);
+                                        C3404f.m4211H0(coroutineScope2, MainDispatchers.f27700b.mo11194H(), null, c04331.new AnonymousClass2(r6, null), 2, null);
                                         return Unit.f27425a;
                                     }
                                     Object next = channel5.next();
                                     c04331.L$0 = r7;
-                                    c04331.L$1 = observer;
+                                    c04331.L$1 = r6;
                                     c04331.L$2 = channel5;
                                     c04331.label = 3;
                                     if (r7.emit(next, c04331) == coroutine_suspended) {
                                         return coroutine_suspended;
                                     }
                                     it = channel5;
-                                    r4 = observer;
-                                    flowCollector = r7;
-                                    c04331.L$0 = flowCollector;
+                                    r4 = r6;
+                                    r62 = r7;
+                                    c04331.L$0 = r62;
                                     c04331.L$1 = r4;
                                     c04331.L$2 = it;
                                     c04331.label = 2;
@@ -253,7 +264,7 @@ public final class FlowLiveData {
                                     }
                                 } catch (Throwable th2) {
                                     th = th2;
-                                    r4 = observer;
+                                    r4 = r6;
                                     CoroutineScope2 coroutineScope22 = CoroutineScope2.f27919j;
                                     CoroutineDispatcher coroutineDispatcher3 = Dispatchers.f27866a;
                                     C3404f.m4211H0(coroutineScope22, MainDispatchers.f27700b.mo11194H(), null, c04331.new AnonymousClass2(r4, null), 2, null);
@@ -271,10 +282,11 @@ public final class FlowLiveData {
                     } else {
                         flowLiveData2 = (Observer) this.L$2;
                         channel4 = (Channel4) this.L$1;
-                        flowCollector = (FlowCollector) this.L$0;
+                        FlowCollector flowCollector6 = (FlowCollector) this.L$0;
                         Result3.throwOnFailure(obj);
+                        flowCollector2 = flowCollector6;
                     }
-                    c04331.L$0 = flowCollector;
+                    c04331.L$0 = r62;
                     c04331.L$1 = r4;
                     c04331.L$2 = it;
                     c04331.label = 2;
@@ -289,9 +301,11 @@ public final class FlowLiveData {
                     throw th;
                 }
                 it = channel4.iterator();
-                observer2 = flowLiveData2;
+                observer = flowLiveData2;
+                flowCollector = flowCollector2;
                 c04331 = this;
-                r4 = observer2;
+                r4 = observer;
+                ?? r622 = flowCollector;
             } catch (Throwable th5) {
                 th = th5;
                 r4 = flowLiveData2;
@@ -305,9 +319,9 @@ public final class FlowLiveData {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: FlowLiveData.kt */
+    /* JADX INFO: renamed from: androidx.lifecycle.FlowLiveDataConversions$asLiveData$1 */
+    /* JADX INFO: compiled from: FlowLiveData.kt */
     @DebugMetadata(m10084c = "androidx.lifecycle.FlowLiveDataConversions$asLiveData$1", m10085f = "FlowLiveData.kt", m10086l = {Opcodes.FCMPL}, m10087m = "invokeSuspend")
-    /* renamed from: androidx.lifecycle.FlowLiveDataConversions$asLiveData$1 */
     public static final class C04341<T> extends ContinuationImpl6 implements Function2<CoroutineLiveData7<T>, Continuation<? super Unit>, Object> {
         public final /* synthetic */ Flow3 $this_asLiveData;
         private /* synthetic */ Object L$0;

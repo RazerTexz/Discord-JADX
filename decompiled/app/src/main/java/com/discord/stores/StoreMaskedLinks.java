@@ -24,11 +24,11 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreMaskedLinks.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMaskedLinks.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMaskedLinks extends StoreV2 {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE;
     private static final Regex DISCORD_DOMAINS_REGEX;
     private static final String HOST_SPOTIFY = "https://spotify.com";
@@ -41,7 +41,7 @@ public final class StoreMaskedLinks extends StoreV2 {
     private Set<String> userTrustedDomains;
     private Set<String> userTrustedDomainsSnapshot;
 
-    /* compiled from: StoreMaskedLinks.kt */
+    /* JADX INFO: compiled from: StoreMaskedLinks.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -71,8 +71,8 @@ public final class StoreMaskedLinks extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMaskedLinks.kt */
-    /* renamed from: com.discord.stores.StoreMaskedLinks$trustDomain$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMaskedLinks$trustDomain$1 */
+    /* JADX INFO: compiled from: StoreMaskedLinks.kt */
     public static final class C61631 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $url;
 
@@ -88,7 +88,7 @@ public final class StoreMaskedLinks extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             String strAccess$getDomainName = Companion.access$getDomainName(StoreMaskedLinks.INSTANCE, this.$url);
             if (strAccess$getDomainName != null) {

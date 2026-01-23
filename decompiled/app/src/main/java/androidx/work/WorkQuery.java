@@ -6,7 +6,7 @@ import androidx.work.WorkInfo;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WorkQuery {
     private final List<WorkInfo.State> mStates;
     private final List<String> mTags;

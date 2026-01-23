@@ -25,16 +25,16 @@ import lombok.javac.JavacNode;
 import lombok.javac.JavacTreeMaker;
 import lombok.javac.handlers.JavacHandlerUtil;
 
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleGetter.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleGetter.SCL.lombok */
 public class HandleGetter extends JavacAnnotationHandler<Getter> {
 
-    /* renamed from: AR */
+    /* JADX INFO: renamed from: AR */
     private static final String f27484AR = "java.util.concurrent.atomic.AtomicReference";
     private static final List<JCTree.JCExpression> NIL_EXPRESSION = List.nil();
     public static final Map<JavacTreeMaker.TypeTag, String> TYPE_MAP;
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind;
 
-    /* renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
     private static /* synthetic */ int[] f27485x2486df07;
 
     static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind() {
@@ -87,7 +87,7 @@ public class HandleGetter extends JavacAnnotationHandler<Getter> {
         return iArr2;
     }
 
-    /* renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
     static /* synthetic */ int[] m10943x2486df07() {
         int[] iArr = f27485x2486df07;
         if (iArr != null) {
@@ -144,7 +144,7 @@ public class HandleGetter extends JavacAnnotationHandler<Getter> {
     }
 
     @Override // lombok.javac.JavacAnnotationHandler
-    public void handle(AnnotationValues<Getter> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalArgumentException {
+    public void handle(AnnotationValues<Getter> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.GETTER_FLAG_USAGE, "@Getter");
         Collection<JavacNode> fields = annotationNode.upFromAnnotationToFields();
         JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) Getter.class);
@@ -221,7 +221,7 @@ public class HandleGetter extends JavacAnnotationHandler<Getter> {
                     return;
             }
         }
-        long access = JavacHandlerUtil.toJavacModifier(level) | (fieldDecl.mods.flags & 8);
+        long access = ((long) JavacHandlerUtil.toJavacModifier(level)) | (fieldDecl.mods.flags & 8);
         JavacHandlerUtil.injectMethod(fieldNode.m10925up(), createGetter(access, fieldNode, fieldNode.getTreeMaker(), source.get(), lazy, onMethod), List.nil(), JavacHandlerUtil.getMirrorForFieldType(fieldNode));
     }
 

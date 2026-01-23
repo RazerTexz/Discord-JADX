@@ -3,9 +3,9 @@ package com.discord.widgets.channels.permissions;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetStageChannelModeratorPermissions.kt */
-/* renamed from: com.discord.widgets.channels.permissions.WidgetStageChannelModeratorPermissions$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetStageChannelModeratorPermissions$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetStageChannelModeratorPermissions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageChannelModeratorPermissions4 extends Lambda implements Function0<WidgetStageChannelModeratorPermissionsViewModel> {
     public final /* synthetic */ WidgetStageChannelModeratorPermissions this$0;
 

@@ -20,22 +20,22 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TypeAliasExpander.kt */
-/* renamed from: d0.e0.p.d.m0.n.q0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.q0, reason: use source file name */
+/* JADX INFO: compiled from: TypeAliasExpander.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypeAliasExpander {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f24863a = new a(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TypeAliasExpansionReportStrategy f24864b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f24865c;
 
-    /* compiled from: TypeAliasExpander.kt */
-    /* renamed from: d0.e0.p.d.m0.n.q0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.q0$a */
+    /* JADX INFO: compiled from: TypeAliasExpander.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -74,7 +74,7 @@ public final class TypeAliasExpander {
         this.f24865c = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m10024a(Annotations4 annotations4, Annotations4 annotations42) {
         HashSet hashSet = new HashSet();
         Iterator<AnnotationDescriptor> it = annotations4.iterator();
@@ -88,17 +88,17 @@ public final class TypeAliasExpander {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final KotlinType4 m10025b(KotlinType4 kotlinType4, Annotations4 annotations4) {
         return KotlinType2.isError(kotlinType4) ? kotlinType4 : TypeSubstitution.replace$default(kotlinType4, null, m10026c(kotlinType4, annotations4), 1, null);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Annotations4 m10026c(KotlinType kotlinType, Annotations4 annotations4) {
         return KotlinType2.isError(kotlinType) ? kotlinType.getAnnotations() : Annotations5.composeAnnotations(annotations4, kotlinType.getAnnotations());
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final KotlinType4 m10027d(TypeAliasExpansion typeAliasExpansion, Annotations4 annotations4, boolean z2, int i, boolean z3) {
         TypeProjection typeProjectionM10028e = m10028e(new TypeProjectionImpl(Variance.INVARIANT, typeAliasExpansion.getDescriptor().getUnderlyingType()), typeAliasExpansion, null, i);
         KotlinType type = typeProjectionM10028e.getType();
@@ -120,7 +120,7 @@ public final class TypeAliasExpander {
         return SpecialTypes5.withAbbreviation(kotlinType4MakeNullableIfNeeded, KotlinTypeFactory.simpleTypeWithNonTrivialMemberScope(annotations4, typeConstructor, typeAliasExpansion.getArguments(), z2, MemberScope3.b.f24373b));
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final TypeProjection m10028e(TypeProjection typeProjection, TypeAliasExpansion typeAliasExpansion, TypeParameterDescriptor typeParameterDescriptor, int i) {
         KotlinType kotlinTypeM10025b;
         Variance variance = Variance.INVARIANT;
@@ -252,7 +252,7 @@ public final class TypeAliasExpander {
         return m10027d(typeAliasExpansion, annotations4, false, 0, true);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final KotlinType4 m10029f(KotlinType4 kotlinType4, TypeAliasExpansion typeAliasExpansion, int i) {
         TypeConstructor constructor = kotlinType4.getConstructor();
         List<TypeProjection> arguments = kotlinType4.getArguments();

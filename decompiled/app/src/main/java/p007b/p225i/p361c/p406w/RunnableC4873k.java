@@ -2,12 +2,12 @@ package p007b.p225i.p361c.p406w;
 
 import com.google.firebase.messaging.FirebaseMessaging;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.c.w.k */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.w.k */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC4873k implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final FirebaseMessaging.C11088a f13028j;
 
     public RunnableC4873k(FirebaseMessaging.C11088a c11088a) {

@@ -8,9 +8,9 @@ import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetChatListAdapterItemEmbed.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEmbed$Companion$getModel$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEmbed$Companion$getModel$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemEmbed.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemEmbed3<T1, T2, R> implements Func2<Map<Long, ? extends GuildMember>, Map<Long, ? extends String>, HashMap<Long, String>> {
     public static final WidgetChatListAdapterItemEmbed3 INSTANCE = new WidgetChatListAdapterItemEmbed3();
 
@@ -20,7 +20,7 @@ public final class WidgetChatListAdapterItemEmbed3<T1, T2, R> implements Func2<M
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final HashMap<Long, String> call2(Map<Long, GuildMember> map, Map<Long, String> map2) {
         Intrinsics3.checkNotNullExpressionValue(map, "members");
         LinkedHashMap linkedHashMap = new LinkedHashMap();

@@ -8,8 +8,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEvent.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildScheduledEvent.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildScheduledEvent {
     private final Long channelId;
     private final Long creatorId;
@@ -57,7 +57,7 @@ public final /* data */ class GuildScheduledEvent {
         this.guild = guild;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static GuildScheduledEvent m7972a(GuildScheduledEvent guildScheduledEvent, long j, long j2, Long l, Long l2, String str, String str2, String str3, UtcDateTime utcDateTime, UtcDateTime utcDateTime2, StageInstancePrivacyLevel stageInstancePrivacyLevel, GuildScheduledEventStatus guildScheduledEventStatus, GuildScheduledEventEntityType guildScheduledEventEntityType, Long l3, GuildScheduledEventEntityMetadata guildScheduledEventEntityMetadata, List list, Integer num, GuildScheduledEventMeUser guildScheduledEventMeUser, Guild guild, int i) {
         long j3 = (i & 1) != 0 ? guildScheduledEvent.id : j;
         long j4 = (i & 2) != 0 ? guildScheduledEvent.guildId : j2;
@@ -88,22 +88,22 @@ public final /* data */ class GuildScheduledEvent {
         return new GuildScheduledEvent(j3, j4, l4, l5, str4, str5, str7, utcDateTime3, utcDateTime5, stageInstancePrivacyLevel2, guildScheduledEventStatus2, guildScheduledEventEntityType2, l6, guildScheduledEventEntityMetadata2, list2, num2, guildScheduledEventMeUser2, guild2);
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final Long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final Long getCreatorId() {
         return this.creatorId;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final GuildScheduledEventEntityMetadata getEntityMetadata() {
         return this.entityMetadata;
     }
@@ -119,17 +119,17 @@ public final /* data */ class GuildScheduledEvent {
         return this.id == guildScheduledEvent.id && this.guildId == guildScheduledEvent.guildId && Intrinsics3.areEqual(this.channelId, guildScheduledEvent.channelId) && Intrinsics3.areEqual(this.creatorId, guildScheduledEvent.creatorId) && Intrinsics3.areEqual(this.name, guildScheduledEvent.name) && Intrinsics3.areEqual(this.description, guildScheduledEvent.description) && Intrinsics3.areEqual(this.image, guildScheduledEvent.image) && Intrinsics3.areEqual(this.scheduledStartTime, guildScheduledEvent.scheduledStartTime) && Intrinsics3.areEqual(this.scheduledEndTime, guildScheduledEvent.scheduledEndTime) && Intrinsics3.areEqual(this.privacyLevel, guildScheduledEvent.privacyLevel) && Intrinsics3.areEqual(this.status, guildScheduledEvent.status) && Intrinsics3.areEqual(this.entityType, guildScheduledEvent.entityType) && Intrinsics3.areEqual(this.entityId, guildScheduledEvent.entityId) && Intrinsics3.areEqual(this.entityMetadata, guildScheduledEvent.entityMetadata) && Intrinsics3.areEqual(this.skuIds, guildScheduledEvent.skuIds) && Intrinsics3.areEqual(this.userCount, guildScheduledEvent.userCount) && Intrinsics3.areEqual(this.userRsvp, guildScheduledEvent.userRsvp) && Intrinsics3.areEqual(this.guild, guildScheduledEvent.guild);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final GuildScheduledEventEntityType getEntityType() {
         return this.entityType;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final Guild getGuild() {
         return this.guild;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
@@ -172,42 +172,42 @@ public final /* data */ class GuildScheduledEvent {
         return iHashCode15 + (guild != null ? guild.hashCode() : 0);
     }
 
-    /* renamed from: i, reason: from getter */
+    /* JADX INFO: renamed from: i, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: j, reason: from getter */
+    /* JADX INFO: renamed from: j, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: k, reason: from getter */
+    /* JADX INFO: renamed from: k, reason: from getter */
     public final UtcDateTime getScheduledEndTime() {
         return this.scheduledEndTime;
     }
 
-    /* renamed from: l, reason: from getter */
+    /* JADX INFO: renamed from: l, reason: from getter */
     public final UtcDateTime getScheduledStartTime() {
         return this.scheduledStartTime;
     }
 
-    /* renamed from: m, reason: from getter */
+    /* JADX INFO: renamed from: m, reason: from getter */
     public final GuildScheduledEventStatus getStatus() {
         return this.status;
     }
 
-    /* renamed from: n, reason: from getter */
+    /* JADX INFO: renamed from: n, reason: from getter */
     public final Integer getUserCount() {
         return this.userCount;
     }
 
-    /* renamed from: o, reason: from getter */
+    /* JADX INFO: renamed from: o, reason: from getter */
     public final GuildScheduledEventMeUser getUserRsvp() {
         return this.userRsvp;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final boolean m7987p(long channelId) {
         Long l = this.channelId;
         if (l == null) {

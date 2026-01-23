@@ -9,9 +9,9 @@ import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.p601e0.Util7;
 
-/* compiled from: UserProfileUtils.kt */
-/* renamed from: com.discord.utilities.user.UserProfileUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.user.UserProfileUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: UserProfileUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UserProfileUtils {
     public static final String getBoostingSince(UserProfile userProfile, Context context) {
         Intrinsics3.checkNotNullParameter(userProfile, "$this$getBoostingSince");

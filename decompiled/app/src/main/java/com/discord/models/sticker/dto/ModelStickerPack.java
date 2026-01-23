@@ -9,8 +9,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelStickerPack.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelStickerPack.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelStickerPack {
     private final Long bannerAssetId;
     private final Long coverStickerId;
@@ -34,6 +34,7 @@ public final /* data */ class ModelStickerPack {
         this.bannerAssetId = l2;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ModelStickerPack copy$default(ModelStickerPack modelStickerPack, long j, List list, String str, ModelStickerPackStoreListing modelStickerPackStoreListing, long j2, Long l, String str2, Long l2, int i, Object obj) {
         return modelStickerPack.copy((i & 1) != 0 ? modelStickerPack.id : j, (i & 2) != 0 ? modelStickerPack.stickers : list, (i & 4) != 0 ? modelStickerPack.name : str, (i & 8) != 0 ? modelStickerPack.storeListing : modelStickerPackStoreListing, (i & 16) != 0 ? modelStickerPack.skuId : j2, (i & 32) != 0 ? modelStickerPack.coverStickerId : l, (i & 64) != 0 ? modelStickerPack.description : str2, (i & 128) != 0 ? modelStickerPack.bannerAssetId : l2);
     }
@@ -43,7 +44,7 @@ public final /* data */ class ModelStickerPack {
         return modelStickerPackStoreListing != null && modelStickerPackStoreListing.getSku().isAvailable();
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getId() {
         return this.id;
     }
@@ -52,32 +53,32 @@ public final /* data */ class ModelStickerPack {
         return this.stickers;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final ModelStickerPackStoreListing getStoreListing() {
         return this.storeListing;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final long getSkuId() {
         return this.skuId;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final Long getCoverStickerId() {
         return this.coverStickerId;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final Long getBannerAssetId() {
         return this.bannerAssetId;
     }

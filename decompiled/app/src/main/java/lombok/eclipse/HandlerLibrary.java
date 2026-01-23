@@ -22,7 +22,7 @@ import org.eclipse.jdt.internal.compiler.ast.ASTNode;
 import org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration;
 import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/HandlerLibrary.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/HandlerLibrary.SCL.lombok */
 public class HandlerLibrary {
     private TypeLibrary typeLibrary = new TypeLibrary();
     private Map<String, AnnotationHandlerContainer<?>> annotationHandlers = new HashMap();
@@ -33,7 +33,7 @@ public class HandlerLibrary {
         ConfigurationKeysLoader.LoaderLoader.loadAllConfigurationKeys();
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/HandlerLibrary$VisitorContainer.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/HandlerLibrary$VisitorContainer.SCL.lombok */
     private static class VisitorContainer {
         private final EclipseASTVisitor visitor;
         private final long priority;
@@ -47,7 +47,7 @@ public class HandlerLibrary {
             this.visitor = visitor;
             this.deferUntilPostDiet = visitor.getClass().isAnnotationPresent(DeferUntilPostDiet.class);
             HandlerPriority hp = (HandlerPriority) visitor.getClass().getAnnotation(HandlerPriority.class);
-            this.priority = hp == null ? 0L : (hp.value() << 32) + hp.subValue();
+            this.priority = hp == null ? 0L : (((long) hp.value()) << 32) + ((long) hp.subValue());
         }
 
         public boolean deferUntilPostDiet() {
@@ -59,7 +59,7 @@ public class HandlerLibrary {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/HandlerLibrary$AnnotationHandlerContainer.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/HandlerLibrary$AnnotationHandlerContainer.SCL.lombok */
     private static class AnnotationHandlerContainer<T extends Annotation> {
         private final EclipseAnnotationHandler<T> handler;
         private final Class<T> annotationClass;
@@ -79,15 +79,15 @@ public class HandlerLibrary {
             this.annotationClass = annotationClass;
             this.deferUntilPostDiet = handler.getClass().isAnnotationPresent(DeferUntilPostDiet.class);
             HandlerPriority hp = (HandlerPriority) handler.getClass().getAnnotation(HandlerPriority.class);
-            this.priority = hp == null ? 0L : (hp.value() << 32) + hp.subValue();
+            this.priority = hp == null ? 0L : (((long) hp.value()) << 32) + ((long) hp.subValue());
         }
 
-        public void handle(org.eclipse.jdt.internal.compiler.ast.Annotation annotation, EclipseNode annotationNode) throws SecurityException {
+        public void handle(org.eclipse.jdt.internal.compiler.ast.Annotation annotation, EclipseNode annotationNode) {
             AnnotationValues<T> annValues = EclipseHandlerUtil.createAnnotation(this.annotationClass, annotationNode);
             this.handler.handle(annValues, annotation, annotationNode);
         }
 
-        public void preHandle(org.eclipse.jdt.internal.compiler.ast.Annotation annotation, EclipseNode annotationNode) throws SecurityException {
+        public void preHandle(org.eclipse.jdt.internal.compiler.ast.Annotation annotation, EclipseNode annotationNode) {
             AnnotationValues<T> annValues = EclipseHandlerUtil.createAnnotation(this.annotationClass, annotationNode);
             this.handler.preHandle(annValues, annotation, annotationNode);
         }
@@ -161,7 +161,7 @@ public class HandlerLibrary {
         return !EcjAugments.ASTNode_handled.get(node).booleanValue();
     }
 
-    public long handleAnnotation(CompilationUnitDeclaration ast, EclipseNode annotationNode, org.eclipse.jdt.internal.compiler.ast.Annotation annotation, long priority) throws SecurityException {
+    public long handleAnnotation(CompilationUnitDeclaration ast, EclipseNode annotationNode, org.eclipse.jdt.internal.compiler.ast.Annotation annotation, long priority) {
         String fqn;
         AnnotationHandlerContainer<?> container;
         TypeResolver resolver = new TypeResolver(annotationNode.getImportList());

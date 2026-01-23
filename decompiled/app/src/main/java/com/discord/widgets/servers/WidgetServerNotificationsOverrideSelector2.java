@@ -14,9 +14,9 @@ import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetServerNotificationsOverrideSelector.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerNotificationsOverrideSelector$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerNotificationsOverrideSelector$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerNotificationsOverrideSelector.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerNotificationsOverrideSelector2<T1, T2, T3, R> implements Func3<Map<Long, ? extends Channel>, GuildChannelsInfo, String, List<? extends CategoricalDragAndDropAdapter.Payload>> {
     public static final WidgetServerNotificationsOverrideSelector2 INSTANCE = new WidgetServerNotificationsOverrideSelector2();
 
@@ -26,7 +26,7 @@ public final class WidgetServerNotificationsOverrideSelector2<T1, T2, T3, R> imp
     }
 
     /* JADX WARN: Removed duplicated region for block: B:12:0x003c  */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

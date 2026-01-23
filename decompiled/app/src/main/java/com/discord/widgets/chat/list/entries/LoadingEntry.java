@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.list.entries;
 
 
-/* compiled from: LoadingEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: LoadingEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class LoadingEntry extends ChatListEntry {
     private final int type = 2;
     private final String key = String.valueOf(Math.random());

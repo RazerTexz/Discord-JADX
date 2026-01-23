@@ -10,8 +10,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Subscription;
 
-/* compiled from: WidgetGuildJoinCaptchaBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildJoinCaptchaBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class JoinArgs extends CaptchaArgs {
     private final Long directoryChannelId;
     private final Class<?> errorClass;
@@ -26,26 +26,27 @@ public final /* data */ class JoinArgs extends CaptchaArgs {
         this(j, z2, str, l, cls, (i & 32) != 0 ? null : function1, (i & 64) != 0 ? null : function12, function13);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ JoinArgs copy$default(JoinArgs joinArgs, long j, boolean z2, String str, Long l, Class cls, Function1 function1, Function1 function12, Function1 function13, int i, Object obj) {
         return joinArgs.copy((i & 1) != 0 ? joinArgs.guildId : j, (i & 2) != 0 ? joinArgs.isLurker : z2, (i & 4) != 0 ? joinArgs.sessionId : str, (i & 8) != 0 ? joinArgs.directoryChannelId : l, (i & 16) != 0 ? joinArgs.errorClass : cls, (i & 32) != 0 ? joinArgs.subscriptionHandler : function1, (i & 64) != 0 ? joinArgs.errorHandler : function12, (i & 128) != 0 ? joinArgs.onNext : function13);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getIsLurker() {
         return this.isLurker;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getSessionId() {
         return this.sessionId;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Long getDirectoryChannelId() {
         return this.directoryChannelId;
     }
@@ -112,16 +113,19 @@ public final /* data */ class JoinArgs extends CaptchaArgs {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v23 */
+    /* JADX WARN: Type inference failed for: r1v24 */
     public int hashCode() {
         int iM3a = C0002b.m3a(this.guildId) * 31;
         boolean z2 = this.isLurker;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i2 = (iM3a + i) * 31;
+        int i = (iM3a + r1) * 31;
         String str = this.sessionId;
-        int iHashCode = (i2 + (str != null ? str.hashCode() : 0)) * 31;
+        int iHashCode = (i + (str != null ? str.hashCode() : 0)) * 31;
         Long l = this.directoryChannelId;
         int iHashCode2 = (iHashCode + (l != null ? l.hashCode() : 0)) * 31;
         Class<?> cls = this.errorClass;

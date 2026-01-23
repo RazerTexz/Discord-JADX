@@ -7,21 +7,21 @@ import p615g0.Buffer3;
 import p615g0.InflaterSource;
 import p615g0.Source2;
 
-/* compiled from: MessageInflater.kt */
-/* renamed from: f0.e0.n.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.n.c, reason: use source file name */
+/* JADX INFO: compiled from: MessageInflater.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MessageInflater implements Closeable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Buffer3 f25817j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Inflater f25818k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final InflaterSource f25819l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f25820m;
 
     public MessageInflater(boolean z2) {

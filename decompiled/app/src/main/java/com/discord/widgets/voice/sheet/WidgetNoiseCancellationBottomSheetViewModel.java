@@ -12,16 +12,16 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetNoiseCancellationBottomSheetViewModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetNoiseCancellationBottomSheetViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetNoiseCancellationBottomSheetViewModel extends AppViewModel<ViewState> {
     private final PublishSubject<Event> eventSubject;
     private final StoreMediaSettings mediaSettingsStore;
 
-    /* compiled from: WidgetNoiseCancellationBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetNoiseCancellationBottomSheetViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetNoiseCancellationBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetNoiseCancellationBottomSheetViewModel.kt */
         public static final /* data */ class ShowToast extends Event {
             private final int toastResId;
 
@@ -37,7 +37,7 @@ public final class WidgetNoiseCancellationBottomSheetViewModel extends AppViewMo
                 return showToast.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getToastResId() {
                 return this.toastResId;
             }
@@ -74,7 +74,7 @@ public final class WidgetNoiseCancellationBottomSheetViewModel extends AppViewMo
         }
     }
 
-    /* compiled from: WidgetNoiseCancellationBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetNoiseCancellationBottomSheetViewModel.kt */
     public static abstract class ViewState {
         private ViewState() {
         }

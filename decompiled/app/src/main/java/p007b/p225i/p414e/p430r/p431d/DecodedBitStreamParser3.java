@@ -3,18 +3,18 @@ package p007b.p225i.p414e.p430r.p431d;
 import com.google.zxing.FormatException;
 import java.math.BigInteger;
 
-/* compiled from: DecodedBitStreamParser.java */
-/* renamed from: b.i.e.r.d.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.r.d.e, reason: use source file name */
+/* JADX INFO: compiled from: DecodedBitStreamParser.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DecodedBitStreamParser3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final char[] f13484a = ";<>@[\\]_`~!\r\t,:\n-.$/\"|*()?{}'".toCharArray();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final char[] f13485b = "0123456789&\r\t,:#-.$/+%*=^".toCharArray();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final BigInteger[] f13486c;
 
     static {
@@ -34,7 +34,7 @@ public final class DecodedBitStreamParser3 {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m7052a(int[] iArr, int i) throws FormatException {
         BigInteger bigIntegerAdd = BigInteger.ZERO;
         for (int i2 = 0; i2 < i; i2++) {
@@ -48,7 +48,7 @@ public final class DecodedBitStreamParser3 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:19:0x002e  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -81,6 +81,15 @@ public final class DecodedBitStreamParser3 {
         return i;
     }
 
+    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
+    /* JADX WARN: Failed to find 'out' block for switch in B:12:0x0039. Please report as an issue. */
+    /* JADX WARN: Failed to find 'out' block for switch in B:13:0x003c. Please report as an issue. */
+    /* JADX WARN: Failed to find 'out' block for switch in B:61:0x00c6. Please report as an issue. */
+    /* JADX WARN: Failed to find 'out' block for switch in B:72:0x00e3. Please report as an issue. */
+    /* JADX WARN: Removed duplicated region for block: B:74:0x00e7  */
+    /* JADX WARN: Removed duplicated region for block: B:77:0x00f2 A[PHI: r11
+      0x00f2: PHI (r11v11 int) = (r11v1 int), (r11v1 int), (r11v14 int) binds: [B:72:0x00e3, B:61:0x00c6, B:46:0x009d] A[DONT_GENERATE, DONT_INLINE]] */
+    /* JADX WARN: Removed duplicated region for block: B:95:0x0124  */
     /*  JADX ERROR: UnsupportedOperationException in pass: RegionMakerVisitor
         java.lang.UnsupportedOperationException
         	at java.base/java.util.Collections$UnmodifiableCollection.add(Collections.java:1092)
@@ -128,16 +137,7 @@ public final class DecodedBitStreamParser3 {
         	at jadx.core.dex.visitors.regions.PostProcessRegions.process(PostProcessRegions.java:23)
         	at jadx.core.dex.visitors.regions.RegionMakerVisitor.visit(RegionMakerVisitor.java:31)
         */
-    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to find 'out' block for switch in B:12:0x0039. Please report as an issue. */
-    /* JADX WARN: Failed to find 'out' block for switch in B:13:0x003c. Please report as an issue. */
-    /* JADX WARN: Failed to find 'out' block for switch in B:61:0x00c6. Please report as an issue. */
-    /* JADX WARN: Failed to find 'out' block for switch in B:72:0x00e3. Please report as an issue. */
-    /* JADX WARN: Removed duplicated region for block: B:74:0x00e7  */
-    /* JADX WARN: Removed duplicated region for block: B:77:0x00f2 A[PHI: r11
-      0x00f2: PHI (r11v11 int) = (r11v1 int), (r11v1 int), (r11v14 int) binds: [B:72:0x00e3, B:61:0x00c6, B:46:0x009d] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Removed duplicated region for block: B:95:0x0124  */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

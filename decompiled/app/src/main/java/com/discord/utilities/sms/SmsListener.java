@@ -17,15 +17,15 @@ import p007b.p225i.p226a.p288f.p313h.p315b.C3448h;
 import p007b.p225i.p226a.p288f.p313h.p315b.C3450j;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SmsListener.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SmsListener.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SmsListener {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static BroadcastReceiver broadcastReceiver;
 
-    /* compiled from: SmsListener.kt */
+    /* JADX INFO: compiled from: SmsListener.kt */
     public static final class Companion {
         private Companion() {
         }

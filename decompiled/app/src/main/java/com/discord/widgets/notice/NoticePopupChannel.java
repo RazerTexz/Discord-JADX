@@ -55,12 +55,12 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: NoticePopupChannel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: NoticePopupChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NoticePopupChannel {
     public static final NoticePopupChannel INSTANCE = new NoticePopupChannel();
 
-    /* compiled from: NoticePopupChannel.kt */
+    /* JADX INFO: compiled from: NoticePopupChannel.kt */
     public static final /* data */ class Model {
         private final DraweeSpanStringBuilder noticeBody;
         private Drawable noticeBodyBackgroundDrawable;
@@ -90,11 +90,12 @@ public final class NoticePopupChannel {
             this.noticeStickers = list;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Model copy$default(Model model, CharSequence charSequence, CharSequence charSequence2, DraweeSpanStringBuilder draweeSpanStringBuilder, String str, Drawable drawable, String str2, Drawable drawable2, Drawable drawable3, Function1 function1, List list, int i, Object obj) {
             return model.copy((i & 1) != 0 ? model.noticeTitle : charSequence, (i & 2) != 0 ? model.noticeSubtitle : charSequence2, (i & 4) != 0 ? model.noticeBody : draweeSpanStringBuilder, (i & 8) != 0 ? model.noticeIconUrl : str, (i & 16) != 0 ? model.noticeBodyBackgroundDrawable : drawable, (i & 32) != 0 ? model.noticeBodyImageUrl : str2, (i & 64) != 0 ? model.noticeBodyImageDrawable : drawable2, (i & 128) != 0 ? model.noticeIconTopRight : drawable3, (i & 256) != 0 ? model.onClickTopRightIcon : function1, (i & 512) != 0 ? model.noticeStickers : list);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final CharSequence getNoticeTitle() {
             return this.noticeTitle;
         }
@@ -103,37 +104,37 @@ public final class NoticePopupChannel {
             return this.noticeStickers;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final CharSequence getNoticeSubtitle() {
             return this.noticeSubtitle;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final DraweeSpanStringBuilder getNoticeBody() {
             return this.noticeBody;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getNoticeIconUrl() {
             return this.noticeIconUrl;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final Drawable getNoticeBodyBackgroundDrawable() {
             return this.noticeBodyBackgroundDrawable;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final String getNoticeBodyImageUrl() {
             return this.noticeBodyImageUrl;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final Drawable getNoticeBodyImageDrawable() {
             return this.noticeBodyImageDrawable;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final Drawable getNoticeIconTopRight() {
             return this.noticeIconTopRight;
         }
@@ -259,8 +260,8 @@ public final class NoticePopupChannel {
         }
     }
 
-    /* compiled from: NoticePopupChannel.kt */
-    /* renamed from: com.discord.widgets.notice.NoticePopupChannel$enqueue$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.notice.NoticePopupChannel$enqueue$1 */
+    /* JADX INFO: compiled from: NoticePopupChannel.kt */
     public static final /* synthetic */ class C90931 extends FunctionReferenceImpl implements Function9<Context, Message, Guild, Channel, Map<Long, ? extends GuildMember>, Long, User, Map<Long, ? extends String>, Map<Long, ? extends GuildRole>, Model> {
         public C90931(NoticePopupChannel noticePopupChannel) {
             super(9, noticePopupChannel, NoticePopupChannel.class, "createModel", "createModel(Landroid/content/Context;Lcom/discord/models/message/Message;Lcom/discord/models/guild/Guild;Lcom/discord/api/channel/Channel;Ljava/util/Map;Ljava/lang/Long;Lcom/discord/models/user/User;Ljava/util/Map;Ljava/util/Map;)Lcom/discord/widgets/notice/NoticePopupChannel$Model;", 0);
@@ -271,7 +272,7 @@ public final class NoticePopupChannel {
             return invoke2(context, message, guild, channel, (Map<Long, GuildMember>) map, l, user, (Map<Long, String>) map2, (Map<Long, GuildRole>) map3);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Model invoke2(Context context, Message message, Guild guild, Channel channel, Map<Long, GuildMember> map, Long l, User user, Map<Long, String> map2, Map<Long, GuildRole> map3) {
             Intrinsics3.checkNotNullParameter(context, "p1");
             Intrinsics3.checkNotNullParameter(message, "p2");
@@ -283,8 +284,8 @@ public final class NoticePopupChannel {
         }
     }
 
-    /* compiled from: NoticePopupChannel.kt */
-    /* renamed from: com.discord.widgets.notice.NoticePopupChannel$enqueue$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.notice.NoticePopupChannel$enqueue$2 */
+    /* JADX INFO: compiled from: NoticePopupChannel.kt */
     public static final class C90942 extends Lambda implements Function1<Model, Unit> {
         public final /* synthetic */ String $noticeName;
         public final /* synthetic */ Function1 $onClick;
@@ -302,7 +303,7 @@ public final class NoticePopupChannel {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             if (model != null) {
                 NoticePopup.enqueue$default(NoticePopup.INSTANCE, this.$noticeName, model.getNoticeTitle(), model.getNoticeSubtitle(), model.getNoticeBody(), model.getNoticeBodyBackgroundDrawable(), model.getNoticeBodyImageUrl(), model.getNoticeBodyImageDrawable(), model.getNoticeStickers(), model.getNoticeIconUrl(), null, model.getNoticeIconTopRight(), null, null, model.getOnClickTopRightIcon(), this.$onClick, 6656, null);
@@ -334,8 +335,7 @@ public final class NoticePopupChannel {
         int i;
         Object proxyUrl;
         Object drawable$default;
-        Object obj;
-        Object obj2;
+        Object drawable$default2;
         MessageEmbed messageEmbed;
         if (channel != null) {
             long id2 = channel.getId();
@@ -399,24 +399,21 @@ public final class NoticePopupChannel {
                         proxyUrl = r0.getProxyUrl();
                     } else {
                         if ((r0 != 0 ? r0.m8068e() : num) == MessageAttachmentType.VIDEO) {
-                            Object drawable$default2 = DrawableCompat.getDrawable$default(context, C5419R.drawable.rounded_rectangle_4dp_radius, ColorCompat.getThemedColor(context2, C5419R.attr.colorBackgroundSecondary), false, 4, null);
-                            drawable$default = DrawableCompat.getDrawable$default(context, C5419R.drawable.ic_play_circle_outline_white_24dp, ColorCompat.getThemedColor(context2, C5419R.attr.colorInteractiveActive), false, 4, null);
-                            obj = num;
-                            obj2 = drawable$default2;
+                            drawable$default = DrawableCompat.getDrawable$default(context, C5419R.drawable.rounded_rectangle_4dp_radius, ColorCompat.getThemedColor(context2, C5419R.attr.colorBackgroundSecondary), false, 4, null);
+                            drawable$default2 = DrawableCompat.getDrawable$default(context, C5419R.drawable.ic_play_circle_outline_white_24dp, ColorCompat.getThemedColor(context2, C5419R.attr.colorInteractiveActive), false, 4, null);
+                            proxyUrl = num;
                         } else {
                             proxyUrl = num;
                         }
                     }
-                    drawable$default = num;
-                    obj2 = drawable$default;
-                    obj = proxyUrl;
+                    drawable$default2 = num;
+                    drawable$default = drawable$default2;
                 } else {
-                    drawable$default = ContextCompat.getDrawable(context2, DrawableCompat.getThemedDrawableRes$default(context2, C5419R.attr.theme_chat_spoiler_inapp_bg, 0, i, num));
-                    Object obj3 = num;
-                    obj2 = obj3;
-                    obj = obj3;
+                    drawable$default2 = ContextCompat.getDrawable(context2, DrawableCompat.getThemedDrawableRes$default(context2, C5419R.attr.theme_chat_spoiler_inapp_bg, 0, i, num));
+                    proxyUrl = num;
+                    drawable$default = proxyUrl;
                 }
-                return new Model(str2, str3, draweeSpanStringBuilder2, str4, obj2, obj, drawable$default, ContextCompat.getDrawable(context2, DrawableCompat.getThemedDrawableRes$default(context2, ChannelUtils.m7667B(channel) ? C5419R.attr.ic_close_24dp : C5419R.attr.ic_settings, 0, i, num)), new NoticePopupChannel3(channel2, context2), message.getStickers());
+                return new Model(str2, str3, draweeSpanStringBuilder2, str4, drawable$default, proxyUrl, drawable$default2, ContextCompat.getDrawable(context2, DrawableCompat.getThemedDrawableRes$default(context2, ChannelUtils.m7667B(channel) ? C5419R.attr.ic_close_24dp : C5419R.attr.ic_settings, 0, i, num)), new NoticePopupChannel3(channel2, context2), message.getStickers());
             }
         }
         return null;

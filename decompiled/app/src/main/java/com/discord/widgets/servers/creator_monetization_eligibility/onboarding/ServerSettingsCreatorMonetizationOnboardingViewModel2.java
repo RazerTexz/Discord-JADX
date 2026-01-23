@@ -7,9 +7,9 @@ import com.discord.widgets.servers.creator_monetization_eligibility.onboarding.S
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
-/* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel$Companion$observeStores$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel$Companion$observeStores$1, reason: use source file name */
+/* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ServerSettingsCreatorMonetizationOnboardingViewModel2 extends Lambda implements Function0<ServerSettingsCreatorMonetizationOnboardingViewModel.StoreState> {
     public final /* synthetic */ long $guildId;
     public final /* synthetic */ StoreGuilds $guilds;

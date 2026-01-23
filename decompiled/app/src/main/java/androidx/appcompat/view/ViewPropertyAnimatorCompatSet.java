@@ -9,8 +9,8 @@ import androidx.core.view.ViewPropertyAnimatorListenerAdapter;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ViewPropertyAnimatorCompatSet {
     private Interpolator mInterpolator;
     private boolean mIsStarted;
@@ -19,7 +19,7 @@ public class ViewPropertyAnimatorCompatSet {
     private final ViewPropertyAnimatorListenerAdapter mProxyListener = new C00811();
     public final ArrayList<ViewPropertyAnimatorCompat> mAnimators = new ArrayList<>();
 
-    /* renamed from: androidx.appcompat.view.ViewPropertyAnimatorCompatSet$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.view.ViewPropertyAnimatorCompatSet$1 */
     public class C00811 extends ViewPropertyAnimatorListenerAdapter {
         private boolean mProxyStarted = false;
         private int mProxyEndCount = 0;

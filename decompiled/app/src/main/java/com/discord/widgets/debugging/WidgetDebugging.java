@@ -54,25 +54,25 @@ import p658rx.functions.Action2;
 import p658rx.functions.Func2;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetDebugging.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetDebugging.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDebugging extends AppFragment {
     private static final int COLLAPSED_MAX_LINES = 2;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final BehaviorSubject<Boolean> filterSubject;
     private Adapter logsAdapter;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetDebugging.class, "binding", "getBinding()Lcom/discord/databinding/WidgetDebuggingBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetDebugging.kt */
+    /* JADX INFO: compiled from: WidgetDebugging.kt */
     public static final class Adapter extends MGRecyclerAdapterSimple<AppLog.LoggedItem> {
 
-        /* compiled from: WidgetDebugging.kt */
-        /* renamed from: com.discord.widgets.debugging.WidgetDebugging$Adapter$1 */
+        /* JADX INFO: renamed from: com.discord.widgets.debugging.WidgetDebugging$Adapter$1 */
+        /* JADX INFO: compiled from: WidgetDebugging.kt */
         public static final class C82631 extends Lambda implements Function2<List<? extends AppLog.LoggedItem>, List<? extends AppLog.LoggedItem>, Unit> {
             public final /* synthetic */ RecyclerView $recycler;
 
@@ -88,7 +88,7 @@ public final class WidgetDebugging extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<AppLog.LoggedItem> list, List<AppLog.LoggedItem> list2) {
                 Intrinsics3.checkNotNullParameter(list, "<anonymous parameter 0>");
                 Intrinsics3.checkNotNullParameter(list2, "<anonymous parameter 1>");
@@ -100,7 +100,7 @@ public final class WidgetDebugging extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetDebugging.kt */
+        /* JADX INFO: compiled from: WidgetDebugging.kt */
         public static final class Item extends MGRecyclerViewHolder<Adapter, AppLog.LoggedItem> {
             private final WidgetDebuggingAdapterItemBinding binding;
 
@@ -134,7 +134,7 @@ public final class WidgetDebugging extends AppFragment {
 
             /* JADX WARN: Removed duplicated region for block: B:7:0x0046  */
             @SuppressLint({"SetTextI18n"})
-            /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
             /*
                 Code decompiled incorrectly, please refer to instructions dump.
             */
@@ -207,7 +207,7 @@ public final class WidgetDebugging extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetDebugging.kt */
+    /* JADX INFO: compiled from: WidgetDebugging.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -222,7 +222,7 @@ public final class WidgetDebugging extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetDebugging.kt */
+    /* JADX INFO: compiled from: WidgetDebugging.kt */
     public static final /* data */ class Model {
         private final boolean isFiltered;
         private final List<AppLog.LoggedItem> logs;
@@ -248,7 +248,7 @@ public final class WidgetDebugging extends AppFragment {
             return this.logs;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsFiltered() {
             return this.isFiltered;
         }
@@ -274,15 +274,18 @@ public final class WidgetDebugging extends AppFragment {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             List<AppLog.LoggedItem> list = this.logs;
             int iHashCode = (list != null ? list.hashCode() : 0) * 31;
             boolean z2 = this.isFiltered;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public final boolean isFiltered() {
@@ -297,8 +300,8 @@ public final class WidgetDebugging extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetDebugging.kt */
-    /* renamed from: com.discord.widgets.debugging.WidgetDebugging$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.debugging.WidgetDebugging$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetDebugging.kt */
     public static final class C82641<T1, T2> implements Action2<MenuItem, Context> {
         public C82641() {
         }
@@ -308,7 +311,7 @@ public final class WidgetDebugging extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != C5419R.id.menu_debugging_filter) {
@@ -320,8 +323,8 @@ public final class WidgetDebugging extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetDebugging.kt */
-    /* renamed from: com.discord.widgets.debugging.WidgetDebugging$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.debugging.WidgetDebugging$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetDebugging.kt */
     public static final class C82652<T> implements Action1<Menu> {
         public final /* synthetic */ Model $model;
 
@@ -334,7 +337,7 @@ public final class WidgetDebugging extends AppFragment {
             call2(menu);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Menu menu) {
             MenuItem menuItemFindItem = menu.findItem(C5419R.id.menu_debugging_filter);
             Intrinsics3.checkNotNullExpressionValue(menuItemFindItem, "menu.findItem(R.id.menu_debugging_filter)");
@@ -342,8 +345,8 @@ public final class WidgetDebugging extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetDebugging.kt */
-    /* renamed from: com.discord.widgets.debugging.WidgetDebugging$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.debugging.WidgetDebugging$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetDebugging.kt */
     public static final class C82661<T, R> implements Func1<List<AppLog.LoggedItem>, Boolean> {
         public static final C82661 INSTANCE = new C82661();
 
@@ -352,15 +355,15 @@ public final class WidgetDebugging extends AppFragment {
             return call2(list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(List<AppLog.LoggedItem> list) {
             Intrinsics3.checkNotNullExpressionValue(list, "it");
             return Boolean.valueOf(!list.isEmpty());
         }
     }
 
-    /* compiled from: WidgetDebugging.kt */
-    /* renamed from: com.discord.widgets.debugging.WidgetDebugging$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.debugging.WidgetDebugging$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetDebugging.kt */
     public static final class C82672<T1, T2, R> implements Func2<List<? extends AppLog.LoggedItem>, List<AppLog.LoggedItem>, List<? extends AppLog.LoggedItem>> {
         public static final C82672 INSTANCE = new C82672();
 
@@ -369,7 +372,7 @@ public final class WidgetDebugging extends AppFragment {
             return call2((List<AppLog.LoggedItem>) list, list2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<AppLog.LoggedItem> call2(List<AppLog.LoggedItem> list, List<AppLog.LoggedItem> list2) {
             Intrinsics3.checkNotNullExpressionValue(list, "existingLogs");
             Intrinsics3.checkNotNullExpressionValue(list2, "newLogs");
@@ -377,8 +380,8 @@ public final class WidgetDebugging extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetDebugging.kt */
-    /* renamed from: com.discord.widgets.debugging.WidgetDebugging$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.debugging.WidgetDebugging$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetDebugging.kt */
     public static final class C82683<T1, T2, R> implements Func2<List<? extends AppLog.LoggedItem>, Boolean, Model> {
         public static final C82683 INSTANCE = new C82683();
 
@@ -387,7 +390,7 @@ public final class WidgetDebugging extends AppFragment {
             return call2((List<AppLog.LoggedItem>) list, bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Model call2(List<AppLog.LoggedItem> list, Boolean bool) {
             Intrinsics3.checkNotNullExpressionValue(bool, "isFiltered");
             if (bool.booleanValue()) {
@@ -404,8 +407,8 @@ public final class WidgetDebugging extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetDebugging.kt */
-    /* renamed from: com.discord.widgets.debugging.WidgetDebugging$onViewBoundOrOnResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.debugging.WidgetDebugging$onViewBoundOrOnResume$4 */
+    /* JADX INFO: compiled from: WidgetDebugging.kt */
     public static final /* synthetic */ class C82694 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C82694(WidgetDebugging widgetDebugging) {
             super(1, widgetDebugging, WidgetDebugging.class, "configureUI", "configureUI(Lcom/discord/widgets/debugging/WidgetDebugging$Model;)V", 0);
@@ -417,7 +420,7 @@ public final class WidgetDebugging extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "p1");
             WidgetDebugging.access$configureUI((WidgetDebugging) this.receiver, model);

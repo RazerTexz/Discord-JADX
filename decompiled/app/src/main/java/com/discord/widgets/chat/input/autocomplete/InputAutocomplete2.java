@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function0;
 import org.objectweb.asm.Opcodes;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: InputAutocomplete.kt */
-/* renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: InputAutocomplete.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class InputAutocomplete2 extends Lambda implements Function0<AutocompleteViewModel> {
     public final /* synthetic */ InputAutocomplete this$0;
 

@@ -74,19 +74,19 @@ import p658rx.functions.Action1;
 import p658rx.functions.Action2;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetContactSync.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetContactSync.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetContactSync extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetContactSync.class, "binding", "getBinding()Lcom/discord/databinding/WidgetContactSyncBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_CONTACT_SYNC_ALLOW_EMAIL = "INTENT_EXTRA_CONTACT_SYNC_ALLOW_EMAIL";
     private static final String INTENT_EXTRA_CONTACT_SYNC_ALLOW_PHONE = "INTENT_EXTRA_CONTACT_SYNC_ALLOW_PHONE";
     private static final String INTENT_EXTRA_CONTACT_SYNC_IMMEDIATELY_PROCEED = "INTENT_EXTRA_CONTACT_SYNC_IMMEDIATELY_PROCEED";
     private static final String INTENT_EXTRA_CONTACT_SYNC_MODE = "INTENT_EXTRA_CONTACT_SYNC_MODE";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ActivityResultLauncher<Intent> captchaLauncher;
     private final TrackImpressionMetadata contactSyncFlowMetadata;
@@ -95,10 +95,10 @@ public final class WidgetContactSync extends AppFragment {
     private final AppLogger2 loggingConfig;
     private String phoneNumber;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetContactSync.kt */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -143,8 +143,8 @@ public final class WidgetContactSync extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureToolbar$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureToolbar$1 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class C82251<T1, T2> implements Action2<MenuItem, Context> {
         public C82251() {
         }
@@ -154,7 +154,7 @@ public final class WidgetContactSync extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != C5419R.id.menu_contact_sync_skip) {
@@ -164,8 +164,8 @@ public final class WidgetContactSync extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureToolbar$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureToolbar$2 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class C82262<T> implements Action1<Menu> {
         public final /* synthetic */ WidgetContactSyncViewModel.ToolbarConfig $toolbarConfig;
 
@@ -178,7 +178,7 @@ public final class WidgetContactSync extends AppFragment {
             call2(menu);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Menu menu) {
             MenuItem menuItemFindItem = menu.findItem(C5419R.id.menu_contact_sync_skip);
             Intrinsics3.checkNotNullExpressionValue(menuItemFindItem, "menu.findItem(R.id.menu_contact_sync_skip)");
@@ -186,8 +186,8 @@ public final class WidgetContactSync extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureToolbar$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureToolbar$3 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class C82273<R> implements Func0<Boolean> {
         public final /* synthetic */ WidgetContactSyncViewModel.ToolbarConfig $toolbarConfig;
 
@@ -210,8 +210,8 @@ public final class WidgetContactSync extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class ViewOnClickListenerC82281 implements View.OnClickListener {
         public static final ViewOnClickListenerC82281 INSTANCE = new ViewOnClickListenerC82281();
 
@@ -228,8 +228,8 @@ public final class WidgetContactSync extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$10 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$10 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class ViewOnClickListenerC822910 implements View.OnClickListener {
         public final /* synthetic */ WidgetContactSyncViewModel.ViewState $viewState;
 
@@ -247,8 +247,8 @@ public final class WidgetContactSync extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$11 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$11 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class ViewOnClickListenerC823011 implements View.OnClickListener {
         public ViewOnClickListenerC823011() {
         }
@@ -259,8 +259,8 @@ public final class WidgetContactSync extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class ViewOnClickListenerC82312 implements View.OnClickListener {
         public ViewOnClickListenerC82312() {
         }
@@ -271,8 +271,8 @@ public final class WidgetContactSync extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class ViewOnClickListenerC82323 implements View.OnClickListener {
         public ViewOnClickListenerC82323() {
         }
@@ -286,8 +286,8 @@ public final class WidgetContactSync extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class C82334 extends Lambda implements Function1<RenderContext, Unit> {
         public C82334() {
             super(1);
@@ -299,12 +299,12 @@ public final class WidgetContactSync extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* compiled from: WidgetContactSync.kt */
-        /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetContactSync.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
 
-            /* compiled from: WidgetContactSync.kt */
-            /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$4$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$4$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: WidgetContactSync.kt */
             public static final class C132851 extends Lambda implements Function1<View, Unit> {
                 public C132851() {
                     super(1);
@@ -316,7 +316,7 @@ public final class WidgetContactSync extends AppFragment {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(View view) {
                     Intrinsics3.checkNotNullParameter(view, "it");
                     AnalyticsTracker.INSTANCE.openPopout("Contact Sync", new Traits.Location("Contact Sync Learn More", null, null, null, null, 30, null));
@@ -331,7 +331,7 @@ public final class WidgetContactSync extends AppFragment {
                 super(1);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
                 Intrinsics3.checkNotNullParameter(hook, "$receiver");
                 hook.styles.add(new ClickableSpan(Integer.valueOf(ColorCompat.getColor(WidgetContactSync.this.getContext(), C5419R.color.link)), false, null, new C132851(), 4, null));
@@ -344,15 +344,15 @@ public final class WidgetContactSync extends AppFragment {
             }
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8422a("learnMoreHook", new AnonymousClass1());
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class ViewOnClickListenerC82345 implements View.OnClickListener {
         public ViewOnClickListenerC82345() {
         }
@@ -366,8 +366,8 @@ public final class WidgetContactSync extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$6 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class ViewOnClickListenerC82356 implements View.OnClickListener {
         public ViewOnClickListenerC82356() {
         }
@@ -378,8 +378,8 @@ public final class WidgetContactSync extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$7 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class ViewOnClickListenerC82367 implements View.OnClickListener {
         public ViewOnClickListenerC82367() {
         }
@@ -390,8 +390,8 @@ public final class WidgetContactSync extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$8 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class C82378 extends Lambda implements Function0<Unit> {
         public C82378() {
             super(0);
@@ -403,14 +403,14 @@ public final class WidgetContactSync extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetContactSync.access$handlePhoneNumberTextChanged(WidgetContactSync.this);
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$configureUI$9 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class C82389 extends Lambda implements Function1<String, Unit> {
         public C82389() {
             super(1);
@@ -422,15 +422,15 @@ public final class WidgetContactSync extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_CODE);
             WidgetContactSync.access$getViewModel$p(WidgetContactSync.this).onVerifyPhone(str);
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class C82392 extends Lambda implements Function2<Long, Boolean, Unit> {
         public C82392() {
             super(2);
@@ -447,8 +447,8 @@ public final class WidgetContactSync extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class C82401 extends Lambda implements Function1<WidgetContactSyncViewModel.ViewState, Unit> {
         public C82401() {
             super(1);
@@ -460,15 +460,15 @@ public final class WidgetContactSync extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetContactSyncViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetContactSync.access$configureUI(WidgetContactSync.this, viewState);
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class C82412 extends Lambda implements Function1<WidgetContactSyncViewModel.Event, Unit> {
         public C82412() {
             super(1);
@@ -480,15 +480,15 @@ public final class WidgetContactSync extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetContactSyncViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "it");
             WidgetContactSync.access$handleEvent(WidgetContactSync.this, event);
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$requestContactsPermissions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$requestContactsPermissions$1 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class C82421 extends Lambda implements Function0<Unit> {
         public C82421() {
             super(0);
@@ -500,14 +500,14 @@ public final class WidgetContactSync extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetContactSync.access$onPermissionsGranted(WidgetContactSync.this);
         }
     }
 
-    /* compiled from: WidgetContactSync.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSync$requestContactsPermissions$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSync$requestContactsPermissions$2 */
+    /* JADX INFO: compiled from: WidgetContactSync.kt */
     public static final class C82432 extends Lambda implements Function0<Unit> {
         public C82432() {
             super(0);
@@ -519,7 +519,7 @@ public final class WidgetContactSync extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetContactSync.access$onPermissionsDenied(WidgetContactSync.this);
         }

@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StageInstance.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StageInstance.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class StageInstance {
     private final long channelId;
     private final long guildId;
@@ -14,27 +14,27 @@ public final /* data */ class StageInstance {
     private final StageInstancePrivacyLevel privacyLevel;
     private final String topic;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final String getInviteCode() {
         return this.inviteCode;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final StageInstancePrivacyLevel getPrivacyLevel() {
         return this.privacyLevel;
     }
@@ -50,7 +50,7 @@ public final /* data */ class StageInstance {
         return this.id == stageInstance.id && this.guildId == stageInstance.guildId && this.channelId == stageInstance.channelId && Intrinsics3.areEqual(this.topic, stageInstance.topic) && Intrinsics3.areEqual(this.privacyLevel, stageInstance.privacyLevel) && Intrinsics3.areEqual(this.inviteCode, stageInstance.inviteCode);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final String getTopic() {
         return this.topic;
     }

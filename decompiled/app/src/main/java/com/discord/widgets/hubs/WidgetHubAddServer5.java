@@ -5,9 +5,9 @@ import com.discord.api.science.AnalyticsSchema;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHubAddServer.kt */
-/* renamed from: com.discord.widgets.hubs.WidgetHubAddServer$loggingConfig$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAddServer$loggingConfig$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubAddServer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubAddServer5 extends Lambda implements Function0<AnalyticsSchema> {
     public static final WidgetHubAddServer5 INSTANCE = new WidgetHubAddServer5();
 

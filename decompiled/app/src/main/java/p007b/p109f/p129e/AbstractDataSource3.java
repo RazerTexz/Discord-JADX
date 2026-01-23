@@ -7,46 +7,46 @@ import java.util.Objects;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executor;
 
-/* compiled from: AbstractDataSource.java */
-/* renamed from: b.f.e.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.e.c, reason: use source file name */
+/* JADX INFO: compiled from: AbstractDataSource.java */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class AbstractDataSource3<T> implements DataSource<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Map<String, Object> f3152a;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public T f3155d = null;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Throwable f3156e = null;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public float f3157f = 0.0f;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f3154c = false;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f3153b = 1;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final ConcurrentLinkedQueue<Pair<DataSubscriber<T>, Executor>> f3158g = new ConcurrentLinkedQueue<>();
 
     @Override // com.facebook.datasource.DataSource
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Map<String, Object> mo1017a() {
         return this.f3152a;
     }
 
     @Override // com.facebook.datasource.DataSource
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized boolean mo1018b() {
         return this.f3155d != null;
     }
 
     @Override // com.facebook.datasource.DataSource
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public synchronized boolean mo1019c() {
         return this.f3153b != 1;
     }
@@ -74,19 +74,19 @@ public abstract class AbstractDataSource3<T> implements DataSource<T> {
     }
 
     @Override // com.facebook.datasource.DataSource
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public synchronized Throwable mo1020d() {
         return this.f3156e;
     }
 
     @Override // com.facebook.datasource.DataSource
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean mo1021e() {
         return false;
     }
 
     @Override // com.facebook.datasource.DataSource
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1022f(DataSubscriber<T> dataSubscriber, Executor executor) {
         Objects.requireNonNull(executor);
         synchronized (this) {
@@ -106,7 +106,7 @@ public abstract class AbstractDataSource3<T> implements DataSource<T> {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1023g(T t) {
     }
 
@@ -120,17 +120,17 @@ public abstract class AbstractDataSource3<T> implements DataSource<T> {
         return this.f3155d;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public synchronized boolean m1024h() {
         return this.f3153b == 3;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public synchronized boolean m1025i() {
         return this.f3154c;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void m1026j() {
         boolean zM1024h = m1024h();
         boolean zM1030n = m1030n();
@@ -139,7 +139,7 @@ public abstract class AbstractDataSource3<T> implements DataSource<T> {
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean m1027k(Throwable th, Map<String, Object> map) {
         boolean z2;
         synchronized (this) {
@@ -158,7 +158,7 @@ public abstract class AbstractDataSource3<T> implements DataSource<T> {
         return z2;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean m1028l(float f) {
         boolean z2;
         synchronized (this) {
@@ -176,7 +176,7 @@ public abstract class AbstractDataSource3<T> implements DataSource<T> {
         return z2;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean m1029m(T t, boolean z2, Map<String, Object> map) throws Throwable {
         T t2;
         this.f3152a = map;
@@ -247,7 +247,7 @@ public abstract class AbstractDataSource3<T> implements DataSource<T> {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:8:0x000f  */
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

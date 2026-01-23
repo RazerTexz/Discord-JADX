@@ -37,7 +37,7 @@ import org.eclipse.jdt.internal.compiler.lookup.TypeConstants;
 import org.eclipse.jdt.internal.compiler.lookup.TypeVariableBinding;
 import org.eclipse.jdt.internal.compiler.problem.AbortCompilation;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/agent/PatchVal.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/agent/PatchVal.SCL.lombok */
 public class PatchVal {
     public static TypeBinding skipResolveInitializerIfAlreadyCalled(Expression expr, BlockScope scope) {
         if (expr.resolvedType != null) {
@@ -178,7 +178,7 @@ public class PatchVal {
         return false;
     }
 
-    /* renamed from: is */
+    /* JADX INFO: renamed from: is */
     private static boolean m10928is(TypeReference ref, BlockScope scope, String key) {
         Scope s2;
         Scope scope2 = scope.parent;
@@ -216,7 +216,7 @@ public class PatchVal {
         return matches(key, fullName);
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/agent/PatchVal$Reflection.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/agent/PatchVal$Reflection.SCL.lombok */
     public static final class Reflection {
         private static final Field initCopyField;
         private static final Field iterableCopyField;
@@ -354,7 +354,8 @@ public class PatchVal {
         return newAnn;
     }
 
-    private static TypeBinding getForEachComponentType(Expression collection, BlockScope scope) throws AbortCompilation, IllegalArgumentException {
+    /* JADX INFO: Thrown type has an unknown type hierarchy: org.eclipse.jdt.internal.compiler.problem.AbortCompilation */
+    private static TypeBinding getForEachComponentType(Expression collection, BlockScope scope) throws AbortCompilation {
         if (collection != null) {
             TypeBinding resolved = collection.resolvedType;
             if (resolved == null) {
@@ -392,7 +393,7 @@ public class PatchVal {
     }
 
     /* JADX INFO: Thrown type has an unknown type hierarchy: org.eclipse.jdt.internal.compiler.problem.AbortCompilation */
-    private static TypeBinding resolveForExpression(Expression collection, BlockScope scope) throws AbortCompilation, IllegalArgumentException {
+    private static TypeBinding resolveForExpression(Expression collection, BlockScope scope) throws AbortCompilation {
         try {
             return collection.resolveType(scope);
         } catch (ArrayIndexOutOfBoundsException unused) {
@@ -441,7 +442,7 @@ public class PatchVal {
         }
     }
 
-    private static void clearIgnoreFurtherInvestigationField(ReferenceContext currentContext) throws IllegalArgumentException {
+    private static void clearIgnoreFurtherInvestigationField(ReferenceContext currentContext) {
         if (currentContext instanceof AbstractMethodDeclaration) {
             AbstractMethodDeclaration methodDeclaration = (AbstractMethodDeclaration) currentContext;
             methodDeclaration.ignoreFurtherInvestigation = false;
@@ -484,7 +485,7 @@ public class PatchVal {
         }
     }
 
-    private static void setValue(Field field, Object object, Object value) throws IllegalArgumentException {
+    private static void setValue(Field field, Object object, Object value) {
         try {
             field.set(object, value);
         } catch (IllegalAccessException e) {

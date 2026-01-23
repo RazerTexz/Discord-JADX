@@ -14,42 +14,42 @@ import p007b.p225i.p226a.p288f.p291b.C3180f;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3401c;
 import p007b.p225i.p226a.p288f.p299e.p308o.InterfaceC3400b;
 
+/* JADX INFO: renamed from: b.i.a.f.h.j.g */
+/* JADX INFO: loaded from: classes3.dex */
 @SuppressLint({"StaticFieldLeak"})
-/* renamed from: b.i.a.f.h.j.g */
-/* loaded from: classes3.dex */
 public class C3515g {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static volatile C3515g f9721a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Context f9722b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Context f9723c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final InterfaceC3400b f9724d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final C3554z f9725e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final C3529m0 f9726f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final C3180f f9727g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final C3497a f9728h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final C3504c0 f9729i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final C3499a1 f9730j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final C3535p0 f9731k;
 
     public C3515g(C3520i c3520i) {
@@ -110,13 +110,13 @@ public class C3515g {
         c3538r.m4435q().m3968a(new RunnableC3544u(c3538r));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m4449a(AbstractC3509e abstractC3509e) {
         AnimatableValueParser.m595z(abstractC3509e, "Analytics service not created/initialized");
         AnimatableValueParser.m551o(abstractC3509e.m4442I(), "Analytics service not initialized");
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static C3515g m4450b(Context context) {
         Objects.requireNonNull(context, "null reference");
         if (f9721a == null) {
@@ -146,19 +146,19 @@ public class C3515g {
         return f9721a;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final C3529m0 m4451c() {
         m4449a(this.f9726f);
         return this.f9726f;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final C3180f m4452d() {
         Objects.requireNonNull(this.f9727g, "null reference");
         return this.f9727g;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final C3497a m4453e() {
         m4449a(this.f9728h);
         return this.f9728h;

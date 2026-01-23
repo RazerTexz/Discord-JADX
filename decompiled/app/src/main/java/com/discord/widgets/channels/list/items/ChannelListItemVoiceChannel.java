@@ -7,8 +7,8 @@ import com.discord.widgets.channels.list.WidgetChannelListUnreads;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelListItemVoiceChannel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemVoiceChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelListItemVoiceChannel implements ChannelListItem, ChannelListVocalItem, WidgetChannelListUnreads.UnreadItem {
     private final Channel channel;
     private final GuildMaxVideoChannelUsers guildMaxVideoChannelUsers;
@@ -59,42 +59,42 @@ public final /* data */ class ChannelListItemVoiceChannel implements ChannelList
         return getChannel();
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final boolean getIsAnyoneUsingVideo() {
         return this.isAnyoneUsingVideo;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final GuildMaxVideoChannelUsers getGuildMaxVideoChannelUsers() {
         return this.guildMaxVideoChannelUsers;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final boolean getIsGuildRoleSubscriptionLockedChannel() {
         return this.isGuildRoleSubscriptionLockedChannel;
     }
 
-    /* renamed from: component13, reason: from getter */
+    /* JADX INFO: renamed from: component13, reason: from getter */
     public final boolean getIsGuildRoleSubscriptionChannel() {
         return this.isGuildRoleSubscriptionChannel;
     }
 
-    /* renamed from: component14, reason: from getter */
+    /* JADX INFO: renamed from: component14, reason: from getter */
     public final GuildScheduledEvent getGuildScheduledEvent() {
         return this.guildScheduledEvent;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getTextSelected() {
         return this.textSelected;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getVoiceSelected() {
         return this.voiceSelected;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Long getPermission() {
         return this.permission;
     }
@@ -111,12 +111,12 @@ public final /* data */ class ChannelListItemVoiceChannel implements ChannelList
         return getNumUsersConnected();
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getIsLocked() {
         return this.isLocked;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final boolean getIsNsfw() {
         return this.isNsfw;
     }
@@ -184,59 +184,83 @@ public final /* data */ class ChannelListItemVoiceChannel implements ChannelList
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v11, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v28 */
+    /* JADX WARN: Type inference failed for: r0v30 */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v13, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v15, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v17, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v22, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v25 */
+    /* JADX WARN: Type inference failed for: r2v27 */
+    /* JADX WARN: Type inference failed for: r2v28 */
+    /* JADX WARN: Type inference failed for: r2v29 */
+    /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v31 */
+    /* JADX WARN: Type inference failed for: r2v32 */
+    /* JADX WARN: Type inference failed for: r2v33 */
+    /* JADX WARN: Type inference failed for: r2v34 */
+    /* JADX WARN: Type inference failed for: r2v35 */
+    /* JADX WARN: Type inference failed for: r2v36 */
+    /* JADX WARN: Type inference failed for: r2v37 */
+    /* JADX WARN: Type inference failed for: r2v38 */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         Channel channel = getChannel();
         int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
         boolean z2 = this.textSelected;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode + i) * 31;
+        int i = (iHashCode + r2) * 31;
         boolean z3 = this.voiceSelected;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r22 = z3;
+        if (z3) {
+            r22 = 1;
         }
-        int i4 = (i2 + i3) * 31;
+        int i2 = (i + r22) * 31;
         Long l = this.permission;
-        int mentionCount = (getMentionCount() + ((i4 + (l != null ? l.hashCode() : 0)) * 31)) * 31;
+        int mentionCount = (getMentionCount() + ((i2 + (l != null ? l.hashCode() : 0)) * 31)) * 31;
         boolean isUnread = getIsUnread();
-        int i5 = isUnread;
+        ?? r0 = isUnread;
         if (isUnread) {
-            i5 = 1;
+            r0 = 1;
         }
-        int numUsersConnected = (getNumUsersConnected() + ((mentionCount + i5) * 31)) * 31;
+        int numUsersConnected = (getNumUsersConnected() + ((mentionCount + r0) * 31)) * 31;
         boolean z4 = this.isLocked;
-        int i6 = z4;
-        if (z4 != 0) {
-            i6 = 1;
+        ?? r23 = z4;
+        if (z4) {
+            r23 = 1;
         }
-        int i7 = (numUsersConnected + i6) * 31;
+        int i3 = (numUsersConnected + r23) * 31;
         boolean z5 = this.isNsfw;
-        int i8 = z5;
-        if (z5 != 0) {
-            i8 = 1;
+        ?? r24 = z5;
+        if (z5) {
+            r24 = 1;
         }
-        int i9 = (i7 + i8) * 31;
+        int i4 = (i3 + r24) * 31;
         boolean z6 = this.isAnyoneUsingVideo;
-        int i10 = z6;
-        if (z6 != 0) {
-            i10 = 1;
+        ?? r25 = z6;
+        if (z6) {
+            r25 = 1;
         }
-        int i11 = (i9 + i10) * 31;
+        int i5 = (i4 + r25) * 31;
         GuildMaxVideoChannelUsers guildMaxVideoChannelUsers = this.guildMaxVideoChannelUsers;
-        int iHashCode2 = (i11 + (guildMaxVideoChannelUsers != null ? guildMaxVideoChannelUsers.hashCode() : 0)) * 31;
+        int iHashCode2 = (i5 + (guildMaxVideoChannelUsers != null ? guildMaxVideoChannelUsers.hashCode() : 0)) * 31;
         boolean z7 = this.isGuildRoleSubscriptionLockedChannel;
-        int i12 = z7;
-        if (z7 != 0) {
-            i12 = 1;
+        ?? r26 = z7;
+        if (z7) {
+            r26 = 1;
         }
-        int i13 = (iHashCode2 + i12) * 31;
+        int i6 = (iHashCode2 + r26) * 31;
         boolean z8 = this.isGuildRoleSubscriptionChannel;
-        int i14 = (i13 + (z8 ? 1 : z8 ? 1 : 0)) * 31;
+        int i7 = (i6 + (z8 ? 1 : z8)) * 31;
         GuildScheduledEvent guildScheduledEvent = this.guildScheduledEvent;
-        return i14 + (guildScheduledEvent != null ? guildScheduledEvent.hashCode() : 0);
+        return i7 + (guildScheduledEvent != null ? guildScheduledEvent.hashCode() : 0);
     }
 
     public final boolean isAnyoneUsingVideo() {
@@ -260,7 +284,7 @@ public final /* data */ class ChannelListItemVoiceChannel implements ChannelList
     }
 
     @Override // com.discord.widgets.channels.list.WidgetChannelListUnreads.UnreadItem
-    /* renamed from: isUnread, reason: from getter */
+    /* JADX INFO: renamed from: isUnread, reason: from getter */
     public boolean getIsUnread() {
         return this.isUnread;
     }

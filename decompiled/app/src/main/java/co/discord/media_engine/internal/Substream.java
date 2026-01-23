@@ -4,8 +4,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NativeStatistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NativeStatistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Substream {
     private final int avgDelay;
     private final FrameCounts frameCounts;
@@ -42,62 +42,62 @@ public final /* data */ class Substream {
         return substream.copy((i7 & 1) != 0 ? substream.avgDelay : i, (i7 & 2) != 0 ? substream.frameCounts : frameCounts, (i7 & 4) != 0 ? substream.height : i2, (i7 & 8) != 0 ? substream.isFlexFEC : z2, (i7 & 16) != 0 ? substream.isRTX : z3, (i7 & 32) != 0 ? substream.maxDelay : i3, (i7 & 64) != 0 ? substream.retransmitBitrate : i4, (i7 & 128) != 0 ? substream.rtcpStats : rtcpStats, (i7 & 256) != 0 ? substream.rtpStats : rtpStats, (i7 & 512) != 0 ? substream.ssrc : j, (i7 & 1024) != 0 ? substream.totalBitrate : i5, (i7 & 2048) != 0 ? substream.width : i6);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getAvgDelay() {
         return this.avgDelay;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final long getSsrc() {
         return this.ssrc;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final int getTotalBitrate() {
         return this.totalBitrate;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final int getWidth() {
         return this.width;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final FrameCounts getFrameCounts() {
         return this.frameCounts;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getHeight() {
         return this.height;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getIsFlexFEC() {
         return this.isFlexFEC;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getIsRTX() {
         return this.isRTX;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final int getMaxDelay() {
         return this.maxDelay;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final int getRetransmitBitrate() {
         return this.retransmitBitrate;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final RtcpStats getRtcpStats() {
         return this.rtcpStats;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final RtpStats getRtpStats() {
         return this.rtpStats;
     }
@@ -161,20 +161,26 @@ public final /* data */ class Substream {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v21 */
+    /* JADX WARN: Type inference failed for: r1v23 */
+    /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         int i = this.avgDelay * 31;
         FrameCounts frameCounts = this.frameCounts;
         int iHashCode = (((i + (frameCounts != null ? frameCounts.hashCode() : 0)) * 31) + this.height) * 31;
         boolean z2 = this.isFlexFEC;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i3 = (iHashCode + i2) * 31;
+        int i2 = (iHashCode + r1) * 31;
         boolean z3 = this.isRTX;
-        int i4 = (((((i3 + (z3 ? 1 : z3 ? 1 : 0)) * 31) + this.maxDelay) * 31) + this.retransmitBitrate) * 31;
+        int i3 = (((((i2 + (z3 ? 1 : z3)) * 31) + this.maxDelay) * 31) + this.retransmitBitrate) * 31;
         RtcpStats rtcpStats = this.rtcpStats;
-        int iHashCode2 = (i4 + (rtcpStats != null ? rtcpStats.hashCode() : 0)) * 31;
+        int iHashCode2 = (i3 + (rtcpStats != null ? rtcpStats.hashCode() : 0)) * 31;
         RtpStats rtpStats = this.rtpStats;
         return ((((C0002b.m3a(this.ssrc) + ((iHashCode2 + (rtpStats != null ? rtpStats.hashCode() : 0)) * 31)) * 31) + this.totalBitrate) * 31) + this.width;
     }

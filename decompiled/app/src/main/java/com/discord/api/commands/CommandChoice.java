@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CommandChoice.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CommandChoice.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class CommandChoice {
     private final String name;
     private final String value;
@@ -17,12 +17,12 @@ public final /* data */ class CommandChoice {
         this.value = str2;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getValue() {
         return this.value;
     }

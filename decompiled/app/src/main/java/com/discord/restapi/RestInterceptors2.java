@@ -13,14 +13,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.HttpUrl;
 import p600f0.p601e0.Util7;
 
-/* compiled from: RestInterceptors.kt */
-/* renamed from: com.discord.restapi.RequiredHeadersInterceptor, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.restapi.RequiredHeadersInterceptor, reason: use source file name */
+/* JADX INFO: compiled from: RestInterceptors.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RestInterceptors2 implements Interceptor {
     private final HeadersProvider headersProvider;
 
-    /* compiled from: RestInterceptors.kt */
-    /* renamed from: com.discord.restapi.RequiredHeadersInterceptor$HeadersProvider */
+    /* JADX INFO: renamed from: com.discord.restapi.RequiredHeadersInterceptor$HeadersProvider */
+    /* JADX INFO: compiled from: RestInterceptors.kt */
     public interface HeadersProvider {
         String getAcceptLanguages();
 

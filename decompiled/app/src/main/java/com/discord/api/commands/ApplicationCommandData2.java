@@ -4,9 +4,9 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommandData.kt */
-/* renamed from: com.discord.api.commands.ApplicationCommandAttachment, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.commands.ApplicationCommandAttachment, reason: use source file name */
+/* JADX INFO: compiled from: ApplicationCommandData.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ApplicationCommandData2 {
     private final String filename;
     private final String id;

@@ -5,7 +5,7 @@ import com.adjust.sdk.Constants;
 import java.io.Serializable;
 import p007b.p195g.p196a.p197a.JsonValue;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public enum HCaptchaSize implements Serializable {
     INVISIBLE("invisible"),
     NORMAL(Constants.NORMAL),

@@ -6,15 +6,15 @@ import com.facebook.common.references.CloseableReference;
 import java.nio.ByteBuffer;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: MemoryPooledByteBuffer.java */
-/* renamed from: b.f.j.l.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.l.t, reason: use source file name */
+/* JADX INFO: compiled from: MemoryPooledByteBuffer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MemoryPooledByteBuffer implements PooledByteBuffer {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f3953j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @VisibleForTesting
     public CloseableReference<MemoryChunk> f3954k;
 
@@ -24,7 +24,7 @@ public class MemoryPooledByteBuffer implements PooledByteBuffer {
         this.f3953j = i;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized void m1394a() {
         try {
             synchronized (this) {
@@ -53,7 +53,7 @@ public class MemoryPooledByteBuffer implements PooledByteBuffer {
     }
 
     @Override // com.facebook.common.memory.PooledByteBuffer
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public synchronized byte mo1395h(int i) {
         m1394a();
         boolean z2 = true;
@@ -66,7 +66,7 @@ public class MemoryPooledByteBuffer implements PooledByteBuffer {
     }
 
     @Override // com.facebook.common.memory.PooledByteBuffer
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public synchronized int mo1396i(int i, byte[] bArr, int i2, int i3) {
         m1394a();
         AnimatableValueParser.m527i(Boolean.valueOf(i + i3 <= this.f3953j));
@@ -79,7 +79,7 @@ public class MemoryPooledByteBuffer implements PooledByteBuffer {
     }
 
     @Override // com.facebook.common.memory.PooledByteBuffer
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public synchronized long mo1397k() throws UnsupportedOperationException {
         m1394a();
         return this.f3954k.m8642u().mo1370k();

@@ -5,21 +5,21 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 import p007b.p225i.p361c.p369m.p370d.Logger3;
 
-/* compiled from: ExecutorUtils.java */
-/* renamed from: b.i.c.m.d.k.t0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.t0, reason: use source file name */
+/* JADX INFO: compiled from: ExecutorUtils.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ExecutorUtils2 extends BackgroundPriorityRunnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ String f12391j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ ExecutorService f12392k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ long f12393l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ TimeUnit f12394m;
 
     public ExecutorUtils2(String str, ExecutorService executorService, long j, TimeUnit timeUnit) {
@@ -30,7 +30,7 @@ public class ExecutorUtils2 extends BackgroundPriorityRunnable {
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p373k.BackgroundPriorityRunnable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6398a() {
         try {
             Logger3 logger3 = Logger3.f12227a;

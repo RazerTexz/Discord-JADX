@@ -3,21 +3,21 @@ package p615g0;
 import java.util.concurrent.atomic.AtomicReference;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SegmentPool.kt */
-/* renamed from: g0.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.t, reason: use source file name */
+/* JADX INFO: compiled from: SegmentPool.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SegmentPool {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int f26126b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final AtomicReference<Segment2>[] f26127c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final SegmentPool f26128d = new SegmentPool();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Segment2 f26125a = new Segment2(new byte[0], 0, 0, false, false);
 
     static {
@@ -30,7 +30,7 @@ public final class SegmentPool {
         f26127c = atomicReferenceArr;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final void m10498a(Segment2 segment2) {
         Intrinsics3.checkParameterIsNotNull(segment2, "segment");
         if (!(segment2.f26123f == null && segment2.f26124g == null)) {
@@ -41,7 +41,7 @@ public final class SegmentPool {
         }
         Thread threadCurrentThread = Thread.currentThread();
         Intrinsics3.checkExpressionValueIsNotNull(threadCurrentThread, "Thread.currentThread()");
-        AtomicReference<Segment2> atomicReference = f26127c[(int) (threadCurrentThread.getId() & (f26126b - 1))];
+        AtomicReference<Segment2> atomicReference = f26127c[(int) (threadCurrentThread.getId() & (((long) f26126b) - 1))];
         Segment2 segment22 = atomicReference.get();
         if (segment22 == f26125a) {
             return;
@@ -59,11 +59,11 @@ public final class SegmentPool {
         segment2.f26123f = null;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Segment2 m10499b() {
         Thread threadCurrentThread = Thread.currentThread();
         Intrinsics3.checkExpressionValueIsNotNull(threadCurrentThread, "Thread.currentThread()");
-        AtomicReference<Segment2> atomicReference = f26127c[(int) (threadCurrentThread.getId() & (f26126b - 1))];
+        AtomicReference<Segment2> atomicReference = f26127c[(int) (threadCurrentThread.getId() & (((long) f26126b) - 1))];
         Segment2 segment2 = f26125a;
         Segment2 andSet = atomicReference.getAndSet(segment2);
         if (andSet == segment2) {

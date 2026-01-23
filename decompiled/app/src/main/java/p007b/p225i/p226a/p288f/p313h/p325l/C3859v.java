@@ -4,15 +4,15 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.v */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.v */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3859v {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ClassLoader f10357a = C3859v.class.getClassLoader();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static <T extends Parcelable> T m5326a(Parcel parcel, Parcelable.Creator<T> creator) {
         if (parcel.readInt() == 0) {
             return null;
@@ -20,7 +20,7 @@ public class C3859v {
         return creator.createFromParcel(parcel);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m5327b(Parcel parcel, IInterface iInterface) {
         if (iInterface == null) {
             parcel.writeStrongBinder(null);
@@ -29,7 +29,7 @@ public class C3859v {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static void m5328c(Parcel parcel, Parcelable parcelable) {
         if (parcelable == null) {
             parcel.writeInt(0);

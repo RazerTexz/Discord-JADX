@@ -4,12 +4,12 @@ import com.discord.api.presence.Presence;
 import com.discord.models.deserialization.gson.InboundGatewayGsonParser;
 import com.discord.models.domain.Model;
 
-/* compiled from: lambda */
-/* renamed from: b.a.m.a.p */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.m.a.p */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class C1155p implements Model.JsonReader.ItemFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Model.JsonReader f1535a;
 
     public /* synthetic */ C1155p(Model.JsonReader jsonReader) {

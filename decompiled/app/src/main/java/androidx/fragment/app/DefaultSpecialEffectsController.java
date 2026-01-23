@@ -27,10 +27,10 @@ import java.util.List;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DefaultSpecialEffectsController extends SpecialEffectsController {
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.DefaultSpecialEffectsController$1 */
     public class RunnableC03461 implements Runnable {
         public final /* synthetic */ List val$awaitingContainerChanges;
         public final /* synthetic */ SpecialEffectsController.Operation val$operation;
@@ -49,10 +49,10 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$10 */
+    /* JADX INFO: renamed from: androidx.fragment.app.DefaultSpecialEffectsController$10 */
     public static /* synthetic */ class C034710 {
 
-        /* renamed from: $SwitchMap$androidx$fragment$app$SpecialEffectsController$Operation$State */
+        /* JADX INFO: renamed from: $SwitchMap$androidx$fragment$app$SpecialEffectsController$Operation$State */
         public static final /* synthetic */ int[] f142xe493b431;
 
         static {
@@ -78,7 +78,7 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$2 */
+    /* JADX INFO: renamed from: androidx.fragment.app.DefaultSpecialEffectsController$2 */
     public class C03482 extends AnimatorListenerAdapter {
         public final /* synthetic */ AnimationInfo val$animationInfo;
         public final /* synthetic */ ViewGroup val$container;
@@ -104,7 +104,7 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$3 */
+    /* JADX INFO: renamed from: androidx.fragment.app.DefaultSpecialEffectsController$3 */
     public class C03493 implements CancellationSignal.OnCancelListener {
         public final /* synthetic */ Animator val$animator;
 
@@ -118,13 +118,13 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$4 */
+    /* JADX INFO: renamed from: androidx.fragment.app.DefaultSpecialEffectsController$4 */
     public class AnimationAnimationListenerC03504 implements Animation.AnimationListener {
         public final /* synthetic */ AnimationInfo val$animationInfo;
         public final /* synthetic */ ViewGroup val$container;
         public final /* synthetic */ View val$viewToAnimate;
 
-        /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.fragment.app.DefaultSpecialEffectsController$4$1, reason: invalid class name */
         public class AnonymousClass1 implements Runnable {
             public AnonymousClass1() {
             }
@@ -157,7 +157,7 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$5 */
+    /* JADX INFO: renamed from: androidx.fragment.app.DefaultSpecialEffectsController$5 */
     public class C03515 implements CancellationSignal.OnCancelListener {
         public final /* synthetic */ AnimationInfo val$animationInfo;
         public final /* synthetic */ ViewGroup val$container;
@@ -177,7 +177,7 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$6 */
+    /* JADX INFO: renamed from: androidx.fragment.app.DefaultSpecialEffectsController$6 */
     public class RunnableC03526 implements Runnable {
         public final /* synthetic */ SpecialEffectsController.Operation val$firstOut;
         public final /* synthetic */ boolean val$isPop;
@@ -197,7 +197,7 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$7 */
+    /* JADX INFO: renamed from: androidx.fragment.app.DefaultSpecialEffectsController$7 */
     public class RunnableC03537 implements Runnable {
         public final /* synthetic */ FragmentTransitionImpl val$impl;
         public final /* synthetic */ Rect val$lastInEpicenterRect;
@@ -215,7 +215,7 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$8 */
+    /* JADX INFO: renamed from: androidx.fragment.app.DefaultSpecialEffectsController$8 */
     public class RunnableC03548 implements Runnable {
         public final /* synthetic */ ArrayList val$transitioningViews;
 
@@ -229,7 +229,7 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$9 */
+    /* JADX INFO: renamed from: androidx.fragment.app.DefaultSpecialEffectsController$9 */
     public class RunnableC03559 implements Runnable {
         public final /* synthetic */ TransitionInfo val$transitionInfo;
 

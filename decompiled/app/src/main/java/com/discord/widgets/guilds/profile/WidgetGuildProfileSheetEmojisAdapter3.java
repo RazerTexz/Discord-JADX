@@ -5,16 +5,16 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildProfileSheetEmojisAdapter.kt */
-/* renamed from: com.discord.widgets.guilds.profile.EmojiItem, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.profile.EmojiItem, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildProfileSheetEmojisAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class WidgetGuildProfileSheetEmojisAdapter3 {
     public static final int TYPE_EMOJI = 0;
     public static final int TYPE_MORE_EMOJI = 1;
     private final int type;
 
-    /* compiled from: WidgetGuildProfileSheetEmojisAdapter.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.EmojiItem$EmojiData */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.EmojiItem$EmojiData */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetEmojisAdapter.kt */
     public static final /* data */ class EmojiData extends WidgetGuildProfileSheetEmojisAdapter3 {
         private final Emoji emoji;
 
@@ -32,7 +32,7 @@ public abstract class WidgetGuildProfileSheetEmojisAdapter3 {
             return emojiData.copy(emoji);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Emoji getEmoji() {
             return this.emoji;
         }
@@ -69,8 +69,8 @@ public abstract class WidgetGuildProfileSheetEmojisAdapter3 {
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheetEmojisAdapter.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.EmojiItem$MoreEmoji */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.EmojiItem$MoreEmoji */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetEmojisAdapter.kt */
     public static final /* data */ class MoreEmoji extends WidgetGuildProfileSheetEmojisAdapter3 {
         private final int extraEmojiCount;
 
@@ -86,7 +86,7 @@ public abstract class WidgetGuildProfileSheetEmojisAdapter3 {
             return moreEmoji.copy(i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getExtraEmojiCount() {
             return this.extraEmojiCount;
         }

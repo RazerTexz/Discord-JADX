@@ -3,7 +3,6 @@ package com.google.android.material.internal;
 import android.R;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
@@ -32,8 +31,8 @@ import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.core.widget.TextViewCompat;
 import com.google.android.material.C10817R;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class NavigationMenuItemView extends ForegroundLinearLayout implements MenuView.ItemView {
     private static final int[] CHECKED_STATE_SET = {R.attr.state_checked};
     private final AccessibilityDelegateCompat accessibilityDelegate;
@@ -47,7 +46,7 @@ public class NavigationMenuItemView extends ForegroundLinearLayout implements Me
     private boolean needsEmptyIcon;
     private final CheckedTextView textView;
 
-    /* renamed from: com.google.android.material.internal.NavigationMenuItemView$a */
+    /* JADX INFO: renamed from: com.google.android.material.internal.NavigationMenuItemView$a */
     public class C10927a extends AccessibilityDelegateCompat {
         public C10927a() {
         }
@@ -116,7 +115,7 @@ public class NavigationMenuItemView extends ForegroundLinearLayout implements Me
     }
 
     @Override // androidx.appcompat.view.menu.MenuView.ItemView
-    public void initialize(@NonNull MenuItemImpl menuItemImpl, int i) throws Resources.NotFoundException {
+    public void initialize(@NonNull MenuItemImpl menuItemImpl, int i) {
         this.itemData = menuItemImpl;
         if (menuItemImpl.getItemId() > 0) {
             setId(menuItemImpl.getItemId());
@@ -179,7 +178,7 @@ public class NavigationMenuItemView extends ForegroundLinearLayout implements Me
     }
 
     @Override // androidx.appcompat.view.menu.MenuView.ItemView
-    public void setIcon(@Nullable Drawable drawable) throws Resources.NotFoundException {
+    public void setIcon(@Nullable Drawable drawable) {
         if (drawable != null) {
             if (this.hasIconTintList) {
                 Drawable.ConstantState constantState = drawable.getConstantState();
@@ -213,7 +212,7 @@ public class NavigationMenuItemView extends ForegroundLinearLayout implements Me
         this.iconSize = i;
     }
 
-    public void setIconTintList(ColorStateList colorStateList) throws Resources.NotFoundException {
+    public void setIconTintList(ColorStateList colorStateList) {
         this.iconTintList = colorStateList;
         this.hasIconTintList = colorStateList != null;
         MenuItemImpl menuItemImpl = this.itemData;

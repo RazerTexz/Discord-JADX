@@ -7,9 +7,9 @@ import com.lytefast.flexinput.viewmodel.FlexInputViewModel;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatInputAttachments.kt */
-/* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$createAndConfigureExpressionFragment$emojiPickerListener$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$createAndConfigureExpressionFragment$emojiPickerListener$1 */
+/* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7746x3e888ca6 implements EmojiPickerListener {
     public final /* synthetic */ WidgetChatInputAttachments this$0;
 

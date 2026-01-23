@@ -6,9 +6,9 @@ import p507d0.p579g0.CharJVM;
 import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MentionUtils.kt */
-/* renamed from: com.discord.widgets.chat.input.MentionUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.MentionUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: MentionUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MentionUtils {
     public static final char MENTIONS_CHAR = '@';
     public static final char EMOJIS_AND_STICKERS_CHAR = ':';

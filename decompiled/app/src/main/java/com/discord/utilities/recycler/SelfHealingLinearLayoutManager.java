@@ -8,14 +8,14 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SelfHealingLinearLayoutManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SelfHealingLinearLayoutManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SelfHealingLinearLayoutManager extends LinearLayoutManager {
     private final RecyclerView.Adapter<?> adapter;
     private final RecyclerView recyclerView;
 
-    /* compiled from: SelfHealingLinearLayoutManager.kt */
-    /* renamed from: com.discord.utilities.recycler.SelfHealingLinearLayoutManager$resetAdapter$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.recycler.SelfHealingLinearLayoutManager$resetAdapter$1 */
+    /* JADX INFO: compiled from: SelfHealingLinearLayoutManager.kt */
     public static final class RunnableC68501 implements Runnable {
         public RunnableC68501() {
         }

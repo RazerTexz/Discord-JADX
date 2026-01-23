@@ -7,12 +7,12 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: SimpleMarkdownRules.kt */
-/* renamed from: b.a.t.b.b.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.t.b.b.a, reason: use source file name */
+/* JADX INFO: compiled from: SimpleMarkdownRules.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SimpleMarkdownRules extends Lambda implements Function0<List<? extends CharacterStyle>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final SimpleMarkdownRules f1980j = new SimpleMarkdownRules();
 
     public SimpleMarkdownRules() {

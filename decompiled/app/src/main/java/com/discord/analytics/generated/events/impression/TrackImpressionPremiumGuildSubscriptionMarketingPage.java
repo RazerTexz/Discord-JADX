@@ -10,8 +10,8 @@ import com.discord.analytics.generated.traits.TrackLocationMetadata;
 import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.api.science.AnalyticsSchema;
 
-/* compiled from: TrackImpressionPremiumGuildSubscriptionMarketingPage.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackImpressionPremiumGuildSubscriptionMarketingPage.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class TrackImpressionPremiumGuildSubscriptionMarketingPage implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackLocationMetadata2, TrackImpressionMetadata2 {
     private final transient String analyticsSchemaTypeName = "impression_premium_guild_subscription_marketing_page";
     private TrackBase trackBase;
@@ -20,19 +20,19 @@ public final class TrackImpressionPremiumGuildSubscriptionMarketingPage implemen
     private TrackLocationMetadata trackLocationMetadata;
 
     @Override // com.discord.analytics.generated.traits.TrackGuild2
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
     @Override // com.discord.analytics.generated.traits.TrackGuild2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

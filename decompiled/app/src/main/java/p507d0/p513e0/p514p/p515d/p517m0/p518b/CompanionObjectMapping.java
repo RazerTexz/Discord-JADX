@@ -13,15 +13,15 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CompanionObjectMapping.kt */
-/* renamed from: d0.e0.p.d.m0.b.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.c, reason: use source file name */
+/* JADX INFO: compiled from: CompanionObjectMapping.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CompanionObjectMapping {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CompanionObjectMapping f22455a = new CompanionObjectMapping();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Set<ClassId> f22456b;
 
     static {

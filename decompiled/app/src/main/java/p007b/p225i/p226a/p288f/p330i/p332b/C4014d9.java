@@ -9,21 +9,21 @@ import p007b.p225i.p226a.p288f.p313h.p325l.C3817r9;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3830s9;
 import p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3869v9;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.d9 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.d9 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4014d9 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long f10668a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long f10669b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final AbstractC4064i f10670c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final /* synthetic */ C4228w8 f10671d;
 
     public C4014d9(C4228w8 c4228w8) {
@@ -36,8 +36,8 @@ public final class C4014d9 {
     }
 
     @WorkerThread
-    /* renamed from: a */
-    public final boolean m5584a(boolean z2, boolean z3, long j) throws IllegalStateException {
+    /* JADX INFO: renamed from: a */
+    public final boolean m5584a(boolean z2, boolean z3, long j) {
         this.f10671d.mo5848b();
         this.f10671d.m5497t();
         if (!C3817r9.m5212b() || !this.f10671d.f11202a.f11260h.m5526o(C4142p.f11094q0) || this.f10671d.f11202a.m5940d()) {
@@ -75,7 +75,7 @@ public final class C4014d9 {
     }
 
     @WorkerThread
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long m5585b() {
         Objects.requireNonNull((C3401c) this.f10671d.f11202a.f11267o);
         long jElapsedRealtime = SystemClock.elapsedRealtime();

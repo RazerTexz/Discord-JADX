@@ -32,8 +32,8 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: StoreUserTyping.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreUserTyping.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUserTyping extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
@@ -43,12 +43,12 @@ public final class StoreUserTyping extends StoreV2 {
     private final HashMap<Long, Map<Long, Subscription>> typingUsersRemoveCallbacks;
     private Map<Long, ? extends Set<Long>> typingUsersSnapshot;
 
-    /* compiled from: StoreUserTyping.kt */
-    /* renamed from: com.discord.stores.StoreUserTyping$handleTypingStart$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserTyping$handleTypingStart$1 */
+    /* JADX INFO: compiled from: StoreUserTyping.kt */
     public static final class C66101 extends Lambda implements Function1<TypingUser, Unit> {
 
-        /* compiled from: StoreUserTyping.kt */
-        /* renamed from: com.discord.stores.StoreUserTyping$handleTypingStart$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreUserTyping$handleTypingStart$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreUserTyping.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ TypingUser $prevTyping;
 
@@ -64,7 +64,7 @@ public final class StoreUserTyping extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreUserTyping storeUserTyping = StoreUserTyping.this;
                 TypingUser typingUser = this.$prevTyping;
@@ -83,20 +83,20 @@ public final class StoreUserTyping extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TypingUser typingUser) {
             StoreUserTyping.access$getDispatcher$p(StoreUserTyping.this).schedule(new AnonymousClass1(typingUser));
         }
     }
 
-    /* compiled from: StoreUserTyping.kt */
-    /* renamed from: com.discord.stores.StoreUserTyping$handleTypingStart$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserTyping$handleTypingStart$2 */
+    /* JADX INFO: compiled from: StoreUserTyping.kt */
     public static final class C66112 extends Lambda implements Function1<Subscription, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $userId;
 
-        /* compiled from: StoreUserTyping.kt */
-        /* renamed from: com.discord.stores.StoreUserTyping$handleTypingStart$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreUserTyping$handleTypingStart$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreUserTyping.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Subscription $subscription;
 
@@ -112,7 +112,7 @@ public final class StoreUserTyping extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 Map map = (Map) StoreUserTyping.access$getTypingUsersRemoveCallbacks$p(StoreUserTyping.this).get(Long.valueOf(C66112.this.$channelId));
                 if (map != null) {
@@ -133,15 +133,15 @@ public final class StoreUserTyping extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             StoreUserTyping.access$getDispatcher$p(StoreUserTyping.this).schedule(new AnonymousClass1(subscription));
         }
     }
 
-    /* compiled from: StoreUserTyping.kt */
-    /* renamed from: com.discord.stores.StoreUserTyping$observeTypingUsers$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserTyping$observeTypingUsers$1 */
+    /* JADX INFO: compiled from: StoreUserTyping.kt */
     public static final class C66121 extends Lambda implements Function0<Map<Long, ? extends Set<? extends Long>>> {
         public C66121() {
             super(0);
@@ -153,14 +153,14 @@ public final class StoreUserTyping extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Set<? extends Long>> invoke2() {
             return StoreUserTyping.access$getTypingUsers(StoreUserTyping.this);
         }
     }
 
-    /* compiled from: StoreUserTyping.kt */
-    /* renamed from: com.discord.stores.StoreUserTyping$observeTypingUsers$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserTyping$observeTypingUsers$2 */
+    /* JADX INFO: compiled from: StoreUserTyping.kt */
     public static final class C66132<T, R> implements Func1<Map<Long, ? extends Set<? extends Long>>, Set<? extends Long>> {
         public final /* synthetic */ long $channelId;
 
@@ -173,7 +173,7 @@ public final class StoreUserTyping extends StoreV2 {
             return call2((Map<Long, ? extends Set<Long>>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Set<Long> call2(Map<Long, ? extends Set<Long>> map) {
             Intrinsics3.checkNotNullExpressionValue(map, "typingUsersByChannel");
             Set<Long> setEmptySet = map.get(Long.valueOf(this.$channelId));
@@ -184,8 +184,8 @@ public final class StoreUserTyping extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserTyping.kt */
-    /* renamed from: com.discord.stores.StoreUserTyping$observeTypingUsersForChannels$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserTyping$observeTypingUsersForChannels$1 */
+    /* JADX INFO: compiled from: StoreUserTyping.kt */
     public static final class C66141 extends Lambda implements Function0<Map<Long, ? extends Set<? extends Long>>> {
         public C66141() {
             super(0);
@@ -197,14 +197,14 @@ public final class StoreUserTyping extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Set<? extends Long>> invoke2() {
             return StoreUserTyping.access$getTypingUsers(StoreUserTyping.this);
         }
     }
 
-    /* compiled from: StoreUserTyping.kt */
-    /* renamed from: com.discord.stores.StoreUserTyping$observeTypingUsersForChannels$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserTyping$observeTypingUsersForChannels$2 */
+    /* JADX INFO: compiled from: StoreUserTyping.kt */
     public static final class C66152<T, R> implements Func1<Map<Long, ? extends Set<? extends Long>>, Map<Long, ? extends Set<? extends Long>>> {
         public final /* synthetic */ Set $channelIds;
 
@@ -217,7 +217,7 @@ public final class StoreUserTyping extends StoreV2 {
             return call2((Map<Long, ? extends Set<Long>>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, Set<Long>> call2(Map<Long, ? extends Set<Long>> map) {
             Intrinsics3.checkNotNullExpressionValue(map, "typingUsersByChannel");
             LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -230,13 +230,13 @@ public final class StoreUserTyping extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserTyping.kt */
-    /* renamed from: com.discord.stores.StoreUserTyping$setUserTyping$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserTyping$setUserTyping$1 */
+    /* JADX INFO: compiled from: StoreUserTyping.kt */
     public static final class C66161 extends Lambda implements Function1<ModelTypingResponse, Unit> {
         public final /* synthetic */ long $channelId;
 
-        /* compiled from: StoreUserTyping.kt */
-        /* renamed from: com.discord.stores.StoreUserTyping$setUserTyping$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreUserTyping$setUserTyping$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreUserTyping.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ long $messageSendCooldownSecs;
 
@@ -252,14 +252,14 @@ public final class StoreUserTyping extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreStream.INSTANCE.getSlowMode().onCooldown(C66161.this.$channelId, this.$messageSendCooldownSecs, StoreSlowMode.Type.MessageSend.INSTANCE);
             }
         }
 
-        /* compiled from: StoreUserTyping.kt */
-        /* renamed from: com.discord.stores.StoreUserTyping$setUserTyping$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreUserTyping$setUserTyping$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreUserTyping.kt */
         public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ long $threadCreateCooldown;
 
@@ -275,7 +275,7 @@ public final class StoreUserTyping extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreStream.INSTANCE.getSlowMode().onCooldown(C66161.this.$channelId, this.$threadCreateCooldown, StoreSlowMode.Type.ThreadCreate.INSTANCE);
             }
@@ -293,7 +293,7 @@ public final class StoreUserTyping extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelTypingResponse modelTypingResponse) {
             Long threadCreateCooldownMs;
             Long messageSendCooldownMs;

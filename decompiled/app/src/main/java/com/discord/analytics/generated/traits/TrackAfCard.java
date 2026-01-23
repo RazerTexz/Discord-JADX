@@ -3,8 +3,8 @@ package com.discord.analytics.generated.traits;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackAfCard.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackAfCard.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackAfCard {
     private final CharSequence loadId = null;
     private final Long cardIndex = null;

@@ -14,9 +14,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetAuthBirthday.kt */
-/* renamed from: com.discord.widgets.auth.WidgetAuthBirthday$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthBirthday$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetAuthBirthday.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetAuthBirthday3 extends FunctionReferenceImpl implements Function1<View, WidgetAuthBirthdayBinding> {
     public static final WidgetAuthBirthday3 INSTANCE = new WidgetAuthBirthday3();
 
@@ -29,7 +29,7 @@ public final /* synthetic */ class WidgetAuthBirthday3 extends FunctionReference
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetAuthBirthdayBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.auth_policy_links;

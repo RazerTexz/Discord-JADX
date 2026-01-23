@@ -12,30 +12,30 @@ import java.util.regex.Pattern;
 import p007b.p225i.p361c.p369m.p370d.Logger3;
 import p007b.p225i.p361c.p401u.InterfaceC4843g;
 
-/* compiled from: IdManager.java */
-/* renamed from: b.i.c.m.d.k.v0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.v0, reason: use source file name */
+/* JADX INFO: compiled from: IdManager.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class IdManager implements InstallIdProvider {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f12407a = Pattern.compile("[^\\p{Alnum}]");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String f12408b = Pattern.quote(AutocompleteViewModel.COMMAND_DISCOVER_TOKEN);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final InstallerPackageNameProvider f12409c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Context f12410d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f12411e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final InterfaceC4843g f12412f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public String f12413g;
 
     public IdManager(Context context, String str, InterfaceC4843g interfaceC4843g) {
@@ -48,7 +48,7 @@ public class IdManager implements InstallIdProvider {
         this.f12409c = new InstallerPackageNameProvider();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final synchronized String m6455a(String str, SharedPreferences sharedPreferences) {
         String lowerCase;
         String string = UUID.randomUUID().toString();
@@ -59,7 +59,7 @@ public class IdManager implements InstallIdProvider {
     }
 
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized String m6456b() {
         String str;
         String str2 = this.f12413g;
@@ -101,7 +101,7 @@ public class IdManager implements InstallIdProvider {
         return this.f12413g;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String m6457c() {
         String str;
         InstallerPackageNameProvider installerPackageNameProvider = this.f12409c;
@@ -119,14 +119,14 @@ public class IdManager implements InstallIdProvider {
         return str;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final synchronized void m6458d(String str, String str2, SharedPreferences sharedPreferences, SharedPreferences sharedPreferences2) {
         Logger3.f12227a.m6371b("Migrating legacy Crashlytics IID: " + str);
         sharedPreferences.edit().putString("crashlytics.installation.id", str).putString("firebase.installation.id", str2).apply();
         sharedPreferences2.edit().remove("crashlytics.installation.id").remove("crashlytics.advertising.id").apply();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String m6459e(String str) {
         return str.replaceAll(f12408b, "");
     }

@@ -6,25 +6,25 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import p007b.p225i.p361c.p369m.p370d.Logger3;
 import p007b.p225i.p361c.p369m.p370d.p384s.SettingsDataProvider;
 
-/* compiled from: CrashlyticsUncaughtExceptionHandler.java */
-/* renamed from: b.i.c.m.d.k.p0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.p0, reason: use source file name */
+/* JADX INFO: compiled from: CrashlyticsUncaughtExceptionHandler.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CrashlyticsUncaughtExceptionHandler implements Thread.UncaughtExceptionHandler {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final a f12365a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final SettingsDataProvider f12366b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Thread.UncaughtExceptionHandler f12367c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final AtomicBoolean f12368d = new AtomicBoolean(false);
 
-    /* compiled from: CrashlyticsUncaughtExceptionHandler.java */
-    /* renamed from: b.i.c.m.d.k.p0$a */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.p0$a */
+    /* JADX INFO: compiled from: CrashlyticsUncaughtExceptionHandler.java */
     public interface a {
     }
 

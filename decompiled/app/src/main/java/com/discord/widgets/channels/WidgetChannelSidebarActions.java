@@ -36,19 +36,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetChannelSidebarActions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelSidebarActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSidebarActions extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelSidebarActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelSidebarActionsBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetChannelSidebarActions.kt */
     public static final class ViewOnClickListenerC73371 implements View.OnClickListener {
         public final /* synthetic */ WidgetChannelSidebarActionsViewModel.ViewState $viewState;
 
@@ -62,8 +62,8 @@ public final class WidgetChannelSidebarActions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetChannelSidebarActions.kt */
     public static final class ViewOnClickListenerC73382 implements View.OnClickListener {
         public final /* synthetic */ WidgetChannelSidebarActionsViewModel.ViewState $viewState;
 
@@ -77,8 +77,8 @@ public final class WidgetChannelSidebarActions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetChannelSidebarActions.kt */
     public static final class ViewOnClickListenerC73393 implements View.OnClickListener {
         public final /* synthetic */ long $channelId;
 
@@ -96,8 +96,8 @@ public final class WidgetChannelSidebarActions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetChannelSidebarActions.kt */
     public static final class ViewOnClickListenerC73404 implements View.OnClickListener {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
@@ -113,8 +113,8 @@ public final class WidgetChannelSidebarActions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetChannelSidebarActions.kt */
     public static final class C73415 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ WidgetChannelSidebarActionsViewModel.ViewState $viewState;
@@ -132,15 +132,15 @@ public final class WidgetChannelSidebarActions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetSearch.INSTANCE.launchForGuild(((WidgetChannelSidebarActionsViewModel.ViewState.Guild) this.$viewState).getGuildId(), this.$context);
         }
     }
 
-    /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$6 */
+    /* JADX INFO: compiled from: WidgetChannelSidebarActions.kt */
     public static final class C73426 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ WidgetChannelSidebarActionsViewModel.ViewState $viewState;
@@ -158,15 +158,15 @@ public final class WidgetChannelSidebarActions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetThreadBrowser.INSTANCE.show(this.$context, ((WidgetChannelSidebarActionsViewModel.ViewState.Guild) this.$viewState).getGuildId(), ((WidgetChannelSidebarActionsViewModel.ViewState.Guild) this.$viewState).getChannelId(), "Channel Side Bar");
         }
     }
 
-    /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$7 */
+    /* JADX INFO: compiled from: WidgetChannelSidebarActions.kt */
     public static final class C73437 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
@@ -184,15 +184,15 @@ public final class WidgetChannelSidebarActions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetChannelPinnedMessages.INSTANCE.show(this.$context, this.$channelId);
         }
     }
 
-    /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$8 */
+    /* JADX INFO: compiled from: WidgetChannelSidebarActions.kt */
     public static final class C73448 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ long $channelId;
 
@@ -208,7 +208,7 @@ public final class WidgetChannelSidebarActions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetMuteSettingsSheet.Companion companion = WidgetMuteSettingsSheet.INSTANCE;
@@ -219,8 +219,8 @@ public final class WidgetChannelSidebarActions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$9 */
+    /* JADX INFO: compiled from: WidgetChannelSidebarActions.kt */
     public static final class C73459 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
@@ -240,7 +240,7 @@ public final class WidgetChannelSidebarActions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             if (((WidgetChannelSidebarActionsViewModel.ViewState.Guild) this.$viewState).isThread()) {
@@ -251,8 +251,8 @@ public final class WidgetChannelSidebarActions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetChannelSidebarActions.kt */
     public static final class C73461 extends Lambda implements Function1<WidgetChannelSidebarActionsViewModel.ViewState, Unit> {
         public C73461() {
             super(1);
@@ -264,7 +264,7 @@ public final class WidgetChannelSidebarActions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetChannelSidebarActionsViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetChannelSidebarActions.access$configureUI(WidgetChannelSidebarActions.this, viewState);

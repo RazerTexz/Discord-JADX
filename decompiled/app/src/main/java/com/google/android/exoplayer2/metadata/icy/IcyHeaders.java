@@ -14,32 +14,32 @@ import p007b.p225i.p226a.p242c.MediaMetadata;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p279z2.Metadata2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class IcyHeaders implements Metadata.Entry {
     public static final Parcelable.Creator<IcyHeaders> CREATOR = new C10724a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f19957j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public final String f19958k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public final String f19959l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public final String f19960m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final boolean f19961n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int f19962o;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.icy.IcyHeaders$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.icy.IcyHeaders$a */
     public class C10724a implements Parcelable.Creator<IcyHeaders> {
         @Override // android.os.Parcelable.Creator
         public IcyHeaders createFromParcel(Parcel parcel) {
@@ -62,40 +62,21 @@ public final class IcyHeaders implements Metadata.Entry {
         this.f19962o = i2;
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:26:0x006b  */
-    /* JADX WARN: Removed duplicated region for block: B:27:0x0074  */
-    /* JADX WARN: Removed duplicated region for block: B:30:0x007f  */
-    /* JADX WARN: Removed duplicated region for block: B:31:0x0088  */
-    /* JADX WARN: Removed duplicated region for block: B:34:0x0093  */
-    /* JADX WARN: Removed duplicated region for block: B:35:0x009c  */
-    /* JADX WARN: Removed duplicated region for block: B:38:0x00a7  */
-    /* JADX WARN: Removed duplicated region for block: B:39:0x00b6  */
-    /* JADX WARN: Removed duplicated region for block: B:42:0x00c1  */
-    /* JADX WARN: Removed duplicated region for block: B:61:0x0105  */
-    /* JADX WARN: Removed duplicated region for block: B:71:? A[RETURN, SYNTHETIC] */
     @Nullable
-    /* renamed from: a */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-    */
+    /* JADX INFO: renamed from: a */
     public static IcyHeaders m8881a(Map<String, List<String>> map) {
         boolean z2;
         int i;
-        List<String> list;
         String str;
-        List<String> list2;
         String str2;
-        List<String> list3;
         String str3;
-        List<String> list4;
         boolean zEquals;
-        List<String> list5;
         int i2;
-        List<String> list6 = map.get("icy-br");
+        List<String> list = map.get("icy-br");
         int i3 = -1;
         boolean z3 = true;
-        if (list6 != null) {
-            String str4 = list6.get(0);
+        if (list != null) {
+            String str4 = list.get(0);
             try {
                 i2 = Integer.parseInt(str4) * 1000;
                 if (i2 > 0) {
@@ -111,23 +92,6 @@ public final class IcyHeaders implements Metadata.Entry {
                         Log.w("IcyHeaders", strValueOf2.length() != 0 ? "Invalid bitrate header: ".concat(strValueOf2) : new String("Invalid bitrate header: "));
                         i = i2;
                         z2 = false;
-                        list = map.get("icy-genre");
-                        if (list == null) {
-                        }
-                        list2 = map.get("icy-name");
-                        if (list2 == null) {
-                        }
-                        list3 = map.get("icy-url");
-                        if (list3 == null) {
-                        }
-                        list4 = map.get("icy-pub");
-                        if (list4 == null) {
-                        }
-                        list5 = map.get("icy-metaint");
-                        if (list5 != null) {
-                        }
-                        if (z2) {
-                        }
                     }
                 }
                 i = i2;
@@ -138,37 +102,37 @@ public final class IcyHeaders implements Metadata.Entry {
             z2 = false;
             i = -1;
         }
-        list = map.get("icy-genre");
-        if (list == null) {
-            str = list.get(0);
+        List<String> list2 = map.get("icy-genre");
+        if (list2 != null) {
+            str = list2.get(0);
             z2 = true;
         } else {
             str = null;
         }
-        list2 = map.get("icy-name");
-        if (list2 == null) {
-            str2 = list2.get(0);
+        List<String> list3 = map.get("icy-name");
+        if (list3 != null) {
+            str2 = list3.get(0);
             z2 = true;
         } else {
             str2 = null;
         }
-        list3 = map.get("icy-url");
-        if (list3 == null) {
-            str3 = list3.get(0);
+        List<String> list4 = map.get("icy-url");
+        if (list4 != null) {
+            str3 = list4.get(0);
             z2 = true;
         } else {
             str3 = null;
         }
-        list4 = map.get("icy-pub");
-        if (list4 == null) {
-            zEquals = list4.get(0).equals("1");
+        List<String> list5 = map.get("icy-pub");
+        if (list5 != null) {
+            zEquals = list5.get(0).equals("1");
             z2 = true;
         } else {
             zEquals = false;
         }
-        list5 = map.get("icy-metaint");
-        if (list5 != null) {
-            String str5 = list5.get(0);
+        List<String> list6 = map.get("icy-metaint");
+        if (list6 != null) {
+            String str5 = list6.get(0);
             try {
                 int i4 = Integer.parseInt(str5);
                 if (i4 > 0) {
@@ -182,8 +146,6 @@ public final class IcyHeaders implements Metadata.Entry {
                         i3 = i4;
                         String strValueOf4 = String.valueOf(str5);
                         Log.w("IcyHeaders", strValueOf4.length() != 0 ? "Invalid metadata interval: ".concat(strValueOf4) : new String("Invalid metadata interval: "));
-                        if (z2) {
-                        }
                     }
                 }
                 z2 = z3;
@@ -223,13 +185,13 @@ public final class IcyHeaders implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public /* synthetic */ void mo8878n(MediaMetadata.b bVar) {
         Metadata2.m3894c(this, bVar);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public /* synthetic */ byte[] mo8879o0() {
         return Metadata2.m3892a(this);
     }
@@ -260,7 +222,7 @@ public final class IcyHeaders implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public /* synthetic */ Format2 mo8880y() {
         return Metadata2.m3893b(this);
     }

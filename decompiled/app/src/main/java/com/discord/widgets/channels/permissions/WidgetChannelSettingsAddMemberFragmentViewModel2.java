@@ -22,15 +22,15 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func4;
 
-/* compiled from: WidgetChannelSettingsAddMemberFragmentViewModel.kt */
-/* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberFragmentViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberFragmentViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelSettingsAddMemberFragmentViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSettingsAddMemberFragmentViewModel2<T, R> implements Func1<Channel, Observable<? extends WidgetChannelSettingsAddMemberFragmentViewModel.StoreState>> {
     public final /* synthetic */ StoreGuilds $guildsStore;
     public final /* synthetic */ StoreUser $userStore;
 
-    /* compiled from: WidgetChannelSettingsAddMemberFragmentViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberFragmentViewModel$Companion$observeStoreState$1$1, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberFragmentViewModel$Companion$observeStoreState$1$1, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetChannelSettingsAddMemberFragmentViewModel.kt */
     public static final class AnonymousClass1<T1, T2, T3, T4, R> implements Func4<Guild, Map<Long, ? extends GuildRole>, Map<Long, ? extends GuildMember>, Map<Long, ? extends User>, WidgetChannelSettingsAddMemberFragmentViewModel.StoreState> {
         public final /* synthetic */ Channel $channel;
 
@@ -43,7 +43,7 @@ public final class WidgetChannelSettingsAddMemberFragmentViewModel2<T, R> implem
             return call2(guild, (Map<Long, GuildRole>) map, (Map<Long, GuildMember>) map2, map3);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetChannelSettingsAddMemberFragmentViewModel.StoreState call2(Guild guild, Map<Long, GuildRole> map, Map<Long, GuildMember> map2, Map<Long, ? extends User> map3) {
             Map mapEmptyMap;
             Channel channel = this.$channel;
@@ -74,7 +74,7 @@ public final class WidgetChannelSettingsAddMemberFragmentViewModel2<T, R> implem
         return call2(channel);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetChannelSettingsAddMemberFragmentViewModel.StoreState> call2(Channel channel) {
         return Observable.m11073h(this.$guildsStore.observeGuild(channel.getGuildId()), this.$guildsStore.observeRoles(channel.getGuildId()), this.$guildsStore.observeComputed(channel.getGuildId()), this.$userStore.observeAllUsers(), new AnonymousClass1(channel));
     }

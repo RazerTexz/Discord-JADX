@@ -12,9 +12,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetFriendsAddById.kt */
-/* renamed from: com.discord.widgets.friends.WidgetFriendsAddById$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsAddById$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetFriendsAddById.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetFriendsAddById2 extends FunctionReferenceImpl implements Function1<View, WidgetFriendsAddByIdBinding> {
     public static final WidgetFriendsAddById2 INSTANCE = new WidgetFriendsAddById2();
 
@@ -27,7 +27,7 @@ public final /* synthetic */ class WidgetFriendsAddById2 extends FunctionReferen
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetFriendsAddByIdBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.friend_add_username_indicator;

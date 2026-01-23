@@ -3,7 +3,7 @@ package androidx.media.utils;
 import android.annotation.SuppressLint;
 import androidx.annotation.RestrictTo;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class MediaConstants {
 
     @SuppressLint({"IntentName"})

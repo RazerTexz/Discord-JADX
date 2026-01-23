@@ -2,12 +2,12 @@ package p637j0;
 
 import p658rx.Subscriber;
 
-/* compiled from: Completable.java */
-/* renamed from: j0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.b, reason: use source file name */
+/* JADX INFO: compiled from: Completable.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Completable extends Subscriber<Object> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ CompletableSubscriber f26685j;
 
     public Completable(Completable2 completable2, CompletableSubscriber completableSubscriber) {

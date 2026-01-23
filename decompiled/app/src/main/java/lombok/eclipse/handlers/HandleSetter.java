@@ -28,11 +28,11 @@ import org.eclipse.jdt.internal.compiler.ast.TrueLiteral;
 import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleSetter.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleSetter.SCL.lombok */
 public class HandleSetter extends EclipseAnnotationHandler<Setter> {
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind;
 
-    /* renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
     private static /* synthetic */ int[] f27473xb87c1847;
 
     static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind() {
@@ -85,7 +85,7 @@ public class HandleSetter extends EclipseAnnotationHandler<Setter> {
         return iArr2;
     }
 
-    /* renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
     static /* synthetic */ int[] m10933xb87c1847() {
         int[] iArr = f27473xb87c1847;
         if (iArr != null) {
@@ -108,7 +108,7 @@ public class HandleSetter extends EclipseAnnotationHandler<Setter> {
         return iArr2;
     }
 
-    public boolean generateSetterForType(EclipseNode typeNode, EclipseNode pos, AccessLevel level, boolean checkForTypeLevelSetter, List<Annotation> onMethod, List<Annotation> onParam) throws IllegalArgumentException {
+    public boolean generateSetterForType(EclipseNode typeNode, EclipseNode pos, AccessLevel level, boolean checkForTypeLevelSetter, List<Annotation> onMethod, List<Annotation> onParam) {
         if (checkForTypeLevelSetter && EclipseHandlerUtil.hasAnnotation((Class<? extends java.lang.annotation.Annotation>) Setter.class, typeNode)) {
             return true;
         }
@@ -130,7 +130,7 @@ public class HandleSetter extends EclipseAnnotationHandler<Setter> {
         return true;
     }
 
-    public void generateSetterForField(EclipseNode fieldNode, EclipseNode sourceNode, AccessLevel level, List<Annotation> onMethod, List<Annotation> onParam) throws IllegalArgumentException {
+    public void generateSetterForField(EclipseNode fieldNode, EclipseNode sourceNode, AccessLevel level, List<Annotation> onMethod, List<Annotation> onParam) {
         if (EclipseHandlerUtil.hasAnnotation((Class<? extends java.lang.annotation.Annotation>) Setter.class, fieldNode)) {
             return;
         }
@@ -138,7 +138,7 @@ public class HandleSetter extends EclipseAnnotationHandler<Setter> {
     }
 
     @Override // lombok.eclipse.EclipseAnnotationHandler
-    public void handle(AnnotationValues<Setter> annotation, Annotation ast, EclipseNode annotationNode) throws IllegalArgumentException {
+    public void handle(AnnotationValues<Setter> annotation, Annotation ast, EclipseNode annotationNode) {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.SETTER_FLAG_USAGE, "@Setter");
         EclipseNode node = annotationNode.m10925up();
         AccessLevel level = annotation.getInstance().value();
@@ -157,13 +157,13 @@ public class HandleSetter extends EclipseAnnotationHandler<Setter> {
         }
     }
 
-    public void createSetterForFields(AccessLevel level, Collection<EclipseNode> fieldNodes, EclipseNode sourceNode, boolean whineIfExists, List<Annotation> onMethod, List<Annotation> onParam) throws IllegalArgumentException {
+    public void createSetterForFields(AccessLevel level, Collection<EclipseNode> fieldNodes, EclipseNode sourceNode, boolean whineIfExists, List<Annotation> onMethod, List<Annotation> onParam) {
         for (EclipseNode fieldNode : fieldNodes) {
             createSetterForField(level, fieldNode, sourceNode, whineIfExists, onMethod, onParam);
         }
     }
 
-    public void createSetterForField(AccessLevel level, EclipseNode fieldNode, EclipseNode sourceNode, boolean whineIfExists, List<Annotation> onMethod, List<Annotation> onParam) throws IllegalArgumentException {
+    public void createSetterForField(AccessLevel level, EclipseNode fieldNode, EclipseNode sourceNode, boolean whineIfExists, List<Annotation> onMethod, List<Annotation> onParam) {
         ASTNode source = sourceNode.get();
         if (fieldNode.getKind() != AST.Kind.FIELD) {
             sourceNode.addError("@Setter is only supported on a class or a field.");
@@ -217,7 +217,7 @@ public class HandleSetter extends EclipseAnnotationHandler<Setter> {
 
     /* JADX WARN: Type inference failed for: r2v25, types: [org.eclipse.jdt.internal.compiler.ast.Annotation[], org.eclipse.jdt.internal.compiler.ast.Annotation[][]] */
     /* JADX WARN: Type inference failed for: r2v5, types: [org.eclipse.jdt.internal.compiler.ast.Annotation[], org.eclipse.jdt.internal.compiler.ast.Annotation[][]] */
-    static MethodDeclaration createSetter(TypeDeclaration parent, boolean deprecate, EclipseNode fieldNode, String name, char[] paramName, char[] booleanFieldToSet, TypeReference returnType, Statement returnStatement, int modifier, EclipseNode sourceNode, List<Annotation> onMethod, List<Annotation> onParam) throws SecurityException {
+    static MethodDeclaration createSetter(TypeDeclaration parent, boolean deprecate, EclipseNode fieldNode, String name, char[] paramName, char[] booleanFieldToSet, TypeReference returnType, Statement returnStatement, int modifier, EclipseNode sourceNode, List<Annotation> onMethod, List<Annotation> onParam) {
         Statement nullCheck;
         FieldDeclaration field = fieldNode.get();
         if (paramName == null) {
@@ -226,7 +226,7 @@ public class HandleSetter extends EclipseAnnotationHandler<Setter> {
         ASTNode source = sourceNode.get();
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         MethodDeclaration method = new MethodDeclaration(parent.compilationResult);
         method.modifiers = modifier;
         if (returnType != null) {

@@ -66,11 +66,11 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: UserProfileHeaderView.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: UserProfileHeaderView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserProfileHeaderView extends ConstraintLayout {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final SimpleRecyclerAdapter<Badge, BadgeViewHolder> badgesAdapter;
     private MGImages.DistinctChangeDetector bannerChangeDetector;
@@ -83,7 +83,7 @@ public final class UserProfileHeaderView extends ConstraintLayout {
     private Subscription syncAvatarRepresentativeColorSubscription;
     private int userProfileHeaderBackgroundColor;
 
-    /* compiled from: UserProfileHeaderView.kt */
+    /* JADX INFO: compiled from: UserProfileHeaderView.kt */
     public final class BadgeViewHolder extends SimpleRecyclerAdapter.ViewHolder<Badge> {
         private final UserProfileHeaderBadgeBinding binding;
         public final /* synthetic */ UserProfileHeaderView this$0;
@@ -103,7 +103,7 @@ public final class UserProfileHeaderView extends ConstraintLayout {
             bind2(badge);
         }
 
-        /* renamed from: bind, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: bind, reason: avoid collision after fix types in other method */
         public void bind2(Badge data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             this.binding.f15340b.setImageResource(data.getIcon());
@@ -118,7 +118,7 @@ public final class UserProfileHeaderView extends ConstraintLayout {
         }
     }
 
-    /* compiled from: UserProfileHeaderView.kt */
+    /* JADX INFO: compiled from: UserProfileHeaderView.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -137,14 +137,14 @@ public final class UserProfileHeaderView extends ConstraintLayout {
         }
     }
 
-    /* compiled from: UserProfileHeaderView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$configureBanner$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$configureBanner$1 */
+    /* JADX INFO: compiled from: UserProfileHeaderView.kt */
     public static final class C102971 extends Lambda implements Function1<ImageRequestBuilder, Unit> {
         public final /* synthetic */ Ref$BooleanRef $bannerColorUpdatedFromViewState;
         public final /* synthetic */ UserProfileHeaderViewModel.ViewState.Loaded $viewState;
 
-        /* compiled from: UserProfileHeaderView.kt */
-        /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$configureBanner$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$configureBanner$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: UserProfileHeaderView.kt */
         public static final class AnonymousClass1 extends BasePostprocessor {
             public AnonymousClass1() {
             }
@@ -174,15 +174,15 @@ public final class UserProfileHeaderView extends ConstraintLayout {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ImageRequestBuilder imageRequestBuilder) {
             Intrinsics3.checkNotNullParameter(imageRequestBuilder, "imageRequestBuilder");
             imageRequestBuilder.f19623l = new AnonymousClass1();
         }
     }
 
-    /* compiled from: UserProfileHeaderView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$configureBanner$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$configureBanner$2 */
+    /* JADX INFO: compiled from: UserProfileHeaderView.kt */
     public static final class ViewOnClickListenerC102982 implements View.OnClickListener {
         public ViewOnClickListenerC102982() {
         }
@@ -193,8 +193,8 @@ public final class UserProfileHeaderView extends ConstraintLayout {
         }
     }
 
-    /* compiled from: UserProfileHeaderView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$configureBanner$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$configureBanner$3 */
+    /* JADX INFO: compiled from: UserProfileHeaderView.kt */
     public static final class ViewOnClickListenerC102993 implements View.OnClickListener {
         public ViewOnClickListenerC102993() {
         }
@@ -205,8 +205,8 @@ public final class UserProfileHeaderView extends ConstraintLayout {
         }
     }
 
-    /* compiled from: UserProfileHeaderView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$getCustomStatusDraweeSpanStringBuilder$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$getCustomStatusDraweeSpanStringBuilder$1 */
+    /* JADX INFO: compiled from: UserProfileHeaderView.kt */
     public static final class C103001 implements EmojiNode.RenderContext {
         public final /* synthetic */ boolean $shouldAnimate;
         private final Context context;
@@ -224,7 +224,7 @@ public final class UserProfileHeaderView extends ConstraintLayout {
         }
 
         @Override // com.discord.utilities.textprocessing.node.EmojiNode.RenderContext
-        /* renamed from: isAnimationEnabled, reason: from getter */
+        /* JADX INFO: renamed from: isAnimationEnabled, reason: from getter */
         public boolean getIsAnimationEnabled() {
             return this.isAnimationEnabled;
         }
@@ -236,8 +236,8 @@ public final class UserProfileHeaderView extends ConstraintLayout {
         }
     }
 
-    /* compiled from: UserProfileHeaderView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$notifyAvatarColorListenerAsync$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$notifyAvatarColorListenerAsync$1 */
+    /* JADX INFO: compiled from: UserProfileHeaderView.kt */
     public static final class C103011 extends Lambda implements Function1<Subscription, Unit> {
         public C103011() {
             super(1);
@@ -249,15 +249,15 @@ public final class UserProfileHeaderView extends ConstraintLayout {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             UserProfileHeaderView.access$setSyncAvatarRepresentativeColorSubscription$p(UserProfileHeaderView.this, subscription);
         }
     }
 
-    /* compiled from: UserProfileHeaderView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$notifyAvatarColorListenerAsync$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$notifyAvatarColorListenerAsync$2 */
+    /* JADX INFO: compiled from: UserProfileHeaderView.kt */
     public static final class C103022 extends Lambda implements Function1<Integer, Unit> {
         public C103022() {
             super(1);
@@ -269,7 +269,7 @@ public final class UserProfileHeaderView extends ConstraintLayout {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Integer num) {
             if (num != null) {
                 UserProfileHeaderView.this.getOnAvatarRepresentativeColorUpdated().invoke(num);
@@ -277,8 +277,8 @@ public final class UserProfileHeaderView extends ConstraintLayout {
         }
     }
 
-    /* compiled from: UserProfileHeaderView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$observeRepresentativeColor$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$observeRepresentativeColor$1 */
+    /* JADX INFO: compiled from: UserProfileHeaderView.kt */
     public static final class C103031<T, R> implements Func1<Integer, Boolean> {
         public static final C103031 INSTANCE = new C103031();
 
@@ -287,14 +287,14 @@ public final class UserProfileHeaderView extends ConstraintLayout {
             return call2(num);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Integer num) {
             return Boolean.valueOf(num != null);
         }
     }
 
-    /* compiled from: UserProfileHeaderView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$updateBannerBackgroundColorAsync$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$updateBannerBackgroundColorAsync$1 */
+    /* JADX INFO: compiled from: UserProfileHeaderView.kt */
     public static final class C103041 extends Lambda implements Function1<Subscription, Unit> {
         public C103041() {
             super(1);
@@ -306,15 +306,15 @@ public final class UserProfileHeaderView extends ConstraintLayout {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             UserProfileHeaderView.access$setSetBannerBackgroundColorSubscription$p(UserProfileHeaderView.this, subscription);
         }
     }
 
-    /* compiled from: UserProfileHeaderView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$updateBannerBackgroundColorAsync$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$updateBannerBackgroundColorAsync$2 */
+    /* JADX INFO: compiled from: UserProfileHeaderView.kt */
     public static final class C103052 extends Lambda implements Function1<Integer, Unit> {
         public C103052() {
             super(1);
@@ -326,7 +326,7 @@ public final class UserProfileHeaderView extends ConstraintLayout {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Integer num) {
             if (num != null) {
                 UserProfileHeaderView.access$getBinding$p(UserProfileHeaderView.this).f15343c.setBackgroundColor(num.intValue());
@@ -334,8 +334,8 @@ public final class UserProfileHeaderView extends ConstraintLayout {
         }
     }
 
-    /* compiled from: UserProfileHeaderView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$updateViewState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$updateViewState$1 */
+    /* JADX INFO: compiled from: UserProfileHeaderView.kt */
     public static final class C103061 extends Lambda implements Function2<Bitmap, String, Unit> {
         public final /* synthetic */ UserProfileHeaderViewModel.ViewState.Loaded $viewState;
 
@@ -351,7 +351,7 @@ public final class UserProfileHeaderView extends ConstraintLayout {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Bitmap bitmap, String str) {
             Intrinsics3.checkNotNullParameter(bitmap, "bitmap");
             GuildMember guildMember = this.$viewState.getGuildMember();
@@ -363,8 +363,8 @@ public final class UserProfileHeaderView extends ConstraintLayout {
         }
     }
 
-    /* compiled from: UserProfileHeaderView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$updateViewState$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$updateViewState$2 */
+    /* JADX INFO: compiled from: UserProfileHeaderView.kt */
     public static final class ViewOnClickListenerC103072 implements View.OnClickListener {
         public final /* synthetic */ UserProfileHeaderViewModel.ViewState.Loaded $viewState;
 
@@ -378,8 +378,8 @@ public final class UserProfileHeaderView extends ConstraintLayout {
         }
     }
 
-    /* compiled from: UserProfileHeaderView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$updateViewState$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$updateViewState$3 */
+    /* JADX INFO: compiled from: UserProfileHeaderView.kt */
     public static final class ViewOnClickListenerC103083 implements View.OnClickListener {
         public final /* synthetic */ UserProfileHeaderViewModel.ViewState.Loaded $viewState;
 
@@ -500,7 +500,7 @@ public final class UserProfileHeaderView extends ConstraintLayout {
         userProfileHeaderView.syncAvatarRepresentativeColorSubscription = subscription;
     }
 
-    private final void configureAka(UserProfileHeaderViewModel.ViewState.Loaded viewState) throws Resources.NotFoundException {
+    private final void configureAka(UserProfileHeaderViewModel.ViewState.Loaded viewState) {
         UserAkaView userAkaView = this.binding.f15347g;
         Intrinsics3.checkNotNullExpressionValue(userAkaView, "binding.userAka");
         userAkaView.setVisibility(viewState.getShowAkas() ? 0 : 8);
@@ -711,6 +711,7 @@ public final class UserProfileHeaderView extends ConstraintLayout {
                 numValueOf = Integer.valueOf(Color.parseColor(bannerColorHex));
             } catch (IllegalArgumentException e) {
                 Logger.e$default(AppLog.f14950g, outline.m883w("failed to parse banner color string: ", bannerColorHex), e, null, 4, null);
+                numValueOf = null;
             }
         } else {
             numValueOf = null;
@@ -757,14 +758,14 @@ public final class UserProfileHeaderView extends ConstraintLayout {
         cardView2.setVisibility(viewState.getEditable() ? 0 : 8);
     }
 
-    /* compiled from: UserProfileHeaderView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$1 */
+    /* JADX INFO: compiled from: UserProfileHeaderView.kt */
     public static final class C102961 extends Lambda implements Function2<LayoutInflater, ViewGroup, BadgeViewHolder> {
         public C102961() {
             super(2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final BadgeViewHolder invoke2(LayoutInflater layoutInflater, ViewGroup viewGroup) {
             Intrinsics3.checkNotNullParameter(layoutInflater, "inflater");
             Intrinsics3.checkNotNullParameter(viewGroup, "parent");

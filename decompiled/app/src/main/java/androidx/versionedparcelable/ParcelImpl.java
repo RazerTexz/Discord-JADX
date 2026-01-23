@@ -5,14 +5,14 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.RestrictTo;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"BanParcelableUsage"})
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes.dex */
 public class ParcelImpl implements Parcelable {
     public static final Parcelable.Creator<ParcelImpl> CREATOR = new C06801();
     private final VersionedParcelable mParcel;
 
-    /* renamed from: androidx.versionedparcelable.ParcelImpl$1 */
+    /* JADX INFO: renamed from: androidx.versionedparcelable.ParcelImpl$1 */
     public static class C06801 implements Parcelable.Creator<ParcelImpl> {
         @Override // android.os.Parcelable.Creator
         public /* bridge */ /* synthetic */ ParcelImpl createFromParcel(Parcel parcel) {
@@ -51,7 +51,7 @@ public class ParcelImpl implements Parcelable {
     }
 
     @Override // android.os.Parcelable
-    public void writeToParcel(Parcel parcel, int i) throws IllegalArgumentException {
+    public void writeToParcel(Parcel parcel, int i) {
         new VersionedParcelParcel(parcel).writeVersionedParcelable(this.mParcel);
     }
 

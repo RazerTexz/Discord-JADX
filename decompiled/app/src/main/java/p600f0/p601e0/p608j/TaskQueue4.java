@@ -4,24 +4,24 @@ import java.io.IOException;
 import p600f0.p601e0.p604f.Task2;
 import p615g0.Buffer3;
 
-/* compiled from: TaskQueue.kt */
-/* renamed from: f0.e0.j.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.j.g, reason: use source file name */
+/* JADX INFO: compiled from: TaskQueue.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TaskQueue4 extends Task2 {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final /* synthetic */ Http2Connection f25676e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final /* synthetic */ int f25677f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final /* synthetic */ Buffer3 f25678g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final /* synthetic */ int f25679h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final /* synthetic */ boolean f25680i;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -35,7 +35,7 @@ public final class TaskQueue4 extends Task2 {
     }
 
     @Override // p600f0.p601e0.p604f.Task2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long mo10150a() {
         try {
             boolean zMo10311d = this.f25676e.f25641w.mo10311d(this.f25677f, this.f25678g, this.f25679h, this.f25680i);

@@ -22,19 +22,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetEnableMFAInput.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEnableMFAInput.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEnableMFAInput extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetEnableMFAInput.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsEnableMfaInputBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetEnableMFAInput.kt */
-    /* renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAInput$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAInput$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetEnableMFAInput.kt */
     public static final class C97881 extends Lambda implements Function1<String, Unit> {
         public final /* synthetic */ View $view;
 
@@ -50,7 +50,7 @@ public final class WidgetEnableMFAInput extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "verificationCode");
             WidgetEnableMFAViewModel widgetEnableMFAViewModelAccess$getViewModel$p = WidgetEnableMFAInput.access$getViewModel$p(WidgetEnableMFAInput.this);

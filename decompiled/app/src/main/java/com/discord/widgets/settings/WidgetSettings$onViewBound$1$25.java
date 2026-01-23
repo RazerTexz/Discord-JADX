@@ -6,8 +6,8 @@ import com.discord.stores.StoreChangeLog;
 import com.discord.stores.StoreStream;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettings$onViewBound$1$25 implements View.OnClickListener {
     public static final WidgetSettings$onViewBound$1$25 INSTANCE = new WidgetSettings$onViewBound$1$25();
 

@@ -1,17 +1,17 @@
 package p007b.p452o.p453a.p455n.p463v;
 
-/* compiled from: CameraStateOrchestrator.java */
-/* renamed from: b.o.a.n.v.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.v.h, reason: use source file name */
+/* JADX INFO: compiled from: CameraStateOrchestrator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraStateOrchestrator3 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ CameraState2 f14040j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Runnable f14041k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ CameraStateOrchestrator f14042l;
 
     public CameraStateOrchestrator3(CameraStateOrchestrator cameraStateOrchestrator, CameraState2 cameraState2, Runnable runnable) {

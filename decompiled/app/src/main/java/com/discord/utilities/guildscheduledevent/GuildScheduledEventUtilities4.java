@@ -5,9 +5,9 @@ import com.discord.stores.StorePermissions;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildScheduledEventUtilities.kt */
-/* renamed from: com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilities$Companion$observeCanCreateAnyEvent$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilities$Companion$observeCanCreateAnyEvent$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildScheduledEventUtilities.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventUtilities4 extends Lambda implements Function0<Boolean> {
     public final /* synthetic */ StoreChannels $channelsStore;
     public final /* synthetic */ long $guildId;
@@ -26,7 +26,7 @@ public final class GuildScheduledEventUtilities4 extends Lambda implements Funct
         return Boolean.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2() {
         return GuildScheduledEventUtilities.INSTANCE.canCreateAnyEvent(this.$guildId, this.$channelsStore, this.$permissionsStore);
     }

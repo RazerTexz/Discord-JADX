@@ -3,9 +3,9 @@ package com.discord.widgets.hubs;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHubAuthentication.kt */
-/* renamed from: com.discord.widgets.hubs.WidgetHubAuthentication$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAuthentication$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubAuthentication.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubAuthentication4 extends Lambda implements Function0<WidgetHubAuthenticationlViewModel4> {
     public final /* synthetic */ WidgetHubAuthentication this$0;
 

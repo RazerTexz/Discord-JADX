@@ -25,9 +25,9 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func5;
 
-/* compiled from: WidgetGuildInviteShareViewModel.kt */
-/* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareViewModel$observeViewStateFromStores$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareViewModel$observeViewStateFromStores$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildInviteShareViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildInviteShareViewModel2<T1, T2, T3, T4, T5, R> implements Func5<WidgetInviteModel, List<? extends InviteSuggestion>, String, Map<String, ? extends Set<? extends Long>>, Unit, WidgetGuildInviteShareViewModel.ViewState.Loaded> {
     public final /* synthetic */ WidgetGuildInviteShareViewModel this$0;
 
@@ -40,16 +40,14 @@ public final class WidgetGuildInviteShareViewModel2<T1, T2, T3, T4, T5, R> imple
         return call2(widgetInviteModel, list, str, (Map<String, ? extends Set<Long>>) map, unit);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:49:0x00e0  */
-    /* JADX WARN: Type inference failed for: r11v12, types: [java.util.List] */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public final WidgetGuildInviteShareViewModel.ViewState.Loaded call2(WidgetInviteModel widgetInviteModel, List<? extends InviteSuggestion> list, String str, Map<String, ? extends Set<Long>> map, Unit unit) {
         boolean zContains;
-        ArrayList arrayListListOf;
+        List listListOf;
         InviteSuggestionItem userItem;
         boolean z2;
         Intrinsics3.checkNotNullExpressionValue(map, "sentInvites");
@@ -103,9 +101,9 @@ public final class WidgetGuildInviteShareViewModel2<T1, T2, T3, T4, T5, R> imple
                 }
                 arrayList2.add(userItem);
             }
-            arrayListListOf = arrayList2;
+            listListOf = arrayList2;
         } else if (!(str == null || StringsJVM.isBlank(str))) {
-            arrayListListOf = CollectionsJVM.listOf(InviteSuggestionItem.INSTANCE);
+            listListOf = CollectionsJVM.listOf(InviteSuggestionItem.INSTANCE);
         }
         if (widgetInviteModel.getInvite() != null) {
             if (!widgetInviteModel.getInvite().isStatic() && !widgetInviteModel.isInviteFromStore()) {
@@ -117,6 +115,6 @@ public final class WidgetGuildInviteShareViewModel2<T1, T2, T3, T4, T5, R> imple
         }
         Intrinsics3.checkNotNullExpressionValue(widgetInviteModel, "widgetInviteModel");
         Intrinsics3.checkNotNullExpressionValue(str, "filter");
-        return new WidgetGuildInviteShareViewModel.ViewState.Loaded(widgetInviteModel, arrayListListOf, str, map, z2);
+        return new WidgetGuildInviteShareViewModel.ViewState.Loaded(widgetInviteModel, listListOf, str, map, z2);
     }
 }

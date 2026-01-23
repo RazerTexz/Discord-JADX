@@ -8,9 +8,9 @@ import p007b.p195g.p196a.p205c.SerializerProvider;
 import p007b.p195g.p196a.p205c.p215g0.BeanPropertyWriter;
 import p007b.p195g.p196a.p205c.p219i0.NameTransformer4;
 
-/* compiled from: FilteredBeanPropertyWriter.java */
-/* renamed from: b.g.a.c.g0.t.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.t.d, reason: use source file name */
+/* JADX INFO: compiled from: FilteredBeanPropertyWriter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FilteredBeanPropertyWriter extends BeanPropertyWriter implements Serializable {
     private static final long serialVersionUID = 1;
     public final BeanPropertyWriter _delegate;
@@ -23,25 +23,25 @@ public final class FilteredBeanPropertyWriter extends BeanPropertyWriter impleme
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.BeanPropertyWriter
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo1979e(JsonSerializer<Object> jsonSerializer) {
         this._delegate.mo1979e(jsonSerializer);
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.BeanPropertyWriter
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1980f(JsonSerializer<Object> jsonSerializer) {
         this._delegate.mo1980f(jsonSerializer);
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.BeanPropertyWriter
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public BeanPropertyWriter mo1981g(NameTransformer4 nameTransformer4) {
         return new FilteredBeanPropertyWriter(this._delegate.mo1981g(nameTransformer4), this._views);
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.BeanPropertyWriter
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo1982h(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws Exception {
         if (m2020j(serializerProvider._serializationView)) {
             this._delegate.mo1982h(obj, jsonGenerator, serializerProvider);
@@ -56,7 +56,7 @@ public final class FilteredBeanPropertyWriter extends BeanPropertyWriter impleme
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.BeanPropertyWriter
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo1983i(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws Exception {
         if (m2020j(serializerProvider._serializationView)) {
             this._delegate.mo1983i(obj, jsonGenerator, serializerProvider);
@@ -66,7 +66,7 @@ public final class FilteredBeanPropertyWriter extends BeanPropertyWriter impleme
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean m2020j(Class<?> cls) {
         if (cls == null) {
             return true;

@@ -7,12 +7,12 @@ import com.discord.samsung.SamsungConnectActivity;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SamsungConnectActivity.kt */
-/* renamed from: b.a.r.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.r.c, reason: use source file name */
+/* JADX INFO: compiled from: SamsungConnectActivity.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SamsungConnectActivity2<O> implements ActivityResultCallback<ActivityResult> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Function1 f1875a;
 
     public SamsungConnectActivity2(Function1 function1) {

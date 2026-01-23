@@ -4,7 +4,6 @@ import android.R;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -52,7 +51,7 @@ import com.google.android.material.shape.MaterialShapeUtils;
 import com.google.android.material.shape.ShapeAppearanceModel;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class NavigationView extends ScrimInsetsFrameLayout {
     private static final int PRESENTER_NAVIGATION_VIEW_ID = 1;
     public OnNavigationItemSelectedListener listener;
@@ -72,7 +71,7 @@ public class NavigationView extends ScrimInsetsFrameLayout {
         boolean onNavigationItemSelected(@NonNull MenuItem menuItem);
     }
 
-    /* renamed from: com.google.android.material.navigation.NavigationView$a */
+    /* JADX INFO: renamed from: com.google.android.material.navigation.NavigationView$a */
     public class C10953a implements MenuBuilder.Callback {
         public C10953a() {
         }
@@ -88,7 +87,7 @@ public class NavigationView extends ScrimInsetsFrameLayout {
         }
     }
 
-    /* renamed from: com.google.android.material.navigation.NavigationView$b */
+    /* JADX INFO: renamed from: com.google.android.material.navigation.NavigationView$b */
     public class ViewTreeObserverOnGlobalLayoutListenerC10954b implements ViewTreeObserver.OnGlobalLayoutListener {
         public ViewTreeObserverOnGlobalLayoutListenerC10954b() {
         }
@@ -120,7 +119,7 @@ public class NavigationView extends ScrimInsetsFrameLayout {
     }
 
     @Nullable
-    private ColorStateList createDefaultColorStateList(int i) throws Resources.NotFoundException {
+    private ColorStateList createDefaultColorStateList(int i) {
         TypedValue typedValue = new TypedValue();
         if (!getContext().getTheme().resolveAttribute(i, typedValue, true)) {
             return null;
@@ -349,7 +348,7 @@ public class NavigationView extends ScrimInsetsFrameLayout {
         @Nullable
         public Bundle menuState;
 
-        /* renamed from: com.google.android.material.navigation.NavigationView$SavedState$a */
+        /* JADX INFO: renamed from: com.google.android.material.navigation.NavigationView$SavedState$a */
         public static class C10952a implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.ClassLoaderCreator
             @NonNull
@@ -391,7 +390,7 @@ public class NavigationView extends ScrimInsetsFrameLayout {
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
-    public NavigationView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws Resources.NotFoundException {
+    public NavigationView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         ColorStateList colorStateListCreateDefaultColorStateList;
         int resourceId;
         boolean z2;

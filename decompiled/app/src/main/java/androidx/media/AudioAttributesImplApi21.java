@@ -8,9 +8,9 @@ import androidx.annotation.RestrictTo;
 import androidx.media.AudioAttributesImpl;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(21)
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes.dex */
 public class AudioAttributesImplApi21 implements AudioAttributesImpl {
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})

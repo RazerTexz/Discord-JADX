@@ -13,30 +13,30 @@ import p600f0.p601e0.Util7;
 import p600f0.p601e0.p608j.Hpack;
 import p615g0.Buffer3;
 
-/* compiled from: Http2Writer.kt */
-/* renamed from: f0.e0.j.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.j.o, reason: use source file name */
+/* JADX INFO: compiled from: Http2Writer.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Http2Writer implements Closeable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Logger f25737j = Logger.getLogger(Http2.class.getName());
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Buffer3 f25738k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f25739l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f25740m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Hpack.b f25741n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final BufferedSink f25742o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final boolean f25743p;
 
     public Http2Writer(BufferedSink bufferedSink, boolean z2) {
@@ -49,7 +49,7 @@ public final class Http2Writer implements Closeable {
         this.f25741n = new Hpack.b(0, false, buffer3, 3);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final synchronized void m10298a(Settings3 settings3) throws IOException {
         Intrinsics3.checkParameterIsNotNull(settings3, "peerSettings");
         if (this.f25740m) {
@@ -88,7 +88,7 @@ public final class Http2Writer implements Closeable {
         this.f25742o.flush();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final synchronized void m10299b(boolean z2, int i, Buffer3 buffer3, int i2) throws IOException {
         if (this.f25740m) {
             throw new IOException("closed");
@@ -103,7 +103,7 @@ public final class Http2Writer implements Closeable {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m10300c(int i, int i2, int i3, int i4) throws IOException {
         Logger logger = f25737j;
         if (logger.isLoggable(Level.FINE)) {
@@ -136,7 +136,7 @@ public final class Http2Writer implements Closeable {
         this.f25742o.close();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final synchronized void m10301d(int i, ErrorCode2 errorCode2, byte[] bArr) throws IOException {
         Intrinsics3.checkParameterIsNotNull(errorCode2, "errorCode");
         Intrinsics3.checkParameterIsNotNull(bArr, "debugData");
@@ -155,7 +155,7 @@ public final class Http2Writer implements Closeable {
         this.f25742o.flush();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final synchronized void m10302e(boolean z2, int i, List<Header2> list) throws IOException {
         Intrinsics3.checkParameterIsNotNull(list, "headerBlock");
         if (this.f25740m) {
@@ -175,7 +175,7 @@ public final class Http2Writer implements Closeable {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final synchronized void m10303f(boolean z2, int i, int i2) throws IOException {
         if (this.f25740m) {
             throw new IOException("closed");
@@ -193,7 +193,7 @@ public final class Http2Writer implements Closeable {
         this.f25742o.flush();
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final synchronized void m10304n(int i, ErrorCode2 errorCode2) throws IOException {
         Intrinsics3.checkParameterIsNotNull(errorCode2, "errorCode");
         if (this.f25740m) {
@@ -207,7 +207,7 @@ public final class Http2Writer implements Closeable {
         this.f25742o.flush();
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final synchronized void m10305q(int i, long j) throws IOException {
         if (this.f25740m) {
             throw new IOException("closed");
@@ -220,7 +220,7 @@ public final class Http2Writer implements Closeable {
         this.f25742o.flush();
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void m10306s(int i, long j) throws IOException {
         while (j > 0) {
             long jMin = Math.min(this.f25739l, j);

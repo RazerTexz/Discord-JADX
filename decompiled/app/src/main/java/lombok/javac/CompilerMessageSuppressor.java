@@ -17,7 +17,7 @@ import javax.tools.DiagnosticListener;
 import javax.tools.JavaFileObject;
 import lombok.permit.Permit;
 
-/* loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor.SCL.lombok */
 public final class CompilerMessageSuppressor {
     private final Log log;
     private Boolean dumpOnError;
@@ -38,7 +38,7 @@ public final class CompilerMessageSuppressor {
     private static final Field diagnosticHandlerField = getDeclaredField(Log.class, "diagnosticHandler");
     private static final Field NULL_FIELD = getDeclaredField(JavacResolution.class, "NULL_FIELD");
 
-    /* loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor$Writers.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor$Writers.SCL.lombok */
     enum Writers {
         ERROR("errWriter", "ERROR"),
         WARNING("warnWriter", "WARNING"),
@@ -47,7 +47,7 @@ public final class CompilerMessageSuppressor {
         final String fieldName;
         final String keyName;
 
-        /* renamed from: values, reason: to resolve conflict with enum method */
+        /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
         public static Writers[] valuesCustom() {
             Writers[] writersArrValuesCustom = values();
             int length = writersArrValuesCustom.length;
@@ -253,7 +253,7 @@ public final class CompilerMessageSuppressor {
         return writerField != null ? new Java8WriterField(writerField) : WriterField.NONE;
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor$WriterField.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor$WriterField.SCL.lombok */
     interface WriterField {
         public static final PrintWriter NO_WRITER = new PrintWriter(new C128851());
         public static final WriterField NONE = new C128862();
@@ -262,8 +262,8 @@ public final class CompilerMessageSuppressor {
 
         void resume(Log log);
 
-        /* renamed from: lombok.javac.CompilerMessageSuppressor$WriterField$1 */
-        /* loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor$WriterField$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.javac.CompilerMessageSuppressor$WriterField$1 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor$WriterField$1.SCL.lombok */
         class C128851 extends OutputStream {
             C128851() {
             }
@@ -273,8 +273,8 @@ public final class CompilerMessageSuppressor {
             }
         }
 
-        /* renamed from: lombok.javac.CompilerMessageSuppressor$WriterField$2 */
-        /* loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor$WriterField$2.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.javac.CompilerMessageSuppressor$WriterField$2 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor$WriterField$2.SCL.lombok */
         class C128862 implements WriterField {
             C128862() {
             }
@@ -289,7 +289,7 @@ public final class CompilerMessageSuppressor {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor$Java8WriterField.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor$Java8WriterField.SCL.lombok */
     static class Java8WriterField implements WriterField {
         private final Field field;
         private PrintWriter writer;
@@ -319,7 +319,7 @@ public final class CompilerMessageSuppressor {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor$Java9WriterField.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor$Java9WriterField.SCL.lombok */
     static class Java9WriterField implements WriterField {
         private final Field field;
         private final Object key;

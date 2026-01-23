@@ -28,9 +28,9 @@ import p507d0.p580t.SetsJVM;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ThreadMemberListItemGenerator.kt */
-/* renamed from: com.discord.widgets.channels.memberlist.ThreadMemberListItemGeneratorKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.ThreadMemberListItemGeneratorKt, reason: use source file name */
+/* JADX INFO: compiled from: ThreadMemberListItemGenerator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ThreadMemberListItemGenerator {
     private static final Comparator<MemberListRow.Member> ALPHABETICAL_COMPARATOR = ThreadMemberListItemGenerator2.INSTANCE;
 

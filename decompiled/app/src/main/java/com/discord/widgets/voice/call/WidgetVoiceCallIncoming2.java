@@ -16,19 +16,19 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetVoiceCallIncoming.kt */
-/* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetVoiceCallIncoming.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetVoiceCallIncoming2<T, R> implements Func1<Set<? extends Long>, Observable<? extends WidgetVoiceCallIncoming.Model>> {
     public static final WidgetVoiceCallIncoming2 INSTANCE = new WidgetVoiceCallIncoming2();
 
-    /* compiled from: WidgetVoiceCallIncoming.kt */
-    /* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$Model$Companion$get$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$Model$Companion$get$1$1 */
+    /* JADX INFO: compiled from: WidgetVoiceCallIncoming.kt */
     public static final class C104151<T, R> implements Func1<CallModel, WidgetVoiceCallIncoming.Model> {
         public final /* synthetic */ Set $incomingCalls;
 
-        /* compiled from: WidgetVoiceCallIncoming.kt */
-        /* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$Model$Companion$get$1$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$Model$Companion$get$1$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetVoiceCallIncoming.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<StoreVoiceParticipants.VoiceUser, Boolean> {
             public final /* synthetic */ CallModel $callModel;
 
@@ -43,7 +43,7 @@ public final class WidgetVoiceCallIncoming2<T, R> implements Func1<Set<? extends
                 return Boolean.valueOf(invoke2(voiceUser));
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final boolean invoke2(StoreVoiceParticipants.VoiceUser voiceUser) {
                 Intrinsics3.checkNotNullParameter(voiceUser, "participant");
                 if (ChannelUtils.m7702z(this.$callModel.getChannel())) {
@@ -66,7 +66,7 @@ public final class WidgetVoiceCallIncoming2<T, R> implements Func1<Set<? extends
             return call2(callModel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetVoiceCallIncoming.Model call2(CallModel callModel) {
             if (callModel == null) {
                 return null;
@@ -88,7 +88,7 @@ public final class WidgetVoiceCallIncoming2<T, R> implements Func1<Set<? extends
         return call2((Set<Long>) set);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetVoiceCallIncoming.Model> call2(Set<Long> set) {
         if (set.isEmpty()) {
             return new ScalarSynchronousObservable(null);

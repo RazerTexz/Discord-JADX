@@ -15,14 +15,14 @@ import androidx.work.impl.utils.taskexecutor.TaskExecutor;
 import java.util.UUID;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class WorkProgressUpdater implements ProgressUpdater {
     public static final String TAG = Logger.tagWithPrefix("WorkProgressUpdater");
     public final TaskExecutor mTaskExecutor;
     public final WorkDatabase mWorkDatabase;
 
-    /* renamed from: androidx.work.impl.utils.WorkProgressUpdater$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.utils.WorkProgressUpdater$1 */
     public class RunnableC07831 implements Runnable {
         public final /* synthetic */ Data val$data;
         public final /* synthetic */ SettableFuture val$future;

@@ -10,29 +10,29 @@ import java.util.Map;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* renamed from: b.i.a.f.h.j.j0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.j0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3523j0 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Map<String, String> f9746a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<?> f9747b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long f9748c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long f9749d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f9750e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f9751f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final String f9752g;
 
     public C3523j0(C3506d c3506d, Map<String, String> map, long j, boolean z2, long j2, int i) {
@@ -76,7 +76,7 @@ public final class C3523j0 {
         this.f9746a = Collections.unmodifiableMap(map2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m4461a(C3506d c3506d, Object obj) {
         if (obj == null) {
             return null;
@@ -96,7 +96,7 @@ public final class C3523j0 {
         return string;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String m4462b(C3506d c3506d, Object obj) {
         String string = obj == null ? "" : obj.toString();
         int length = string.length();

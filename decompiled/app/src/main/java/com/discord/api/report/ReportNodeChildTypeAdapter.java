@@ -7,8 +7,8 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InAppReportsMenu.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: InAppReportsMenu.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ReportNodeChildTypeAdapter extends TypeAdapter<ReportNodeChild> {
     @Override // com.google.gson.TypeAdapter
     public ReportNodeChild read(JsonReader jsonReader) throws IOException {

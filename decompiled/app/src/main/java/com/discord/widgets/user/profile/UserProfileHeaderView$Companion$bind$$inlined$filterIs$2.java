@@ -6,8 +6,8 @@ import com.discord.widgets.user.profile.UserProfileHeaderViewModel;
 import java.util.Objects;
 import p637j0.p641k.Func1;
 
-/* compiled from: ObservableExtensions.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ObservableExtensions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserProfileHeaderView$Companion$bind$$inlined$filterIs$2<T, R> implements Func1<Object, T> {
     public static final UserProfileHeaderView$Companion$bind$$inlined$filterIs$2 INSTANCE = new UserProfileHeaderView$Companion$bind$$inlined$filterIs$2();
 

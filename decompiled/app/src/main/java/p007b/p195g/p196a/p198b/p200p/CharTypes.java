@@ -2,40 +2,40 @@ package p007b.p195g.p196a.p198b.p200p;
 
 import java.util.Arrays;
 
-/* compiled from: CharTypes.java */
-/* renamed from: b.g.a.b.p.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.p.a, reason: use source file name */
+/* JADX INFO: compiled from: CharTypes.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CharTypes {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final char[] f4536a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final byte[] f4537b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final int[] f4538c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final int[] f4539d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final int[] f4540e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final int[] f4541f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final int[] f4542g;
 
-    /* compiled from: CharTypes.java */
-    /* renamed from: b.g.a.b.p.a$a */
+    /* JADX INFO: renamed from: b.g.a.b.p.a$a */
+    /* JADX INFO: compiled from: CharTypes.java */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final a f4543a = new a();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int[][] f4544b = new int[128][];
     }
 

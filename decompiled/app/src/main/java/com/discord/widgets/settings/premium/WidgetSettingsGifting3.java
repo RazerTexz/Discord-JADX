@@ -13,15 +13,15 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsGifting.kt */
-/* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$chooseGiftCallback$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$chooseGiftCallback$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsGifting.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsGifting3 extends Lambda implements Function1<GooglePlayInAppSku, Unit> {
     public final /* synthetic */ Traits.Location $locationTrait;
     public final /* synthetic */ WidgetSettingsGifting this$0;
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$chooseGiftCallback$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$chooseGiftCallback$1$1 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final class C99141 extends Lambda implements Function0<Unit> {
         public C99141() {
             super(0);
@@ -33,7 +33,7 @@ public final class WidgetSettingsGifting3 extends Lambda implements Function1<Go
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetSettingsGifting.access$enableGiftingButtons(WidgetSettingsGifting3.this.this$0);
         }
@@ -52,7 +52,7 @@ public final class WidgetSettingsGifting3 extends Lambda implements Function1<Go
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(GooglePlayInAppSku googlePlayInAppSku) {
         Intrinsics3.checkNotNullParameter(googlePlayInAppSku, "inAppSku");
         try {

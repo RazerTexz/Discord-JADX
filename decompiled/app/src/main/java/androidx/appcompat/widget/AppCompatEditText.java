@@ -21,7 +21,7 @@ import androidx.appcompat.C0051R;
 import androidx.core.view.TintableBackgroundView;
 import androidx.core.widget.TextViewCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatEditText extends EditText implements TintableBackgroundView {
     private final AppCompatBackgroundHelper mBackgroundTintHelper;
     private final AppCompatTextClassifierHelper mTextClassifierHelper;

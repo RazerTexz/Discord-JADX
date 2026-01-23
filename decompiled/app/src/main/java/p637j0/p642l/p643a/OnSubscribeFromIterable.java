@@ -9,23 +9,23 @@ import p658rx.Observable;
 import p658rx.Producer;
 import p658rx.Subscriber;
 
-/* compiled from: OnSubscribeFromIterable.java */
-/* renamed from: j0.l.a.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.q, reason: use source file name */
+/* JADX INFO: compiled from: OnSubscribeFromIterable.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OnSubscribeFromIterable<T> implements Observable.InterfaceC13005a<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Iterable<? extends T> f26990j;
 
-    /* compiled from: OnSubscribeFromIterable.java */
-    /* renamed from: j0.l.a.q$a */
+    /* JADX INFO: renamed from: j0.l.a.q$a */
+    /* JADX INFO: compiled from: OnSubscribeFromIterable.java */
     public static final class a<T> extends AtomicLong implements Producer {
         private static final long serialVersionUID = -8730475647105475802L;
 
-        /* renamed from: it */
+        /* JADX INFO: renamed from: it */
         private final Iterator<? extends T> f26991it;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         private final Subscriber<? super T> f26992o;
 
         public a(Subscriber<? super T> subscriber, Iterator<? extends T> it) {
@@ -38,7 +38,7 @@ public final class OnSubscribeFromIterable<T> implements Observable.InterfaceC13
             r9 = p007b.p225i.p226a.p288f.p299e.p308o.C3404f.m4250U0(r8, r4);
          */
         @Override // p658rx.Producer
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */

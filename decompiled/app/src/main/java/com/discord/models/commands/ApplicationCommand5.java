@@ -12,9 +12,9 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommand.kt */
-/* renamed from: com.discord.models.commands.RemoteApplicationCommand, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.commands.RemoteApplicationCommand, reason: use source file name */
+/* JADX INFO: compiled from: ApplicationCommand.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ApplicationCommand5 extends ApplicationCommand {
     public /* synthetic */ ApplicationCommand5(String str, long j, String str2, String str3, List list, Long l, String str4, Boolean bool, List list2, Function1 function1, int i, DefaultConstructorMarker defaultConstructorMarker) {
         this(str, j, str2, (i & 8) != 0 ? null : str3, list, l, str4, (i & 128) != 0 ? null : bool, (i & 256) != 0 ? null : list2, (i & 512) != 0 ? null : function1);

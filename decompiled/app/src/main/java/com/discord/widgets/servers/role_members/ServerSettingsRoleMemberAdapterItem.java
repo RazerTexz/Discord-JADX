@@ -6,8 +6,8 @@ import com.discord.widgets.channels.permissions.PermissionOwner;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ServerSettingsRoleMemberAdapterItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ServerSettingsRoleMemberAdapterItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ServerSettingsRoleMemberAdapterItem implements DiffKeyProvider {
     private final GuildMember guildMember;
     private final String key;
@@ -31,12 +31,12 @@ public final /* data */ class ServerSettingsRoleMemberAdapterItem implements Dif
         return serverSettingsRoleMemberAdapterItem.copy(guildMember, member);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final GuildMember getGuildMember() {
         return this.guildMember;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final PermissionOwner.Member getPermissionOwner() {
         return this.permissionOwner;
     }

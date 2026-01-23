@@ -4,12 +4,12 @@ import p637j0.Single2;
 import p637j0.SingleSubscriber;
 import p658rx.Observable;
 
-/* compiled from: OnSubscribeSingle.java */
-/* renamed from: j0.l.a.e0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.e0, reason: use source file name */
+/* JADX INFO: compiled from: OnSubscribeSingle.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OnSubscribeSingle2<T> implements Single2.a<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Observable<T> f26771j;
 
     public OnSubscribeSingle2(Observable<T> observable) {

@@ -1,7 +1,6 @@
 package com.discord.widgets.guilds.list;
 
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -53,11 +52,11 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t.MapsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildListViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildListViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
 
-    /* compiled from: GuildListViewHolder.kt */
+    /* JADX INFO: compiled from: GuildListViewHolder.kt */
     public static final class DiscordHubViewHolder extends GuildListViewHolder {
         private final WidgetGuildsListItemHubVerificationBinding binding;
 
@@ -88,7 +87,7 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    /* compiled from: GuildListViewHolder.kt */
+    /* JADX INFO: compiled from: GuildListViewHolder.kt */
     public static final class FolderViewHolder extends GuildListViewHolder implements GuildsDragAndDropCallback.DraggableViewHolder {
         private final WidgetGuildsListItemFolderBinding binding;
 
@@ -161,10 +160,11 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
             return (folderItem2 == null || folderItem2.isOpen() || ((folderItem = this.data) != null && folderItem.getIsPendingGuildsFolder())) ? false : true;
         }
 
-        public final void configure(GuildListItem.FolderItem data) throws Resources.NotFoundException {
+        public final void configure(GuildListItem.FolderItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             this.data = data;
-            this.color = data.getColor() != null ? Integer.valueOf((int) (r2.intValue() + 4278190080L)) : null;
+            Integer color = data.getColor();
+            this.color = color != null ? Integer.valueOf((int) (((long) color.intValue()) + 4278190080L)) : null;
             this.numChildren = data.isOpen() ? data.getGuilds().size() : 0;
             this.binding.f17098a.setOnClickListener(new GuildListViewHolder2(this, data));
             ServerFolderView serverFolderView = this.binding.f17099b;
@@ -172,7 +172,7 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
             long folderId = data.getFolderId();
             boolean zIsOpen = data.isOpen();
             List<Guild> guilds = data.getGuilds();
-            Integer color = data.getColor();
+            Integer color2 = data.getColor();
             Objects.requireNonNull(serverFolderView);
             Intrinsics3.checkNotNullParameter(guilds, "guilds");
             if (isPendingGuildsFolder) {
@@ -193,7 +193,7 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
                     } else {
                         serverFolderView.m8555a();
                     }
-                    ImageViewCompat.setImageTintList(serverFolderView.binding.f906b, ColorStateList.valueOf((int) ((color != null ? color.intValue() : ColorCompat.getThemedColor(serverFolderView.getContext(), C5419R.attr.color_brand_500)) + 4278190080L)));
+                    ImageViewCompat.setImageTintList(serverFolderView.binding.f906b, ColorStateList.valueOf((int) (((long) (color2 != null ? color2.intValue() : ColorCompat.getThemedColor(serverFolderView.getContext(), C5419R.attr.color_brand_500))) + 4278190080L)));
                 } else {
                     serverFolderView.isOpen = false;
                     if (z2) {
@@ -289,7 +289,7 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    /* compiled from: GuildListViewHolder.kt */
+    /* JADX INFO: compiled from: GuildListViewHolder.kt */
     public static final class FriendsViewHolder extends GuildListViewHolder {
         private final WidgetGuildsListItemProfileBinding binding;
         private final Function1<GuildListItem.FriendsItem, Unit> onClicked;
@@ -360,7 +360,7 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    /* compiled from: GuildListViewHolder.kt */
+    /* JADX INFO: compiled from: GuildListViewHolder.kt */
     public static final class GuildViewHolder extends GuildListViewHolder implements GuildsDragAndDropCallback.DraggableViewHolder {
         private static final float DEFAULT_AVATAR_TEXT_SIZE_SP = 14.0f;
         private static final float TARGETED_AVATAR_TEXT_SIZE_DP = 8.0f;
@@ -746,7 +746,7 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    /* compiled from: GuildListViewHolder.kt */
+    /* JADX INFO: compiled from: GuildListViewHolder.kt */
     public static final class PrivateChannelViewHolder extends GuildListViewHolder {
         private final WidgetGuildsListItemDmBinding binding;
         private final Function1<GuildListItem.PrivateChannelItem, Unit> onClicked;
@@ -796,7 +796,7 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    /* compiled from: GuildListViewHolder.kt */
+    /* JADX INFO: compiled from: GuildListViewHolder.kt */
     public static final class SimpleViewHolder extends GuildListViewHolder {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public SimpleViewHolder(View view) {
@@ -805,7 +805,7 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    /* compiled from: GuildListViewHolder.kt */
+    /* JADX INFO: compiled from: GuildListViewHolder.kt */
     public static final class SpaceViewHolder extends GuildListViewHolder {
         private final View view;
 

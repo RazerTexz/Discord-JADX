@@ -2,9 +2,9 @@ package p007b.p452o.p453a.p454m;
 
 import androidx.annotation.NonNull;
 
-/* compiled from: Hdr.java */
-/* renamed from: b.o.a.m.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.m.h, reason: use source file name */
+/* JADX INFO: compiled from: Hdr.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum Hdr implements Control {
     OFF(0),
     ON(1);
@@ -16,7 +16,7 @@ public enum Hdr implements Control {
     }
 
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static Hdr m7178f(int i) {
         Hdr[] hdrArrValues = values();
         for (int i2 = 0; i2 < 2; i2++) {
@@ -28,7 +28,7 @@ public enum Hdr implements Control {
         return OFF;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int m7179g() {
         return this.value;
     }

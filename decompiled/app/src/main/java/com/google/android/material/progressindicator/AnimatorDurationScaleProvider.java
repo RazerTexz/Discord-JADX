@@ -6,8 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.VisibleForTesting;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class AnimatorDurationScaleProvider {
     private static float defaultSystemAnimatorDurationScale = 1.0f;
 

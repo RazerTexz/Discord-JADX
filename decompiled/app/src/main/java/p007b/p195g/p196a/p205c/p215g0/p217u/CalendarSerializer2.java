@@ -7,13 +7,13 @@ import p007b.p195g.p196a.p198b.JsonGenerator;
 import p007b.p195g.p196a.p205c.SerializerProvider;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 
-/* compiled from: CalendarSerializer.java */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.h, reason: use source file name */
+/* JADX INFO: compiled from: CalendarSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 @JacksonStdImpl
-/* renamed from: b.g.a.c.g0.u.h, reason: use source file name */
-/* loaded from: classes3.dex */
 public class CalendarSerializer2 extends DateTimeSerializerBase<Calendar> {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final CalendarSerializer2 f4854k = new CalendarSerializer2();
 
     public CalendarSerializer2() {
@@ -21,7 +21,7 @@ public class CalendarSerializer2 extends DateTimeSerializerBase<Calendar> {
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         Calendar calendar = (Calendar) obj;
         if (m2066p(serializerProvider)) {
@@ -32,7 +32,7 @@ public class CalendarSerializer2 extends DateTimeSerializerBase<Calendar> {
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.DateTimeSerializerBase
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public DateTimeSerializerBase<Calendar> mo2060r(Boolean bool, DateFormat dateFormat) {
         return new CalendarSerializer2(bool, dateFormat);
     }

@@ -44,26 +44,26 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetHubAddServer.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHubAddServer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubAddServer extends AppFragment {
     private static final int CHOOSE_GUILD = 0;
     private static final int GUILDS_ADDED = 1;
     private final SimpleRecyclerAdapter<Guild, DiscordHubAddServerViewHolder> adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ActivityResultLauncher<Intent> launcher;
     private final AppLogger2 loggingConfig;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetHubAddServer.class, "binding", "getBinding()Lcom/discord/databinding/WidgetHubAddServerBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetHubAddServer.kt */
+    /* JADX INFO: compiled from: WidgetHubAddServer.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -78,8 +78,8 @@ public final class WidgetHubAddServer extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubAddServer.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAddServer$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAddServer$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetHubAddServer.kt */
     public static final class ViewOnClickListenerC89941 implements View.OnClickListener {
         public final /* synthetic */ WidgetHubAddServerViewModel2 $state;
 
@@ -103,8 +103,8 @@ public final class WidgetHubAddServer extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubAddServer.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAddServer$onServerClickListener$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAddServer$onServerClickListener$1 */
+    /* JADX INFO: compiled from: WidgetHubAddServer.kt */
     public static final class C89951 extends Lambda implements Function1<WidgetHubAddServerViewModel2, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
@@ -126,7 +126,7 @@ public final class WidgetHubAddServer extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHubAddServerViewModel2 widgetHubAddServerViewModel2) {
             Object next;
             Intrinsics3.checkNotNullParameter(widgetHubAddServerViewModel2, "state");
@@ -152,8 +152,8 @@ public final class WidgetHubAddServer extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubAddServer.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAddServer$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAddServer$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetHubAddServer.kt */
     public static final class C89971 extends Lambda implements Function1<WidgetHubAddServerViewModel2, Unit> {
         public C89971() {
             super(1);
@@ -165,7 +165,7 @@ public final class WidgetHubAddServer extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHubAddServerViewModel2 widgetHubAddServerViewModel2) {
             Intrinsics3.checkNotNullParameter(widgetHubAddServerViewModel2, "viewState");
             WidgetHubAddServer.access$configureUI(WidgetHubAddServer.this, widgetHubAddServerViewModel2);

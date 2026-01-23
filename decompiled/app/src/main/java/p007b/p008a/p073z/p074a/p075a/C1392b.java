@@ -4,12 +4,12 @@ import com.discord.stores.StoreStream;
 import com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsAddMember;
 import p658rx.functions.Action1;
 
-/* compiled from: lambda */
-/* renamed from: b.a.z.a.a.b */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.z.a.a.b */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class C1392b implements Action1 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ long f2084j;
 
     public /* synthetic */ C1392b(long j) {

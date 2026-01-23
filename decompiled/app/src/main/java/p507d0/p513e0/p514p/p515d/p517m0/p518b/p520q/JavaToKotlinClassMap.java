@@ -26,61 +26,61 @@ import p507d0.p579g0.Strings4;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: JavaToKotlinClassMap.kt */
-/* renamed from: d0.e0.p.d.m0.b.q.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.c, reason: use source file name */
+/* JADX INFO: compiled from: JavaToKotlinClassMap.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JavaToKotlinClassMap {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final JavaToKotlinClassMap f22614a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String f22615b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final String f22616c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final String f22617d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final String f22618e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final ClassId f22619f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final FqName f22620g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final ClassId f22621h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final HashMap<FqNameUnsafe, ClassId> f22622i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final HashMap<FqNameUnsafe, ClassId> f22623j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final HashMap<FqNameUnsafe, FqName> f22624k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final HashMap<FqNameUnsafe, FqName> f22625l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final List<a> f22626m;
 
-    /* compiled from: JavaToKotlinClassMap.kt */
-    /* renamed from: d0.e0.p.d.m0.b.q.c$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.c$a */
+    /* JADX INFO: compiled from: JavaToKotlinClassMap.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ClassId f22627a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final ClassId f22628b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ClassId f22629c;
 
         public a(ClassId classId, ClassId classId2, ClassId classId3) {
@@ -333,7 +333,7 @@ public final class JavaToKotlinClassMap {
         return javaToKotlinClassMap.m9379e(cls);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m9375a(ClassId classId, ClassId classId2) {
         HashMap<FqNameUnsafe, ClassId> map = f22622i;
         FqNameUnsafe unsafe = classId.asSingleFqName().toUnsafe();
@@ -347,7 +347,7 @@ public final class JavaToKotlinClassMap {
         map2.put(unsafe2, classId);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m9376b(FqName fqName, ClassId classId) {
         HashMap<FqNameUnsafe, ClassId> map = f22623j;
         FqNameUnsafe unsafe = fqName.toUnsafe();
@@ -355,7 +355,7 @@ public final class JavaToKotlinClassMap {
         map.put(unsafe, classId);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m9377c(Class<?> cls, FqName fqName) {
         ClassId classIdM9379e = m9379e(cls);
         ClassId classId = ClassId.topLevel(fqName);
@@ -363,14 +363,14 @@ public final class JavaToKotlinClassMap {
         m9375a(classIdM9379e, classId);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m9378d(Class<?> cls, FqNameUnsafe fqNameUnsafe) {
         FqName safe = fqNameUnsafe.toSafe();
         Intrinsics3.checkNotNullExpressionValue(safe, "kotlinFqName.toSafe()");
         m9377c(cls, safe);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ClassId m9379e(Class<?> cls) {
         if (!cls.isPrimitive()) {
             cls.isArray();
@@ -386,7 +386,7 @@ public final class JavaToKotlinClassMap {
         return classIdCreateNestedClassId;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean m9380f(FqNameUnsafe fqNameUnsafe, String str) {
         Integer intOrNull;
         String strAsString = fqNameUnsafe.asString();

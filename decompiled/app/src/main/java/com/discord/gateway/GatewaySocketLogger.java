@@ -1,11 +1,11 @@
 package com.discord.gateway;
 
 
-/* compiled from: GatewaySocketLogger.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GatewaySocketLogger.kt */
+/* JADX INFO: loaded from: classes.dex */
 public interface GatewaySocketLogger {
 
-    /* compiled from: GatewaySocketLogger.kt */
+    /* JADX INFO: compiled from: GatewaySocketLogger.kt */
     public enum LogLevel {
         NONE,
         VERBOSE

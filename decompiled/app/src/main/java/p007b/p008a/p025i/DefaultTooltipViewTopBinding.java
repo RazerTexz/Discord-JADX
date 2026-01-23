@@ -6,16 +6,16 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: DefaultTooltipViewTopBinding.java */
-/* renamed from: b.a.i.j, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.j, reason: use source file name */
+/* JADX INFO: compiled from: DefaultTooltipViewTopBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class DefaultTooltipViewTopBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f964a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f965b;
 

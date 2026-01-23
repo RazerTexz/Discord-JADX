@@ -16,19 +16,19 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p571o1.TypeUtils2;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p572p1.CapturedTypeApproximation2;
 import p507d0.p513e0.p514p.p515d.p517m0.p576p.exceptionUtils;
 
-/* compiled from: TypeSubstitutor.java */
-/* renamed from: d0.e0.p.d.m0.n.c1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.c1, reason: use source file name */
+/* JADX INFO: compiled from: TypeSubstitutor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TypeSubstitutor2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final TypeSubstitutor2 f24745a = create(TypeSubstitution5.f24899a);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TypeSubstitution5 f24746b;
 
-    /* compiled from: TypeSubstitutor.java */
-    /* renamed from: d0.e0.p.d.m0.n.c1$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.c1$a */
+    /* JADX INFO: compiled from: TypeSubstitutor.java */
     public static final class a extends Exception {
         public a(String str) {
             super(str);
@@ -47,7 +47,7 @@ public class TypeSubstitutor2 {
     /* JADX WARN: Removed duplicated region for block: B:12:0x001d A[FALL_THROUGH] */
     /* JADX WARN: Removed duplicated region for block: B:23:0x0036 A[FALL_THROUGH] */
     /* JADX WARN: Removed duplicated region for block: B:54:0x00b1  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -359,7 +359,7 @@ public class TypeSubstitutor2 {
         throw new IllegalStateException(str2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m9999b(Variance variance, Variance variance2) {
         Variance variance3 = Variance.OUT_VARIANCE;
         Variance variance4 = Variance.IN_VARIANCE;
@@ -369,7 +369,7 @@ public class TypeSubstitutor2 {
         return (variance == variance3 && variance2 == variance4) ? 2 : 1;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static String m10000c(Object obj) {
         try {
             return obj.toString();
@@ -414,7 +414,7 @@ public class TypeSubstitutor2 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final TypeProjection m10001d(TypeProjection typeProjection, TypeParameterDescriptor typeParameterDescriptor, int i) throws a {
         if (typeProjection == null) {
             m9998a(17);

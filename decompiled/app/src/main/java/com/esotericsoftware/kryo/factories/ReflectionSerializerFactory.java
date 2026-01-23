@@ -5,7 +5,7 @@ import com.esotericsoftware.kryo.Serializer;
 import com.esotericsoftware.kryo.util.Util;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ReflectionSerializerFactory implements SerializerFactory {
     private final Class<? extends Serializer> serializerClass;
 

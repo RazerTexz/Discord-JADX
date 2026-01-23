@@ -6,20 +6,20 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p313h.p326m.C3930g;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzgu extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzgu> CREATOR = new C3930g();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20648j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f20649k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final byte[] f20650l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f20651m;
 
     public zzgu(int i, int i2, byte[] bArr, boolean z2) {

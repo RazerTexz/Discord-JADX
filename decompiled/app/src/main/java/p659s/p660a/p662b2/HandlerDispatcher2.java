@@ -15,29 +15,29 @@ import p659s.p660a.Delay;
 import p659s.p660a.Job2;
 import p659s.p660a.MainCoroutineDispatcher;
 
-/* compiled from: HandlerDispatcher.kt */
-/* renamed from: s.a.b2.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.b2.a, reason: use source file name */
+/* JADX INFO: compiled from: HandlerDispatcher.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class HandlerDispatcher2 extends HandlerDispatcher3 implements Delay {
     public volatile HandlerDispatcher2 _immediate;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final HandlerDispatcher2 f27718j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Handler f27719k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f27720l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f27721m;
 
-    /* compiled from: HandlerDispatcher.kt */
-    /* renamed from: s.a.b2.a$a */
+    /* JADX INFO: renamed from: s.a.b2.a$a */
+    /* JADX INFO: compiled from: HandlerDispatcher.kt */
     public static final class a implements Job2 {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Runnable f27723k;
 
         public a(Runnable runnable) {
@@ -50,11 +50,11 @@ public final class HandlerDispatcher2 extends HandlerDispatcher3 implements Dela
         }
     }
 
-    /* compiled from: Runnable.kt */
-    /* renamed from: s.a.b2.a$b */
+    /* JADX INFO: renamed from: s.a.b2.a$b */
+    /* JADX INFO: compiled from: Runnable.kt */
     public static final class b implements Runnable {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ CancellableContinuation f27725k;
 
         public b(CancellableContinuation cancellableContinuation) {
@@ -67,8 +67,8 @@ public final class HandlerDispatcher2 extends HandlerDispatcher3 implements Dela
         }
     }
 
-    /* compiled from: HandlerDispatcher.kt */
-    /* renamed from: s.a.b2.a$c */
+    /* JADX INFO: renamed from: s.a.b2.a$c */
+    /* JADX INFO: compiled from: HandlerDispatcher.kt */
     public static final class c extends Lambda implements Function1<Throwable, Unit> {
         public final /* synthetic */ Runnable $block;
 
@@ -100,13 +100,13 @@ public final class HandlerDispatcher2 extends HandlerDispatcher3 implements Dela
     }
 
     @Override // p659s.p660a.MainCoroutineDispatcher
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public MainCoroutineDispatcher mo11194H() {
         return this.f27718j;
     }
 
     @Override // p659s.p660a.Delay
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo11195c(long j, CancellableContinuation<? super Unit> cancellableContinuation) {
         b bVar = new b(cancellableContinuation);
         this.f27719k.postDelayed(bVar, _Ranges.coerceAtMost(j, 4611686018427387903L));
@@ -145,7 +145,7 @@ public final class HandlerDispatcher2 extends HandlerDispatcher3 implements Dela
     }
 
     @Override // p659s.p660a.p662b2.HandlerDispatcher3, p659s.p660a.Delay
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public Job2 mo11196x(long j, Runnable runnable, CoroutineContext coroutineContext) {
         this.f27719k.postDelayed(runnable, _Ranges.coerceAtMost(j, 4611686018427387903L));
         return new a(runnable);

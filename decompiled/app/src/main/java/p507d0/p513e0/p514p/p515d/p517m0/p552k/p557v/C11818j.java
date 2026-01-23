@@ -14,15 +14,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: constantValues.kt */
-/* renamed from: d0.e0.p.d.m0.k.v.j */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.v.j */
+/* JADX INFO: compiled from: constantValues.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C11818j extends AbstractC11815g<Tuples2<? extends ClassId, ? extends Name>> {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ClassId f24440b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Name f24441c;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

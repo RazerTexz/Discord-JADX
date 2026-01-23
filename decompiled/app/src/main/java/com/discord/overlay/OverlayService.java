@@ -18,14 +18,14 @@ import p507d0.Standard2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: OverlayService.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: OverlayService.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class OverlayService extends Service {
     public static final Companion Companion = new Companion(null);
     public static final int NOTIFICATION_ID = 5858;
     public OverlayManager overlayManager;
 
-    /* compiled from: OverlayService.kt */
+    /* JADX INFO: compiled from: OverlayService.kt */
     public static final class Companion {
         public Companion() {
         }
@@ -34,11 +34,11 @@ public abstract class OverlayService extends Service {
         }
     }
 
-    /* compiled from: OverlayService.kt */
-    /* renamed from: com.discord.overlay.OverlayService$a */
+    /* JADX INFO: renamed from: com.discord.overlay.OverlayService$a */
+    /* JADX INFO: compiled from: OverlayService.kt */
     public static final class RunnableC5567a implements Runnable {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ OverlayBubbleWrap f18616k;
 
         public RunnableC5567a(OverlayBubbleWrap overlayBubbleWrap) {
@@ -51,27 +51,27 @@ public abstract class OverlayService extends Service {
         }
     }
 
-    /* compiled from: OverlayService.kt */
-    /* renamed from: com.discord.overlay.OverlayService$b */
+    /* JADX INFO: renamed from: com.discord.overlay.OverlayService$b */
+    /* JADX INFO: compiled from: OverlayService.kt */
     public static final class C5568b implements TrashEventListener {
         public C5568b() {
         }
 
         @Override // p007b.p008a.p036n.TrashEventListener
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo227a(OverlayBubbleWrap overlayBubbleWrap) {
         }
 
         @Override // p007b.p008a.p036n.TrashEventListener
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo228b(OverlayBubbleWrap overlayBubbleWrap) {
             Intrinsics3.checkNotNullParameter(overlayBubbleWrap, "bubble");
             OverlayService.this.getOverlayManager().m8433d(overlayBubbleWrap);
         }
     }
 
-    /* compiled from: OverlayService.kt */
-    /* renamed from: com.discord.overlay.OverlayService$c */
+    /* JADX INFO: renamed from: com.discord.overlay.OverlayService$c */
+    /* JADX INFO: compiled from: OverlayService.kt */
     public static final class C5569c extends Lambda implements Function1<View, Unit> {
         public C5569c() {
             super(1);

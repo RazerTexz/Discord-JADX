@@ -12,8 +12,8 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetDirectoryChannelViewPagerAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetDirectoryChannelViewPagerAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDirectoryChannelViewPagerAdapter extends FragmentStateAdapter {
     private List<? extends DirectoryEntryCategory> tabs;
 
@@ -30,7 +30,7 @@ public final class WidgetDirectoryChannelViewPagerAdapter extends FragmentStateA
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount */
+    /* JADX INFO: renamed from: getItemCount */
     public int getPageSize() {
         return this.tabs.size();
     }

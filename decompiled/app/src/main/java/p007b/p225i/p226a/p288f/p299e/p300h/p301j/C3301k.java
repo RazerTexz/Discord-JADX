@@ -7,30 +7,30 @@ import androidx.annotation.Nullable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p313h.p318e.HandlerC3479c;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.e.h.j.k */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.h.j.k */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3301k<L> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final c f9428a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public volatile L f9429b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public volatile a<L> f9430c;
 
-    /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-    /* renamed from: b.i.a.f.e.h.j.k$a */
+    /* JADX INFO: renamed from: b.i.a.f.e.h.j.k$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
     public static final class a<L> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final L f9431a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final String f9432b;
 
         public a(L l, String str) {
@@ -54,18 +54,18 @@ public final class C3301k<L> {
         }
     }
 
-    /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-    /* renamed from: b.i.a.f.e.h.j.k$b */
+    /* JADX INFO: renamed from: b.i.a.f.e.h.j.k$b */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
     public interface b<L> {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo4107a(L l);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         void mo4108b();
     }
 
-    /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-    /* renamed from: b.i.a.f.e.h.j.k$c */
+    /* JADX INFO: renamed from: b.i.a.f.e.h.j.k$c */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
     public final class c extends HandlerC3479c {
         public c(Looper looper) {
             super(looper);
@@ -97,7 +97,7 @@ public final class C3301k<L> {
         this.f9430c = new a<>(l, str);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m4106a(b<? super L> bVar) {
         AnimatableValueParser.m595z(bVar, "Notifier must not be null");
         this.f9428a.sendMessage(this.f9428a.obtainMessage(1, bVar));

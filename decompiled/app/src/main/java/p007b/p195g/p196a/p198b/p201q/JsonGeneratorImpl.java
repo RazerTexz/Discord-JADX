@@ -11,27 +11,27 @@ import p007b.p195g.p196a.p198b.p200p.CharTypes;
 import p007b.p195g.p196a.p198b.p200p.IOContext;
 import p007b.p195g.p196a.p198b.p204t.DefaultPrettyPrinter;
 
-/* compiled from: JsonGeneratorImpl.java */
-/* renamed from: b.g.a.b.q.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.q.b, reason: use source file name */
+/* JADX INFO: compiled from: JsonGeneratorImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class JsonGeneratorImpl extends GeneratorBase {
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final int[] f4564r = CharTypes.f4541f;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final IOContext f4565s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int[] f4566t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public int f4567u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public SerializableString f4568v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public boolean f4569w;
 
     public JsonGeneratorImpl(IOContext iOContext, int i, ObjectCodec objectCodec) {
@@ -46,7 +46,7 @@ public abstract class JsonGeneratorImpl extends GeneratorBase {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public JsonGenerator mo1648b(JsonGenerator.a aVar) {
         int iM1669h = aVar.m1669h();
         this.f4529o &= ~iM1669h;
@@ -68,7 +68,7 @@ public abstract class JsonGeneratorImpl extends GeneratorBase {
     }
 
     @Override // p007b.p195g.p196a.p198b.p199o.GeneratorBase
-    /* renamed from: r0 */
+    /* JADX INFO: renamed from: r0 */
     public void mo1692r0(int i, int i2) {
         if ((GeneratorBase.f4527m & i2) != 0) {
             this.f4530p = JsonGenerator.a.WRITE_NUMBERS_AS_STRINGS.m1668g(i);
@@ -98,12 +98,12 @@ public abstract class JsonGeneratorImpl extends GeneratorBase {
         this.f4569w = !JsonGenerator.a.QUOTE_FIELD_NAMES.m1668g(i);
     }
 
-    /* renamed from: x0 */
+    /* JADX INFO: renamed from: x0 */
     public void m1704x0(String str) throws IOException {
         throw new JsonGenerationException(String.format("Can not %s, expecting field name (context: %s)", str, this.f4531q.m1677e()), this);
     }
 
-    /* renamed from: y0 */
+    /* JADX INFO: renamed from: y0 */
     public JsonGenerator m1705y0(int i) {
         if (i < 0) {
             i = 0;

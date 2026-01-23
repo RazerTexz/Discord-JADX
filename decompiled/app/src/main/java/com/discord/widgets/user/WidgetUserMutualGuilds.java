@@ -60,23 +60,23 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.functions.Action0;
 
-/* compiled from: WidgetUserMutualGuilds.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserMutualGuilds.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserMutualGuilds extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUserMutualGuilds.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserMutualGuildsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private Adapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetUserMutualGuilds.kt */
+    /* JADX INFO: compiled from: WidgetUserMutualGuilds.kt */
     public static final class Adapter extends MGRecyclerAdapterSimple<Model.Item> {
         private final Action0 guildSelectedCallback;
 
-        /* compiled from: WidgetUserMutualGuilds.kt */
+        /* JADX INFO: compiled from: WidgetUserMutualGuilds.kt */
         public static final class ViewHolder extends MGRecyclerViewHolder<Adapter, Model.Item> {
             private final WidgetUserProfileAdapterItemServerBinding binding;
 
@@ -133,7 +133,7 @@ public final class WidgetUserMutualGuilds extends AppFragment {
                 onConfigure2(i, item);
             }
 
-            /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, Model.Item data) {
                 Intrinsics3.checkNotNullParameter(data, "data");
                 super.onConfigure(position, data);
@@ -205,7 +205,7 @@ public final class WidgetUserMutualGuilds extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserMutualGuilds.kt */
+    /* JADX INFO: compiled from: WidgetUserMutualGuilds.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -222,10 +222,10 @@ public final class WidgetUserMutualGuilds extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserMutualGuilds.kt */
+    /* JADX INFO: compiled from: WidgetUserMutualGuilds.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Map<Long, Map<Long, GuildMember>> guildMembers;
         private final Map<Long, Guild> guilds;
@@ -234,7 +234,7 @@ public final class WidgetUserMutualGuilds extends AppFragment {
         private final UserProfile profile;
         private final User user;
 
-        /* compiled from: WidgetUserMutualGuilds.kt */
+        /* JADX INFO: compiled from: WidgetUserMutualGuilds.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -323,7 +323,7 @@ public final class WidgetUserMutualGuilds extends AppFragment {
             return model.copy(userProfile, map, user, map2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final UserProfile getProfile() {
             return this.profile;
         }
@@ -332,7 +332,7 @@ public final class WidgetUserMutualGuilds extends AppFragment {
             return this.guilds;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final User getUser() {
             return this.user;
         }
@@ -405,7 +405,7 @@ public final class WidgetUserMutualGuilds extends AppFragment {
             return outline.m825M(sbM833U, this.guildMembers, ")");
         }
 
-        /* compiled from: WidgetUserMutualGuilds.kt */
+        /* JADX INFO: compiled from: WidgetUserMutualGuilds.kt */
         public static final /* data */ class Item implements MGRecyclerDataPayload {
             public static final int TYPE_EMPTY = 0;
             public static final int TYPE_MUTUAL_SERVER = 1;
@@ -454,22 +454,22 @@ public final class WidgetUserMutualGuilds extends AppFragment {
                 return getType();
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final String getNick() {
                 return this.nick;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final User getUser() {
                 return this.user;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final GuildMember getGuildMember() {
                 return this.guildMember;
             }
@@ -548,8 +548,8 @@ public final class WidgetUserMutualGuilds extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserMutualGuilds.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserMutualGuilds$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserMutualGuilds$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetUserMutualGuilds.kt */
     public static final class C102181 implements Action0 {
         public C102181() {
         }
@@ -565,8 +565,8 @@ public final class WidgetUserMutualGuilds extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserMutualGuilds.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserMutualGuilds$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserMutualGuilds$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetUserMutualGuilds.kt */
     public static final class C102191 extends Lambda implements Function1<Model, Unit> {
         public C102191() {
             super(1);
@@ -578,7 +578,7 @@ public final class WidgetUserMutualGuilds extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "data");
             WidgetUserMutualGuilds.access$configureUI(WidgetUserMutualGuilds.this, model);

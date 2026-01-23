@@ -5,9 +5,9 @@ import com.discord.widgets.chat.managereactions.ManageReactionsEmojisAdapter;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: ManageReactionsEmojisAdapter.kt */
-/* renamed from: com.discord.widgets.chat.managereactions.ManageReactionsEmojisAdapter$ReactionEmojiViewHolder$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.managereactions.ManageReactionsEmojisAdapter$ReactionEmojiViewHolder$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: ManageReactionsEmojisAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ManageReactionsEmojisAdapter2 implements View.OnClickListener {
     public final /* synthetic */ ManageReactionsEmojisAdapter.ReactionEmojiItem $data;
     public final /* synthetic */ ManageReactionsEmojisAdapter.ReactionEmojiViewHolder this$0;

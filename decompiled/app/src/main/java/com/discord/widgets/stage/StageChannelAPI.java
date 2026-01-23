@@ -10,8 +10,8 @@ import com.discord.utilities.rest.RestAPI;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: StageChannelAPI.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StageChannelAPI.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StageChannelAPI {
     public static final StageChannelAPI INSTANCE = new StageChannelAPI();
 

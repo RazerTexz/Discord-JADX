@@ -11,16 +11,16 @@ import p007b.p109f.p115d.p117b.CallerThreadExecutor;
 import p007b.p109f.p115d.p122g.PooledByteBufferFactory;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: DataFetchProducer.java */
-/* renamed from: b.f.j.p.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.m, reason: use source file name */
+/* JADX INFO: compiled from: DataFetchProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DataFetchProducer extends LocalFetchProducer {
     public DataFetchProducer(PooledByteBufferFactory pooledByteBufferFactory) {
         super(CallerThreadExecutor.f3078j, pooledByteBufferFactory);
     }
 
     @Override // p007b.p109f.p161j.p181p.LocalFetchProducer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public EncodedImage2 mo1428d(ImageRequest imageRequest) throws IOException {
         boolean zEquals;
         byte[] bytes;
@@ -45,7 +45,7 @@ public class DataFetchProducer extends LocalFetchProducer {
     }
 
     @Override // p007b.p109f.p161j.p181p.LocalFetchProducer
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String mo1429e() {
         return "DataFetchProducer";
     }

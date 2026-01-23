@@ -3,12 +3,12 @@ package p007b.p225i.p355b.p357b;
 import java.io.Serializable;
 import java.util.Objects;
 
-/* compiled from: ReverseNaturalOrdering.java */
-/* renamed from: b.i.b.b.k0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.k0, reason: use source file name */
+/* JADX INFO: compiled from: ReverseNaturalOrdering.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReverseNaturalOrdering extends Ordering<Comparable> implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final ReverseNaturalOrdering f12038j = new ReverseNaturalOrdering();
     private static final long serialVersionUID = 0;
 
@@ -17,7 +17,7 @@ public final class ReverseNaturalOrdering extends Ordering<Comparable> implement
     }
 
     @Override // p007b.p225i.p355b.p357b.Ordering
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public <S extends Comparable> Ordering<S> mo6236b() {
         return NaturalOrdering.f12005j;
     }

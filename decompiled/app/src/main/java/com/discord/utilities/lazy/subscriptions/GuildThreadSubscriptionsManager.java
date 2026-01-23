@@ -13,8 +13,8 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildThreadSubscriptionsManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildThreadSubscriptionsManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildThreadSubscriptionsManager {
     private final Function2<Long, List<Long>, Unit> changeHandler;
     private final HashMap<Long, LruCache<Long, Long>> subscriptions;

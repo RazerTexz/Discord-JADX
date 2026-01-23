@@ -3,9 +3,9 @@ package com.discord.widgets.guildscheduledevent;
 import java.io.Serializable;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: GuildScheduledEventPickerDateTime.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventPickerTime, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventPickerTime, reason: use source file name */
+/* JADX INFO: compiled from: GuildScheduledEventPickerDateTime.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class GuildScheduledEventPickerDateTime3 implements Serializable {
     private final int hourOfDay;
     private final int minute;
@@ -30,17 +30,17 @@ public final /* data */ class GuildScheduledEventPickerDateTime3 implements Seri
         return guildScheduledEventPickerDateTime3.copy(i, i2, i3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getHourOfDay() {
         return this.hourOfDay;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getMinute() {
         return this.minute;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getSecond() {
         return this.second;
     }

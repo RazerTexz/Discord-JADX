@@ -5,15 +5,15 @@ import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import com.adjust.sdk.Constants;
 
-/* compiled from: UriUtil.java */
-/* renamed from: b.f.d.l.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.d.l.b, reason: use source file name */
+/* JADX INFO: compiled from: UriUtil.java */
+/* JADX INFO: loaded from: classes.dex */
 public class UriUtil {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Uri f3138a = Uri.withAppendedPath(ContactsContract.AUTHORITY_URI, "display_photo");
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m1005a(Uri uri) {
         if (uri == null) {
             return null;
@@ -21,23 +21,23 @@ public class UriUtil {
         return uri.getScheme();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static boolean m1006b(Uri uri) {
         String string = uri.toString();
         return string.startsWith(MediaStore.Images.Media.EXTERNAL_CONTENT_URI.toString()) || string.startsWith(MediaStore.Images.Media.INTERNAL_CONTENT_URI.toString());
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static boolean m1007c(Uri uri) {
         return "content".equals(m1005a(uri));
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static boolean m1008d(Uri uri) {
         return "file".equals(m1005a(uri));
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static boolean m1009e(Uri uri) {
         String strM1005a = m1005a(uri);
         return Constants.SCHEME.equals(strM1005a) || "http".equals(strM1005a);

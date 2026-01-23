@@ -41,38 +41,38 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: KPackageImpl.kt */
-/* renamed from: d0.e0.p.d.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.n, reason: use source file name */
+/* JADX INFO: compiled from: KPackageImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KPackageImpl extends KDeclarationContainerImpl {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final ReflectProperties.b<a> f25009m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Class<?> f25010n;
 
-    /* compiled from: KPackageImpl.kt */
-    /* renamed from: d0.e0.p.d.n$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.n$a */
+    /* JADX INFO: compiled from: KPackageImpl.kt */
     public final class a extends KDeclarationContainerImpl.b {
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public static final /* synthetic */ KProperty[] f25011d = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "kotlinClass", "getKotlinClass()Lorg/jetbrains/kotlin/descriptors/runtime/components/ReflectKotlinClass;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "scope", "getScope()Lorg/jetbrains/kotlin/resolve/scopes/MemberScope;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "multifileFacade", "getMultifileFacade()Ljava/lang/Class;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "metadata", "getMetadata()Lkotlin/Triple;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "members", "getMembers()Ljava/util/Collection;"))};
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final ReflectProperties.a f25012e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final ReflectProperties.a f25013f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final ReflectProperties.b f25014g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final ReflectProperties.b f25015h;
 
-        /* compiled from: KPackageImpl.kt */
-        /* renamed from: d0.e0.p.d.n$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.n$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: KPackageImpl.kt */
         public static final class C13341a extends Lambda implements Function0<ReflectKotlinClass2> {
             public C13341a() {
                 super(0);
@@ -90,8 +90,8 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
             }
         }
 
-        /* compiled from: KPackageImpl.kt */
-        /* renamed from: d0.e0.p.d.n$a$b */
+        /* JADX INFO: renamed from: d0.e0.p.d.n$a$b */
+        /* JADX INFO: compiled from: KPackageImpl.kt */
         public static final class b extends Lambda implements Function0<Collection<? extends KCallableImpl<?>>> {
             public b() {
                 super(0);
@@ -103,15 +103,15 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Collection<? extends KCallableImpl<?>> invoke2() {
                 a aVar = a.this;
                 return KPackageImpl.this.m9341b(aVar.getScope(), KDeclarationContainerImpl.c.DECLARED);
             }
         }
 
-        /* compiled from: KPackageImpl.kt */
-        /* renamed from: d0.e0.p.d.n$a$c */
+        /* JADX INFO: renamed from: d0.e0.p.d.n$a$c */
+        /* JADX INFO: compiled from: KPackageImpl.kt */
         public static final class c extends Lambda implements Function0<Tuples3<? extends JvmNameResolver, ? extends C11687l, ? extends JvmMetadataVersion>> {
             public c() {
                 super(0);
@@ -123,7 +123,7 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Tuples3<? extends JvmNameResolver, ? extends C11687l, ? extends JvmMetadataVersion> invoke2() {
                 KotlinClassHeader classHeader;
                 ReflectKotlinClass2 reflectKotlinClass2Access$getKotlinClass$p = a.access$getKotlinClass$p(a.this);
@@ -140,8 +140,8 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
             }
         }
 
-        /* compiled from: KPackageImpl.kt */
-        /* renamed from: d0.e0.p.d.n$a$d */
+        /* JADX INFO: renamed from: d0.e0.p.d.n$a$d */
+        /* JADX INFO: compiled from: KPackageImpl.kt */
         public static final class d extends Lambda implements Function0<Class<?>> {
             public d() {
                 super(0);
@@ -168,8 +168,8 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
             }
         }
 
-        /* compiled from: KPackageImpl.kt */
-        /* renamed from: d0.e0.p.d.n$a$e */
+        /* JADX INFO: renamed from: d0.e0.p.d.n$a$e */
+        /* JADX INFO: compiled from: KPackageImpl.kt */
         public static final class e extends Lambda implements Function0<MemberScope3> {
             public e() {
                 super(0);
@@ -217,8 +217,8 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
         }
     }
 
-    /* compiled from: KPackageImpl.kt */
-    /* renamed from: d0.e0.p.d.n$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.n$b */
+    /* JADX INFO: compiled from: KPackageImpl.kt */
     public static final class b extends Lambda implements Function0<a> {
         public b() {
             super(0);
@@ -236,11 +236,11 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
         }
     }
 
-    /* compiled from: KPackageImpl.kt */
-    /* renamed from: d0.e0.p.d.n$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.n$c */
+    /* JADX INFO: compiled from: KPackageImpl.kt */
     public static final /* synthetic */ class c extends FunctionReference implements Function2<MemberDeserializer, C11689n, PropertyDescriptor> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f25017j = new c();
 
         public c() {
@@ -267,7 +267,7 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
             return invoke2(memberDeserializer, c11689n);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final PropertyDescriptor invoke2(MemberDeserializer memberDeserializer, C11689n c11689n) {
             Intrinsics3.checkNotNullParameter(memberDeserializer, "p1");
             Intrinsics3.checkNotNullParameter(c11689n, "p2");
@@ -284,7 +284,7 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.KDeclarationContainerImpl
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Class<?> mo9342c() {
         Class<?> multifileFacade = this.f25009m.invoke().getMultifileFacade();
         return multifileFacade != null ? multifileFacade : getJClass();

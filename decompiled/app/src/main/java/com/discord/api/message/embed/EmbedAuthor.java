@@ -4,25 +4,25 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmbedAuthor.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: EmbedAuthor.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class EmbedAuthor {
     private final String iconUrl;
     private final String name;
     private final String proxyIconUrl;
     private final String url;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getProxyIconUrl() {
         return this.proxyIconUrl;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getUrl() {
         return this.url;
     }

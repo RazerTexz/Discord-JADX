@@ -11,9 +11,9 @@ import p507d0.p580t.Iterators4;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.PrimitiveCompanionObjects;
 
-/* compiled from: StringsJVM.kt */
-/* renamed from: d0.g0.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.g0.t, reason: use source file name */
+/* JADX INFO: compiled from: StringsJVM.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class StringsJVM extends StringNumberConversions {
     public static final String capitalize(String str) {
         Intrinsics3.checkNotNullParameter(str, "$this$capitalize");

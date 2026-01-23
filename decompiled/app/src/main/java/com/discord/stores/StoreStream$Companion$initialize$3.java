@@ -4,8 +4,8 @@ import com.discord.stores.StoreStream;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreStream.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreStream.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreStream$Companion$initialize$3 extends Lambda implements Function0<String> {
     public static final StoreStream$Companion$initialize$3 INSTANCE = new StoreStream$Companion$initialize$3();
 
@@ -19,7 +19,7 @@ public final class StoreStream$Companion$initialize$3 extends Lambda implements 
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final String invoke2() {
         return StoreStream.Companion.access$getCollector$p(StoreStream.INSTANCE).getUserSettingsSystem().getLocale();
     }

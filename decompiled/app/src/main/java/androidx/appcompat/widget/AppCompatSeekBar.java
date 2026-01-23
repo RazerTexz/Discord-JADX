@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.C0051R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatSeekBar extends SeekBar {
     private final AppCompatSeekBarHelper mAppCompatSeekBarHelper;
 
@@ -38,7 +38,7 @@ public class AppCompatSeekBar extends SeekBar {
         this(context, attributeSet, C0051R.attr.seekBarStyle);
     }
 
-    public AppCompatSeekBar(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws SecurityException {
+    public AppCompatSeekBar(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         ThemeUtils.checkAppCompatTheme(this, getContext());
         AppCompatSeekBarHelper appCompatSeekBarHelper = new AppCompatSeekBarHelper(this);

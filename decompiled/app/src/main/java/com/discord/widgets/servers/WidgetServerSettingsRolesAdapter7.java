@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsRolesAdapter.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsRolesAdapter$roleDropListener$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRolesAdapter$roleDropListener$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsRolesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsRolesAdapter7 extends Lambda implements Function1<Map<String, ? extends Integer>, Unit> {
     public static final WidgetServerSettingsRolesAdapter7 INSTANCE = new WidgetServerSettingsRolesAdapter7();
 
@@ -22,7 +22,7 @@ public final class WidgetServerSettingsRolesAdapter7 extends Lambda implements F
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Map<String, Integer> map) {
         Intrinsics3.checkNotNullParameter(map, "it");
     }

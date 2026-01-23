@@ -11,15 +11,15 @@ import java.util.ArrayList;
 import org.json.JSONException;
 import p007b.p100d.p101a.p102a.C1632q;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.i.a.f.h.n.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.n.a */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3941a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int f10479a = Runtime.getRuntime().availableProcessors();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m5411a(Bundle bundle, String str) {
         if (bundle == null) {
             m5416f(str, "Unexpected null bundle received!");
@@ -38,7 +38,7 @@ public final class C3941a {
         return 6;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static Bundle m5412b(int i, boolean z2, String str, @Nullable String str2, ArrayList<C1632q> arrayList) {
         Bundle bundle = new Bundle();
         if (i >= 9) {
@@ -63,7 +63,7 @@ public final class C3941a {
         return bundle;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static BillingResult m5413c(Intent intent, String str) {
         if (intent == null) {
             m5416f("BillingHelper", "Got null intent!");
@@ -80,7 +80,7 @@ public final class C3941a {
         return billingResult2;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static String m5414d(Bundle bundle, String str) {
         if (bundle == null) {
             m5416f(str, "Unexpected null bundle received!");
@@ -99,21 +99,21 @@ public final class C3941a {
         return "";
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static void m5415e(String str, String str2) {
         if (Log.isLoggable(str, 2)) {
             Log.v(str, str2);
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static void m5416f(String str, String str2) {
         if (Log.isLoggable(str, 5)) {
             Log.w(str, str2);
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static Purchase m5417g(String str, String str2) {
         if (str == null || str2 == null) {
             m5416f("BillingHelper", "Received a bad purchase data.");

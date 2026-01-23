@@ -18,19 +18,19 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: KotlinTypeFactory.kt */
-/* renamed from: d0.e0.p.d.m0.n.d0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.d0, reason: use source file name */
+/* JADX INFO: compiled from: KotlinTypeFactory.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KotlinTypeFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final KotlinTypeFactory f24748a = new KotlinTypeFactory();
 
-    /* compiled from: KotlinTypeFactory.kt */
-    /* renamed from: d0.e0.p.d.m0.n.d0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.d0$a */
+    /* JADX INFO: compiled from: KotlinTypeFactory.kt */
     public static final class a extends Lambda implements Function1 {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f24749j = new a();
 
         public a() {
@@ -48,14 +48,14 @@ public final class KotlinTypeFactory {
         }
     }
 
-    /* compiled from: KotlinTypeFactory.kt */
-    /* renamed from: d0.e0.p.d.m0.n.d0$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.d0$b */
+    /* JADX INFO: compiled from: KotlinTypeFactory.kt */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final KotlinType4 f24750a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final TypeConstructor f24751b;
 
         public b(KotlinType4 kotlinType4, TypeConstructor typeConstructor) {
@@ -72,8 +72,8 @@ public final class KotlinTypeFactory {
         }
     }
 
-    /* compiled from: KotlinTypeFactory.kt */
-    /* renamed from: d0.e0.p.d.m0.n.d0$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.d0$c */
+    /* JADX INFO: compiled from: KotlinTypeFactory.kt */
     public static final class c extends Lambda implements Function1<KotlinTypeRefiner, KotlinType4> {
         public final /* synthetic */ Annotations4 $annotations;
         public final /* synthetic */ List<TypeProjection> $arguments;
@@ -95,7 +95,7 @@ public final class KotlinTypeFactory {
             return invoke2(kotlinTypeRefiner);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final KotlinType4 invoke2(KotlinTypeRefiner kotlinTypeRefiner) {
             Intrinsics3.checkNotNullParameter(kotlinTypeRefiner, "refiner");
             b bVarAccess$refineConstructor = KotlinTypeFactory.access$refineConstructor(KotlinTypeFactory.this, this.$constructor, kotlinTypeRefiner, this.$arguments);
@@ -113,8 +113,8 @@ public final class KotlinTypeFactory {
         }
     }
 
-    /* compiled from: KotlinTypeFactory.kt */
-    /* renamed from: d0.e0.p.d.m0.n.d0$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.d0$d */
+    /* JADX INFO: compiled from: KotlinTypeFactory.kt */
     public static final class d extends Lambda implements Function1<KotlinTypeRefiner, KotlinType4> {
         public final /* synthetic */ Annotations4 $annotations;
         public final /* synthetic */ List<TypeProjection> $arguments;
@@ -138,7 +138,7 @@ public final class KotlinTypeFactory {
             return invoke2(kotlinTypeRefiner);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final KotlinType4 invoke2(KotlinTypeRefiner kotlinTypeRefiner) {
             Intrinsics3.checkNotNullParameter(kotlinTypeRefiner, "kotlinTypeRefiner");
             b bVarAccess$refineConstructor = KotlinTypeFactory.access$refineConstructor(KotlinTypeFactory.this, this.$constructor, kotlinTypeRefiner, this.$arguments);

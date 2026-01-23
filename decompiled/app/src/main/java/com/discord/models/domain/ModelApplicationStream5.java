@@ -6,16 +6,16 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelApplicationStream.kt */
-/* renamed from: com.discord.models.domain.StreamDelete, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.StreamDelete, reason: use source file name */
+/* JADX INFO: compiled from: ModelApplicationStream.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelApplicationStream5 {
     private final Reason reason;
     private final String streamKey;
     private final boolean unavailable;
 
-    /* compiled from: ModelApplicationStream.kt */
-    /* renamed from: com.discord.models.domain.StreamDelete$Parser */
+    /* JADX INFO: renamed from: com.discord.models.domain.StreamDelete$Parser */
+    /* JADX INFO: compiled from: ModelApplicationStream.kt */
     public static final class Parser implements Model.Parser<ModelApplicationStream5> {
         public static final Parser INSTANCE = new Parser();
 
@@ -66,8 +66,8 @@ public final /* data */ class ModelApplicationStream5 {
         }
     }
 
-    /* compiled from: ModelApplicationStream.kt */
-    /* renamed from: com.discord.models.domain.StreamDelete$Reason */
+    /* JADX INFO: renamed from: com.discord.models.domain.StreamDelete$Reason */
+    /* JADX INFO: compiled from: ModelApplicationStream.kt */
     public enum Reason {
         USER_REQUESTED,
         STREAM_FULL,
@@ -96,17 +96,17 @@ public final /* data */ class ModelApplicationStream5 {
         return modelApplicationStream5.copy(str, reason, z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getStreamKey() {
         return this.streamKey;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Reason getReason() {
         return this.reason;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getUnavailable() {
         return this.unavailable;
     }
@@ -141,17 +141,20 @@ public final /* data */ class ModelApplicationStream5 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v4 */
+    /* JADX WARN: Type inference failed for: r1v6 */
     public int hashCode() {
         String str = this.streamKey;
         int iHashCode = (str != null ? str.hashCode() : 0) * 31;
         Reason reason = this.reason;
         int iHashCode2 = (iHashCode + (reason != null ? reason.hashCode() : 0)) * 31;
         boolean z2 = this.unavailable;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode2 + i;
+        return iHashCode2 + r1;
     }
 
     public String toString() {

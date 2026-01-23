@@ -2,15 +2,15 @@ package p007b.p109f.p161j.p169d;
 
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: BytesRange.java */
-/* renamed from: b.f.j.d.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.d.a, reason: use source file name */
+/* JADX INFO: compiled from: BytesRange.java */
+/* JADX INFO: loaded from: classes.dex */
 public class BytesRange {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f3704a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f3705b;
 
     public BytesRange(int i, int i2) {

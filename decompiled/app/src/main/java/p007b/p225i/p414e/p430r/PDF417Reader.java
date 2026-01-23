@@ -27,11 +27,11 @@ import p007b.p225i.p414e.p430r.p431d.PDF417ScanningDecoder;
 import p007b.p225i.p414e.p430r.p431d.p432k.ErrorCorrection;
 import p007b.p225i.p414e.p430r.p433e.Detector3;
 
-/* compiled from: PDF417Reader.java */
-/* renamed from: b.i.e.r.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.r.b, reason: use source file name */
+/* JADX INFO: compiled from: PDF417Reader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PDF417Reader implements Reader {
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m7046b(ResultPoint resultPoint, ResultPoint resultPoint2) {
         if (resultPoint == null || resultPoint2 == null) {
             return 0;
@@ -39,7 +39,7 @@ public final class PDF417Reader implements Reader {
         return (int) Math.abs(resultPoint.f13207a - resultPoint2.f13207a);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m7047c(ResultPoint resultPoint, ResultPoint resultPoint2) {
         if (resultPoint == null || resultPoint2 == null) {
             return Integer.MAX_VALUE;
@@ -77,11 +77,11 @@ public final class PDF417Reader implements Reader {
     /* JADX WARN: Removed duplicated region for block: B:43:0x016f  */
     /* JADX WARN: Removed duplicated region for block: B:51:0x01a2  */
     @Override // p007b.p225i.p414e.Reader
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public Result mo6919a(BinaryBitmap binaryBitmap, Map<DecodeHintType, ?> map) throws NotFoundException, ChecksumException, NumberFormatException, FormatException {
+    public Result mo6919a(BinaryBitmap binaryBitmap, Map<DecodeHintType, ?> map) throws NotFoundException, ChecksumException, FormatException {
         BoundingBox boundingBox;
         DetectionResult detectionResult;
         int i;

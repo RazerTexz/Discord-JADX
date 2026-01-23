@@ -8,9 +8,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetUrgentMessageDialogViewModel.kt */
-/* renamed from: b.a.a.y, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.y, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUrgentMessageDialogViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUrgentMessageDialogViewModel4 extends Lambda implements Function1<User, Unit> {
     public final /* synthetic */ WidgetUrgentMessageDialogViewModel3 this$0;
 

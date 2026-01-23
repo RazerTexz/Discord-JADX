@@ -12,9 +12,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetStickerPackStoreSheet.kt */
-/* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPackStoreSheet$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPackStoreSheet$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetStickerPackStoreSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetStickerPackStoreSheet3 extends FunctionReferenceImpl implements Function1<View, WidgetStickerPackStoreSheetBinding> {
     public static final WidgetStickerPackStoreSheet3 INSTANCE = new WidgetStickerPackStoreSheet3();
 
@@ -27,7 +27,7 @@ public final /* synthetic */ class WidgetStickerPackStoreSheet3 extends Function
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetStickerPackStoreSheetBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.sticker_pack_store_sheet_buy_button_container;

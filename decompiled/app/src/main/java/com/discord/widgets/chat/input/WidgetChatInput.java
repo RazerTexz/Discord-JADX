@@ -101,28 +101,28 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetChatInput.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatInput.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatInput extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChatInput.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChatInputBinding;", 0)};
     private InputAutocomplete autocomplete;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private WidgetChatInputAttachments chatAttachments;
     private WidgetChatInputEditText chatInputEditTextHolder;
     private WidgetChatInputTruncatedHint chatInputTruncatedHint;
     private final Clock clock;
 
-    /* renamed from: flexInputFragment$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: flexInputFragment$delegate, reason: from kotlin metadata */
     private final Lazy flexInputFragment;
 
-    /* renamed from: flexInputViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: flexInputViewModel$delegate, reason: from kotlin metadata */
     private final Lazy flexInputViewModel;
     private final ViewVisibilityObserver inlineVoiceVisibilityObserver;
     private final MessageDraftsRepo messageDraftsRepo;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
     public final /* synthetic */ class WhenMappings {
@@ -153,8 +153,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$1 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class ViewOnClickListenerC77051 implements View.OnClickListener {
         public final /* synthetic */ ChatInputViewModel.ViewState.Loaded $viewState;
 
@@ -168,8 +168,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$2 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class ViewOnClickListenerC77062 implements View.OnClickListener {
         public final /* synthetic */ ChatInputViewModel.ViewState.Loaded $viewState;
 
@@ -183,8 +183,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$3 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class ViewOnClickListenerC77073 implements View.OnClickListener {
         public ViewOnClickListenerC77073() {
         }
@@ -195,8 +195,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$4 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class ViewOnClickListenerC77084 implements View.OnClickListener {
         public ViewOnClickListenerC77084() {
         }
@@ -207,8 +207,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$5 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class ViewOnClickListenerC77095 implements View.OnClickListener {
         public final /* synthetic */ String $guideUrl;
 
@@ -222,13 +222,13 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$6 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class ViewOnClickListenerC77106 implements View.OnClickListener {
         public final /* synthetic */ ChatInputViewModel.ViewState.Loaded $viewState;
 
-        /* compiled from: WidgetChatInput.kt */
-        /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$6$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$6$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatInput.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -242,7 +242,7 @@ public final class WidgetChatInput extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
             }
         }
@@ -261,13 +261,13 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$7 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class ViewOnClickListenerC77117 implements View.OnClickListener {
         public final /* synthetic */ ChatInputViewModel.ViewState.Loaded $viewState;
 
-        /* compiled from: WidgetChatInput.kt */
-        /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$7$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$7$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatInput.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -281,7 +281,7 @@ public final class WidgetChatInput extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
             }
         }
@@ -300,8 +300,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$8 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class ViewOnClickListenerC77128 implements View.OnClickListener {
         public ViewOnClickListenerC77128() {
         }
@@ -316,8 +316,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarEditing$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarEditing$1 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class ViewOnClickListenerC77131 implements View.OnClickListener {
         public ViewOnClickListenerC77131() {
         }
@@ -328,8 +328,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarReplying$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarReplying$1 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class C77141 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ ChatInputViewModel.ViewState.Loaded.PendingReplyState.Replying $model;
@@ -347,15 +347,15 @@ public final class WidgetChatInput extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.boldColor = Integer.valueOf(GuildMember.INSTANCE.getColor(this.$model.getRepliedAuthorGuildMember(), ColorCompat.getThemedColor(this.$context, C5419R.attr.colorHeaderPrimary)));
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarReplying$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarReplying$2 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class ViewOnClickListenerC77152 implements View.OnClickListener {
         public final /* synthetic */ ChatInputViewModel.ViewState.Loaded.PendingReplyState.Replying $model;
 
@@ -369,8 +369,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarReplying$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarReplying$3 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class ViewOnClickListenerC77163 implements View.OnClickListener {
         public ViewOnClickListenerC77163() {
         }
@@ -381,8 +381,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarReplying$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarReplying$4 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class ViewOnClickListenerC77174 implements View.OnClickListener {
         public ViewOnClickListenerC77174() {
         }
@@ -393,14 +393,14 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$1 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class C77181 extends Lambda implements Function4<ApplicationCommandData, Map<ApplicationCommandOption, ? extends Attachment<?>>, Boolean, Function1<? super Boolean, ? extends Unit>, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ MessageManager $messageManager;
 
-        /* compiled from: WidgetChatInput.kt */
-        /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatInput.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Boolean, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -450,8 +450,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$2 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class C77192 extends Lambda implements Function3<List<? extends Attachment<?>>, ApplicationCommandData, Function1<? super Boolean, ? extends Unit>, Unit> {
         public final /* synthetic */ WidgetChatInputEditText $chatInput;
         public final /* synthetic */ Context $context;
@@ -471,7 +471,7 @@ public final class WidgetChatInput extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends Attachment<?>> list, ApplicationCommandData applicationCommandData, Function1<? super Boolean, Unit> function1) {
             MessageContent messageContent;
             MessageContent messageContent2;
@@ -507,8 +507,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$3 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class C77203 extends Lambda implements Function2<List<? extends Attachment<?>>, Function1<? super Boolean, ? extends Unit>, Unit> {
         public final /* synthetic */ C77181 $sendCommand$1;
         public final /* synthetic */ C77192 $sendMessage$2;
@@ -526,7 +526,7 @@ public final class WidgetChatInput extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends Attachment<?>> list, Function1<? super Boolean, Unit> function1) {
             Intrinsics3.checkNotNullParameter(list, "attachmentsRaw");
             Intrinsics3.checkNotNullParameter(function1, "onValidationResult");
@@ -550,8 +550,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$4 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class C77214 extends Lambda implements Function1<Integer, Boolean> {
         public final /* synthetic */ Context $context;
 
@@ -572,8 +572,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$5 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class C77225 extends Lambda implements Function1<ApplicationCommandOption, Unit> {
         public final /* synthetic */ C77181 $sendCommand$1;
 
@@ -589,7 +589,7 @@ public final class WidgetChatInput extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ApplicationCommandOption applicationCommandOption) {
             Intrinsics3.checkNotNullParameter(applicationCommandOption, "it");
             InputAutocomplete inputAutocompleteAccess$getAutocomplete$p = WidgetChatInput.access$getAutocomplete$p(WidgetChatInput.this);
@@ -600,13 +600,13 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$6 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class C77236 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ C77203 $trySend$3;
 
-        /* compiled from: WidgetChatInput.kt */
-        /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$6$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$6$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatInput.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Boolean, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -637,21 +637,21 @@ public final class WidgetChatInput extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             this.$trySend$3.invoke2(Collections2.emptyList(), (Function1<? super Boolean, Unit>) new AnonymousClass1());
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$7 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class C77247 implements FlexInputListener {
         public final /* synthetic */ C77214 $sendMessageError$4;
         public final /* synthetic */ C77203 $trySend$3;
         public final /* synthetic */ ChatInputViewModel.ViewState.Loaded $viewState;
 
-        /* compiled from: WidgetChatInput.kt */
-        /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$7$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$7$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatInput.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Boolean, Unit> {
             public final /* synthetic */ Function1 $onSendResult;
 
@@ -699,8 +699,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class C77251 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ChatInputViewModel.ViewState $viewState;
 
@@ -716,7 +716,7 @@ public final class WidgetChatInput extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetChatInputTruncatedHint widgetChatInputTruncatedHintAccess$getChatInputTruncatedHint$p = WidgetChatInput.access$getChatInputTruncatedHint$p(WidgetChatInput.this);
             if (widgetChatInputTruncatedHintAccess$getChatInputTruncatedHint$p != null) {
@@ -727,8 +727,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$handleEvent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$handleEvent$1 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class C77261 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ChatInputViewModel.Event $event;
 
@@ -744,7 +744,7 @@ public final class WidgetChatInput extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Function0<Unit> onResendCompressed = ((ChatInputViewModel.Event.FilesTooLarge) this.$event).getOnResendCompressed();
             if (onResendCompressed != null) {
@@ -754,8 +754,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class C77271 extends Lambda implements Function0<Unit> {
         public C77271() {
             super(0);
@@ -767,7 +767,7 @@ public final class WidgetChatInput extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             FlexEditText flexEditTextM9293l = WidgetChatInput.access$getFlexInputFragment$p(WidgetChatInput.this).m9293l();
             WidgetChatInput widgetChatInput = WidgetChatInput.this;
@@ -799,8 +799,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final /* synthetic */ class C77281 extends FunctionReferenceImpl implements Function1<ChatInputViewModel.ViewState, Unit> {
         public C77281(WidgetChatInput widgetChatInput) {
             super(1, widgetChatInput, WidgetChatInput.class, "configureUI", "configureUI(Lcom/discord/widgets/chat/input/ChatInputViewModel$ViewState;)V", 0);
@@ -812,15 +812,15 @@ public final class WidgetChatInput extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ChatInputViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetChatInput.access$configureUI((WidgetChatInput) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final /* synthetic */ class C77292 extends FunctionReferenceImpl implements Function1<ChatInputViewModel.Event, Unit> {
         public C77292(WidgetChatInput widgetChatInput) {
             super(1, widgetChatInput, WidgetChatInput.class, "handleEvent", "handleEvent(Lcom/discord/widgets/chat/input/ChatInputViewModel$Event;)V", 0);
@@ -832,15 +832,15 @@ public final class WidgetChatInput extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ChatInputViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetChatInput.access$handleEvent((WidgetChatInput) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class C77303 extends Lambda implements Function1<Boolean, Unit> {
         public C77303() {
             super(1);
@@ -857,8 +857,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$setWindowInsetsListeners$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$setWindowInsetsListeners$1 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class C77311 implements OnApplyWindowInsetsListener {
         public static final C77311 INSTANCE = new C77311();
 
@@ -871,8 +871,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$setWindowInsetsListeners$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$setWindowInsetsListeners$2 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class C77322 implements OnApplyWindowInsetsListener {
         public static final C77322 INSTANCE = new C77322();
 
@@ -885,8 +885,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$setWindowInsetsListeners$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$setWindowInsetsListeners$3 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class C77333 implements OnApplyWindowInsetsListener {
         public static final C77333 INSTANCE = new C77333();
 
@@ -899,8 +899,8 @@ public final class WidgetChatInput extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$setWindowInsetsListeners$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$setWindowInsetsListeners$4 */
+    /* JADX INFO: compiled from: WidgetChatInput.kt */
     public static final class C77344 implements OnApplyWindowInsetsListener {
         public final /* synthetic */ boolean $shouldApplyWindowInsets;
 

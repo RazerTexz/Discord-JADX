@@ -3,9 +3,9 @@ package com.discord.widgets.channels.list;
 import android.view.View;
 import com.discord.widgets.channels.list.WidgetChannelsListAdapter;
 
-/* compiled from: WidgetChannelsListAdapter.kt */
-/* renamed from: com.discord.widgets.channels.list.WidgetChannelsListAdapter$ItemGuildRoleSubscriptionsOverview$onConfigure$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListAdapter$ItemGuildRoleSubscriptionsOverview$onConfigure$1 */
+/* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewOnClickListenerC7447xa37c6430 implements View.OnClickListener {
     public final /* synthetic */ WidgetChannelsListAdapter.ItemGuildRoleSubscriptionsOverview this$0;
 

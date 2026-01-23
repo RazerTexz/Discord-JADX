@@ -6,165 +6,165 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p617h0.p618a.p619a.SymbolTable2;
 
-/* compiled from: MethodWriter.java */
-/* renamed from: h0.a.a.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.a.a.r, reason: use source file name */
+/* JADX INFO: compiled from: MethodWriter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MethodWriter2 extends MethodVisitor2 {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final int[] f26264c = {0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 2, 1, 1, 1, 0, 0, 1, 2, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, -1, -1, -1, -1, -1, -2, -1, -2, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -4, -3, -4, -3, -3, -3, -3, -1, -2, 1, 1, 1, 2, 2, 2, 0, -1, -2, -1, -2, -1, -2, -1, -2, -1, -2, -1, -2, -1, -2, -1, -2, -1, -2, -1, -2, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1, -2, -1, -2, -1, -2, 0, 1, 0, 1, -1, -1, 0, 0, 1, 1, -1, 0, -1, 0, 0, 0, -3, -1, -1, -3, -3, -1, -1, -1, -1, -1, -1, -2, -2, -2, -2, -2, -2, -2, -2, 0, 1, 0, -1, -1, -1, -2, -1, -2, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, -1, -1, 0, 0, -1, -1, 0, 0};
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final int f26265A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public AnnotationWriter2 f26266B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public AnnotationWriter2 f26267C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public int f26268D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public AnnotationWriter2[] f26269E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public int f26270F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public AnnotationWriter2[] f26271G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public AnnotationWriter2 f26272H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public AnnotationWriter2 f26273I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public ByteVector2 f26274J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public int f26275K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public ByteVector2 f26276L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public Attribute2 f26277M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final int f26278N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public Label2 f26279O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public Label2 f26280P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public Label2 f26281Q;
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public int f26282R;
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public int f26283S;
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public int f26284T;
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public int f26285U;
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public int[] f26286V;
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public int[] f26287W;
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public boolean f26288X;
 
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public boolean f26289Y;
 
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public int f26290Z;
 
-    /* renamed from: a0 */
+    /* JADX INFO: renamed from: a0 */
     public int f26291a0;
 
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public int f26292b0;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final SymbolTable2 f26293d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f26294e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f26295f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final String f26296g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int f26297h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final String f26298i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f26299j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f26300k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ByteVector2 f26301l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Handler5 f26302m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Handler5 f26303n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f26304o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public ByteVector2 f26305p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f26306q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public ByteVector2 f26307r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f26308s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public ByteVector2 f26309t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public int f26310u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public ByteVector2 f26311v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public AnnotationWriter2 f26312w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public AnnotationWriter2 f26313x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final int f26314y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final int[] f26315z;
 
     public MethodWriter2(SymbolTable2 symbolTable2, int i, String str, String str2, String str3, String[] strArr, int i2) {
@@ -200,7 +200,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
         }
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public int m10613A(int i, int i2, int i3) {
         int i4 = i2 + 3 + i3;
         int[] iArr = this.f26287W;
@@ -214,7 +214,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
         return 3;
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final void m10614B(Label2 label2, Label2[] label2Arr) {
         Label2 label22 = this.f26281Q;
         if (label22 != null) {
@@ -242,7 +242,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public AnnotationWriter2 mo10593a(String str, boolean z2) {
         ByteVector2 byteVector2 = new ByteVector2();
         byteVector2.m10538j(this.f26293d.m10637l(str));
@@ -258,7 +258,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo10594b(int i, String str, String str2, String str3) {
         int i2;
         int i3;
@@ -304,7 +304,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo10595c(int i, int i2, Object[] objArr, int i3, Object[] objArr2) {
         int i4;
         int i5 = this.f26278N;
@@ -465,7 +465,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo10596d(int i, int i2) {
         int i3;
         int i4;
@@ -490,7 +490,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo10597e(int i) {
         ByteVector2 byteVector2 = this.f26301l;
         this.f26290Z = byteVector2.f26154b;
@@ -515,7 +515,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public AnnotationWriter2 mo10598f(int i, TypePath2 typePath2, String str, boolean z2) {
         ByteVector2 byteVector2 = new ByteVector2();
         C3404f.m4256W0((i & (-16776961)) | (this.f26290Z << 8), byteVector2);
@@ -533,7 +533,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo10599g(int i, int i2) {
         ByteVector2 byteVector2 = this.f26301l;
         this.f26290Z = byteVector2.f26154b;
@@ -558,7 +558,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo10600h(int i, Label2 label2) {
         boolean z2;
         ByteVector2 byteVector2 = this.f26301l;
@@ -637,7 +637,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo10601i(Label2 label2) {
         boolean z2 = this.f26289Y;
         ByteVector2 byteVector2 = this.f26301l;
@@ -705,7 +705,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo10602j(Object obj) {
         char cCharAt;
         this.f26290Z = this.f26301l.f26154b;
@@ -736,7 +736,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void mo10603k(int i, Label2 label2) {
         if (this.f26305p == null) {
             this.f26305p = new ByteVector2();
@@ -747,7 +747,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public void mo10604l(String str, String str2, String str3, Label2 label2, Label2 label22, int i) {
         if (str3 != null) {
             if (this.f26309t == null) {
@@ -781,7 +781,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public AnnotationWriter2 mo10605m(int i, TypePath2 typePath2, Label2[] label2Arr, Label2[] label2Arr2, int[] iArr, String str, boolean z2) {
         ByteVector2 byteVector2 = new ByteVector2();
         byteVector2.m10535g(i >>> 24);
@@ -805,7 +805,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void mo10606n(int i, int i2) {
         int i3 = this.f26278N;
         if (i3 == 4) {
@@ -959,7 +959,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void mo10608p(int i, String str, String str2, String str3, boolean z2) {
         this.f26290Z = this.f26301l.f26154b;
         SymbolTable2.a aVarM10633h = this.f26293d.m10633h(z2 ? 11 : 10, str, str2, str3);
@@ -988,7 +988,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void mo10609q(int i, int i2, Label2 label2, Label2... label2Arr) {
         ByteVector2 byteVector2 = this.f26301l;
         this.f26290Z = byteVector2.f26154b;
@@ -1005,7 +1005,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public AnnotationWriter2 mo10610r(int i, TypePath2 typePath2, String str, boolean z2) {
         ByteVector2 byteVector2 = new ByteVector2();
         C3404f.m4256W0(i, byteVector2);
@@ -1023,7 +1023,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void mo10611s(int i, String str) {
         this.f26290Z = this.f26301l.f26154b;
         Symbol2 symbol2M10638m = this.f26293d.m10638m(7, str);
@@ -1044,7 +1044,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     }
 
     @Override // p617h0.p618a.p619a.MethodVisitor2
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public void mo10612t(int i, int i2) {
         ByteVector2 byteVector2 = this.f26301l;
         this.f26290Z = byteVector2.f26154b;
@@ -1086,13 +1086,13 @@ public final class MethodWriter2 extends MethodVisitor2 {
         mo10601i(new Label2());
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final void m10615u(int i, Label2 label2) {
         Label2 label22 = this.f26281Q;
         label22.f26260m = new Edge2(i, label2, label22.f26260m);
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final void m10616v() {
         int i = this.f26278N;
         if (i != 4) {
@@ -1112,7 +1112,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
         this.f26281Q = null;
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final void m10617w(int i, int i2) {
         while (i < i2) {
             SymbolTable2 symbolTable2 = this.f26293d;
@@ -1184,7 +1184,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
         }
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final void m10618x(Object obj) {
         if (obj instanceof Integer) {
             this.f26311v.m10535g(((Integer) obj).intValue());
@@ -1201,7 +1201,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
         }
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public void m10619y(ByteVector2 byteVector2) {
         int i;
         boolean z2 = this.f26293d.f26349c < 49;
@@ -1429,7 +1429,7 @@ public final class MethodWriter2 extends MethodVisitor2 {
     /* JADX WARN: Removed duplicated region for block: B:31:0x007e  */
     /* JADX WARN: Removed duplicated region for block: B:39:0x009a  */
     /* JADX WARN: Removed duplicated region for block: B:50:0x00ff  */
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

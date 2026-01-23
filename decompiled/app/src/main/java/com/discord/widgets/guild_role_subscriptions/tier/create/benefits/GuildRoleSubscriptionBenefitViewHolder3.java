@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionBenefitAdapterItem;
 import com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionBenefitViewHolder;
 
-/* compiled from: GuildRoleSubscriptionBenefitViewHolder.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionBenefitViewHolder$FreeTrialViewHolder$configure$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionBenefitViewHolder$FreeTrialViewHolder$configure$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildRoleSubscriptionBenefitViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionBenefitViewHolder3 implements View.OnClickListener {
     public final /* synthetic */ GuildRoleSubscriptionBenefitAdapterItem.FreeTrialItem $data$inlined;
     public final /* synthetic */ GuildRoleSubscriptionBenefitViewHolder.FreeTrialViewHolder this$0;

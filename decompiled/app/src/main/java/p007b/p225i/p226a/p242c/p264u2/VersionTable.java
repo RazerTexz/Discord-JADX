@@ -8,42 +8,43 @@ import com.google.android.exoplayer2.database.DatabaseIOException;
 import p007b.p225i.p226a.p242c.ExoPlayerLibraryInfo;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: VersionTable.java */
-/* renamed from: b.i.a.c.u2.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.u2.d, reason: use source file name */
+/* JADX INFO: compiled from: VersionTable.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class VersionTable {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ int f7887a = 0;
 
     static {
         ExoPlayerLibraryInfo.m3272a("goog.exo.database");
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m3545a(SQLiteDatabase sQLiteDatabase, int i, String str) throws DatabaseIOException {
         try {
-            if (!Util2.m2989J(sQLiteDatabase, "ExoPlayerVersions")) {
-                return -1;
-            }
-            Cursor cursorQuery = sQLiteDatabase.query("ExoPlayerVersions", new String[]{"version"}, "feature = ? AND instance_uid = ?", new String[]{Integer.toString(i), str}, null, null, null);
-            try {
-                if (cursorQuery.getCount() == 0) {
-                    cursorQuery.close();
-                    return -1;
-                }
-                cursorQuery.moveToNext();
-                int i2 = cursorQuery.getInt(0);
-                cursorQuery.close();
-                return i2;
-            } finally {
-            }
         } catch (SQLException e) {
             throw new DatabaseIOException(e);
         }
+        if (!Util2.m2989J(sQLiteDatabase, "ExoPlayerVersions")) {
+            return -1;
+        }
+        Cursor cursorQuery = sQLiteDatabase.query("ExoPlayerVersions", new String[]{"version"}, "feature = ? AND instance_uid = ?", new String[]{Integer.toString(i), str}, null, null, null);
+        try {
+            if (cursorQuery.getCount() == 0) {
+                cursorQuery.close();
+                return -1;
+            }
+            cursorQuery.moveToNext();
+            int i2 = cursorQuery.getInt(0);
+            cursorQuery.close();
+            return i2;
+        } finally {
+        }
+        throw new DatabaseIOException(e);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m3546b(SQLiteDatabase sQLiteDatabase, int i, String str, int i2) throws DatabaseIOException {
         try {
             sQLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS ExoPlayerVersions (feature INTEGER NOT NULL,instance_uid TEXT NOT NULL,version INTEGER NOT NULL,PRIMARY KEY (feature, instance_uid))");

@@ -5,27 +5,27 @@ import androidx.annotation.IntRange;
 import androidx.annotation.Nullable;
 import p007b.p225i.p226a.p242c.Bundleable;
 
-/* compiled from: VideoSize.java */
-/* renamed from: b.i.a.c.g3.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.y, reason: use source file name */
+/* JADX INFO: compiled from: VideoSize.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class VideoSize implements Bundleable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final VideoSize f6954j = new VideoSize(0, 0);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @IntRange(from = 0)
     public final int f6955k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @IntRange(from = 0)
     public final int f6956l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @IntRange(from = 0, m76to = 359)
     public final int f6957m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @FloatRange(from = 0.0d, fromInclusive = false)
     public final float f6958n;
 

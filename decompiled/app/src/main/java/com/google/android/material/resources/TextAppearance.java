@@ -18,8 +18,8 @@ import androidx.core.view.ViewCompat;
 import com.google.android.material.C10817R;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class TextAppearance {
     private static final String TAG = "TextAppearance";
     private static final int TYPEFACE_MONOSPACE = 3;
@@ -55,10 +55,10 @@ public class TextAppearance {
     public final int textStyle;
     public final int typeface;
 
-    /* renamed from: com.google.android.material.resources.TextAppearance$a */
+    /* JADX INFO: renamed from: com.google.android.material.resources.TextAppearance$a */
     public class C10960a extends ResourcesCompat.FontCallback {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ TextAppearanceFontCallback f21060a;
 
         public C10960a(TextAppearanceFontCallback textAppearanceFontCallback) {
@@ -80,13 +80,13 @@ public class TextAppearance {
         }
     }
 
-    /* renamed from: com.google.android.material.resources.TextAppearance$b */
+    /* JADX INFO: renamed from: com.google.android.material.resources.TextAppearance$b */
     public class C10961b extends TextAppearanceFontCallback {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ TextPaint f21062a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ TextAppearanceFontCallback f21063b;
 
         public C10961b(TextPaint textPaint, TextAppearanceFontCallback textAppearanceFontCallback) {
@@ -106,7 +106,7 @@ public class TextAppearance {
         }
     }
 
-    public TextAppearance(@NonNull Context context, @StyleRes int i) throws Resources.NotFoundException {
+    public TextAppearance(@NonNull Context context, @StyleRes int i) {
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(i, C10817R.styleable.TextAppearance);
         this.textSize = typedArrayObtainStyledAttributes.getDimension(C10817R.styleable.TextAppearance_android_textSize, 0.0f);
         this.textColor = MaterialResources.getColorStateList(context, typedArrayObtainStyledAttributes, C10817R.styleable.TextAppearance_android_textColor);

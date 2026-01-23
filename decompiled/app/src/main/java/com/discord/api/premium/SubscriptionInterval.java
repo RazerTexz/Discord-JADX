@@ -1,8 +1,8 @@
 package com.discord.api.premium;
 
 
-/* compiled from: SubscriptionInterval.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: SubscriptionInterval.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum SubscriptionInterval {
     MONTHLY,
     YEARLY

@@ -7,9 +7,9 @@ import com.discord.utilities.analytics.Traits;
 import com.discord.widgets.settings.premium.WidgetSettingsPremium;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetEmojiSheet.kt */
-/* renamed from: com.discord.widgets.emoji.WidgetEmojiSheet$configureButtons$$inlined$with$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.emoji.WidgetEmojiSheet$configureButtons$$inlined$with$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetEmojiSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEmojiSheet4 implements View.OnClickListener {
     public final /* synthetic */ Guild $guild$inlined;
     public final /* synthetic */ boolean $isUserInGuild$inlined;

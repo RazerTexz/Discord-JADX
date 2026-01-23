@@ -27,17 +27,17 @@ import p507d0.p591y.Closeable;
 import p507d0.p591y.IOStreams;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Compressor.kt */
+/* JADX INFO: renamed from: b0.a.a.b, reason: use source file name */
+/* JADX INFO: compiled from: Compressor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 @DebugMetadata(m10084c = "id.zelory.compressor.Compressor$compress$6", m10085f = "Compressor.kt", m10086l = {}, m10087m = "invokeSuspend")
-/* renamed from: b0.a.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
 public final class Compressor2 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super File>, Object> {
     public final /* synthetic */ Function1 $compressionPatch;
     public final /* synthetic */ Context $context;
     public final /* synthetic */ Uri $imageFileUri;
     public int label;
 
-    /* renamed from: p$ */
+    /* JADX INFO: renamed from: p$ */
     private CoroutineScope f14502p$;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

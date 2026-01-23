@@ -5,12 +5,12 @@ import p007b.p225i.p361c.p369m.p370d.p379p.ByteString2;
 import p007b.p225i.p361c.p369m.p370d.p379p.CodedOutputStream2;
 import p007b.p225i.p361c.p369m.p370d.p379p.SessionProtobufHelper;
 
-/* compiled from: CrashlyticsController.java */
-/* renamed from: b.i.c.m.d.k.z */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.z */
+/* JADX INFO: compiled from: CrashlyticsController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4667z implements C4663x.g {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ UserMetadata f12467a;
 
     public C4667z(C4663x c4663x, UserMetadata userMetadata) {
@@ -18,7 +18,7 @@ public class C4667z implements C4663x.g {
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p373k.C4663x.g
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6454a(CodedOutputStream2 codedOutputStream2) throws Exception {
         String str = this.f12467a.f12290a;
         ByteString2 byteString2 = SessionProtobufHelper.f12694a;

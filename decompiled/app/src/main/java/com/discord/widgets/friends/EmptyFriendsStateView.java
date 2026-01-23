@@ -1,7 +1,6 @@
 package com.discord.widgets.friends;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -13,13 +12,13 @@ import com.discord.widgets.friends.WidgetFriendsAdd;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmptyFriendsStateView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmptyFriendsStateView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmptyFriendsStateView extends ConstraintLayout {
     private final EmptyFriendsStateViewBinding binding;
 
-    /* compiled from: EmptyFriendsStateView.kt */
-    /* renamed from: com.discord.widgets.friends.EmptyFriendsStateView$updateView$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.EmptyFriendsStateView$updateView$1 */
+    /* JADX INFO: compiled from: EmptyFriendsStateView.kt */
     public static final class ViewOnClickListenerC83551 implements View.OnClickListener {
         public final /* synthetic */ String $addFriendSource;
 
@@ -45,7 +44,7 @@ public final class EmptyFriendsStateView extends ConstraintLayout {
         this.binding = emptyFriendsStateViewBindingM8383a;
     }
 
-    public final void initialize(AttributeSet attrs) throws Resources.NotFoundException {
+    public final void initialize(AttributeSet attrs) {
         TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attrs, C5419R.a.EmptyFriendsStateView);
         Intrinsics3.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…le.EmptyFriendsStateView)");
         int resourceId = typedArrayObtainStyledAttributes.getResourceId(0, C5419R.dimen.uikit_textsize_xlarge);
@@ -59,7 +58,7 @@ public final class EmptyFriendsStateView extends ConstraintLayout {
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public EmptyFriendsStateView(Context context, AttributeSet attributeSet) throws Resources.NotFoundException {
+    public EmptyFriendsStateView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         Intrinsics3.checkNotNullParameter(context, "context");
         EmptyFriendsStateViewBinding emptyFriendsStateViewBindingM8383a = EmptyFriendsStateViewBinding.m8383a(LayoutInflater.from(getContext()), this);
@@ -73,7 +72,7 @@ public final class EmptyFriendsStateView extends ConstraintLayout {
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public EmptyFriendsStateView(Context context, AttributeSet attributeSet, int i) throws Resources.NotFoundException {
+    public EmptyFriendsStateView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         Intrinsics3.checkNotNullParameter(context, "context");
         EmptyFriendsStateViewBinding emptyFriendsStateViewBindingM8383a = EmptyFriendsStateViewBinding.m8383a(LayoutInflater.from(getContext()), this);

@@ -3,9 +3,9 @@ package com.discord.widgets.guilds;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildSelector.kt */
-/* renamed from: com.discord.widgets.guilds.WidgetGuildSelector$requestKey$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.WidgetGuildSelector$requestKey$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildSelector.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildSelector5 extends Lambda implements Function0<String> {
     public final /* synthetic */ WidgetGuildSelector this$0;
 
@@ -21,7 +21,7 @@ public final class WidgetGuildSelector5 extends Lambda implements Function0<Stri
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final String invoke2() {
         return WidgetGuildSelector.access$getArgumentsOrDefault$p(this.this$0).getString("INTENT_EXTRA_REQUEST_CODE", "");
     }

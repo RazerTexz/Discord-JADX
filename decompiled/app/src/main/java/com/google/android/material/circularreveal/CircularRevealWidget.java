@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import com.google.android.material.circularreveal.CircularRevealHelper;
 import com.google.android.material.math.MathUtils;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public interface CircularRevealWidget extends CircularRevealHelper.Delegate {
 
     public static class CircularRevealEvaluator implements TypeEvaluator<RevealInfo> {
@@ -24,7 +24,7 @@ public interface CircularRevealWidget extends CircularRevealHelper.Delegate {
         }
 
         @NonNull
-        /* renamed from: evaluate, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: evaluate, reason: avoid collision after fix types in other method */
         public RevealInfo evaluate2(float f, @NonNull RevealInfo revealInfo, @NonNull RevealInfo revealInfo2) {
             this.revealInfo.set(MathUtils.lerp(revealInfo.centerX, revealInfo2.centerX, f), MathUtils.lerp(revealInfo.centerY, revealInfo2.centerY, f), MathUtils.lerp(revealInfo.radius, revealInfo2.radius, f));
             return this.revealInfo;
@@ -50,12 +50,12 @@ public interface CircularRevealWidget extends CircularRevealHelper.Delegate {
         }
 
         @Nullable
-        /* renamed from: get, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
         public RevealInfo get2(@NonNull CircularRevealWidget circularRevealWidget) {
             return circularRevealWidget.getRevealInfo();
         }
 
-        /* renamed from: set, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
         public void set2(@NonNull CircularRevealWidget circularRevealWidget, @Nullable RevealInfo revealInfo) {
             circularRevealWidget.setRevealInfo(revealInfo);
         }
@@ -80,12 +80,12 @@ public interface CircularRevealWidget extends CircularRevealHelper.Delegate {
         }
 
         @NonNull
-        /* renamed from: get, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
         public Integer get2(@NonNull CircularRevealWidget circularRevealWidget) {
             return Integer.valueOf(circularRevealWidget.getCircularRevealScrimColor());
         }
 
-        /* renamed from: set, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
         public void set2(@NonNull CircularRevealWidget circularRevealWidget, @NonNull Integer num) {
             circularRevealWidget.setCircularRevealScrimColor(num.intValue());
         }

@@ -4,12 +4,12 @@ import kotlin.Unit;
 import kotlinx.coroutines.Job;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: JobSupport.kt */
-/* renamed from: s.a.o0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.o0 */
+/* JADX INFO: compiled from: JobSupport.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C13136o0 extends AbstractC13113g1<Job> {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Job2 f27879n;
 
     public C13136o0(Job job, Job2 job2) {
@@ -24,7 +24,7 @@ public final class C13136o0 extends AbstractC13113g1<Job> {
     }
 
     @Override // p659s.p660a.CompletionHandler2
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void mo11198q(Throwable th) {
         this.f27879n.dispose();
     }

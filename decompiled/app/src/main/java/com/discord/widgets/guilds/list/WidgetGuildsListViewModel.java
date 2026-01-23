@@ -59,11 +59,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetGuildsListViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Clock clock;
     private WidgetGuildListAdapter.Operation.TargetOperation currentTargetOperation;
@@ -71,8 +71,8 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
     private boolean wasLeftPanelOpened;
     private boolean wasOnHomeTab;
 
-    /* compiled from: WidgetGuildsListViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$1 */
+    /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
     public static final class C87531 extends Lambda implements Function1<StoreState, Unit> {
         public C87531() {
             super(1);
@@ -84,7 +84,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             WidgetGuildsListViewModel widgetGuildsListViewModel = WidgetGuildsListViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
@@ -92,10 +92,10 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetGuildsListViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
     public static final class Companion {
 
-        /* compiled from: WidgetGuildsListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
         public static final /* data */ class Chunk {
             private final Map<Long, List<Long>> channelIds;
             private final Map<Long, ModelNotificationSettings> guildSettings;
@@ -127,16 +127,17 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                 this.sortedGuilds = list;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Chunk copy$default(Chunk chunk, long j, long j2, Map map, Set set, Map map2, Map map3, Set set2, Map map4, List list, int i, Object obj) {
                 return chunk.copy((i & 1) != 0 ? chunk.selectedGuildId : j, (i & 2) != 0 ? chunk.selectedVoiceChannelId : j2, (i & 4) != 0 ? chunk.guildSettings : map, (i & 8) != 0 ? chunk.unreadGuildIds : set, (i & 16) != 0 ? chunk.mentionCounts : map2, (i & 32) != 0 ? chunk.channelIds : map3, (i & 64) != 0 ? chunk.unavailableGuilds : set2, (i & 128) != 0 ? chunk.privateChannels : map4, (i & 256) != 0 ? chunk.sortedGuilds : list);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getSelectedGuildId() {
                 return this.selectedGuildId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getSelectedVoiceChannelId() {
                 return this.selectedVoiceChannelId;
             }
@@ -267,7 +268,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetGuildsListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
         public static final /* data */ class SecondChunk {
             private final Map<Long, Channel> channels;
             private final Set<Long> guildIds;
@@ -293,6 +294,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                 this.showHubSparkle = z2;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ SecondChunk copy$default(SecondChunk secondChunk, Map map, List list, Set set, Set set2, Set set3, Map map2, boolean z2, int i, Object obj) {
                 if ((i & 1) != 0) {
                     map = secondChunk.guildJoinRequests;
@@ -347,7 +349,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                 return this.channels;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final boolean getShowHubSparkle() {
                 return this.showHubSparkle;
             }
@@ -402,6 +404,9 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v4 */
+            /* JADX WARN: Type inference failed for: r1v6 */
             public int hashCode() {
                 Map<Long, GuildJoinRequest> map = this.guildJoinRequests;
                 int iHashCode = (map != null ? map.hashCode() : 0) * 31;
@@ -416,11 +421,11 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                 Map<Long, Channel> map2 = this.channels;
                 int iHashCode6 = (iHashCode5 + (map2 != null ? map2.hashCode() : 0)) * 31;
                 boolean z2 = this.showHubSparkle;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode6 + i;
+                return iHashCode6 + r1;
             }
 
             public String toString() {
@@ -464,10 +469,10 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetGuildsListViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetGuildsListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
         public static final /* data */ class AnnounceFolderToggleForAccessibility extends Event {
             private final GuildListItem.FolderItem item;
 
@@ -485,7 +490,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                 return announceFolderToggleForAccessibility.copy(folderItem);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final GuildListItem.FolderItem getItem() {
                 return this.item;
             }
@@ -522,7 +527,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetGuildsListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
         public static final class FocusFirstElement extends Event {
             public static final FocusFirstElement INSTANCE = new FocusFirstElement();
 
@@ -531,7 +536,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetGuildsListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
         public static final /* data */ class ShowChannelActions extends Event {
             private final long channelId;
 
@@ -547,7 +552,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                 return showChannelActions.copy(j);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
@@ -576,7 +581,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetGuildsListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
         public static final class ShowCreateGuild extends Event {
             public static final ShowCreateGuild INSTANCE = new ShowCreateGuild();
 
@@ -585,7 +590,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetGuildsListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
         public static final class ShowHelp extends Event {
             public static final ShowHelp INSTANCE = new ShowHelp();
 
@@ -594,7 +599,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetGuildsListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
         public static final class ShowHubVerification extends Event {
             public static final ShowHubVerification INSTANCE = new ShowHubVerification();
 
@@ -603,7 +608,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetGuildsListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
         public static final /* data */ class ShowUnavailableGuilds extends Event {
             private final int unavailableGuildCount;
 
@@ -619,7 +624,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                 return showUnavailableGuilds.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getUnavailableGuildCount() {
                 return this.unavailableGuildCount;
             }
@@ -656,7 +661,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetGuildsListViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
     public static final /* data */ class StoreState {
         private final Map<Long, StreamContext> allApplicationStreamContexts;
         private final Map<Long, Long> allChannelPermissions;
@@ -726,11 +731,12 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             this.showHubSparkle = z5;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, long j, long j2, Map map, Set set, Map map2, Map map3, Set set2, Map map4, List list, Map map5, List list2, Set set3, Set set4, Set set5, Set set6, Map map6, Set set7, boolean z2, Map map7, Map map8, boolean z3, boolean z4, boolean z5, int i, Object obj) {
             return storeState.copy((i & 1) != 0 ? storeState.selectedGuildId : j, (i & 2) != 0 ? storeState.selectedVoiceChannelId : j2, (i & 4) != 0 ? storeState.guildSettings : map, (i & 8) != 0 ? storeState.unreadGuildIds : set, (i & 16) != 0 ? storeState.mentionCounts : map2, (i & 32) != 0 ? storeState.channelIds : map3, (i & 64) != 0 ? storeState.unavailableGuilds : set2, (i & 128) != 0 ? storeState.privateChannels : map4, (i & 256) != 0 ? storeState.sortedGuilds : list, (i & 512) != 0 ? storeState.guildJoinRequests : map5, (i & 1024) != 0 ? storeState.pendingGuilds : list2, (i & 2048) != 0 ? storeState.guildIds : set3, (i & 4096) != 0 ? storeState.lurkingGuildIds : set4, (i & 8192) != 0 ? storeState.guildIdsWithActiveStageEvents : set5, (i & 16384) != 0 ? storeState.guildIdsWithActiveScheduledEvents : set6, (i & 32768) != 0 ? storeState.channels : map6, (i & 65536) != 0 ? storeState.openFolderIds : set7, (i & 131072) != 0 ? storeState.isNewUser : z2, (i & 262144) != 0 ? storeState.allApplicationStreamContexts : map7, (i & 524288) != 0 ? storeState.allChannelPermissions : map8, (i & 1048576) != 0 ? storeState.isLeftPanelOpened : z3, (i & 2097152) != 0 ? storeState.isOnHomeTab : z4, (i & 4194304) != 0 ? storeState.showHubSparkle : z5);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getSelectedGuildId() {
             return this.selectedGuildId;
         }
@@ -767,7 +773,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             return this.openFolderIds;
         }
 
-        /* renamed from: component18, reason: from getter */
+        /* JADX INFO: renamed from: component18, reason: from getter */
         public final boolean getIsNewUser() {
             return this.isNewUser;
         }
@@ -776,7 +782,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             return this.allApplicationStreamContexts;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getSelectedVoiceChannelId() {
             return this.selectedVoiceChannelId;
         }
@@ -785,17 +791,17 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             return this.allChannelPermissions;
         }
 
-        /* renamed from: component21, reason: from getter */
+        /* JADX INFO: renamed from: component21, reason: from getter */
         public final boolean getIsLeftPanelOpened() {
             return this.isLeftPanelOpened;
         }
 
-        /* renamed from: component22, reason: from getter */
+        /* JADX INFO: renamed from: component22, reason: from getter */
         public final boolean getIsOnHomeTab() {
             return this.isOnHomeTab;
         }
 
-        /* renamed from: component23, reason: from getter */
+        /* JADX INFO: renamed from: component23, reason: from getter */
         public final boolean getShowHubSparkle() {
             return this.showHubSparkle;
         }
@@ -941,6 +947,18 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r0v49, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v55, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v57, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v59 */
+        /* JADX WARN: Type inference failed for: r0v60 */
+        /* JADX WARN: Type inference failed for: r0v62 */
+        /* JADX WARN: Type inference failed for: r0v78 */
+        /* JADX WARN: Type inference failed for: r0v79 */
+        /* JADX WARN: Type inference failed for: r0v80 */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             int iM3a = (C0002b.m3a(this.selectedVoiceChannelId) + (C0002b.m3a(this.selectedGuildId) * 31)) * 31;
             Map<Long, ModelNotificationSettings> map = this.guildSettings;
@@ -974,29 +992,29 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             Set<Long> set7 = this.openFolderIds;
             int iHashCode15 = (iHashCode14 + (set7 != null ? set7.hashCode() : 0)) * 31;
             boolean z2 = this.isNewUser;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r0 = z2;
+            if (z2) {
+                r0 = 1;
             }
-            int i2 = (iHashCode15 + i) * 31;
+            int i = (iHashCode15 + r0) * 31;
             Map<Long, StreamContext> map7 = this.allApplicationStreamContexts;
-            int iHashCode16 = (i2 + (map7 != null ? map7.hashCode() : 0)) * 31;
+            int iHashCode16 = (i + (map7 != null ? map7.hashCode() : 0)) * 31;
             Map<Long, Long> map8 = this.allChannelPermissions;
             int iHashCode17 = (iHashCode16 + (map8 != null ? map8.hashCode() : 0)) * 31;
             boolean z3 = this.isLeftPanelOpened;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r02 = z3;
+            if (z3) {
+                r02 = 1;
             }
-            int i4 = (iHashCode17 + i3) * 31;
+            int i2 = (iHashCode17 + r02) * 31;
             boolean z4 = this.isOnHomeTab;
-            int i5 = z4;
-            if (z4 != 0) {
-                i5 = 1;
+            ?? r03 = z4;
+            if (z4) {
+                r03 = 1;
             }
-            int i6 = (i4 + i5) * 31;
+            int i3 = (i2 + r03) * 31;
             boolean z5 = this.showHubSparkle;
-            return i6 + (z5 ? 1 : z5 ? 1 : 0);
+            return i3 + (z5 ? 1 : z5);
         }
 
         public final boolean isLeftPanelOpened() {
@@ -1061,10 +1079,10 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetGuildsListViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetGuildsListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final boolean hasChannels;
             private final List<GuildListItem> items;
@@ -1098,12 +1116,12 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                 return this.items;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getHasChannels() {
                 return this.hasChannels;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getWasDragResult() {
                 return this.wasDragResult;
             }
@@ -1137,17 +1155,23 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v3 */
+            /* JADX WARN: Type inference failed for: r1v4 */
+            /* JADX WARN: Type inference failed for: r2v0 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v2 */
             public int hashCode() {
                 List<GuildListItem> list = this.items;
                 int iHashCode = (list != null ? list.hashCode() : 0) * 31;
                 boolean z2 = this.hasChannels;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r1) * 31;
                 boolean z3 = this.wasDragResult;
-                return i2 + (z3 ? 1 : z3 ? 1 : 0);
+                return i + (z3 ? 1 : z3);
             }
 
             public String toString() {
@@ -1160,7 +1184,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetGuildsListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -1177,8 +1201,8 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetGuildsListViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$createDirectMessageItems$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$createDirectMessageItems$1 */
+    /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
     public static final class C87561 extends Lambda implements Function1<Channel, Boolean> {
         public final /* synthetic */ ModelNotificationSettings $dmSettings;
         public final /* synthetic */ Map $mentionCounts;
@@ -1195,7 +1219,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             return Boolean.valueOf(invoke2(channel));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(Channel channel) {
             ModelNotificationSettings modelNotificationSettings;
             ModelNotificationSettings.ChannelOverride channelOverride;
@@ -1204,8 +1228,8 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetGuildsListViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$createDirectMessageItems$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$createDirectMessageItems$2 */
+    /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
     public static final class C87572 extends Lambda implements Function1<Channel, GuildListItem.PrivateChannelItem> {
         public final /* synthetic */ Map $mentionCounts;
 
@@ -1220,7 +1244,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             return invoke2(channel);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GuildListItem.PrivateChannelItem invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "it");
             Integer num = (Integer) outline.m845d(channel, this.$mentionCounts);
@@ -1228,8 +1252,8 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetGuildsListViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$handleStoreState$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$handleStoreState$2 */
+    /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
     public static final class C87592 extends Lambda implements Function1<StoreGuildsSorted.Entry, Boolean> {
         public final /* synthetic */ StoreState $storeState;
 
@@ -1244,15 +1268,15 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             return Boolean.valueOf(invoke2(entry));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(StoreGuildsSorted.Entry entry) {
             Intrinsics3.checkNotNullParameter(entry, "it");
             return ((entry instanceof StoreGuildsSorted.Entry.SingletonGuild) && this.$storeState.getLurkingGuildIds().contains(Long.valueOf(((StoreGuildsSorted.Entry.SingletonGuild) entry).getGuild().getId()))) ? false : true;
         }
     }
 
-    /* compiled from: WidgetGuildsListViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$onDrop$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$onDrop$2 */
+    /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
     public static final class C87602 extends Lambda implements Function1<ModelUserSettings, Unit> {
         public static final C87602 INSTANCE = new C87602();
 
@@ -1266,14 +1290,14 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUserSettings modelUserSettings) {
             Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
         }
     }
 
-    /* compiled from: WidgetGuildsListViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$onItemClicked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$onItemClicked$1 */
+    /* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
     public static final class C87611 extends Lambda implements Function0<Unit> {
         public static final C87611 INSTANCE = new C87611();
 
@@ -1287,7 +1311,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }

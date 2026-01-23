@@ -76,8 +76,8 @@ import p659s.p660a.CoroutineScope2;
 import p659s.p660a.Dispatchers;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: StoreMediaEngine.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMediaEngine.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMediaEngine extends Store {
     private static final String DEFAULT_VIDEO_DEVICE_GUID = "";
     private static final long MAX_WAIT_FOR_DEVICES_MS = 750;
@@ -108,7 +108,7 @@ public final class StoreMediaEngine extends Store {
     private static final MediaEngine.LocalVoiceStatus LOCAL_VOICE_STATUS_DEFAULT = new MediaEngine.LocalVoiceStatus(-100.0f, false);
     private static final MediaEngine.OpenSLESConfig DEFAULT_OPENSLES_CONFIG = MediaEngine.OpenSLESConfig.DEFAULT;
 
-    /* compiled from: StoreMediaEngine.kt */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     public static abstract class DefaultListener implements Listener {
         @Override // com.discord.stores.StoreMediaEngine.Listener
         public void onConnected() {
@@ -119,7 +119,7 @@ public final class StoreMediaEngine extends Store {
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     public final class EngineListener implements MediaEngine.InterfaceC5642c {
         private final LowMemoryDetector lowMemoryDetector = new LowMemoryDetector();
         private long debugPrintableId = -1;
@@ -190,7 +190,7 @@ public final class StoreMediaEngine extends Store {
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     public interface Listener {
         void onConnected();
 
@@ -216,9 +216,9 @@ public final class StoreMediaEngine extends Store {
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$awaitVideoInputDevicesNativeAsync$1 */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     @DebugMetadata(m10084c = "com.discord.stores.StoreMediaEngine", m10085f = "StoreMediaEngine.kt", m10086l = {264}, m10087m = "awaitVideoInputDevicesNativeAsync")
-    /* renamed from: com.discord.stores.StoreMediaEngine$awaitVideoInputDevicesNativeAsync$1 */
     public static final class C61641 extends ContinuationImpl3 {
         public Object L$0;
         public int label;
@@ -236,8 +236,8 @@ public final class StoreMediaEngine extends Store {
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
-    /* renamed from: com.discord.stores.StoreMediaEngine$enableLocalVoiceStatusListening$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$enableLocalVoiceStatusListening$1 */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     public static final /* synthetic */ class C61651 extends FunctionReferenceImpl implements Function1<MediaEngine.LocalVoiceStatus, Unit> {
         public C61651(SerializedSubject serializedSubject) {
             super(1, serializedSubject, SerializedSubject.class, "onNext", "onNext(Ljava/lang/Object;)V", 0);
@@ -249,15 +249,15 @@ public final class StoreMediaEngine extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MediaEngine.LocalVoiceStatus localVoiceStatus) {
             ((SerializedSubject) this.receiver).f27653k.onNext(localVoiceStatus);
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$getDefaultVideoDeviceGUID$1 */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     @DebugMetadata(m10084c = "com.discord.stores.StoreMediaEngine", m10085f = "StoreMediaEngine.kt", m10086l = {209}, m10087m = "getDefaultVideoDeviceGUID")
-    /* renamed from: com.discord.stores.StoreMediaEngine$getDefaultVideoDeviceGUID$1 */
     public static final class C61661 extends ContinuationImpl3 {
         public Object L$0;
         public int label;
@@ -275,8 +275,8 @@ public final class StoreMediaEngine extends Store {
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
-    /* renamed from: com.discord.stores.StoreMediaEngine$getRankedRtcRegions$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$getRankedRtcRegions$1 */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     public static final class C61671 extends Lambda implements Function1<String[], Unit> {
         public final /* synthetic */ Function1 $callback;
 
@@ -292,15 +292,15 @@ public final class StoreMediaEngine extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String[] strArr) {
             Intrinsics3.checkNotNullParameter(strArr, "it");
             this.$callback.invoke(_Arrays.toList(strArr));
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
-    /* renamed from: com.discord.stores.StoreMediaEngine$getVideoInputDevicesNative$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$getVideoInputDevicesNative$1 */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     public static final /* synthetic */ class C61681 extends FunctionReferenceImpl implements Function1<DeviceDescription4[], Unit> {
         public C61681(Function1 function1) {
             super(1, function1, Function1.class, "invoke", "invoke(Ljava/lang/Object;)Ljava/lang/Object;", 0);
@@ -312,15 +312,15 @@ public final class StoreMediaEngine extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DeviceDescription4[] deviceDescription4Arr) {
             Intrinsics3.checkNotNullParameter(deviceDescription4Arr, "p1");
             ((Function1) this.receiver).invoke(deviceDescription4Arr);
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
-    /* renamed from: com.discord.stores.StoreMediaEngine$handleMicrophonePermissionGranted$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$handleMicrophonePermissionGranted$1 */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     public static final class C61691 extends Lambda implements Function1<Boolean, Unit> {
         public C61691() {
             super(1);
@@ -332,7 +332,7 @@ public final class StoreMediaEngine extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Boolean bool) {
             Intrinsics3.checkNotNullExpressionValue(bool, "isInitialized");
             if (bool.booleanValue()) {
@@ -341,8 +341,8 @@ public final class StoreMediaEngine extends Store {
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
-    /* renamed from: com.discord.stores.StoreMediaEngine$handleNewConnection$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$handleNewConnection$1 */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     public static final class C61701 extends MediaEngineConnection.AbstractC5645a {
         public C61701() {
         }
@@ -373,8 +373,8 @@ public final class StoreMediaEngine extends Store {
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
-    /* renamed from: com.discord.stores.StoreMediaEngine$handleNewConnection$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$handleNewConnection$2 */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     public static final class C61712 extends Lambda implements Function1<DeviceDescription4[], Unit> {
         public C61712() {
             super(1);
@@ -386,7 +386,7 @@ public final class StoreMediaEngine extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DeviceDescription4[] deviceDescription4Arr) {
             Intrinsics3.checkNotNullParameter(deviceDescription4Arr, "devices");
             StoreMediaEngine storeMediaEngine = StoreMediaEngine.this;
@@ -395,8 +395,8 @@ public final class StoreMediaEngine extends Store {
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
-    /* renamed from: com.discord.stores.StoreMediaEngine$handleVoiceChannelSelected$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$handleVoiceChannelSelected$1 */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     public static final class C61721 extends Lambda implements Function1<DeviceDescription4[], Unit> {
         public C61721() {
             super(1);
@@ -408,15 +408,15 @@ public final class StoreMediaEngine extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DeviceDescription4[] deviceDescription4Arr) {
             Intrinsics3.checkNotNullParameter(deviceDescription4Arr, "it");
             StoreMediaEngine.handleVideoInputDevices$default(StoreMediaEngine.this, deviceDescription4Arr, null, null, 4, null);
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
-    /* renamed from: com.discord.stores.StoreMediaEngine$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$init$1 */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     public static final class C61731 extends Lambda implements Function1<Experiment, Unit> {
         public C61731() {
             super(1);
@@ -428,16 +428,16 @@ public final class StoreMediaEngine extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Experiment experiment) {
             int bucket = experiment.getBucket();
             StoreMediaEngine.this.getMediaEngine().mo328h((bucket == 1 || bucket == 3) ? MediaEngine.OpenSLUsageMode.EXCLUDE_LIST : MediaEngine.OpenSLUsageMode.ALLOW_LIST);
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$selectDefaultVideoDevice$1 */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     @DebugMetadata(m10084c = "com.discord.stores.StoreMediaEngine$selectDefaultVideoDevice$1", m10085f = "StoreMediaEngine.kt", m10086l = {Opcodes.ANEWARRAY}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.stores.StoreMediaEngine$selectDefaultVideoDevice$1 */
     public static final class C61751 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ Function1 $onSelected;
         public int label;
@@ -483,9 +483,9 @@ public final class StoreMediaEngine extends Store {
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$selectDefaultVideoDeviceAsync$1 */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     @DebugMetadata(m10084c = "com.discord.stores.StoreMediaEngine", m10085f = "StoreMediaEngine.kt", m10086l = {202}, m10087m = "selectDefaultVideoDeviceAsync")
-    /* renamed from: com.discord.stores.StoreMediaEngine$selectDefaultVideoDeviceAsync$1 */
     public static final class C61761 extends ContinuationImpl3 {
         public Object L$0;
         public int label;
@@ -503,8 +503,8 @@ public final class StoreMediaEngine extends Store {
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
-    /* renamed from: com.discord.stores.StoreMediaEngine$selectVideoInputDevice$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$selectVideoInputDevice$1 */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     public static final class C61771 extends Lambda implements Function1<DeviceDescription4[], Unit> {
         public final /* synthetic */ String $deviceGUID;
 
@@ -520,19 +520,19 @@ public final class StoreMediaEngine extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DeviceDescription4[] deviceDescription4Arr) {
             Intrinsics3.checkNotNullParameter(deviceDescription4Arr, "devices");
             StoreMediaEngine.handleVideoInputDevices$default(StoreMediaEngine.this, deviceDescription4Arr, this.$deviceGUID, null, 4, null);
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
-    /* renamed from: com.discord.stores.StoreMediaEngine$setupMediaEngineSettingsSubscription$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$setupMediaEngineSettingsSubscription$1 */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     public static final class C61781 extends Lambda implements Function1<StoreMediaSettings.VoiceConfiguration, Unit> {
 
-        /* compiled from: StoreMediaEngine.kt */
-        /* renamed from: com.discord.stores.StoreMediaEngine$setupMediaEngineSettingsSubscription$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$setupMediaEngineSettingsSubscription$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMediaEngine.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ StoreMediaSettings.VoiceConfiguration $voiceConfig;
 
@@ -548,7 +548,7 @@ public final class StoreMediaEngine extends Store {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreMediaEngine.access$handleVoiceConfigChanged(StoreMediaEngine.this, this.$voiceConfig);
             }
@@ -564,15 +564,15 @@ public final class StoreMediaEngine extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreMediaSettings.VoiceConfiguration voiceConfiguration) {
             Intrinsics3.checkNotNullParameter(voiceConfiguration, "voiceConfig");
             StoreMediaEngine.access$getDispatcher$p(StoreMediaEngine.this).schedule(new AnonymousClass1(voiceConfiguration));
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
-    /* renamed from: com.discord.stores.StoreMediaEngine$setupMediaEngineSettingsSubscription$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$setupMediaEngineSettingsSubscription$2 */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     public static final class C61792 extends Lambda implements Function1<Error, Unit> {
         public static final C61792 INSTANCE = new C61792();
 
@@ -586,15 +586,15 @@ public final class StoreMediaEngine extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             Logger.e$default(AppLog.f14950g, "handleVoiceConfigChanged", error.getThrowable(), null, 4, null);
         }
     }
 
-    /* compiled from: StoreMediaEngine.kt */
-    /* renamed from: com.discord.stores.StoreMediaEngine$setupMediaEngineSettingsSubscription$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$setupMediaEngineSettingsSubscription$3 */
+    /* JADX INFO: compiled from: StoreMediaEngine.kt */
     public static final class C61803 extends Lambda implements Function1<Subscription, Unit> {
         public C61803() {
             super(1);
@@ -606,7 +606,7 @@ public final class StoreMediaEngine extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             StoreMediaEngine.access$setMediaEngineSettingsSubscription$p(StoreMediaEngine.this, subscription);
@@ -1058,7 +1058,7 @@ public final class StoreMediaEngine extends Store {
         return observableM11112r;
     }
 
-    /* renamed from: getSelectedVideoInputDeviceBlocking, reason: from getter */
+    /* JADX INFO: renamed from: getSelectedVideoInputDeviceBlocking, reason: from getter */
     public final DeviceDescription4 getSelectedVideoInputDevice() {
         return this.selectedVideoInputDevice;
     }

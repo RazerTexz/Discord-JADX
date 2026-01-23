@@ -8,8 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"BanParcelableUsage"})
-/* loaded from: classes.dex */
 public final class ActivityResult implements Parcelable {
 
     @NonNull
@@ -19,7 +19,7 @@ public final class ActivityResult implements Parcelable {
     private final Intent mData;
     private final int mResultCode;
 
-    /* renamed from: androidx.activity.result.ActivityResult$1 */
+    /* JADX INFO: renamed from: androidx.activity.result.ActivityResult$1 */
     public class C00421 implements Parcelable.Creator<ActivityResult> {
         @Override // android.os.Parcelable.Creator
         public /* bridge */ /* synthetic */ ActivityResult createFromParcel(@NonNull Parcel parcel) {

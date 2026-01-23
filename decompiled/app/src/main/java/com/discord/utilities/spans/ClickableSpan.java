@@ -8,8 +8,8 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ClickableSpan.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ClickableSpan.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ClickableSpan extends android.text.style.ClickableSpan {
     private final Integer color;
     private final Function1<View, Unit> onClickListener;

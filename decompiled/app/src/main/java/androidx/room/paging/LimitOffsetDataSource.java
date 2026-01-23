@@ -13,8 +13,8 @@ import java.util.List;
 import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public abstract class LimitOffsetDataSource<T> extends PositionalDataSource<T> {
     private final String mCountQuery;
     private final RoomDatabase mDb;
@@ -23,7 +23,7 @@ public abstract class LimitOffsetDataSource<T> extends PositionalDataSource<T> {
     private final InvalidationTracker.Observer mObserver;
     private final RoomSQLiteQuery mSourceQuery;
 
-    /* renamed from: androidx.room.paging.LimitOffsetDataSource$1 */
+    /* JADX INFO: renamed from: androidx.room.paging.LimitOffsetDataSource$1 */
     public class C05981 extends InvalidationTracker.Observer {
         public C05981(String[] strArr) {
             super(strArr);

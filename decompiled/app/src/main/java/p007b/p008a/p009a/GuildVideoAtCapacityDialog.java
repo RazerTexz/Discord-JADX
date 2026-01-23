@@ -17,38 +17,38 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildVideoAtCapacityDialog.kt */
-/* renamed from: b.a.a.m, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.m, reason: use source file name */
+/* JADX INFO: compiled from: GuildVideoAtCapacityDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildVideoAtCapacityDialog extends AppDialog {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f405j = {outline.m846d0(GuildVideoAtCapacityDialog.class, "binding", "getBinding()Lcom/discord/databinding/GuildVideoAtCapacityBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* compiled from: GuildVideoAtCapacityDialog.kt */
-    /* renamed from: b.a.a.m$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b.a.a.m$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: GuildVideoAtCapacityDialog.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m140a(FragmentManager fragmentManager) {
             Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             new GuildVideoAtCapacityDialog().show(fragmentManager, GuildVideoAtCapacityDialog.class.getSimpleName());
         }
     }
 
-    /* compiled from: GuildVideoAtCapacityDialog.kt */
-    /* renamed from: b.a.a.m$b */
+    /* JADX INFO: renamed from: b.a.a.m$b */
+    /* JADX INFO: compiled from: GuildVideoAtCapacityDialog.kt */
     public static final /* synthetic */ class b extends FunctionReferenceImpl implements Function1<View, GuildVideoAtCapacityBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f408j = new b();
 
         public b() {
@@ -72,8 +72,8 @@ public final class GuildVideoAtCapacityDialog extends AppDialog {
         }
     }
 
-    /* compiled from: GuildVideoAtCapacityDialog.kt */
-    /* renamed from: b.a.a.m$c */
+    /* JADX INFO: renamed from: b.a.a.m$c */
+    /* JADX INFO: compiled from: GuildVideoAtCapacityDialog.kt */
     public static final class c implements View.OnClickListener {
         public c() {
         }

@@ -6,9 +6,9 @@ import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.widgets.chat.managereactions.ManageReactionsResultsAdapter;
 import java.util.Objects;
 
-/* compiled from: ManageReactionsResultsAdapter.kt */
-/* renamed from: com.discord.widgets.chat.managereactions.ManageReactionsResultsAdapter$ErrorViewHolder$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.managereactions.ManageReactionsResultsAdapter$ErrorViewHolder$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: ManageReactionsResultsAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ManageReactionsResultsAdapter2 implements View.OnClickListener {
     public final /* synthetic */ MGRecyclerDataPayload $data;
 

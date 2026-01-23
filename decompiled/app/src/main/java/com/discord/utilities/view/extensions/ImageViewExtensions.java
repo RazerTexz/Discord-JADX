@@ -6,9 +6,9 @@ import android.widget.ImageView;
 import androidx.annotation.FloatRange;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ImageViewExtensions.kt */
-/* renamed from: com.discord.utilities.view.extensions.ImageViewExtensionsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.view.extensions.ImageViewExtensionsKt, reason: use source file name */
+/* JADX INFO: compiled from: ImageViewExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ImageViewExtensions {
     public static final void setGrayscale(ImageView imageView, boolean z2) {
         Intrinsics3.checkNotNullParameter(imageView, "$this$setGrayscale");

@@ -22,22 +22,22 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.Protocol2;
 
-/* compiled from: OpenJSSEPlatform.kt */
-/* renamed from: f0.e0.k.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.k.g, reason: use source file name */
+/* JADX INFO: compiled from: OpenJSSEPlatform.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OpenJSSEPlatform extends Platform2 {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final boolean f25780d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final a f25781e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Provider f25782f = new OpenJSSE();
 
-    /* compiled from: OpenJSSEPlatform.kt */
-    /* renamed from: f0.e0.k.g$a */
+    /* JADX INFO: renamed from: f0.e0.k.g$a */
+    /* JADX INFO: compiled from: OpenJSSEPlatform.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -56,7 +56,7 @@ public final class OpenJSSEPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo10316d(SSLSocket sSLSocket, String str, List<Protocol2> list) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         Intrinsics3.checkParameterIsNotNull(list, "protocols");
@@ -96,7 +96,7 @@ public final class OpenJSSEPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public String mo10317f(SSLSocket sSLSocket) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         if (sSLSocket instanceof org.openjsse.javax.net.ssl.SSLSocket) {
@@ -111,7 +111,7 @@ public final class OpenJSSEPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public SSLContext mo10324l() throws NoSuchAlgorithmException {
         SSLContext sSLContext = SSLContext.getInstance("TLSv1.3", this.f25782f);
         Intrinsics3.checkExpressionValueIsNotNull(sSLContext, "SSLContext.getInstance(\"TLSv1.3\", provider)");
@@ -119,7 +119,7 @@ public final class OpenJSSEPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public X509TrustManager mo10325n() throws NoSuchAlgorithmException, KeyStoreException {
         TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm(), this.f25782f);
         trustManagerFactory.init((KeyStore) null);

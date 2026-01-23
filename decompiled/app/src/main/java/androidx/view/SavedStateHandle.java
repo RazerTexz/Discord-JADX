@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class SavedStateHandle {
     private static final Class[] ACCEPTABLE_CLASSES = {Boolean.TYPE, boolean[].class, Double.TYPE, double[].class, Integer.TYPE, int[].class, Long.TYPE, long[].class, String.class, String[].class, Binder.class, Bundle.class, Byte.TYPE, byte[].class, Character.TYPE, char[].class, CharSequence.class, CharSequence[].class, ArrayList.class, Float.TYPE, float[].class, Parcelable.class, Parcelable[].class, Serializable.class, Short.TYPE, short[].class, SparseArray.class, Size.class, SizeF.class};
     private static final String KEYS = "keys";
@@ -29,7 +29,7 @@ public final class SavedStateHandle {
     private final SavedStateRegistry.SavedStateProvider mSavedStateProvider;
     public final Map<String, SavedStateRegistry.SavedStateProvider> mSavedStateProviders;
 
-    /* renamed from: androidx.lifecycle.SavedStateHandle$1 */
+    /* JADX INFO: renamed from: androidx.lifecycle.SavedStateHandle$1 */
     public class C04471 implements SavedStateRegistry.SavedStateProvider {
         public C04471() {
         }

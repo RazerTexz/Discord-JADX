@@ -3,7 +3,7 @@ package com.esotericsoftware.kryo;
 import com.esotericsoftware.kryo.p502io.Input;
 import com.esotericsoftware.kryo.p502io.Output;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface ClassResolver {
     Registration getRegistration(int i);
 

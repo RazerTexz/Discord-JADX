@@ -15,12 +15,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p548g.Name;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CompositePackageFragmentProvider.kt */
-/* renamed from: d0.e0.p.d.m0.c.i1.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.j, reason: use source file name */
+/* JADX INFO: compiled from: CompositePackageFragmentProvider.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CompositePackageFragmentProvider implements PackageFragmentProvider3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<PackageFragmentProvider> f22886a;
 
     /* JADX WARN: Multi-variable type inference failed */

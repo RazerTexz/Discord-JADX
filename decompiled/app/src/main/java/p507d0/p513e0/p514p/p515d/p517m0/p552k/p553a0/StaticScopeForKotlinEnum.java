@@ -23,22 +23,22 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: StaticScopeForKotlinEnum.kt */
-/* renamed from: d0.e0.p.d.m0.k.a0.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.m, reason: use source file name */
+/* JADX INFO: compiled from: StaticScopeForKotlinEnum.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class StaticScopeForKotlinEnum extends MemberScopeImpl {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final /* synthetic */ KProperty<Object>[] f24374b = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(StaticScopeForKotlinEnum.class), "functions", "getFunctions()Ljava/util/List;"))};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ClassDescriptor f24375c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final storage5 f24376d;
 
-    /* compiled from: StaticScopeForKotlinEnum.kt */
-    /* renamed from: d0.e0.p.d.m0.k.a0.m$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.m$a */
+    /* JADX INFO: compiled from: StaticScopeForKotlinEnum.kt */
     public static final class a extends Lambda implements Function0<List<? extends SimpleFunctionDescriptor>> {
         public a() {
             super(0);
@@ -50,7 +50,7 @@ public final class StaticScopeForKotlinEnum extends MemberScopeImpl {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends SimpleFunctionDescriptor> invoke2() {
             return Collections2.listOf((Object[]) new SimpleFunctionDescriptor[]{DescriptorFactory.createEnumValueOfMethod(StaticScopeForKotlinEnum.access$getContainingClass$p(StaticScopeForKotlinEnum.this)), DescriptorFactory.createEnumValuesMethod(StaticScopeForKotlinEnum.access$getContainingClass$p(StaticScopeForKotlinEnum.this))});
         }
@@ -74,7 +74,7 @@ public final class StaticScopeForKotlinEnum extends MemberScopeImpl {
         return (ClassifierDescriptor) m11469getContributedClassifier(name, lookupLocation2);
     }
 
-    /* renamed from: getContributedClassifier, reason: collision with other method in class */
+    /* JADX INFO: renamed from: getContributedClassifier, reason: collision with other method in class */
     public Void m11469getContributedClassifier(Name name, LookupLocation2 lookupLocation2) {
         Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         Intrinsics3.checkNotNullParameter(lookupLocation2, ModelAuditLogEntry.CHANGE_KEY_LOCATION);

@@ -8,7 +8,7 @@ import java.util.Collection;
 import java.util.Comparator;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SortedList<T> {
     private static final int CAPACITY_GROWTH = 10;
     private static final int DELETION = 2;
@@ -481,7 +481,7 @@ public class SortedList<T> {
         return -1;
     }
 
-    public void recalculatePositionOfItemAt(int i) throws IndexOutOfBoundsException {
+    public void recalculatePositionOfItemAt(int i) {
         throwIfInMutationOperation();
         T t = get(i);
         removeItemAtIndex(i, false);
@@ -496,7 +496,7 @@ public class SortedList<T> {
         return remove(t, true);
     }
 
-    public T removeItemAt(int i) throws IndexOutOfBoundsException {
+    public T removeItemAt(int i) {
         throwIfInMutationOperation();
         T t = get(i);
         removeItemAtIndex(i, true);
@@ -516,7 +516,7 @@ public class SortedList<T> {
         return this.mSize;
     }
 
-    public void updateItemAt(int i, T t) throws IndexOutOfBoundsException {
+    public void updateItemAt(int i, T t) {
         throwIfInMutationOperation();
         T t2 = get(i);
         boolean z2 = t2 == t || !this.mCallback.areContentsTheSame(t2, t);

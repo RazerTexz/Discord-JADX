@@ -18,8 +18,8 @@ import java.util.Set;
 import java.util.TreeMap;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class TableInfo {
     public static final int CREATED_FROM_DATABASE = 2;
     public static final int CREATED_FROM_ENTITY = 1;
@@ -211,7 +211,7 @@ public class TableInfo {
             return compareTo2(foreignKeyWithSequence);
         }
 
-        /* renamed from: compareTo, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compareTo, reason: avoid collision after fix types in other method */
         public int compareTo2(@NonNull ForeignKeyWithSequence foreignKeyWithSequence) {
             int i = this.mId - foreignKeyWithSequence.mId;
             return i == 0 ? this.mSequence - foreignKeyWithSequence.mSequence : i;

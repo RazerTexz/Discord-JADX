@@ -33,14 +33,14 @@ import kotlin.NoWhenBranchMatchedException;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ButtonComponentView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ButtonComponentView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ButtonComponentView extends ConstraintLayout implements ComponentView<ButtonMessageComponent> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: ButtonComponentView.kt */
+    /* JADX INFO: compiled from: ButtonComponentView.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -76,8 +76,8 @@ public final class ButtonComponentView extends ConstraintLayout implements Compo
         }
     }
 
-    /* compiled from: ButtonComponentView.kt */
-    /* renamed from: com.discord.widgets.botuikit.views.ButtonComponentView$configure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.botuikit.views.ButtonComponentView$configure$1 */
+    /* JADX INFO: compiled from: ButtonComponentView.kt */
     public static final class ViewOnClickListenerC72751 implements View.OnClickListener {
         public final /* synthetic */ WidgetChatListBotUiButtonComponentBinding $binding;
         public final /* synthetic */ ButtonMessageComponent $component;

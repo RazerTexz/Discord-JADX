@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Input extends InputStream {
     public byte[] buffer;
     public int capacity;
@@ -41,7 +41,7 @@ public class Input extends InputStream {
         }
         byte[] bArr2 = this.buffer;
         System.arraycopy(bArr2, this.position, bArr2, 0, i4);
-        this.total += this.position;
+        this.total += (long) this.position;
         this.position = 0;
         do {
             int iFill2 = fill(this.buffer, i4, this.capacity - i4);
@@ -77,7 +77,7 @@ public class Input extends InputStream {
         return readAscii_slow();
     }
 
-    private String readAscii_slow() throws KryoException {
+    private String readAscii_slow() {
         int i = this.position - 1;
         this.position = i;
         int i2 = this.limit;
@@ -114,7 +114,7 @@ public class Input extends InputStream {
         }
     }
 
-    private int readInt_slow(boolean z2) throws KryoException {
+    private int readInt_slow(boolean z2) {
         byte[] bArr = this.buffer;
         int i = this.position;
         this.position = i + 1;
@@ -151,7 +151,7 @@ public class Input extends InputStream {
         return z2 ? i2 : (i2 >>> 1) ^ (-(i2 & 1));
     }
 
-    private long readLong_slow(boolean z2) throws KryoException {
+    private long readLong_slow(boolean z2) {
         byte[] bArr = this.buffer;
         int i = this.position;
         this.position = i + 1;
@@ -162,41 +162,49 @@ public class Input extends InputStream {
             byte[] bArr2 = this.buffer;
             int i2 = this.position;
             this.position = i2 + 1;
-            j |= (r4 & 127) << 7;
-            if ((bArr2[i2] & 128) != 0) {
+            byte b3 = bArr2[i2];
+            j |= (long) ((b3 & 127) << 7);
+            if ((b3 & 128) != 0) {
                 require(1);
                 int i3 = this.position;
                 this.position = i3 + 1;
-                j |= (r4 & 127) << 14;
-                if ((bArr2[i3] & 128) != 0) {
+                byte b4 = bArr2[i3];
+                j |= (long) ((b4 & 127) << 14);
+                if ((b4 & 128) != 0) {
                     require(1);
                     int i4 = this.position;
                     this.position = i4 + 1;
-                    j |= (r4 & 127) << 21;
-                    if ((bArr2[i4] & 128) != 0) {
+                    byte b5 = bArr2[i4];
+                    j |= (long) ((b5 & 127) << 21);
+                    if ((b5 & 128) != 0) {
                         require(1);
                         int i5 = this.position;
                         this.position = i5 + 1;
-                        j |= (r4 & 127) << 28;
-                        if ((bArr2[i5] & 128) != 0) {
+                        byte b6 = bArr2[i5];
+                        j |= ((long) (b6 & 127)) << 28;
+                        if ((b6 & 128) != 0) {
                             require(1);
                             int i6 = this.position;
                             this.position = i6 + 1;
-                            j |= (r4 & 127) << 35;
-                            if ((bArr2[i6] & 128) != 0) {
+                            byte b7 = bArr2[i6];
+                            j |= ((long) (b7 & 127)) << 35;
+                            if ((b7 & 128) != 0) {
                                 require(1);
                                 int i7 = this.position;
                                 this.position = i7 + 1;
-                                j |= (r4 & 127) << 42;
-                                if ((bArr2[i7] & 128) != 0) {
+                                byte b8 = bArr2[i7];
+                                j |= ((long) (b8 & 127)) << 42;
+                                if ((b8 & 128) != 0) {
                                     require(1);
                                     int i8 = this.position;
                                     this.position = i8 + 1;
-                                    j |= (r4 & 127) << 49;
-                                    if ((bArr2[i8] & 128) != 0) {
+                                    byte b9 = bArr2[i8];
+                                    j |= ((long) (b9 & 127)) << 49;
+                                    if ((b9 & 128) != 0) {
                                         require(1);
-                                        this.position = this.position + 1;
-                                        j |= bArr2[r4] << 56;
+                                        int i9 = this.position;
+                                        this.position = i9 + 1;
+                                        j |= ((long) bArr2[i9]) << 56;
                                     }
                                 }
                             }
@@ -208,7 +216,7 @@ public class Input extends InputStream {
         return !z2 ? (j >>> 1) ^ (-(j & 1)) : j;
     }
 
-    private void readUtf8(int i) throws KryoException {
+    private void readUtf8(int i) {
         byte[] bArr = this.buffer;
         char[] cArr = this.chars;
         int iMin = Math.min(require(1), i);
@@ -267,7 +275,7 @@ public class Input extends InputStream {
         return i9 | ((bArr[i8] & 127) << 27);
     }
 
-    private int readUtf8Length_slow(int i) throws KryoException {
+    private int readUtf8Length_slow(int i) {
         int i2 = i & 63;
         if ((i & 64) == 0) {
             return i2;
@@ -303,7 +311,7 @@ public class Input extends InputStream {
         return i8 | ((bArr[i9] & 127) << 27);
     }
 
-    private void readUtf8_slow(int i, int i2) throws KryoException {
+    private void readUtf8_slow(int i, int i2) {
         char[] cArr = this.chars;
         byte[] bArr = this.buffer;
         while (i2 < i) {
@@ -597,28 +605,30 @@ public class Input extends InputStream {
     public long readLong() throws KryoException {
         require(8);
         byte[] bArr = this.buffer;
-        int i = this.position + 1;
-        this.position = i;
-        long j = bArr[r2] << 56;
+        int i = this.position;
         int i2 = i + 1;
         this.position = i2;
+        long j = ((long) bArr[i]) << 56;
         int i3 = i2 + 1;
         this.position = i3;
-        long j2 = j | ((bArr[i] & 255) << 48) | ((bArr[i2] & 255) << 40);
+        long j2 = j | (((long) (bArr[i2] & 255)) << 48);
         int i4 = i3 + 1;
         this.position = i4;
-        long j3 = j2 | ((bArr[i3] & 255) << 32);
+        long j3 = j2 | (((long) (bArr[i3] & 255)) << 40);
         int i5 = i4 + 1;
         this.position = i5;
-        long j4 = j3 | ((bArr[i4] & 255) << 24);
+        long j4 = j3 | (((long) (bArr[i4] & 255)) << 32);
         int i6 = i5 + 1;
         this.position = i6;
-        long j5 = j4 | ((bArr[i5] & 255) << 16);
+        long j5 = j4 | (((long) (bArr[i5] & 255)) << 24);
         int i7 = i6 + 1;
         this.position = i7;
-        long j6 = j5 | ((bArr[i6] & 255) << 8);
-        this.position = i7 + 1;
-        return (bArr[i7] & 255) | j6;
+        long j6 = j5 | ((long) ((bArr[i6] & 255) << 16));
+        int i8 = i7 + 1;
+        this.position = i8;
+        long j7 = j6 | ((long) ((bArr[i7] & 255) << 8));
+        this.position = i8 + 1;
+        return ((long) (bArr[i8] & 255)) | j7;
     }
 
     public long[] readLongs(int i, boolean z2) throws KryoException {
@@ -659,7 +669,7 @@ public class Input extends InputStream {
         return sArr;
     }
 
-    public String readString() throws KryoException {
+    public String readString() {
         int iRequire = require(1);
         byte[] bArr = this.buffer;
         int i = this.position;
@@ -683,7 +693,7 @@ public class Input extends InputStream {
         return new String(this.chars, 0, i2);
     }
 
-    public StringBuilder readStringBuilder() throws KryoException {
+    public StringBuilder readStringBuilder() {
         int iRequire = require(1);
         byte[] bArr = this.buffer;
         int i = this.position;
@@ -757,34 +767,41 @@ public class Input extends InputStream {
         if ((b2 & 128) != 0) {
             int i3 = i2 + 1;
             this.position = i3;
-            j |= (r3 & 127) << 7;
-            if ((bArr[i2] & 128) != 0) {
+            byte b3 = bArr[i2];
+            j |= (long) ((b3 & 127) << 7);
+            if ((b3 & 128) != 0) {
                 int i4 = i3 + 1;
                 this.position = i4;
-                j |= (r2 & 127) << 14;
-                if ((bArr[i3] & 128) != 0) {
+                byte b4 = bArr[i3];
+                j |= (long) ((b4 & 127) << 14);
+                if ((b4 & 128) != 0) {
                     int i5 = i4 + 1;
                     this.position = i5;
-                    j |= (r3 & 127) << 21;
-                    if ((bArr[i4] & 128) != 0) {
+                    byte b5 = bArr[i4];
+                    j |= (long) ((b5 & 127) << 21);
+                    if ((b5 & 128) != 0) {
                         int i6 = i5 + 1;
                         this.position = i6;
-                        j |= (r2 & 127) << 28;
-                        if ((bArr[i5] & 128) != 0) {
+                        byte b6 = bArr[i5];
+                        j |= ((long) (b6 & 127)) << 28;
+                        if ((b6 & 128) != 0) {
                             int i7 = i6 + 1;
                             this.position = i7;
-                            j |= (r3 & 127) << 35;
-                            if ((bArr[i6] & 128) != 0) {
+                            byte b7 = bArr[i6];
+                            j |= ((long) (b7 & 127)) << 35;
+                            if ((b7 & 128) != 0) {
                                 int i8 = i7 + 1;
                                 this.position = i8;
-                                j |= (r2 & 127) << 42;
-                                if ((bArr[i7] & 128) != 0) {
+                                byte b8 = bArr[i7];
+                                j |= ((long) (b8 & 127)) << 42;
+                                if ((b8 & 128) != 0) {
                                     int i9 = i8 + 1;
                                     this.position = i9;
-                                    j |= (r3 & 127) << 49;
-                                    if ((bArr[i8] & 128) != 0) {
+                                    byte b9 = bArr[i8];
+                                    j |= ((long) (b9 & 127)) << 49;
+                                    if ((b9 & 128) != 0) {
                                         this.position = i9 + 1;
-                                        j |= bArr[i9] << 56;
+                                        j |= ((long) bArr[i9]) << 56;
                                     }
                                 }
                             }
@@ -823,7 +840,7 @@ public class Input extends InputStream {
         }
         byte[] bArr = this.buffer;
         System.arraycopy(bArr, this.position, bArr, 0, i3);
-        this.total += this.position;
+        this.total += (long) this.position;
         this.position = 0;
         while (true) {
             int iFill2 = fill(this.buffer, i3, this.capacity - i3);
@@ -881,7 +898,7 @@ public class Input extends InputStream {
     }
 
     public long total() {
-        return this.total + this.position;
+        return this.total + ((long) this.position);
     }
 
     public double readDouble(double d, boolean z2) throws KryoException {
@@ -991,7 +1008,7 @@ public class Input extends InputStream {
         while (j2 > 0) {
             int iMin = (int) Math.min(2147483639L, j2);
             skip(iMin);
-            j2 -= iMin;
+            j2 -= (long) iMin;
         }
         return j;
     }

@@ -7,8 +7,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildPreview.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildPreview.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildPreview {
     private final Integer approximateMemberCount;
     private final Integer approximatePresenceCount;
@@ -22,27 +22,27 @@ public final /* data */ class GuildPreview {
     private final String name;
     private final String splash;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final Integer getApproximateMemberCount() {
         return this.approximateMemberCount;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final Integer getApproximatePresenceCount() {
         return this.approximatePresenceCount;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<GuildEmoji> m7887d() {
         return this.emojis;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final Boolean getFeaturableInDirectory() {
         return this.featurableInDirectory;
     }
@@ -58,17 +58,17 @@ public final /* data */ class GuildPreview {
         return this.id == guildPreview.id && Intrinsics3.areEqual(this.name, guildPreview.name) && Intrinsics3.areEqual(this.description, guildPreview.description) && Intrinsics3.areEqual(this.splash, guildPreview.splash) && Intrinsics3.areEqual(this.banner, guildPreview.banner) && Intrinsics3.areEqual(this.icon, guildPreview.icon) && Intrinsics3.areEqual(this.approximatePresenceCount, guildPreview.approximatePresenceCount) && Intrinsics3.areEqual(this.approximateMemberCount, guildPreview.approximateMemberCount) && Intrinsics3.areEqual(this.emojis, guildPreview.emojis) && Intrinsics3.areEqual(this.features, guildPreview.features) && Intrinsics3.areEqual(this.featurableInDirectory, guildPreview.featurableInDirectory);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final List<GuildFeature> m7889f() {
         return this.features;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final String getIcon() {
         return this.icon;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final long getId() {
         return this.id;
     }
@@ -98,12 +98,12 @@ public final /* data */ class GuildPreview {
         return iHashCode9 + (bool != null ? bool.hashCode() : 0);
     }
 
-    /* renamed from: i, reason: from getter */
+    /* JADX INFO: renamed from: i, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: j, reason: from getter */
+    /* JADX INFO: renamed from: j, reason: from getter */
     public final String getSplash() {
         return this.splash;
     }

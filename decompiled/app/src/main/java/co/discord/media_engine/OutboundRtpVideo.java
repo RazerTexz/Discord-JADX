@@ -5,8 +5,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Statistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Statistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class OutboundRtpVideo {
     private final int averageEncodeTime;
     private final boolean bandwidthLimitedResolution;
@@ -76,117 +76,117 @@ public final /* data */ class OutboundRtpVideo {
         return outboundRtpVideo.copy(str3, j10, statsCodec2, j11, j12, i9, f2, i10, i11, i12, (i8 & 1024) != 0 ? outboundRtpVideo.encoderImplementationName : str2, (i8 & 2048) != 0 ? outboundRtpVideo.averageEncodeTime : i5, (i8 & 4096) != 0 ? outboundRtpVideo.resolution : resolution, (i8 & 8192) != 0 ? outboundRtpVideo.framesSent : j4, (i8 & 16384) != 0 ? outboundRtpVideo.framesEncoded : j5, (i8 & 32768) != 0 ? outboundRtpVideo.frameRateInput : i6, (65536 & i8) != 0 ? outboundRtpVideo.frameRateEncode : i7, (i8 & 131072) != 0 ? outboundRtpVideo.firCount : j6, (i8 & 262144) != 0 ? outboundRtpVideo.nackCount : j7, (i8 & 524288) != 0 ? outboundRtpVideo.pliCount : j8, (i8 & 1048576) != 0 ? outboundRtpVideo.qpSum : j9, (i8 & 2097152) != 0 ? outboundRtpVideo.bandwidthLimitedResolution : z2, (i8 & 4194304) != 0 ? outboundRtpVideo.cpuLimitedResolution : z3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getType() {
         return this.type;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final int getEncodeUsage() {
         return this.encodeUsage;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final String getEncoderImplementationName() {
         return this.encoderImplementationName;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final int getAverageEncodeTime() {
         return this.averageEncodeTime;
     }
 
-    /* renamed from: component13, reason: from getter */
+    /* JADX INFO: renamed from: component13, reason: from getter */
     public final Resolution getResolution() {
         return this.resolution;
     }
 
-    /* renamed from: component14, reason: from getter */
+    /* JADX INFO: renamed from: component14, reason: from getter */
     public final long getFramesSent() {
         return this.framesSent;
     }
 
-    /* renamed from: component15, reason: from getter */
+    /* JADX INFO: renamed from: component15, reason: from getter */
     public final long getFramesEncoded() {
         return this.framesEncoded;
     }
 
-    /* renamed from: component16, reason: from getter */
+    /* JADX INFO: renamed from: component16, reason: from getter */
     public final int getFrameRateInput() {
         return this.frameRateInput;
     }
 
-    /* renamed from: component17, reason: from getter */
+    /* JADX INFO: renamed from: component17, reason: from getter */
     public final int getFrameRateEncode() {
         return this.frameRateEncode;
     }
 
-    /* renamed from: component18, reason: from getter */
+    /* JADX INFO: renamed from: component18, reason: from getter */
     public final long getFirCount() {
         return this.firCount;
     }
 
-    /* renamed from: component19, reason: from getter */
+    /* JADX INFO: renamed from: component19, reason: from getter */
     public final long getNackCount() {
         return this.nackCount;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getSsrc() {
         return this.ssrc;
     }
 
-    /* renamed from: component20, reason: from getter */
+    /* JADX INFO: renamed from: component20, reason: from getter */
     public final long getPliCount() {
         return this.pliCount;
     }
 
-    /* renamed from: component21, reason: from getter */
+    /* JADX INFO: renamed from: component21, reason: from getter */
     public final long getQpSum() {
         return this.qpSum;
     }
 
-    /* renamed from: component22, reason: from getter */
+    /* JADX INFO: renamed from: component22, reason: from getter */
     public final boolean getBandwidthLimitedResolution() {
         return this.bandwidthLimitedResolution;
     }
 
-    /* renamed from: component23, reason: from getter */
+    /* JADX INFO: renamed from: component23, reason: from getter */
     public final boolean getCpuLimitedResolution() {
         return this.cpuLimitedResolution;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final StatsCodec getCodec() {
         return this.codec;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final long getBytesSent() {
         return this.bytesSent;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final long getPacketsSent() {
         return this.packetsSent;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final int getPacketsLost() {
         return this.packetsLost;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final float getFractionLost() {
         return this.fractionLost;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final int getBitrate() {
         return this.bitrate;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final int getBitrateTarget() {
         return this.bitrateTarget;
     }
@@ -303,6 +303,12 @@ public final /* data */ class OutboundRtpVideo {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v17, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v19 */
+    /* JADX WARN: Type inference failed for: r1v21 */
+    /* JADX WARN: Type inference failed for: r2v23 */
+    /* JADX WARN: Type inference failed for: r2v24, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v25 */
     public int hashCode() {
         String str = this.type;
         int iM3a = (C0002b.m3a(this.ssrc) + ((str != null ? str.hashCode() : 0) * 31)) * 31;
@@ -313,13 +319,13 @@ public final /* data */ class OutboundRtpVideo {
         Resolution resolution = this.resolution;
         int iM3a2 = (C0002b.m3a(this.qpSum) + ((C0002b.m3a(this.pliCount) + ((C0002b.m3a(this.nackCount) + ((C0002b.m3a(this.firCount) + ((((((C0002b.m3a(this.framesEncoded) + ((C0002b.m3a(this.framesSent) + ((iHashCode + (resolution != null ? resolution.hashCode() : 0)) * 31)) * 31)) * 31) + this.frameRateInput) * 31) + this.frameRateEncode) * 31)) * 31)) * 31)) * 31)) * 31;
         boolean z2 = this.bandwidthLimitedResolution;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i2 = (iM3a2 + i) * 31;
+        int i = (iM3a2 + r1) * 31;
         boolean z3 = this.cpuLimitedResolution;
-        return i2 + (z3 ? 1 : z3 ? 1 : 0);
+        return i + (z3 ? 1 : z3);
     }
 
     public String toString() {

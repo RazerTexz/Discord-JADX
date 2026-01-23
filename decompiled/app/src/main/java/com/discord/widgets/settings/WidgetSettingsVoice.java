@@ -74,25 +74,25 @@ import p658rx.functions.Func2;
 import p658rx.functions.Func3;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetSettingsVoice.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsVoice.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsVoice extends AppFragment {
     private static final String ARG_TARGET_AUTO_TOGGLE = "ARG_TARGET_AUTO_TOGGLE";
     private static final String ARG_TARGET_RES_ID = "ARG_TARGET_RES_ID";
     private static final int OVERLAY_PERMISSION_REQUEST_CODE = 2552;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private List<CheckedSetting> openSLESConfigRadioButtons;
     private RadioManager openSLESConfigRadioManager;
     private final BehaviorSubject<Boolean> requestListenForSensitivitySubject;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsVoice.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsVoiceBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final MediaEngine.LocalVoiceStatus LOCAL_VOICE_STATUS_ENGINE_UNINITIALIZED = new MediaEngine.LocalVoiceStatus(-1.0f, false);
 
-    /* compiled from: WidgetSettingsVoice.kt */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -133,11 +133,11 @@ public final class WidgetSettingsVoice extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class InputModeSelector extends AppBottomSheet {
         public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(InputModeSelector.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsVoiceInputModeBinding;", 0)};
 
-        /* renamed from: binding$delegate, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
         private final FragmentViewBindingDelegate binding;
 
         public InputModeSelector() {
@@ -177,8 +177,8 @@ public final class WidgetSettingsVoice extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class ViewOnClickListenerC96901 implements View.OnClickListener {
         public ViewOnClickListenerC96901() {
         }
@@ -192,8 +192,8 @@ public final class WidgetSettingsVoice extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class C96913<T> implements Action1<Boolean> {
         public static final C96913 INSTANCE = new C96913();
 
@@ -202,14 +202,14 @@ public final class WidgetSettingsVoice extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreStream.INSTANCE.getMediaSettings().toggleAutomaticGainControl();
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class C96924<T> implements Action1<Boolean> {
         public static final C96924 INSTANCE = new C96924();
 
@@ -218,14 +218,14 @@ public final class WidgetSettingsVoice extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreStream.INSTANCE.getMediaSettings().toggleNoiseCancellation();
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class ViewOnClickListenerC96935 implements View.OnClickListener {
         public static final ViewOnClickListenerC96935 INSTANCE = new ViewOnClickListenerC96935();
 
@@ -235,8 +235,8 @@ public final class WidgetSettingsVoice extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureUI$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureUI$6 */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class C96946<T> implements Action1<Boolean> {
         public static final C96946 INSTANCE = new C96946();
 
@@ -245,14 +245,14 @@ public final class WidgetSettingsVoice extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreStream.INSTANCE.getMediaSettings().toggleVADUseKrisp();
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureUI$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureUI$7 */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class C96957<T> implements Action1<Boolean> {
         public static final C96957 INSTANCE = new C96957();
 
@@ -261,14 +261,14 @@ public final class WidgetSettingsVoice extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreStream.INSTANCE.getMediaSettings().toggleEchoCancellation();
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureUI$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureUI$8 */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class C96968<T> implements Action1<Boolean> {
         public static final C96968 INSTANCE = new C96968();
 
@@ -277,14 +277,14 @@ public final class WidgetSettingsVoice extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreStream.INSTANCE.getMediaSettings().toggleAutomaticVAD();
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureUI$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureUI$9 */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class C96979<T> implements Action1<Boolean> {
         public static final C96979 INSTANCE = new C96979();
 
@@ -293,18 +293,18 @@ public final class WidgetSettingsVoice extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreStream.INSTANCE.getMediaSettings().toggleEnableVideoHardwareScaling();
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureVoiceSensitivity$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureVoiceSensitivity$1 */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class ViewOnClickListenerC96981 implements View.OnClickListener {
 
-        /* compiled from: WidgetSettingsVoice.kt */
-        /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureVoiceSensitivity$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$configureVoiceSensitivity$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -316,7 +316,7 @@ public final class WidgetSettingsVoice extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetSettingsVoice.access$getRequestListenForSensitivitySubject$p(WidgetSettingsVoice.this).onNext(Boolean.TRUE);
             }
@@ -331,8 +331,8 @@ public final class WidgetSettingsVoice extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$onOverlayToggled$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$onOverlayToggled$1 */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class C96991<T, R> implements Func1<RtcConnection.StateChange, Boolean> {
         public static final C96991 INSTANCE = new C96991();
 
@@ -341,14 +341,14 @@ public final class WidgetSettingsVoice extends AppFragment {
             return call2(stateChange);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(RtcConnection.StateChange stateChange) {
             return Boolean.valueOf(Intrinsics3.areEqual(stateChange.state, RtcConnection.State.C5612f.f18814a));
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$onOverlayToggled$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$onOverlayToggled$2 */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class C97002<T1, T2, R> implements Func2<RtcConnection.StateChange, Channel, Tuples2<? extends RtcConnection.StateChange, ? extends Channel>> {
         public static final C97002 INSTANCE = new C97002();
 
@@ -357,14 +357,14 @@ public final class WidgetSettingsVoice extends AppFragment {
             return call2(stateChange, channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Tuples2<RtcConnection.StateChange, Channel> call2(RtcConnection.StateChange stateChange, Channel channel) {
             return Tuples.m10073to(stateChange, channel);
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$onOverlayToggled$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$onOverlayToggled$3 */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class C97013 extends Lambda implements Function1<Tuples2<? extends RtcConnection.StateChange, ? extends Channel>, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -380,14 +380,14 @@ public final class WidgetSettingsVoice extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Tuples2<RtcConnection.StateChange, Channel> tuples2) {
             DiscordOverlayService.INSTANCE.launchForVoice(this.$context);
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class C97021<T> implements Action1<Boolean> {
         public C97021() {
         }
@@ -397,7 +397,7 @@ public final class WidgetSettingsVoice extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             if (!bool.booleanValue() || Companion.access$hasOverlayPermission(WidgetSettingsVoice.INSTANCE, WidgetSettingsVoice.this.requireContext())) {
                 StoreUserSettings userSettings = StoreStream.INSTANCE.getUserSettings();
@@ -426,8 +426,8 @@ public final class WidgetSettingsVoice extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class C97031 extends OnSeekBarChangeListenerAdapter {
         @Override // p007b.p008a.p062y.OnSeekBarChangeListenerAdapter, android.widget.SeekBar.OnSeekBarChangeListener
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -438,8 +438,8 @@ public final class WidgetSettingsVoice extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class C97042 extends OnSeekBarChangeListenerAdapter {
         @Override // p007b.p008a.p062y.OnSeekBarChangeListenerAdapter, android.widget.SeekBar.OnSeekBarChangeListener
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -450,8 +450,8 @@ public final class WidgetSettingsVoice extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class C97053 extends Lambda implements Function1<Model, Unit> {
         public C97053() {
             super(1);
@@ -463,7 +463,7 @@ public final class WidgetSettingsVoice extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "it");
             WidgetSettingsVoice.access$configureUI(WidgetSettingsVoice.this, model);
@@ -751,10 +751,10 @@ public final class WidgetSettingsVoice extends AppFragment {
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(companion.get(behaviorSubject), this, null, 2, null), WidgetSettingsVoice.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C97053(), 62, (Object) null);
     }
 
-    /* compiled from: WidgetSettingsVoice.kt */
+    /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
     public static final class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final MediaEngine.LocalVoiceStatus localVoiceStatus;
         private final boolean modePTT;
@@ -762,7 +762,7 @@ public final class WidgetSettingsVoice extends AppFragment {
         private final MediaEngine.OpenSLESConfig openSLESConfig;
         private final StoreMediaSettings.VoiceConfiguration voiceConfig;
 
-        /* compiled from: WidgetSettingsVoice.kt */
+        /* JADX INFO: compiled from: WidgetSettingsVoice.kt */
         public static final class Companion {
             private Companion() {
             }

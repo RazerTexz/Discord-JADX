@@ -39,14 +39,14 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p508a0.MathJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VoiceControlsSheetView.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: VoiceControlsSheetView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class VoiceControlsSheetView extends LinearLayout {
     private final VoiceControlsSheetViewBinding binding;
     private boolean isGestureNavigationEnabled;
 
-    /* compiled from: VoiceControlsSheetView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureInviteButtons$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureInviteButtons$1 */
+    /* JADX INFO: compiled from: VoiceControlsSheetView.kt */
     public static final class ViewOnClickListenerC104351 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onInviteClick;
 
@@ -60,8 +60,8 @@ public final class VoiceControlsSheetView extends LinearLayout {
         }
     }
 
-    /* compiled from: VoiceControlsSheetView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureInviteButtons$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureInviteButtons$2 */
+    /* JADX INFO: compiled from: VoiceControlsSheetView.kt */
     public static final class ViewOnClickListenerC104362 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onInviteClick;
 
@@ -75,8 +75,8 @@ public final class VoiceControlsSheetView extends LinearLayout {
         }
     }
 
-    /* compiled from: VoiceControlsSheetView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureOutputSelectors$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureOutputSelectors$1 */
+    /* JADX INFO: compiled from: VoiceControlsSheetView.kt */
     public static final class ViewOnClickListenerC104381 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onAudioOutputClick;
 
@@ -90,8 +90,8 @@ public final class VoiceControlsSheetView extends LinearLayout {
         }
     }
 
-    /* compiled from: VoiceControlsSheetView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureOutputSelectors$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureOutputSelectors$2 */
+    /* JADX INFO: compiled from: VoiceControlsSheetView.kt */
     public static final class ViewOnClickListenerC104392 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onAudioOutputClick;
 
@@ -105,8 +105,8 @@ public final class VoiceControlsSheetView extends LinearLayout {
         }
     }
 
-    /* compiled from: VoiceControlsSheetView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureScreenshareButtons$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureScreenshareButtons$1 */
+    /* JADX INFO: compiled from: VoiceControlsSheetView.kt */
     public static final class ViewOnClickListenerC104411 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onScreenshareClick;
 
@@ -120,8 +120,8 @@ public final class VoiceControlsSheetView extends LinearLayout {
         }
     }
 
-    /* compiled from: VoiceControlsSheetView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureScreenshareButtons$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureScreenshareButtons$2 */
+    /* JADX INFO: compiled from: VoiceControlsSheetView.kt */
     public static final class ViewOnClickListenerC104422 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onScreenshareClick;
 
@@ -135,8 +135,8 @@ public final class VoiceControlsSheetView extends LinearLayout {
         }
     }
 
-    /* compiled from: VoiceControlsSheetView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureVideoButton$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureVideoButton$1 */
+    /* JADX INFO: compiled from: VoiceControlsSheetView.kt */
     public static final class ViewOnClickListenerC104431 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onVideoClick;
 
@@ -181,7 +181,7 @@ public final class VoiceControlsSheetView extends LinearLayout {
         imageView2.setBackgroundTintList(ColorStateList.valueOf(getDefaultButtonBackgroundTint(context, false)));
     }
 
-    /* renamed from: configureMoveToAudienceButton-yox5PQY, reason: not valid java name */
+    /* JADX INFO: renamed from: configureMoveToAudienceButton-yox5PQY, reason: not valid java name */
     private final void m11438configureMoveToAudienceButtonyox5PQY(StageRoles stageRoles, Function0<Unit> onMoveToAudienceClick) {
         ImageView imageView = this.binding.f15600j;
         imageView.setVisibility((stageRoles == null || !StageRoles.m11410isSpeakerimpl(stageRoles.m11412unboximpl()) || StageRoles.m11409isModeratorimpl(stageRoles.m11412unboximpl())) ? false : true ? 0 : 8);
@@ -191,7 +191,7 @@ public final class VoiceControlsSheetView extends LinearLayout {
         imageView.setOnClickListener(new VoiceControlsSheetView2(this, stageRoles, onMoveToAudienceClick));
     }
 
-    /* renamed from: configureMuteButton-P2fzehM, reason: not valid java name */
+    /* JADX INFO: renamed from: configureMuteButton-P2fzehM, reason: not valid java name */
     private final void m11439configureMuteButtonP2fzehM(CallModel model, StageRoles stageRoles, Function0<Unit> onMuteClick) {
         if (stageRoles != null && !StageRoles.m11410isSpeakerimpl(stageRoles.m11412unboximpl())) {
             ImageView imageView = this.binding.f15601k;
@@ -250,7 +250,7 @@ public final class VoiceControlsSheetView extends LinearLayout {
         this.binding.f15595e.setOnClickListener(new ViewOnClickListenerC104392(onAudioOutputClick));
     }
 
-    /* renamed from: configureRaiseHandButton-fw_bWyM, reason: not valid java name */
+    /* JADX INFO: renamed from: configureRaiseHandButton-fw_bWyM, reason: not valid java name */
     private final void m11440configureRaiseHandButtonfw_bWyM(CallModel model, StageRoles stageRoles, int requestingToSpeakCount, boolean isUpdatingRequestToSpeak, Function0<Unit> onRaiseHandClick) {
         if (stageRoles == null || !(StageRoles.m11409isModeratorimpl(stageRoles.m11412unboximpl()) || StageRoles.m11407isAudienceimpl(stageRoles.m11412unboximpl()))) {
             NumericBadgingView numericBadgingView = this.binding.f15604n;
@@ -372,7 +372,7 @@ public final class VoiceControlsSheetView extends LinearLayout {
         return ColorCompat.getColor(context, typedValue.resourceId);
     }
 
-    /* renamed from: configureUI-3jxq49Y, reason: not valid java name */
+    /* JADX INFO: renamed from: configureUI-3jxq49Y, reason: not valid java name */
     public final void m11441configureUI3jxq49Y(CallModel model, VoiceControlsOutputSelectorState outputSelectorState, boolean isVideoEnabledForCall, boolean isPttEnabled, boolean isDeafened, boolean startedAsVideo, boolean showStopWatching, boolean showDisconnect, Function0<Unit> onStopWatchingClick, Function0<Unit> onDisconnectClick, Function0<Unit> onAudioOutputClick, Function0<Unit> onVideoClick, Function0<Unit> onMuteClick, Function0<Unit> onInviteClick, Function0<Unit> onScreenshareClick, boolean showStreamVolume, float perceptualStreamVolume, Function2<? super Float, ? super Boolean, Unit> onStreamVolumeChange, Function0<Unit> onDeafenPressed, int requestingToSpeakCount, Function0<Unit> onRaiseHandClick, Function0<Unit> onMoveToAudienceClick, boolean isUpdatingRequestToSpeak, StageRoles stageRoles) {
         int i;
         Intrinsics3.checkNotNullParameter(model, "model");

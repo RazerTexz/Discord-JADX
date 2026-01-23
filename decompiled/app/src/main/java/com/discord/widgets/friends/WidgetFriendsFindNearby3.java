@@ -12,9 +12,9 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetFriendsFindNearby.kt */
-/* renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$ModelProvider$getUserModels$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$ModelProvider$getUserModels$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsFindNearby3<T1, T2, T3, R> implements Func3<Map<Long, ? extends User>, Map<Long, ? extends Presence>, Map<Long, ? extends Integer>, WidgetFriendsFindNearby.Model.NearbyUsers> {
     public static final WidgetFriendsFindNearby3 INSTANCE = new WidgetFriendsFindNearby3();
 
@@ -23,7 +23,7 @@ public final class WidgetFriendsFindNearby3<T1, T2, T3, R> implements Func3<Map<
         return call2(map, (Map<Long, Presence>) map2, (Map<Long, Integer>) map3);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetFriendsFindNearby.Model.NearbyUsers call2(Map<Long, ? extends User> map, Map<Long, Presence> map2, Map<Long, Integer> map3) {
         Intrinsics3.checkNotNullExpressionValue(map, "users");
         ArrayList arrayList = new ArrayList(map.size());

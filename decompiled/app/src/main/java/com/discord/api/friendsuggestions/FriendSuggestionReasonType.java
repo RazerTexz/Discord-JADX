@@ -1,8 +1,8 @@
 package com.discord.api.friendsuggestions;
 
 
-/* compiled from: FriendSuggestionReasonType.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: FriendSuggestionReasonType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum FriendSuggestionReasonType {
     NONE(0),
     EXTERNAL_FRIEND(1);

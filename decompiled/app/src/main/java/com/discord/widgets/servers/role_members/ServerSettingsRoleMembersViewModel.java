@@ -34,11 +34,11 @@ import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: ServerSettingsRoleMembersViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ServerSettingsRoleMembersViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ServerSettingsRoleMembersViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventSubject;
     private final long guildId;
@@ -47,8 +47,8 @@ public final class ServerSettingsRoleMembersViewModel extends AppViewModel<ViewS
     private final BehaviorSubject<String> searchQuerySubject;
     private final StoreGatewayConnection storeGatewayConnection;
 
-    /* compiled from: ServerSettingsRoleMembersViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersViewModel$1 */
+    /* JADX INFO: compiled from: ServerSettingsRoleMembersViewModel.kt */
     public static final class C95701 extends Lambda implements Function1<StoreState, Unit> {
         public C95701() {
             super(1);
@@ -60,7 +60,7 @@ public final class ServerSettingsRoleMembersViewModel extends AppViewModel<ViewS
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             ServerSettingsRoleMembersViewModel serverSettingsRoleMembersViewModel = ServerSettingsRoleMembersViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
@@ -68,8 +68,8 @@ public final class ServerSettingsRoleMembersViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: ServerSettingsRoleMembersViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersViewModel$2 */
+    /* JADX INFO: compiled from: ServerSettingsRoleMembersViewModel.kt */
     public static final class C95712 extends Lambda implements Function1<String, Unit> {
         public C95712() {
             super(1);
@@ -81,13 +81,13 @@ public final class ServerSettingsRoleMembersViewModel extends AppViewModel<ViewS
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             StoreGatewayConnection.requestGuildMembers$default(ServerSettingsRoleMembersViewModel.access$getStoreGatewayConnection$p(ServerSettingsRoleMembersViewModel.this), ServerSettingsRoleMembersViewModel.access$getGuildId$p(ServerSettingsRoleMembersViewModel.this), str, null, null, 12, null);
         }
     }
 
-    /* compiled from: ServerSettingsRoleMembersViewModel.kt */
+    /* JADX INFO: compiled from: ServerSettingsRoleMembersViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -111,10 +111,10 @@ public final class ServerSettingsRoleMembersViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: ServerSettingsRoleMembersViewModel.kt */
+    /* JADX INFO: compiled from: ServerSettingsRoleMembersViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: ServerSettingsRoleMembersViewModel.kt */
+        /* JADX INFO: compiled from: ServerSettingsRoleMembersViewModel.kt */
         public static final /* data */ class RemoveMemberFailure extends Event {
             private final Error error;
 
@@ -132,7 +132,7 @@ public final class ServerSettingsRoleMembersViewModel extends AppViewModel<ViewS
                 return removeMemberFailure.copy(error);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Error getError() {
                 return this.error;
             }
@@ -177,7 +177,7 @@ public final class ServerSettingsRoleMembersViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: ServerSettingsRoleMembersViewModel.kt */
+    /* JADX INFO: compiled from: ServerSettingsRoleMembersViewModel.kt */
     public static final /* data */ class StoreState {
         private final List<GuildMember> guildMembers;
         private final GuildRole role;
@@ -214,7 +214,7 @@ public final class ServerSettingsRoleMembersViewModel extends AppViewModel<ViewS
             return this.users;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final GuildRole getRole() {
             return this.role;
         }
@@ -269,10 +269,10 @@ public final class ServerSettingsRoleMembersViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: ServerSettingsRoleMembersViewModel.kt */
+    /* JADX INFO: compiled from: ServerSettingsRoleMembersViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: ServerSettingsRoleMembersViewModel.kt */
+        /* JADX INFO: compiled from: ServerSettingsRoleMembersViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final boolean isUpdating;
             private final List<ServerSettingsRoleMemberAdapterItem> memberList;
@@ -296,7 +296,7 @@ public final class ServerSettingsRoleMembersViewModel extends AppViewModel<ViewS
                 return loaded.copy(z2, list, guildRole);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final boolean getIsUpdating() {
                 return this.isUpdating;
             }
@@ -305,7 +305,7 @@ public final class ServerSettingsRoleMembersViewModel extends AppViewModel<ViewS
                 return this.memberList;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final GuildRole getRole() {
                 return this.role;
             }
@@ -378,7 +378,7 @@ public final class ServerSettingsRoleMembersViewModel extends AppViewModel<ViewS
             }
         }
 
-        /* compiled from: ServerSettingsRoleMembersViewModel.kt */
+        /* JADX INFO: compiled from: ServerSettingsRoleMembersViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 
@@ -395,8 +395,8 @@ public final class ServerSettingsRoleMembersViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: ServerSettingsRoleMembersViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersViewModel$removeRoleFromMember$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersViewModel$removeRoleFromMember$1 */
+    /* JADX INFO: compiled from: ServerSettingsRoleMembersViewModel.kt */
     public static final class C95741 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ ViewState.Loaded $viewState;
 
@@ -412,14 +412,14 @@ public final class ServerSettingsRoleMembersViewModel extends AppViewModel<ViewS
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r7) {
             ServerSettingsRoleMembersViewModel.access$updateViewState(ServerSettingsRoleMembersViewModel.this, ViewState.Loaded.copy$default(this.$viewState, false, null, null, 6, null));
         }
     }
 
-    /* compiled from: ServerSettingsRoleMembersViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersViewModel$removeRoleFromMember$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersViewModel$removeRoleFromMember$2 */
+    /* JADX INFO: compiled from: ServerSettingsRoleMembersViewModel.kt */
     public static final class C95752 extends Lambda implements Function1<Error, Unit> {
         public C95752() {
             super(1);
@@ -431,7 +431,7 @@ public final class ServerSettingsRoleMembersViewModel extends AppViewModel<ViewS
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             ServerSettingsRoleMembersViewModel.access$emitEvent(ServerSettingsRoleMembersViewModel.this, new Event.RemoveMemberFailure(error));

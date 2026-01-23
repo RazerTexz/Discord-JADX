@@ -16,11 +16,11 @@ import p007b.p008a.p025i.CardSegmentViewBinding;
 import p007b.p008a.p062y.p067n0.SegmentedControlSegment;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CardSegment.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CardSegment.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CardSegment extends CardView implements SegmentedControlSegment {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final CardSegmentViewBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -54,7 +54,7 @@ public final class CardSegment extends CardView implements SegmentedControlSegme
     }
 
     @Override // p007b.p008a.p062y.p067n0.SegmentedControlSegment
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo388a(boolean selected) {
         int themedColor = selected ? ColorCompat.getThemedColor(this, C5419R.attr.colorBackgroundAccent) : ColorCompat.getColor(this, C5419R.color.transparent);
         int color = selected ? ColorCompat.getColor(this, C5419R.color.white) : ColorCompat.getThemedColor(this, C5419R.attr.colorInteractiveMuted);

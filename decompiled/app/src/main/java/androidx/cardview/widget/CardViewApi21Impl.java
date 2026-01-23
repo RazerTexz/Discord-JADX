@@ -6,8 +6,8 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(21)
-/* loaded from: classes.dex */
 public class CardViewApi21Impl implements CardViewImpl {
     private RoundRectDrawable getCardBackground(CardViewDelegate cardViewDelegate) {
         return (RoundRectDrawable) cardViewDelegate.getCardBackground();

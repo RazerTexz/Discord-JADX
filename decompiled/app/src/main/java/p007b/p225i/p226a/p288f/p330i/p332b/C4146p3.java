@@ -1,7 +1,6 @@
 package p007b.p225i.p226a.p288f.p330i.p332b;
 
 import android.content.Context;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabaseLockedException;
 import android.database.sqlite.SQLiteException;
@@ -9,12 +8,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.WorkerThread;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.p3 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.p3 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4146p3 extends SQLiteOpenHelper {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C4113m3 f11116j;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -57,7 +56,7 @@ public final class C4146p3 extends SQLiteOpenHelper {
 
     @Override // android.database.sqlite.SQLiteOpenHelper
     @WorkerThread
-    public final void onOpen(SQLiteDatabase sQLiteDatabase) throws SQLException {
+    public final void onOpen(SQLiteDatabase sQLiteDatabase) {
         C3404f.m4294g2(this.f11116j.mo5726g(), sQLiteDatabase, "messages", "create table if not exists messages ( type INTEGER NOT NULL, entry BLOB NOT NULL)", "type,entry", null);
     }
 

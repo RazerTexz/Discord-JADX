@@ -5,7 +5,7 @@ import java.util.Locale;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class HCaptchaConfig implements Serializable {
     private String apiEndpoint;
     private String assethost;
@@ -20,61 +20,61 @@ public class HCaptchaConfig implements Serializable {
     private HCaptchaSize size;
     private HCaptchaTheme theme;
 
-    /* renamed from: com.hcaptcha.sdk.HCaptchaConfig$a */
+    /* JADX INFO: renamed from: com.hcaptcha.sdk.HCaptchaConfig$a */
     public static class C11151a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public String f21674a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean f21675b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Boolean f21676c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean f21677d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public Boolean f21678e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public String f21679f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public boolean f21680g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public String f21681h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public String f21682i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public String f21683j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public String f21684k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public String f21685l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public boolean f21686m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public String f21687n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public boolean f21688o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public HCaptchaSize f21689p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public boolean f21690q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public HCaptchaTheme f21691r;
 
         public String toString() {

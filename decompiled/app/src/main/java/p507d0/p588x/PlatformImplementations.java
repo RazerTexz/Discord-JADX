@@ -7,16 +7,16 @@ import p507d0.p510c0.Random;
 import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PlatformImplementations.kt */
-/* renamed from: d0.x.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.x.a, reason: use source file name */
+/* JADX INFO: compiled from: PlatformImplementations.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class PlatformImplementations {
 
-    /* compiled from: PlatformImplementations.kt */
-    /* renamed from: d0.x.a$a */
+    /* JADX INFO: renamed from: d0.x.a$a */
+    /* JADX INFO: compiled from: PlatformImplementations.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final Method f25251a;
 
         /* JADX WARN: Removed duplicated region for block: B:10:0x003a  */
@@ -54,7 +54,7 @@ public class PlatformImplementations {
         }
     }
 
-    public void addSuppressed(Throwable th, Throwable th2) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void addSuppressed(Throwable th, Throwable th2) throws IllegalAccessException, InvocationTargetException {
         Intrinsics3.checkNotNullParameter(th, "cause");
         Intrinsics3.checkNotNullParameter(th2, "exception");
         Method method = a.f25251a;

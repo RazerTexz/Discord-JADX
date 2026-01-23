@@ -14,9 +14,9 @@ import p007b.p195g.p196a.p205c.p212e0.TypeIdResolver;
 import p007b.p195g.p196a.p205c.p212e0.TypeResolverBuilder;
 import p007b.p195g.p196a.p205c.p212e0.TypeSerializer;
 
-/* compiled from: StdTypeResolverBuilder.java */
-/* renamed from: b.g.a.c.e0.h.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.e0.h.j, reason: use source file name */
+/* JADX INFO: compiled from: StdTypeResolverBuilder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class StdTypeResolverBuilder implements TypeResolverBuilder<StdTypeResolverBuilder> {
     public TypeIdResolver _customIdResolver;
     public JsonTypeInfo.b _idType;
@@ -24,20 +24,20 @@ public class StdTypeResolverBuilder implements TypeResolverBuilder<StdTypeResolv
     public String _typeProperty;
 
     @Override // p007b.p195g.p196a.p205c.p212e0.TypeResolverBuilder
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public TypeResolverBuilder mo1949a(boolean z2) {
         return this;
     }
 
     @Override // p007b.p195g.p196a.p205c.p212e0.TypeResolverBuilder
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public /* bridge */ /* synthetic */ TypeResolverBuilder mo1950b(JsonTypeInfo.b bVar, TypeIdResolver typeIdResolver) {
         m1966g(bVar, typeIdResolver);
         return this;
     }
 
     @Override // p007b.p195g.p196a.p205c.p212e0.TypeResolverBuilder
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public TypeResolverBuilder mo1951c(String str) {
         if (str == null || str.isEmpty()) {
             str = this._idType.m1594f();
@@ -47,13 +47,13 @@ public class StdTypeResolverBuilder implements TypeResolverBuilder<StdTypeResolv
     }
 
     @Override // p007b.p195g.p196a.p205c.p212e0.TypeResolverBuilder
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public TypeResolverBuilder mo1952d(Class cls) {
         return this;
     }
 
     @Override // p007b.p195g.p196a.p205c.p212e0.TypeResolverBuilder
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public TypeSerializer mo1953e(SerializationConfig serializationConfig, JavaType javaType, Collection<NamedType> collection) {
         if (this._idType == JsonTypeInfo.b.NONE || javaType._class.isPrimitive()) {
             return null;
@@ -119,7 +119,7 @@ public class StdTypeResolverBuilder implements TypeResolverBuilder<StdTypeResolv
     }
 
     @Override // p007b.p195g.p196a.p205c.p212e0.TypeResolverBuilder
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public TypeResolverBuilder mo1954f(JsonTypeInfo.a aVar) {
         if (aVar == null) {
             throw new IllegalArgumentException("includeAs cannot be null");
@@ -128,7 +128,7 @@ public class StdTypeResolverBuilder implements TypeResolverBuilder<StdTypeResolv
         return this;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public StdTypeResolverBuilder m1966g(JsonTypeInfo.b bVar, TypeIdResolver typeIdResolver) {
         if (bVar == null) {
             throw new IllegalArgumentException("idType cannot be null");

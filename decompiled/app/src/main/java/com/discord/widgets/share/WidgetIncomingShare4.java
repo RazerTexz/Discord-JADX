@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetIncomingShare.kt */
-/* renamed from: com.discord.widgets.share.WidgetIncomingShare$configureUi$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$configureUi$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetIncomingShare.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetIncomingShare4 extends Lambda implements Function2<List<? extends WidgetGlobalSearchModel.ItemDataPayload>, List<? extends WidgetGlobalSearchModel.ItemDataPayload>, Unit> {
     public final /* synthetic */ WidgetIncomingShare.Model $this_configureUi$inlined;
     public final /* synthetic */ WidgetIncomingShare this$0;
@@ -28,7 +28,7 @@ public final class WidgetIncomingShare4 extends Lambda implements Function2<List
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(List<? extends WidgetGlobalSearchModel.ItemDataPayload> list, List<? extends WidgetGlobalSearchModel.ItemDataPayload> list2) {
         Intrinsics3.checkNotNullParameter(list, "<anonymous parameter 0>");
         Intrinsics3.checkNotNullParameter(list2, "<anonymous parameter 1>");

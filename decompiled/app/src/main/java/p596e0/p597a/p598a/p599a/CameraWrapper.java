@@ -3,15 +3,15 @@ package p596e0.p597a.p598a.p599a;
 import android.hardware.Camera;
 import androidx.annotation.NonNull;
 
-/* compiled from: CameraWrapper.java */
-/* renamed from: e0.a.a.a.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: e0.a.a.a.e, reason: use source file name */
+/* JADX INFO: compiled from: CameraWrapper.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraWrapper {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Camera f25333a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f25334b;
 
     public CameraWrapper(@NonNull Camera camera, int i) {

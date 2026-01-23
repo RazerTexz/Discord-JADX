@@ -10,25 +10,25 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: AtomicFile.java */
-/* renamed from: b.i.a.c.f3.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.e, reason: use source file name */
+/* JADX INFO: compiled from: AtomicFile.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AtomicFile3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final File f6704a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final File f6705b;
 
-    /* compiled from: AtomicFile.java */
-    /* renamed from: b.i.a.c.f3.e$a */
+    /* JADX INFO: renamed from: b.i.a.c.f3.e$a */
+    /* JADX INFO: compiled from: AtomicFile.java */
     public static final class a extends OutputStream {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final FileOutputStream f6706j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f6707k = false;
 
         public a(File file) throws FileNotFoundException {
@@ -76,12 +76,12 @@ public final class AtomicFile3 {
         this.f6705b = new File(String.valueOf(file.getPath()).concat(".bak"));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m2977a() {
         return this.f6704a.exists() || this.f6705b.exists();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public InputStream m2978b() throws FileNotFoundException {
         if (this.f6705b.exists()) {
             this.f6704a.delete();
@@ -90,7 +90,7 @@ public final class AtomicFile3 {
         return new FileInputStream(this.f6704a);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public OutputStream m2979c() throws IOException {
         if (this.f6704a.exists()) {
             if (this.f6705b.exists()) {

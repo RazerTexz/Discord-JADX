@@ -6,15 +6,15 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.IInterface;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.k.k0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.k0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ServiceConnectionC3364k0 implements ServiceConnection {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f9532j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ AbstractC3345b f9533k;
 
     public ServiceConnectionC3364k0(AbstractC3345b abstractC3345b, int i) {

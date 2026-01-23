@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AnalyticsDeviceResourceUsageMonitor.kt */
-/* renamed from: com.discord.utilities.analytics.AnalyticsDeviceResourceUsageMonitor$resourceMonitor$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsDeviceResourceUsageMonitor$resourceMonitor$1, reason: use source file name */
+/* JADX INFO: compiled from: AnalyticsDeviceResourceUsageMonitor.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AnalyticsDeviceResourceUsageMonitor2 extends Lambda implements Function1<DeviceResourceUsageMonitor.ResourceUsage, Unit> {
     public static final AnalyticsDeviceResourceUsageMonitor2 INSTANCE = new AnalyticsDeviceResourceUsageMonitor2();
 
@@ -22,9 +22,9 @@ public final class AnalyticsDeviceResourceUsageMonitor2 extends Lambda implement
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(DeviceResourceUsageMonitor.ResourceUsage resourceUsage) {
         Intrinsics3.checkNotNullParameter(resourceUsage, "it");
-        AnalyticSuperProperties.INSTANCE.setClientPerformanceProperties(resourceUsage.getCpuUsagePercent(), resourceUsage.getMemoryRssBytes() / 1024, resourceUsage.getCpuCoreCount());
+        AnalyticSuperProperties.INSTANCE.setClientPerformanceProperties(resourceUsage.getCpuUsagePercent(), resourceUsage.getMemoryRssBytes() / ((long) 1024), resourceUsage.getCpuCoreCount());
     }
 }

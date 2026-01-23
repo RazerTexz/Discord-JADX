@@ -9,15 +9,15 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildWelcomeSheetChannelAdapter.kt */
-/* renamed from: com.discord.widgets.guilds.join.ChannelItem, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.join.ChannelItem, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildWelcomeSheetChannelAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class WidgetGuildWelcomeSheetChannelAdapter3 {
     public static final int TYPE_CHANNEL = 0;
     private final int type;
 
-    /* compiled from: WidgetGuildWelcomeSheetChannelAdapter.kt */
-    /* renamed from: com.discord.widgets.guilds.join.ChannelItem$ChannelData */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.join.ChannelItem$ChannelData */
+    /* JADX INFO: compiled from: WidgetGuildWelcomeSheetChannelAdapter.kt */
     public static final /* data */ class ChannelData extends WidgetGuildWelcomeSheetChannelAdapter3 {
         private final Function0<Unit> dismissSheet;
         private final Function2<Long, Integer, Unit> goToChannel;
@@ -39,6 +39,7 @@ public abstract class WidgetGuildWelcomeSheetChannelAdapter3 {
             this.index = i;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ ChannelData copy$default(ChannelData channelData, GuildWelcomeChannel guildWelcomeChannel, Function0 function0, long j, Function2 function2, int i, int i2, Object obj) {
             if ((i2 & 1) != 0) {
                 guildWelcomeChannel = channelData.welcomeChannel;
@@ -61,7 +62,7 @@ public abstract class WidgetGuildWelcomeSheetChannelAdapter3 {
             return channelData.copy(guildWelcomeChannel, function02, j2, function22, i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final GuildWelcomeChannel getWelcomeChannel() {
             return this.welcomeChannel;
         }
@@ -70,7 +71,7 @@ public abstract class WidgetGuildWelcomeSheetChannelAdapter3 {
             return this.dismissSheet;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
@@ -79,7 +80,7 @@ public abstract class WidgetGuildWelcomeSheetChannelAdapter3 {
             return this.goToChannel;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final int getIndex() {
             return this.index;
         }

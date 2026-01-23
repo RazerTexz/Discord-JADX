@@ -3,9 +3,9 @@ package p507d0.p579g0;
 import kotlin.ranges.Ranges2;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: CharJVM.kt */
-/* renamed from: d0.g0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.g0.a, reason: use source file name */
+/* JADX INFO: compiled from: CharJVM.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class CharJVM {
     public static final int checkRadix(int i) {
         if (2 <= i && 36 >= i) {

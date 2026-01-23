@@ -33,7 +33,7 @@ import lombok.core.LombokApp;
 import lombok.core.configuration.ConfigurationKeysLoader;
 import lombok.core.configuration.ConfigurationParser;
 
-/* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp.SCL.lombok */
 public class ConfigurationApp extends LombokApp {
     private PrintStream out = System.out;
     private PrintStream err = System.err;
@@ -55,7 +55,7 @@ public class ConfigurationApp extends LombokApp {
         return Arrays.asList("configuration", "config", "conf", "settings");
     }
 
-    /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp$CmdArgs.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp$CmdArgs.SCL.lombok */
     public static class CmdArgs {
 
         @Mandatory(onlyIfNot = {"help", "generate"})
@@ -237,8 +237,8 @@ public class ConfigurationApp extends LombokApp {
         return 0;
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationApp$2 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp$2.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.ConfigurationApp$2 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp$2.SCL.lombok */
     class C128202 implements ConfigurationProblemReporter {
         private final /* synthetic */ List val$problems;
 
@@ -276,8 +276,8 @@ public class ConfigurationApp extends LombokApp {
         }
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationApp$1 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.ConfigurationApp$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp$1.SCL.lombok */
     class C128191 implements ConfigurationProblemReporter {
         C128191() {
         }
@@ -346,7 +346,7 @@ public class ConfigurationApp extends LombokApp {
         return result;
     }
 
-    /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp$Source.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp$Source.SCL.lombok */
     private static final class Source {
         final ConfigurationFile file;
         final String description;
@@ -364,8 +364,8 @@ public class ConfigurationApp extends LombokApp {
         return result;
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationApp$3 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp$3.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.ConfigurationApp$3 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp$3.SCL.lombok */
     class C128213 implements ConfigurationParser.Collector {
         private final /* synthetic */ Deque val$round;
         private final /* synthetic */ Collection val$keys;
@@ -436,8 +436,8 @@ public class ConfigurationApp extends LombokApp {
         return keys;
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationApp$4 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp$4.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.ConfigurationApp$4 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp$4.SCL.lombok */
     class C128224 implements Comparator<URI> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(URI uri, URI uri2) {
@@ -447,7 +447,7 @@ public class ConfigurationApp extends LombokApp {
         C128224() {
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(URI o1, URI o2) {
             return o1.toString().compareTo(o2.toString());
         }

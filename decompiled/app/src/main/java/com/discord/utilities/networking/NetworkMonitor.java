@@ -18,21 +18,21 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: NetworkMonitor.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: NetworkMonitor.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NetworkMonitor {
     private Logger logger;
     private final BehaviorSubject<State> networkStateSubject;
 
-    /* compiled from: NetworkMonitor.kt */
+    /* JADX INFO: compiled from: NetworkMonitor.kt */
     public enum State {
         ONLINE,
         OFFLINE,
         OFFLINE_AIRPLANE_MODE
     }
 
-    /* compiled from: NetworkMonitor.kt */
-    /* renamed from: com.discord.utilities.networking.NetworkMonitor$observeIsConnected$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.networking.NetworkMonitor$observeIsConnected$1 */
+    /* JADX INFO: compiled from: NetworkMonitor.kt */
     public static final class C68201<T, R> implements Func1<State, Boolean> {
         public static final C68201 INSTANCE = new C68201();
 
@@ -41,14 +41,14 @@ public final class NetworkMonitor {
             return call2(state);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(State state) {
             return Boolean.valueOf(state == State.ONLINE);
         }
     }
 
-    /* compiled from: NetworkMonitor.kt */
-    /* renamed from: com.discord.utilities.networking.NetworkMonitor$registerBroadcastAirplaneMode$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.networking.NetworkMonitor$registerBroadcastAirplaneMode$1 */
+    /* JADX INFO: compiled from: NetworkMonitor.kt */
     public static final class C68211 extends BroadcastReceiver {
         public C68211() {
         }
@@ -62,8 +62,8 @@ public final class NetworkMonitor {
         }
     }
 
-    /* compiled from: NetworkMonitor.kt */
-    /* renamed from: com.discord.utilities.networking.NetworkMonitor$registerBroadcastConnectivityNetworkMonitor$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.networking.NetworkMonitor$registerBroadcastConnectivityNetworkMonitor$1 */
+    /* JADX INFO: compiled from: NetworkMonitor.kt */
     public static final class C68221 extends BroadcastReceiver {
         public C68221() {
         }
@@ -77,8 +77,8 @@ public final class NetworkMonitor {
         }
     }
 
-    /* compiled from: NetworkMonitor.kt */
-    /* renamed from: com.discord.utilities.networking.NetworkMonitor$registerConnectivityNetworkMonitor$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.networking.NetworkMonitor$registerConnectivityNetworkMonitor$1 */
+    /* JADX INFO: compiled from: NetworkMonitor.kt */
     public static final class C68231 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ConnectivityManager $connectivityManager;
         public final /* synthetic */ NetworkMonitor2 $networkCallback;
@@ -96,7 +96,7 @@ public final class NetworkMonitor {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             try {
                 this.$connectivityManager.registerNetworkCallback(new NetworkRequest.Builder().build(), this.$networkCallback);

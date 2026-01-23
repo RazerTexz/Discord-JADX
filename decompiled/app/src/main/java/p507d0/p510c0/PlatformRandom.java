@@ -3,9 +3,9 @@ package p507d0.p510c0;
 import java.util.Random;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PlatformRandom.kt */
-/* renamed from: d0.c0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.c0.a, reason: use source file name */
+/* JADX INFO: compiled from: PlatformRandom.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class PlatformRandom extends Random {
     public abstract Random getImpl();
 

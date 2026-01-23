@@ -7,12 +7,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p548g.FqName;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: typeEnhancement.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.l0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.b, reason: use source file name */
+/* JADX INFO: compiled from: typeEnhancement.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class typeEnhancement2 implements Annotations4 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final FqName f23442j;
 
     public typeEnhancement2(FqName fqName) {

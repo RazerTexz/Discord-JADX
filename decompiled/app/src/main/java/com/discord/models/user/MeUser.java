@@ -14,11 +14,11 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p579g0.StringNumberConversions;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MeUser.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MeUser.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class MeUser implements User {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final String avatar;
     private final String banner;
@@ -40,7 +40,7 @@ public final /* data */ class MeUser implements User {
     private final String token;
     private final String username;
 
-    /* compiled from: MeUser.kt */
+    /* JADX INFO: compiled from: MeUser.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -219,17 +219,17 @@ public final /* data */ class MeUser implements User {
         return getId();
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final boolean getMfaEnabled() {
         return this.mfaEnabled;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final boolean getIsVerified() {
         return this.isVerified;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final String getToken() {
         return this.token;
     }
@@ -242,12 +242,12 @@ public final /* data */ class MeUser implements User {
         return getPublicFlags();
     }
 
-    /* renamed from: component15, reason: from getter */
+    /* JADX INFO: renamed from: component15, reason: from getter */
     public final String getPhoneNumber() {
         return this.phoneNumber;
     }
 
-    /* renamed from: component16, reason: from getter */
+    /* JADX INFO: renamed from: component16, reason: from getter */
     public final NsfwAllowance getNsfwAllowance() {
         return this.nsfwAllowance;
     }
@@ -288,7 +288,7 @@ public final /* data */ class MeUser implements User {
         return getPremiumTier();
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final String getEmail() {
         return this.email;
     }
@@ -386,6 +386,18 @@ public final /* data */ class MeUser implements User {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v20, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v42 */
+    /* JADX WARN: Type inference failed for: r0v45 */
+    /* JADX WARN: Type inference failed for: r1v10, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v12, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v36 */
+    /* JADX WARN: Type inference failed for: r1v37 */
+    /* JADX WARN: Type inference failed for: r1v41 */
+    /* JADX WARN: Type inference failed for: r1v42 */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         int iM3a = C0002b.m3a(getId()) * 31;
         String username = getUsername();
@@ -395,31 +407,31 @@ public final /* data */ class MeUser implements User {
         String banner = getBanner();
         int iHashCode3 = (iHashCode2 + (banner != null ? banner.hashCode() : 0)) * 31;
         boolean isBot = getIsBot();
-        int i = isBot;
+        ?? r1 = isBot;
         if (isBot) {
-            i = 1;
+            r1 = 1;
         }
-        int i2 = (iHashCode3 + i) * 31;
+        int i = (iHashCode3 + r1) * 31;
         boolean isSystemUser = getIsSystemUser();
-        int i3 = isSystemUser;
+        ?? r12 = isSystemUser;
         if (isSystemUser) {
-            i3 = 1;
+            r12 = 1;
         }
-        int discriminator = (getDiscriminator() + ((i2 + i3) * 31)) * 31;
+        int discriminator = (getDiscriminator() + ((i + r12) * 31)) * 31;
         PremiumTier premiumTier = getPremiumTier();
         int iHashCode4 = (discriminator + (premiumTier != null ? premiumTier.hashCode() : 0)) * 31;
         String str = this.email;
         int iHashCode5 = (iHashCode4 + (str != null ? str.hashCode() : 0)) * 31;
         boolean z2 = this.mfaEnabled;
-        int i4 = z2;
-        if (z2 != 0) {
-            i4 = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i5 = (iHashCode5 + i4) * 31;
+        int i2 = (iHashCode5 + r0) * 31;
         boolean z3 = this.isVerified;
-        int i6 = (i5 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+        int i3 = (i2 + (z3 ? 1 : z3)) * 31;
         String str2 = this.token;
-        int publicFlags = (getPublicFlags() + ((getFlags() + ((i6 + (str2 != null ? str2.hashCode() : 0)) * 31)) * 31)) * 31;
+        int publicFlags = (getPublicFlags() + ((getFlags() + ((i3 + (str2 != null ? str2.hashCode() : 0)) * 31)) * 31)) * 31;
         String str3 = this.phoneNumber;
         int iHashCode6 = (publicFlags + (str3 != null ? str3.hashCode() : 0)) * 31;
         NsfwAllowance nsfwAllowance = this.nsfwAllowance;
@@ -431,13 +443,13 @@ public final /* data */ class MeUser implements User {
     }
 
     @Override // com.discord.models.user.User
-    /* renamed from: isBot, reason: from getter */
+    /* JADX INFO: renamed from: isBot, reason: from getter */
     public boolean getIsBot() {
         return this.isBot;
     }
 
     @Override // com.discord.models.user.User
-    /* renamed from: isSystemUser, reason: from getter */
+    /* JADX INFO: renamed from: isSystemUser, reason: from getter */
     public boolean getIsSystemUser() {
         return this.isSystemUser;
     }

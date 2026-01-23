@@ -1,8 +1,8 @@
 package com.discord.api.message.attachment;
 
 
-/* compiled from: MessageAttachmentType.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MessageAttachmentType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum MessageAttachmentType {
     VIDEO,
     IMAGE,

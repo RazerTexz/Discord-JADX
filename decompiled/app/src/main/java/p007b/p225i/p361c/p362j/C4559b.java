@@ -24,12 +24,12 @@ import p007b.p225i.p226a.p288f.p313h.p325l.C3885x;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3911z;
 import p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC3988b7;
 
-/* compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
-/* renamed from: b.i.c.j.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.j.b */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4559b implements InterfaceC3988b7 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ C3661g f12162a;
 
     public C4559b(C3661g c3661g) {
@@ -37,7 +37,7 @@ public final class C4559b implements InterfaceC3988b7 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC3988b7
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String mo5502a() {
         C3661g c3661g = this.f12162a;
         Objects.requireNonNull(c3661g);
@@ -47,7 +47,7 @@ public final class C4559b implements InterfaceC3988b7 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC3988b7
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String mo5503b() {
         C3661g c3661g = this.f12162a;
         Objects.requireNonNull(c3661g);
@@ -57,7 +57,7 @@ public final class C4559b implements InterfaceC3988b7 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC3988b7
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String mo5504c() {
         C3661g c3661g = this.f12162a;
         Objects.requireNonNull(c3661g);
@@ -67,7 +67,7 @@ public final class C4559b implements InterfaceC3988b7 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC3988b7
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String mo5505d() {
         C3661g c3661g = this.f12162a;
         Objects.requireNonNull(c3661g);
@@ -77,7 +77,7 @@ public final class C4559b implements InterfaceC3988b7 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC3988b7
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final long mo5506e() {
         C3661g c3661g = this.f12162a;
         Objects.requireNonNull(c3661g);
@@ -92,11 +92,11 @@ public final class C4559b implements InterfaceC3988b7 {
         long jNextLong = new Random(jNanoTime ^ System.currentTimeMillis()).nextLong();
         int i = c3661g.f9953h + 1;
         c3661g.f9953h = i;
-        return jNextLong + i;
+        return jNextLong + ((long) i);
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC3988b7
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void mo5507f(Bundle bundle) {
         C3661g c3661g = this.f12162a;
         Objects.requireNonNull(c3661g);
@@ -104,7 +104,7 @@ public final class C4559b implements InterfaceC3988b7 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC3988b7
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void mo5508g(String str) {
         C3661g c3661g = this.f12162a;
         Objects.requireNonNull(c3661g);
@@ -112,7 +112,7 @@ public final class C4559b implements InterfaceC3988b7 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC3988b7
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final List<Bundle> mo5509h(String str, String str2) {
         C3661g c3661g = this.f12162a;
         Objects.requireNonNull(c3661g);
@@ -123,7 +123,7 @@ public final class C4559b implements InterfaceC3988b7 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC3988b7
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final int mo5510i(String str) {
         C3661g c3661g = this.f12162a;
         Objects.requireNonNull(c3661g);
@@ -137,7 +137,7 @@ public final class C4559b implements InterfaceC3988b7 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC3988b7
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void mo5511j(String str) {
         C3661g c3661g = this.f12162a;
         Objects.requireNonNull(c3661g);
@@ -145,7 +145,7 @@ public final class C4559b implements InterfaceC3988b7 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC3988b7
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Map<String, Object> mo5512k(String str, String str2, boolean z2) {
         C3661g c3661g = this.f12162a;
         Objects.requireNonNull(c3661g);
@@ -166,7 +166,7 @@ public final class C4559b implements InterfaceC3988b7 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC3988b7
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void mo5513l(String str, String str2, Bundle bundle) {
         C3661g c3661g = this.f12162a;
         Objects.requireNonNull(c3661g);
@@ -174,7 +174,7 @@ public final class C4559b implements InterfaceC3988b7 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC3988b7
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void mo5514m(String str, String str2, Bundle bundle) {
         this.f12162a.m4886c(str, str2, bundle, true, true, null);
     }

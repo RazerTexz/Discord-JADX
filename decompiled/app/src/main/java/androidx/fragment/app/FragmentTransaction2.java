@@ -4,9 +4,9 @@ import android.os.Bundle;
 import androidx.annotation.IdRes;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FragmentTransaction.kt */
-/* renamed from: androidx.fragment.app.FragmentTransactionKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.fragment.app.FragmentTransactionKt, reason: use source file name */
+/* JADX INFO: compiled from: FragmentTransaction.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class FragmentTransaction2 {
     public static final /* synthetic */ <F extends Fragment> FragmentTransaction add(FragmentTransaction fragmentTransaction, @IdRes int i, String str, Bundle bundle) {
         Intrinsics3.checkNotNullParameter(fragmentTransaction, "$this$add");

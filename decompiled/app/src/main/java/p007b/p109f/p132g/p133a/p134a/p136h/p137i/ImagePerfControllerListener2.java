@@ -16,34 +16,34 @@ import p007b.p109f.p132g.p133a.p134a.p136h.ImagePerfState;
 import p007b.p109f.p148h.p158b.p159a.BaseControllerListener2;
 import p007b.p109f.p148h.p158b.p159a.ControllerListener2;
 
-/* compiled from: ImagePerfControllerListener2.java */
-/* renamed from: b.f.g.a.a.h.i.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.a.a.h.i.a, reason: use source file name */
+/* JADX INFO: compiled from: ImagePerfControllerListener2.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ImagePerfControllerListener2 extends BaseControllerListener2<ImageInfo> implements Closeable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static Handler f3242j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final MonotonicClock f3243k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ImagePerfState f3244l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final ImagePerfNotifier f3245m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Supplier<Boolean> f3246n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Supplier<Boolean> f3247o;
 
-    /* compiled from: ImagePerfControllerListener2.java */
-    /* renamed from: b.f.g.a.a.h.i.a$a */
+    /* JADX INFO: renamed from: b.f.g.a.a.h.i.a$a */
+    /* JADX INFO: compiled from: ImagePerfControllerListener2.java */
     public static class a extends Handler {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ImagePerfNotifier f3248a;
 
         public a(@NonNull Looper looper, @NonNull ImagePerfNotifier imagePerfNotifier) {
@@ -77,7 +77,7 @@ public class ImagePerfControllerListener2 extends BaseControllerListener2<ImageI
     }
 
     @Override // p007b.p109f.p148h.p158b.p159a.ControllerListener2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1071a(String str, Object obj, ControllerListener2.a aVar) {
         long jNow = this.f3243k.now();
         ImagePerfState imagePerfStateM1075e = m1075e();
@@ -93,7 +93,7 @@ public class ImagePerfControllerListener2 extends BaseControllerListener2<ImageI
     }
 
     @Override // p007b.p109f.p148h.p158b.p159a.ControllerListener2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1072b(String str, Throwable th, ControllerListener2.a aVar) {
         long jNow = this.f3243k.now();
         ImagePerfState imagePerfStateM1075e = m1075e();
@@ -108,7 +108,7 @@ public class ImagePerfControllerListener2 extends BaseControllerListener2<ImageI
     }
 
     @Override // p007b.p109f.p148h.p158b.p159a.ControllerListener2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo1073c(String str, ControllerListener2.a aVar) {
         long jNow = this.f3243k.now();
         ImagePerfState imagePerfStateM1075e = m1075e();
@@ -130,7 +130,7 @@ public class ImagePerfControllerListener2 extends BaseControllerListener2<ImageI
     }
 
     @Override // p007b.p109f.p148h.p158b.p159a.ControllerListener2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo1074d(String str, Object obj, ControllerListener2.a aVar) {
         long jNow = this.f3243k.now();
         ImagePerfState imagePerfStateM1075e = m1075e();
@@ -142,12 +142,12 @@ public class ImagePerfControllerListener2 extends BaseControllerListener2<ImageI
         m1077n(imagePerfStateM1075e, 3);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ImagePerfState m1075e() {
         return Boolean.FALSE.booleanValue() ? new ImagePerfState() : this.f3244l;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean m1076f() {
         boolean zBooleanValue = this.f3246n.get().booleanValue();
         if (zBooleanValue && f3242j == null) {
@@ -164,7 +164,7 @@ public class ImagePerfControllerListener2 extends BaseControllerListener2<ImageI
         return zBooleanValue;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final void m1077n(ImagePerfState imagePerfState, int i) {
         if (!m1076f()) {
             ((ImagePerfMonitor) this.f3245m).m1066b(imagePerfState, i);
@@ -179,7 +179,7 @@ public class ImagePerfControllerListener2 extends BaseControllerListener2<ImageI
         f3242j.sendMessage(messageObtainMessage);
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void m1078q(ImagePerfState imagePerfState, int i) {
         if (!m1076f()) {
             ((ImagePerfMonitor) this.f3245m).m1065a(imagePerfState, i);

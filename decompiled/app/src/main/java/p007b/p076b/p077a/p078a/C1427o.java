@@ -5,12 +5,12 @@ import androidx.core.view.OnApplyWindowInsetsListener;
 import androidx.core.view.WindowInsetsCompat;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FlexInputFragment.kt */
-/* renamed from: b.b.a.a.o */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.a.o */
+/* JADX INFO: compiled from: FlexInputFragment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C1427o implements OnApplyWindowInsetsListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final C1427o f2139a = new C1427o();
 
     @Override // androidx.core.view.OnApplyWindowInsetsListener

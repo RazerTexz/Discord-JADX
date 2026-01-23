@@ -4,9 +4,9 @@ import android.util.Log;
 import androidx.annotation.RestrictTo;
 import java.io.Writer;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
 @Deprecated
-/* loaded from: classes.dex */
 public class LogWriter extends Writer {
     private StringBuilder mBuilder = new StringBuilder(128);
     private final String mTag;

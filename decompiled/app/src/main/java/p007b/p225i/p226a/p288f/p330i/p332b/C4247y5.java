@@ -5,36 +5,36 @@ import android.os.Bundle;
 import com.google.android.gms.internal.measurement.zzae;
 import java.util.Objects;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.y5 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.y5 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4247y5 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f11370a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String f11371b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String f11372c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String f11373d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Boolean f11374e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public long f11375f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public zzae f11376g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f11377h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public Long f11378i;
 
     public C4247y5(Context context, zzae zzaeVar, Long l) {

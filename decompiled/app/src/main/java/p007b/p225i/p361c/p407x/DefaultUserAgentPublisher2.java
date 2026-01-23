@@ -5,15 +5,15 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.Set;
 
-/* compiled from: DefaultUserAgentPublisher.java */
-/* renamed from: b.i.c.x.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.x.c, reason: use source file name */
+/* JADX INFO: compiled from: DefaultUserAgentPublisher.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DefaultUserAgentPublisher2 implements UserAgentPublisher {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f13082a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final GlobalLibraryVersionRegistrar f13083b;
 
     public DefaultUserAgentPublisher2(Set<LibraryVersion> set, GlobalLibraryVersionRegistrar globalLibraryVersionRegistrar) {
@@ -21,7 +21,7 @@ public class DefaultUserAgentPublisher2 implements UserAgentPublisher {
         this.f13083b = globalLibraryVersionRegistrar;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m6845a(Set<LibraryVersion> set) {
         StringBuilder sb = new StringBuilder();
         Iterator<LibraryVersion> it = set.iterator();

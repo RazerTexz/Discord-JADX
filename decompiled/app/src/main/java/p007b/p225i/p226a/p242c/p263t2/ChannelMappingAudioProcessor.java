@@ -5,21 +5,21 @@ import com.google.android.exoplayer2.audio.AudioProcessor;
 import java.nio.ByteBuffer;
 import java.util.Objects;
 
-/* compiled from: ChannelMappingAudioProcessor.java */
-/* renamed from: b.i.a.c.t2.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.w, reason: use source file name */
+/* JADX INFO: compiled from: ChannelMappingAudioProcessor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ChannelMappingAudioProcessor extends BaseAudioProcessor {
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public int[] f7844i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public int[] f7845j;
 
     @Override // com.google.android.exoplayer2.audio.AudioProcessor
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3470c(ByteBuffer byteBuffer) {
         int[] iArr = this.f7845j;
         Objects.requireNonNull(iArr);
@@ -37,7 +37,7 @@ public final class ChannelMappingAudioProcessor extends BaseAudioProcessor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.BaseAudioProcessor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public AudioProcessor.C10685a mo3471f(AudioProcessor.C10685a c10685a) throws AudioProcessor.UnhandledAudioFormatException {
         int[] iArr = this.f7844i;
         if (iArr == null) {
@@ -60,13 +60,13 @@ public final class ChannelMappingAudioProcessor extends BaseAudioProcessor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.BaseAudioProcessor
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3473g() {
         this.f7845j = this.f7844i;
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.BaseAudioProcessor
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo3475i() {
         this.f7845j = null;
         this.f7844i = null;

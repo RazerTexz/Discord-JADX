@@ -30,8 +30,8 @@ import com.google.android.material.resources.TextAppearance;
 import org.objectweb.asm.Opcodes;
 import p007b.p225i.p226a.p341g.p347f.StaticLayoutBuilderCompat;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public final class CollapsingTextHelper {
     private static final boolean DEBUG_DRAW = false;
     private static final String ELLIPSIS_NORMAL = "…";
@@ -110,7 +110,7 @@ public final class CollapsingTextHelper {
     private float collapsedTextSize = 15.0f;
     private int maxLines = 1;
 
-    /* renamed from: com.google.android.material.internal.CollapsingTextHelper$a */
+    /* JADX INFO: renamed from: com.google.android.material.internal.CollapsingTextHelper$a */
     public class C10925a implements CancelableFontCallback.ApplyFont {
         public C10925a() {
         }
@@ -121,7 +121,7 @@ public final class CollapsingTextHelper {
         }
     }
 
-    /* renamed from: com.google.android.material.internal.CollapsingTextHelper$b */
+    /* JADX INFO: renamed from: com.google.android.material.internal.CollapsingTextHelper$b */
     public class C10926b implements CancelableFontCallback.ApplyFont {
         public C10926b() {
         }

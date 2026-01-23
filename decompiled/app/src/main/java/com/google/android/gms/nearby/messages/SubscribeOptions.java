@@ -4,20 +4,20 @@ import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p333j.p334b.C4267d;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SubscribeOptions {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Strategy f20737a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final MessageFilter f20738b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public final C4267d f20739c = null;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f20740d = false;
 
     static {

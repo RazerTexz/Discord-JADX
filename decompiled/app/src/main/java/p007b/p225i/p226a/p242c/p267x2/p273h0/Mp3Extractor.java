@@ -27,73 +27,73 @@ import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p273h0.Seeker;
 import p007b.p225i.p226a.p242c.p279z2.p283k.Id3Decoder;
 
-/* compiled from: Mp3Extractor.java */
-/* renamed from: b.i.a.c.x2.h0.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.h0.f, reason: use source file name */
+/* JADX INFO: compiled from: Mp3Extractor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Mp3Extractor implements Extractor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Id3Decoder.a f8315a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f8316b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long f8317c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ParsableByteArray f8318d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final MpegAudioUtil.a f8319e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final GaplessInfoHolder f8320f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Id3Peeker f8321g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final TrackOutput2 f8322h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public ExtractorOutput f8323i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public TrackOutput2 f8324j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public TrackOutput2 f8325k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f8326l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public Metadata f8327m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f8328n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public long f8329o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public long f8330p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f8331q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public Seeker f8332r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public boolean f8333s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public boolean f8334t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public long f8335u;
 
     static {
@@ -105,7 +105,7 @@ public final class Mp3Extractor implements Extractor {
         this(0);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static long m3693d(@Nullable Metadata metadata) {
         if (metadata == null) {
             return -9223372036854775807L;
@@ -123,23 +123,23 @@ public final class Mp3Extractor implements Extractor {
         return -9223372036854775807L;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static boolean m3694h(int i, long j) {
         return ((long) (i & (-128000))) == (j & (-128000));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long m3695a(long j) {
-        return ((j * 1000000) / this.f8319e.f7680d) + this.f8328n;
+        return ((j * 1000000) / ((long) this.f8319e.f7680d)) + this.f8328n;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3633b(ExtractorInput extractorInput) throws IOException {
         return m3698j(extractorInput, true);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Seeker m3696c(ExtractorInput extractorInput, boolean z2) throws IOException {
         extractorInput.mo3652o(this.f8318d.f6793a, 0, 4);
         this.f8318d.m3079E(0);
@@ -160,7 +160,7 @@ public final class Mp3Extractor implements Extractor {
     /* JADX WARN: Removed duplicated region for block: B:25:0x0064  */
     /* JADX WARN: Removed duplicated region for block: B:30:0x0077  */
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -218,7 +218,7 @@ public final class Mp3Extractor implements Extractor {
                                 seekerM3696c = null;
                             } else {
                                 i2 = i4;
-                                long jM2985F = Util2.m2985F(iM3103w, i5 * 1000000, i6);
+                                long jM2985F = Util2.m2985F(iM3103w, ((long) i5) * 1000000, i6);
                                 if ((iM3086f2 & 6) != 6) {
                                     xingSeeker = new XingSeeker(position, aVar2.f7679c, jM2985F, -1L, null);
                                 } else {
@@ -277,12 +277,12 @@ public final class Mp3Extractor implements Extractor {
                                 extractorInput2 = extractorInput;
                             } else {
                                 int i10 = aVar3.f7680d;
-                                long jM2985F2 = Util2.m2985F(iM3086f3, (i10 >= 32000 ? 1152 : 576) * 1000000, i10);
+                                long jM2985F2 = Util2.m2985F(iM3086f3, ((long) (i10 >= 32000 ? 1152 : 576)) * 1000000, i10);
                                 int iM3105y = parsableByteArray.m3105y();
                                 int iM3105y2 = parsableByteArray.m3105y();
                                 int iM3105y3 = parsableByteArray.m3105y();
                                 parsableByteArray.m3080F(2);
-                                long j2 = aVar3.f7679c + position2;
+                                long j2 = ((long) aVar3.f7679c) + position2;
                                 long[] jArr2 = new long[iM3105y];
                                 long[] jArr3 = new long[iM3105y];
                                 int i11 = 0;
@@ -290,7 +290,7 @@ public final class Mp3Extractor implements Extractor {
                                 while (i11 < iM3105y) {
                                     String str2 = str;
                                     long j4 = jMo3642b2;
-                                    jArr2[i11] = (i11 * jM2985F2) / iM3105y;
+                                    jArr2[i11] = (((long) i11) * jM2985F2) / ((long) iM3105y);
                                     jArr3[i11] = Math.max(j3, j2);
                                     if (iM3105y3 == 1) {
                                         iM3100t = parsableByteArray.m3100t();
@@ -305,7 +305,7 @@ public final class Mp3Extractor implements Extractor {
                                         }
                                         iM3100t = parsableByteArray.m3103w();
                                     }
-                                    j3 += iM3100t * iM3105y2;
+                                    j3 += (long) (iM3100t * iM3105y2);
                                     i11++;
                                     str = str2;
                                     jMo3642b2 = j4;
@@ -335,8 +335,9 @@ public final class Mp3Extractor implements Extractor {
                             for (int i12 = 0; i12 < length; i12++) {
                                 Metadata.Entry entry = metadata.f19936j[i12];
                                 if (entry instanceof MlltFrame) {
+                                    MlltFrame mlltFrame = (MlltFrame) entry;
                                     long jM3693d2 = m3693d(metadata);
-                                    int length2 = ((MlltFrame) entry).f19996n.length;
+                                    int length2 = mlltFrame.f19996n.length;
                                     int i13 = length2 + 1;
                                     long[] jArr4 = new long[i13];
                                     long[] jArr5 = new long[i13];
@@ -345,8 +346,8 @@ public final class Mp3Extractor implements Extractor {
                                     long j6 = 0;
                                     for (int i14 = 1; i14 <= length2; i14++) {
                                         int i15 = i14 - 1;
-                                        position3 += r8.f19994l + r8.f19996n[i15];
-                                        j6 += r8.f19995m + r8.f19997o[i15];
+                                        position3 += (long) (mlltFrame.f19994l + mlltFrame.f19996n[i15]);
+                                        j6 += (long) (mlltFrame.f19995m + mlltFrame.f19997o[i15]);
                                         jArr4[i14] = position3;
                                         jArr5[i14] = j6;
                                     }
@@ -463,12 +464,13 @@ public final class Mp3Extractor implements Extractor {
                                 mp3Extractor.f8328n = (mp3Extractor.f8317c - mp3Extractor.f8332r.mo3690d(0L)) + mp3Extractor.f8328n;
                             }
                         }
-                        mp3Extractor.f8331q = mp3Extractor.f8319e.f7679c;
+                        MpegAudioUtil.a aVar5 = mp3Extractor.f8319e;
+                        mp3Extractor.f8331q = aVar5.f7679c;
                         Seeker seeker = mp3Extractor.f8332r;
                         if (seeker instanceof IndexSeeker) {
                             IndexSeeker indexSeeker = (IndexSeeker) seeker;
-                            long jM3695a = mp3Extractor.m3695a(mp3Extractor.f8329o + r0.f7683g);
-                            long position5 = extractorInput.getPosition() + mp3Extractor.f8319e.f7679c;
+                            long jM3695a = mp3Extractor.m3695a(mp3Extractor.f8329o + ((long) aVar5.f7683g));
+                            long position5 = extractorInput.getPosition() + ((long) mp3Extractor.f8319e.f7679c);
                             if (!indexSeeker.m3691b(jM3695a)) {
                                 indexSeeker.f8309b.m3041a(jM3695a);
                                 indexSeeker.f8310c.m3041a(position5);
@@ -484,7 +486,7 @@ public final class Mp3Extractor implements Extractor {
                             mp3Extractor.f8331q = i16;
                             if (i16 <= 0) {
                                 mp3Extractor.f8325k.mo2525d(mp3Extractor.m3695a(mp3Extractor.f8329o), 1, mp3Extractor.f8319e.f7679c, 0, null);
-                                mp3Extractor.f8329o += mp3Extractor.f8319e.f7683g;
+                                mp3Extractor.f8329o += (long) mp3Extractor.f8319e.f7683g;
                                 mp3Extractor.f8331q = 0;
                             }
                             i = 0;
@@ -516,7 +518,7 @@ public final class Mp3Extractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3636f(ExtractorOutput extractorOutput) {
         this.f8323i = extractorOutput;
         TrackOutput2 trackOutput2Mo2492p = extractorOutput.mo2492p(0, 1);
@@ -526,7 +528,7 @@ public final class Mp3Extractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3637g(long j, long j2) {
         this.f8326l = 0;
         this.f8328n = -9223372036854775807L;
@@ -541,7 +543,7 @@ public final class Mp3Extractor implements Extractor {
         this.f8325k = this.f8322h;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean m3697i(ExtractorInput extractorInput) throws IOException {
         Seeker seeker = this.f8332r;
         if (seeker != null) {
@@ -557,7 +559,7 @@ public final class Mp3Extractor implements Extractor {
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean m3698j(ExtractorInput extractorInput, boolean z2) throws IOException {
         int i;
         int iMo3645f;

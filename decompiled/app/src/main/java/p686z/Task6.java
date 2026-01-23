@@ -8,48 +8,48 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 
-/* compiled from: Task.java */
-/* renamed from: z.g, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: z.g, reason: use source file name */
+/* JADX INFO: compiled from: Task.java */
+/* JADX INFO: loaded from: classes.dex */
 public class Task6<TResult> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ExecutorService f27977a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Executor f27978b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Executor f27979c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static Task6<?> f27980d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static Task6<Boolean> f27981e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static Task6<Boolean> f27982f;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f27984h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean f27985i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public TResult f27986j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Exception f27987k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f27988l;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Object f27983g = new Object();
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public List<Continuation3<TResult, Void>> f27989m = new ArrayList();
 
     static {
@@ -66,7 +66,7 @@ public class Task6<TResult> {
     public Task6() {
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static <TResult> Task6<TResult> m11366a(Callable<TResult> callable, Executor executor) {
         TaskCompletionSource2 taskCompletionSource2 = new TaskCompletionSource2();
         try {
@@ -77,7 +77,7 @@ public class Task6<TResult> {
         return taskCompletionSource2.f27990a;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static <TResult> Task6<TResult> m11367c(Exception exc) {
         boolean z2;
         Task6<TResult> task6 = new Task6<>();
@@ -98,7 +98,7 @@ public class Task6<TResult> {
         throw new IllegalStateException("Cannot set the error on a completed task.");
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public <TContinuationResult> Task6<TContinuationResult> m11368b(Continuation3<TResult, TContinuationResult> continuation3) {
         boolean z2;
         Executor executor = f27978b;
@@ -121,7 +121,7 @@ public class Task6<TResult> {
         return taskCompletionSource2.f27990a;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Exception m11369d() {
         Exception exc;
         synchronized (this.f27983g) {
@@ -133,7 +133,7 @@ public class Task6<TResult> {
         return exc;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean m11370e() {
         boolean z2;
         synchronized (this.f27983g) {
@@ -142,7 +142,7 @@ public class Task6<TResult> {
         return z2;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m11371f() {
         synchronized (this.f27983g) {
             Iterator<Continuation3<TResult, Void>> it = this.f27989m.iterator();
@@ -159,7 +159,7 @@ public class Task6<TResult> {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean m11372g() {
         synchronized (this.f27983g) {
             if (this.f27984h) {
@@ -173,7 +173,7 @@ public class Task6<TResult> {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean m11373h(TResult tresult) {
         synchronized (this.f27983g) {
             if (this.f27984h) {

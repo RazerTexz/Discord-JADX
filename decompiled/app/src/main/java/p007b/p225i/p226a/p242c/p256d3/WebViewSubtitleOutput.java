@@ -5,9 +5,9 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.webkit.WebView;
 
-/* compiled from: WebViewSubtitleOutput.java */
-/* renamed from: b.i.a.c.d3.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.d3.q, reason: use source file name */
+/* JADX INFO: compiled from: WebViewSubtitleOutput.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class WebViewSubtitleOutput extends WebView {
     public WebViewSubtitleOutput(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);

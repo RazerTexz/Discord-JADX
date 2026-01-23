@@ -10,19 +10,19 @@ import p507d0.p513e0.p514p.p515d.p517m0.p543f.p547z.VersionRequirement2;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLite;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DeserializedMemberDescriptor.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.e0.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.g, reason: use source file name */
+/* JADX INFO: compiled from: DeserializedMemberDescriptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface DeserializedMemberDescriptor3 extends DeclarationDescriptor, MemberDescriptor {
 
-    /* compiled from: DeserializedMemberDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.g$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.g$a */
+    /* JADX INFO: compiled from: DeserializedMemberDescriptor.kt */
     public enum a {
         COMPATIBLE,
         NEEDS_WRAPPER,
         INCOMPATIBLE;
 
-        /* renamed from: values, reason: to resolve conflict with enum method */
+        /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
         public static a[] valuesCustom() {
             a[] aVarArrValuesCustom = values();
             a[] aVarArr = new a[aVarArrValuesCustom.length];
@@ -31,8 +31,8 @@ public interface DeserializedMemberDescriptor3 extends DeclarationDescriptor, Me
         }
     }
 
-    /* compiled from: DeserializedMemberDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.g$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.g$b */
+    /* JADX INFO: compiled from: DeserializedMemberDescriptor.kt */
     public static final class b {
         public static List<VersionRequirement> getVersionRequirements(DeserializedMemberDescriptor3 deserializedMemberDescriptor3) {
             Intrinsics3.checkNotNullParameter(deserializedMemberDescriptor3, "this");

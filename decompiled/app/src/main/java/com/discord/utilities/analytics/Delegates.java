@@ -2,7 +2,6 @@ package com.discord.utilities.analytics;
 
 import android.util.Base64;
 import com.google.gson.Gson;
-import com.google.gson.JsonIOException;
 import java.nio.charset.Charset;
 import java.util.Map;
 import java.util.Objects;
@@ -11,9 +10,9 @@ import p507d0.p509b0.ObservableProperty;
 import p507d0.p579g0.Charsets2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Delegates.kt */
-/* renamed from: com.discord.utilities.analytics.AnalyticSuperProperties$$special$$inlined$observable$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticSuperProperties$$special$$inlined$observable$1, reason: use source file name */
+/* JADX INFO: compiled from: Delegates.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Delegates extends ObservableProperty<Map<String, ? extends Object>> {
     public final /* synthetic */ Object $initialValue;
 
@@ -24,7 +23,7 @@ public final class Delegates extends ObservableProperty<Map<String, ? extends Ob
     }
 
     @Override // p507d0.p509b0.ObservableProperty
-    public void afterChange(KProperty<?> property, Map<String, ? extends Object> oldValue, Map<String, ? extends Object> newValue) throws JsonIOException {
+    public void afterChange(KProperty<?> property, Map<String, ? extends Object> oldValue, Map<String, ? extends Object> newValue) {
         Intrinsics3.checkNotNullParameter(property, "property");
         AnalyticSuperProperties analyticSuperProperties = AnalyticSuperProperties.INSTANCE;
         String strM9209m = new Gson().m9209m(newValue);

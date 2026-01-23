@@ -6,20 +6,20 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p336k.C4330d;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzd extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzd> CREATOR = new C4330d();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f20827j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final HarmfulAppsData[] f20828k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f20829l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f20830m;
 
     public zzd(long j, HarmfulAppsData[] harmfulAppsDataArr, int i, boolean z2) {

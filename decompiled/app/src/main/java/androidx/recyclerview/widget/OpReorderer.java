@@ -3,7 +3,7 @@ package androidx.recyclerview.widget;
 import androidx.recyclerview.widget.AdapterHelper;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class OpReorderer {
     public final Callback mCallback;
 

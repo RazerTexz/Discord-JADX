@@ -2,21 +2,21 @@ package p007b.p225i.p226a.p288f.p330i.p332b;
 
 import java.util.concurrent.atomic.AtomicReference;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.o6 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.o6 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RunnableC4138o6 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ AtomicReference f11010j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ String f11011k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ String f11012l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ C3999c6 f11013m;
 
     public RunnableC4138o6(C3999c6 c3999c6, AtomicReference atomicReference, String str, String str2) {
@@ -27,7 +27,7 @@ public final class RunnableC4138o6 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException {
+    public final void run() {
         C4161q7 c4161q7M5953x = this.f11013m.f11202a.m5953x();
         AtomicReference atomicReference = this.f11010j;
         String str = this.f11011k;

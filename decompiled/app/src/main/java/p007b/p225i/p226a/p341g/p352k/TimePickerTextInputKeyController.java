@@ -9,21 +9,21 @@ import android.widget.TextView;
 import com.google.android.material.timepicker.ChipTextInputComboView;
 import com.google.android.material.timepicker.TimeModel;
 
-/* compiled from: TimePickerTextInputKeyController.java */
-/* renamed from: b.i.a.g.k.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.k.h, reason: use source file name */
+/* JADX INFO: compiled from: TimePickerTextInputKeyController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TimePickerTextInputKeyController implements TextView.OnEditorActionListener, View.OnKeyListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ChipTextInputComboView f11873j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ChipTextInputComboView f11874k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final TimeModel f11875l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f11876m = false;
 
     public TimePickerTextInputKeyController(ChipTextInputComboView chipTextInputComboView, ChipTextInputComboView chipTextInputComboView2, TimeModel timeModel) {
@@ -32,7 +32,7 @@ public class TimePickerTextInputKeyController implements TextView.OnEditorAction
         this.f11875l = timeModel;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m6178a(int i) {
         this.f11874k.setChecked(i == 12);
         this.f11873j.setChecked(i == 10);

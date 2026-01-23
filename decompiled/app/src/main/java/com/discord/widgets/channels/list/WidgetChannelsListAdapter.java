@@ -101,8 +101,8 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChannelsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<ChannelListItem> {
     private int bottomNavHeight;
     private final FragmentManager fragmentManager;
@@ -118,7 +118,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
     private Function1<? super Guild, Unit> onViewGuildScheduledEvents;
     private long selectedGuildId;
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static abstract class Item extends MGRecyclerViewHolder<WidgetChannelsListAdapter, ChannelListItem> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Item(@LayoutRes int i, WidgetChannelsListAdapter widgetChannelsListAdapter) {
@@ -143,7 +143,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemChannelAddServer extends Item {
         private final WidgetChannelsListItemDirectoryBinding binding;
 
@@ -165,7 +165,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
             onConfigure2(i, channelListItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -177,18 +177,18 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemChannelCategory extends Item {
         private static final long ANIMATION_DURATION = 300;
         private static final RotateAnimation ARROW_ANIM_COLLAPSE;
         private static final RotateAnimation ARROW_ANIM_EXPAND;
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE;
         private final WidgetChannelsListItemCategoryBinding binding;
         private boolean isCollapsed;
 
-        /* compiled from: WidgetChannelsListAdapter.kt */
+        /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -273,7 +273,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
             onConfigure2(i, channelListItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -321,7 +321,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemChannelDirectory extends Item {
         private final WidgetChannelsListItemDirectoryBinding binding;
 
@@ -343,7 +343,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
             onConfigure2(i, channelListItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -370,7 +370,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemChannelPrivate extends Item {
         private final WidgetChannelsListItemChannelPrivateBinding binding;
 
@@ -484,7 +484,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         /* JADX WARN: Removed duplicated region for block: B:25:0x0161  */
         /* JADX WARN: Removed duplicated region for block: B:27:0x0164  */
         /* JADX WARN: Removed duplicated region for block: B:28:0x0166  */
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -585,14 +585,14 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemChannelStageVoice extends Item {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final WidgetChannelsListItemChannelStageVoiceBinding binding;
 
-        /* compiled from: WidgetChannelsListAdapter.kt */
+        /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -669,7 +669,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
 
         @SuppressLint({"SetTextI18n"})
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             ColorStateList colorStateListValueOf;
             Intrinsics3.checkNotNullParameter(data, "data");
@@ -731,7 +731,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemChannelText extends Item {
         private final WidgetChannelsListItemChannelBinding binding;
 
@@ -861,7 +861,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
             onConfigure2(i, channelListItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -915,7 +915,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemChannelThread extends Item {
         private final WidgetChannelsListItemThreadBinding binding;
 
@@ -1002,7 +1002,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
             onConfigure2(i, channelListItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -1042,14 +1042,14 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemChannelVoice extends Item {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final WidgetChannelsListItemChannelVoiceBinding binding;
 
-        /* compiled from: WidgetChannelsListAdapter.kt */
+        /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -1175,7 +1175,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
 
         @SuppressLint({"SetTextI18n"})
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -1277,7 +1277,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemGuildJoinRequest extends Item {
         private final WidgetChannelsListItemGuildJoinRequestBinding binding;
 
@@ -1324,7 +1324,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
             onConfigure2(i, channelListItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -1376,7 +1376,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemGuildRoleSubscriptionsOverview extends Item {
         private final WidgetChannelsListItemGuildRoleSubsBinding binding;
 
@@ -1409,7 +1409,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
             onConfigure2(i, channelListItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -1426,7 +1426,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemGuildScheduledEvents extends Item {
         private final WidgetChannelsListItemGuildScheduledEventsBinding binding;
 
@@ -1463,7 +1463,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
             onConfigure2(i, channelListItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -1485,7 +1485,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemHeader extends Item {
         private final WidgetChannelsListItemHeaderBinding binding;
 
@@ -1514,7 +1514,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
             onConfigure2(i, channelListItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -1547,7 +1547,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemInvite extends Item {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ItemInvite(int i, WidgetChannelsListAdapter widgetChannelsListAdapter) {
@@ -1564,7 +1564,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
             onConfigure2(i, channelListItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -1583,7 +1583,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemMFA extends MGRecyclerViewHolder<WidgetChannelsListAdapter, ChannelListItem> {
         private final WidgetChannelsListItemMfaBinding binding;
 
@@ -1606,7 +1606,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
             onConfigure2(i, channelListItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -1616,7 +1616,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemSpace extends MGRecyclerViewHolder<WidgetChannelsListAdapter, ChannelListItem> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ItemSpace(@LayoutRes int i, WidgetChannelsListAdapter widgetChannelsListAdapter) {
@@ -1629,7 +1629,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
             onConfigure2(i, channelListItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -1643,12 +1643,12 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemStageActiveEvent extends Item {
         private final WidgetChannelsListItemActiveEventBinding binding;
 
-        /* compiled from: WidgetChannelsListAdapter.kt */
-        /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListAdapter$ItemStageActiveEvent$1 */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListAdapter$ItemStageActiveEvent$1 */
+        /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
         public static final class ViewOnClickListenerC74491 implements View.OnClickListener {
             public final /* synthetic */ WidgetChannelsListAdapter $adapter;
 
@@ -1736,7 +1736,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
 
         /* JADX WARN: Removed duplicated region for block: B:32:0x00a4  */
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -1806,7 +1806,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemStageChannelAudienceCount extends Item {
         private final WidgetChannelsListItemAudienceCountBinding binding;
 
@@ -1835,7 +1835,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
             onConfigure2(i, channelListItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -1849,7 +1849,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         }
     }
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class ItemVoiceUser extends Item {
         private final WidgetChannelsListItemVoiceUserBinding binding;
 
@@ -1902,7 +1902,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
             onConfigure2(i, channelListItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

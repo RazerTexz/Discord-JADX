@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.channels.list.WidgetChannelsListAdapter;
 import com.discord.widgets.channels.list.items.ChannelListItemDirectory;
 
-/* compiled from: WidgetChannelsListAdapter.kt */
-/* renamed from: com.discord.widgets.channels.list.WidgetChannelsListAdapter$ItemChannelDirectory$onConfigure$$inlined$apply$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListAdapter$ItemChannelDirectory$onConfigure$$inlined$apply$lambda$1 */
+/* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewOnClickListenerC7445xe91b54ea implements View.OnClickListener {
     public final /* synthetic */ ChannelListItemDirectory $item$inlined;
     public final /* synthetic */ WidgetChannelsListAdapter.ItemChannelDirectory this$0;

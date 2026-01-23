@@ -7,7 +7,7 @@ import java.util.List;
 import p007b.p008a.p033m.p034a.C1130a;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelMessageDelete implements Model {
     private long channelId;
     private List<Long> messageIds;

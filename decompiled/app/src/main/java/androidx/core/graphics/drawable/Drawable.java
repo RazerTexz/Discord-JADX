@@ -7,9 +7,9 @@ import android.graphics.drawable.BitmapDrawable;
 import androidx.annotation.Px;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Drawable.kt */
-/* renamed from: androidx.core.graphics.drawable.DrawableKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.graphics.drawable.DrawableKt, reason: use source file name */
+/* JADX INFO: compiled from: Drawable.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Drawable {
     public static final Bitmap toBitmap(android.graphics.drawable.Drawable drawable, @Px int i, @Px int i2, Bitmap.Config config) {
         Intrinsics3.checkNotNullParameter(drawable, "<this>");

@@ -4,17 +4,17 @@ import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicReference;
 import p658rx.exceptions.CompositeException;
 
-/* compiled from: ExceptionsUtils.java */
-/* renamed from: j0.l.e.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.e.d, reason: use source file name */
+/* JADX INFO: compiled from: ExceptionsUtils.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum ExceptionsUtils {
     ;
 
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Throwable f27268j = new Throwable("Terminated");
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static boolean m10811f(AtomicReference<Throwable> atomicReference, Throwable th) {
         Throwable th2;
         Throwable compositeException;
@@ -36,12 +36,12 @@ public enum ExceptionsUtils {
         return true;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static boolean m10812g(Throwable th) {
         return th == f27268j;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static Throwable m10813h(AtomicReference<Throwable> atomicReference) {
         Throwable th = atomicReference.get();
         Throwable th2 = f27268j;

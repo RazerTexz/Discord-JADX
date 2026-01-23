@@ -6,16 +6,16 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Science.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Science.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Science {
     private final List<Event> events;
     private final String token;
 
-    /* compiled from: Science.kt */
+    /* JADX INFO: compiled from: Science.kt */
     public static abstract class Event {
 
-        /* compiled from: Science.kt */
+        /* JADX INFO: compiled from: Science.kt */
         public static final /* data */ class MapObject extends Event {
             private final Map<String, Object> properties;
             private final String type;
@@ -30,7 +30,7 @@ public final class Science {
             }
 
             @Override // com.discord.api.science.Science.Event
-            /* renamed from: a, reason: from getter */
+            /* JADX INFO: renamed from: a, reason: from getter */
             public String getType() {
                 return this.type;
             }
@@ -61,7 +61,7 @@ public final class Science {
             }
         }
 
-        /* compiled from: Science.kt */
+        /* JADX INFO: compiled from: Science.kt */
         public static final /* data */ class SchemaObject extends Event {
             private final AnalyticsSchema schema;
             private final String type;
@@ -75,12 +75,12 @@ public final class Science {
             }
 
             @Override // com.discord.api.science.Science.Event
-            /* renamed from: a, reason: from getter */
+            /* JADX INFO: renamed from: a, reason: from getter */
             public String getType() {
                 return this.type;
             }
 
-            /* renamed from: b, reason: from getter */
+            /* JADX INFO: renamed from: b, reason: from getter */
             public final AnalyticsSchema getSchema() {
                 return this.schema;
             }
@@ -111,7 +111,7 @@ public final class Science {
         public Event() {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public abstract String getType();
 
         public Event(DefaultConstructorMarker defaultConstructorMarker) {

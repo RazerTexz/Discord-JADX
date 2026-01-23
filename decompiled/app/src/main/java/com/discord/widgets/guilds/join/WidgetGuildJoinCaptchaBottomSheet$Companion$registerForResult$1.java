@@ -8,8 +8,8 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildJoinCaptchaBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildJoinCaptchaBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildJoinCaptchaBottomSheet$Companion$registerForResult$1 extends Lambda implements Function2<String, Bundle, Unit> {
     public final /* synthetic */ AppFragment $fragment;
     public final /* synthetic */ Function2 $onCaptchaPayloadReceived;
@@ -29,7 +29,7 @@ public final class WidgetGuildJoinCaptchaBottomSheet$Companion$registerForResult
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(String str, Bundle bundle) {
         Intrinsics3.checkNotNullParameter(str, "resultRequestKey");
         Intrinsics3.checkNotNullParameter(bundle, "bundle");

@@ -48,25 +48,25 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsRoles.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsRoles.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsRoles extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsRoles.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsRolesBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
     private WidgetServerSettingsRolesAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
     private ItemTouchHelper itemTouchHelper;
     private final AppLogger2 loggingConfig;
 
-    /* compiled from: WidgetServerSettingsRoles.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoles.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -84,10 +84,10 @@ public final class WidgetServerSettingsRoles extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsRoles.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoles.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean canManageRoles;
         private final boolean elevated;
@@ -95,7 +95,7 @@ public final class WidgetServerSettingsRoles extends AppFragment {
         private final String guildName;
         private final List<DragAndDropAdapter.Payload> roleItems;
 
-        /* compiled from: WidgetServerSettingsRoles.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsRoles.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -121,6 +121,7 @@ public final class WidgetServerSettingsRoles extends AppFragment {
             this.roleItems = list;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Model copy$default(Model model, long j, String str, boolean z2, boolean z3, List list, int i, Object obj) {
             if ((i & 1) != 0) {
                 j = model.guildId;
@@ -144,22 +145,22 @@ public final class WidgetServerSettingsRoles extends AppFragment {
             return model.copy(j2, str2, z4, z5, list);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getGuildName() {
             return this.guildName;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getCanManageRoles() {
             return this.canManageRoles;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getElevated() {
             return this.elevated;
         }
@@ -205,20 +206,26 @@ public final class WidgetServerSettingsRoles extends AppFragment {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v4, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v7 */
+        /* JADX WARN: Type inference failed for: r1v9 */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             int iM3a = C0002b.m3a(this.guildId) * 31;
             String str = this.guildName;
             int iHashCode = (iM3a + (str != null ? str.hashCode() : 0)) * 31;
             boolean z2 = this.canManageRoles;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r1) * 31;
             boolean z3 = this.elevated;
-            int i3 = (i2 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+            int i2 = (i + (z3 ? 1 : z3)) * 31;
             List<DragAndDropAdapter.Payload> list = this.roleItems;
-            return i3 + (list != null ? list.hashCode() : 0);
+            return i2 + (list != null ? list.hashCode() : 0);
         }
 
         public String toString() {
@@ -235,8 +242,8 @@ public final class WidgetServerSettingsRoles extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsRoles.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoles.kt */
     public static final class C93001 extends Lambda implements Function1<GuildRole, Unit> {
         public final /* synthetic */ Model $data;
 
@@ -252,15 +259,15 @@ public final class WidgetServerSettingsRoles extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRole guildRole) {
             Intrinsics3.checkNotNullParameter(guildRole, "<name for destructuring parameter 0>");
             WidgetServerSettingsEditRole.INSTANCE.launch(this.$data.getGuildId(), guildRole.getId(), WidgetServerSettingsRoles.this.requireContext());
         }
     }
 
-    /* compiled from: WidgetServerSettingsRoles.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoles.kt */
     public static final class C93012 extends Lambda implements Function1<Map<String, ? extends Integer>, Unit> {
         public final /* synthetic */ Model $data;
 
@@ -276,15 +283,15 @@ public final class WidgetServerSettingsRoles extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<String, Integer> map) {
             Intrinsics3.checkNotNullParameter(map, "newPositions");
             WidgetServerSettingsRoles.access$processRoleDrop(WidgetServerSettingsRoles.this, map, this.$data);
         }
     }
 
-    /* compiled from: WidgetServerSettingsRoles.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoles.kt */
     public static final class ViewOnClickListenerC93023 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -298,13 +305,13 @@ public final class WidgetServerSettingsRoles extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsRoles.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$createRole$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$createRole$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoles.kt */
     public static final class C93031<T, R> implements Func1<GuildRole, Observable<? extends GuildRole>> {
         public final /* synthetic */ long $guildId;
 
-        /* compiled from: WidgetServerSettingsRoles.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$createRole$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$createRole$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsRoles.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Map<Long, ? extends GuildRole>, GuildRole> {
             public final /* synthetic */ long $id;
 
@@ -317,7 +324,7 @@ public final class WidgetServerSettingsRoles extends AppFragment {
                 return call2((Map<Long, GuildRole>) map);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final GuildRole call2(Map<Long, GuildRole> map) {
                 return map.get(Long.valueOf(this.$id));
             }
@@ -332,15 +339,15 @@ public final class WidgetServerSettingsRoles extends AppFragment {
             return call2(guildRole);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends GuildRole> call2(GuildRole guildRole) {
             long id2 = guildRole.getId();
             return StoreStream.INSTANCE.getGuilds().observeRoles(this.$guildId, CollectionsJVM.listOf(Long.valueOf(id2))).m11083G(new AnonymousClass1(id2));
         }
     }
 
-    /* compiled from: WidgetServerSettingsRoles.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$createRole$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$createRole$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoles.kt */
     public static final class C93042 extends Lambda implements Function1<GuildRole, Unit> {
         public final /* synthetic */ Model $dataSnapshot;
         public final /* synthetic */ long $guildId;
@@ -358,7 +365,7 @@ public final class WidgetServerSettingsRoles extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRole guildRole) throws Exception {
             if (guildRole != null) {
                 WidgetServerSettingsEditRole.INSTANCE.launch(this.$guildId, guildRole.getId(), WidgetServerSettingsRoles.this.requireContext());
@@ -368,8 +375,8 @@ public final class WidgetServerSettingsRoles extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsRoles.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoles.kt */
     public static final /* synthetic */ class C93051 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C93051(WidgetServerSettingsRoles widgetServerSettingsRoles) {
             super(1, widgetServerSettingsRoles, WidgetServerSettingsRoles.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/WidgetServerSettingsRoles$Model;)V", 0);
@@ -381,14 +388,14 @@ public final class WidgetServerSettingsRoles extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) throws Exception {
             WidgetServerSettingsRoles.access$configureUI((WidgetServerSettingsRoles) this.receiver, model);
         }
     }
 
-    /* compiled from: WidgetServerSettingsRoles.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$processRoleDrop$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$processRoleDrop$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoles.kt */
     public static final class C93061 extends Lambda implements Function1<Void, Unit> {
         public C93061() {
             super(1);
@@ -400,14 +407,14 @@ public final class WidgetServerSettingsRoles extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r4) {
             AppToast.m171i(WidgetServerSettingsRoles.this, C5419R.string.role_order_updated, 0, 4);
         }
     }
 
-    /* compiled from: WidgetServerSettingsRoles.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$processRoleDrop$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$processRoleDrop$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoles.kt */
     public static final class C93072 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ Model $dataSnapshot;
 
@@ -423,7 +430,7 @@ public final class WidgetServerSettingsRoles extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) throws Exception {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetServerSettingsRoles.access$configureUI(WidgetServerSettingsRoles.this, this.$dataSnapshot);

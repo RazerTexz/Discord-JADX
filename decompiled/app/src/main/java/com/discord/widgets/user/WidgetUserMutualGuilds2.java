@@ -6,9 +6,9 @@ import com.discord.stores.StoreGuildSelected;
 import com.discord.stores.StoreStream;
 import com.discord.widgets.user.WidgetUserMutualGuilds;
 
-/* compiled from: WidgetUserMutualGuilds.kt */
-/* renamed from: com.discord.widgets.user.WidgetUserMutualGuilds$Adapter$ViewHolder$onConfigure$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserMutualGuilds$Adapter$ViewHolder$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUserMutualGuilds.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserMutualGuilds2 implements View.OnClickListener {
     public final /* synthetic */ WidgetUserMutualGuilds.Model.Item $data;
     public final /* synthetic */ WidgetUserMutualGuilds.Adapter.ViewHolder this$0;

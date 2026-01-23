@@ -27,18 +27,18 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetThreadStatusViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetThreadStatusViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadStatusViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private StoreState currentStoreState;
     private final PublishSubject<WidgetThreadStatus.Event> eventSubject;
     private final Observable<StoreState> storeStateObservable;
 
-    /* compiled from: WidgetThreadStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetThreadStatusViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetThreadStatusViewModel$1 */
+    /* JADX INFO: compiled from: WidgetThreadStatusViewModel.kt */
     public static final class C101151 extends Lambda implements Function1<StoreState, Unit> {
         public C101151() {
             super(1);
@@ -50,14 +50,14 @@ public final class WidgetThreadStatusViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetThreadStatusViewModel.access$handleStoreState(WidgetThreadStatusViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetThreadStatusViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadStatusViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -97,10 +97,10 @@ public final class WidgetThreadStatusViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetThreadStatusViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadStatusViewModel.kt */
     public static abstract class Status {
 
-        /* compiled from: WidgetThreadStatusViewModel.kt */
+        /* JADX INFO: compiled from: WidgetThreadStatusViewModel.kt */
         public static final /* data */ class Archived extends Status {
             private final boolean canArchive;
             private final boolean isLocked;
@@ -121,12 +121,12 @@ public final class WidgetThreadStatusViewModel extends AppViewModel<ViewState> {
                 return archived.copy(z2, z3);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final boolean getIsLocked() {
                 return this.isLocked;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getCanArchive() {
                 return this.canArchive;
             }
@@ -154,6 +154,9 @@ public final class WidgetThreadStatusViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: Type inference failed for: r0v1, types: [int] */
             /* JADX WARN: Type inference failed for: r0v4 */
             /* JADX WARN: Type inference failed for: r0v5 */
+            /* JADX WARN: Type inference failed for: r1v0 */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v2 */
             public int hashCode() {
                 boolean z2 = this.isLocked;
                 ?? r0 = z2;
@@ -162,7 +165,7 @@ public final class WidgetThreadStatusViewModel extends AppViewModel<ViewState> {
                 }
                 int i = r0 * 31;
                 boolean z3 = this.canArchive;
-                return i + (z3 ? 1 : z3 ? 1 : 0);
+                return i + (z3 ? 1 : z3);
             }
 
             public final boolean isLocked() {
@@ -177,7 +180,7 @@ public final class WidgetThreadStatusViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetThreadStatusViewModel.kt */
+        /* JADX INFO: compiled from: WidgetThreadStatusViewModel.kt */
         public static final class Hide extends Status {
             public static final Hide INSTANCE = new Hide();
 
@@ -186,7 +189,7 @@ public final class WidgetThreadStatusViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetThreadStatusViewModel.kt */
+        /* JADX INFO: compiled from: WidgetThreadStatusViewModel.kt */
         public static final class Unjoined extends Status {
             public static final Unjoined INSTANCE = new Unjoined();
 
@@ -203,7 +206,7 @@ public final class WidgetThreadStatusViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetThreadStatusViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadStatusViewModel.kt */
     public static final /* data */ class StoreState {
         private final Map<Long, Map<Long, StoreThreadsActiveJoined.ActiveJoinedThread>> activeJoinedThreads;
         private final boolean canAccessRedesignedForumChannels;
@@ -223,6 +226,7 @@ public final class WidgetThreadStatusViewModel extends AppViewModel<ViewState> {
             this.canAccessRedesignedForumChannels = z4;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, Map map, Channel channel, Channel channel2, boolean z2, boolean z3, boolean z4, int i, Object obj) {
             if ((i & 1) != 0) {
                 map = storeState.activeJoinedThreads;
@@ -253,27 +257,27 @@ public final class WidgetThreadStatusViewModel extends AppViewModel<ViewState> {
             return this.activeJoinedThreads;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Channel getSelectedChannel() {
             return this.selectedChannel;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Channel getParentChannel() {
             return this.parentChannel;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getCanArchive() {
             return this.canArchive;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getIsModerator() {
             return this.isModerator;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getCanAccessRedesignedForumChannels() {
             return this.canAccessRedesignedForumChannels;
         }
@@ -315,6 +319,15 @@ public final class WidgetThreadStatusViewModel extends AppViewModel<ViewState> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v10 */
+        /* JADX WARN: Type inference failed for: r1v11 */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v7 */
+        /* JADX WARN: Type inference failed for: r1v8 */
+        /* JADX WARN: Type inference failed for: r2v4 */
+        /* JADX WARN: Type inference failed for: r2v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v6 */
         public int hashCode() {
             Map<Long, Map<Long, StoreThreadsActiveJoined.ActiveJoinedThread>> map = this.activeJoinedThreads;
             int iHashCode = (map != null ? map.hashCode() : 0) * 31;
@@ -323,19 +336,19 @@ public final class WidgetThreadStatusViewModel extends AppViewModel<ViewState> {
             Channel channel2 = this.parentChannel;
             int iHashCode3 = (iHashCode2 + (channel2 != null ? channel2.hashCode() : 0)) * 31;
             boolean z2 = this.canArchive;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode3 + i) * 31;
+            int i = (iHashCode3 + r1) * 31;
             boolean z3 = this.isModerator;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r12 = z3;
+            if (z3) {
+                r12 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r12) * 31;
             boolean z4 = this.canAccessRedesignedForumChannels;
-            return i4 + (z4 ? 1 : z4 ? 1 : 0);
+            return i2 + (z4 ? 1 : z4);
         }
 
         public final boolean isModerator() {
@@ -358,7 +371,7 @@ public final class WidgetThreadStatusViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetThreadStatusViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadStatusViewModel.kt */
     public static final /* data */ class ViewState {
         private final boolean isLoading;
         private final Status threadStatus;
@@ -379,12 +392,12 @@ public final class WidgetThreadStatusViewModel extends AppViewModel<ViewState> {
             return viewState.copy(status, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Status getThreadStatus() {
             return this.threadStatus;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsLoading() {
             return this.isLoading;
         }
@@ -410,15 +423,18 @@ public final class WidgetThreadStatusViewModel extends AppViewModel<ViewState> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             Status status = this.threadStatus;
             int iHashCode = (status != null ? status.hashCode() : 0) * 31;
             boolean z2 = this.isLoading;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public final boolean isLoading() {

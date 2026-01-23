@@ -3,12 +3,12 @@ package p007b.p225i.p361c.p398s;
 import android.util.Log;
 import p007b.p225i.p361c.p398s.ServiceConnectionC4812d0;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-/* renamed from: b.i.c.s.b0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.s.b0 */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC4808b0 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ServiceConnectionC4812d0.a f12847j;
 
     public RunnableC4808b0(ServiceConnectionC4812d0.a aVar) {

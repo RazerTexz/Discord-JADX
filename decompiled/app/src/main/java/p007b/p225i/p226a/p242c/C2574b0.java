@@ -6,12 +6,12 @@ import com.google.android.exoplayer2.ExoTimeoutException;
 import p007b.p225i.p226a.p242c.Player2;
 import p007b.p225i.p226a.p242c.p259f3.ListenerSet;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.b0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b0 */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2574b0 implements ListenerSet.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ C2574b0 f5738a = new C2574b0();
 
     @Override // p007b.p225i.p226a.p242c.p259f3.ListenerSet.a

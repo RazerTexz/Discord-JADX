@@ -17,19 +17,19 @@ import p507d0.p513e0.p514p.p515d.p517m0.p550i.Internal;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLite;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.WireFormat;
 
-/* compiled from: GeneratedMessageLite.java */
-/* renamed from: d0.e0.p.d.m0.i.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.i.g, reason: use source file name */
+/* JADX INFO: compiled from: GeneratedMessageLite.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class GeneratedMessageLite extends AbstractMessageLite implements Serializable {
 
-    /* compiled from: GeneratedMessageLite.java */
-    /* renamed from: d0.e0.p.d.m0.i.g$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.g$b */
+    /* JADX INFO: compiled from: GeneratedMessageLite.java */
     public static abstract class b<MessageType extends GeneratedMessageLite, BuilderType extends b> extends AbstractMessageLite.a<BuilderType> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public ByteString3 f24125j = ByteString3.f24100j;
 
-        /* renamed from: clone */
+        /* JADX INFO: renamed from: clone */
         public /* bridge */ /* synthetic */ Object mo11465clone() throws CloneNotSupportedException {
             return clone();
         }
@@ -50,17 +50,17 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
         }
     }
 
-    /* compiled from: GeneratedMessageLite.java */
-    /* renamed from: d0.e0.p.d.m0.i.g$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.g$c */
+    /* JADX INFO: compiled from: GeneratedMessageLite.java */
     public static abstract class c<MessageType extends d<MessageType>, BuilderType extends c<MessageType, BuilderType>> extends b<MessageType, BuilderType> implements MessageLiteOrBuilder {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public FieldSet<e> f24126k = FieldSet.emptySet();
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public boolean f24127l;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void m9846b(MessageType messagetype) {
             if (!this.f24127l) {
                 this.f24126k = this.f24126k.clone();
@@ -70,23 +70,23 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
         }
     }
 
-    /* compiled from: GeneratedMessageLite.java */
-    /* renamed from: d0.e0.p.d.m0.i.g$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.g$e */
+    /* JADX INFO: compiled from: GeneratedMessageLite.java */
     public static final class e implements FieldSet.a<e> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Internal.b<?> f24132j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final int f24133k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final WireFormat.b f24134l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final boolean f24135m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final boolean f24136n;
 
         public e(Internal.b<?> bVar, int i, WireFormat.b bVar2, boolean z2, boolean z3) {
@@ -141,23 +141,23 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
         }
     }
 
-    /* compiled from: GeneratedMessageLite.java */
-    /* renamed from: d0.e0.p.d.m0.i.g$f */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.g$f */
+    /* JADX INFO: compiled from: GeneratedMessageLite.java */
     public static class f<ContainingType extends MessageLite, Type> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ContainingType f24137a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Type f24138b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final MessageLite f24139c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final e f24140d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final Method f24141e;
 
         public f(ContainingType containingtype, Type type, MessageLite messageLite, e eVar, Class cls) {
@@ -186,7 +186,7 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
             }
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Object m9854a(Object obj) {
             if (this.f24140d.getLiteJavaType() != WireFormat.c.ENUM) {
                 return obj;
@@ -207,7 +207,7 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
             }
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Object m9855b(Object obj) {
             return this.f24140d.getLiteJavaType() == WireFormat.c.ENUM ? Integer.valueOf(((Internal.a) obj).getNumber()) : obj;
         }
@@ -236,22 +236,22 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
         return new f<>(containingtype, type, messageLite, new e(bVar, i, bVar2, false, false), cls);
     }
 
-    /* compiled from: GeneratedMessageLite.java */
-    /* renamed from: d0.e0.p.d.m0.i.g$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.g$d */
+    /* JADX INFO: compiled from: GeneratedMessageLite.java */
     public static abstract class d<MessageType extends d<MessageType>> extends GeneratedMessageLite implements MessageLiteOrBuilder {
         private final FieldSet<e> extensions;
 
-        /* compiled from: GeneratedMessageLite.java */
-        /* renamed from: d0.e0.p.d.m0.i.g$d$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.i.g$d$a */
+        /* JADX INFO: compiled from: GeneratedMessageLite.java */
         public class a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final Iterator<Map.Entry<e, Object>> f24128a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public Map.Entry<e, Object> f24129b;
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public final boolean f24130c;
 
             public a(boolean z2, a aVar) {
@@ -288,32 +288,32 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
             this.extensions = FieldSet.newFieldSet();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ FieldSet m9847a(d dVar) {
             return dVar.extensions;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean m9848b() {
             return this.extensions.isInitialized();
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int m9849c() {
             return this.extensions.getSerializedSize();
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public void m9850d() {
             this.extensions.makeImmutable();
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public d<MessageType>.a m9851e() {
             return new a(false, null);
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean m9852f(CodedInputStream codedInputStream, CodedOutputStream codedOutputStream, ExtensionRegistryLite extensionRegistryLite, int i) throws IOException {
             boolean z2;
             boolean z3;
@@ -393,7 +393,7 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
             return true;
         }
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final void m9853g(f<MessageType, ?> fVar) {
             if (fVar.getContainingTypeDefaultInstance() != getDefaultInstanceForType()) {
                 throw new IllegalArgumentException("This extension is for a different message type.  Please make sure that you are not suppressing any generics type warnings.");

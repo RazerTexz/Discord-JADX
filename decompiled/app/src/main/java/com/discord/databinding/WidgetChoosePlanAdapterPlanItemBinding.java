@@ -8,34 +8,34 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.C5419R;
 import com.google.android.material.card.MaterialCardView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChoosePlanAdapterPlanItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final MaterialCardView f16376a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ImageView f16377b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final MaterialCardView f16378c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f16379d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final ImageView f16380e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final TextView f16381f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final TextView f16382g;
 
@@ -50,7 +50,7 @@ public final class WidgetChoosePlanAdapterPlanItemBinding implements ViewBinding
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static WidgetChoosePlanAdapterPlanItemBinding m8412a(@NonNull View view) {
         int i = C5419R.id.plan_item_border;
         ImageView imageView = (ImageView) view.findViewById(C5419R.id.plan_item_border);

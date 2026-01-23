@@ -15,7 +15,7 @@ import androidx.annotation.RestrictTo;
 import androidx.cursoradapter.widget.CursorFilter;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class CursorAdapter extends BaseAdapter implements Filterable, CursorFilter.CursorFilterClient {
 
     @Deprecated

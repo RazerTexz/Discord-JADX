@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ExoTimeoutException extends RuntimeException {
     public final int timeoutOperation;
 

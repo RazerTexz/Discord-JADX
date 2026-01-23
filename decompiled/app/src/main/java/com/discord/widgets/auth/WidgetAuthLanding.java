@@ -36,22 +36,22 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetAuthLanding.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetAuthLanding.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAuthLanding extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetAuthLanding.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthLandingBinding;", 0)};
     private static final int VIEW_INDEX_HAS_INVITE = 1;
     private static final int VIEW_INDEX_NO_INVITE = 0;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final AppLogger2 loggingConfig;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetAuthLanding.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$configureRegisterButton$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLanding$configureRegisterButton$1 */
+    /* JADX INFO: compiled from: WidgetAuthLanding.kt */
     public static final class ViewOnClickListenerC71731 implements View.OnClickListener {
         public final /* synthetic */ String $ageGateError;
 
@@ -65,8 +65,8 @@ public final class WidgetAuthLanding extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthLanding.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$configureRegisterButton$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLanding$configureRegisterButton$2 */
+    /* JADX INFO: compiled from: WidgetAuthLanding.kt */
     public static final class ViewOnClickListenerC71742 implements View.OnClickListener {
         public ViewOnClickListenerC71742() {
         }
@@ -81,8 +81,8 @@ public final class WidgetAuthLanding extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthLanding.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLanding$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetAuthLanding.kt */
     public static final /* synthetic */ class C71751 extends FunctionReferenceImpl implements Function1<WidgetAuthLandingViewModel.ViewState, Unit> {
         public C71751(WidgetAuthLanding widgetAuthLanding) {
             super(1, widgetAuthLanding, WidgetAuthLanding.class, "configureUI", "configureUI(Lcom/discord/widgets/auth/WidgetAuthLandingViewModel$ViewState;)V", 0);
@@ -94,15 +94,15 @@ public final class WidgetAuthLanding extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetAuthLandingViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetAuthLanding.access$configureUI((WidgetAuthLanding) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetAuthLanding.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLanding$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetAuthLanding.kt */
     public static final class ViewOnClickListenerC71762 implements View.OnClickListener {
         public static final ViewOnClickListenerC71762 INSTANCE = new ViewOnClickListenerC71762();
 
@@ -115,8 +115,8 @@ public final class WidgetAuthLanding extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthLanding.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLanding$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetAuthLanding.kt */
     public static final class ViewOnClickListenerC71773 implements View.OnClickListener {
         public ViewOnClickListenerC71773() {
         }
@@ -131,8 +131,8 @@ public final class WidgetAuthLanding extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthLanding.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLanding$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetAuthLanding.kt */
     public static final /* synthetic */ class C71781 extends FunctionReferenceImpl implements Function1<WidgetAuthLandingViewModel.Event, Unit> {
         public C71781(WidgetAuthLanding widgetAuthLanding) {
             super(1, widgetAuthLanding, WidgetAuthLanding.class, "handleEvent", "handleEvent(Lcom/discord/widgets/auth/WidgetAuthLandingViewModel$Event;)V", 0);
@@ -144,7 +144,7 @@ public final class WidgetAuthLanding extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetAuthLandingViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetAuthLanding.access$handleEvent((WidgetAuthLanding) this.receiver, event);

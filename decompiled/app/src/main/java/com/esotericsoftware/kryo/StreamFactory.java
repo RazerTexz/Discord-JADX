@@ -5,7 +5,7 @@ import com.esotericsoftware.kryo.p502io.Output;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface StreamFactory {
     Input getInput();
 

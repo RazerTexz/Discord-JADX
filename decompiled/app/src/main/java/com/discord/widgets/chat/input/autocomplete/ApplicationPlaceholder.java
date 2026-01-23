@@ -6,8 +6,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Autocompletable.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Autocompletable.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ApplicationPlaceholder extends Autocompletable {
     private final Application application;
 
@@ -25,7 +25,7 @@ public final /* data */ class ApplicationPlaceholder extends Autocompletable {
         return applicationPlaceholder.copy(application);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Application getApplication() {
         return this.application;
     }

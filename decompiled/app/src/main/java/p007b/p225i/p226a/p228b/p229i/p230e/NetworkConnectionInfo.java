@@ -4,14 +4,14 @@ import android.util.SparseArray;
 import androidx.annotation.Nullable;
 import com.google.auto.value.AutoValue;
 
-/* compiled from: NetworkConnectionInfo.java */
+/* JADX INFO: renamed from: b.i.a.b.i.e.o, reason: use source file name */
+/* JADX INFO: compiled from: NetworkConnectionInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 @AutoValue
-/* renamed from: b.i.a.b.i.e.o, reason: use source file name */
-/* loaded from: classes3.dex */
 public abstract class NetworkConnectionInfo {
 
-    /* compiled from: NetworkConnectionInfo.java */
-    /* renamed from: b.i.a.b.i.e.o$a */
+    /* JADX INFO: renamed from: b.i.a.b.i.e.o$a */
+    /* JADX INFO: compiled from: NetworkConnectionInfo.java */
     public enum a {
         UNKNOWN_MOBILE_SUBTYPE(0),
         GPRS(1),
@@ -36,7 +36,7 @@ public abstract class NetworkConnectionInfo {
         COMBINED(100);
 
 
-        /* renamed from: E */
+        /* JADX INFO: renamed from: E */
         public static final SparseArray<a> f5198E;
         private final int value;
 
@@ -89,14 +89,14 @@ public abstract class NetworkConnectionInfo {
             this.value = i;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int m2334f() {
             return this.value;
         }
     }
 
-    /* compiled from: NetworkConnectionInfo.java */
-    /* renamed from: b.i.a.b.i.e.o$b */
+    /* JADX INFO: renamed from: b.i.a.b.i.e.o$b */
+    /* JADX INFO: compiled from: NetworkConnectionInfo.java */
     public enum b {
         MOBILE(0),
         WIFI(1),
@@ -119,7 +119,7 @@ public abstract class NetworkConnectionInfo {
         NONE(-1);
 
 
-        /* renamed from: C */
+        /* JADX INFO: renamed from: C */
         public static final SparseArray<b> f5219C;
         private final int value;
 
@@ -170,17 +170,17 @@ public abstract class NetworkConnectionInfo {
             this.value = i;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int m2335f() {
             return this.value;
         }
     }
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract a mo2331a();
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract b mo2332b();
 }

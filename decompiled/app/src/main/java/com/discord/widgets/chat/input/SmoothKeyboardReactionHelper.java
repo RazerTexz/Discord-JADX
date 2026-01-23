@@ -8,13 +8,13 @@ import android.view.WindowInsetsAnimation;
 import java.util.List;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SmoothKeyboardReactionHelper.kt */
+/* JADX INFO: compiled from: SmoothKeyboardReactionHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 @TargetApi(30)
-/* loaded from: classes2.dex */
 public final class SmoothKeyboardReactionHelper {
     public static final SmoothKeyboardReactionHelper INSTANCE = new SmoothKeyboardReactionHelper();
 
-    /* compiled from: SmoothKeyboardReactionHelper.kt */
+    /* JADX INFO: compiled from: SmoothKeyboardReactionHelper.kt */
     public static final class Callback extends WindowInsetsAnimation.Callback {
         private final View view;
 

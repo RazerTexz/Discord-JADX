@@ -9,62 +9,62 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import java.util.ArrayDeque;
 
-/* compiled from: AsynchronousMediaCodecCallback.java */
+/* JADX INFO: renamed from: b.i.a.c.y2.o, reason: use source file name */
+/* JADX INFO: compiled from: AsynchronousMediaCodecCallback.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(23)
-/* renamed from: b.i.a.c.y2.o, reason: use source file name */
-/* loaded from: classes3.dex */
 public final class AsynchronousMediaCodecCallback extends MediaCodec.Callback {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final HandlerThread f9084b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Handler f9085c;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @Nullable
     @GuardedBy("lock")
     public MediaFormat f9090h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     @GuardedBy("lock")
     public MediaFormat f9091i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     @GuardedBy("lock")
     public MediaCodec.CodecException f9092j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @GuardedBy("lock")
     public long f9093k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @GuardedBy("lock")
     public boolean f9094l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     @GuardedBy("lock")
     public IllegalStateException f9095m;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Object f9083a = new Object();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @GuardedBy("lock")
     public final IntArrayQueue f9086d = new IntArrayQueue();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @GuardedBy("lock")
     public final IntArrayQueue f9087e = new IntArrayQueue();
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @GuardedBy("lock")
     public final ArrayDeque<MediaCodec.BufferInfo> f9088f = new ArrayDeque<>();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @GuardedBy("lock")
     public final ArrayDeque<MediaFormat> f9089g = new ArrayDeque<>();
 
@@ -73,7 +73,7 @@ public final class AsynchronousMediaCodecCallback extends MediaCodec.Callback {
     }
 
     @GuardedBy("lock")
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3853a() {
         if (!this.f9089g.isEmpty()) {
             this.f9091i = this.f9089g.getLast();
@@ -92,12 +92,12 @@ public final class AsynchronousMediaCodecCallback extends MediaCodec.Callback {
     }
 
     @GuardedBy("lock")
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m3854b() {
         return this.f9093k > 0 || this.f9094l;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m3855c(IllegalStateException illegalStateException) {
         synchronized (this.f9083a) {
             this.f9095m = illegalStateException;

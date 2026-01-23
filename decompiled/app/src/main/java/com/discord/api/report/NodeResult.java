@@ -3,8 +3,8 @@ package com.discord.api.report;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InAppReportsMenu.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: InAppReportsMenu.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class NodeResult {
     private final ReportNodeChild destination;
     private final NodeElementResult elementResult;
@@ -17,17 +17,17 @@ public final /* data */ class NodeResult {
         this.elementResult = nodeElementResult;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final ReportNodeChild getDestination() {
         return this.destination;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final NodeElementResult getElementResult() {
         return this.elementResult;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final ReportNode getNode() {
         return this.node;
     }

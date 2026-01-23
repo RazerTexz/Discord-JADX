@@ -2,8 +2,8 @@ package com.discord.widgets.tabs;
 
 import com.discord.widgets.chat.AutocompleteUtils2;
 
-/* compiled from: NavigationTab.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NavigationTab.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum NavigationTab {
     HOME,
     FRIENDS,

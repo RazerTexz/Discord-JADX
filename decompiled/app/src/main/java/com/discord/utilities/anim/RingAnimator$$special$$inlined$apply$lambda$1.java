@@ -3,8 +3,8 @@ package com.discord.utilities.anim;
 import android.animation.Animator;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Animator.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Animator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RingAnimator$$special$$inlined$apply$lambda$1 implements Animator.AnimatorListener {
     public final /* synthetic */ RingAnimator this$0;
 

@@ -41,23 +41,23 @@ import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsAccountUsernameEdit.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsAccountUsernameEdit.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsAccountUsernameEdit extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsAccountUsernameEdit.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAccountEditBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ActivityResultLauncher<Intent> passwordVerifyLauncher;
     private final StatefulViews state;
 
-    /* renamed from: validationManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: validationManager$delegate, reason: from kotlin metadata */
     private final Lazy validationManager;
 
-    /* compiled from: WidgetSettingsAccountUsernameEdit.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAccountUsernameEdit.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -72,12 +72,12 @@ public final class WidgetSettingsAccountUsernameEdit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountUsernameEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountUsernameEdit$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountUsernameEdit$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountUsernameEdit.kt */
     public static final class ViewOnFocusChangeListenerC97691 implements View.OnFocusChangeListener {
 
-        /* compiled from: WidgetSettingsAccountUsernameEdit.kt */
-        /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountUsernameEdit$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountUsernameEdit$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsAccountUsernameEdit.kt */
         public static final class AnonymousClass1 implements Runnable {
             public AnonymousClass1() {
             }
@@ -103,8 +103,8 @@ public final class WidgetSettingsAccountUsernameEdit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountUsernameEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountUsernameEdit$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountUsernameEdit$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountUsernameEdit.kt */
     public static final class C97701 extends Lambda implements Function1<Editable, Unit> {
         public C97701() {
             super(1);
@@ -116,7 +116,7 @@ public final class WidgetSettingsAccountUsernameEdit extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             TextInputLayout textInputLayout = WidgetSettingsAccountUsernameEdit.access$getBinding$p(WidgetSettingsAccountUsernameEdit.this).f17831b;
@@ -125,8 +125,8 @@ public final class WidgetSettingsAccountUsernameEdit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountUsernameEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountUsernameEdit$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountUsernameEdit$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountUsernameEdit.kt */
     public static final class C97712 extends Lambda implements Function1<TextView, Unit> {
         public C97712() {
             super(1);
@@ -138,15 +138,15 @@ public final class WidgetSettingsAccountUsernameEdit extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
             Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetSettingsAccountUsernameEdit.access$showPasswordVerification(WidgetSettingsAccountUsernameEdit.this);
         }
     }
 
-    /* compiled from: WidgetSettingsAccountUsernameEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountUsernameEdit$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountUsernameEdit$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountUsernameEdit.kt */
     public static final class ViewOnClickListenerC97723 implements View.OnClickListener {
         public ViewOnClickListenerC97723() {
         }
@@ -157,8 +157,8 @@ public final class WidgetSettingsAccountUsernameEdit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountUsernameEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountUsernameEdit$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountUsernameEdit$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountUsernameEdit.kt */
     public static final class C97731 extends Lambda implements Function1<MeUser, Unit> {
         public C97731() {
             super(1);
@@ -170,7 +170,7 @@ public final class WidgetSettingsAccountUsernameEdit extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MeUser meUser) {
             Intrinsics3.checkNotNullParameter(meUser, "it");
             WidgetSettingsAccountUsernameEdit.access$configureUI(WidgetSettingsAccountUsernameEdit.this, meUser);

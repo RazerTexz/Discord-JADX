@@ -14,9 +14,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.HttpUrl;
 import p600f0.p601e0.Util7;
 
-/* compiled from: Interceptor.kt */
-/* renamed from: com.discord.utilities.rest.RestAPI$Companion$buildAnalyticsInterceptor$$inlined$invoke$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.rest.RestAPI$Companion$buildAnalyticsInterceptor$$inlined$invoke$1, reason: use source file name */
+/* JADX INFO: compiled from: Interceptor.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Interceptor2 implements Interceptor {
     @Override // okhttp3.Interceptor
     public Response intercept(Interceptor.Chain chain) {

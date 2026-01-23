@@ -5,7 +5,7 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p368l.Component4;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class DependencyCycleException extends DependencyException {
     private final List<Component4<?>> componentsInCycle;
 

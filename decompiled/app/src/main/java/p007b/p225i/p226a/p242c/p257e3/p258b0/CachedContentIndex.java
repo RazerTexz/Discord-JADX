@@ -42,67 +42,67 @@ import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p264u2.DatabaseProvider;
 import p007b.p225i.p226a.p242c.p264u2.VersionTable;
 
-/* compiled from: CachedContentIndex.java */
-/* renamed from: b.i.a.c.e3.b0.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.b0.j, reason: use source file name */
+/* JADX INFO: compiled from: CachedContentIndex.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CachedContentIndex {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final HashMap<String, CachedContent> f6478a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final SparseArray<String> f6479b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final SparseBooleanArray f6480c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final SparseBooleanArray f6481d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public c f6482e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public c f6483f;
 
-    /* compiled from: CachedContentIndex.java */
-    /* renamed from: b.i.a.c.e3.b0.j$a */
+    /* JADX INFO: renamed from: b.i.a.c.e3.b0.j$a */
+    /* JADX INFO: compiled from: CachedContentIndex.java */
     public static final class a implements c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final String[] f6484a = {ModelAuditLogEntry.CHANGE_KEY_ID, "key", "metadata"};
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final DatabaseProvider f6485b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final SparseArray<CachedContent> f6486c = new SparseArray<>();
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public String f6487d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public String f6488e;
 
         public a(DatabaseProvider databaseProvider) {
             this.f6485b = databaseProvider;
         }
 
-        /* renamed from: j */
-        public static void m2800j(SQLiteDatabase sQLiteDatabase, String str) throws SQLException {
+        /* JADX INFO: renamed from: j */
+        public static void m2800j(SQLiteDatabase sQLiteDatabase, String str) {
             String strValueOf = String.valueOf(str);
             sQLiteDatabase.execSQL(strValueOf.length() != 0 ? "DROP TABLE IF EXISTS ".concat(strValueOf) : new String("DROP TABLE IF EXISTS "));
         }
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static String m2801k(String str) {
             String strValueOf = String.valueOf(str);
             return strValueOf.length() != 0 ? "ExoPlayerCacheIndex".concat(strValueOf) : new String("ExoPlayerCacheIndex");
         }
 
         @Override // p007b.p225i.p226a.p242c.p257e3.p258b0.CachedContentIndex.c
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo2802a(CachedContent cachedContent, boolean z2) {
             if (z2) {
                 this.f6486c.delete(cachedContent.f6471a);
@@ -112,7 +112,7 @@ public class CachedContentIndex {
         }
 
         @Override // p007b.p225i.p226a.p242c.p257e3.p258b0.CachedContentIndex.c
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo2803b(HashMap<String, CachedContent> map) throws IOException {
             try {
                 SQLiteDatabase writableDatabase = this.f6485b.getWritableDatabase();
@@ -134,13 +134,13 @@ public class CachedContentIndex {
         }
 
         @Override // p007b.p225i.p226a.p242c.p257e3.p258b0.CachedContentIndex.c
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo2804c(CachedContent cachedContent) {
             this.f6486c.put(cachedContent.f6471a, cachedContent);
         }
 
         @Override // p007b.p225i.p226a.p242c.p257e3.p258b0.CachedContentIndex.c
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo2805d() throws DatabaseIOException {
             SQLiteDatabase readableDatabase = this.f6485b.getReadableDatabase();
             String str = this.f6487d;
@@ -149,7 +149,7 @@ public class CachedContentIndex {
         }
 
         @Override // p007b.p225i.p226a.p242c.p257e3.p258b0.CachedContentIndex.c
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public void mo2806e(HashMap<String, CachedContent> map) throws IOException {
             if (this.f6486c.size() == 0) {
                 return;
@@ -182,7 +182,7 @@ public class CachedContentIndex {
         }
 
         @Override // p007b.p225i.p226a.p242c.p257e3.p258b0.CachedContentIndex.c
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo2807f(long j) {
             String hexString = Long.toHexString(j);
             this.f6487d = hexString;
@@ -190,7 +190,7 @@ public class CachedContentIndex {
         }
 
         @Override // p007b.p225i.p226a.p242c.p257e3.p258b0.CachedContentIndex.c
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void mo2808g(HashMap<String, CachedContent> map, SparseArray<String> sparseArray) throws IOException {
             AnimatableValueParser.m426D(this.f6486c.size() == 0);
             try {
@@ -232,7 +232,7 @@ public class CachedContentIndex {
         }
 
         @Override // p007b.p225i.p226a.p242c.p257e3.p258b0.CachedContentIndex.c
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public void mo2809h() throws DatabaseIOException {
             DatabaseProvider databaseProvider = this.f6485b;
             String str = this.f6487d;
@@ -260,8 +260,8 @@ public class CachedContentIndex {
             }
         }
 
-        /* renamed from: i */
-        public final void m2810i(SQLiteDatabase sQLiteDatabase, CachedContent cachedContent) throws IOException, SQLException {
+        /* JADX INFO: renamed from: i */
+        public final void m2810i(SQLiteDatabase sQLiteDatabase, CachedContent cachedContent) throws IOException {
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             CachedContentIndex.m2794b(cachedContent.f6475e, new DataOutputStream(byteArrayOutputStream));
             byte[] byteArray = byteArrayOutputStream.toByteArray();
@@ -274,8 +274,8 @@ public class CachedContentIndex {
             sQLiteDatabase.replaceOrThrow(str, null, contentValues);
         }
 
-        /* renamed from: l */
-        public final void m2811l(SQLiteDatabase sQLiteDatabase) throws SQLException, DatabaseIOException {
+        /* JADX INFO: renamed from: l */
+        public final void m2811l(SQLiteDatabase sQLiteDatabase) throws DatabaseIOException {
             String str = this.f6487d;
             Objects.requireNonNull(str);
             VersionTable.m3546b(sQLiteDatabase, 1, str, 1);
@@ -287,32 +287,32 @@ public class CachedContentIndex {
         }
     }
 
-    /* compiled from: CachedContentIndex.java */
-    /* renamed from: b.i.a.c.e3.b0.j$b */
+    /* JADX INFO: renamed from: b.i.a.c.e3.b0.j$b */
+    /* JADX INFO: compiled from: CachedContentIndex.java */
     public static class b implements c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final boolean f6489a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public final Cipher f6490b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @Nullable
         public final SecretKeySpec f6491c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         @Nullable
         public final SecureRandom f6492d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final AtomicFile3 f6493e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean f6494f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         @Nullable
         public ReusableBufferedOutputStream f6495g;
 
@@ -327,6 +327,7 @@ public class CachedContentIndex {
                         try {
                             cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING", "BC");
                         } catch (Throwable unused) {
+                            cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
                         }
                         secretKeySpec = new SecretKeySpec(bArr, "AES");
                     } else {
@@ -349,13 +350,13 @@ public class CachedContentIndex {
         }
 
         @Override // p007b.p225i.p226a.p242c.p257e3.p258b0.CachedContentIndex.c
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo2802a(CachedContent cachedContent, boolean z2) {
             this.f6494f = true;
         }
 
         @Override // p007b.p225i.p226a.p242c.p257e3.p258b0.CachedContentIndex.c
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo2803b(HashMap<String, CachedContent> map) throws Throwable {
             DataOutputStream dataOutputStream = null;
             try {
@@ -422,19 +423,19 @@ public class CachedContentIndex {
         }
 
         @Override // p007b.p225i.p226a.p242c.p257e3.p258b0.CachedContentIndex.c
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo2804c(CachedContent cachedContent) {
             this.f6494f = true;
         }
 
         @Override // p007b.p225i.p226a.p242c.p257e3.p258b0.CachedContentIndex.c
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo2805d() {
             return this.f6493e.m2977a();
         }
 
         @Override // p007b.p225i.p226a.p242c.p257e3.p258b0.CachedContentIndex.c
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public void mo2806e(HashMap<String, CachedContent> map) throws Throwable {
             if (this.f6494f) {
                 mo2803b(map);
@@ -442,14 +443,14 @@ public class CachedContentIndex {
         }
 
         @Override // p007b.p225i.p226a.p242c.p257e3.p258b0.CachedContentIndex.c
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo2807f(long j) {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:60:0x00c7  */
         /* JADX WARN: Removed duplicated region for block: B:76:? A[RETURN, SYNTHETIC] */
         @Override // p007b.p225i.p226a.p242c.p257e3.p258b0.CachedContentIndex.c
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -548,14 +549,14 @@ public class CachedContentIndex {
         }
 
         @Override // p007b.p225i.p226a.p242c.p257e3.p258b0.CachedContentIndex.c
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public void mo2809h() {
             AtomicFile3 atomicFile3 = this.f6493e;
             atomicFile3.f6704a.delete();
             atomicFile3.f6705b.delete();
         }
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final int m2812i(CachedContent cachedContent, int i) {
             int iHashCode = cachedContent.f6472b.hashCode() + (cachedContent.f6471a * 31);
             if (i >= 2) {
@@ -565,7 +566,7 @@ public class CachedContentIndex {
             return (iHashCode * 31) + ((int) (jM2814a ^ (jM2814a >>> 32)));
         }
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final CachedContent m2813j(int i, DataInputStream dataInputStream) throws IOException {
             DefaultContentMetadata defaultContentMetadataM2793a;
             int i2 = dataInputStream.readInt();
@@ -582,31 +583,31 @@ public class CachedContentIndex {
         }
     }
 
-    /* compiled from: CachedContentIndex.java */
-    /* renamed from: b.i.a.c.e3.b0.j$c */
+    /* JADX INFO: renamed from: b.i.a.c.e3.b0.j$c */
+    /* JADX INFO: compiled from: CachedContentIndex.java */
     public interface c {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo2802a(CachedContent cachedContent, boolean z2);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         void mo2803b(HashMap<String, CachedContent> map) throws IOException;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         void mo2804c(CachedContent cachedContent);
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         boolean mo2805d() throws IOException;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         void mo2806e(HashMap<String, CachedContent> map) throws IOException;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         void mo2807f(long j);
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         void mo2808g(HashMap<String, CachedContent> map, SparseArray<String> sparseArray) throws IOException;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         void mo2809h() throws IOException;
     }
 
@@ -628,7 +629,7 @@ public class CachedContentIndex {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static DefaultContentMetadata m2793a(DataInputStream dataInputStream) throws IOException {
         int i = dataInputStream.readInt();
         HashMap map = new HashMap();
@@ -653,7 +654,7 @@ public class CachedContentIndex {
         return new DefaultContentMetadata(map);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m2794b(DefaultContentMetadata defaultContentMetadata, DataOutputStream dataOutputStream) throws IOException {
         Set<Map.Entry<String, byte[]>> setEntrySet = defaultContentMetadata.f6500c.entrySet();
         dataOutputStream.writeInt(setEntrySet.size());
@@ -666,12 +667,12 @@ public class CachedContentIndex {
     }
 
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public CachedContent m2795c(String str) {
         return this.f6478a.get(str);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public CachedContent m2796d(String str) {
         CachedContent cachedContent = this.f6478a.get(str);
         if (cachedContent != null) {
@@ -696,7 +697,7 @@ public class CachedContentIndex {
     }
 
     @WorkerThread
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m2797e(long j) throws IOException {
         c cVar;
         this.f6482e.mo2807f(j);
@@ -717,7 +718,7 @@ public class CachedContentIndex {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void m2798f(String str) {
         CachedContent cachedContent = this.f6478a.get(str);
         if (cachedContent != null && cachedContent.f6473c.isEmpty() && cachedContent.f6474d.isEmpty()) {
@@ -736,7 +737,7 @@ public class CachedContentIndex {
     }
 
     @WorkerThread
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void m2799g() throws IOException {
         this.f6482e.mo2806e(this.f6478a);
         int size = this.f6480c.size();

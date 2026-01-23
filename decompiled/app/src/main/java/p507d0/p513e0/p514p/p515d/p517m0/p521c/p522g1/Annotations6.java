@@ -12,16 +12,16 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Annotations.kt */
-/* renamed from: d0.e0.p.d.m0.c.g1.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.g1.k, reason: use source file name */
+/* JADX INFO: compiled from: Annotations.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Annotations6 implements Annotations4 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final List<Annotations4> f22743j;
 
-    /* compiled from: Annotations.kt */
-    /* renamed from: d0.e0.p.d.m0.c.g1.k$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.g1.k$a */
+    /* JADX INFO: compiled from: Annotations.kt */
     public static final class a extends Lambda implements Function1<Annotations4, AnnotationDescriptor> {
         public final /* synthetic */ FqName $fqName;
 
@@ -36,18 +36,18 @@ public final class Annotations6 implements Annotations4 {
             return invoke2(annotations4);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final AnnotationDescriptor invoke2(Annotations4 annotations4) {
             Intrinsics3.checkNotNullParameter(annotations4, "it");
             return annotations4.findAnnotation(this.$fqName);
         }
     }
 
-    /* compiled from: Annotations.kt */
-    /* renamed from: d0.e0.p.d.m0.c.g1.k$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.g1.k$b */
+    /* JADX INFO: compiled from: Annotations.kt */
     public static final class b extends Lambda implements Function1<Annotations4, Sequence<? extends AnnotationDescriptor>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f22744j = new b();
 
         public b() {
@@ -59,7 +59,7 @@ public final class Annotations6 implements Annotations4 {
             return invoke2(annotations4);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Sequence<AnnotationDescriptor> invoke2(Annotations4 annotations4) {
             Intrinsics3.checkNotNullParameter(annotations4, "it");
             return _Collections.asSequence(annotations4);

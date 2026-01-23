@@ -5,19 +5,19 @@ import p007b.p085c.p086a.p087a0.p088i0.JsonReader2;
 import p007b.p085c.p086a.p095y.C1563b;
 import p007b.p085c.p086a.p095y.DocumentData;
 
-/* compiled from: DocumentDataParser.java */
-/* renamed from: b.c.a.a0.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.a0.h, reason: use source file name */
+/* JADX INFO: compiled from: DocumentDataParser.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DocumentDataParser implements ValueParser<DocumentData> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final DocumentDataParser f2233a = new DocumentDataParser();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final JsonReader2.a f2234b = JsonReader2.a.m616a("t", "f", "s", "j", "tr", "lh", "ls", "fc", "sc", "sw", "of");
 
     @Override // p007b.p085c.p086a.p087a0.ValueParser
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public DocumentData mo413a(JsonReader2 jsonReader2, float f) throws IOException {
         jsonReader2.mo604b();
         String strMo612t = null;

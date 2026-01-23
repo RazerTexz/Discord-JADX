@@ -6,24 +6,24 @@ import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.views.premium.AccountCreditView;
 
-/* compiled from: LayoutAccountCreditsListBinding.java */
-/* renamed from: b.a.i.f0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.f0, reason: use source file name */
+/* JADX INFO: compiled from: LayoutAccountCreditsListBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class LayoutAccountCreditsListBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CardView f830a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final AccountCreditView f831b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final AccountCreditView f832c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final View f833d;
 

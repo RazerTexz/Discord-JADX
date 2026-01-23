@@ -7,16 +7,16 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InviteSuggestionItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: InviteSuggestionItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class InviteSuggestionItem implements MGRecyclerDataPayload {
 
-    /* renamed from: SearchNoResultsItem, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: SearchNoResultsItem, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String key = "SEARCH_NO_RESULTS";
     private final int type;
 
-    /* compiled from: InviteSuggestionItem.kt */
+    /* JADX INFO: compiled from: InviteSuggestionItem.kt */
     public static final /* data */ class ChannelItem extends InviteSuggestionItem {
         private final Channel channel;
         private final boolean hasSent;
@@ -45,12 +45,12 @@ public abstract class InviteSuggestionItem implements MGRecyclerDataPayload {
             return channelItem.copy(channel, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getHasSent() {
             return this.hasSent;
         }
@@ -95,15 +95,18 @@ public abstract class InviteSuggestionItem implements MGRecyclerDataPayload {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             Channel channel = this.channel;
             int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
             boolean z2 = this.hasSent;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public String toString() {
@@ -114,8 +117,8 @@ public abstract class InviteSuggestionItem implements MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: InviteSuggestionItem.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.InviteSuggestionItem$SearchNoResultsItem, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.InviteSuggestionItem$SearchNoResultsItem, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: InviteSuggestionItem.kt */
     public static final class Companion extends InviteSuggestionItem {
         private Companion() {
             super(null);
@@ -136,7 +139,7 @@ public abstract class InviteSuggestionItem implements MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: InviteSuggestionItem.kt */
+    /* JADX INFO: compiled from: InviteSuggestionItem.kt */
     public static final /* data */ class UserItem extends InviteSuggestionItem {
         private final boolean hasSent;
         private final String key;
@@ -164,12 +167,12 @@ public abstract class InviteSuggestionItem implements MGRecyclerDataPayload {
             return userItem.copy(user, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final User getUser() {
             return this.user;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getHasSent() {
             return this.hasSent;
         }
@@ -214,15 +217,18 @@ public abstract class InviteSuggestionItem implements MGRecyclerDataPayload {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             User user = this.user;
             int iHashCode = (user != null ? user.hashCode() : 0) * 31;
             boolean z2 = this.hasSent;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public String toString() {

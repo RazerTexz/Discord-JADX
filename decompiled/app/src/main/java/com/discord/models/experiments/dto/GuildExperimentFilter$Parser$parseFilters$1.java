@@ -8,14 +8,14 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Ref$ObjectRef;
 
-/* compiled from: GuildExperimentFilter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentFilter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildExperimentFilter$Parser$parseFilters$1<T> implements Model.JsonReader.ItemFactory<Unit> {
     public final /* synthetic */ List $filters;
     public final /* synthetic */ Model.JsonReader $reader;
 
-    /* compiled from: GuildExperimentFilter.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseFilters$1$1 */
+    /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseFilters$1$1 */
+    /* JADX INFO: compiled from: GuildExperimentFilter.kt */
     public static final class RunnableC55491 implements Runnable {
         public final /* synthetic */ Ref$ObjectRef $filterHash;
 
@@ -29,8 +29,8 @@ public final class GuildExperimentFilter$Parser$parseFilters$1<T> implements Mod
         }
     }
 
-    /* compiled from: GuildExperimentFilter.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseFilters$1$2 */
+    /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseFilters$1$2 */
+    /* JADX INFO: compiled from: GuildExperimentFilter.kt */
     public static final class RunnableC55502 implements Runnable {
         public final /* synthetic */ Ref$ObjectRef $filterHash;
 
@@ -60,7 +60,7 @@ public final class GuildExperimentFilter$Parser$parseFilters$1<T> implements Mod
         return Unit.f27425a;
     }
 
-    /* renamed from: get, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
     public final void get2() throws IOException {
         Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
         ref$ObjectRef.element = null;

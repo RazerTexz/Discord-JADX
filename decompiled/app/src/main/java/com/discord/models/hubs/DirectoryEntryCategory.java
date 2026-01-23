@@ -8,8 +8,8 @@ import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DirectoryEntryCategory.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: DirectoryEntryCategory.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum DirectoryEntryCategory {
     Home(-1, C5419R.string.directory_category_all, 70),
     Uncategorized(0, C5419R.string.uncategorized, 0, 4, null),
@@ -24,13 +24,13 @@ public enum DirectoryEntryCategory {
     HQArchives(5, C5419R.string.directory_category_internal_5, 0, 4, null);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final int idealSize;
     private final int key;
     private final int titleRes;
 
-    /* compiled from: DirectoryEntryCategory.kt */
+    /* JADX INFO: compiled from: DirectoryEntryCategory.kt */
     public static final class Companion {
         private Companion() {
         }

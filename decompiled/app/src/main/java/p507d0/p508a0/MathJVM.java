@@ -1,8 +1,8 @@
 package p507d0.p508a0;
 
-/* compiled from: MathJVM.kt */
-/* renamed from: d0.a0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.a0.a, reason: use source file name */
+/* JADX INFO: compiled from: MathJVM.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class MathJVM {
     public static final int getSign(int i) {
         if (i < 0) {

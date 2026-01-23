@@ -5,22 +5,22 @@ import com.google.zxing.NotFoundException;
 import p007b.p225i.p414e.BarcodeFormat;
 import p007b.p225i.p414e.p418n.BitArray;
 
-/* compiled from: UPCEReader.java */
-/* renamed from: b.i.e.q.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.q, reason: use source file name */
+/* JADX INFO: compiled from: UPCEReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class UPCEReader extends UPCEANReader {
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final int[] f13396h = {1, 1, 1, 1, 1, 1};
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final int[][] f13397i = {new int[]{56, 52, 50, 49, 44, 38, 35, 42, 41, 37}, new int[]{7, 11, 13, 14, 19, 25, 28, 21, 22, 26}};
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int[] f13398j = new int[4];
 
     @Override // p007b.p225i.p414e.p426q.UPCEANReader
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean mo7007g(String str) throws FormatException {
         char[] cArr = new char[6];
         str.getChars(1, 7, cArr, 0);
@@ -59,14 +59,14 @@ public final class UPCEReader extends UPCEANReader {
     }
 
     @Override // p007b.p225i.p414e.p426q.UPCEANReader
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int[] mo7008i(BitArray bitArray, int i) throws NotFoundException {
         int[] iArr = f13396h;
         return UPCEANReader.m7005l(bitArray, i, true, iArr, new int[iArr.length]);
     }
 
     @Override // p007b.p225i.p414e.p426q.UPCEANReader
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int mo6989j(BitArray bitArray, int[] iArr, StringBuilder sb) throws NotFoundException {
         int[] iArr2 = this.f13398j;
         iArr2[0] = 0;
@@ -99,7 +99,7 @@ public final class UPCEReader extends UPCEANReader {
     }
 
     @Override // p007b.p225i.p414e.p426q.UPCEANReader
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public BarcodeFormat mo6990n() {
         return BarcodeFormat.UPC_E;
     }

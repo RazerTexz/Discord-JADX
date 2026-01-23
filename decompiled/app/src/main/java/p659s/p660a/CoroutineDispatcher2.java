@@ -5,12 +5,12 @@ import kotlin.jvm.functions.Function1;
 import kotlinx.coroutines.CoroutineDispatcher;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: CoroutineDispatcher.kt */
-/* renamed from: s.a.a0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.a0, reason: use source file name */
+/* JADX INFO: compiled from: CoroutineDispatcher.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CoroutineDispatcher2 extends Lambda implements Function1<CoroutineContext.Element, CoroutineDispatcher> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final CoroutineDispatcher2 f27711j = new CoroutineDispatcher2();
 
     public CoroutineDispatcher2() {

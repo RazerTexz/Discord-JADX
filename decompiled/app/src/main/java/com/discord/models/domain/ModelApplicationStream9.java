@@ -5,21 +5,21 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelApplicationStream.kt */
-/* renamed from: com.discord.models.domain.StreamType, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.StreamType, reason: use source file name */
+/* JADX INFO: compiled from: ModelApplicationStream.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum ModelApplicationStream9 {
     GUILD("guild"),
     CALL(NotificationCompat.CATEGORY_CALL);
 
     private final String serializedRepresentation;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final ModelApplicationStream9[] VALUES = values();
 
-    /* compiled from: ModelApplicationStream.kt */
-    /* renamed from: com.discord.models.domain.StreamType$Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.models.domain.StreamType$Companion, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: ModelApplicationStream.kt */
     public static final class Companion {
         private Companion() {
         }

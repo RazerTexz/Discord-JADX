@@ -5,8 +5,8 @@ import java.io.Serializable;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleTags.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildRoleTags.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildRoleTags implements Serializable {
     private final String botId;
     private final String integrationId;
@@ -15,12 +15,12 @@ public final /* data */ class GuildRoleTags implements Serializable {
     private final String skuId;
     private final String subscriptionListingId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getSubscriptionListingId() {
         return this.subscriptionListingId;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m8210b() {
         return this.purchasableOrHasSubscribers != null;
     }

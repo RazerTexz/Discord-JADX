@@ -40,27 +40,27 @@ import p007b.p225i.p361c.p401u.p403p.InstallationResponse;
 import p007b.p225i.p361c.p401u.p403p.TokenResult;
 import p007b.p225i.p361c.p407x.UserAgentPublisher;
 
-/* compiled from: FirebaseInstallationServiceClient.java */
-/* renamed from: b.i.c.u.p.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.u.p.c, reason: use source file name */
+/* JADX INFO: compiled from: FirebaseInstallationServiceClient.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FirebaseInstallationServiceClient {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f12989a = Pattern.compile("[0-9]+s");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Charset f12990b = Charset.forName(Constants.ENCODING);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Context f12991c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Provider2<UserAgentPublisher> f12992d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Provider2<HeartBeatInfo> f12993e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final RequestLimiter f12994f = new RequestLimiter();
 
     public FirebaseInstallationServiceClient(@NonNull Context context, @NonNull Provider2<UserAgentPublisher> provider2, @NonNull Provider2<HeartBeatInfo> provider22) {
@@ -69,23 +69,15 @@ public class FirebaseInstallationServiceClient {
         this.f12993e = provider22;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m6802b(HttpURLConnection httpURLConnection, @Nullable String str, @NonNull String str2, @NonNull String str3) {
+        StringBuilder sb;
         InputStream errorStream = httpURLConnection.getErrorStream();
         String str4 = null;
         if (errorStream != null) {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(errorStream, f12990b));
             try {
-                StringBuilder sb = new StringBuilder();
-                while (true) {
-                    String line = bufferedReader.readLine();
-                    if (line == null) {
-                        break;
-                    }
-                    sb.append(line);
-                    sb.append('\n');
-                }
-                str4 = String.format("Error when communicating with the Firebase Installations server API. HTTP response: [%d %s: %s]", Integer.valueOf(httpURLConnection.getResponseCode()), httpURLConnection.getResponseMessage(), sb);
+                sb = new StringBuilder();
             } catch (IOException unused) {
             } catch (Throwable th) {
                 try {
@@ -95,9 +87,19 @@ public class FirebaseInstallationServiceClient {
                 throw th;
             }
             try {
+                while (true) {
+                    String line = bufferedReader.readLine();
+                    if (line == null) {
+                        break;
+                    }
+                    sb.append(line);
+                    sb.append('\n');
+                    bufferedReader.close();
+                }
                 bufferedReader.close();
             } catch (IOException unused3) {
             }
+            str4 = String.format("Error when communicating with the Firebase Installations server API. HTTP response: [%d %s: %s]", Integer.valueOf(httpURLConnection.getResponseCode()), httpURLConnection.getResponseMessage(), sb);
         }
         if (TextUtils.isEmpty(str4)) {
             return;
@@ -110,7 +112,7 @@ public class FirebaseInstallationServiceClient {
         Log.w("Firebase-Installations", String.format("Firebase options used while communicating with Firebase server APIs: %s, %s%s", objArr));
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static long m6803d(String str) {
         AnimatableValueParser.m551o(f12989a.matcher(str).matches(), "Invalid Expiration Timestamp.");
         if (str == null || str.length() == 0) {
@@ -119,7 +121,7 @@ public class FirebaseInstallationServiceClient {
         return Long.parseLong(str.substring(0, str.length() - 1));
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static void m6804i(URLConnection uRLConnection, byte[] bArr) throws IOException {
         OutputStream outputStream = uRLConnection.getOutputStream();
         if (outputStream == null) {
@@ -137,7 +139,7 @@ public class FirebaseInstallationServiceClient {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final URL m6805a(String str) throws FirebaseInstallationsException {
         try {
             return new URL(String.format("https://%s/%s/%s", "firebaseinstallations.googleapis.com", "v1", str));
@@ -146,7 +148,7 @@ public class FirebaseInstallationServiceClient {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final HttpURLConnection m6806c(URL url, String str) throws FirebaseInstallationsException {
         MessageDigest messageDigestM4185a;
         HeartBeatInfo.a aVarMo6716a;
@@ -188,7 +190,7 @@ public class FirebaseInstallationServiceClient {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final InstallationResponse m6807e(HttpURLConnection httpURLConnection) throws IOException, AssertionError {
         InputStream inputStream = httpURLConnection.getInputStream();
         JsonReader jsonReader = new JsonReader(new InputStreamReader(inputStream, f12990b));
@@ -230,7 +232,7 @@ public class FirebaseInstallationServiceClient {
         return new AutoValue_InstallationResponse(strNextString, strNextString2, strNextString3, tokenResultMo6800a, InstallationResponse.a.OK, null);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final TokenResult m6808f(HttpURLConnection httpURLConnection) throws IOException, AssertionError {
         InputStream inputStream = httpURLConnection.getInputStream();
         JsonReader jsonReader = new JsonReader(new InputStreamReader(inputStream, f12990b));
@@ -254,7 +256,7 @@ public class FirebaseInstallationServiceClient {
         return bVar.mo6800a();
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m6809g(HttpURLConnection httpURLConnection, @Nullable String str, @NonNull String str2) throws IOException {
         try {
             JSONObject jSONObject = new JSONObject();
@@ -268,7 +270,7 @@ public class FirebaseInstallationServiceClient {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m6810h(HttpURLConnection httpURLConnection) throws IOException {
         try {
             JSONObject jSONObject = new JSONObject();

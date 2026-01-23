@@ -6,7 +6,6 @@ import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.content.Context;
 import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,21 +41,21 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: OverlayMenuBubbleDialog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: OverlayMenuBubbleDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OverlayMenuBubbleDialog extends OverlayAppDialog2 implements AppComponent {
 
-    /* renamed from: A, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: A, reason: from kotlin metadata */
     public final SimpleRecyclerAdapter<StoreVoiceParticipants.VoiceUser, C7081a> adapter;
 
-    /* renamed from: z, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: z, reason: from kotlin metadata */
     public final OverlayBubbleMenuBinding binding;
 
-    /* compiled from: OverlayMenuBubbleDialog.kt */
-    /* renamed from: com.discord.views.OverlayMenuBubbleDialog$a */
+    /* JADX INFO: renamed from: com.discord.views.OverlayMenuBubbleDialog$a */
+    /* JADX INFO: compiled from: OverlayMenuBubbleDialog.kt */
     public static final class C7081a extends SimpleRecyclerAdapter.ViewHolder<StoreVoiceParticipants.VoiceUser> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final OverlayMenuVoiceMembersItemBinding f19095a;
 
         /* JADX WARN: Illegal instructions before constructor call */
@@ -76,11 +75,11 @@ public final class OverlayMenuBubbleDialog extends OverlayAppDialog2 implements 
         }
     }
 
-    /* compiled from: OverlayMenuBubbleDialog.kt */
-    /* renamed from: com.discord.views.OverlayMenuBubbleDialog$b */
+    /* JADX INFO: renamed from: com.discord.views.OverlayMenuBubbleDialog$b */
+    /* JADX INFO: compiled from: OverlayMenuBubbleDialog.kt */
     public static final class C7082b<T, R> implements Func1<Long, Observable<? extends List<? extends StoreVoiceParticipants.VoiceUser>>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C7082b f19096j = new C7082b();
 
         @Override // p637j0.p641k.Func1
@@ -92,11 +91,11 @@ public final class OverlayMenuBubbleDialog extends OverlayAppDialog2 implements 
         }
     }
 
-    /* compiled from: OverlayMenuBubbleDialog.kt */
-    /* renamed from: com.discord.views.OverlayMenuBubbleDialog$c */
+    /* JADX INFO: renamed from: com.discord.views.OverlayMenuBubbleDialog$c */
+    /* JADX INFO: compiled from: OverlayMenuBubbleDialog.kt */
     public static final class C7083c<T, R> implements Func1<List<? extends StoreVoiceParticipants.VoiceUser>, Tuples2<? extends List<? extends StoreVoiceParticipants.VoiceUser>, ? extends Integer>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C7083c f19097j = new C7083c();
 
         @Override // p637j0.p641k.Func1
@@ -113,8 +112,8 @@ public final class OverlayMenuBubbleDialog extends OverlayAppDialog2 implements 
         }
     }
 
-    /* compiled from: OverlayMenuBubbleDialog.kt */
-    /* renamed from: com.discord.views.OverlayMenuBubbleDialog$d */
+    /* JADX INFO: renamed from: com.discord.views.OverlayMenuBubbleDialog$d */
+    /* JADX INFO: compiled from: OverlayMenuBubbleDialog.kt */
     public static final class C7084d extends Lambda implements Function1<Tuples2<? extends List<? extends StoreVoiceParticipants.VoiceUser>, ? extends Integer>, Unit> {
         public C7084d() {
             super(1);
@@ -180,7 +179,7 @@ public final class OverlayMenuBubbleDialog extends OverlayAppDialog2 implements 
     }
 
     @Override // p007b.p008a.p062y.OverlayAppDialog2
-    public Animator getClosingAnimator() throws Resources.NotFoundException {
+    public Animator getClosingAnimator() {
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.setStartDelay(getResources().getInteger(R.integer.config_shortAnimTime));
         OverlayMenuView overlayMenuView = this.binding.f1397f;
@@ -200,7 +199,7 @@ public final class OverlayMenuBubbleDialog extends OverlayAppDialog2 implements 
     }
 
     @Override // android.view.ViewGroup, android.view.View
-    public void onAttachedToWindow() throws Resources.NotFoundException {
+    public void onAttachedToWindow() {
         super.onAttachedToWindow();
         OverlayMenuView overlayMenuView = this.binding.f1397f;
         Intrinsics3.checkNotNullExpressionValue(overlayMenuView, "binding.overlayMenu");

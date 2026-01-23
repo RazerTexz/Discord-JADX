@@ -6,111 +6,111 @@ import p007b.p100d.p104b.p105a.outline;
 
 /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
 /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
-/* compiled from: FieldNamingPolicy.java */
-/* renamed from: b.i.d.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.c, reason: use source file name */
+/* JADX INFO: compiled from: FieldNamingPolicy.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class FieldNamingPolicy implements FieldNamingStrategy {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final FieldNamingPolicy f13088j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final FieldNamingPolicy f13089k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final FieldNamingPolicy f13090l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final FieldNamingPolicy f13091m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final FieldNamingPolicy f13092n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final FieldNamingPolicy f13093o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final /* synthetic */ FieldNamingPolicy[] f13094p;
 
-    /* compiled from: FieldNamingPolicy.java */
-    /* renamed from: b.i.d.c$a */
+    /* JADX INFO: renamed from: b.i.d.c$a */
+    /* JADX INFO: compiled from: FieldNamingPolicy.java */
     public enum a extends FieldNamingPolicy {
         public a(String str, int i) {
             super(str, i, null);
         }
 
         @Override // p007b.p225i.p408d.FieldNamingStrategy
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public String mo6850f(Field field) {
             return field.getName();
         }
     }
 
-    /* compiled from: FieldNamingPolicy.java */
-    /* renamed from: b.i.d.c$b */
+    /* JADX INFO: renamed from: b.i.d.c$b */
+    /* JADX INFO: compiled from: FieldNamingPolicy.java */
     public enum b extends FieldNamingPolicy {
         public b(String str, int i) {
             super(str, i, null);
         }
 
         @Override // p007b.p225i.p408d.FieldNamingStrategy
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public String mo6850f(Field field) {
             return FieldNamingPolicy.m6849h(field.getName());
         }
     }
 
-    /* compiled from: FieldNamingPolicy.java */
-    /* renamed from: b.i.d.c$c */
+    /* JADX INFO: renamed from: b.i.d.c$c */
+    /* JADX INFO: compiled from: FieldNamingPolicy.java */
     public enum c extends FieldNamingPolicy {
         public c(String str, int i) {
             super(str, i, null);
         }
 
         @Override // p007b.p225i.p408d.FieldNamingStrategy
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public String mo6850f(Field field) {
             return FieldNamingPolicy.m6849h(FieldNamingPolicy.m6848g(field.getName(), " "));
         }
     }
 
-    /* compiled from: FieldNamingPolicy.java */
-    /* renamed from: b.i.d.c$d */
+    /* JADX INFO: renamed from: b.i.d.c$d */
+    /* JADX INFO: compiled from: FieldNamingPolicy.java */
     public enum d extends FieldNamingPolicy {
         public d(String str, int i) {
             super(str, i, null);
         }
 
         @Override // p007b.p225i.p408d.FieldNamingStrategy
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public String mo6850f(Field field) {
             return FieldNamingPolicy.m6848g(field.getName(), "_").toLowerCase(Locale.ENGLISH);
         }
     }
 
-    /* compiled from: FieldNamingPolicy.java */
-    /* renamed from: b.i.d.c$e */
+    /* JADX INFO: renamed from: b.i.d.c$e */
+    /* JADX INFO: compiled from: FieldNamingPolicy.java */
     public enum e extends FieldNamingPolicy {
         public e(String str, int i) {
             super(str, i, null);
         }
 
         @Override // p007b.p225i.p408d.FieldNamingStrategy
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public String mo6850f(Field field) {
             return FieldNamingPolicy.m6848g(field.getName(), "-").toLowerCase(Locale.ENGLISH);
         }
     }
 
-    /* compiled from: FieldNamingPolicy.java */
-    /* renamed from: b.i.d.c$f */
+    /* JADX INFO: renamed from: b.i.d.c$f */
+    /* JADX INFO: compiled from: FieldNamingPolicy.java */
     public enum f extends FieldNamingPolicy {
         public f(String str, int i) {
             super(str, i, null);
         }
 
         @Override // p007b.p225i.p408d.FieldNamingStrategy
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public String mo6850f(Field field) {
             return FieldNamingPolicy.m6848g(field.getName(), ".").toLowerCase(Locale.ENGLISH);
         }
@@ -135,7 +135,7 @@ public abstract class FieldNamingPolicy implements FieldNamingStrategy {
     public FieldNamingPolicy(String str, int i, a aVar) {
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static String m6848g(String str, String str2) {
         StringBuilder sb = new StringBuilder();
         int length = str.length();
@@ -149,7 +149,7 @@ public abstract class FieldNamingPolicy implements FieldNamingStrategy {
         return sb.toString();
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static String m6849h(String str) {
         int length = str.length() - 1;
         int i = 0;

@@ -6,12 +6,12 @@ import p507d0.p580t.AbstractMutableCollection;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers2;
 
-/* compiled from: MapBuilder.kt */
-/* renamed from: d0.t.q0.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.q0.f, reason: use source file name */
+/* JADX INFO: compiled from: MapBuilder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MapBuilder5<V> extends AbstractMutableCollection<V> implements Collection<V>, KMarkers2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final MapBuilder2<?, V> f25218j;
 
     public MapBuilder5(MapBuilder2<?, V> mapBuilder2) {

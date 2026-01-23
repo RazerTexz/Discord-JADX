@@ -3,8 +3,8 @@ package org.webrtc;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+/* JADX INFO: loaded from: classes3.dex */
 @Retention(RetentionPolicy.SOURCE)
-/* loaded from: classes3.dex */
 public @interface VideoCodecType {
     public static final int VIDEO_CODEC_AV1 = 3;
     public static final int VIDEO_CODEC_GENERIC = 0;

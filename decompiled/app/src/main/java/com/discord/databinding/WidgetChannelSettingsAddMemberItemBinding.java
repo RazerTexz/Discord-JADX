@@ -8,22 +8,22 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.views.permissions.ChannelPermissionOwnerView;
 import com.google.android.material.checkbox.MaterialCheckBox;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChannelSettingsAddMemberItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final FrameLayout f15900a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ChannelPermissionOwnerView f15901b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final MaterialCheckBox f15902c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final ConstraintLayout f15903d;
 

@@ -7,15 +7,15 @@ import okio.BufferedSink;
 import okio.ByteString;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RequestBody.kt */
-/* renamed from: f0.a0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.a0, reason: use source file name */
+/* JADX INFO: compiled from: RequestBody.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RequestBody2 extends RequestBody {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ ByteString f25364a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ MediaType f25365b;
 
     public RequestBody2(ByteString byteString, MediaType mediaType) {

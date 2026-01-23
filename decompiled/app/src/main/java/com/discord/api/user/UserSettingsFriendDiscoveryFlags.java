@@ -1,8 +1,8 @@
 package com.discord.api.user;
 
 
-/* compiled from: UserSettingsFriendDiscoveryFlags.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: UserSettingsFriendDiscoveryFlags.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserSettingsFriendDiscoveryFlags {
     public static final int FIND_BY_EMAIL = 4;
     public static final int FIND_BY_PHONE = 2;

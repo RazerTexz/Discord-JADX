@@ -2,42 +2,42 @@ package p007b.p225i.p226a.p288f.p330i.p332b;
 
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.l */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.l */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4098l {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f10926a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f10927b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long f10928c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long f10929d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final long f10930e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final long f10931f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final long f10932g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Long f10933h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Long f10934i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Long f10935j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Boolean f10936k;
 
     public C4098l(String str, String str2, long j, long j2, long j3, long j4, long j5, Long l, Long l2, Long l3, Boolean bool) {
@@ -60,17 +60,17 @@ public final class C4098l {
         this.f10936k = bool;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C4098l m5748a(long j) {
         return new C4098l(this.f10926a, this.f10927b, this.f10928c, this.f10929d, this.f10930e, j, this.f10932g, this.f10933h, this.f10934i, this.f10935j, this.f10936k);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final C4098l m5749b(long j, long j2) {
         return new C4098l(this.f10926a, this.f10927b, this.f10928c, this.f10929d, this.f10930e, this.f10931f, j, Long.valueOf(j2), this.f10934i, this.f10935j, this.f10936k);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final C4098l m5750c(Long l, Long l2, Boolean bool) {
         return new C4098l(this.f10926a, this.f10927b, this.f10928c, this.f10929d, this.f10930e, this.f10931f, this.f10932g, this.f10933h, l, l2, (bool == null || bool.booleanValue()) ? bool : null);
     }

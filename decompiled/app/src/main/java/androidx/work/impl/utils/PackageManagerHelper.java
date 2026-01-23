@@ -5,7 +5,7 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.work.Logger;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PackageManagerHelper {
     private static final String TAG = Logger.tagWithPrefix("PackageManagerHelper");
 

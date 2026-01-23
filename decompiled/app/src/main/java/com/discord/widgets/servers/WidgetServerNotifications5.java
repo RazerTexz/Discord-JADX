@@ -16,9 +16,9 @@ import p007b.p008a.p025i.ViewAddOverrideItemBinding;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerNotifications.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerNotifications$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerNotifications$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerNotifications.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetServerNotifications5 extends FunctionReferenceImpl implements Function1<View, WidgetServerNotificationsBinding> {
     public static final WidgetServerNotifications5 INSTANCE = new WidgetServerNotifications5();
 
@@ -31,7 +31,7 @@ public final /* synthetic */ class WidgetServerNotifications5 extends FunctionRe
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetServerNotificationsBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.add_override;

@@ -22,9 +22,9 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PrimitiveCompanionObjects;
 
-/* compiled from: WidgetVoiceChannelSettings.kt */
-/* renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetVoiceChannelSettings2 extends Lambda implements Function0<WidgetVoiceChannelSettings.Model> {
     public final /* synthetic */ long $channelId;
     public final /* synthetic */ StoreChannels $channelStore;

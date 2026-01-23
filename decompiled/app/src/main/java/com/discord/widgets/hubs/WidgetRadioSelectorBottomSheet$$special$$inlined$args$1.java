@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function0;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ArgUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ArgUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetRadioSelectorBottomSheet$$special$$inlined$args$1 extends Lambda implements Function0<WidgetRadioSelectorBottomSheet3> {
     public final /* synthetic */ String $argsKey;
     public final /* synthetic */ AppBottomSheet $this_args;

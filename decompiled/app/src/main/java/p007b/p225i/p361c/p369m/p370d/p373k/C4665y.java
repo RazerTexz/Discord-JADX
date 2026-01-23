@@ -6,27 +6,27 @@ import p007b.p225i.p361c.p369m.p370d.p379p.ByteString2;
 import p007b.p225i.p361c.p369m.p370d.p379p.CodedOutputStream2;
 import p007b.p225i.p361c.p369m.p370d.p379p.SessionProtobufHelper;
 
-/* compiled from: CrashlyticsController.java */
-/* renamed from: b.i.c.m.d.k.y */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.y */
+/* JADX INFO: compiled from: CrashlyticsController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4665y implements C4663x.g {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ int f12460a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ int f12461b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ long f12462c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final /* synthetic */ long f12463d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final /* synthetic */ boolean f12464e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final /* synthetic */ int f12465f;
 
     public C4665y(C4663x c4663x, int i, String str, int i2, long j, long j2, boolean z2, int i3, String str2, String str3) {
@@ -39,7 +39,7 @@ public class C4665y implements C4663x.g {
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p373k.C4663x.g
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6454a(CodedOutputStream2 codedOutputStream2) throws Exception {
         int i = this.f12460a;
         String str = Build.MODEL;

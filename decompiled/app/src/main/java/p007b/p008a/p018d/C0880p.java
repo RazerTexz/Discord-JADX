@@ -4,12 +4,12 @@ import java.util.Map;
 import p637j0.p641k.Func1;
 
 /* JADX INFO: Add missing generic type declarations: [K] */
-/* compiled from: AppTransformers.kt */
-/* renamed from: b.a.d.p */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.p */
+/* JADX INFO: compiled from: AppTransformers.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0880p<T, R, K> implements Func1<K, Boolean> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Map f575j;
 
     public C0880p(Map map) {

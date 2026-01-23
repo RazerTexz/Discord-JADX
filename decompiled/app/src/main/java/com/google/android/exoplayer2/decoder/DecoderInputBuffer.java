@@ -8,30 +8,30 @@ import p007b.p225i.p226a.p242c.ExoPlayerLibraryInfo;
 import p007b.p225i.p226a.p242c.p265v2.Buffer2;
 import p007b.p225i.p226a.p242c.p265v2.CryptoInfo;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class DecoderInputBuffer extends Buffer2 {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public ByteBuffer f19778l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f19779m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f19780n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public ByteBuffer f19781o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int f19782p;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final CryptoInfo f19777k = new CryptoInfo();
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final int f19783q = 0;
 
     public static final class InsufficientCapacityException extends IllegalStateException {
@@ -59,7 +59,7 @@ public class DecoderInputBuffer extends Buffer2 {
         this.f19782p = i;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void mo3856p() {
         this.f7901j = 0;
         ByteBuffer byteBuffer = this.f19778l;
@@ -73,7 +73,7 @@ public class DecoderInputBuffer extends Buffer2 {
         this.f19779m = false;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final ByteBuffer m8811q(int i) {
         int i2 = this.f19782p;
         if (i2 == 1) {
@@ -87,7 +87,7 @@ public class DecoderInputBuffer extends Buffer2 {
     }
 
     @EnsuresNonNull({"data"})
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void m8812r(int i) {
         int i2 = i + this.f19783q;
         ByteBuffer byteBuffer = this.f19778l;
@@ -111,7 +111,7 @@ public class DecoderInputBuffer extends Buffer2 {
         this.f19778l = byteBufferM8811q;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void m8813s() {
         ByteBuffer byteBuffer = this.f19778l;
         if (byteBuffer != null) {
@@ -123,7 +123,7 @@ public class DecoderInputBuffer extends Buffer2 {
         }
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final boolean m8814t() {
         return m3552k(BasicMeasure.EXACTLY);
     }

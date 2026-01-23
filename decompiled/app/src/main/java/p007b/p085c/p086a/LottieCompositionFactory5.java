@@ -3,15 +3,15 @@ package p007b.p085c.p086a;
 import java.io.InputStream;
 import java.util.concurrent.Callable;
 
-/* compiled from: LottieCompositionFactory.java */
-/* renamed from: b.c.a.i, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.i, reason: use source file name */
+/* JADX INFO: compiled from: LottieCompositionFactory.java */
+/* JADX INFO: loaded from: classes.dex */
 public class LottieCompositionFactory5 implements Callable<LottieResult<LottieComposition>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ InputStream f2364j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ String f2365k;
 
     public LottieCompositionFactory5(InputStream inputStream, String str) {

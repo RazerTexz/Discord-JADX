@@ -1,8 +1,8 @@
 package com.discord.api.message;
 
 
-/* compiled from: MessageFlags.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MessageFlags.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MessageFlags {
     public static final long CROSSPOSTED = 1;
     public static final long EPHEMERAL = 64;

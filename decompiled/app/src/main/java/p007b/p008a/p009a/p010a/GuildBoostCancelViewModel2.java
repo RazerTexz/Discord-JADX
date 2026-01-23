@@ -7,12 +7,12 @@ import p007b.p008a.p009a.p010a.GuildBoostCancelViewModel3;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildBoostCancelViewModel.kt */
-/* renamed from: b.a.a.a.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.a.e, reason: use source file name */
+/* JADX INFO: compiled from: GuildBoostCancelViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class GuildBoostCancelViewModel2 extends FunctionReferenceImpl implements Function2<StoreGuildBoost.State, StoreSubscriptions.SubscriptionsState, GuildBoostCancelViewModel3.b> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final GuildBoostCancelViewModel2 f190j = new GuildBoostCancelViewModel2();
 
     public GuildBoostCancelViewModel2() {

@@ -5,24 +5,24 @@ import androidx.annotation.RequiresApi;
 import com.google.android.material.shape.ShapeAppearanceModel;
 import com.google.android.material.shape.ShapeAppearancePathProvider;
 
-/* compiled from: MaskEvaluator.java */
+/* JADX INFO: renamed from: b.i.a.g.l.l.g, reason: use source file name */
+/* JADX INFO: compiled from: MaskEvaluator.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.i.a.g.l.l.g, reason: use source file name */
-/* loaded from: classes3.dex */
 public class MaskEvaluator2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Path f11931a = new Path();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Path f11932b = new Path();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Path f11933c = new Path();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ShapeAppearancePathProvider f11934d = ShapeAppearancePathProvider.getInstance();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public ShapeAppearanceModel f11935e;
 }

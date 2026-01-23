@@ -7,15 +7,15 @@ import p007b.p225i.p226a.p242c.p245b3.Cue;
 import p007b.p225i.p226a.p242c.p245b3.Subtitle;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: SsaSubtitle.java */
-/* renamed from: b.i.a.c.b3.r.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.r.d, reason: use source file name */
+/* JADX INFO: compiled from: SsaSubtitle.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SsaSubtitle implements Subtitle {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final List<List<Cue>> f6018j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final List<Long> f6019k;
 
     public SsaSubtitle(List<List<Cue>> list, List<Long> list2) {
@@ -24,7 +24,7 @@ public final class SsaSubtitle implements Subtitle {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.Subtitle
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int mo2612f(long j) {
         int i;
         List<Long> list = this.f6019k;
@@ -50,7 +50,7 @@ public final class SsaSubtitle implements Subtitle {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.Subtitle
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long mo2613g(int i) {
         AnimatableValueParser.m531j(i >= 0);
         AnimatableValueParser.m531j(i < this.f6019k.size());
@@ -58,7 +58,7 @@ public final class SsaSubtitle implements Subtitle {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.Subtitle
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public List<Cue> mo2614h(long j) {
         int i;
         List<Long> list = this.f6019k;
@@ -80,7 +80,7 @@ public final class SsaSubtitle implements Subtitle {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.Subtitle
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int mo2615i() {
         return this.f6019k.size();
     }

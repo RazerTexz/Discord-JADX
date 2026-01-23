@@ -24,15 +24,15 @@ import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 import p007b.p195g.p196a.p205c.p219i0.TypeKey;
 import p007b.p195g.p196a.p205c.p221z.ContextAttributes;
 
-/* compiled from: SerializerProvider.java */
-/* renamed from: b.g.a.c.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.x, reason: use source file name */
+/* JADX INFO: compiled from: SerializerProvider.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class SerializerProvider extends DatabindContext {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final JsonSerializer<Object> f5061j = new FailingSerializer("Null key for a Map not allowed in JSON (use a converting NullKeySerializer?)");
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final JsonSerializer<Object> f5062k = new UnknownSerializer();
     public final SerializationConfig _config;
     public DateFormat _dateFormat;
@@ -46,7 +46,7 @@ public abstract class SerializerProvider extends DatabindContext {
     public final boolean _stdNullValueSerializer;
     public JsonSerializer<Object> _unknownTypeSerializer;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public transient ContextAttributes f5063l;
 
     public SerializerProvider() {
@@ -62,23 +62,23 @@ public abstract class SerializerProvider extends DatabindContext {
         this._stdNullValueSerializer = true;
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public abstract Object mo1998A(BeanPropertyDefinition beanPropertyDefinition, Class<?> cls) throws JsonMappingException;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public abstract boolean mo1999B(Object obj) throws JsonMappingException;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final boolean m2239C(MapperFeature mapperFeature) {
         return mapperFeature.m2222h(this._config._mapperFeatures);
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final boolean m2240D(SerializationFeature serializationFeature) {
         return this._config.m2237v(serializationFeature);
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public <T> T m2241E(BeanDescription beanDescription, BeanPropertyDefinition beanPropertyDefinition, String str, Object... objArr) throws JsonMappingException {
         String str2;
         String strM1937a = m1937a(str, objArr);
@@ -100,33 +100,33 @@ public abstract class SerializerProvider extends DatabindContext {
         throw new InvalidDefinitionException(((DefaultSerializerProvider) this).f4808o, String.format("Invalid definition for property %s (of type %s): %s", str2, beanDescription != null ? ClassUtil.m2189u(beanDescription.f4626a._class) : "N/A", strM1937a), beanDescription, beanPropertyDefinition);
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public <T> T m2242F(BeanDescription beanDescription, String str, Object... objArr) throws JsonMappingException {
         throw new InvalidDefinitionException(((DefaultSerializerProvider) this).f4808o, String.format("Invalid type definition for type %s: %s", ClassUtil.m2189u(beanDescription.f4626a._class), m1937a(str, objArr)), beanDescription, null);
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public void m2243G(String str, Object... objArr) throws JsonMappingException {
         throw new JsonMappingException(((DefaultSerializerProvider) this).f4808o, m1937a(str, objArr), null);
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public abstract JsonSerializer<Object> mo2000H(Annotated annotated, Object obj) throws JsonMappingException;
 
     @Override // p007b.p195g.p196a.p205c.DatabindContext
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final TypeFactory mo1940d() {
         return this._config._base._typeFactory;
     }
 
     @Override // p007b.p195g.p196a.p205c.DatabindContext
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public <T> T mo1942f(JavaType javaType, String str) throws JsonMappingException {
         throw new InvalidDefinitionException(((DefaultSerializerProvider) this).f4808o, str, javaType);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public JsonSerializer<Object> m2244h(JavaType javaType) throws JsonMappingException {
         try {
             JsonSerializer<Object> jsonSerializerMo1991b = this._serializerFactory.mo1991b(this, javaType);
@@ -148,7 +148,7 @@ public abstract class SerializerProvider extends DatabindContext {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public JsonSerializer<Object> m2245i(Class<?> cls) throws JsonMappingException {
         JavaType javaTypeM2160b = this._config._base._typeFactory.m2160b(null, cls, TypeFactory.f4926l);
         try {
@@ -172,7 +172,7 @@ public abstract class SerializerProvider extends DatabindContext {
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final DateFormat m2246j() {
         DateFormat dateFormat = this._dateFormat;
         if (dateFormat != null) {
@@ -183,12 +183,12 @@ public abstract class SerializerProvider extends DatabindContext {
         return dateFormat2;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public JavaType m2247k(JavaType javaType, Class<?> cls) throws IllegalArgumentException {
         return javaType._class == cls ? javaType : this._config._base._typeFactory.m2166h(javaType, cls, true);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m2248l(JsonGenerator jsonGenerator) throws IOException {
         if (this._stdNullValueSerializer) {
             jsonGenerator.mo1631A();
@@ -197,20 +197,20 @@ public abstract class SerializerProvider extends DatabindContext {
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public JsonSerializer<Object> m2249m(JavaType javaType, BeanProperty beanProperty) throws JsonMappingException {
         JsonSerializer<Object> jsonSerializerM2035a = this._knownSerializers.m2035a(javaType);
         return (jsonSerializerM2035a == null && (jsonSerializerM2035a = this._serializerCache.m2008a(javaType)) == null && (jsonSerializerM2035a = m2244h(javaType)) == null) ? m2259x(javaType._class) : m2261z(jsonSerializerM2035a, beanProperty);
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public JsonSerializer<Object> m2250n(Class<?> cls, BeanProperty beanProperty) throws JsonMappingException {
         JsonSerializer<Object> jsonSerializerM2036b = this._knownSerializers.m2036b(cls);
         return (jsonSerializerM2036b == null && (jsonSerializerM2036b = this._serializerCache.m2009b(cls)) == null && (jsonSerializerM2036b = this._serializerCache.m2008a(this._config._base._typeFactory.m2160b(null, cls, TypeFactory.f4926l))) == null && (jsonSerializerM2036b = m2245i(cls)) == null) ? m2259x(cls) : m2261z(jsonSerializerM2036b, beanProperty);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public JsonSerializer<Object> m2251o(JavaType javaType, BeanProperty beanProperty) throws JsonMappingException {
         JsonSerializer<Object> jsonSerializerMo1971a = this._serializerFactory.mo1971a(this, javaType, this._keySerializer);
         if (jsonSerializerMo1971a instanceof ResolvableSerializer) {
@@ -219,22 +219,22 @@ public abstract class SerializerProvider extends DatabindContext {
         return m2261z(jsonSerializerMo1971a, beanProperty);
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public abstract WritableObjectId mo2005p(Object obj, ObjectIdGenerator<?> objectIdGenerator);
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public JsonSerializer<Object> m2252q(JavaType javaType, BeanProperty beanProperty) throws JsonMappingException {
         JsonSerializer<Object> jsonSerializerM2035a = this._knownSerializers.m2035a(javaType);
         return (jsonSerializerM2035a == null && (jsonSerializerM2035a = this._serializerCache.m2008a(javaType)) == null && (jsonSerializerM2035a = m2244h(javaType)) == null) ? m2259x(javaType._class) : m2260y(jsonSerializerM2035a, beanProperty);
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public JsonSerializer<Object> m2253r(Class<?> cls, BeanProperty beanProperty) throws JsonMappingException {
         JsonSerializer<Object> jsonSerializerM2036b = this._knownSerializers.m2036b(cls);
         return (jsonSerializerM2036b == null && (jsonSerializerM2036b = this._serializerCache.m2009b(cls)) == null && (jsonSerializerM2036b = this._serializerCache.m2008a(this._config._base._typeFactory.m2160b(null, cls, TypeFactory.f4926l))) == null && (jsonSerializerM2036b = m2245i(cls)) == null) ? m2259x(cls) : m2260y(jsonSerializerM2036b, beanProperty);
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public JsonSerializer<Object> m2254s(JavaType javaType) throws JsonMappingException {
         JsonSerializer<Object> jsonSerializerM2035a = this._knownSerializers.m2035a(javaType);
         if (jsonSerializerM2035a != null) {
@@ -248,7 +248,7 @@ public abstract class SerializerProvider extends DatabindContext {
         return jsonSerializerM2244h == null ? m2259x(javaType._class) : jsonSerializerM2244h;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public JsonSerializer<Object> m2255t(JavaType javaType, BeanProperty beanProperty) throws JsonMappingException {
         if (javaType != null) {
             JsonSerializer<Object> jsonSerializerM2035a = this._knownSerializers.m2035a(javaType);
@@ -258,18 +258,18 @@ public abstract class SerializerProvider extends DatabindContext {
         throw null;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public JsonSerializer<Object> m2256u(Class<?> cls, BeanProperty beanProperty) throws JsonMappingException {
         JsonSerializer<Object> jsonSerializerM2036b = this._knownSerializers.m2036b(cls);
         return (jsonSerializerM2036b == null && (jsonSerializerM2036b = this._serializerCache.m2009b(cls)) == null && (jsonSerializerM2036b = this._serializerCache.m2008a(this._config._base._typeFactory.m2160b(null, cls, TypeFactory.f4926l))) == null && (jsonSerializerM2036b = m2245i(cls)) == null) ? m2259x(cls) : m2261z(jsonSerializerM2036b, beanProperty);
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final AnnotationIntrospector m2257v() {
         return this._config.m2267e();
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public Object m2258w(Object obj) {
         Object obj2;
         ContextAttributes.a aVar = (ContextAttributes.a) this.f5063l;
@@ -283,19 +283,19 @@ public abstract class SerializerProvider extends DatabindContext {
         return obj2;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public JsonSerializer<Object> m2259x(Class<?> cls) {
         return cls == Object.class ? this._unknownTypeSerializer : new UnknownSerializer(cls);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public JsonSerializer<?> m2260y(JsonSerializer<?> jsonSerializer, BeanProperty beanProperty) throws JsonMappingException {
         return (jsonSerializer == 0 || !(jsonSerializer instanceof ContextualSerializer)) ? jsonSerializer : ((ContextualSerializer) jsonSerializer).mo1997a(this, beanProperty);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public JsonSerializer<?> m2261z(JsonSerializer<?> jsonSerializer, BeanProperty beanProperty) throws JsonMappingException {
         return (jsonSerializer == 0 || !(jsonSerializer instanceof ContextualSerializer)) ? jsonSerializer : ((ContextualSerializer) jsonSerializer).mo1997a(this, beanProperty);
     }

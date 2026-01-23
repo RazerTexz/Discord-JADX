@@ -9,19 +9,19 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p195g.p196a.p205c.JavaType;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
-/* compiled from: AnnotatedMethod.java */
-/* renamed from: b.g.a.c.c0.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.j, reason: use source file name */
+/* JADX INFO: compiled from: AnnotatedMethod.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AnnotatedMethod extends AnnotatedWithParams implements Serializable {
     private static final long serialVersionUID = 1;
     public Class<?>[] _paramClasses;
     public a _serialization;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final transient Method f4718l;
 
-    /* compiled from: AnnotatedMethod.java */
-    /* renamed from: b.g.a.c.c0.j$a */
+    /* JADX INFO: renamed from: b.g.a.c.c0.j$a */
+    /* JADX INFO: compiled from: AnnotatedMethod.java */
     public static final class a implements Serializable {
         private static final long serialVersionUID = 1;
         public Class<?>[] args;
@@ -44,19 +44,19 @@ public final class AnnotatedMethod extends AnnotatedWithParams implements Serial
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.Annotated
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo1819c() {
         return this.f4718l.getName();
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.Annotated
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Class<?> mo1820d() {
         return this.f4718l.getReturnType();
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.Annotated
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public JavaType mo1821e() {
         return this.f4716j.mo1831a(this.f4718l.getGenericReturnType());
     }
@@ -70,13 +70,13 @@ public final class AnnotatedMethod extends AnnotatedWithParams implements Serial
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AnnotatedMember
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Class<?> mo1887g() {
         return this.f4718l.getDeclaringClass();
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AnnotatedMember
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public String mo1903h() {
         String strMo1903h = super.mo1903h();
         int iM1905o = m1905o();
@@ -98,13 +98,13 @@ public final class AnnotatedMethod extends AnnotatedWithParams implements Serial
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AnnotatedMember
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public Member mo1888i() {
         return this.f4718l;
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AnnotatedMember
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Object mo1889j(Object obj) throws IllegalArgumentException {
         try {
             return this.f4718l.invoke(obj, null);
@@ -118,13 +118,13 @@ public final class AnnotatedMethod extends AnnotatedWithParams implements Serial
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AnnotatedMember
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Annotated mo1890l(AnnotationMap annotationMap) {
         return new AnnotatedMethod(this.f4716j, this.f4718l, annotationMap, this._paramAnnotations);
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AnnotatedWithParams
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public JavaType mo1891n(int i) {
         Type[] genericParameterTypes = this.f4718l.getGenericParameterTypes();
         if (i >= genericParameterTypes.length) {
@@ -133,7 +133,7 @@ public final class AnnotatedMethod extends AnnotatedWithParams implements Serial
         return this.f4716j.mo1831a(genericParameterTypes[i]);
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int m1905o() {
         if (this._paramClasses == null) {
             this._paramClasses = this.f4718l.getParameterTypes();
@@ -141,7 +141,7 @@ public final class AnnotatedMethod extends AnnotatedWithParams implements Serial
         return this._paramClasses.length;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public Class<?> m1906p(int i) {
         if (this._paramClasses == null) {
             this._paramClasses = this.f4718l.getParameterTypes();

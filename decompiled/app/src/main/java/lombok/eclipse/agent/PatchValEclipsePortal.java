@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import lombok.Lombok;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/agent/PatchValEclipsePortal.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/agent/PatchValEclipsePortal.SCL.lombok */
 public class PatchValEclipsePortal {
     static final String LOCALDECLARATION_SIG = "org.eclipse.jdt.internal.compiler.ast.LocalDeclaration";
     static final String PARSER_SIG = "org.eclipse.jdt.internal.compiler.parser.Parser";
@@ -12,7 +12,7 @@ public class PatchValEclipsePortal {
     static final String SINGLEVARIABLEDECLARATION_SIG = "org.eclipse.jdt.core.dom.SingleVariableDeclaration";
     static final String ASTCONVERTER_SIG = "org.eclipse.jdt.core.dom.ASTConverter";
 
-    public static void copyInitializationOfForEachIterable(Object parser) throws IllegalArgumentException {
+    public static void copyInitializationOfForEachIterable(Object parser) {
         try {
             Reflection.copyInitializationOfForEachIterable.invoke(null, parser);
         } catch (IllegalAccessException e) {
@@ -28,7 +28,7 @@ public class PatchValEclipsePortal {
         }
     }
 
-    public static void copyInitializationOfLocalDeclaration(Object parser) throws IllegalArgumentException {
+    public static void copyInitializationOfLocalDeclaration(Object parser) {
         try {
             Reflection.copyInitializationOfLocalDeclaration.invoke(null, parser);
         } catch (IllegalAccessException e) {
@@ -44,7 +44,7 @@ public class PatchValEclipsePortal {
         }
     }
 
-    public static void addFinalAndValAnnotationToVariableDeclarationStatement(Object converter, Object out, Object in) throws IllegalArgumentException {
+    public static void addFinalAndValAnnotationToVariableDeclarationStatement(Object converter, Object out, Object in) {
         try {
             Reflection.addFinalAndValAnnotationToVariableDeclarationStatement.invoke(null, converter, out, in);
         } catch (IllegalAccessException e) {
@@ -60,7 +60,7 @@ public class PatchValEclipsePortal {
         }
     }
 
-    public static void addFinalAndValAnnotationToSingleVariableDeclaration(Object converter, Object out, Object in) throws IllegalArgumentException {
+    public static void addFinalAndValAnnotationToSingleVariableDeclaration(Object converter, Object out, Object in) {
         try {
             Reflection.addFinalAndValAnnotationToSingleVariableDeclaration.invoke(null, converter, out, in);
         } catch (IllegalAccessException e) {
@@ -76,7 +76,7 @@ public class PatchValEclipsePortal {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/agent/PatchValEclipsePortal$Reflection.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/agent/PatchValEclipsePortal$Reflection.SCL.lombok */
     private static final class Reflection {
         public static final Method copyInitializationOfForEachIterable;
         public static final Method copyInitializationOfLocalDeclaration;

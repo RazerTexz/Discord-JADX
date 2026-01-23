@@ -6,11 +6,11 @@ import java.util.Collection;
 import java.util.Iterator;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SimpleRenderer.kt */
-/* renamed from: b.a.t.b.b.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.t.b.b.h, reason: use source file name */
+/* JADX INFO: compiled from: SimpleRenderer.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SimpleRenderer {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final <T extends SpannableStringBuilder, R> T m375a(T t, Collection<? extends Node<R>> collection, R r) {
         Intrinsics3.checkNotNullParameter(t, "builder");
         Intrinsics3.checkNotNullParameter(collection, "ast");

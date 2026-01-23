@@ -42,81 +42,81 @@ import p007b.p225i.p355b.p357b.ImmutableList2;
 import p007b.p225i.p355b.p357b.ImmutableSet2;
 import p007b.p225i.p355b.p357b.RegularImmutableList;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(18)
-/* loaded from: classes3.dex */
 public class DefaultDrmSessionManager implements DrmSessionManager2 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final UUID f19815b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ExoMediaDrm.c f19816c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final MediaDrmCallback f19817d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final HashMap<String, String> f19818e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f19819f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int[] f19820g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f19821h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final C10708e f19822i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final LoadErrorHandlingPolicy f19823j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final C10709f f19824k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final long f19825l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final List<DefaultDrmSession> f19826m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Set<C10707d> f19827n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Set<DefaultDrmSession> f19828o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f19829p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public ExoMediaDrm f19830q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     public DefaultDrmSession f19831r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @Nullable
     public DefaultDrmSession f19832s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public Looper f19833t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public Handler f19834u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public int f19835v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @Nullable
     public byte[] f19836w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     @Nullable
     public volatile HandlerC10706c f19837x;
 
@@ -128,14 +128,14 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.drm.DefaultDrmSessionManager$b */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.drm.DefaultDrmSessionManager$b */
     public class C10705b implements ExoMediaDrm.b {
         public C10705b(C10704a c10704a) {
         }
     }
 
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.drm.DefaultDrmSessionManager$c */
     @SuppressLint({"HandlerLeak"})
-    /* renamed from: com.google.android.exoplayer2.drm.DefaultDrmSessionManager$c */
     public class HandlerC10706c extends Handler {
         public HandlerC10706c(Looper looper) {
             super(looper);
@@ -160,18 +160,18 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.drm.DefaultDrmSessionManager$d */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.drm.DefaultDrmSessionManager$d */
     public class C10707d implements DrmSessionManager2.b {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public final DrmSessionEventListener.a f19840b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @Nullable
         public DrmSession f19841c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean f19842d;
 
         public C10707d(@Nullable DrmSessionEventListener.a aVar) {
@@ -186,17 +186,17 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.drm.DefaultDrmSessionManager$e */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.drm.DefaultDrmSessionManager$e */
     public class C10708e implements DefaultDrmSession.InterfaceC10699a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Set<DefaultDrmSession> f19844a = new HashSet();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public DefaultDrmSession f19845b;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m8834a(Exception exc, boolean z2) {
             this.f19845b = null;
             ImmutableList2 immutableList2M6264n = ImmutableList2.m6264n(this.f19844a);
@@ -208,7 +208,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.drm.DefaultDrmSessionManager$f */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.drm.DefaultDrmSessionManager$f */
     public class C10709f implements DefaultDrmSession.InterfaceC10700b {
         public C10709f(C10704a c10704a) {
         }
@@ -234,7 +234,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
         this.f19825l = j;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static boolean m8825f(DrmSession drmSession) {
         DefaultDrmSession defaultDrmSession = (DefaultDrmSession) drmSession;
         if (defaultDrmSession.f19797n == 1) {
@@ -250,7 +250,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
         return false;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static List<DrmInitData.SchemeData> m8826i(DrmInitData drmInitData, UUID uuid, boolean z2) {
         ArrayList arrayList = new ArrayList(drmInitData.f19850m);
         for (int i = 0; i < drmInitData.f19850m; i++) {
@@ -263,7 +263,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionManager2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo3597a() {
         int i = this.f19829p;
         this.f19829p = i + 1;
@@ -282,7 +282,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionManager2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public DrmSessionManager2.b mo3598b(Looper looper, @Nullable DrmSessionEventListener.a aVar, Format2 format2) {
         AnimatableValueParser.m426D(this.f19829p > 0);
         m8830j(looper);
@@ -295,7 +295,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
 
     @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionManager2
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public DrmSession mo3599c(Looper looper, @Nullable DrmSessionEventListener.a aVar, Format2 format2) {
         AnimatableValueParser.m426D(this.f19829p > 0);
         m8830j(looper);
@@ -304,7 +304,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
 
     /* JADX WARN: Removed duplicated region for block: B:41:0x008f  */
     @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionManager2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -357,7 +357,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
     }
 
     @Nullable
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final DrmSession m8827e(Looper looper, @Nullable DrmSessionEventListener.a aVar, Format2 format2, boolean z2) {
         List<DrmInitData.SchemeData> listM8826i;
         if (this.f19837x == null) {
@@ -439,7 +439,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
         return defaultDrmSessionM8829h;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final DefaultDrmSession m8828g(@Nullable List<DrmInitData.SchemeData> list, boolean z2, @Nullable DrmSessionEventListener.a aVar) {
         Objects.requireNonNull(this.f19830q);
         boolean z3 = this.f19821h | z2;
@@ -461,7 +461,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
         return defaultDrmSession;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final DefaultDrmSession m8829h(@Nullable List<DrmInitData.SchemeData> list, boolean z2, @Nullable DrmSessionEventListener.a aVar, boolean z3) {
         DefaultDrmSession defaultDrmSessionM8828g = m8828g(list, z2, aVar);
         if (m8825f(defaultDrmSessionM8828g) && !this.f19828o.isEmpty()) {
@@ -487,7 +487,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
     }
 
     @EnsuresNonNull({"this.playbackLooper", "this.playbackHandler"})
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final synchronized void m8830j(Looper looper) {
         Looper looper2 = this.f19833t;
         if (looper2 == null) {
@@ -499,7 +499,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void m8831k() {
         if (this.f19830q != null && this.f19829p == 0 && this.f19826m.isEmpty() && this.f19827n.isEmpty()) {
             ExoMediaDrm exoMediaDrm = this.f19830q;
@@ -509,7 +509,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
         }
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m8832l() {
         Iterator itMo6251j = ImmutableSet2.m6281m(this.f19828o).mo6251j();
         while (itMo6251j.hasNext()) {
@@ -517,7 +517,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void m8833m() {
         Iterator itMo6251j = ImmutableSet2.m6281m(this.f19827n).mo6251j();
         while (itMo6251j.hasNext()) {

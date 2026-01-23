@@ -4,18 +4,18 @@ import com.google.android.gms.tasks.Task;
 import java.util.concurrent.ScheduledFuture;
 import p007b.p225i.p226a.p288f.p340n.InterfaceC4357c;
 
-/* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
-/* renamed from: b.i.a.f.d.x */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.d.x */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C3249x implements InterfaceC4357c {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C3227b f9291a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f9292b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ScheduledFuture f9293c;
 
     public C3249x(C3227b c3227b, String str, ScheduledFuture scheduledFuture) {

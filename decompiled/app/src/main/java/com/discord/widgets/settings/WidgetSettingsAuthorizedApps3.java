@@ -18,14 +18,14 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsAuthorizedApps.kt */
-/* renamed from: com.discord.widgets.settings.WidgetSettingsAuthorizedApps$adapter$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAuthorizedApps$adapter$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsAuthorizedApps.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsAuthorizedApps3 extends Lambda implements Function2<LayoutInflater, ViewGroup, WidgetSettingsAuthorizedApps.AuthorizedAppViewHolder> {
     public final /* synthetic */ WidgetSettingsAuthorizedApps this$0;
 
-    /* compiled from: WidgetSettingsAuthorizedApps.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAuthorizedApps$adapter$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAuthorizedApps$adapter$1$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAuthorizedApps.kt */
     public static final class C96381 extends Lambda implements Function1<ModelOAuth2Token, Unit> {
         public C96381() {
             super(1);
@@ -37,7 +37,7 @@ public final class WidgetSettingsAuthorizedApps3 extends Lambda implements Funct
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelOAuth2Token modelOAuth2Token) {
             Intrinsics3.checkNotNullParameter(modelOAuth2Token, "oath2Token");
             WidgetSettingsAuthorizedApps3.this.this$0.deauthorizeApp(modelOAuth2Token.getId());
@@ -55,7 +55,7 @@ public final class WidgetSettingsAuthorizedApps3 extends Lambda implements Funct
         return invoke2(layoutInflater, viewGroup);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetSettingsAuthorizedApps.AuthorizedAppViewHolder invoke2(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics3.checkNotNullParameter(layoutInflater, "layoutInflater");
         Intrinsics3.checkNotNullParameter(viewGroup, "parent");

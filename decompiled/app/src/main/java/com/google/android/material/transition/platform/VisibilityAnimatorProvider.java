@@ -7,8 +7,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* loaded from: classes3.dex */
 public interface VisibilityAnimatorProvider {
     @Nullable
     Animator createAppear(@NonNull ViewGroup viewGroup, @NonNull View view);

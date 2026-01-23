@@ -1,7 +1,6 @@
 package p596e0.p597a.p598a.p599a;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.CornerPathEffect;
 import android.graphics.Paint;
@@ -13,57 +12,57 @@ import me.dm7.barcodescanner.core.C12923R;
 import org.objectweb.asm.Opcodes;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: ViewFinderView.java */
-/* renamed from: e0.a.a.a.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: e0.a.a.a.g, reason: use source file name */
+/* JADX INFO: compiled from: ViewFinderView.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ViewFinderView extends View implements IViewFinder {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int[] f25335j = {0, 64, 128, Opcodes.CHECKCAST, 255, Opcodes.CHECKCAST, 128, 64};
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Rect f25336k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f25337l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f25338m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int f25339n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int f25340o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int f25341p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final int f25342q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public Paint f25343r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public Paint f25344s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public Paint f25345t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public int f25346u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public boolean f25347v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public boolean f25348w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public int f25349x;
 
-    public ViewFinderView(Context context) throws Resources.NotFoundException {
+    public ViewFinderView(Context context) {
         super(context);
         int color = getResources().getColor(C12923R.a.viewfinder_laser);
         this.f25338m = color;
@@ -92,7 +91,7 @@ public class ViewFinderView extends View implements IViewFinder {
         this.f25346u = integer2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized void m10100a() {
         int width;
         int height;

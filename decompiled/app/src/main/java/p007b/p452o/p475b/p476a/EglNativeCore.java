@@ -9,18 +9,18 @@ import p007b.p452o.p475b.p478c.egl4;
 import p007b.p452o.p475b.p478c.egl5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EglNativeCore.kt */
-/* renamed from: b.o.b.a.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.b.a.c, reason: use source file name */
+/* JADX INFO: compiled from: EglNativeCore.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class EglNativeCore {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public egl3 f14260a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public egl2 f14261b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public egl f14262c;
 
     public EglNativeCore(egl2 egl2Var, int i) {
@@ -61,7 +61,7 @@ public class EglNativeCore {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int m7455a(egl5 egl5Var, int i) {
         Intrinsics3.checkNotNullParameter(egl5Var, "eglSurface");
         int[] iArr = new int[1];

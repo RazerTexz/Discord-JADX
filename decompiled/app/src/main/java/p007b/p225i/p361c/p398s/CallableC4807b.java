@@ -10,15 +10,15 @@ import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import java.util.Objects;
 import java.util.concurrent.Callable;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-/* renamed from: b.i.c.s.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.s.b */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class CallableC4807b implements Callable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Context f12845j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Intent f12846k;
 
     public CallableC4807b(Context context, Intent intent) {

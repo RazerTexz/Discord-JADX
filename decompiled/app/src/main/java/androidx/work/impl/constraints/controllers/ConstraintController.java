@@ -8,7 +8,7 @@ import androidx.work.impl.model.WorkSpec;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class ConstraintController<T> implements ConstraintListener<T> {
     private OnConstraintUpdatedCallback mCallback;
     private T mCurrentValue;

@@ -12,18 +12,18 @@ import p507d0.p580t._Collections;
 import p507d0.p588x.progressionUtil;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ClassMapperLite.kt */
-/* renamed from: d0.e0.p.d.m0.f.a0.b.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.f.a0.b.b, reason: use source file name */
+/* JADX INFO: compiled from: ClassMapperLite.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ClassMapperLite {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ClassMapperLite f23700a = new ClassMapperLite();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String f23701b = _Collections.joinToString$default(Collections2.listOf((Object[]) new Character[]{'k', 'o', 't', 'l', 'i', 'n'}), "", null, null, 0, null, null, 62, null);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Map<String, String> f23702c;
 
     static {
@@ -90,7 +90,7 @@ public final class ClassMapperLite {
         f23702c = linkedHashMap;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final void m9585a(Map<String, String> map, String str, String str2) {
         map.put(f23701b + MentionUtils.SLASH_CHAR + str, 'L' + str2 + ';');
     }

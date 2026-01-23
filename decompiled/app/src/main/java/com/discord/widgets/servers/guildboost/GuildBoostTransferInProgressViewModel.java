@@ -29,8 +29,8 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.functions.Func3;
 
-/* compiled from: GuildBoostTransferInProgressViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildBoostTransferInProgressViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildBoostTransferInProgressViewModel extends AppViewModel<ViewState> {
     private final long boostId;
     private Subscription guildBoostingSubscription;
@@ -40,8 +40,8 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
     private final StoreGuildBoost storeGuildBoost;
     private final long targetGuildId;
 
-    /* compiled from: GuildBoostTransferInProgressViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostTransferInProgressViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.GuildBoostTransferInProgressViewModel$1 */
+    /* JADX INFO: compiled from: GuildBoostTransferInProgressViewModel.kt */
     public static final class C95001<T1, T2, T3, R> implements Func3<Guild, Guild, StoreGuildBoost.State, StoreState> {
         public static final C95001 INSTANCE = new C95001();
 
@@ -50,15 +50,15 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             return call2(guild, guild2, state);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final StoreState call2(Guild guild, Guild guild2, StoreGuildBoost.State state) {
             Intrinsics3.checkNotNullExpressionValue(state, "guildBoostState");
             return new StoreState(guild, guild2, state);
         }
     }
 
-    /* compiled from: GuildBoostTransferInProgressViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostTransferInProgressViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.GuildBoostTransferInProgressViewModel$2 */
+    /* JADX INFO: compiled from: GuildBoostTransferInProgressViewModel.kt */
     public static final class C95012 extends Lambda implements Function1<StoreState, Unit> {
         public C95012() {
             super(1);
@@ -70,14 +70,14 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             GuildBoostTransferInProgressViewModel.access$handleStoreState(GuildBoostTransferInProgressViewModel.this, storeState);
         }
     }
 
-    /* compiled from: GuildBoostTransferInProgressViewModel.kt */
+    /* JADX INFO: compiled from: GuildBoostTransferInProgressViewModel.kt */
     public static final /* data */ class StoreState {
         private final StoreGuildBoost.State guildBoostState;
         private final Guild previousGuild;
@@ -103,17 +103,17 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             return storeState.copy(guild, guild2, state);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getPreviousGuild() {
             return this.previousGuild;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Guild getTargetGuild() {
             return this.targetGuild;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final StoreGuildBoost.State getGuildBoostState() {
             return this.guildBoostState;
         }
@@ -167,10 +167,10 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
         }
     }
 
-    /* compiled from: GuildBoostTransferInProgressViewModel.kt */
+    /* JADX INFO: compiled from: GuildBoostTransferInProgressViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: GuildBoostTransferInProgressViewModel.kt */
+        /* JADX INFO: compiled from: GuildBoostTransferInProgressViewModel.kt */
         public static final class ErrorLoading extends ViewState {
             public static final ErrorLoading INSTANCE = new ErrorLoading();
 
@@ -179,7 +179,7 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             }
         }
 
-        /* compiled from: GuildBoostTransferInProgressViewModel.kt */
+        /* JADX INFO: compiled from: GuildBoostTransferInProgressViewModel.kt */
         public static final class ErrorTransfer extends ViewState {
             public static final ErrorTransfer INSTANCE = new ErrorTransfer();
 
@@ -188,7 +188,7 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             }
         }
 
-        /* compiled from: GuildBoostTransferInProgressViewModel.kt */
+        /* JADX INFO: compiled from: GuildBoostTransferInProgressViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 
@@ -197,7 +197,7 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             }
         }
 
-        /* compiled from: GuildBoostTransferInProgressViewModel.kt */
+        /* JADX INFO: compiled from: GuildBoostTransferInProgressViewModel.kt */
         public static final /* data */ class PostTransfer extends ViewState {
             private final Guild targetGuild;
             private final int targetGuildSubscriptionCount;
@@ -220,12 +220,12 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
                 return postTransfer.copy(guild, i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Guild getTargetGuild() {
                 return this.targetGuild;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final int getTargetGuildSubscriptionCount() {
                 return this.targetGuildSubscriptionCount;
             }
@@ -267,7 +267,7 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             }
         }
 
-        /* compiled from: GuildBoostTransferInProgressViewModel.kt */
+        /* JADX INFO: compiled from: GuildBoostTransferInProgressViewModel.kt */
         public static final /* data */ class PreTransfer extends ViewState {
             private final boolean isTransferInProgress;
             private final Guild previousGuild;
@@ -301,22 +301,22 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
                 return preTransfer.copy(guild, guild2, i, z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Guild getPreviousGuild() {
                 return this.previousGuild;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Guild getTargetGuild() {
                 return this.targetGuild;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final int getTargetGuildSubscriptionCount() {
                 return this.targetGuildSubscriptionCount;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getIsTransferInProgress() {
                 return this.isTransferInProgress;
             }
@@ -351,17 +351,20 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v4, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v5 */
+            /* JADX WARN: Type inference failed for: r1v7 */
             public int hashCode() {
                 Guild guild = this.previousGuild;
                 int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
                 Guild guild2 = this.targetGuild;
                 int iHashCode2 = (((iHashCode + (guild2 != null ? guild2.hashCode() : 0)) * 31) + this.targetGuildSubscriptionCount) * 31;
                 boolean z2 = this.isTransferInProgress;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode2 + i;
+                return iHashCode2 + r1;
             }
 
             public final boolean isTransferInProgress() {
@@ -388,8 +391,8 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
         }
     }
 
-    /* compiled from: GuildBoostTransferInProgressViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostTransferInProgressViewModel$transferGuildBoost$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.GuildBoostTransferInProgressViewModel$transferGuildBoost$1 */
+    /* JADX INFO: compiled from: GuildBoostTransferInProgressViewModel.kt */
     public static final class C95021<T, R> implements Func1<Void, Observable<? extends List<? extends ModelAppliedGuildBoost>>> {
         public C95021() {
         }
@@ -399,14 +402,14 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             return call2(r1);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends List<ModelAppliedGuildBoost>> call2(Void r6) {
             return GuildBoostTransferInProgressViewModel.this.getRestAPI().subscribeToGuild(GuildBoostTransferInProgressViewModel.this.getTargetGuildId(), new RestAPIParams.GuildBoosting(CollectionsJVM.listOf(Long.valueOf(GuildBoostTransferInProgressViewModel.this.getSlotId()))));
         }
     }
 
-    /* compiled from: GuildBoostTransferInProgressViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostTransferInProgressViewModel$transferGuildBoost$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.GuildBoostTransferInProgressViewModel$transferGuildBoost$2 */
+    /* JADX INFO: compiled from: GuildBoostTransferInProgressViewModel.kt */
     public static final class C95032 extends Lambda implements Function1<Error, Unit> {
         public C95032() {
             super(1);
@@ -418,15 +421,15 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             GuildBoostTransferInProgressViewModel.access$handleGuildBoostingError(GuildBoostTransferInProgressViewModel.this);
         }
     }
 
-    /* compiled from: GuildBoostTransferInProgressViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostTransferInProgressViewModel$transferGuildBoost$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.GuildBoostTransferInProgressViewModel$transferGuildBoost$3 */
+    /* JADX INFO: compiled from: GuildBoostTransferInProgressViewModel.kt */
     public static final class C95043 extends Lambda implements Function1<List<? extends ModelAppliedGuildBoost>, Unit> {
         public C95043() {
             super(1);
@@ -438,7 +441,7 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelAppliedGuildBoost> list) {
             GuildBoostTransferInProgressViewModel.access$handleGuildBoostingCompleted(GuildBoostTransferInProgressViewModel.this);
         }

@@ -10,16 +10,16 @@ import p007b.p109f.p161j.p177l.MemoryChunk;
 import p007b.p109f.p161j.p177l.MemoryChunkPool;
 import p007b.p109f.p161j.p177l.MemoryPooledByteBuffer;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MemoryPooledByteBufferOutputStream extends PooledByteBufferOutputStream {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final MemoryChunkPool f19560j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public CloseableReference<MemoryChunk> f19561k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f19562l;
 
     public static class InvalidStreamException extends RuntimeException {
@@ -36,14 +36,14 @@ public class MemoryPooledByteBufferOutputStream extends PooledByteBufferOutputSt
         this.f19561k = CloseableReference.m8633D(memoryChunkPool.get(i), memoryChunkPool);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8706a() {
         if (!CloseableReference.m8640y(this.f19561k)) {
             throw new InvalidStreamException();
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public MemoryPooledByteBuffer m8707b() {
         m8706a();
         CloseableReference<MemoryChunk> closeableReference = this.f19561k;

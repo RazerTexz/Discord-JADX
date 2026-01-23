@@ -8,29 +8,29 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p115d.p117b.CallerThreadExecutor;
 import p007b.p109f.p115d.p119d.Objects2;
 
-/* compiled from: FirstAvailableDataSourceSupplier.java */
-/* renamed from: b.f.e.g, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.e.g, reason: use source file name */
+/* JADX INFO: compiled from: FirstAvailableDataSourceSupplier.java */
+/* JADX INFO: loaded from: classes.dex */
 public class FirstAvailableDataSourceSupplier<T> implements Supplier<DataSource<T>> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<Supplier<DataSource<T>>> f3160a;
 
-    /* compiled from: FirstAvailableDataSourceSupplier.java */
-    /* renamed from: b.f.e.g$b */
+    /* JADX INFO: renamed from: b.f.e.g$b */
+    /* JADX INFO: compiled from: FirstAvailableDataSourceSupplier.java */
     public class b extends AbstractDataSource3<T> {
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public int f3161h = 0;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public DataSource<T> f3162i = null;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public DataSource<T> f3163j = null;
 
-        /* compiled from: FirstAvailableDataSourceSupplier.java */
-        /* renamed from: b.f.e.g$b$a */
+        /* JADX INFO: renamed from: b.f.e.g$b$a */
+        /* JADX INFO: compiled from: FirstAvailableDataSourceSupplier.java */
         public class a implements DataSubscriber<T> {
             public a(a aVar) {
             }
@@ -88,7 +88,7 @@ public class FirstAvailableDataSourceSupplier<T> implements Supplier<DataSource<
             m1027k(new RuntimeException("No data source supplier or supplier returned null."), null);
         }
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public static void m1031o(b bVar, DataSource dataSource) {
             boolean z2;
             synchronized (bVar) {
@@ -112,7 +112,7 @@ public class FirstAvailableDataSourceSupplier<T> implements Supplier<DataSource<
 
         /* JADX WARN: Removed duplicated region for block: B:8:0x000f  */
         @Override // p007b.p109f.p129e.AbstractDataSource3, com.facebook.datasource.DataSource
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -153,12 +153,12 @@ public class FirstAvailableDataSourceSupplier<T> implements Supplier<DataSource<
             return dataSourceM1032p != null ? dataSourceM1032p.getResult() : null;
         }
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final synchronized DataSource<T> m1032p() {
             return this.f3163j;
         }
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final boolean m1033q() {
             Supplier<DataSource<T>> supplier;
             boolean z2;

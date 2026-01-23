@@ -11,8 +11,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RoundedCornerViewCoordinator.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RoundedCornerViewCoordinator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RoundedCornerViewCoordinator {
     private float bottomLeftRadius;
     private float bottomRightRadius;
@@ -21,7 +21,7 @@ public final class RoundedCornerViewCoordinator {
     private float topLeftRadius;
     private float topRightRadius;
 
-    /* compiled from: RoundedCornerViewCoordinator.kt */
+    /* JADX INFO: compiled from: RoundedCornerViewCoordinator.kt */
     public enum Corner {
         TOP_LEFT,
         TOP_RIGHT,

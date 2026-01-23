@@ -3,30 +3,30 @@ package p615g0;
 import p507d0.p580t._ArraysJvm;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Segment.kt */
-/* renamed from: g0.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.s, reason: use source file name */
+/* JADX INFO: compiled from: Segment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Segment2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final byte[] f26118a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f26119b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f26120c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f26121d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f26122e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Segment2 f26123f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Segment2 f26124g;
 
     public Segment2() {
@@ -35,7 +35,7 @@ public final class Segment2 {
         this.f26121d = false;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Segment2 m10494a() {
         Segment2 segment2 = this.f26123f;
         if (segment2 == this) {
@@ -56,7 +56,7 @@ public final class Segment2 {
         return segment2;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Segment2 m10495b(Segment2 segment2) {
         Intrinsics3.checkParameterIsNotNull(segment2, "segment");
         segment2.f26124g = this;
@@ -70,13 +70,13 @@ public final class Segment2 {
         return segment2;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Segment2 m10496c() {
         this.f26121d = true;
         return new Segment2(this.f26118a, this.f26119b, this.f26120c, true, false);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m10497d(Segment2 segment2, int i) {
         Intrinsics3.checkParameterIsNotNull(segment2, "sink");
         if (!segment2.f26122e) {

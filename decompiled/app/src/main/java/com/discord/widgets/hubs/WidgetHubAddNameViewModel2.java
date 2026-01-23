@@ -7,9 +7,9 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubAddNameViewModel.kt */
-/* renamed from: com.discord.widgets.hubs.AddNameState, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.AddNameState, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubAddNameViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetHubAddNameViewModel2 {
     private final RestCallState<Void> changeNicknameAsync;
     private final Guild guild;
@@ -41,12 +41,12 @@ public final /* data */ class WidgetHubAddNameViewModel2 {
         return widgetHubAddNameViewModel2.copy(str, guild, restCallState);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getNickname() {
         return this.nickname;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Guild getGuild() {
         return this.guild;
     }

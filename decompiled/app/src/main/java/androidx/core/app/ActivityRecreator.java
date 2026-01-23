@@ -15,8 +15,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes.dex */
 public final class ActivityRecreator {
     private static final String LOG_TAG = "ActivityRecreator";
     public static final Class<?> activityThreadClass;
@@ -27,7 +27,7 @@ public final class ActivityRecreator {
     public static final Method requestRelaunchActivityMethod;
     public static final Field tokenField;
 
-    /* renamed from: androidx.core.app.ActivityRecreator$1 */
+    /* JADX INFO: renamed from: androidx.core.app.ActivityRecreator$1 */
     public class RunnableC02151 implements Runnable {
         public final /* synthetic */ LifecycleCheckCallbacks val$callbacks;
         public final /* synthetic */ Object val$token;
@@ -43,7 +43,7 @@ public final class ActivityRecreator {
         }
     }
 
-    /* renamed from: androidx.core.app.ActivityRecreator$2 */
+    /* JADX INFO: renamed from: androidx.core.app.ActivityRecreator$2 */
     public class RunnableC02162 implements Runnable {
         public final /* synthetic */ Application val$application;
         public final /* synthetic */ LifecycleCheckCallbacks val$callbacks;
@@ -59,7 +59,7 @@ public final class ActivityRecreator {
         }
     }
 
-    /* renamed from: androidx.core.app.ActivityRecreator$3 */
+    /* JADX INFO: renamed from: androidx.core.app.ActivityRecreator$3 */
     public class RunnableC02173 implements Runnable {
         public final /* synthetic */ Object val$activityThread;
         public final /* synthetic */ Object val$token;

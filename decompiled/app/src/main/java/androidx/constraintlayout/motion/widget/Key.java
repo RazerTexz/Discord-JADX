@@ -6,7 +6,7 @@ import androidx.constraintlayout.widget.ConstraintAttribute;
 import java.util.HashMap;
 import java.util.HashSet;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class Key {
     public static final String ALPHA = "alpha";
     public static final String CUSTOM = "CUSTOM";

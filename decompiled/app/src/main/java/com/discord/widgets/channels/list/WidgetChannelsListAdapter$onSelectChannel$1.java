@@ -5,8 +5,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListAdapter$onSelectChannel$1 extends Lambda implements Function1<Channel, Unit> {
     public static final WidgetChannelsListAdapter$onSelectChannel$1 INSTANCE = new WidgetChannelsListAdapter$onSelectChannel$1();
 
@@ -20,7 +20,7 @@ public final class WidgetChannelsListAdapter$onSelectChannel$1 extends Lambda im
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Channel channel) {
     }
 }

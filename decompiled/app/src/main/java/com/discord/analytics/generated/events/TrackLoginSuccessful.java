@@ -8,8 +8,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackLoginSuccessful.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackLoginSuccessful.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackLoginSuccessful implements AnalyticsSchema, TrackBase2, TrackGiftCodeMetadata2 {
     private TrackBase trackBase;
     private TrackGiftCodeMetadata trackGiftCodeMetadata;
@@ -21,7 +21,7 @@ public final /* data */ class TrackLoginSuccessful implements AnalyticsSchema, T
     private final transient String analyticsSchemaTypeName = "login_successful";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

@@ -2,15 +2,15 @@ package p007b.p225i.p226a.p288f.p313h.p325l;
 
 import java.nio.charset.Charset;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.p5 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.p5 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3787p5 implements InterfaceC3788p6 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final InterfaceC3917z5 f10197a = new C3826s5();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final InterfaceC3917z5 f10198b;
 
     public C3787p5() {

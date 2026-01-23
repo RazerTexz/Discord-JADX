@@ -49,23 +49,23 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetAgeVerify.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetAgeVerify.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAgeVerify extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetAgeVerify.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAgeVerifyBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_NSFW_CHANNEL = "INTENT_EXTRA_NSFW_CHANNEL";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final AppLogger2 loggingConfig;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetAgeVerify.kt */
+    /* JADX INFO: compiled from: WidgetAgeVerify.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -90,8 +90,8 @@ public final class WidgetAgeVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAgeVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAgeVerify$configureBirthdayInput$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAgeVerify$configureBirthdayInput$1 */
+    /* JADX INFO: compiled from: WidgetAgeVerify.kt */
     public static final class C71531 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Long $timeOfBirth;
 
@@ -107,7 +107,7 @@ public final class WidgetAgeVerify extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             DatePickerDialog.Companion companion = DatePickerDialog.INSTANCE;
@@ -119,8 +119,8 @@ public final class WidgetAgeVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAgeVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAgeVerify$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAgeVerify$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetAgeVerify.kt */
     public static final class C71551<R> implements Func0<Boolean> {
         public C71551() {
         }
@@ -146,28 +146,28 @@ public final class WidgetAgeVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAgeVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAgeVerify$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAgeVerify$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetAgeVerify.kt */
     public static final class C71561 extends Lambda implements Function1<WidgetAgeVerifyViewModel.ViewState, Unit> {
         public C71561() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(WidgetAgeVerifyViewModel.ViewState viewState) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ Unit invoke(WidgetAgeVerifyViewModel.ViewState viewState) {
             invoke2(viewState);
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(WidgetAgeVerifyViewModel.ViewState viewState) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+        public final void invoke2(WidgetAgeVerifyViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetAgeVerify.access$configureUI(WidgetAgeVerify.this, viewState);
         }
     }
 
-    /* compiled from: WidgetAgeVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAgeVerify$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAgeVerify$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetAgeVerify.kt */
     public static final class C71572 extends Lambda implements Function1<WidgetAgeVerifyViewModel.Event, Unit> {
         public C71572() {
             super(1);
@@ -179,15 +179,15 @@ public final class WidgetAgeVerify extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetAgeVerifyViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "it");
             WidgetAgeVerify.access$handleEvent(WidgetAgeVerify.this, event);
         }
     }
 
-    /* compiled from: WidgetAgeVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAgeVerify$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAgeVerify$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetAgeVerify.kt */
     public static final class ViewOnClickListenerC71581 implements View.OnClickListener {
         public ViewOnClickListenerC71581() {
         }
@@ -199,8 +199,8 @@ public final class WidgetAgeVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAgeVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAgeVerify$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAgeVerify$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetAgeVerify.kt */
     public static final class ViewOnClickListenerC71592 implements View.OnClickListener {
         public final /* synthetic */ boolean $isNSFWChannel;
 
@@ -214,8 +214,8 @@ public final class WidgetAgeVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAgeVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAgeVerify$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAgeVerify$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetAgeVerify.kt */
     public static final class ViewOnClickListenerC71603 implements View.OnClickListener {
         public final /* synthetic */ boolean $isNSFWChannel;
 
@@ -229,8 +229,8 @@ public final class WidgetAgeVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAgeVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAgeVerify$onViewBoundOrOnResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAgeVerify$onViewBoundOrOnResume$4 */
+    /* JADX INFO: compiled from: WidgetAgeVerify.kt */
     public static final class ViewOnClickListenerC71614 implements View.OnClickListener {
         public ViewOnClickListenerC71614() {
         }
@@ -250,7 +250,7 @@ public final class WidgetAgeVerify extends AppFragment {
         this.loggingConfig = new AppLogger2(false, null, new WidgetAgeVerify4(this), 3);
     }
 
-    public static final /* synthetic */ void access$configureUI(WidgetAgeVerify widgetAgeVerify, WidgetAgeVerifyViewModel.ViewState viewState) throws Resources.NotFoundException {
+    public static final /* synthetic */ void access$configureUI(WidgetAgeVerify widgetAgeVerify, WidgetAgeVerifyViewModel.ViewState viewState) {
         widgetAgeVerify.configureUI(viewState);
     }
 
@@ -290,7 +290,7 @@ public final class WidgetAgeVerify extends AppFragment {
         ViewExtensions.setOnEditTextClickListener(textInputLayout3, new C71531(dateOfBirth));
     }
 
-    private final void configureUI(WidgetAgeVerifyViewModel.ViewState viewState) throws Resources.NotFoundException {
+    private final void configureUI(WidgetAgeVerifyViewModel.ViewState viewState) {
         Long dateOfBirth;
         if (viewState.getShouldClose() && viewState.getDisplayedChild() != 2) {
             requireActivity().finish();

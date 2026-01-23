@@ -8,19 +8,19 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Objects;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.o.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.o.g */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3405g {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String f9596a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int f9597b;
 
     @RecentlyNullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m4370a() throws Throwable {
         BufferedReader bufferedReader;
         if (f9596a == null) {

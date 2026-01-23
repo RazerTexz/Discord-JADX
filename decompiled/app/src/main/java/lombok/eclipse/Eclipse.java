@@ -27,7 +27,7 @@ import org.eclipse.jdt.internal.compiler.ast.UnaryExpression;
 import org.eclipse.jdt.internal.compiler.classfmt.ClassFileConstants;
 import org.eclipse.jdt.internal.compiler.impl.CompilerOptions;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/Eclipse.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/Eclipse.SCL.lombok */
 public class Eclipse {
     public static final int ECLIPSE_DO_NOT_TOUCH_FLAG = 8388608;
     private static final Annotation[] EMPTY_ANNOTATIONS_ARRAY = new Annotation[0];
@@ -74,11 +74,11 @@ public class Eclipse {
     }
 
     public static long pos(ASTNode node) {
-        return (node.sourceStart << 32) | (node.sourceEnd & 4294967295L);
+        return (((long) node.sourceStart) << 32) | (((long) node.sourceEnd) & 4294967295L);
     }
 
     public static long[] poss(ASTNode node, int repeat) {
-        long p = (node.sourceStart << 32) | (node.sourceEnd & 4294967295L);
+        long p = (((long) node.sourceStart) << 32) | (((long) node.sourceEnd) & 4294967295L);
         long[] out = new long[repeat];
         Arrays.fill(out, p);
         return out;

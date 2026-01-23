@@ -13,33 +13,33 @@ import p007b.p085c.p086a.p095y.KeyPath;
 import p007b.p085c.p086a.p095y.p097l.CircleShape;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 
-/* compiled from: EllipseContent.java */
-/* renamed from: b.c.a.w.b.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.b.f, reason: use source file name */
+/* JADX INFO: compiled from: EllipseContent.java */
+/* JADX INFO: loaded from: classes.dex */
 public class EllipseContent implements PathContent, BaseKeyframeAnimation.b, KeyPathElementContent {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f2494b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final LottieDrawable f2495c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final BaseKeyframeAnimation<?, PointF> f2496d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final BaseKeyframeAnimation<?, PointF> f2497e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final CircleShape f2498f;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f2500h;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Path f2493a = new Path();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public CompoundTrimPathContent f2499g = new CompoundTrimPathContent();
 
     public EllipseContent(LottieDrawable lottieDrawable, BaseLayer2 baseLayer2, CircleShape circleShape) {
@@ -57,14 +57,14 @@ public class EllipseContent implements PathContent, BaseKeyframeAnimation.b, Key
     }
 
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo709a() {
         this.f2500h = false;
         this.f2495c.invalidateSelf();
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.Content2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo710b(List<Content2> list, List<Content2> list2) {
         for (int i = 0; i < list.size(); i++) {
             Content2 content2 = list.get(i);
@@ -79,14 +79,14 @@ public class EllipseContent implements PathContent, BaseKeyframeAnimation.b, Key
     }
 
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo711c(KeyPath keyPath, int i, List<KeyPath> list, KeyPath keyPath2) {
         MiscUtils.m656f(keyPath, i, list, keyPath2, this);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> void mo714g(T t, @Nullable LottieValueCallback<T> lottieValueCallback) {
         if (t == LottieProperty.f2429g) {
             BaseKeyframeAnimation<?, PointF> baseKeyframeAnimation = this.f2496d;

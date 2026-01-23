@@ -6,15 +6,15 @@ import p007b.p008a.p040p.RxPlayerEventListener;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: AppMediaPlayer.kt */
-/* renamed from: b.a.p.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.p.c, reason: use source file name */
+/* JADX INFO: compiled from: AppMediaPlayer.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppMediaPlayer4<T> implements Action1<RxPlayerEventListener.b> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ AppMediaPlayer f1581j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ String f1582k;
 
     public AppMediaPlayer4(AppMediaPlayer appMediaPlayer, String str) {

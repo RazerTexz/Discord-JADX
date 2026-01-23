@@ -7,15 +7,15 @@ import androidx.constraintlayout.solver.widgets.analyzer.DependencyNode;
 import androidx.constraintlayout.solver.widgets.analyzer.WidgetRun;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class VerticalWidgetRun extends WidgetRun {
     public DependencyNode baseline;
     public DimensionDependency baselineDimension;
 
-    /* renamed from: androidx.constraintlayout.solver.widgets.analyzer.VerticalWidgetRun$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.solver.widgets.analyzer.VerticalWidgetRun$1 */
     public static /* synthetic */ class C01931 {
 
-        /* renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$analyzer$WidgetRun$RunType */
+        /* JADX INFO: renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$analyzer$WidgetRun$RunType */
         public static final /* synthetic */ int[] f122xbf6f0c8e;
 
         static {

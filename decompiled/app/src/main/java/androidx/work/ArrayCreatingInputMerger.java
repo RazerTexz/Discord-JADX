@@ -8,9 +8,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ArrayCreatingInputMerger extends InputMerger {
-    private Object concatenateArrayAndNonArray(Object obj, Object obj2) throws ArrayIndexOutOfBoundsException, IllegalArgumentException, NegativeArraySizeException {
+    private Object concatenateArrayAndNonArray(Object obj, Object obj2) {
         int length = Array.getLength(obj);
         Object objNewInstance = Array.newInstance(obj2.getClass(), length + 1);
         System.arraycopy(obj, 0, objNewInstance, 0, length);
@@ -18,7 +18,7 @@ public final class ArrayCreatingInputMerger extends InputMerger {
         return objNewInstance;
     }
 
-    private Object concatenateArrays(Object obj, Object obj2) throws NegativeArraySizeException {
+    private Object concatenateArrays(Object obj, Object obj2) {
         int length = Array.getLength(obj);
         int length2 = Array.getLength(obj2);
         Object objNewInstance = Array.newInstance(obj.getClass().getComponentType(), length + length2);
@@ -27,14 +27,14 @@ public final class ArrayCreatingInputMerger extends InputMerger {
         return objNewInstance;
     }
 
-    private Object concatenateNonArrays(Object obj, Object obj2) throws ArrayIndexOutOfBoundsException, IllegalArgumentException, NegativeArraySizeException {
+    private Object concatenateNonArrays(Object obj, Object obj2) {
         Object objNewInstance = Array.newInstance(obj.getClass(), 2);
         Array.set(objNewInstance, 0, obj);
         Array.set(objNewInstance, 1, obj2);
         return objNewInstance;
     }
 
-    private Object createArrayFor(Object obj) throws ArrayIndexOutOfBoundsException, IllegalArgumentException, NegativeArraySizeException {
+    private Object createArrayFor(Object obj) {
         Object objNewInstance = Array.newInstance(obj.getClass(), 1);
         Array.set(objNewInstance, 0, obj);
         return objNewInstance;
@@ -42,7 +42,7 @@ public final class ArrayCreatingInputMerger extends InputMerger {
 
     @Override // androidx.work.InputMerger
     @NonNull
-    public Data merge(@NonNull List<Data> list) throws ArrayIndexOutOfBoundsException, IllegalArgumentException, NegativeArraySizeException {
+    public Data merge(@NonNull List<Data> list) {
         Data.Builder builder = new Data.Builder();
         HashMap map = new HashMap();
         Iterator<Data> it = list.iterator();

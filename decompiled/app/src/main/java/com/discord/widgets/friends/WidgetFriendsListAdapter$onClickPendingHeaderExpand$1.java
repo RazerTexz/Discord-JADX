@@ -4,8 +4,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetFriendsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsListAdapter$onClickPendingHeaderExpand$1 extends Lambda implements Function0<Unit> {
     public static final WidgetFriendsListAdapter$onClickPendingHeaderExpand$1 INSTANCE = new WidgetFriendsListAdapter$onClickPendingHeaderExpand$1();
 
@@ -19,7 +19,7 @@ public final class WidgetFriendsListAdapter$onClickPendingHeaderExpand$1 extends
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
     }
 }

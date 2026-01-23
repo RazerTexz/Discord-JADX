@@ -3,7 +3,7 @@ package org.webrtc;
 import androidx.annotation.Nullable;
 import java.util.List;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class RtpSender {
 
     @Nullable
@@ -80,7 +80,7 @@ public class RtpSender {
         return nativeGetStreams(this.nativeRtpSender);
     }
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     public String m11039id() {
         checkRtpSenderExists();
         return nativeGetId(this.nativeRtpSender);

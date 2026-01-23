@@ -25,19 +25,19 @@ import p637j0.p653p.Schedulers2;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildCommunicationDisabledBottomSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.GuildCommunicationDisabledBottomSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.GuildCommunicationDisabledBottomSheetViewModel$1 */
+    /* JADX INFO: compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
     public static final class C85551<T1, T2, R> implements Func2<Long, StoreState, StoreState> {
         public static final C85551 INSTANCE = new C85551();
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final StoreState call2(Long l, StoreState storeState) {
             return storeState;
         }
@@ -48,8 +48,8 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
         }
     }
 
-    /* compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.GuildCommunicationDisabledBottomSheetViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.GuildCommunicationDisabledBottomSheetViewModel$2 */
+    /* JADX INFO: compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
     public static final /* synthetic */ class C85562 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C85562(GuildCommunicationDisabledBottomSheetViewModel guildCommunicationDisabledBottomSheetViewModel) {
             super(1, guildCommunicationDisabledBottomSheetViewModel, GuildCommunicationDisabledBottomSheetViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/guildcommunicationdisabled/start/GuildCommunicationDisabledBottomSheetViewModel$StoreState;)V", 0);
@@ -61,14 +61,14 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             GuildCommunicationDisabledBottomSheetViewModel.access$handleStoreState((GuildCommunicationDisabledBottomSheetViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -86,7 +86,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
         }
     }
 
-    /* compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final Guild guild;
         private final GuildMember guildMember;
@@ -106,12 +106,12 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
             return storeState.copy(guild, guildMember);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final GuildMember getGuildMember() {
             return this.guildMember;
         }
@@ -156,10 +156,10 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
         }
     }
 
-    /* compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -168,7 +168,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
             }
         }
 
-        /* compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
         public static final /* data */ class Valid extends ViewState {
             private final String guildName;
             private final long timeoutTimeLeftMs;
@@ -191,12 +191,12 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
                 return valid.copy(j, str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getTimeoutTimeLeftMs() {
                 return this.timeoutTimeLeftMs;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getGuildName() {
                 return this.guildName;
             }

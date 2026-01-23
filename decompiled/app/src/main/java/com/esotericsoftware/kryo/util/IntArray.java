@@ -3,7 +3,7 @@ package com.esotericsoftware.kryo.util;
 import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class IntArray {
     public int[] items;
     public boolean ordered;

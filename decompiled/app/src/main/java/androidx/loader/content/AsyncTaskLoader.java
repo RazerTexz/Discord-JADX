@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Executor;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class AsyncTaskLoader<D> extends Loader<D> {
     public static final boolean DEBUG = false;
     public static final String TAG = "AsyncTaskLoader";
@@ -67,7 +67,7 @@ public abstract class AsyncTaskLoader<D> extends Loader<D> {
             }
         }
 
-        /* renamed from: doInBackground, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: doInBackground, reason: avoid collision after fix types in other method */
         public D doInBackground2(Void... voidArr) {
             try {
                 return (D) AsyncTaskLoader.this.onLoadInBackground();

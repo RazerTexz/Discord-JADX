@@ -5,7 +5,7 @@ import android.util.Property;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ImageMatrixProperty extends Property<ImageView, Matrix> {
     private final Matrix matrix;
 
@@ -26,13 +26,13 @@ public class ImageMatrixProperty extends Property<ImageView, Matrix> {
     }
 
     @NonNull
-    /* renamed from: get, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
     public Matrix get2(@NonNull ImageView imageView) {
         this.matrix.set(imageView.getImageMatrix());
         return this.matrix;
     }
 
-    /* renamed from: set, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
     public void set2(@NonNull ImageView imageView, @NonNull Matrix matrix) {
         imageView.setImageMatrix(matrix);
     }

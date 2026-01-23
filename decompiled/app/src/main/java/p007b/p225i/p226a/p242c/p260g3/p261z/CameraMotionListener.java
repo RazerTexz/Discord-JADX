@@ -1,12 +1,12 @@
 package p007b.p225i.p226a.p242c.p260g3.p261z;
 
-/* compiled from: CameraMotionListener.java */
-/* renamed from: b.i.a.c.g3.z.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.z.d, reason: use source file name */
+/* JADX INFO: compiled from: CameraMotionListener.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface CameraMotionListener {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void mo3196a(long j, float[] fArr);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void mo3197c();
 }

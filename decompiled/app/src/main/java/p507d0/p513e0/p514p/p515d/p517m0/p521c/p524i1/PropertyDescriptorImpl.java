@@ -40,100 +40,100 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeSubstitutor2;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.Variance;
 import p507d0.p513e0.p514p.p515d.p517m0.p576p.SmartSet;
 
-/* compiled from: PropertyDescriptorImpl.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.c0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.c0, reason: use source file name */
+/* JADX INFO: compiled from: PropertyDescriptorImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PropertyDescriptorImpl extends VariableDescriptorWithInitializerImpl implements PropertyDescriptor {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final boolean f22819A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public ReceiverParameterDescriptor f22820B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public ReceiverParameterDescriptor f22821C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public List<TypeParameterDescriptor> f22822D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public PropertyGetterDescriptorImpl f22823E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public PropertySetterDescriptor f22824F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public boolean f22825G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public FieldDescriptor f22826H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public FieldDescriptor f22827I;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final Modality f22828q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public DescriptorVisibility2 f22829r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public Collection<? extends PropertyDescriptor> f22830s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final PropertyDescriptor f22831t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final CallableMemberDescriptor.a f22832u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final boolean f22833v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final boolean f22834w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final boolean f22835x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final boolean f22836y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final boolean f22837z;
 
-    /* compiled from: PropertyDescriptorImpl.java */
-    /* renamed from: d0.e0.p.d.m0.c.i1.c0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.c0$a */
+    /* JADX INFO: compiled from: PropertyDescriptorImpl.java */
     public class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public DeclarationDescriptor f22838a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Modality f22839b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public DescriptorVisibility2 f22840c;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public CallableMemberDescriptor.a f22842e;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public ReceiverParameterDescriptor f22845h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public Name f22846i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public KotlinType f22847j;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public PropertyDescriptor f22841d = null;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public TypeSubstitution5 f22843f = TypeSubstitution5.f24899a;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public boolean f22844g = true;
 
         public a() {
@@ -146,7 +146,7 @@ public class PropertyDescriptorImpl extends VariableDescriptorWithInitializerImp
             this.f22847j = PropertyDescriptorImpl.this.getType();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9395a(int i) {
             String str = (i == 1 || i == 2 || i == 3 || i == 5 || i == 7 || i == 9 || i == 11 || i == 19 || i == 13 || i == 14 || i == 16 || i == 17) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
             Object[] objArr = new Object[(i == 1 || i == 2 || i == 3 || i == 5 || i == 7 || i == 9 || i == 11 || i == 19 || i == 13 || i == 14 || i == 16 || i == 17) ? 2 : 3];
@@ -482,7 +482,7 @@ public class PropertyDescriptorImpl extends VariableDescriptorWithInitializerImp
 
     /* JADX WARN: Removed duplicated region for block: B:10:0x001a  */
     /* JADX WARN: Removed duplicated region for block: B:19:0x002c  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -699,7 +699,7 @@ public class PropertyDescriptorImpl extends VariableDescriptorWithInitializerImp
         throw new IllegalStateException(str2);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static FunctionDescriptor m9393c(TypeSubstitutor2 typeSubstitutor2, PropertyAccessorDescriptor propertyAccessorDescriptor) {
         if (propertyAccessorDescriptor == null) {
             m9392a(26);
@@ -748,7 +748,7 @@ public class PropertyDescriptorImpl extends VariableDescriptorWithInitializerImp
         return declarationDescriptorVisitor.visitPropertyDescriptor(this, d);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public PropertyDescriptorImpl mo9394b(DeclarationDescriptor declarationDescriptor, Modality modality, DescriptorVisibility2 descriptorVisibility2, PropertyDescriptor propertyDescriptor, CallableMemberDescriptor.a aVar, Name name, SourceElement sourceElement) {
         if (declarationDescriptor == null) {
             m9392a(27);

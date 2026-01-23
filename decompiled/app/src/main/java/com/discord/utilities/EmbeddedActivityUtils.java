@@ -11,9 +11,9 @@ import java.util.List;
 import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmbeddedActivityUtils.kt */
-/* renamed from: com.discord.utilities.EmbeddedActivityUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.EmbeddedActivityUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: EmbeddedActivityUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmbeddedActivityUtils {
     public static final List<UserGuildMember> getActivityParticipants(EmbeddedActivity embeddedActivity, Map<Long, StoreVoiceParticipants.VoiceUser> map) {
         Intrinsics3.checkNotNullParameter(embeddedActivity, "$this$getActivityParticipants");

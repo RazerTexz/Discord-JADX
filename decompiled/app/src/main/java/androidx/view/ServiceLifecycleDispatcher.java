@@ -4,7 +4,7 @@ import android.os.Handler;
 import androidx.annotation.NonNull;
 import androidx.view.Lifecycle;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ServiceLifecycleDispatcher {
     private final Handler mHandler = new Handler();
     private DispatchRunnable mLastDispatchRunnable;

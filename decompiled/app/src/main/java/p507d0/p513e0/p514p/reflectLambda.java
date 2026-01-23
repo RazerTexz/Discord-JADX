@@ -21,16 +21,16 @@ import p507d0.p592z.p594d.FunctionReference;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: reflectLambda.kt */
-/* renamed from: d0.e0.p.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.c, reason: use source file name */
+/* JADX INFO: compiled from: reflectLambda.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class reflectLambda {
 
-    /* compiled from: reflectLambda.kt */
-    /* renamed from: d0.e0.p.c$a */
+    /* JADX INFO: renamed from: d0.e0.p.c$a */
+    /* JADX INFO: compiled from: reflectLambda.kt */
     public static final /* synthetic */ class a extends FunctionReference implements Function2<MemberDeserializer, C11684i, SimpleFunctionDescriptor> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f22318j = new a();
 
         public a() {
@@ -52,7 +52,7 @@ public final class reflectLambda {
             return "loadFunction(Lorg/jetbrains/kotlin/metadata/ProtoBuf$Function;)Lorg/jetbrains/kotlin/descriptors/SimpleFunctionDescriptor;";
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final SimpleFunctionDescriptor invoke2(MemberDeserializer memberDeserializer, C11684i c11684i) {
             Intrinsics3.checkNotNullParameter(memberDeserializer, "p1");
             Intrinsics3.checkNotNullParameter(c11684i, "p2");

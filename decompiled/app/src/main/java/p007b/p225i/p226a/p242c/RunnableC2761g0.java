@@ -4,15 +4,15 @@ import com.google.android.exoplayer2.ExoPlaybackException;
 import java.util.Objects;
 import p007b.p225i.p226a.p242c.p259f3.Log2;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.g0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g0 */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC2761g0 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ ExoPlayerImplInternal2 f6806j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ PlayerMessage f6807k;
 
     public /* synthetic */ RunnableC2761g0(ExoPlayerImplInternal2 exoPlayerImplInternal2, PlayerMessage playerMessage) {

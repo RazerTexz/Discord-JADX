@@ -3,12 +3,12 @@ package p007b.p225i.p361c.p369m.p370d.p373k;
 import java.util.Comparator;
 import p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport;
 
-/* compiled from: SessionReportingCoordinator.java */
-/* renamed from: b.i.c.m.d.k.c1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.c1, reason: use source file name */
+/* JADX INFO: compiled from: SessionReportingCoordinator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class SessionReportingCoordinator2 implements Comparator {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final SessionReportingCoordinator2 f12272j = new SessionReportingCoordinator2();
 
     @Override // java.util.Comparator

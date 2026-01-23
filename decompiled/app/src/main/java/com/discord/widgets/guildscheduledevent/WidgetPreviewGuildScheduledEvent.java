@@ -2,7 +2,6 @@ package com.discord.widgets.guildscheduledevent;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.text.SpannableString;
 import android.text.style.ImageSpan;
@@ -58,37 +57,37 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetPreviewGuildScheduledEvent.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetPreviewGuildScheduledEvent.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetPreviewGuildScheduledEvent.class, "binding", "getBinding()Lcom/discord/databinding/WidgetPreviewGuildScheduledEventBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final String EXTRA_EVENT_CREATED = "INTENT_EXTRA_EVENT_CREATED";
     private static final String EXTRA_EVENT_MODEL = "INTENT_EXTRA_EVENT_MODEL";
     private static final String EXTRA_EXISTING_EVENT_DATA = "INTENT_EXTRA_EXISTING_EVENT_DATA";
     private static final int RESULT_QUIT = 2;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: eventModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: eventModel$delegate, reason: from kotlin metadata */
     private final Lazy eventModel;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetPreviewGuildScheduledEvent.kt */
+    /* JADX INFO: compiled from: WidgetPreviewGuildScheduledEvent.kt */
     public static final class Companion {
 
-        /* compiled from: WidgetPreviewGuildScheduledEvent.kt */
+        /* JADX INFO: compiled from: WidgetPreviewGuildScheduledEvent.kt */
         public enum Action {
             EDIT_EVENT,
             START_EVENT
         }
 
-        /* compiled from: WidgetPreviewGuildScheduledEvent.kt */
+        /* JADX INFO: compiled from: WidgetPreviewGuildScheduledEvent.kt */
         public static final /* data */ class ExistingEventData implements Serializable {
             private final Action action;
             private final long guildScheduledEventId;
@@ -109,12 +108,12 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
                 return existingEventData.copy(j, action);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getGuildScheduledEventId() {
                 return this.guildScheduledEventId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Action getAction() {
                 return this.action;
             }
@@ -162,6 +161,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
         private Companion() {
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ void launch$default(Companion companion, Context context, GuildScheduledEventModel guildScheduledEventModel, ExistingEventData existingEventData, ActivityResultLauncher activityResultLauncher, boolean z2, int i, Object obj) {
             companion.launch(context, guildScheduledEventModel, (i & 4) != 0 ? null : existingEventData, (i & 8) != 0 ? null : activityResultLauncher, (i & 16) != 0 ? false : z2);
         }
@@ -225,28 +225,28 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetPreviewGuildScheduledEvent.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$onResume$1 */
+    /* JADX INFO: compiled from: WidgetPreviewGuildScheduledEvent.kt */
     public static final /* synthetic */ class C89341 extends FunctionReferenceImpl implements Function1<PreviewGuildScheduledEventViewModel.ViewState, Unit> {
         public C89341(WidgetPreviewGuildScheduledEvent widgetPreviewGuildScheduledEvent) {
             super(1, widgetPreviewGuildScheduledEvent, WidgetPreviewGuildScheduledEvent.class, "configureUi", "configureUi(Lcom/discord/widgets/guildscheduledevent/PreviewGuildScheduledEventViewModel$ViewState;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(PreviewGuildScheduledEventViewModel.ViewState viewState) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ Unit invoke(PreviewGuildScheduledEventViewModel.ViewState viewState) {
             invoke2(viewState);
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(PreviewGuildScheduledEventViewModel.ViewState viewState) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+        public final void invoke2(PreviewGuildScheduledEventViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetPreviewGuildScheduledEvent.access$configureUi((WidgetPreviewGuildScheduledEvent) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetPreviewGuildScheduledEvent.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetPreviewGuildScheduledEvent.kt */
     public static final class ViewOnClickListenerC89351 implements View.OnClickListener {
         public ViewOnClickListenerC89351() {
         }
@@ -260,8 +260,8 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetPreviewGuildScheduledEvent.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetPreviewGuildScheduledEvent.kt */
     public static final class ViewOnClickListenerC89362 implements View.OnClickListener {
         public ViewOnClickListenerC89362() {
         }
@@ -276,12 +276,12 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetPreviewGuildScheduledEvent.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetPreviewGuildScheduledEvent.kt */
     public static final class ViewOnClickListenerC89373 implements View.OnClickListener {
 
-        /* compiled from: WidgetPreviewGuildScheduledEvent.kt */
-        /* renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$onViewBound$3$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$onViewBound$3$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetPreviewGuildScheduledEvent.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Long, Unit> {
             public AnonymousClass2() {
                 super(1);
@@ -293,7 +293,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Long l) {
                 FragmentActivity activity = WidgetPreviewGuildScheduledEvent.this.getActivity();
                 if (activity != null) {
@@ -335,7 +335,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
         this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(PreviewGuildScheduledEventViewModel.class), new C8932x73600cfd(appViewModelDelegates3), new AppViewModelDelegates5(widgetPreviewGuildScheduledEvent6));
     }
 
-    public static final /* synthetic */ void access$configureUi(WidgetPreviewGuildScheduledEvent widgetPreviewGuildScheduledEvent, PreviewGuildScheduledEventViewModel.ViewState viewState) throws Resources.NotFoundException {
+    public static final /* synthetic */ void access$configureUi(WidgetPreviewGuildScheduledEvent widgetPreviewGuildScheduledEvent, PreviewGuildScheduledEventViewModel.ViewState viewState) {
         widgetPreviewGuildScheduledEvent.configureUi(viewState);
     }
 
@@ -390,7 +390,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
         textView2.setVisibility(8);
     }
 
-    private final void configureUi(PreviewGuildScheduledEventViewModel.ViewState viewState) throws Resources.NotFoundException {
+    private final void configureUi(PreviewGuildScheduledEventViewModel.ViewState viewState) {
         int i;
         if (viewState instanceof PreviewGuildScheduledEventViewModel.ViewState.Invalid) {
             FragmentActivity activity = getActivity();
@@ -482,14 +482,14 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
         getBinding().f17382i.setOnClickListener(new ViewOnClickListenerC89373());
     }
 
-    /* compiled from: WidgetPreviewGuildScheduledEvent.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$configureTextForCreation$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$configureTextForCreation$2 */
+    /* JADX INFO: compiled from: WidgetPreviewGuildScheduledEvent.kt */
     public static final class C89332 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ String $channelName;
         public final /* synthetic */ PreviewGuildScheduledEventViewModel.ViewState.Initialized $viewState;
 
-        /* compiled from: WidgetPreviewGuildScheduledEvent.kt */
-        /* renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$configureTextForCreation$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$configureTextForCreation$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetPreviewGuildScheduledEvent.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -501,7 +501,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
                 Intrinsics3.checkNotNullParameter(hook, "$receiver");
                 StringBuilder sbM833U = outline.m833U(". ");
@@ -524,7 +524,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
             this.$viewState = initialized;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.args.put("channelName", this.$channelName);

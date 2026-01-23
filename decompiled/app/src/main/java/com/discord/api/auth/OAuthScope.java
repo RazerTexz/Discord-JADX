@@ -5,12 +5,12 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: OAuthScope.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: OAuthScope.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class OAuthScope {
     private final String scopeName;
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class ActivitiesRead extends OAuthScope {
         public static final ActivitiesRead INSTANCE = new ActivitiesRead();
 
@@ -19,7 +19,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class ActivitiesWrite extends OAuthScope {
         public static final ActivitiesWrite INSTANCE = new ActivitiesWrite();
 
@@ -28,7 +28,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class ApplicationsBuildsRead extends OAuthScope {
         public static final ApplicationsBuildsRead INSTANCE = new ApplicationsBuildsRead();
 
@@ -37,7 +37,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class ApplicationsBuildsUpload extends OAuthScope {
         public static final ApplicationsBuildsUpload INSTANCE = new ApplicationsBuildsUpload();
 
@@ -46,7 +46,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class ApplicationsCommands extends OAuthScope {
         public static final ApplicationsCommands INSTANCE = new ApplicationsCommands();
 
@@ -55,7 +55,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class ApplicationsCommandsUpdate extends OAuthScope {
         public static final ApplicationsCommandsUpdate INSTANCE = new ApplicationsCommandsUpdate();
 
@@ -64,7 +64,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class ApplicationsEntitlements extends OAuthScope {
         public static final ApplicationsEntitlements INSTANCE = new ApplicationsEntitlements();
 
@@ -73,7 +73,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class ApplicationsStoreUpdate extends OAuthScope {
         public static final ApplicationsStoreUpdate INSTANCE = new ApplicationsStoreUpdate();
 
@@ -82,7 +82,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class Bot extends OAuthScope {
         public static final Bot INSTANCE = new Bot();
 
@@ -91,7 +91,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class Connections extends OAuthScope {
         public static final Connections INSTANCE = new Connections();
 
@@ -100,7 +100,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class DMChannelsRead extends OAuthScope {
         public static final DMChannelsRead INSTANCE = new DMChannelsRead();
 
@@ -109,7 +109,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class Email extends OAuthScope {
         public static final Email INSTANCE = new Email();
 
@@ -118,7 +118,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class GdmJoin extends OAuthScope {
         public static final GdmJoin INSTANCE = new GdmJoin();
 
@@ -127,7 +127,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class Guilds extends OAuthScope {
         public static final Guilds INSTANCE = new Guilds();
 
@@ -136,7 +136,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class GuildsJoin extends OAuthScope {
         public static final GuildsJoin INSTANCE = new GuildsJoin();
 
@@ -145,7 +145,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class GuildsMembersRead extends OAuthScope {
         public static final GuildsMembersRead INSTANCE = new GuildsMembersRead();
 
@@ -154,7 +154,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class Identify extends OAuthScope {
         public static final Identify INSTANCE = new Identify();
 
@@ -163,7 +163,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final /* data */ class Invalid extends OAuthScope {
         private final String rawValue;
 
@@ -174,7 +174,7 @@ public abstract class OAuthScope {
             this.rawValue = str;
         }
 
-        /* renamed from: b, reason: from getter */
+        /* JADX INFO: renamed from: b, reason: from getter */
         public final String getRawValue() {
             return this.rawValue;
         }
@@ -199,7 +199,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class MessagesRead extends OAuthScope {
         public static final MessagesRead INSTANCE = new MessagesRead();
 
@@ -208,7 +208,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class RelationshipsRead extends OAuthScope {
         public static final RelationshipsRead INSTANCE = new RelationshipsRead();
 
@@ -217,7 +217,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class Rpc extends OAuthScope {
         public static final Rpc INSTANCE = new Rpc();
 
@@ -226,7 +226,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class RpcActivitiesWrite extends OAuthScope {
         public static final RpcActivitiesWrite INSTANCE = new RpcActivitiesWrite();
 
@@ -235,7 +235,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class RpcNotificationsRead extends OAuthScope {
         public static final RpcNotificationsRead INSTANCE = new RpcNotificationsRead();
 
@@ -244,7 +244,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class RpcVoiceRead extends OAuthScope {
         public static final RpcVoiceRead INSTANCE = new RpcVoiceRead();
 
@@ -253,7 +253,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class RpcVoiceWrite extends OAuthScope {
         public static final RpcVoiceWrite INSTANCE = new RpcVoiceWrite();
 
@@ -262,7 +262,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class Voice extends OAuthScope {
         public static final Voice INSTANCE = new Voice();
 
@@ -271,7 +271,7 @@ public abstract class OAuthScope {
         }
     }
 
-    /* compiled from: OAuthScope.kt */
+    /* JADX INFO: compiled from: OAuthScope.kt */
     public static final class WebhookIncoming extends OAuthScope {
         public static final WebhookIncoming INSTANCE = new WebhookIncoming();
 
@@ -284,7 +284,7 @@ public abstract class OAuthScope {
         this.scopeName = str;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getScopeName() {
         return this.scopeName;
     }

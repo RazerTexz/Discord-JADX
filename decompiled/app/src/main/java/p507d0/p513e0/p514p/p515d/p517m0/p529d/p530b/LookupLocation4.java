@@ -4,21 +4,21 @@ import java.io.Serializable;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: LookupLocation.kt */
-/* renamed from: d0.e0.p.d.m0.d.b.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.d.b.e, reason: use source file name */
+/* JADX INFO: compiled from: LookupLocation.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LookupLocation4 implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final a f23135j = new a(null);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final LookupLocation4 f23136k = new LookupLocation4(-1, -1);
     private final int column;
     private final int line;
 
-    /* compiled from: LookupLocation.kt */
-    /* renamed from: d0.e0.p.d.m0.d.b.e$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.d.b.e$a */
+    /* JADX INFO: compiled from: LookupLocation.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

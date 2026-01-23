@@ -15,14 +15,14 @@ import androidx.work.impl.utils.taskexecutor.TaskExecutor;
 import java.util.UUID;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class WorkForegroundUpdater implements ForegroundUpdater {
     public final ForegroundProcessor mForegroundProcessor;
     private final TaskExecutor mTaskExecutor;
     public final WorkSpecDao mWorkSpecDao;
 
-    /* renamed from: androidx.work.impl.utils.WorkForegroundUpdater$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.utils.WorkForegroundUpdater$1 */
     public class RunnableC07821 implements Runnable {
         public final /* synthetic */ Context val$context;
         public final /* synthetic */ ForegroundInfo val$foregroundInfo;

@@ -4,8 +4,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ChatInputViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChatInputViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChatInputViewModel$sendCommand$validated$1 extends Lambda implements Function0<Unit> {
     public static final ChatInputViewModel$sendCommand$validated$1 INSTANCE = new ChatInputViewModel$sendCommand$validated$1();
 
@@ -19,7 +19,7 @@ public final class ChatInputViewModel$sendCommand$validated$1 extends Lambda imp
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
     }
 }

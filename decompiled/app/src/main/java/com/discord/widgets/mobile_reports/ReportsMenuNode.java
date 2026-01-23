@@ -48,8 +48,8 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReportsMenuNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ReportsMenuNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ReportsMenuNode extends ConstraintLayout {
     private final ViewReportsMenuNodeBinding binding;
     private Function0<Unit> handleBlock;
@@ -59,8 +59,8 @@ public final class ReportsMenuNode extends ConstraintLayout {
     private Function0<Unit> handleSubmit;
     private MobileReportsViewModel.NodeState prevViewState;
 
-    /* compiled from: ReportsMenuNode.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.ReportsMenuNode$setupBlockUser$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.ReportsMenuNode$setupBlockUser$1 */
+    /* JADX INFO: compiled from: ReportsMenuNode.kt */
     public static final class ViewOnClickListenerC90801 implements View.OnClickListener {
         public ViewOnClickListenerC90801() {
         }
@@ -71,8 +71,8 @@ public final class ReportsMenuNode extends ConstraintLayout {
         }
     }
 
-    /* compiled from: ReportsMenuNode.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.ReportsMenuNode$setupBottomButton$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.ReportsMenuNode$setupBottomButton$1 */
+    /* JADX INFO: compiled from: ReportsMenuNode.kt */
     public static final /* synthetic */ class C90811 extends FunctionReferenceImpl implements Function1<ReportNodeBottomButton, Unit> {
         public C90811(ReportsMenuNode reportsMenuNode) {
             super(1, reportsMenuNode, ReportsMenuNode.class, "bottomButtonClickListener", "bottomButtonClickListener(Lcom/discord/api/report/ReportNodeBottomButton;)V", 0);
@@ -84,7 +84,7 @@ public final class ReportsMenuNode extends ConstraintLayout {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ReportNodeBottomButton reportNodeBottomButton) {
             Intrinsics3.checkNotNullParameter(reportNodeBottomButton, "p1");
             ReportsMenuNode.access$bottomButtonClickListener((ReportsMenuNode) this.receiver, reportNodeBottomButton);
@@ -409,7 +409,7 @@ public final class ReportsMenuNode extends ConstraintLayout {
         return this.handleSubmit;
     }
 
-    /* renamed from: getViewState, reason: from getter */
+    /* JADX INFO: renamed from: getViewState, reason: from getter */
     public final MobileReportsViewModel.NodeState getPrevViewState() {
         return this.prevViewState;
     }

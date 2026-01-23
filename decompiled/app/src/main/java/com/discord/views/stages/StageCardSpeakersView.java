@@ -15,24 +15,24 @@ import p007b.p008a.p025i.ViewStageCardSpeakersBinding;
 import p007b.p008a.p062y.p068o0.SpeakersAdapter;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StageCardSpeakersView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StageCardSpeakersView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StageCardSpeakersView extends LinearLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final RecyclerView.ItemDecoration f19290j = new C7121a();
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final ViewStageCardSpeakersBinding binding;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final SpeakersAdapter speakersAdapter;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final GridLayoutManager speakersLayoutManager;
 
-    /* compiled from: StageCardSpeakersView.kt */
-    /* renamed from: com.discord.views.stages.StageCardSpeakersView$a */
+    /* JADX INFO: renamed from: com.discord.views.stages.StageCardSpeakersView$a */
+    /* JADX INFO: compiled from: StageCardSpeakersView.kt */
     public static final class C7121a extends RecyclerView.ItemDecoration {
         @Override // androidx.recyclerview.widget.RecyclerView.ItemDecoration
         public void getItemOffsets(Rect rect, View view, RecyclerView recyclerView, RecyclerView.State state) {

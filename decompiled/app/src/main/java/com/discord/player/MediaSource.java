@@ -7,24 +7,24 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MediaSource.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MediaSource.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class MediaSource implements Parcelable {
 
-    /* renamed from: CREATOR, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: CREATOR, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final Uri progressiveMediaUri;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final String featureTag;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final MediaType mediaType;
 
-    /* compiled from: MediaSource.kt */
-    /* renamed from: com.discord.player.MediaSource$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.player.MediaSource$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: MediaSource.kt */
     public static final class Companion implements Parcelable.Creator<MediaSource> {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }

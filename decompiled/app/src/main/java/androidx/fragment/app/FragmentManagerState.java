@@ -7,8 +7,8 @@ import android.os.Parcelable;
 import androidx.fragment.app.FragmentManager;
 import java.util.ArrayList;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"BanParcelableUsage"})
-/* loaded from: classes.dex */
 public final class FragmentManagerState implements Parcelable {
     public static final Parcelable.Creator<FragmentManagerState> CREATOR = new C03881();
     public ArrayList<FragmentState> mActive;
@@ -20,7 +20,7 @@ public final class FragmentManagerState implements Parcelable {
     public ArrayList<String> mResultKeys;
     public ArrayList<Bundle> mResults;
 
-    /* renamed from: androidx.fragment.app.FragmentManagerState$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentManagerState$1 */
     public class C03881 implements Parcelable.Creator<FragmentManagerState> {
         @Override // android.os.Parcelable.Creator
         public /* bridge */ /* synthetic */ FragmentManagerState createFromParcel(Parcel parcel) {

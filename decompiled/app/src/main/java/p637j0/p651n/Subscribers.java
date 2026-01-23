@@ -4,12 +4,12 @@ import p637j0.Observer2;
 import p658rx.Subscriber;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: Subscribers.java */
-/* renamed from: j0.n.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.n.d, reason: use source file name */
+/* JADX INFO: compiled from: Subscribers.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Subscribers<T> extends Subscriber<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Observer2 f27372j;
 
     public Subscribers(Observer2 observer2) {

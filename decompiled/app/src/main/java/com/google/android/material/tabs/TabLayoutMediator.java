@@ -7,7 +7,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.tabs.TabLayout;
 import java.lang.ref.WeakReference;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TabLayoutMediator {
 
     @Nullable
@@ -36,7 +36,7 @@ public final class TabLayoutMediator {
         void onConfigureTab(@NonNull TabLayout.Tab tab, int i);
     }
 
-    /* renamed from: com.google.android.material.tabs.TabLayoutMediator$a */
+    /* JADX INFO: renamed from: com.google.android.material.tabs.TabLayoutMediator$a */
     public class C11010a extends RecyclerView.AdapterDataObserver {
         public C11010a() {
         }
@@ -72,17 +72,17 @@ public final class TabLayoutMediator {
         }
     }
 
-    /* renamed from: com.google.android.material.tabs.TabLayoutMediator$b */
+    /* JADX INFO: renamed from: com.google.android.material.tabs.TabLayoutMediator$b */
     public static class C11011b extends ViewPager2.OnPageChangeCallback {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @NonNull
         public final WeakReference<TabLayout> f21166a;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f21168c = 0;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int f21167b = 0;
 
         public C11011b(TabLayout tabLayout) {
@@ -115,13 +115,13 @@ public final class TabLayoutMediator {
         }
     }
 
-    /* renamed from: com.google.android.material.tabs.TabLayoutMediator$c */
+    /* JADX INFO: renamed from: com.google.android.material.tabs.TabLayoutMediator$c */
     public static class C11012c implements TabLayout.OnTabSelectedListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ViewPager2 f21169a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f21170b;
 
         public C11012c(ViewPager2 viewPager2, boolean z2) {

@@ -38,7 +38,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class RoomDatabase {
     private static final String DB_IMPL_SUFFIX = "_Impl";
 

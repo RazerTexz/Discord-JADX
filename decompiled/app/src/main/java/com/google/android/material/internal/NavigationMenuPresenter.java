@@ -2,7 +2,6 @@ package com.google.android.material.internal;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -33,8 +32,8 @@ import com.google.android.material.C10817R;
 import java.util.ArrayList;
 import java.util.Objects;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class NavigationMenuPresenter implements MenuPresenter {
     private static final String STATE_ADAPTER = "android:menu:adapter";
     private static final String STATE_HEADER = "android:menu:header";
@@ -45,7 +44,7 @@ public class NavigationMenuPresenter implements MenuPresenter {
     public LinearLayout headerLayout;
     public ColorStateList iconTintList;
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     private int f21030id;
     public Drawable itemBackground;
     public int itemHorizontalPadding;
@@ -64,7 +63,7 @@ public class NavigationMenuPresenter implements MenuPresenter {
     private int overScrollMode = -1;
     public final View.OnClickListener onClickListener = new ViewOnClickListenerC10928a();
 
-    /* renamed from: com.google.android.material.internal.NavigationMenuPresenter$a */
+    /* JADX INFO: renamed from: com.google.android.material.internal.NavigationMenuPresenter$a */
     public class ViewOnClickListenerC10928a implements View.OnClickListener {
         public ViewOnClickListenerC10928a() {
         }
@@ -88,30 +87,30 @@ public class NavigationMenuPresenter implements MenuPresenter {
         }
     }
 
-    /* renamed from: com.google.android.material.internal.NavigationMenuPresenter$b */
+    /* JADX INFO: renamed from: com.google.android.material.internal.NavigationMenuPresenter$b */
     public static class C10929b extends AbstractC10939l {
         public C10929b(View view) {
             super(view);
         }
     }
 
-    /* renamed from: com.google.android.material.internal.NavigationMenuPresenter$c */
+    /* JADX INFO: renamed from: com.google.android.material.internal.NavigationMenuPresenter$c */
     public class C10930c extends RecyclerView.Adapter<AbstractC10939l> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ArrayList<InterfaceC10932e> f21032a = new ArrayList<>();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public MenuItemImpl f21033b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean f21034c;
 
         public C10930c() {
             m9144a();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m9144a() {
             if (this.f21034c) {
                 return;
@@ -196,7 +195,7 @@ public class NavigationMenuPresenter implements MenuPresenter {
             this.f21034c = false;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m9145b(@NonNull MenuItemImpl menuItemImpl) {
             if (this.f21033b == menuItemImpl || !menuItemImpl.isCheckable()) {
                 return;
@@ -210,7 +209,7 @@ public class NavigationMenuPresenter implements MenuPresenter {
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-        /* renamed from: getItemCount */
+        /* JADX INFO: renamed from: getItemCount */
         public int getPageSize() {
             return this.f21032a.size();
         }
@@ -236,7 +235,7 @@ public class NavigationMenuPresenter implements MenuPresenter {
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-        public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) throws Resources.NotFoundException {
+        public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
             AbstractC10939l abstractC10939l = (AbstractC10939l) viewHolder;
             int itemViewType = getItemViewType(i);
             if (itemViewType != 0) {
@@ -306,21 +305,21 @@ public class NavigationMenuPresenter implements MenuPresenter {
         }
     }
 
-    /* renamed from: com.google.android.material.internal.NavigationMenuPresenter$d */
+    /* JADX INFO: renamed from: com.google.android.material.internal.NavigationMenuPresenter$d */
     public static class C10931d implements InterfaceC10932e {
     }
 
-    /* renamed from: com.google.android.material.internal.NavigationMenuPresenter$e */
+    /* JADX INFO: renamed from: com.google.android.material.internal.NavigationMenuPresenter$e */
     public interface InterfaceC10932e {
     }
 
-    /* renamed from: com.google.android.material.internal.NavigationMenuPresenter$f */
+    /* JADX INFO: renamed from: com.google.android.material.internal.NavigationMenuPresenter$f */
     public static class C10933f implements InterfaceC10932e {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f21036a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f21037b;
 
         public C10933f(int i, int i2) {
@@ -329,13 +328,13 @@ public class NavigationMenuPresenter implements MenuPresenter {
         }
     }
 
-    /* renamed from: com.google.android.material.internal.NavigationMenuPresenter$g */
+    /* JADX INFO: renamed from: com.google.android.material.internal.NavigationMenuPresenter$g */
     public static class C10934g implements InterfaceC10932e {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final MenuItemImpl f21038a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean f21039b;
 
         public C10934g(MenuItemImpl menuItemImpl) {
@@ -343,7 +342,7 @@ public class NavigationMenuPresenter implements MenuPresenter {
         }
     }
 
-    /* renamed from: com.google.android.material.internal.NavigationMenuPresenter$h */
+    /* JADX INFO: renamed from: com.google.android.material.internal.NavigationMenuPresenter$h */
     public class C10935h extends RecyclerViewAccessibilityDelegate {
         public C10935h(@NonNull RecyclerView recyclerView) {
             super(recyclerView);
@@ -363,7 +362,7 @@ public class NavigationMenuPresenter implements MenuPresenter {
         }
     }
 
-    /* renamed from: com.google.android.material.internal.NavigationMenuPresenter$i */
+    /* JADX INFO: renamed from: com.google.android.material.internal.NavigationMenuPresenter$i */
     public static class C10936i extends AbstractC10939l {
         public C10936i(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, View.OnClickListener onClickListener) {
             super(layoutInflater.inflate(C10817R.layout.design_navigation_item, viewGroup, false));
@@ -371,21 +370,21 @@ public class NavigationMenuPresenter implements MenuPresenter {
         }
     }
 
-    /* renamed from: com.google.android.material.internal.NavigationMenuPresenter$j */
+    /* JADX INFO: renamed from: com.google.android.material.internal.NavigationMenuPresenter$j */
     public static class C10937j extends AbstractC10939l {
         public C10937j(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup) {
             super(layoutInflater.inflate(C10817R.layout.design_navigation_item_separator, viewGroup, false));
         }
     }
 
-    /* renamed from: com.google.android.material.internal.NavigationMenuPresenter$k */
+    /* JADX INFO: renamed from: com.google.android.material.internal.NavigationMenuPresenter$k */
     public static class C10938k extends AbstractC10939l {
         public C10938k(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup) {
             super(layoutInflater.inflate(C10817R.layout.design_navigation_item_subheader, viewGroup, false));
         }
     }
 
-    /* renamed from: com.google.android.material.internal.NavigationMenuPresenter$l */
+    /* JADX INFO: renamed from: com.google.android.material.internal.NavigationMenuPresenter$l */
     public static abstract class AbstractC10939l extends RecyclerView.ViewHolder {
         public AbstractC10939l(View view) {
             super(view);

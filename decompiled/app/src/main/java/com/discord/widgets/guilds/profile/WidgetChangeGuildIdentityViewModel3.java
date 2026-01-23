@@ -9,9 +9,9 @@ import com.discord.widgets.guilds.profile.WidgetChangeGuildIdentityViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func4;
 
-/* compiled from: WidgetChangeGuildIdentityViewModel.kt */
-/* renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentityViewModel$Companion$observeStoreState$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentityViewModel$Companion$observeStoreState$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChangeGuildIdentityViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChangeGuildIdentityViewModel3<T1, T2, T3, T4, R> implements Func4<GuildChannelsInfo, Guild, MeUser, GuildMember, WidgetChangeGuildIdentityViewModel.StoreState> {
     public static final WidgetChangeGuildIdentityViewModel3 INSTANCE = new WidgetChangeGuildIdentityViewModel3();
 
@@ -20,7 +20,7 @@ public final class WidgetChangeGuildIdentityViewModel3<T1, T2, T3, T4, R> implem
         return call2(guildChannelsInfo, guild, meUser, guildMember);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetChangeGuildIdentityViewModel.StoreState call2(GuildChannelsInfo guildChannelsInfo, Guild guild, MeUser meUser, GuildMember guildMember) {
         Intrinsics3.checkNotNullExpressionValue(meUser, "meUser");
         Intrinsics3.checkNotNullExpressionValue(guildChannelsInfo, "guildChannelsInfo");

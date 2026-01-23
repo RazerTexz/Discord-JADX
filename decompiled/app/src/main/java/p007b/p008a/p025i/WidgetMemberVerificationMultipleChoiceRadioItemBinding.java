@@ -5,12 +5,12 @@ import android.widget.RadioButton;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: WidgetMemberVerificationMultipleChoiceRadioItemBinding.java */
-/* renamed from: b.a.i.r5, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.r5, reason: use source file name */
+/* JADX INFO: compiled from: WidgetMemberVerificationMultipleChoiceRadioItemBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetMemberVerificationMultipleChoiceRadioItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final RadioButton f1189a;
 

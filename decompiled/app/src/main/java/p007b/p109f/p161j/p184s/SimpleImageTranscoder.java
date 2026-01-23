@@ -13,15 +13,15 @@ import p007b.p109f.p161j.p169d.ResizeOptions;
 import p007b.p109f.p161j.p169d.RotationOptions;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: SimpleImageTranscoder.java */
-/* renamed from: b.f.j.s.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.s.f, reason: use source file name */
+/* JADX INFO: compiled from: SimpleImageTranscoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SimpleImageTranscoder implements ImageTranscoder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean f4273a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f4274b;
 
     public SimpleImageTranscoder(boolean z2, int i) {
@@ -29,19 +29,19 @@ public class SimpleImageTranscoder implements ImageTranscoder {
         this.f4274b = i;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static Bitmap.CompressFormat m1536e(ImageFormat imageFormat) {
         return imageFormat == null ? Bitmap.CompressFormat.JPEG : imageFormat == DefaultImageFormats.f3585a ? Bitmap.CompressFormat.JPEG : imageFormat == DefaultImageFormats.f3586b ? Bitmap.CompressFormat.PNG : DefaultImageFormats.m1172a(imageFormat) ? Bitmap.CompressFormat.WEBP : Bitmap.CompressFormat.JPEG;
     }
 
     @Override // p007b.p109f.p161j.p184s.ImageTranscoder
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo1528a() {
         return "SimpleImageTranscoder";
     }
 
     @Override // p007b.p109f.p161j.p184s.ImageTranscoder
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo1529b(EncodedImage2 encodedImage2, RotationOptions rotationOptions, ResizeOptions resizeOptions) {
         if (rotationOptions == null) {
             rotationOptions = RotationOptions.f3721a;
@@ -51,7 +51,7 @@ public class SimpleImageTranscoder implements ImageTranscoder {
 
     /* JADX WARN: Removed duplicated region for block: B:36:0x00a0  */
     @Override // p007b.p109f.p161j.p184s.ImageTranscoder
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -147,7 +147,7 @@ public class SimpleImageTranscoder implements ImageTranscoder {
     }
 
     @Override // p007b.p109f.p161j.p184s.ImageTranscoder
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo1531d(ImageFormat imageFormat) {
         return imageFormat == DefaultImageFormats.f3595k || imageFormat == DefaultImageFormats.f3585a;
     }

@@ -16,9 +16,9 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ServerSettingsRoleMembersViewModel.kt */
-/* renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersViewModel$Companion$observeGuildRoleMembers$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersViewModel$Companion$observeGuildRoleMembers$1, reason: use source file name */
+/* JADX INFO: compiled from: ServerSettingsRoleMembersViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ServerSettingsRoleMembersViewModel2 extends Lambda implements Function0<ServerSettingsRoleMembersViewModel.StoreState> {
     public final /* synthetic */ long $guildId;
     public final /* synthetic */ long $guildRoleId;

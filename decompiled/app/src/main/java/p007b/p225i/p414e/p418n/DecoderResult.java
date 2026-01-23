@@ -2,33 +2,33 @@ package p007b.p225i.p414e.p418n;
 
 import java.util.List;
 
-/* compiled from: DecoderResult.java */
-/* renamed from: b.i.e.n.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.n.e, reason: use source file name */
+/* JADX INFO: compiled from: DecoderResult.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DecoderResult {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final byte[] f13266a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f13267b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f13268c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<byte[]> f13269d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f13270e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Object f13271f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f13272g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int f13273h;
 
     public DecoderResult(byte[] bArr, String str, List<byte[]> list, String str2) {

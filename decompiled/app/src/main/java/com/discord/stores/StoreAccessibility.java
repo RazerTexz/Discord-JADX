@@ -18,8 +18,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreAccessibility.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreAccessibility.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreAccessibility extends StoreV2 {
     private EnumSet<AccessibilityFeatureFlags> accessibilityFeatures;
     private EnumSet<AccessibilityFeatureFlags> accessibilityFeaturesSnapshot;
@@ -32,12 +32,12 @@ public final class StoreAccessibility extends StoreV2 {
     private final Persister<Boolean> reducedMotionCache;
     private boolean reducedMotionEnabled;
 
-    /* compiled from: StoreAccessibility.kt */
-    /* renamed from: com.discord.stores.StoreAccessibility$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAccessibility$init$1 */
+    /* JADX INFO: compiled from: StoreAccessibility.kt */
     public static final class C56701 extends Lambda implements Function1<AccessibilityMonitor4, Unit> {
 
-        /* compiled from: StoreAccessibility.kt */
-        /* renamed from: com.discord.stores.StoreAccessibility$init$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreAccessibility$init$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreAccessibility.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ AccessibilityMonitor4 $it;
 
@@ -53,7 +53,7 @@ public final class StoreAccessibility extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreAccessibility.access$updateMonitoredAccessibilityState(StoreAccessibility.this, this.$it);
             }
@@ -69,15 +69,15 @@ public final class StoreAccessibility extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(AccessibilityMonitor4 accessibilityMonitor4) {
             Intrinsics3.checkNotNullParameter(accessibilityMonitor4, "it");
             StoreAccessibility.access$getDispatcher$p(StoreAccessibility.this).schedule(new AnonymousClass1(accessibilityMonitor4));
         }
     }
 
-    /* compiled from: StoreAccessibility.kt */
-    /* renamed from: com.discord.stores.StoreAccessibility$observeAccessibilityFeatures$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAccessibility$observeAccessibilityFeatures$1 */
+    /* JADX INFO: compiled from: StoreAccessibility.kt */
     public static final class C56711 extends Lambda implements Function0<EnumSet<AccessibilityFeatureFlags>> {
         public C56711() {
             super(0);
@@ -89,14 +89,14 @@ public final class StoreAccessibility extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final EnumSet<AccessibilityFeatureFlags> invoke2() {
             return StoreAccessibility.this.getAccessibilityFeatures();
         }
     }
 
-    /* compiled from: StoreAccessibility.kt */
-    /* renamed from: com.discord.stores.StoreAccessibility$observeReducedMotionEnabled$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAccessibility$observeReducedMotionEnabled$1 */
+    /* JADX INFO: compiled from: StoreAccessibility.kt */
     public static final class C56721 extends Lambda implements Function0<Boolean> {
         public C56721() {
             super(0);
@@ -107,14 +107,14 @@ public final class StoreAccessibility extends StoreV2 {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return StoreAccessibility.access$getReducedMotionEnabled$p(StoreAccessibility.this);
         }
     }
 
-    /* compiled from: StoreAccessibility.kt */
-    /* renamed from: com.discord.stores.StoreAccessibility$observeScreenreaderEnabled$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAccessibility$observeScreenreaderEnabled$1 */
+    /* JADX INFO: compiled from: StoreAccessibility.kt */
     public static final class C56731 extends Lambda implements Function0<Boolean> {
         public C56731() {
             super(0);
@@ -125,14 +125,14 @@ public final class StoreAccessibility extends StoreV2 {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return StoreAccessibility.this.isScreenreaderEnabled();
         }
     }
 
-    /* compiled from: StoreAccessibility.kt */
-    /* renamed from: com.discord.stores.StoreAccessibility$setReducedMotionEnabled$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAccessibility$setReducedMotionEnabled$1 */
+    /* JADX INFO: compiled from: StoreAccessibility.kt */
     public static final class C56741 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $enabled;
 
@@ -148,7 +148,7 @@ public final class StoreAccessibility extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreAccessibility.access$setReducedMotionEnabled$p(StoreAccessibility.this, this.$enabled);
             StoreAccessibility.this.markChanged();
@@ -192,7 +192,7 @@ public final class StoreAccessibility extends StoreV2 {
         ObservableExtensionsKt.appSubscribe$default(this.accessibilityMonitor.observeAccessibilityState(), StoreAccessibility.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C56701(), 62, (Object) null);
     }
 
-    /* renamed from: isReducedMotionEnabled, reason: from getter */
+    /* JADX INFO: renamed from: isReducedMotionEnabled, reason: from getter */
     public final boolean getReducedMotionEnabled() {
         return this.reducedMotionEnabled;
     }

@@ -1,7 +1,7 @@
 package kotlin.coroutines.jvm.internal;
 
 
-/* compiled from: CoroutineStackFrame.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: CoroutineStackFrame.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface CoroutineStackFrame {
 }

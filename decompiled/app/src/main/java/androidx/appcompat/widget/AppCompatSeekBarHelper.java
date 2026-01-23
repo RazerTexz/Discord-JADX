@@ -12,7 +12,7 @@ import androidx.appcompat.C0051R;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.view.ViewCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatSeekBarHelper extends AppCompatProgressBarHelper {
     private boolean mHasTickMarkTint;
     private boolean mHasTickMarkTintMode;
@@ -100,7 +100,7 @@ public class AppCompatSeekBarHelper extends AppCompatProgressBarHelper {
     }
 
     @Override // androidx.appcompat.widget.AppCompatProgressBarHelper
-    public void loadFromAttributes(AttributeSet attributeSet, int i) throws SecurityException {
+    public void loadFromAttributes(AttributeSet attributeSet, int i) {
         super.loadFromAttributes(attributeSet, i);
         Context context = this.mView.getContext();
         int[] iArr = C0051R.styleable.AppCompatSeekBar;
@@ -126,7 +126,7 @@ public class AppCompatSeekBarHelper extends AppCompatProgressBarHelper {
         applyTickMarkTint();
     }
 
-    public void setTickMark(@Nullable Drawable drawable) throws SecurityException {
+    public void setTickMark(@Nullable Drawable drawable) {
         Drawable drawable2 = this.mTickMark;
         if (drawable2 != null) {
             drawable2.setCallback(null);

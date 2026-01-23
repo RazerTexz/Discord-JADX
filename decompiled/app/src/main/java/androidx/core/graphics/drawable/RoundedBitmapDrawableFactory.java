@@ -11,7 +11,7 @@ import androidx.core.graphics.BitmapCompat;
 import androidx.core.view.GravityCompat;
 import java.io.InputStream;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class RoundedBitmapDrawableFactory {
     private static final String TAG = "RoundedBitmapDrawableFa";
 

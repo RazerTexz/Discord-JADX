@@ -14,31 +14,31 @@ import p007b.p195g.p196a.p205c.p210c0.TypeResolutionContext;
 import p007b.p195g.p196a.p205c.p218h0.TypeFactory;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
-/* compiled from: AnnotatedFieldCollector.java */
-/* renamed from: b.g.a.c.c0.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.h, reason: use source file name */
+/* JADX INFO: compiled from: AnnotatedFieldCollector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class AnnotatedFieldCollector extends CollectorBase {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final TypeFactory f4710d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ClassIntrospector.a f4711e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f4712f;
 
-    /* compiled from: AnnotatedFieldCollector.java */
-    /* renamed from: b.g.a.c.c0.h$a */
+    /* JADX INFO: renamed from: b.g.a.c.c0.h$a */
+    /* JADX INFO: compiled from: AnnotatedFieldCollector.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final TypeResolutionContext f4713a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Field f4714b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public AnnotationCollector f4715c = AnnotationCollector.a.f4727c;
 
         public a(TypeResolutionContext typeResolutionContext, Field field) {
@@ -54,7 +54,7 @@ public class AnnotatedFieldCollector extends CollectorBase {
         this.f4712f = z2;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Map<String, a> m1900f(TypeResolutionContext typeResolutionContext, JavaType javaType, Map<String, a> map) {
         ClassIntrospector.a aVar;
         Class<?> clsMo1885a;
@@ -90,7 +90,7 @@ public class AnnotatedFieldCollector extends CollectorBase {
         return mapM1900f;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean m1901g(Field field) {
         return (field.isSynthetic() || Modifier.isStatic(field.getModifiers())) ? false : true;
     }

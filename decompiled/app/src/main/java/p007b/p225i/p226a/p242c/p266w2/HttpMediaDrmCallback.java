@@ -25,22 +25,22 @@ import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p266w2.ExoMediaDrm;
 import p007b.p225i.p355b.p357b.RegularImmutableMap;
 
-/* compiled from: HttpMediaDrmCallback.java */
-/* renamed from: b.i.a.c.w2.d0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.w2.d0, reason: use source file name */
+/* JADX INFO: compiled from: HttpMediaDrmCallback.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class HttpMediaDrmCallback implements MediaDrmCallback {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final HttpDataSource f7982a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final String f7983b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f7984c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Map<String, String> f7985d;
 
     public HttpMediaDrmCallback(@Nullable String str, boolean z2, HttpDataSource httpDataSource) {
@@ -51,7 +51,7 @@ public final class HttpMediaDrmCallback implements MediaDrmCallback {
         this.f7985d = new HashMap();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static byte[] m3583b(HttpDataSource httpDataSource, String str, @Nullable byte[] bArr, Map<String, String> map) throws MediaDrmCallbackException {
         Map<String, List<String>> map2;
         List<String> list;
@@ -108,7 +108,7 @@ public final class HttpMediaDrmCallback implements MediaDrmCallback {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public byte[] m3584a(UUID uuid, ExoMediaDrm.a aVar) throws MediaDrmCallbackException {
         String str = aVar.f7968b;
         if (this.f7984c || TextUtils.isEmpty(str)) {
@@ -134,7 +134,7 @@ public final class HttpMediaDrmCallback implements MediaDrmCallback {
         return m3583b(this.f7982a, str, aVar.f7967a, map);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public byte[] m3585c(UUID uuid, ExoMediaDrm.d dVar) throws MediaDrmCallbackException {
         String str = dVar.f7970b;
         String strM3004l = Util2.m3004l(dVar.f7969a);

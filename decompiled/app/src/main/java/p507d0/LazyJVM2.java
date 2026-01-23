@@ -7,21 +7,21 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LazyJVM.kt */
-/* renamed from: d0.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.m, reason: use source file name */
+/* JADX INFO: compiled from: LazyJVM.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LazyJVM2<T> implements Lazy<T>, Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final AtomicReferenceFieldUpdater<LazyJVM2<?>, Object> f25170j;
     private volatile Object _value;
 
-    /* renamed from: final, reason: not valid java name */
+    /* JADX INFO: renamed from: final, reason: not valid java name */
     private final Object f28003final;
     private volatile Function0<? extends T> initializer;
 
-    /* compiled from: LazyJVM.kt */
-    /* renamed from: d0.m$a */
+    /* JADX INFO: renamed from: d0.m$a */
+    /* JADX INFO: compiled from: LazyJVM.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

@@ -8,27 +8,27 @@ import p007b.p225i.p414e.ResultMetadataType;
 import p007b.p225i.p414e.ResultPoint;
 import p007b.p225i.p414e.p418n.BitArray;
 
-/* compiled from: UPCEANExtension5Support.java */
-/* renamed from: b.i.e.q.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.n, reason: use source file name */
+/* JADX INFO: compiled from: UPCEANExtension5Support.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class UPCEANExtension5Support {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int[] f13383a = {24, 20, 18, 17, 12, 6, 3, 10, 9, 5};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int[] f13384b = new int[4];
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final StringBuilder f13385c = new StringBuilder();
 
     /* JADX WARN: Removed duplicated region for block: B:67:0x0120  */
     /* JADX WARN: Removed duplicated region for block: B:68:0x0122  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public Result m7002a(int i, BitArray bitArray, int[] iArr) throws NotFoundException, NumberFormatException {
+    public Result m7002a(int i, BitArray bitArray, int[] iArr) throws NotFoundException {
         EnumMap enumMap;
         String str;
         String str2;

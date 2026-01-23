@@ -6,22 +6,22 @@ import java.lang.reflect.Method;
 import org.objenesis.ObjenesisException;
 import p617h0.p620b.p621a.ObjectInstantiator;
 
-/* compiled from: GCJInstantiatorBase.java */
-/* renamed from: h0.b.a.d.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.b.a.d.b, reason: use source file name */
+/* JADX INFO: compiled from: GCJInstantiatorBase.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class GCJInstantiatorBase<T> implements ObjectInstantiator<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Method f26394a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static ObjectInputStream f26395b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Class<T> f26396c;
 
-    /* compiled from: GCJInstantiatorBase.java */
-    /* renamed from: h0.b.a.d.b$a */
+    /* JADX INFO: renamed from: h0.b.a.d.b$a */
+    /* JADX INFO: compiled from: GCJInstantiatorBase.java */
     public static class a extends ObjectInputStream {
     }
 

@@ -11,13 +11,13 @@ import p658rx.Subscriber;
 import p658rx.Subscription;
 import p658rx.exceptions.MissingBackpressureException;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PublishSubject<T> extends Subject<T, T> {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final C13016b<T> f27650k;
 
-    /* renamed from: rx.subjects.PublishSubject$a */
+    /* JADX INFO: renamed from: rx.subjects.PublishSubject$a */
     public static final class C13015a<T> extends AtomicLong implements Producer, Subscription, Observer2<T> {
         private static final long serialVersionUID = 6451806817170721536L;
         public final Subscriber<? super T> actual;
@@ -35,7 +35,7 @@ public final class PublishSubject<T> extends Subject<T, T> {
         }
 
         @Override // p658rx.Producer
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public void mo10704j(long j) {
             long j2;
             if (C3404f.m4191A1(j)) {
@@ -85,13 +85,13 @@ public final class PublishSubject<T> extends Subject<T, T> {
         }
     }
 
-    /* renamed from: rx.subjects.PublishSubject$b */
+    /* JADX INFO: renamed from: rx.subjects.PublishSubject$b */
     public static final class C13016b<T> extends AtomicReference<C13015a<T>[]> implements Observable.InterfaceC13005a<T>, Observer2<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C13015a[] f27651j = new C13015a[0];
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final C13015a[] f27652k = new C13015a[0];
         private static final long serialVersionUID = -7568940796666027140L;
         public Throwable error;
@@ -100,7 +100,7 @@ public final class PublishSubject<T> extends Subject<T, T> {
             lazySet(f27651j);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m11134a(C13015a<T> c13015a) {
             C13015a<T>[] c13015aArr;
             C13015a[] c13015aArr2;
@@ -208,7 +208,7 @@ public final class PublishSubject<T> extends Subject<T, T> {
         this.f27650k = c13016b;
     }
 
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public static <T> PublishSubject<T> m11133k0() {
         return new PublishSubject<>(new C13016b());
     }

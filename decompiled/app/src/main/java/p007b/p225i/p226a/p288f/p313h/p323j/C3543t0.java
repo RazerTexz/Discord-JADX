@@ -11,24 +11,24 @@ import java.util.Objects;
 import p007b.p225i.p226a.p288f.p313h.p323j.InterfaceC3551x0;
 import p007b.p225i.p226a.p288f.p339m.C4351a;
 
-/* renamed from: b.i.a.f.h.j.t0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.t0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3543t0<T extends Context & InterfaceC3551x0> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Boolean f9800a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Handler f9801b = new HandlerC3511e1();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final T f9802c;
 
     public C3543t0(T t) {
         this.f9802c = t;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static boolean m4500c(Context context) {
         Objects.requireNonNull(context, "null reference");
         Boolean bool = f9800a;
@@ -50,7 +50,7 @@ public final class C3543t0<T extends Context & InterfaceC3551x0> {
     }
 
     @RequiresPermission(allOf = {"android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE"})
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int m4501a(Intent intent, int i) {
         try {
             synchronized (C3541s0.f9796a) {
@@ -74,7 +74,7 @@ public final class C3543t0<T extends Context & InterfaceC3551x0> {
         return 2;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m4502b(Runnable runnable) {
         C3497a c3497aM4453e = C3515g.m4450b(this.f9802c).m4453e();
         C3549w0 c3549w0 = new C3549w0(this, runnable);

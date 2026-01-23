@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class Trace {
     public static final String TAG = "Trace";
     private static Method sAsyncTraceBeginMethod;

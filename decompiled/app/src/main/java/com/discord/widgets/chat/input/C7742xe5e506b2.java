@@ -5,9 +5,9 @@ import com.discord.widgets.chat.input.WidgetChatInputAttachments;
 import p007b.p076b.p077a.p081f.KeyboardManager;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatInputAttachments.kt */
-/* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$configureFlexInputFragment$1$$special$$inlined$apply$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$configureFlexInputFragment$1$$special$$inlined$apply$lambda$1 */
+/* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7742xe5e506b2 implements KeyboardManager {
     public final /* synthetic */ WidgetChatInputAttachments.C77411 this$0;
 

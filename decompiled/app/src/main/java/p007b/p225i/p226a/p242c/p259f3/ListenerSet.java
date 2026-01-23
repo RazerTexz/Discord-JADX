@@ -6,59 +6,59 @@ import java.util.ArrayDeque;
 import java.util.concurrent.CopyOnWriteArraySet;
 import p007b.p225i.p226a.p242c.p259f3.FlagSet;
 
-/* compiled from: ListenerSet.java */
-/* renamed from: b.i.a.c.f3.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.p, reason: use source file name */
+/* JADX INFO: compiled from: ListenerSet.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ListenerSet<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Clock4 f6736a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final HandlerWrapper f6737b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final b<T> f6738c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final CopyOnWriteArraySet<c<T>> f6739d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ArrayDeque<Runnable> f6740e = new ArrayDeque<>();
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final ArrayDeque<Runnable> f6741f = new ArrayDeque<>();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean f6742g;
 
-    /* compiled from: ListenerSet.java */
-    /* renamed from: b.i.a.c.f3.p$a */
+    /* JADX INFO: renamed from: b.i.a.c.f3.p$a */
+    /* JADX INFO: compiled from: ListenerSet.java */
     public interface a<T> {
         void invoke(T t);
     }
 
-    /* compiled from: ListenerSet.java */
-    /* renamed from: b.i.a.c.f3.p$b */
+    /* JADX INFO: renamed from: b.i.a.c.f3.p$b */
+    /* JADX INFO: compiled from: ListenerSet.java */
     public interface b<T> {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo3037a(T t, FlagSet flagSet);
     }
 
-    /* compiled from: ListenerSet.java */
-    /* renamed from: b.i.a.c.f3.p$c */
+    /* JADX INFO: renamed from: b.i.a.c.f3.p$c */
+    /* JADX INFO: compiled from: ListenerSet.java */
     public static final class c<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final T f6743a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public FlagSet.b f6744b = new FlagSet.b();
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean f6745c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean f6746d;
 
         public c(T t) {
@@ -87,7 +87,7 @@ public final class ListenerSet<T> {
         this.f6737b = clock4.mo2950b(looper, new C2731b(this));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m3034a() {
         if (this.f6741f.isEmpty()) {
             return;
@@ -108,12 +108,12 @@ public final class ListenerSet<T> {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m3035b(int i, a<T> aVar) {
         this.f6741f.add(new RunnableC2729a(new CopyOnWriteArraySet(this.f6739d), i, aVar));
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m3036c() {
         for (c<T> cVar : this.f6739d) {
             b<T> bVar = this.f6738c;

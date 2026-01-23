@@ -6,7 +6,6 @@ import android.animation.AnimatorSet;
 import android.content.AsyncQueryHandler;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -33,59 +32,59 @@ import p007b.p076b.p077a.p080e.ViewGridImageBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MediaCursorAdapter.kt */
-/* renamed from: b.b.a.d.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.d.h, reason: use source file name */
+/* JADX INFO: compiled from: MediaCursorAdapter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MediaCursorAdapter extends RecyclerView.Adapter<a> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SelectionCoordinator<?, Media> f2144a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Cursor f2145b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f2146c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f2147d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f2148e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f2149f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Integer f2150g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int f2151h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final int f2152i;
 
-    /* compiled from: MediaCursorAdapter.kt */
-    /* renamed from: b.b.a.d.h$a */
+    /* JADX INFO: renamed from: b.b.a.d.h$a */
+    /* JADX INFO: compiled from: MediaCursorAdapter.kt */
     public final class a extends ThumbnailViewHolder implements View.OnClickListener {
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public Media f2153p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final AnimatorSet f2154q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public final AnimatorSet f2155r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public final ViewGridImageBinding f2156s;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public final /* synthetic */ MediaCursorAdapter f2157t;
 
-        /* compiled from: MediaCursorAdapter.kt */
-        /* renamed from: b.b.a.d.h$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.b.a.d.h$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: MediaCursorAdapter.kt */
         public static final class C13219a extends Lambda implements Function1<AnimatorSet, Unit> {
             public final /* synthetic */ boolean $isAnimationRequested;
 
@@ -95,7 +94,7 @@ public final class MediaCursorAdapter extends RecyclerView.Adapter<a> {
                 this.$isAnimationRequested = z2;
             }
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final void m403a(AnimatorSet animatorSet) {
                 Intrinsics3.checkNotNullParameter(animatorSet, "animation");
                 animatorSet.start();
@@ -113,7 +112,7 @@ public final class MediaCursorAdapter extends RecyclerView.Adapter<a> {
         }
 
         /* JADX WARN: Illegal instructions before constructor call */
-        public a(MediaCursorAdapter mediaCursorAdapter, ViewGridImageBinding viewGridImageBinding) throws Resources.NotFoundException {
+        public a(MediaCursorAdapter mediaCursorAdapter, ViewGridImageBinding viewGridImageBinding) {
             Intrinsics3.checkNotNullParameter(viewGridImageBinding, "binding");
             this.f2157t = mediaCursorAdapter;
             FrameLayout frameLayout = viewGridImageBinding.f2194a;
@@ -138,14 +137,14 @@ public final class MediaCursorAdapter extends RecyclerView.Adapter<a> {
         }
 
         @Override // p007b.p076b.p077a.p079d.ThumbnailViewHolder
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public SimpleDraweeView mo401a() {
             SimpleDraweeView simpleDraweeView = this.f2156s.f2196c;
             Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.contentIv");
             return simpleDraweeView;
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final void m402d(boolean z2, boolean z3) {
             FrameLayout frameLayout = this.f2156s.f2194a;
             Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.root");
@@ -187,8 +186,8 @@ public final class MediaCursorAdapter extends RecyclerView.Adapter<a> {
         }
     }
 
-    /* compiled from: MediaCursorAdapter.kt */
-    /* renamed from: b.b.a.d.h$b */
+    /* JADX INFO: renamed from: b.b.a.d.h$b */
+    /* JADX INFO: compiled from: MediaCursorAdapter.kt */
     public static final class b extends AsyncQueryHandler {
         public b(ContentResolver contentResolver) {
             super(contentResolver);
@@ -224,7 +223,7 @@ public final class MediaCursorAdapter extends RecyclerView.Adapter<a> {
         setHasStableIds(true);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Media m399a(int i) {
         String str;
         Cursor cursor = this.f2145b;
@@ -254,7 +253,7 @@ public final class MediaCursorAdapter extends RecyclerView.Adapter<a> {
         return media;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m400b(ContentResolver contentResolver) {
         Intrinsics3.checkNotNullParameter(contentResolver, "contentResolver");
         int i = Build.VERSION.SDK_INT;
@@ -263,7 +262,7 @@ public final class MediaCursorAdapter extends RecyclerView.Adapter<a> {
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount */
+    /* JADX INFO: renamed from: getItemCount */
     public int getPageSize() {
         Cursor cursor = this.f2145b;
         if (cursor != null) {

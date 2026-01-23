@@ -16,7 +16,7 @@ import org.webrtc.EglBase10;
 import p007b.p100d.p104b.p105a.outline;
 import p617h0.p628c.EglBase2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class EglBase10Impl implements EglBase10 {
     private static final int EGL_CONTEXT_CLIENT_VERSION = 12440;
     private static final String TAG = "EglBase10Impl";
@@ -28,7 +28,7 @@ public class EglBase10Impl implements EglBase10 {
     private EGLSurface eglSurface = EGL10.EGL_NO_SURFACE;
     private final EGL10 egl = (EGL10) EGLContext.getEGL();
 
-    /* renamed from: org.webrtc.EglBase10Impl$1FakeSurfaceHolder, reason: invalid class name */
+    /* JADX INFO: renamed from: org.webrtc.EglBase10Impl$1FakeSurfaceHolder, reason: invalid class name */
     public class C1FakeSurfaceHolder implements SurfaceHolder {
         private final Surface surface;
 

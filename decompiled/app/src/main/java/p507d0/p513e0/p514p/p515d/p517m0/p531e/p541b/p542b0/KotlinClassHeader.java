@@ -12,34 +12,34 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p580t._ArraysJvm;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: KotlinClassHeader.kt */
-/* renamed from: d0.e0.p.d.m0.e.b.b0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.b0.a, reason: use source file name */
+/* JADX INFO: compiled from: KotlinClassHeader.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KotlinClassHeader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final a f23550a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final JvmMetadataVersion f23551b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String[] f23552c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String[] f23553d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String[] f23554e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String f23555f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f23556g;
 
-    /* compiled from: KotlinClassHeader.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.b0.a$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.b0.a$a */
+    /* JADX INFO: compiled from: KotlinClassHeader.kt */
     public enum a {
         UNKNOWN(0),
         CLASS(1),
@@ -49,17 +49,17 @@ public final class KotlinClassHeader {
         MULTIFILE_CLASS_PART(5);
 
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C13314a f23557j = new C13314a(null);
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final Map<Integer, a> f23558k;
 
-        /* renamed from: id */
+        /* JADX INFO: renamed from: id */
         private final int f23566id;
 
-        /* compiled from: KotlinClassHeader.kt */
-        /* renamed from: d0.e0.p.d.m0.e.b.b0.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.b0.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: KotlinClassHeader.kt */
         public static final class C13314a {
             public C13314a(DefaultConstructorMarker defaultConstructorMarker) {
             }
@@ -92,7 +92,7 @@ public final class KotlinClassHeader {
             return f23557j.getById(i);
         }
 
-        /* renamed from: values, reason: to resolve conflict with enum method */
+        /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
         public static a[] valuesCustom() {
             a[] aVarArrValuesCustom = values();
             a[] aVarArr = new a[aVarArrValuesCustom.length];
@@ -118,7 +118,7 @@ public final class KotlinClassHeader {
         this.f23556g = i;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m9538a(int i, int i2) {
         return (i & i2) != 0;
     }

@@ -15,14 +15,14 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func4;
 
-/* compiled from: WidgetChannelSettingsPermissionsOverview.kt */
-/* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelSettingsPermissionsOverview.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSettingsPermissionsOverview2<T, R> implements Func1<Channel, Observable<? extends WidgetChannelSettingsPermissionsOverview.Model>> {
     public final /* synthetic */ long $channelId;
 
-    /* compiled from: WidgetChannelSettingsPermissionsOverview.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$Model$Companion$get$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$Model$Companion$get$1$1 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsPermissionsOverview.kt */
     public static final class C75521<T1, T2, T3, T4, R> implements Func4<Guild, MeUser, Long, Map<Long, ? extends GuildRole>, WidgetChannelSettingsPermissionsOverview.Model> {
         public final /* synthetic */ Channel $channel;
 
@@ -35,7 +35,7 @@ public final class WidgetChannelSettingsPermissionsOverview2<T, R> implements Fu
             return call2(guild, meUser, l, (Map<Long, GuildRole>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetChannelSettingsPermissionsOverview.Model call2(Guild guild, MeUser meUser, Long l, Map<Long, GuildRole> map) {
             if (!WidgetChannelSettingsPermissionsOverview.Model.INSTANCE.isValid(meUser, guild, this.$channel, l)) {
                 return null;
@@ -54,7 +54,7 @@ public final class WidgetChannelSettingsPermissionsOverview2<T, R> implements Fu
         this.$channelId = j;
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetChannelSettingsPermissionsOverview.Model> call2(Channel channel) {
         if (channel == null) {
             return new ScalarSynchronousObservable(null);

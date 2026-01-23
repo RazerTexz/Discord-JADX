@@ -6,14 +6,14 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import p007b.p008a.p025i.ExpressionPickerCategorySelectionOverlineViewBinding;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class StickerCategoryItemRecentBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final FrameLayout f15265a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ExpressionPickerCategorySelectionOverlineViewBinding f15266b;
 

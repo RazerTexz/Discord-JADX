@@ -21,14 +21,14 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListAdapterItemGuildWelcome.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemGuildWelcome.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemGuildWelcome extends WidgetChatListItem {
     private final WidgetChatListAdapterItemGuildWelcomeBinding binding;
     private final Clock clock;
 
-    /* compiled from: WidgetChatListAdapterItemGuildWelcome.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildWelcome$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildWelcome$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemGuildWelcome.kt */
     public static final class ViewOnClickListenerC80871 implements View.OnClickListener {
         public final /* synthetic */ ChatListEntry $data;
 
@@ -42,8 +42,8 @@ public final class WidgetChatListAdapterItemGuildWelcome extends WidgetChatListI
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemGuildWelcome.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildWelcome$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildWelcome$onConfigure$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemGuildWelcome.kt */
     public static final class ViewOnClickListenerC80882 implements View.OnClickListener {
         public final /* synthetic */ ChatListEntry $data;
 

@@ -31,13 +31,13 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: AnnotationConstructorCaller.kt */
-/* renamed from: d0.e0.p.d.l0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.l0.b, reason: use source file name */
+/* JADX INFO: compiled from: AnnotationConstructorCaller.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AnnotationConstructorCaller2 {
 
-    /* compiled from: AnnotationConstructorCaller.kt */
-    /* renamed from: d0.e0.p.d.l0.b$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.l0.b$a */
+    /* JADX INFO: compiled from: AnnotationConstructorCaller.kt */
     public static final class a extends Lambda implements Function1<Object, Boolean> {
         public final /* synthetic */ Class $annotationClass;
         public final /* synthetic */ List $methods;
@@ -57,11 +57,11 @@ public final class AnnotationConstructorCaller2 {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:68:? A[RETURN, SYNTHETIC] */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
-        public final boolean invoke2(Object obj) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public final boolean invoke2(Object obj) throws IllegalAccessException, InvocationTargetException {
             boolean zAreEqual;
             boolean z2;
             KClass annotationClass;
@@ -125,8 +125,8 @@ public final class AnnotationConstructorCaller2 {
         }
     }
 
-    /* compiled from: AnnotationConstructorCaller.kt */
-    /* renamed from: d0.e0.p.d.l0.b$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.l0.b$b */
+    /* JADX INFO: compiled from: AnnotationConstructorCaller.kt */
     public static final class b extends Lambda implements Function0<Integer> {
         public final /* synthetic */ Map $values;
 
@@ -136,7 +136,7 @@ public final class AnnotationConstructorCaller2 {
             this.$values = map;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final int invoke2() {
             int iHashCode = 0;
             for (Map.Entry entry : this.$values.entrySet()) {
@@ -153,23 +153,23 @@ public final class AnnotationConstructorCaller2 {
         }
     }
 
-    /* compiled from: AnnotationConstructorCaller.kt */
-    /* renamed from: d0.e0.p.d.l0.b$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.l0.b$c */
+    /* JADX INFO: compiled from: AnnotationConstructorCaller.kt */
     public static final class c implements InvocationHandler {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Class f22417a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ Lazy f22418b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ Lazy f22419c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ a f22420d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final /* synthetic */ Map f22421e;
 
         public c(Class cls, Lazy lazy, KProperty kProperty, Lazy lazy2, KProperty kProperty2, a aVar, Map map) {
@@ -217,24 +217,24 @@ public final class AnnotationConstructorCaller2 {
         }
     }
 
-    /* compiled from: AnnotationConstructorCaller.kt */
-    /* renamed from: d0.e0.p.d.l0.b$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.l0.b$d */
+    /* JADX INFO: compiled from: AnnotationConstructorCaller.kt */
     public static final class d extends Lambda implements Function0<String> {
         public final /* synthetic */ Class $annotationClass;
         public final /* synthetic */ Map $values;
 
-        /* compiled from: AnnotationConstructorCaller.kt */
-        /* renamed from: d0.e0.p.d.l0.b$d$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.l0.b$d$a */
+        /* JADX INFO: compiled from: AnnotationConstructorCaller.kt */
         public static final class a extends Lambda implements Function1<Map.Entry<? extends String, ? extends Object>, CharSequence> {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public static final a f22422j = new a();
 
             public a() {
                 super(1);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final CharSequence invoke2(Map.Entry<String, ? extends Object> entry) {
                 Intrinsics3.checkNotNullParameter(entry, "entry");
                 String key = entry.getKey();
@@ -261,7 +261,7 @@ public final class AnnotationConstructorCaller2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2() {
             StringBuilder sbM829Q = outline.m829Q(MentionUtils.MENTIONS_CHAR);
             sbM829Q.append(this.$annotationClass.getCanonicalName());

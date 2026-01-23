@@ -6,9 +6,9 @@ import com.discord.api.connectedaccounts.ConnectedIntegrationGuild;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ConnectedAccountIntegrationUtils.kt */
-/* renamed from: com.discord.utilities.connectedaccounts.ConnectedAccountIntegrationUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.connectedaccounts.ConnectedAccountIntegrationUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: ConnectedAccountIntegrationUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ConnectedAccountIntegrationUtils {
     public static final String TWITCH_URL_PREFIX = "twitch.tv/";
     public static final String TYPE_TWITCH = "twitch";

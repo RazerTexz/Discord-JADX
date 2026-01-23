@@ -12,12 +12,12 @@ import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 import p677y.p685c.DefaultLifecycleObserver2;
 
-/* compiled from: CustomTabs.kt */
-/* renamed from: com.discord.custom_tabs.CustomTabs$warmUp$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.custom_tabs.CustomTabs$warmUp$1, reason: use source file name */
+/* JADX INFO: compiled from: CustomTabs.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CustomTabs2 implements DefaultLifecycleObserver {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public CustomTabsServiceConnection connection;
 
     @Override // androidx.view.DefaultLifecycleObserver, androidx.view.FullLifecycleObserver

@@ -6,10 +6,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+/* JADX INFO: loaded from: discord-126021.apk:com/zwitserloot/cmdreader/Mandatory.SCL.lombok */
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-/* loaded from: discord-126021.apk:com/zwitserloot/cmdreader/Mandatory.SCL.lombok */
 public @interface Mandatory {
     String[] onlyIf() default {};
 

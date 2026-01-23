@@ -6,9 +6,9 @@ import p007b.p008a.p018d.AppToast;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ChangeLogParser.kt */
-/* renamed from: com.discord.widgets.changelog.ChangeLogParser$parse$renderContext$1$onLongPressUrl$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.changelog.ChangeLogParser$parse$renderContext$1$onLongPressUrl$1, reason: use source file name */
+/* JADX INFO: compiled from: ChangeLogParser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChangeLogParser3 extends Lambda implements Function1<String, Unit> {
     public final /* synthetic */ ChangeLogParser2 this$0;
 
@@ -24,7 +24,7 @@ public final class ChangeLogParser3 extends Lambda implements Function1<String, 
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(String str) {
         Intrinsics3.checkNotNullParameter(str, "it");
         AppToast.m165c(this.this$0.$context, str, 0, 4);

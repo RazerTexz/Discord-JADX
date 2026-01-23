@@ -42,9 +42,9 @@ import p658rx.Observable;
 import p658rx.functions.Func2;
 import p658rx.functions.Func8;
 
-/* compiled from: UserMentionableSource.kt */
-/* renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserAutocompletableSource, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserAutocompletableSource, reason: use source file name */
+/* JADX INFO: compiled from: UserMentionableSource.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UserMentionableSource {
     private static final int PARTITION_HUGE_GUILD_SIZE = 3000;
     private static final int PARTITION_IDEAL_PARTITION_SIZE = 100;
@@ -54,8 +54,8 @@ public final class UserMentionableSource {
     private final StoreUserPresence storePresences;
     private final StoreUser storeUsers;
 
-    /* compiled from: UserMentionableSource.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserAutocompletableSource$observeUserAutocompletables$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserAutocompletableSource$observeUserAutocompletables$1 */
+    /* JADX INFO: compiled from: UserMentionableSource.kt */
     public static final class C78061<T, R> implements Func1<Guild, Long> {
         public static final C78061 INSTANCE = new C78061();
 
@@ -64,14 +64,14 @@ public final class UserMentionableSource {
             return call2(guild);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Long call2(Guild guild) {
             return Long.valueOf(guild.getOwnerId());
         }
     }
 
-    /* compiled from: UserMentionableSource.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserAutocompletableSource$observeUserAutocompletables$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserAutocompletableSource$observeUserAutocompletables$2 */
+    /* JADX INFO: compiled from: UserMentionableSource.kt */
     public static final class C78072<T1, T2, T3, T4, T5, T6, T7, T8, R> implements Func8<Long, Long, Map<Long, ? extends GuildRole>, Map<Long, ? extends GuildMember>, Map<Long, ? extends User>, Map<Long, ? extends Presence>, Long, Channel, Map<LeadingIdentifier, ? extends TreeSet<Autocompletable>>> {
         public final /* synthetic */ Channel $channel;
 
@@ -84,7 +84,7 @@ public final class UserMentionableSource {
             return call2(l, l2, (Map<Long, GuildRole>) map, (Map<Long, GuildMember>) map2, map3, (Map<Long, Presence>) map4, l3, channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<LeadingIdentifier, TreeSet<Autocompletable>> call2(Long l, Long l2, Map<Long, GuildRole> map, Map<Long, GuildMember> map2, Map<Long, ? extends User> map3, Map<Long, Presence> map4, Long l3, Channel channel) {
             UserMentionableSource userMentionableSource = UserMentionableSource.this;
             Intrinsics3.checkNotNullExpressionValue(l, "myId");
@@ -100,8 +100,8 @@ public final class UserMentionableSource {
         }
     }
 
-    /* compiled from: UserMentionableSource.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserAutocompletableSource$observeUserAutocompletables$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserAutocompletableSource$observeUserAutocompletables$3 */
+    /* JADX INFO: compiled from: UserMentionableSource.kt */
     public static final class C78083<T, R> implements Func1<User, Long> {
         public static final C78083 INSTANCE = new C78083();
 
@@ -110,14 +110,14 @@ public final class UserMentionableSource {
             return call2(user);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Long call2(User user) {
             return Long.valueOf(user.getId());
         }
     }
 
-    /* compiled from: UserMentionableSource.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserAutocompletableSource$observeUserAutocompletables$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserAutocompletableSource$observeUserAutocompletables$4 */
+    /* JADX INFO: compiled from: UserMentionableSource.kt */
     public static final class C78094<T1, T2, R> implements Func2<List<Long>, Long, List<Long>> {
         public static final C78094 INSTANCE = new C78094();
 
@@ -126,20 +126,20 @@ public final class UserMentionableSource {
             return call2(list, l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Long> call2(List<Long> list, Long l) {
             list.add(l);
             return list;
         }
     }
 
-    /* compiled from: UserMentionableSource.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserAutocompletableSource$observeUserAutocompletables$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserAutocompletableSource$observeUserAutocompletables$5 */
+    /* JADX INFO: compiled from: UserMentionableSource.kt */
     public static final class C78105<T, R> implements Func1<List<Long>, Observable<? extends Map<LeadingIdentifier, ? extends TreeSet<Autocompletable>>>> {
         public final /* synthetic */ Channel $channel;
 
-        /* compiled from: UserMentionableSource.kt */
-        /* renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserAutocompletableSource$observeUserAutocompletables$5$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserAutocompletableSource$observeUserAutocompletables$5$1, reason: invalid class name */
+        /* JADX INFO: compiled from: UserMentionableSource.kt */
         public static final class AnonymousClass1<T1, T2, R> implements Func2<Map<Long, ? extends User>, Map<Long, ? extends Presence>, Map<LeadingIdentifier, ? extends TreeSet<Autocompletable>>> {
             public AnonymousClass1() {
             }
@@ -149,7 +149,7 @@ public final class UserMentionableSource {
                 return call2(map, (Map<Long, Presence>) map2);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Map<LeadingIdentifier, TreeSet<Autocompletable>> call2(Map<Long, ? extends User> map, Map<Long, Presence> map2) {
                 UserMentionableSource userMentionableSource = UserMentionableSource.this;
                 Intrinsics3.checkNotNullExpressionValue(map, "users");
@@ -167,7 +167,7 @@ public final class UserMentionableSource {
             return call2(list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Map<LeadingIdentifier, TreeSet<Autocompletable>>> call2(List<Long> list) {
             StoreUser storeUsers = UserMentionableSource.this.getStoreUsers();
             Intrinsics3.checkNotNullExpressionValue(list, "recipientIds");

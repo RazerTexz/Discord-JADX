@@ -24,14 +24,14 @@ import kotlin.jvm.functions.Function1;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsGiftingOutboundPromosAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsGiftingOutboundPromosAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsGiftingOutboundPromosAdapter extends ListAdapter<SettingsGiftingViewModel.OutboundPromoItem, OutboundPromoViewHolder> {
     private static final SimpleItemCallback<SettingsGiftingViewModel.OutboundPromoItem> DIFF_CALLBACK = new SimpleItemCallback<>(WidgetSettingsGiftingOutboundPromosAdapter2.INSTANCE);
     private final Function1<SettingsGiftingViewModel.OutboundPromoItem, Unit> onButtonClick;
     private final Function1<SettingsGiftingViewModel.OutboundPromoItem, Unit> onMoreDetailsClick;
 
-    /* compiled from: WidgetSettingsGiftingOutboundPromosAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSettingsGiftingOutboundPromosAdapter.kt */
     public static final class OutboundPromoViewHolder extends RecyclerView.ViewHolder {
         private final ViewGiftOutboundPromoListItemBinding binding;
         private SettingsGiftingViewModel.OutboundPromoItem boundItem;

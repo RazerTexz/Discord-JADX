@@ -13,7 +13,7 @@ import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.core.view.accessibility.AccessibilityViewCommand;
 import androidx.customview.widget.ViewDragHelper;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class SwipeDismissBehavior<V extends View> extends CoordinatorLayout.Behavior<V> {
     private static final float DEFAULT_ALPHA_END_DISTANCE = 0.5f;
     private static final float DEFAULT_ALPHA_START_DISTANCE = 0.0f;
@@ -41,13 +41,13 @@ public class SwipeDismissBehavior<V extends View> extends CoordinatorLayout.Beha
         void onDragStateChanged(int i);
     }
 
-    /* renamed from: com.google.android.material.behavior.SwipeDismissBehavior$a */
+    /* JADX INFO: renamed from: com.google.android.material.behavior.SwipeDismissBehavior$a */
     public class C10831a extends ViewDragHelper.Callback {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int f20889a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int f20890b = -1;
 
         public C10831a() {
@@ -171,7 +171,7 @@ public class SwipeDismissBehavior<V extends View> extends CoordinatorLayout.Beha
         }
     }
 
-    /* renamed from: com.google.android.material.behavior.SwipeDismissBehavior$b */
+    /* JADX INFO: renamed from: com.google.android.material.behavior.SwipeDismissBehavior$b */
     public class C10832b implements AccessibilityViewCommand {
         public C10832b() {
         }
@@ -201,13 +201,13 @@ public class SwipeDismissBehavior<V extends View> extends CoordinatorLayout.Beha
         }
     }
 
-    /* renamed from: com.google.android.material.behavior.SwipeDismissBehavior$c */
+    /* JADX INFO: renamed from: com.google.android.material.behavior.SwipeDismissBehavior$c */
     public class RunnableC10833c implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final View f20893j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final boolean f20894k;
 
         public RunnableC10833c(View view, boolean z2) {

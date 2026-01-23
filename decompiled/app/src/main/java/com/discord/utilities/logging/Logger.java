@@ -4,8 +4,8 @@ import android.util.Log;
 import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Logger.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Logger.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class Logger {
     private final String defaultTag;
 
@@ -68,13 +68,13 @@ public class Logger {
         logger.mo8370w(str, th);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo8362d(String message, Throwable throwable) {
         Intrinsics3.checkNotNullParameter(message, "message");
         mo8361d(this.defaultTag, message, throwable);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo8364e(String message, Throwable throwable, Map<String, String> metadata) {
         Intrinsics3.checkNotNullParameter(message, "message");
         mo8363e(this.defaultTag, message, throwable, metadata);
@@ -84,12 +84,12 @@ public class Logger {
         return this.defaultTag;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m8516i(String str) {
         i$default(this, str, null, 2, null);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo8367i(String message, Throwable throwable) {
         Intrinsics3.checkNotNullParameter(message, "message");
         mo8366i(this.defaultTag, message, throwable);
@@ -100,19 +100,19 @@ public class Logger {
         Intrinsics3.checkNotNullParameter(category, "category");
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public void mo8368v(String message, Throwable throwable) {
         Intrinsics3.checkNotNullParameter(message, "message");
         m8517v(this.defaultTag, message, throwable);
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public void mo8370w(String message, Throwable throwable) {
         Intrinsics3.checkNotNullParameter(message, "message");
         mo8369w(this.defaultTag, message, throwable);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo8361d(String tag, String message, Throwable throwable) {
         Intrinsics3.checkNotNullParameter(tag, "tag");
         Intrinsics3.checkNotNullParameter(message, "message");
@@ -123,7 +123,7 @@ public class Logger {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo8363e(String tag, String message, Throwable throwable, Map<String, String> metadata) {
         Intrinsics3.checkNotNullParameter(tag, "tag");
         Intrinsics3.checkNotNullParameter(message, "message");
@@ -134,7 +134,7 @@ public class Logger {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo8366i(String tag, String message, Throwable throwable) {
         Intrinsics3.checkNotNullParameter(tag, "tag");
         Intrinsics3.checkNotNullParameter(message, "message");
@@ -145,7 +145,7 @@ public class Logger {
         }
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public void m8517v(String tag, String message, Throwable throwable) {
         Intrinsics3.checkNotNullParameter(tag, "tag");
         Intrinsics3.checkNotNullParameter(message, "message");
@@ -156,7 +156,7 @@ public class Logger {
         }
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public void mo8369w(String tag, String message, Throwable throwable) {
         Intrinsics3.checkNotNullParameter(tag, "tag");
         Intrinsics3.checkNotNullParameter(message, "message");

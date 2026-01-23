@@ -15,30 +15,30 @@ import p600f0.RequestBody2;
 import p600f0.RequestBody3;
 import p600f0.p601e0.Util7;
 
-/* compiled from: RequestBody.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: RequestBody.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class RequestBody {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: RequestBody.kt */
+    /* JADX INFO: compiled from: RequestBody.kt */
     public static final class Companion {
 
-        /* compiled from: RequestBody.kt */
-        /* renamed from: okhttp3.RequestBody$Companion$a */
+        /* JADX INFO: renamed from: okhttp3.RequestBody$Companion$a */
+        /* JADX INFO: compiled from: RequestBody.kt */
         public static final class C12936a extends RequestBody {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final /* synthetic */ byte[] f27548a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final /* synthetic */ MediaType f27549b;
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public final /* synthetic */ int f27550c;
 
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public final /* synthetic */ int f27551d;
 
             public C12936a(byte[] bArr, MediaType mediaType, int i, int i2) {
@@ -68,7 +68,7 @@ public abstract class RequestBody {
         public Companion() {
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static RequestBody m10985c(Companion companion, MediaType mediaType, byte[] bArr, int i, int i2, int i3) {
             if ((i3 & 4) != 0) {
                 i = 0;
@@ -81,7 +81,7 @@ public abstract class RequestBody {
             return companion.m10988b(bArr, mediaType, i, i2);
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public static /* synthetic */ RequestBody m10986d(Companion companion, byte[] bArr, MediaType mediaType, int i, int i2, int i3) {
             if ((i3 & 1) != 0) {
                 mediaType = null;
@@ -95,7 +95,7 @@ public abstract class RequestBody {
             return companion.m10988b(bArr, mediaType, i, i2);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final RequestBody m10987a(String str, MediaType mediaType) {
             Intrinsics3.checkParameterIsNotNull(str, "$this$toRequestBody");
             Charset charset = Charsets2.f25136a;
@@ -114,7 +114,7 @@ public abstract class RequestBody {
             return m10988b(bytes, mediaType, 0, bytes.length);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final RequestBody m10988b(byte[] bArr, MediaType mediaType, int i, int i2) {
             Intrinsics3.checkParameterIsNotNull(bArr, "$this$toRequestBody");
             Util7.m10122c(bArr.length, i, i2);

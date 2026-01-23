@@ -7,8 +7,8 @@ import p007b.p109f.p161j.p177l.MemoryChunkPool;
 import p007b.p109f.p161j.p177l.PoolParams;
 import p007b.p109f.p161j.p177l.PoolStatsTracker;
 
+/* JADX INFO: loaded from: classes3.dex */
 @DoNotStrip
-/* loaded from: classes3.dex */
 public class NativeMemoryChunkPool extends MemoryChunkPool {
     @DoNotStrip
     public NativeMemoryChunkPool(MemoryTrimmableRegistry memoryTrimmableRegistry, PoolParams poolParams, PoolStatsTracker poolStatsTracker) {
@@ -16,13 +16,13 @@ public class NativeMemoryChunkPool extends MemoryChunkPool {
     }
 
     @Override // p007b.p109f.p161j.p177l.MemoryChunkPool, com.facebook.imagepipeline.memory.BasePool
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public MemoryChunk mo1382e(int i) {
         return new NativeMemoryChunk(i);
     }
 
     @Override // p007b.p109f.p161j.p177l.MemoryChunkPool
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public MemoryChunk mo1393s(int i) {
         return new NativeMemoryChunk(i);
     }

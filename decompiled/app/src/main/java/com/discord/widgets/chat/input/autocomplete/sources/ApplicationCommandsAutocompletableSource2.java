@@ -12,9 +12,9 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func5;
 
-/* compiled from: ApplicationCommandsAutocompletableSource.kt */
-/* renamed from: com.discord.widgets.chat.input.autocomplete.sources.ApplicationCommandsAutocompletableSource$Companion$getDiscoveryCommands$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.sources.ApplicationCommandsAutocompletableSource$Companion$getDiscoveryCommands$1, reason: use source file name */
+/* JADX INFO: compiled from: ApplicationCommandsAutocompletableSource.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ApplicationCommandsAutocompletableSource2<T1, T2, T3, T4, T5, R> implements Func5<Long, Map<Long, ? extends GuildMember>, DiscoverCommands, List<? extends Application>, List<? extends ApplicationCommand>, WidgetChatInputDiscoveryCommandsModel> {
     public final /* synthetic */ boolean $includeHeaders;
     public final /* synthetic */ int $placeholdersCount;
@@ -29,7 +29,7 @@ public final class ApplicationCommandsAutocompletableSource2<T1, T2, T3, T4, T5,
         return call2(l, (Map<Long, GuildMember>) map, discoverCommands, (List<Application>) list, list2);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetChatInputDiscoveryCommandsModel call2(Long l, Map<Long, GuildMember> map, DiscoverCommands discoverCommands, List<Application> list, List<? extends ApplicationCommand> list2) {
         WidgetChatInputDiscoveryCommandsModel.Companion companion = WidgetChatInputDiscoveryCommandsModel.INSTANCE;
         Intrinsics3.checkNotNullExpressionValue(l, "meId");

@@ -37,11 +37,11 @@ import p007b.p109f.p132g.p142e.C1788v;
 import p007b.p109f.p132g.p143f.GenericDraweeHierarchyBuilder;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmojiNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmojiNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmojiNode<T extends RenderContext> extends TextNode<T> implements Spoilerable {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int EMOJI_SIZE = DimenUtils.dpToPixels(16);
     private static final int JUMBOIFY_SCALE_FACTOR = 3;
@@ -52,7 +52,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
     private final Function3<Boolean, Integer, Context, String> urlProvider;
     private final int width;
 
-    /* compiled from: EmojiNode.kt */
+    /* JADX INFO: compiled from: EmojiNode.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -169,7 +169,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
             return new EmojiNode<>(firstName, new EmojiNode2(codePoints), generateEmojiIdAndType(unicodeEmoji), sizePx, sizePx);
         }
 
-        public final EmojiIdAndType generateEmojiIdAndType(ActivityEmoji activityEmoji) throws NumberFormatException {
+        public final EmojiIdAndType generateEmojiIdAndType(ActivityEmoji activityEmoji) {
             EmojiIdAndType unicode;
             Intrinsics3.checkNotNullParameter(activityEmoji, "$this$generateEmojiIdAndType");
             if (activityEmoji.getId() != null) {
@@ -207,10 +207,10 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
         }
     }
 
-    /* compiled from: EmojiNode.kt */
+    /* JADX INFO: compiled from: EmojiNode.kt */
     public static abstract class EmojiIdAndType implements Serializable {
 
-        /* compiled from: EmojiNode.kt */
+        /* JADX INFO: compiled from: EmojiNode.kt */
         public static final /* data */ class Custom extends EmojiIdAndType {
             private final long id;
             private final boolean isAnimated;
@@ -238,17 +238,17 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
                 return custom.copy(j, z2, str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getId() {
                 return this.id;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getIsAnimated() {
                 return this.isAnimated;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final String getName() {
                 return this.name;
             }
@@ -278,16 +278,19 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v6 */
+            /* JADX WARN: Type inference failed for: r1v7 */
             public int hashCode() {
                 int iM3a = C0002b.m3a(this.id) * 31;
                 boolean z2 = this.isAnimated;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iM3a + i) * 31;
+                int i = (iM3a + r1) * 31;
                 String str = this.name;
-                return i2 + (str != null ? str.hashCode() : 0);
+                return i + (str != null ? str.hashCode() : 0);
             }
 
             public final boolean isAnimated() {
@@ -304,7 +307,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
             }
         }
 
-        /* compiled from: EmojiNode.kt */
+        /* JADX INFO: compiled from: EmojiNode.kt */
         public static final /* data */ class Unicode extends EmojiIdAndType {
             private final String name;
 
@@ -322,7 +325,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
                 return unicode.copy(str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getName() {
                 return this.name;
             }
@@ -364,10 +367,10 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
         }
     }
 
-    /* compiled from: EmojiNode.kt */
+    /* JADX INFO: compiled from: EmojiNode.kt */
     public interface RenderContext {
 
-        /* compiled from: EmojiNode.kt */
+        /* JADX INFO: compiled from: EmojiNode.kt */
         public static final class DefaultImpls {
             public static void onEmojiClicked(RenderContext renderContext, EmojiIdAndType emojiIdAndType) {
                 Intrinsics3.checkNotNullParameter(emojiIdAndType, "emojiIdAndType");
@@ -376,7 +379,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
 
         Context getContext();
 
-        /* renamed from: isAnimationEnabled */
+        /* JADX INFO: renamed from: isAnimationEnabled */
         boolean getIsAnimationEnabled();
 
         void onEmojiClicked(EmojiIdAndType emojiIdAndType);
@@ -420,13 +423,13 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
         return false;
     }
 
-    /* renamed from: isJumbo, reason: from getter */
+    /* JADX INFO: renamed from: isJumbo, reason: from getter */
     public final boolean getIsJumbo() {
         return this.isJumbo;
     }
 
     @Override // com.discord.utilities.textprocessing.node.Spoilerable
-    /* renamed from: isRevealed, reason: from getter */
+    /* JADX INFO: renamed from: isRevealed, reason: from getter */
     public boolean getIsRevealed() {
         return this.isRevealed;
     }

@@ -3,15 +3,15 @@ package p007b.p225i.p226a.p242c;
 import p007b.p225i.p226a.p242c.Player2;
 import p007b.p225i.p226a.p242c.p259f3.ListenerSet;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.z */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.z */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C3152z implements ListenerSet.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ MediaItem2 f9123a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ int f9124b;
 
     public /* synthetic */ C3152z(MediaItem2 mediaItem2, int i) {

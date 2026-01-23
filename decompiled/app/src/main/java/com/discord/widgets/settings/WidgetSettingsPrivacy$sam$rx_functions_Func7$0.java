@@ -3,8 +3,8 @@ package com.discord.widgets.settings;
 import kotlin.jvm.functions.Function7;
 import p658rx.functions.Func7;
 
-/* compiled from: WidgetSettingsPrivacy.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsPrivacy$sam$rx_functions_Func7$0 implements Func7 {
     private final /* synthetic */ Function7 function;
 

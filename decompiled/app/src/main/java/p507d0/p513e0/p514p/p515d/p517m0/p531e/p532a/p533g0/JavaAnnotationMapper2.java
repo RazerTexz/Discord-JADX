@@ -15,27 +15,27 @@ import p507d0.p513e0.p514p.p515d.p517m0.p548g.Name;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: JavaAnnotationMapper.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.g0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.c, reason: use source file name */
+/* JADX INFO: compiled from: JavaAnnotationMapper.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JavaAnnotationMapper2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final JavaAnnotationMapper2 f23230a = new JavaAnnotationMapper2();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Name f23231b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Name f23232c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Name f23233d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Map<FqName, FqName> f23234e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final Map<FqName, FqName> f23235f;
 
     static {

@@ -16,9 +16,9 @@ import p507d0.p580t.ReversedViews3;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListModelMessages.kt */
-/* renamed from: com.discord.widgets.chat.list.model.WidgetChatListModelMessages$Companion$getSingleMessage$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.model.WidgetChatListModelMessages$Companion$getSingleMessage$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListModelMessages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListModelMessages3 extends Lambda implements Function10<Message, WidgetChatListModelMessages.MessagesWithMetadata, Map<Long, ? extends GuildMember>, Map<Long, ? extends GuildRole>, Boolean, Boolean, Long, Boolean, InviteEmbedModel, Boolean, List<? extends ChatListEntry>> {
     public final /* synthetic */ Channel $channel;
     public final /* synthetic */ long $messageId;

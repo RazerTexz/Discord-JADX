@@ -3,9 +3,9 @@ package com.discord.widgets.forums;
 import android.view.View;
 import com.discord.widgets.forums.WidgetForumBrowserViewModel;
 
-/* compiled from: WidgetForumBrowser.kt */
-/* renamed from: com.discord.widgets.forums.WidgetForumBrowser$configureCreatePostButton$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.forums.WidgetForumBrowser$configureCreatePostButton$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetForumBrowser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetForumBrowser3 implements View.OnClickListener {
     public final /* synthetic */ boolean $hasForumGuidelines;
     public final /* synthetic */ WidgetForumBrowserViewModel.ViewState.Loaded $viewState$inlined;

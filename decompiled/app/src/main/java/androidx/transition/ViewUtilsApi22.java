@@ -5,8 +5,8 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(22)
-/* loaded from: classes.dex */
 public class ViewUtilsApi22 extends ViewUtilsApi21 {
     private static boolean sTryHiddenSetLeftTopRightBottom = true;
 

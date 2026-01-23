@@ -69,8 +69,8 @@ import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetStickerPicker.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetStickerPicker.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStickerPicker extends AppFragment implements FlexInputExpressionTrayStateChangeListener {
     public static final String ARG_MODE = "MODE";
     private static final int STICKER_PICKER_VIEW_FLIPPER_EMPTY_STATE = 1;
@@ -79,13 +79,13 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
     public static final String VIEW_TYPE = "VIEW_TYPE";
     private Long autoscrollToPackId;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private boolean canHandleIsShown;
     private StickerCategoryAdapter categoryAdapter;
     private LinearLayoutManager categoryLayoutManager;
 
-    /* renamed from: initialStickerPackId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: initialStickerPackId$delegate, reason: from kotlin metadata */
     private final Lazy initialStickerPackId;
     private OnBackspacePressedListener onBackspacePressedListener;
     private StickerPickerViewModel.ViewState previousViewState;
@@ -98,16 +98,16 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
     private StickerPickerListener stickerPickerListener;
     private StickerPickerMode stickerPickerMode;
 
-    /* renamed from: viewModelForInline$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModelForInline$delegate, reason: from kotlin metadata */
     private final Lazy viewModelForInline;
 
-    /* renamed from: viewModelForSheet$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModelForSheet$delegate, reason: from kotlin metadata */
     private final Lazy viewModelForSheet;
     private boolean wasActive;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetStickerPicker.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStickerPickerBinding;", 0)};
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final class C79101 extends Lambda implements Function1<Integer, Unit> {
         public final /* synthetic */ StickerPickerViewModel.ViewState $viewState;
 
@@ -128,8 +128,8 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$initializeSearchBar$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$initializeSearchBar$1 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final class C79111 extends Lambda implements Function0<Unit> {
         public C79111() {
             super(0);
@@ -141,7 +141,7 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (WidgetStickerPicker.access$getStickerPickerMode$p(WidgetStickerPicker.this) == StickerPickerMode.INLINE) {
                 WidgetStickerPicker.access$launchBottomSheet(WidgetStickerPicker.this);
@@ -151,8 +151,8 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$onGuildClicked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$onGuildClicked$1 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final class C79121 extends Lambda implements Function1<Unit, Unit> {
         public final /* synthetic */ Tuples2 $categoryRange;
 
@@ -168,14 +168,14 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             WidgetStickerPicker.access$getStickerAdapter$p(WidgetStickerPicker.this).scrollToPosition(((Number) this.$categoryRange.getFirst()).intValue());
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$onPackClicked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$onPackClicked$1 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final class C79131 extends Lambda implements Function1<Unit, Unit> {
         public final /* synthetic */ Tuples2 $categoryRange;
 
@@ -191,14 +191,14 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             WidgetStickerPicker.access$getStickerAdapter$p(WidgetStickerPicker.this).scrollToPosition(((Number) this.$categoryRange.getFirst()).intValue());
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final class C79141 extends Lambda implements Function1<String, Unit> {
         public C79141() {
             super(1);
@@ -210,15 +210,15 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "searchQuery");
             WidgetStickerPicker.access$getViewModel$p(WidgetStickerPicker.this).setSearchText(str);
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final class ViewOnClickListenerC79152 implements View.OnClickListener {
         public ViewOnClickListenerC79152() {
         }
@@ -232,8 +232,8 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final class C79161 extends Lambda implements Function1<StickerPickerViewModel.ViewState, Unit> {
         public C79161() {
             super(1);
@@ -245,15 +245,15 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StickerPickerViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetStickerPicker.access$configureUI(WidgetStickerPicker.this, viewState);
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final class C79172 extends Lambda implements Function1<StickerPickerViewModel.Event, Unit> {
         public C79172() {
             super(1);
@@ -265,15 +265,15 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StickerPickerViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             WidgetStickerPicker.access$handleEvent(WidgetStickerPicker.this, event);
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpCategoryRecycler$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpCategoryRecycler$1 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final /* synthetic */ class C79181 extends FunctionReferenceImpl implements Function1<StickerCategoryItem.GuildItem, Unit> {
         public C79181(WidgetStickerPicker widgetStickerPicker) {
             super(1, widgetStickerPicker, WidgetStickerPicker.class, "onGuildClicked", "onGuildClicked(Lcom/discord/widgets/chat/input/sticker/StickerCategoryItem$GuildItem;)V", 0);
@@ -285,15 +285,15 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StickerCategoryItem.GuildItem guildItem) {
             Intrinsics3.checkNotNullParameter(guildItem, "p1");
             WidgetStickerPicker.access$onGuildClicked((WidgetStickerPicker) this.receiver, guildItem);
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpCategoryRecycler$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpCategoryRecycler$2 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final /* synthetic */ class C79192 extends FunctionReferenceImpl implements Function1<StickerCategoryItem.PackItem, Unit> {
         public C79192(WidgetStickerPicker widgetStickerPicker) {
             super(1, widgetStickerPicker, WidgetStickerPicker.class, "onPackClicked", "onPackClicked(Lcom/discord/widgets/chat/input/sticker/StickerCategoryItem$PackItem;)V", 0);
@@ -305,15 +305,15 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StickerCategoryItem.PackItem packItem) {
             Intrinsics3.checkNotNullParameter(packItem, "p1");
             WidgetStickerPicker.access$onPackClicked((WidgetStickerPicker) this.receiver, packItem);
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpCategoryRecycler$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpCategoryRecycler$3 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final /* synthetic */ class C79203 extends FunctionReferenceImpl implements Function0<Unit> {
         public C79203(WidgetStickerPicker widgetStickerPicker) {
             super(0, widgetStickerPicker, WidgetStickerPicker.class, "onRecentClicked", "onRecentClicked()V", 0);
@@ -325,14 +325,14 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetStickerPicker.access$onRecentClicked((WidgetStickerPicker) this.receiver);
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpCategoryRecycler$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpCategoryRecycler$4 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final /* synthetic */ class C79214 extends FunctionReferenceImpl implements Function1<Integer, Unit> {
         public C79214(WidgetStickerPicker widgetStickerPicker) {
             super(1, widgetStickerPicker, WidgetStickerPicker.class, "onSelectedCategoryAdapterPositionUpdated", "onSelectedCategoryAdapterPositionUpdated(I)V", 0);
@@ -349,8 +349,8 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpCategoryRecycler$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpCategoryRecycler$5 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final class C79225 extends RecyclerView.OnScrollListener {
         public C79225() {
         }
@@ -364,8 +364,8 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpStickerRecycler$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpStickerRecycler$1 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final /* synthetic */ class C79231 extends FunctionReferenceImpl implements Function1<StickerAdapterItems3, Unit> {
         public C79231(WidgetStickerPicker widgetStickerPicker) {
             super(1, widgetStickerPicker, WidgetStickerPicker.class, "onStickerItemSelected", "onStickerItemSelected(Lcom/discord/widgets/chat/input/sticker/StickerItem;)V", 0);
@@ -377,15 +377,15 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StickerAdapterItems3 stickerAdapterItems3) {
             Intrinsics3.checkNotNullParameter(stickerAdapterItems3, "p1");
             WidgetStickerPicker.access$onStickerItemSelected((WidgetStickerPicker) this.receiver, stickerAdapterItems3);
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpStickerRecycler$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpStickerRecycler$2 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final /* synthetic */ class C79242 extends FunctionReferenceImpl implements Function1<StickerAdapterItems4, Unit> {
         public C79242(WidgetStickerPicker widgetStickerPicker) {
             super(1, widgetStickerPicker, WidgetStickerPicker.class, "onStickerHeaderItemsClicked", "onStickerHeaderItemsClicked(Lcom/discord/widgets/chat/input/sticker/StoreHeaderItem;)V", 0);
@@ -397,15 +397,15 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StickerAdapterItems4 stickerAdapterItems4) {
             Intrinsics3.checkNotNullParameter(stickerAdapterItems4, "p1");
             WidgetStickerPicker.access$onStickerHeaderItemsClicked((WidgetStickerPicker) this.receiver, stickerAdapterItems4);
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpStickerRecycler$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpStickerRecycler$3 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final class C79253 implements RecyclerView.RecyclerListener {
         public static final C79253 INSTANCE = new C79253();
 
@@ -418,8 +418,8 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpStickerRecycler$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setUpStickerRecycler$4 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final class C79264 extends Lambda implements Function1<Boolean, Unit> {
         public C79264() {
             super(1);
@@ -436,8 +436,8 @@ public final class WidgetStickerPicker extends AppFragment implements FlexInputE
         }
     }
 
-    /* compiled from: WidgetStickerPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setWindowInsetsListeners$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setWindowInsetsListeners$1 */
+    /* JADX INFO: compiled from: WidgetStickerPicker.kt */
     public static final class C79271 implements OnApplyWindowInsetsListener {
         public C79271() {
         }

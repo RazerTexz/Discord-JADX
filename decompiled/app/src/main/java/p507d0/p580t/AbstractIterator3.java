@@ -5,21 +5,21 @@ import java.util.NoSuchElementException;
 import p007b.p085c.p086a.p095y.C1563b;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: AbstractIterator.kt */
-/* renamed from: d0.t.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.b, reason: use source file name */
+/* JADX INFO: compiled from: AbstractIterator.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractIterator3<T> implements Iterator<T>, KMarkers {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f25173j = 2;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public T f25174k;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract void mo10059a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m10074b(T t) {
         this.f25174k = t;
         this.f25173j = 1;

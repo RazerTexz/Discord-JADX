@@ -3,13 +3,13 @@ package p600f0;
 import java.io.IOException;
 import okhttp3.Response;
 
-/* compiled from: Callback.kt */
-/* renamed from: f0.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.f, reason: use source file name */
+/* JADX INFO: compiled from: Callback.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface Callback2 {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void mo10358a(Call2 call2, Response response) throws IOException;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     void mo10359b(Call2 call2, IOException iOException);
 }

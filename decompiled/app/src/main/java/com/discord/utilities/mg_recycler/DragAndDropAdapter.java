@@ -16,13 +16,13 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t.Iterators4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DragAndDropAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DragAndDropAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class DragAndDropAdapter<T extends Payload> extends MGRecyclerAdapterSimple<T> implements DragAndDropHelper.Adapter {
     private List<T> dataCopy;
     private Map<String, Integer> origPositions;
 
-    /* compiled from: DragAndDropAdapter.kt */
+    /* JADX INFO: compiled from: DragAndDropAdapter.kt */
     public interface Payload extends MGRecyclerDataPayload {
         int getPosition();
     }

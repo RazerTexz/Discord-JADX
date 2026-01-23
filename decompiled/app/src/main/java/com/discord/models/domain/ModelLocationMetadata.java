@@ -3,8 +3,8 @@ package com.discord.models.domain;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelLocationMetadata.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelLocationMetadata.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelLocationMetadata {
     private final boolean consentRequired;
     private final String countryCode;
@@ -24,12 +24,12 @@ public final /* data */ class ModelLocationMetadata {
         return modelLocationMetadata.copy(z2, str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final boolean getConsentRequired() {
         return this.consentRequired;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getCountryCode() {
         return this.countryCode;
     }

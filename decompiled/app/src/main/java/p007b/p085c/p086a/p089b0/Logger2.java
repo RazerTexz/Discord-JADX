@@ -5,20 +5,20 @@ import java.util.Objects;
 import java.util.Set;
 import p007b.p085c.p086a.LottieLogger;
 
-/* compiled from: Logger.java */
-/* renamed from: b.c.a.b0.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.b0.c, reason: use source file name */
+/* JADX INFO: compiled from: Logger.java */
+/* JADX INFO: loaded from: classes.dex */
 public class Logger2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static LottieLogger f2296a = new LogcatLogger2();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m639a(String str) {
         Objects.requireNonNull((LogcatLogger2) f2296a);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m640b(String str) {
         Objects.requireNonNull((LogcatLogger2) f2296a);
         Set<String> set = LogcatLogger2.f2295a;
@@ -29,7 +29,7 @@ public class Logger2 {
         set.add(str);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static void m641c(String str, Throwable th) {
         Objects.requireNonNull((LogcatLogger2) f2296a);
         Set<String> set = LogcatLogger2.f2295a;

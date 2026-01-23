@@ -11,13 +11,13 @@ import p507d0.p580t.Maps6;
 import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AutocompleteViewModel.kt */
-/* renamed from: com.discord.widgets.chat.input.autocomplete.SelectedCommandViewState, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.SelectedCommandViewState, reason: use source file name */
+/* JADX INFO: compiled from: AutocompleteViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class AutocompleteViewModel6 {
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.SelectedCommandViewState$Hidden */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.SelectedCommandViewState$Hidden */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final class Hidden extends AutocompleteViewModel6 {
         public static final Hidden INSTANCE = new Hidden();
 
@@ -29,8 +29,8 @@ public abstract class AutocompleteViewModel6 {
     private AutocompleteViewModel6() {
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.SelectedCommandViewState$SelectedCommand */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.SelectedCommandViewState$SelectedCommand */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final /* data */ class SelectedCommand extends AutocompleteViewModel6 {
         private final Application selectedApplication;
         private final ApplicationCommand selectedCommand;
@@ -42,6 +42,7 @@ public abstract class AutocompleteViewModel6 {
             this(applicationCommand, applicationCommandOption, (i & 4) != 0 ? Sets5.emptySet() : set, (i & 8) != 0 ? Maps6.emptyMap() : map, application);
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ SelectedCommand copy$default(SelectedCommand selectedCommand, ApplicationCommand applicationCommand, ApplicationCommandOption applicationCommandOption, Set set, Map map, Application application, int i, Object obj) {
             if ((i & 1) != 0) {
                 applicationCommand = selectedCommand.selectedCommand;
@@ -64,12 +65,12 @@ public abstract class AutocompleteViewModel6 {
             return selectedCommand.copy(applicationCommand, applicationCommandOption2, set2, map2, application);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ApplicationCommand getSelectedCommand() {
             return this.selectedCommand;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final ApplicationCommandOption getSelectedCommandOption() {
             return this.selectedCommandOption;
         }
@@ -82,7 +83,7 @@ public abstract class AutocompleteViewModel6 {
             return this.validSelectedCommandOptions;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final Application getSelectedApplication() {
             return this.selectedApplication;
         }

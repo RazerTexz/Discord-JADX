@@ -7,24 +7,24 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.Format2;
 
-/* compiled from: DecoderReuseEvaluation.java */
-/* renamed from: b.i.a.c.v2.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.v2.g, reason: use source file name */
+/* JADX INFO: compiled from: DecoderReuseEvaluation.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DecoderReuseEvaluation {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f7926a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Format2 f7927b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Format2 f7928c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f7929d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f7930e;
 
     public DecoderReuseEvaluation(String str, Format2 format2, Format2 format22, int i, int i2) {

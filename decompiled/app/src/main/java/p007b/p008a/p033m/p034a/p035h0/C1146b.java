@@ -3,12 +3,12 @@ package p007b.p008a.p033m.p034a.p035h0;
 import com.discord.models.domain.Model;
 import com.discord.models.domain.emoji.ModelEmojiUnicode;
 
-/* compiled from: lambda */
-/* renamed from: b.a.m.a.h0.b */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.m.a.h0.b */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class C1146b implements Model.JsonReader.ItemFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Model.JsonReader f1526a;
 
     public /* synthetic */ C1146b(Model.JsonReader jsonReader) {

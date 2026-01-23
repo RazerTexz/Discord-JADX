@@ -3,9 +3,9 @@ package com.discord.widgets.voice.sheet;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetVoiceBottomSheet.kt */
-/* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$forwardToFullscreenIfVideoActivated$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$forwardToFullscreenIfVideoActivated$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetVoiceBottomSheet5 extends Lambda implements Function0<Boolean> {
     public final /* synthetic */ WidgetVoiceBottomSheet this$0;
 
@@ -20,7 +20,7 @@ public final class WidgetVoiceBottomSheet5 extends Lambda implements Function0<B
         return Boolean.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2() {
         return WidgetVoiceBottomSheet.access$getArgumentsOrDefault$p(this.this$0).getBoolean("ARG_FORWARD_TO_FULLSCREEN_IF_VIDEO_ACTIVATED");
     }

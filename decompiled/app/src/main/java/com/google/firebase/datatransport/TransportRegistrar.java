@@ -13,9 +13,9 @@ import p007b.p225i.p361c.p368l.ComponentRegistrar;
 import p007b.p225i.p361c.p368l.Dependency2;
 import p007b.p225i.p361c.p390n.C4766a;
 
-/* compiled from: com.google.firebase:firebase-datatransport@@17.0.3 */
+/* JADX INFO: compiled from: com.google.firebase:firebase-datatransport@@17.0.3 */
+/* JADX INFO: loaded from: classes3.dex */
 @Keep
-/* loaded from: classes3.dex */
 public class TransportRegistrar implements ComponentRegistrar {
     public static /* synthetic */ TransportFactory lambda$getComponents$0(ComponentContainer componentContainer) {
         TransportRuntime.m2360b((Context) componentContainer.mo6346a(Context.class));

@@ -1,10 +1,10 @@
 package p007b.p225i.p226a.p288f.p339m;
 
-/* renamed from: b.i.a.f.m.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.m.b */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RunnableC4352b implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C4351a f11469j;
 
     public RunnableC4352b(C4351a c4351a) {

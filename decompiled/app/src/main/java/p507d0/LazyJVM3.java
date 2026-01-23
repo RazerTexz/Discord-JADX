@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LazyJVM.kt */
-/* renamed from: d0.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.n, reason: use source file name */
+/* JADX INFO: compiled from: LazyJVM.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LazyJVM3<T> implements Lazy<T>, Serializable {
     private volatile Object _value;
     private Function0<? extends T> initializer;

@@ -12,44 +12,44 @@ import com.discord.views.LoadingButton;
 import com.discord.views.steps.StepsProgressIndicatorView;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: ViewStepsBinding.java */
-/* renamed from: b.a.i.y3, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.y3, reason: use source file name */
+/* JADX INFO: compiled from: ViewStepsBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewStepsBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final RelativeLayout f1417a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final LinearLayout f1418b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f1419c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final ImageView f1420d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final LoadingButton f1421e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final MaterialButton f1422f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final StepsProgressIndicatorView f1423g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final TextView f1424h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @NonNull
     public final ViewPager2 f1425i;
 

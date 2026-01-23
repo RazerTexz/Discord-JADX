@@ -5,15 +5,15 @@ import java.lang.reflect.Method;
 import org.objenesis.ObjenesisException;
 import p617h0.p620b.p621a.ObjectInstantiator;
 
-/* compiled from: PercInstantiator.java */
-/* renamed from: h0.b.a.e.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.b.a.e.a, reason: use source file name */
+/* JADX INFO: compiled from: PercInstantiator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PercInstantiator<T> implements ObjectInstantiator<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Method f26397a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Object[] f26398b;
 
     public PercInstantiator(Class<T> cls) {

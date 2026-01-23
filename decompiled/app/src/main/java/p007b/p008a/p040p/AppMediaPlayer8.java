@@ -5,12 +5,12 @@ import p007b.p225i.p226a.p242c.SimpleExoPlayer;
 import p658rx.functions.Action1;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: AppMediaPlayer.kt */
-/* renamed from: b.a.p.g, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.p.g, reason: use source file name */
+/* JADX INFO: compiled from: AppMediaPlayer.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppMediaPlayer8<T> implements Action1<Long> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ AppMediaPlayer f1586j;
 
     public AppMediaPlayer8(AppMediaPlayer appMediaPlayer) {

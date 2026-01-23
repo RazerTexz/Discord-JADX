@@ -11,40 +11,40 @@ import p507d0.p512d0._Ranges;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: Strings.kt */
-/* renamed from: d0.g0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.g0.d, reason: use source file name */
+/* JADX INFO: compiled from: Strings.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Strings implements Sequence<Ranges2> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CharSequence f25140a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f25141b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f25142c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Function2<CharSequence, Integer, Tuples2<Integer, Integer>> f25143d;
 
-    /* compiled from: Strings.kt */
-    /* renamed from: d0.g0.d$a */
+    /* JADX INFO: renamed from: d0.g0.d$a */
+    /* JADX INFO: compiled from: Strings.kt */
     public static final class a implements Iterator<Ranges2>, KMarkers {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public int f25144j = -1;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f25145k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public int f25146l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public Ranges2 f25147m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public int f25148n;
 
         public a() {
@@ -54,7 +54,7 @@ public final class Strings implements Sequence<Ranges2> {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:9:0x0023  */
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -105,7 +105,7 @@ public final class Strings implements Sequence<Ranges2> {
         }
 
         @Override // java.util.Iterator
-        /* renamed from: next, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: next, reason: avoid collision after fix types in other method */
         public Ranges2 next2() {
             if (this.f25144j == -1) {
                 m10067a();

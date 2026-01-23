@@ -3,9 +3,9 @@ package com.discord.widgets.chat.input.emoji;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: EmojiAutocompletePremiumUpsellFeatureFlag.kt */
-/* renamed from: com.discord.widgets.chat.input.emoji.EmojiAutocompletePremiumUpsellFeatureFlag$Companion$INSTANCE$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.EmojiAutocompletePremiumUpsellFeatureFlag$Companion$INSTANCE$2, reason: use source file name */
+/* JADX INFO: compiled from: EmojiAutocompletePremiumUpsellFeatureFlag.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmojiAutocompletePremiumUpsellFeatureFlag2 extends Lambda implements Function0<EmojiAutocompletePremiumUpsellFeatureFlag> {
     public static final EmojiAutocompletePremiumUpsellFeatureFlag2 INSTANCE = new EmojiAutocompletePremiumUpsellFeatureFlag2();
 

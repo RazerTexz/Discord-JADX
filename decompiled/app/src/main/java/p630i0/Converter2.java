@@ -7,13 +7,13 @@ import java.lang.reflect.Type;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 
-/* compiled from: Converter.java */
-/* renamed from: i0.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.h, reason: use source file name */
+/* JADX INFO: compiled from: Converter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface Converter2<F, T> {
 
-    /* compiled from: Converter.java */
-    /* renamed from: i0.h$a */
+    /* JADX INFO: renamed from: i0.h$a */
+    /* JADX INFO: compiled from: Converter.java */
     public static abstract class a {
         public static Type getParameterUpperBound(int i, ParameterizedType parameterizedType) {
             return Utils8.m10685e(i, parameterizedType);

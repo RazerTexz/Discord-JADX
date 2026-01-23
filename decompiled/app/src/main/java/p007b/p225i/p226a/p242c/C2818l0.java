@@ -5,16 +5,16 @@ import android.os.Bundle;
 import p007b.p225i.p226a.p242c.Bundleable;
 import p007b.p225i.p226a.p242c.MediaMetadata;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.l0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.l0 */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2818l0 implements Bundleable.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ C2818l0 f7237a = new C2818l0();
 
     @Override // p007b.p225i.p226a.p242c.Bundleable.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Bundleable mo2576a(Bundle bundle) {
         Bundle bundle2;
         Bundle bundle3;

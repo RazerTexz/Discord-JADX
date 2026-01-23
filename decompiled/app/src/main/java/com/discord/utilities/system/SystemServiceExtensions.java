@@ -6,9 +6,9 @@ import android.os.PowerManager;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SystemServiceExtensions.kt */
-/* renamed from: com.discord.utilities.system.SystemServiceExtensionsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.system.SystemServiceExtensionsKt, reason: use source file name */
+/* JADX INFO: compiled from: SystemServiceExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SystemServiceExtensions {
     private static final String TAG = "discord:com.discord.utils";
 

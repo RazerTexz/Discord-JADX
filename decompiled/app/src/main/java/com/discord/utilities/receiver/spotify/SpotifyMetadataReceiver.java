@@ -12,8 +12,8 @@ import p507d0.p579g0.Strings4;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SpotifyMetadataReceiver.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SpotifyMetadataReceiver.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SpotifyMetadataReceiver extends BroadcastReceiver {
     @Override // android.content.BroadcastReceiver
     public void onReceive(Context context, Intent intent) {

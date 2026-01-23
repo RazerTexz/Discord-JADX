@@ -20,8 +20,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreEmojiGuild.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreEmojiGuild.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreEmojiGuild extends StoreV2 {
     private long activeGuildId;
     private final Dispatcher dispatcher;
@@ -30,8 +30,8 @@ public final class StoreEmojiGuild extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final RestAPI restAPI;
 
-    /* compiled from: StoreEmojiGuild.kt */
-    /* renamed from: com.discord.stores.StoreEmojiGuild$activate$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmojiGuild$activate$1 */
+    /* JADX INFO: compiled from: StoreEmojiGuild.kt */
     public static final class C58991 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
@@ -47,14 +47,14 @@ public final class StoreEmojiGuild extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreEmojiGuild.access$setActiveGuildId$p(StoreEmojiGuild.this, this.$guildId);
         }
     }
 
-    /* compiled from: StoreEmojiGuild.kt */
-    /* renamed from: com.discord.stores.StoreEmojiGuild$deactivate$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmojiGuild$deactivate$1 */
+    /* JADX INFO: compiled from: StoreEmojiGuild.kt */
     public static final class C59001 extends Lambda implements Function0<Unit> {
         public C59001() {
             super(0);
@@ -66,14 +66,14 @@ public final class StoreEmojiGuild extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreEmojiGuild.access$setActiveGuildId$p(StoreEmojiGuild.this, -1L);
         }
     }
 
-    /* compiled from: StoreEmojiGuild.kt */
-    /* renamed from: com.discord.stores.StoreEmojiGuild$deleteEmoji$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmojiGuild$deleteEmoji$1 */
+    /* JADX INFO: compiled from: StoreEmojiGuild.kt */
     public static final class C59011 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $emojiId;
         public final /* synthetic */ long $guildId;
@@ -91,7 +91,7 @@ public final class StoreEmojiGuild extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Map mapAccess$getGuildEmoji$p = StoreEmojiGuild.access$getGuildEmoji$p(StoreEmojiGuild.this);
             Long lValueOf = Long.valueOf(this.$guildId);
@@ -110,8 +110,8 @@ public final class StoreEmojiGuild extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreEmojiGuild.kt */
-    /* renamed from: com.discord.stores.StoreEmojiGuild$fetchGuildEmoji$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmojiGuild$fetchGuildEmoji$1 */
+    /* JADX INFO: compiled from: StoreEmojiGuild.kt */
     public static final class C59021 extends Lambda implements Function1<List<? extends ModelEmojiGuild>, Unit> {
         public final /* synthetic */ long $guildId;
 
@@ -127,15 +127,15 @@ public final class StoreEmojiGuild extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelEmojiGuild> list) {
             Intrinsics3.checkNotNullParameter(list, "emojis");
             StoreEmojiGuild.access$handleGuildEmojisLoaded(StoreEmojiGuild.this, this.$guildId, list);
         }
     }
 
-    /* compiled from: StoreEmojiGuild.kt */
-    /* renamed from: com.discord.stores.StoreEmojiGuild$handleGuildEmojisLoaded$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmojiGuild$handleGuildEmojisLoaded$1 */
+    /* JADX INFO: compiled from: StoreEmojiGuild.kt */
     public static final class C59031 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ List $emojis;
         public final /* synthetic */ long $guildId;
@@ -153,15 +153,15 @@ public final class StoreEmojiGuild extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreEmojiGuild.access$getGuildEmoji$p(StoreEmojiGuild.this).put(Long.valueOf(this.$guildId), this.$emojis);
             StoreEmojiGuild.this.markChanged();
         }
     }
 
-    /* compiled from: StoreEmojiGuild.kt */
-    /* renamed from: com.discord.stores.StoreEmojiGuild$observeGuildEmoji$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmojiGuild$observeGuildEmoji$1 */
+    /* JADX INFO: compiled from: StoreEmojiGuild.kt */
     public static final class C59041 extends Lambda implements Function0<List<? extends ModelEmojiGuild>> {
         public final /* synthetic */ long $guildId;
 
@@ -177,7 +177,7 @@ public final class StoreEmojiGuild extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends ModelEmojiGuild> invoke2() {
             return StoreEmojiGuild.this.getGuildEmoji(this.$guildId);
         }

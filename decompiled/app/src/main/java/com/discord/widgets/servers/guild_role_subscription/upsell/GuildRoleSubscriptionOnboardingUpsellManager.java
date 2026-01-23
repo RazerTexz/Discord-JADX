@@ -11,8 +11,8 @@ import com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionsFeatur
 import com.discord.widgets.servers.creator_monetization_eligibility.CreatorMonetizationCountryAllowlist;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionOnboardingUpsellManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionOnboardingUpsellManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionOnboardingUpsellManager {
     public static final String SHOWN_CACHE_KEY = "HAS_GUILD_ROLE_SUBSCRIPTION_UPSELL_BEEN_SHOWN";
     private final CreatorMonetizationCountryAllowlist countryAllowlist;

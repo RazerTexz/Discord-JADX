@@ -6,8 +6,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SelectMessageComponent.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: SelectMessageComponent.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class SelectMessageComponent extends MessageComponent2 {
     private final String customId;
     private final boolean emojiAnimationsEnabled;
@@ -38,6 +38,7 @@ public final /* data */ class SelectMessageComponent extends MessageComponent2 {
         this.emojiAnimationsEnabled = z2;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ SelectMessageComponent copy$default(SelectMessageComponent selectMessageComponent, Component6 component6, int i, ActionInteractionComponentState actionInteractionComponentState, String str, String str2, int i2, int i3, List list, List list2, boolean z2, int i4, Object obj) {
         return selectMessageComponent.copy((i4 & 1) != 0 ? selectMessageComponent.getType() : component6, (i4 & 2) != 0 ? selectMessageComponent.getIndex() : i, (i4 & 4) != 0 ? selectMessageComponent.getStateInteraction() : actionInteractionComponentState, (i4 & 8) != 0 ? selectMessageComponent.customId : str, (i4 & 16) != 0 ? selectMessageComponent.placeholder : str2, (i4 & 32) != 0 ? selectMessageComponent.minValues : i2, (i4 & 64) != 0 ? selectMessageComponent.maxValues : i3, (i4 & 128) != 0 ? selectMessageComponent.options : list, (i4 & 256) != 0 ? selectMessageComponent.selectedOptions : list2, (i4 & 512) != 0 ? selectMessageComponent.emojiAnimationsEnabled : z2);
     }
@@ -46,7 +47,7 @@ public final /* data */ class SelectMessageComponent extends MessageComponent2 {
         return getType();
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final boolean getEmojiAnimationsEnabled() {
         return this.emojiAnimationsEnabled;
     }
@@ -59,22 +60,22 @@ public final /* data */ class SelectMessageComponent extends MessageComponent2 {
         return getStateInteraction();
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getCustomId() {
         return this.customId;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getPlaceholder() {
         return this.placeholder;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final int getMinValues() {
         return this.minValues;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final int getMaxValues() {
         return this.maxValues;
     }
@@ -151,6 +152,9 @@ public final /* data */ class SelectMessageComponent extends MessageComponent2 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v20, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v21 */
+    /* JADX WARN: Type inference failed for: r0v27 */
     public int hashCode() {
         Component6 type = getType();
         int index = (getIndex() + ((type != null ? type.hashCode() : 0) * 31)) * 31;
@@ -165,11 +169,11 @@ public final /* data */ class SelectMessageComponent extends MessageComponent2 {
         List<SelectComponent2> list2 = this.selectedOptions;
         int iHashCode5 = (iHashCode4 + (list2 != null ? list2.hashCode() : 0)) * 31;
         boolean z2 = this.emojiAnimationsEnabled;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        return iHashCode5 + i;
+        return iHashCode5 + r0;
     }
 
     public String toString() {

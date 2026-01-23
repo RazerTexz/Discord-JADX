@@ -89,11 +89,11 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: WidgetChannelListModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelListModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetChannelListModel {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final List<GuildScheduledEvent> guildScheduledEvents;
     private final boolean isGuildSelected;
@@ -102,10 +102,10 @@ public final /* data */ class WidgetChannelListModel {
     private final boolean showEmptyState;
     private final boolean showPremiumGuildHint;
 
-    /* compiled from: WidgetChannelListModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelListModel.kt */
     public static final class Companion {
 
-        /* compiled from: WidgetChannelListModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelListModel.kt */
         public static final /* data */ class TextLikeChannelData {
             private final boolean hide;
             private final boolean locked;
@@ -143,27 +143,27 @@ public final /* data */ class WidgetChannelListModel {
                 return textLikeChannelData.copy(z2, i3, z6, z7, z5);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final boolean getSelected() {
                 return this.selected;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final int getMentionCount() {
                 return this.mentionCount;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getUnread() {
                 return this.unread;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getLocked() {
                 return this.locked;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final boolean getHide() {
                 return this.hide;
             }
@@ -207,8 +207,15 @@ public final /* data */ class WidgetChannelListModel {
             /* JADX WARN: Type inference failed for: r0v1, types: [int] */
             /* JADX WARN: Type inference failed for: r0v10 */
             /* JADX WARN: Type inference failed for: r0v11 */
-            /* JADX WARN: Type inference failed for: r2v1, types: [boolean] */
-            /* JADX WARN: Type inference failed for: r2v3, types: [boolean] */
+            /* JADX WARN: Type inference failed for: r1v0 */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v2 */
+            /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v6 */
+            /* JADX WARN: Type inference failed for: r2v7 */
+            /* JADX WARN: Type inference failed for: r2v8 */
+            /* JADX WARN: Type inference failed for: r2v9 */
             public int hashCode() {
                 boolean z2 = this.selected;
                 ?? r0 = z2;
@@ -216,20 +223,20 @@ public final /* data */ class WidgetChannelListModel {
                     r0 = 1;
                 }
                 int i = ((r0 * 31) + this.mentionCount) * 31;
-                ?? r2 = this.unread;
-                int i2 = r2;
-                if (r2 != 0) {
-                    i2 = 1;
+                boolean z3 = this.unread;
+                ?? r2 = z3;
+                if (z3) {
+                    r2 = 1;
                 }
-                int i3 = (i + i2) * 31;
-                ?? r22 = this.locked;
-                int i4 = r22;
-                if (r22 != 0) {
-                    i4 = 1;
+                int i2 = (i + r2) * 31;
+                boolean z4 = this.locked;
+                ?? r22 = z4;
+                if (z4) {
+                    r22 = 1;
                 }
-                int i5 = (i3 + i4) * 31;
-                boolean z3 = this.hide;
-                return i5 + (z3 ? 1 : z3 ? 1 : 0);
+                int i3 = (i2 + r22) * 31;
+                boolean z5 = this.hide;
+                return i3 + (z5 ? 1 : z5);
             }
 
             public String toString() {
@@ -246,7 +253,7 @@ public final /* data */ class WidgetChannelListModel {
             }
         }
 
-        /* compiled from: WidgetChannelListModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelListModel.kt */
         public static final /* data */ class VocalChannelData {
             private final boolean isGuildRoleSubscriptionChannel;
             private final boolean isGuildRoleSubscriptionLockedChannel;
@@ -276,52 +283,52 @@ public final /* data */ class WidgetChannelListModel {
                 return vocalChannelData.copy((i3 & 1) != 0 ? vocalChannelData.voiceChannelSelected : z2, (i3 & 2) != 0 ? vocalChannelData.textChannelSelected : z3, (i3 & 4) != 0 ? vocalChannelData.mentionCount : i, (i3 & 8) != 0 ? vocalChannelData.unread : z4, (i3 & 16) != 0 ? vocalChannelData.locked : z5, (i3 & 32) != 0 ? vocalChannelData.nsfw : z6, (i3 & 64) != 0 ? vocalChannelData.permission : l, (i3 & 128) != 0 ? vocalChannelData.numUsersConnected : i2, (i3 & 256) != 0 ? vocalChannelData.isGuildRoleSubscriptionLockedChannel : z7, (i3 & 512) != 0 ? vocalChannelData.isGuildRoleSubscriptionChannel : z8);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final boolean getVoiceChannelSelected() {
                 return this.voiceChannelSelected;
             }
 
-            /* renamed from: component10, reason: from getter */
+            /* JADX INFO: renamed from: component10, reason: from getter */
             public final boolean getIsGuildRoleSubscriptionChannel() {
                 return this.isGuildRoleSubscriptionChannel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getTextChannelSelected() {
                 return this.textChannelSelected;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final int getMentionCount() {
                 return this.mentionCount;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getUnread() {
                 return this.unread;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final boolean getLocked() {
                 return this.locked;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getNsfw() {
                 return this.nsfw;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final Long getPermission() {
                 return this.permission;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final int getNumUsersConnected() {
                 return this.numUsersConnected;
             }
 
-            /* renamed from: component9, reason: from getter */
+            /* JADX INFO: renamed from: component9, reason: from getter */
             public final boolean getIsGuildRoleSubscriptionLockedChannel() {
                 return this.isGuildRoleSubscriptionLockedChannel;
             }
@@ -377,11 +384,24 @@ public final /* data */ class WidgetChannelListModel {
             /* JADX WARN: Type inference failed for: r0v1, types: [int] */
             /* JADX WARN: Type inference failed for: r0v20 */
             /* JADX WARN: Type inference failed for: r0v21 */
-            /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
-            /* JADX WARN: Type inference failed for: r2v13, types: [boolean] */
-            /* JADX WARN: Type inference failed for: r2v3, types: [boolean] */
-            /* JADX WARN: Type inference failed for: r2v5, types: [boolean] */
-            /* JADX WARN: Type inference failed for: r2v7, types: [boolean] */
+            /* JADX WARN: Type inference failed for: r1v0 */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v2 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v14, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v16 */
+            /* JADX WARN: Type inference failed for: r2v18 */
+            /* JADX WARN: Type inference failed for: r2v19 */
+            /* JADX WARN: Type inference failed for: r2v20 */
+            /* JADX WARN: Type inference failed for: r2v21 */
+            /* JADX WARN: Type inference failed for: r2v22 */
+            /* JADX WARN: Type inference failed for: r2v23 */
+            /* JADX WARN: Type inference failed for: r2v24 */
+            /* JADX WARN: Type inference failed for: r2v25 */
+            /* JADX WARN: Type inference failed for: r2v26 */
+            /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v6, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v8, types: [int] */
             public int hashCode() {
                 boolean z2 = this.voiceChannelSelected;
                 ?? r0 = z2;
@@ -389,40 +409,40 @@ public final /* data */ class WidgetChannelListModel {
                     r0 = 1;
                 }
                 int i = r0 * 31;
-                ?? r2 = this.textChannelSelected;
-                int i2 = r2;
-                if (r2 != 0) {
-                    i2 = 1;
+                boolean z3 = this.textChannelSelected;
+                ?? r2 = z3;
+                if (z3) {
+                    r2 = 1;
                 }
-                int i3 = (((i + i2) * 31) + this.mentionCount) * 31;
-                ?? r22 = this.unread;
-                int i4 = r22;
-                if (r22 != 0) {
-                    i4 = 1;
+                int i2 = (((i + r2) * 31) + this.mentionCount) * 31;
+                boolean z4 = this.unread;
+                ?? r22 = z4;
+                if (z4) {
+                    r22 = 1;
                 }
-                int i5 = (i3 + i4) * 31;
-                ?? r23 = this.locked;
-                int i6 = r23;
-                if (r23 != 0) {
-                    i6 = 1;
+                int i3 = (i2 + r22) * 31;
+                boolean z5 = this.locked;
+                ?? r23 = z5;
+                if (z5) {
+                    r23 = 1;
                 }
-                int i7 = (i5 + i6) * 31;
-                ?? r24 = this.nsfw;
-                int i8 = r24;
-                if (r24 != 0) {
-                    i8 = 1;
+                int i4 = (i3 + r23) * 31;
+                boolean z6 = this.nsfw;
+                ?? r24 = z6;
+                if (z6) {
+                    r24 = 1;
                 }
-                int i9 = (i7 + i8) * 31;
+                int i5 = (i4 + r24) * 31;
                 Long l = this.permission;
-                int iHashCode = (((i9 + (l != null ? l.hashCode() : 0)) * 31) + this.numUsersConnected) * 31;
-                ?? r25 = this.isGuildRoleSubscriptionLockedChannel;
-                int i10 = r25;
-                if (r25 != 0) {
-                    i10 = 1;
+                int iHashCode = (((i5 + (l != null ? l.hashCode() : 0)) * 31) + this.numUsersConnected) * 31;
+                boolean z7 = this.isGuildRoleSubscriptionLockedChannel;
+                ?? r25 = z7;
+                if (z7) {
+                    r25 = 1;
                 }
-                int i11 = (iHashCode + i10) * 31;
-                boolean z3 = this.isGuildRoleSubscriptionChannel;
-                return i11 + (z3 ? 1 : z3 ? 1 : 0);
+                int i6 = (iHashCode + r25) * 31;
+                boolean z8 = this.isGuildRoleSubscriptionChannel;
+                return i6 + (z8 ? 1 : z8);
             }
 
             public final boolean isGuildRoleSubscriptionChannel() {
@@ -948,10 +968,10 @@ public final /* data */ class WidgetChannelListModel {
         }
     }
 
-    /* compiled from: WidgetChannelListModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelListModel.kt */
     public static abstract class ThreadSpineType {
 
-        /* compiled from: WidgetChannelListModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelListModel.kt */
         public static final class End extends ThreadSpineType {
             public static final End INSTANCE = new End();
 
@@ -960,7 +980,7 @@ public final /* data */ class WidgetChannelListModel {
             }
         }
 
-        /* compiled from: WidgetChannelListModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelListModel.kt */
         public static final class Middle extends ThreadSpineType {
             public static final Middle INSTANCE = new Middle();
 
@@ -969,7 +989,7 @@ public final /* data */ class WidgetChannelListModel {
             }
         }
 
-        /* compiled from: WidgetChannelListModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelListModel.kt */
         public static final class Single extends ThreadSpineType {
             public static final Single INSTANCE = new Single();
 
@@ -978,7 +998,7 @@ public final /* data */ class WidgetChannelListModel {
             }
         }
 
-        /* compiled from: WidgetChannelListModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelListModel.kt */
         public static final class Start extends ThreadSpineType {
             public static final Start INSTANCE = new Start();
 
@@ -995,7 +1015,7 @@ public final /* data */ class WidgetChannelListModel {
         }
     }
 
-    /* compiled from: WidgetChannelListModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelListModel.kt */
     public static final class VoiceStates {
         public static final VoiceStates INSTANCE = new VoiceStates();
 
@@ -1071,6 +1091,7 @@ public final /* data */ class WidgetChannelListModel {
         this.guildScheduledEvents = list2;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ WidgetChannelListModel copy$default(WidgetChannelListModel widgetChannelListModel, Guild guild, List list, boolean z2, boolean z3, boolean z4, List list2, int i, Object obj) {
         if ((i & 1) != 0) {
             guild = widgetChannelListModel.selectedGuild;
@@ -1097,7 +1118,7 @@ public final /* data */ class WidgetChannelListModel {
         return widgetChannelListModel.copy(guild, list3, z5, z6, z7, list2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Guild getSelectedGuild() {
         return this.selectedGuild;
     }
@@ -1106,17 +1127,17 @@ public final /* data */ class WidgetChannelListModel {
         return this.items;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getIsGuildSelected() {
         return this.isGuildSelected;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getShowPremiumGuildHint() {
         return this.showPremiumGuildHint;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getShowEmptyState() {
         return this.showEmptyState;
     }
@@ -1171,27 +1192,36 @@ public final /* data */ class WidgetChannelListModel {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v10 */
+    /* JADX WARN: Type inference failed for: r2v12 */
+    /* JADX WARN: Type inference failed for: r2v13 */
+    /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v6, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v9 */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         Guild guild = this.selectedGuild;
         int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
         List<ChannelListItem> list = this.items;
         int iHashCode2 = (iHashCode + (list != null ? list.hashCode() : 0)) * 31;
         boolean z2 = this.isGuildSelected;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode2 + i) * 31;
+        int i = (iHashCode2 + r2) * 31;
         boolean z3 = this.showPremiumGuildHint;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r22 = z3;
+        if (z3) {
+            r22 = 1;
         }
-        int i4 = (i2 + i3) * 31;
+        int i2 = (i + r22) * 31;
         boolean z4 = this.showEmptyState;
-        int i5 = (i4 + (z4 ? 1 : z4 ? 1 : 0)) * 31;
+        int i3 = (i2 + (z4 ? 1 : z4)) * 31;
         List<GuildScheduledEvent> list2 = this.guildScheduledEvents;
-        return i5 + (list2 != null ? list2.hashCode() : 0);
+        return i3 + (list2 != null ? list2.hashCode() : 0);
     }
 
     public final boolean isGuildSelected() {

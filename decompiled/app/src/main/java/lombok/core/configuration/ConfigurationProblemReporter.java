@@ -2,14 +2,14 @@ package lombok.core.configuration;
 
 import lombok.eclipse.handlers.EclipseHandlerUtil;
 
-/* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationProblemReporter.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationProblemReporter.SCL.lombok */
 public interface ConfigurationProblemReporter {
     public static final ConfigurationProblemReporter CONSOLE = new C128311();
 
     void report(String str, String str2, int i, CharSequence charSequence);
 
-    /* renamed from: lombok.core.configuration.ConfigurationProblemReporter$1 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationProblemReporter$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.ConfigurationProblemReporter$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationProblemReporter$1.SCL.lombok */
     class C128311 implements ConfigurationProblemReporter {
         C128311() {
         }

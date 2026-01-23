@@ -18,9 +18,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(23)
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class SystemJobService extends JobService implements ExecutionListener {
     private static final String TAG = Logger.tagWithPrefix("SystemJobService");
     private final Map<String, JobParameters> mJobParameters = new HashMap();

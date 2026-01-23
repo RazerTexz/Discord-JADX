@@ -18,10 +18,10 @@ import androidx.core.view.OneShotPreDrawListener;
 import androidx.fragment.C0344R;
 import androidx.fragment.app.FragmentTransition;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FragmentAnim {
 
-    /* renamed from: androidx.fragment.app.FragmentAnim$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentAnim$1 */
     public class C03731 implements CancellationSignal.OnCancelListener {
         public final /* synthetic */ Fragment val$fragment;
 
@@ -40,14 +40,14 @@ public class FragmentAnim {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentAnim$2 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentAnim$2 */
     public class AnimationAnimationListenerC03742 implements Animation.AnimationListener {
         public final /* synthetic */ FragmentTransition.Callback val$callback;
         public final /* synthetic */ ViewGroup val$container;
         public final /* synthetic */ Fragment val$fragment;
         public final /* synthetic */ CancellationSignal val$signal;
 
-        /* renamed from: androidx.fragment.app.FragmentAnim$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.fragment.app.FragmentAnim$2$1, reason: invalid class name */
         public class AnonymousClass1 implements Runnable {
             public AnonymousClass1() {
             }
@@ -83,7 +83,7 @@ public class FragmentAnim {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentAnim$3 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentAnim$3 */
     public class C03753 extends AnimatorListenerAdapter {
         public final /* synthetic */ FragmentTransition.Callback val$callback;
         public final /* synthetic */ ViewGroup val$container;

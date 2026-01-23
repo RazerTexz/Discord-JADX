@@ -7,12 +7,12 @@ import android.text.style.MetricAffectingSpan;
 import android.text.style.TypefaceSpan;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TypefaceSpanCompat.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TypefaceSpanCompat.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TypefaceSpanCompat extends MetricAffectingSpan {
     private final Typeface typeface;
 
-    /* compiled from: TypefaceSpanCompat.kt */
+    /* JADX INFO: compiled from: TypefaceSpanCompat.kt */
     public static final class Monospace extends TypefaceSpan {
         public Monospace() {
             super("monospace");

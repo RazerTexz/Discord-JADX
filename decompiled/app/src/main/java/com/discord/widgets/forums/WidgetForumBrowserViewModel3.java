@@ -39,9 +39,9 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetForumBrowserViewModel.kt */
-/* renamed from: com.discord.widgets.forums.WidgetForumBrowserViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.forums.WidgetForumBrowserViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetForumBrowserViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetForumBrowserViewModel3<T, R> implements Func1<WidgetForumBrowserViewModel.MinimalStoreState, Observable<? extends WidgetForumBrowserViewModel.StoreState>> {
     public final /* synthetic */ ArchivedThreadsStore $storeArchivedThreads;
     public final /* synthetic */ StoreChannels $storeChannels;
@@ -57,8 +57,8 @@ public final class WidgetForumBrowserViewModel3<T, R> implements Func1<WidgetFor
     public final /* synthetic */ StoreUserRelationships $storeUserRelationships;
     public final /* synthetic */ StoreUserTyping $storeUserTyping;
 
-    /* compiled from: WidgetForumBrowserViewModel.kt */
-    /* renamed from: com.discord.widgets.forums.WidgetForumBrowserViewModel$Companion$observeStoreState$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.WidgetForumBrowserViewModel$Companion$observeStoreState$1$1 */
+    /* JADX INFO: compiled from: WidgetForumBrowserViewModel.kt */
     public static final class C83491 extends Lambda implements Function17<MeUser, Map<Long, ? extends User>, ArchivedThreadsStore.ThreadListingState, Map<Long, ? extends String>, Map<Long, ? extends GuildMember>, Map<Long, ? extends GuildRole>, Map<Long, ? extends Message>, Map<Long, ? extends StoreThreadMessages.ThreadState>, Map<Long, ? extends Integer>, Long, Map<Long, ? extends Long>, EmojiSet, Map<Long, ? extends ForumPostReadState>, Map<Long, ? extends Integer>, Set<? extends Long>, Boolean, Map<Long, ? extends Set<? extends Long>>, WidgetForumBrowserViewModel.StoreState.Loaded> {
         public final /* synthetic */ Map $activeThreads;
         public final /* synthetic */ Channel $parentChannel;
@@ -137,7 +137,7 @@ public final class WidgetForumBrowserViewModel3<T, R> implements Func1<WidgetFor
         return call2(minimalStoreState);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetForumBrowserViewModel.StoreState> call2(WidgetForumBrowserViewModel.MinimalStoreState minimalStoreState) {
         if (!(minimalStoreState instanceof WidgetForumBrowserViewModel.MinimalStoreState.Valid)) {
             return new ScalarSynchronousObservable(WidgetForumBrowserViewModel.StoreState.Invalid.INSTANCE);

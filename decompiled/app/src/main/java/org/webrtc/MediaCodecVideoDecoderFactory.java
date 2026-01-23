@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import org.webrtc.EglBase;
 import p617h0.p628c.VideoDecoderFactory2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MediaCodecVideoDecoderFactory implements VideoDecoderFactory {
     private static final String TAG = "MediaCodecVideoDecoderFactory";
 

@@ -8,27 +8,27 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p361c.p391o.p392b.C4768a;
 
-/* compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
+/* JADX INFO: loaded from: classes3.dex */
 public class DynamicLinkData extends AbstractSafeParcelable {
     public static final Parcelable.Creator<DynamicLinkData> CREATOR = new C4768a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public String f21422j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public String f21423k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f21424l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long f21425m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Bundle f21426n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public Uri f21427o;
 
     public DynamicLinkData(String str, String str2, int i, long j, Bundle bundle, Uri uri) {

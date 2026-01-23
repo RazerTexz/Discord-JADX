@@ -2,12 +2,12 @@ package p007b.p008a.p060x.p061a;
 
 import com.discord.models.domain.Model;
 
-/* compiled from: lambda */
-/* renamed from: b.a.x.a.a */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.x.a.a */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class C1317a implements Model.JsonReader.ItemFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Model.JsonReader f2004a;
 
     public /* synthetic */ C1317a(Model.JsonReader jsonReader) {

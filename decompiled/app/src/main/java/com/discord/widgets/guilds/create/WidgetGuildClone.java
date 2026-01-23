@@ -33,22 +33,22 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildClone.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildClone.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildClone extends WidgetGuildCreate {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildClone.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildCloneBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_GUILD_TEMPLATE_CODE = "guild_template_code";
     private static final int VIEW_INDEX_INVALID_TEMPLATE = 1;
     private static final int VIEW_INDEX_LOADING_TEMPLATE = 0;
     private static final int VIEW_INDEX_READY = 2;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetGuildClone.kt */
+    /* JADX INFO: compiled from: WidgetGuildClone.kt */
     public static final class Companion {
         private Companion() {
         }

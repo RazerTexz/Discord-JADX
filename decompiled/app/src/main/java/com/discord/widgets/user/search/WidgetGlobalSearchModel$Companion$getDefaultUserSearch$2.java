@@ -5,8 +5,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchModel$Companion$getDefaultUserSearch$2 extends Lambda implements Function1<User, Boolean> {
     public static final WidgetGlobalSearchModel$Companion$getDefaultUserSearch$2 INSTANCE = new WidgetGlobalSearchModel$Companion$getDefaultUserSearch$2();
 
@@ -19,7 +19,7 @@ public final class WidgetGlobalSearchModel$Companion$getDefaultUserSearch$2 exte
         return Boolean.valueOf(invoke2(user));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(User user) {
         Intrinsics3.checkNotNullParameter(user, "it");
         return user.isBot();

@@ -13,28 +13,28 @@ import p007b.p008a.p050t.p051a.CodeStyleProviders;
 import p007b.p008a.p050t.p052b.p053a.TextNode;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CodeNode.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CodeNode.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class CodeNode<RC> extends TextNode<RC> {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public final String language;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public final StyleNode.InterfaceC5656a<RC> stylesProvider;
 
-    /* compiled from: CodeNode.kt */
-    /* renamed from: com.discord.simpleast.code.CodeNode$a */
+    /* JADX INFO: renamed from: com.discord.simpleast.code.CodeNode$a */
+    /* JADX INFO: compiled from: CodeNode.kt */
     public static abstract class AbstractC5653a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f18949a;
 
-        /* compiled from: CodeNode.kt */
-        /* renamed from: com.discord.simpleast.code.CodeNode$a$a */
+        /* JADX INFO: renamed from: com.discord.simpleast.code.CodeNode$a$a */
+        /* JADX INFO: compiled from: CodeNode.kt */
         public static final class a<RC> extends AbstractC5653a {
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final List<Node<RC>> f18950b;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -47,8 +47,8 @@ public class CodeNode<RC> extends TextNode<RC> {
             }
         }
 
-        /* compiled from: CodeNode.kt */
-        /* renamed from: com.discord.simpleast.code.CodeNode$a$b */
+        /* JADX INFO: renamed from: com.discord.simpleast.code.CodeNode$a$b */
+        /* JADX INFO: compiled from: CodeNode.kt */
         public static final class b extends AbstractC5653a {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public b(String str) {
@@ -62,8 +62,8 @@ public class CodeNode<RC> extends TextNode<RC> {
         }
     }
 
-    /* compiled from: CodeNode.kt */
-    /* renamed from: com.discord.simpleast.code.CodeNode$b */
+    /* JADX INFO: renamed from: com.discord.simpleast.code.CodeNode$b */
+    /* JADX INFO: compiled from: CodeNode.kt */
     public static final class C5654b<RC> extends Node.C5655a<RC> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public C5654b(String str, String str2, CodeStyleProviders<RC> codeStyleProviders) {

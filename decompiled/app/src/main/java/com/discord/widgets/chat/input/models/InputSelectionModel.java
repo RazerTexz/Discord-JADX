@@ -7,13 +7,13 @@ import kotlin.ranges.Ranges2;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InputSelectionModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: InputSelectionModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class InputSelectionModel {
     private final MentionInputModel inputModel;
     private final Ranges2 selection;
 
-    /* compiled from: InputSelectionModel.kt */
+    /* JADX INFO: compiled from: InputSelectionModel.kt */
     public static final /* data */ class CommandInputSelectionModel extends InputSelectionModel {
         private final MentionInputModel.VerifiedCommandInputModel inputModel;
         private final ApplicationCommandOption selectedCommandOption;
@@ -50,7 +50,7 @@ public abstract class InputSelectionModel {
             return getSelection();
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final ApplicationCommandOption getSelectedCommandOption() {
             return this.selectedCommandOption;
         }
@@ -112,7 +112,7 @@ public abstract class InputSelectionModel {
         }
     }
 
-    /* compiled from: InputSelectionModel.kt */
+    /* JADX INFO: compiled from: InputSelectionModel.kt */
     public static final /* data */ class MessageInputSelectionModel extends InputSelectionModel {
         private final MentionInputModel inputModel;
         private final Ranges2 selection;

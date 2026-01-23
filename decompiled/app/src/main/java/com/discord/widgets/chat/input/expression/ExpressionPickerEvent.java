@@ -4,11 +4,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ExpressionPickerEvent.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ExpressionPickerEvent.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class ExpressionPickerEvent {
 
-    /* compiled from: ExpressionPickerEvent.kt */
+    /* JADX INFO: compiled from: ExpressionPickerEvent.kt */
     public static final class CloseExpressionPicker extends ExpressionPickerEvent {
         public static final CloseExpressionPicker INSTANCE = new CloseExpressionPicker();
 
@@ -17,7 +17,7 @@ public abstract class ExpressionPickerEvent {
         }
     }
 
-    /* compiled from: ExpressionPickerEvent.kt */
+    /* JADX INFO: compiled from: ExpressionPickerEvent.kt */
     public static final /* data */ class OpenStickerPicker extends ExpressionPickerEvent {
         private final boolean inline;
         private final String searchText;
@@ -44,17 +44,17 @@ public abstract class ExpressionPickerEvent {
             return openStickerPicker.copy(l, str, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Long getStickerPackId() {
             return this.stickerPackId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getSearchText() {
             return this.searchText;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getInline() {
             return this.inline;
         }
@@ -87,17 +87,20 @@ public abstract class ExpressionPickerEvent {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             Long l = this.stickerPackId;
             int iHashCode = (l != null ? l.hashCode() : 0) * 31;
             String str = this.searchText;
             int iHashCode2 = (iHashCode + (str != null ? str.hashCode() : 0)) * 31;
             boolean z2 = this.inline;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode2 + i;
+            return iHashCode2 + r1;
         }
 
         public String toString() {

@@ -3,9 +3,9 @@ package com.discord.widgets.guild_role_subscriptions;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetPriceTierPickerBottomSheet.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.WidgetPriceTierPickerBottomSheet$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.WidgetPriceTierPickerBottomSheet$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetPriceTierPickerBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetPriceTierPickerBottomSheet7 extends Lambda implements Function0<PriceTierPickerBottomSheetViewModel> {
     public static final WidgetPriceTierPickerBottomSheet7 INSTANCE = new WidgetPriceTierPickerBottomSheet7();
 

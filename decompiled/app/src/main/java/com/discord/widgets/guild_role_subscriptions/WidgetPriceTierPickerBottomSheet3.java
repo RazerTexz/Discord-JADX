@@ -10,14 +10,14 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetPriceTierPickerBottomSheet.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.PriceTierViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.PriceTierViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: WidgetPriceTierPickerBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetPriceTierPickerBottomSheet3 extends RecyclerView.ViewHolder {
     private final DialogSimpleSelectorItemBinding binding;
 
-    /* compiled from: WidgetPriceTierPickerBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.PriceTierViewHolder$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.PriceTierViewHolder$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetPriceTierPickerBottomSheet.kt */
     public static final class ViewOnClickListenerC84401 implements View.OnClickListener {
         public final /* synthetic */ Function1 $onItemClickListener;
         public final /* synthetic */ int $priceTier;

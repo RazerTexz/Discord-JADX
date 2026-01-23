@@ -54,7 +54,7 @@ import java.util.WeakHashMap;
 import org.objectweb.asm.Opcodes;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SearchView extends LinearLayoutCompat implements CollapsibleActionView {
     public static final boolean DBG = false;
     private static final String IME_OPTION_NO_MICROPHONE = "nm";
@@ -111,7 +111,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
     private boolean mVoiceButtonEnabled;
     private final Intent mVoiceWebSearchIntent;
 
-    /* renamed from: androidx.appcompat.widget.SearchView$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.SearchView$1 */
     public class RunnableC01161 implements Runnable {
         public RunnableC01161() {
         }
@@ -122,7 +122,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.SearchView$10 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.SearchView$10 */
     public class C011710 implements TextWatcher {
         public C011710() {
         }
@@ -141,7 +141,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.SearchView$2 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.SearchView$2 */
     public class RunnableC01182 implements Runnable {
         public RunnableC01182() {
         }
@@ -155,7 +155,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.SearchView$3 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.SearchView$3 */
     public class ViewOnFocusChangeListenerC01193 implements View.OnFocusChangeListener {
         public ViewOnFocusChangeListenerC01193() {
         }
@@ -170,7 +170,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.SearchView$4 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.SearchView$4 */
     public class ViewOnLayoutChangeListenerC01204 implements View.OnLayoutChangeListener {
         public ViewOnLayoutChangeListenerC01204() {
         }
@@ -181,7 +181,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.SearchView$5 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.SearchView$5 */
     public class ViewOnClickListenerC01215 implements View.OnClickListener {
         public ViewOnClickListenerC01215() {
         }
@@ -207,7 +207,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.SearchView$6 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.SearchView$6 */
     public class ViewOnKeyListenerC01226 implements View.OnKeyListener {
         public ViewOnKeyListenerC01226() {
         }
@@ -231,7 +231,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.SearchView$7 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.SearchView$7 */
     public class C01237 implements TextView.OnEditorActionListener {
         public C01237() {
         }
@@ -243,7 +243,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.SearchView$8 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.SearchView$8 */
     public class C01248 implements AdapterView.OnItemClickListener {
         public C01248() {
         }
@@ -254,7 +254,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.SearchView$9 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.SearchView$9 */
     public class C01259 implements AdapterView.OnItemSelectedListener {
         public C01259() {
         }
@@ -291,7 +291,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         private Method mEnsureImeVisible;
 
         @SuppressLint({"DiscouragedPrivateApi", "SoonBlockedPrivateApi"})
-        public PreQAutoCompleteTextViewReflector() throws SecurityException {
+        public PreQAutoCompleteTextViewReflector() {
             this.mDoBeforeTextChanged = null;
             this.mDoAfterTextChanged = null;
             this.mEnsureImeVisible = null;
@@ -360,7 +360,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         public static final Parcelable.Creator<SavedState> CREATOR = new C01261();
         public boolean isIconified;
 
-        /* renamed from: androidx.appcompat.widget.SearchView$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.appcompat.widget.SearchView$SavedState$1 */
         public class C01261 implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
@@ -424,7 +424,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         private SearchView mSearchView;
         private int mThreshold;
 
-        /* renamed from: androidx.appcompat.widget.SearchView$SearchAutoComplete$1 */
+        /* JADX INFO: renamed from: androidx.appcompat.widget.SearchView$SearchAutoComplete$1 */
         public class RunnableC01271 implements Runnable {
             public RunnableC01271() {
             }
@@ -769,7 +769,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         if (!this.mIconifiedByDefault || this.mSearchHintIcon == null) {
             return charSequence;
         }
-        int textSize = (int) (this.mSearchSrcTextView.getTextSize() * 1.25d);
+        int textSize = (int) (((double) this.mSearchSrcTextView.getTextSize()) * 1.25d);
         this.mSearchHintIcon.setBounds(0, 0, textSize, textSize);
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder("   ");
         spannableStringBuilder.setSpan(new ImageSpan(this.mSearchHintIcon), 1, 2, 33);

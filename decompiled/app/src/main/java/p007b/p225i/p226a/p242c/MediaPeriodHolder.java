@@ -18,55 +18,55 @@ import p007b.p225i.p226a.p242c.p255c3.TrackSelectorResult;
 import p007b.p225i.p226a.p242c.p257e3.DefaultAllocator;
 import p007b.p225i.p226a.p242c.p259f3.Log2;
 
-/* compiled from: MediaPeriodHolder.java */
-/* renamed from: b.i.a.c.q1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.q1, reason: use source file name */
+/* JADX INFO: compiled from: MediaPeriodHolder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MediaPeriodHolder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MediaPeriod f7442a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Object f7443b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final SampleStream[] f7444c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f7445d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f7446e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public MediaPeriodInfo f7447f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean f7448g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean[] f7449h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final RendererCapabilities[] f7450i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final TrackSelector f7451j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final MediaSourceList f7452k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public MediaPeriodHolder f7453l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public TrackGroupArray f7454m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public TrackSelectorResult f7455n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public long f7456o;
 
     public MediaPeriodHolder(RendererCapabilities[] rendererCapabilitiesArr, long j, TrackSelector trackSelector, DefaultAllocator defaultAllocator, MediaSourceList mediaSourceList, MediaPeriodInfo mediaPeriodInfo, TrackSelectorResult trackSelectorResult) {
@@ -101,7 +101,7 @@ public final class MediaPeriodHolder {
         this.f7442a = j3 != -9223372036854775807L ? new ClippingMediaPeriod(mediaPeriodM2591u, true, 0L, j3) : mediaPeriodM2591u;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long m3347a(TrackSelectorResult trackSelectorResult, long j, boolean z2, boolean[] zArr) {
         int i = 0;
         while (true) {
@@ -163,7 +163,7 @@ public final class MediaPeriodHolder {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m3348b() {
         if (!m3353g()) {
             return;
@@ -183,7 +183,7 @@ public final class MediaPeriodHolder {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m3349c() {
         if (!m3353g()) {
             return;
@@ -203,7 +203,7 @@ public final class MediaPeriodHolder {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public long m3350d() {
         if (!this.f7445d) {
             return this.f7447f.f7466b;
@@ -212,22 +212,22 @@ public final class MediaPeriodHolder {
         return jMo2493q == Long.MIN_VALUE ? this.f7447f.f7469e : jMo2493q;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public long m3351e() {
         return this.f7447f.f7466b + this.f7456o;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean m3352f() {
         return this.f7445d && (!this.f7446e || this.f7442a.mo2493q() == Long.MIN_VALUE);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean m3353g() {
         return this.f7453l == null;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void m3354h() {
         m3348b();
         MediaSourceList mediaSourceList = this.f7452k;
@@ -243,7 +243,7 @@ public final class MediaPeriodHolder {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public TrackSelectorResult m3355i(float f, Timeline timeline) throws ExoPlaybackException {
         TrackSelectorResult trackSelectorResultMo2753b = this.f7451j.mo2753b(this.f7450i, this.f7454m, this.f7447f.f7465a, timeline);
         for (ExoTrackSelection2 exoTrackSelection2 : trackSelectorResultMo2753b.f6328c) {
@@ -254,7 +254,7 @@ public final class MediaPeriodHolder {
         return trackSelectorResultMo2753b;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void m3356j() {
         MediaPeriod mediaPeriod = this.f7442a;
         if (mediaPeriod instanceof ClippingMediaPeriod) {

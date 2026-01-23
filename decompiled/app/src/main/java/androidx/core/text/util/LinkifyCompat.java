@@ -27,19 +27,19 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class LinkifyCompat {
     private static final String[] EMPTY_STRING = new String[0];
     private static final Comparator<LinkSpec> COMPARATOR = new C02561();
 
-    /* renamed from: androidx.core.text.util.LinkifyCompat$1 */
+    /* JADX INFO: renamed from: androidx.core.text.util.LinkifyCompat$1 */
     public class C02561 implements Comparator<LinkSpec> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(LinkSpec linkSpec, LinkSpec linkSpec2) {
             return compare2(linkSpec, linkSpec2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(LinkSpec linkSpec, LinkSpec linkSpec2) {
             int i;
             int i2;

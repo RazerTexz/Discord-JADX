@@ -5,9 +5,9 @@ import android.text.Spannable;
 import kotlin.ranges.Ranges2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SpannableString.kt */
-/* renamed from: androidx.core.text.SpannableStringKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.text.SpannableStringKt, reason: use source file name */
+/* JADX INFO: compiled from: SpannableString.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SpannableString {
     @SuppressLint({"SyntheticAccessor"})
     public static final void clearSpans(Spannable spannable) {

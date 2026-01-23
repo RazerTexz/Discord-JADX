@@ -24,8 +24,8 @@ import androidx.core.view.ViewCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import java.lang.reflect.Method;
 
+/* JADX INFO: loaded from: classes.dex */
 @Deprecated
-/* loaded from: classes.dex */
 public class ActionBarDrawerToggle implements DrawerLayout.DrawerListener {
     private static final int ID_HOME = 16908332;
     private static final String TAG = "ActionBarDrawerToggle";

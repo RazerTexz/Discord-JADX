@@ -2,9 +2,9 @@ package com.discord.widgets.guildcommunicationdisabled.start;
 
 import com.adjust.sdk.Constants;
 
-/* compiled from: GuildCommunicationDisabledDateUtils.kt */
-/* renamed from: com.discord.widgets.guildcommunicationdisabled.start.TimeDurationDisabledCommunication, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.TimeDurationDisabledCommunication, reason: use source file name */
+/* JADX INFO: compiled from: GuildCommunicationDisabledDateUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public enum GuildCommunicationDisabledDateUtils2 {
     SECONDS_60(60000),
     MINUTES_5(300000),

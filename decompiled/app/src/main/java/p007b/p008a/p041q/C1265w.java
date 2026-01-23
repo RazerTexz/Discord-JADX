@@ -7,9 +7,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RtcConnection.kt */
-/* renamed from: b.a.q.w */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.w */
+/* JADX INFO: compiled from: RtcConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1265w extends Lambda implements Function0<Unit> {
     public final /* synthetic */ String $endpoint;
     public final /* synthetic */ SSLSocketFactory $sslSocketFactory;

@@ -30,7 +30,6 @@ import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.user.UserUtils;
 import com.google.gson.Gson;
-import com.google.gson.JsonIOException;
 import com.lytefast.flexinput.model.Attachment;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -59,12 +58,12 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: StoreApplicationInteractions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreApplicationInteractions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreApplicationInteractions extends StoreV2 {
     private static final String CACHE_KEY_APPLICATION_COMMAND_SEND_DATA_SET = "CACHE_KEY_APPLICATION_COMMAND_SEND_DATA_SET";
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final ObservationDeck.UpdateSource ComponentStateUpdate = new StoreApplicationInteractions2();
     private static final ObservationDeck.UpdateSource SentInteractionsUpdate = new StoreApplicationInteractions3();
@@ -93,7 +92,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
     private final StoreStream storeStream;
     private final StoreUser storeUser;
 
-    /* compiled from: StoreApplicationInteractions.kt */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -111,7 +110,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static final /* data */ class ComponentLocation {
         private final int componentIndex;
         private final long messageId;
@@ -131,12 +130,12 @@ public final class StoreApplicationInteractions extends StoreV2 {
             return componentLocation.copy(j, i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getMessageId() {
             return this.messageId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getComponentIndex() {
             return this.componentIndex;
         }
@@ -176,10 +175,10 @@ public final class StoreApplicationInteractions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static abstract class InteractionSendState {
 
-        /* compiled from: StoreApplicationInteractions.kt */
+        /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
         public static final class Failed extends InteractionSendState {
             private final String errorMessage;
 
@@ -201,7 +200,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreApplicationInteractions.kt */
+        /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
         public static final class Loading extends InteractionSendState {
             public static final Loading INSTANCE = new Loading();
 
@@ -210,7 +209,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreApplicationInteractions.kt */
+        /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
         public static final class Success extends InteractionSendState {
             public static final Success INSTANCE = new Success();
 
@@ -227,7 +226,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static final /* data */ class SentInteraction {
         private final long channelId;
         private final Long guildId;
@@ -261,22 +260,22 @@ public final class StoreApplicationInteractions extends StoreV2 {
             return sentInteraction.copy(j2, l3, l4, sentInteractionState);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getChannelId() {
             return this.channelId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Long getMessageId() {
             return this.messageId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final SentInteractionState getState() {
             return this.state;
         }
@@ -346,17 +345,17 @@ public final class StoreApplicationInteractions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public enum SentInteractionState {
         SENDING,
         FAILURE,
         SUCCESS
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static abstract class State {
 
-        /* compiled from: StoreApplicationInteractions.kt */
+        /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
         public static final class Failure extends State {
             public static final Failure INSTANCE = new Failure();
 
@@ -365,7 +364,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreApplicationInteractions.kt */
+        /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
         public static final class Fetching extends State {
             public static final Fetching INSTANCE = new Fetching();
 
@@ -374,7 +373,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreApplicationInteractions.kt */
+        /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
         public static final /* data */ class Loaded extends State {
             private final ApplicationCommandData commandOptions;
 
@@ -392,7 +391,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
                 return loaded.copy(applicationCommandData);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ApplicationCommandData getCommandOptions() {
                 return this.commandOptions;
             }
@@ -437,8 +436,8 @@ public final class StoreApplicationInteractions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
-    /* renamed from: com.discord.stores.StoreApplicationInteractions$clearComponentInteractionSendSuccessAndFailures$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$clearComponentInteractionSendSuccessAndFailures$1 */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static final class C57211 extends Lambda implements Function0<Unit> {
         public C57211() {
             super(0);
@@ -450,7 +449,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             LinkedHashMap linkedHashMap;
             LinkedHashMap linkedHashMap2 = new LinkedHashMap();
@@ -478,8 +477,8 @@ public final class StoreApplicationInteractions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
-    /* renamed from: com.discord.stores.StoreApplicationInteractions$fetchInteractionDataIfNonExisting$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$fetchInteractionDataIfNonExisting$2 */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static final class C57232 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $interactionId;
 
@@ -495,19 +494,19 @@ public final class StoreApplicationInteractions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreApplicationInteractions.access$handleInteractionDataFetchStart(StoreApplicationInteractions.this, this.$interactionId);
         }
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
-    /* renamed from: com.discord.stores.StoreApplicationInteractions$fetchInteractionDataIfNonExisting$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$fetchInteractionDataIfNonExisting$3 */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static final class C57243 extends Lambda implements Function1<ApplicationCommandData, Unit> {
         public final /* synthetic */ long $interactionId;
 
-        /* compiled from: StoreApplicationInteractions.kt */
-        /* renamed from: com.discord.stores.StoreApplicationInteractions$fetchInteractionDataIfNonExisting$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$fetchInteractionDataIfNonExisting$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ ApplicationCommandData $interactionDetail;
 
@@ -523,7 +522,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C57243 c57243 = C57243.this;
                 StoreApplicationInteractions.access$handleInteractionDataFetchSuccess(StoreApplicationInteractions.this, c57243.$interactionId, this.$interactionDetail);
@@ -542,20 +541,20 @@ public final class StoreApplicationInteractions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ApplicationCommandData applicationCommandData) {
             Intrinsics3.checkNotNullParameter(applicationCommandData, "interactionDetail");
             StoreApplicationInteractions.access$getDispatcher$p(StoreApplicationInteractions.this).schedule(new AnonymousClass1(applicationCommandData));
         }
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
-    /* renamed from: com.discord.stores.StoreApplicationInteractions$fetchInteractionDataIfNonExisting$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$fetchInteractionDataIfNonExisting$4 */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static final class C57254 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ long $interactionId;
 
-        /* compiled from: StoreApplicationInteractions.kt */
-        /* renamed from: com.discord.stores.StoreApplicationInteractions$fetchInteractionDataIfNonExisting$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$fetchInteractionDataIfNonExisting$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -567,7 +566,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C57254 c57254 = C57254.this;
                 StoreApplicationInteractions.access$handleInteractionDataFetchFailure(StoreApplicationInteractions.this, c57254.$interactionId);
@@ -586,22 +585,22 @@ public final class StoreApplicationInteractions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreApplicationInteractions.access$getDispatcher$p(StoreApplicationInteractions.this).schedule(new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
-    /* renamed from: com.discord.stores.StoreApplicationInteractions$handleSendApplicationCommandRequest$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$handleSendApplicationCommandRequest$1 */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static final class C57261 extends Lambda implements Function1<MessageQueue4, Unit> {
         public final /* synthetic */ ApplicationCommandLocalSendData $localSendData;
         public final /* synthetic */ Function1 $onFail;
         public final /* synthetic */ Function0 $onSuccess;
 
-        /* compiled from: StoreApplicationInteractions.kt */
-        /* renamed from: com.discord.stores.StoreApplicationInteractions$handleSendApplicationCommandRequest$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$handleSendApplicationCommandRequest$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ MessageQueue4 $result;
 
@@ -617,7 +616,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C57261 c57261 = C57261.this;
                 StoreApplicationInteractions.access$handleApplicationCommandResult(StoreApplicationInteractions.this, this.$result, c57261.$localSendData, c57261.$onSuccess, c57261.$onFail);
@@ -638,15 +637,15 @@ public final class StoreApplicationInteractions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MessageQueue4 messageQueue4) {
             Intrinsics3.checkNotNullParameter(messageQueue4, "result");
             StoreApplicationInteractions.access$getDispatcher$p(StoreApplicationInteractions.this).schedule(new AnonymousClass1(messageQueue4));
         }
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
-    /* renamed from: com.discord.stores.StoreApplicationInteractions$observeComponentInteractionState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$observeComponentInteractionState$1 */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static final class C57281 extends Lambda implements Function0<Map<Long, ? extends Map<Integer, ? extends InteractionSendState>>> {
         public C57281() {
             super(0);
@@ -658,14 +657,14 @@ public final class StoreApplicationInteractions extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Map<Integer, ? extends InteractionSendState>> invoke2() {
             return StoreApplicationInteractions.this.getComponentInteractionData();
         }
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
-    /* renamed from: com.discord.stores.StoreApplicationInteractions$observeInteractionData$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$observeInteractionData$1 */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static final class C57291 extends Lambda implements Function0<State> {
         public final /* synthetic */ long $interactionId;
 
@@ -687,8 +686,8 @@ public final class StoreApplicationInteractions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
-    /* renamed from: com.discord.stores.StoreApplicationInteractions$observeSentInteractions$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$observeSentInteractions$1 */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static final class C57301 extends Lambda implements Function0<Map<String, ? extends SentInteraction>> {
         public C57301() {
             super(0);
@@ -700,14 +699,14 @@ public final class StoreApplicationInteractions extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<String, ? extends SentInteraction> invoke2() {
             return StoreApplicationInteractions.access$getSentInteractionsSnapshot$p(StoreApplicationInteractions.this);
         }
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
-    /* renamed from: com.discord.stores.StoreApplicationInteractions$resendApplicationCommand$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$resendApplicationCommand$1 */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static final class C57311 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Message $message;
         public final /* synthetic */ String $nonce;
@@ -727,7 +726,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreApplicationInteractions.access$getStoreMessages$p(StoreApplicationInteractions.this).deleteLocalMessage(this.$message.getChannelId(), this.$nonce);
             StoreApplicationInteractions.handleSendApplicationCommandRequest$default(StoreApplicationInteractions.this, this.$updatedSendData, null, null, null, 14, null);
@@ -735,8 +734,8 @@ public final class StoreApplicationInteractions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
-    /* renamed from: com.discord.stores.StoreApplicationInteractions$sendApplicationCommand$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$sendApplicationCommand$1 */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static final class C57321 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ List $attachments;
         public final /* synthetic */ ApplicationCommandLocalSendData $localSendData;
@@ -758,14 +757,14 @@ public final class StoreApplicationInteractions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreApplicationInteractions.access$handleSendApplicationCommandRequest(StoreApplicationInteractions.this, this.$localSendData, this.$attachments, this.$onSuccess, this.$onFail);
         }
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
-    /* renamed from: com.discord.stores.StoreApplicationInteractions$sendComponentInteraction$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$sendComponentInteraction$1 */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static final class C57331 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $applicationId;
         public final /* synthetic */ long $channelId;
@@ -776,8 +775,8 @@ public final class StoreApplicationInteractions extends StoreV2 {
         public final /* synthetic */ long $messageId;
         public final /* synthetic */ String $nonce;
 
-        /* compiled from: StoreApplicationInteractions.kt */
-        /* renamed from: com.discord.stores.StoreApplicationInteractions$sendComponentInteraction$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$sendComponentInteraction$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
         public static final class AnonymousClass3 extends Lambda implements Function1<Void, Unit> {
             public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
 
@@ -791,17 +790,17 @@ public final class StoreApplicationInteractions extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r1) {
             }
         }
 
-        /* compiled from: StoreApplicationInteractions.kt */
-        /* renamed from: com.discord.stores.StoreApplicationInteractions$sendComponentInteraction$1$4, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$sendComponentInteraction$1$4, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
         public static final class AnonymousClass4 extends Lambda implements Function1<Error, Unit> {
 
-            /* compiled from: StoreApplicationInteractions.kt */
-            /* renamed from: com.discord.stores.StoreApplicationInteractions$sendComponentInteraction$1$4$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$sendComponentInteraction$1$4$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ Error $it;
 
@@ -817,7 +816,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     StoreLocalActionComponentState storeLocalActionComponentStateAccess$getStoreLocalActionComponentState$p = StoreApplicationInteractions.access$getStoreLocalActionComponentState$p(StoreApplicationInteractions.this);
                     C57331 c57331 = C57331.this;
@@ -843,7 +842,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 StoreApplicationInteractions.access$getDispatcher$p(StoreApplicationInteractions.this).schedule(new AnonymousClass1(error));
@@ -869,7 +868,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             boolean z2;
             boolean z3;
@@ -911,8 +910,8 @@ public final class StoreApplicationInteractions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationInteractions.kt */
-    /* renamed from: com.discord.stores.StoreApplicationInteractions$sendModalInteraction$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$sendModalInteraction$1 */
+    /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
     public static final class C57341 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ List $components;
         public final /* synthetic */ SentInteraction $localSendData;
@@ -921,8 +920,8 @@ public final class StoreApplicationInteractions extends StoreV2 {
         public final /* synthetic */ Function0 $onError;
         public final /* synthetic */ Function1 $onNext;
 
-        /* compiled from: StoreApplicationInteractions.kt */
-        /* renamed from: com.discord.stores.StoreApplicationInteractions$sendModalInteraction$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$sendModalInteraction$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Void, Unit> {
             public AnonymousClass2() {
                 super(1);
@@ -934,15 +933,15 @@ public final class StoreApplicationInteractions extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r4) {
                 C57341 c57341 = C57341.this;
                 c57341.$onNext.invoke(String.valueOf(c57341.$nonce));
             }
         }
 
-        /* compiled from: StoreApplicationInteractions.kt */
-        /* renamed from: com.discord.stores.StoreApplicationInteractions$sendModalInteraction$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplicationInteractions$sendModalInteraction$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplicationInteractions.kt */
         public static final class AnonymousClass3 extends Lambda implements Function1<Error, Unit> {
             public AnonymousClass3() {
                 super(1);
@@ -954,7 +953,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 C57341.this.$onError.invoke();
@@ -978,7 +977,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             RestAPI restAPIAccess$getRestAPI$p = StoreApplicationInteractions.access$getRestAPI$p(StoreApplicationInteractions.this);
             long id2 = this.$modal.getApplication().getId();
@@ -1244,6 +1243,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
         }
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void sendApplicationCommand$default(StoreApplicationInteractions storeApplicationInteractions, long j, Long l, String str, com.discord.widgets.chat.input.models.ApplicationCommandData applicationCommandData, List list, Function0 function0, Function1 function1, int i, Object obj) {
         storeApplicationInteractions.sendApplicationCommand(j, l, str, applicationCommandData, (i & 16) != 0 ? null : list, function0, function1);
     }
@@ -1293,7 +1293,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
         }
     }
 
-    /* renamed from: getApplicationCommandLocalSendDataSet$app_productionGoogleRelease */
+    /* JADX INFO: renamed from: getApplicationCommandLocalSendDataSet$app_productionGoogleRelease */
     public final Map<String, ApplicationCommandLocalSendData> m8506x27c7fac9() {
         return this.applicationCommandLocalSendDataSet;
     }
@@ -1449,7 +1449,6 @@ public final class StoreApplicationInteractions extends StoreV2 {
         }
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     @Store3
     public final void handleMessagesCreateOrLoad(List<Message> messagesList) {
         Intrinsics3.checkNotNullParameter(messagesList, "messagesList");
@@ -1458,6 +1457,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
             if (nonce == null || !this.componentInteractions.containsKey(nonce)) {
                 Interaction interaction = message.getInteraction();
                 ApplicationCommandLocalSendData applicationCommandLocalSendData = null;
+                Object obj = null;
                 Long id2 = interaction != null ? interaction.getId() : null;
                 if (!(nonce == null || StringsJVM.isBlank(nonce)) && this.applicationCommandLocalSendDataSet.containsKey(nonce)) {
                     applicationCommandLocalSendData = this.applicationCommandLocalSendDataSet.get(nonce);
@@ -1469,11 +1469,11 @@ public final class StoreApplicationInteractions extends StoreV2 {
                         }
                         Object next = it.next();
                         if (Intrinsics3.areEqual(((ApplicationCommandLocalSendData) next).getInteractionId(), id2)) {
-                            applicationCommandLocalSendData = next;
+                            obj = next;
                             break;
                         }
                     }
-                    applicationCommandLocalSendData = applicationCommandLocalSendData;
+                    applicationCommandLocalSendData = (ApplicationCommandLocalSendData) obj;
                 }
                 if (applicationCommandLocalSendData != null) {
                     removeApplicationCommandSendData(applicationCommandLocalSendData.getNonceString());
@@ -1570,7 +1570,7 @@ public final class StoreApplicationInteractions extends StoreV2 {
 
     @Override // com.discord.stores.StoreV2
     @Store3
-    public void snapshotData() throws JsonIOException {
+    public void snapshotData() {
         super.snapshotData();
         this.interactionDataSnapshot = new HashMap(this.interactionData);
         this.interactionComponentSendStateSnapshot = new HashMap(this.interactionComponentSendState);

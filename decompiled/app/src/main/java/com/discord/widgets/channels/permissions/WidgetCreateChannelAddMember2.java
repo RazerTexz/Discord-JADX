@@ -9,9 +9,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetCreateChannelAddMember.kt */
-/* renamed from: com.discord.widgets.channels.permissions.WidgetCreateChannelAddMember$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetCreateChannelAddMember$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetCreateChannelAddMember.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetCreateChannelAddMember2 extends FunctionReferenceImpl implements Function1<View, WidgetCreateChannelAddMemberBinding> {
     public static final WidgetCreateChannelAddMember2 INSTANCE = new WidgetCreateChannelAddMember2();
 
@@ -24,7 +24,7 @@ public final /* synthetic */ class WidgetCreateChannelAddMember2 extends Functio
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetCreateChannelAddMemberBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         FragmentContainerView fragmentContainerView = (FragmentContainerView) view.findViewById(C5419R.id.content);

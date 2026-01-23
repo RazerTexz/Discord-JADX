@@ -8,14 +8,14 @@ import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SingleThreadCachedScheduler implements ThreadScheduler {
     private ThreadPoolExecutor threadPoolExecutor;
     private final List<Runnable> queue = new ArrayList();
     private boolean isThreadProcessing = false;
     private boolean isTeardown = false;
 
-    /* renamed from: com.adjust.sdk.scheduler.SingleThreadCachedScheduler$1 */
+    /* JADX INFO: renamed from: com.adjust.sdk.scheduler.SingleThreadCachedScheduler$1 */
     public class RejectedExecutionHandlerC53981 implements RejectedExecutionHandler {
         public final /* synthetic */ String val$source;
 
@@ -29,7 +29,7 @@ public class SingleThreadCachedScheduler implements ThreadScheduler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.scheduler.SingleThreadCachedScheduler$2 */
+    /* JADX INFO: renamed from: com.adjust.sdk.scheduler.SingleThreadCachedScheduler$2 */
     public class RunnableC53992 implements Runnable {
         public final /* synthetic */ long val$millisecondsDelay;
         public final /* synthetic */ Runnable val$task;
@@ -50,7 +50,7 @@ public class SingleThreadCachedScheduler implements ThreadScheduler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.scheduler.SingleThreadCachedScheduler$3 */
+    /* JADX INFO: renamed from: com.adjust.sdk.scheduler.SingleThreadCachedScheduler$3 */
     public class RunnableC54003 implements Runnable {
         public final /* synthetic */ Runnable val$firstRunnable;
 

@@ -6,22 +6,22 @@ import kotlin.sequences.Sequence;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: Sequences.kt */
-/* renamed from: d0.f0.u */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.f0.u */
+/* JADX INFO: compiled from: Sequences.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C12082u<T, R> implements Sequence<R> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Sequence<T> f25132a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Function1<T, R> f25133b;
 
-    /* compiled from: Sequences.kt */
-    /* renamed from: d0.f0.u$a */
+    /* JADX INFO: renamed from: d0.f0.u$a */
+    /* JADX INFO: compiled from: Sequences.kt */
     public static final class a implements Iterator<R>, KMarkers {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Iterator<T> f25134j;
 
         public a() {

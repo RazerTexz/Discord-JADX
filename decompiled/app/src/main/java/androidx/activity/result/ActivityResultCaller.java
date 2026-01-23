@@ -3,7 +3,7 @@ package androidx.activity.result;
 import androidx.activity.result.contract.ActivityResultContract;
 import androidx.annotation.NonNull;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface ActivityResultCaller {
     @NonNull
     <I, O> ActivityResultLauncher<I> registerForActivityResult(@NonNull ActivityResultContract<I, O> activityResultContract, @NonNull ActivityResultCallback<O> activityResultCallback);

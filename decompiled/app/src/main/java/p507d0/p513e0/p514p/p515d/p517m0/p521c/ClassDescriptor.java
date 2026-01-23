@@ -6,9 +6,9 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.MemberScope3;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType4;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeSubstitution5;
 
-/* compiled from: ClassDescriptor.java */
-/* renamed from: d0.e0.p.d.m0.c.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.e, reason: use source file name */
+/* JADX INFO: compiled from: ClassDescriptor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface ClassDescriptor extends ClassOrPackageFragmentDescriptor, ClassifierDescriptorWithTypeParameters {
     ClassDescriptor getCompanionObjectDescriptor();
 

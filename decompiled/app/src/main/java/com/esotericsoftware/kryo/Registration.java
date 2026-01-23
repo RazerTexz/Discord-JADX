@@ -5,10 +5,10 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p106e.p107a.Log;
 import p617h0.p620b.p621a.ObjectInstantiator;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Registration {
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     private final int f19417id;
     private ObjectInstantiator instantiator;
     private Serializer serializer;

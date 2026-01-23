@@ -17,45 +17,45 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import p007b.p195g.p196a.p198b.p200p.NumberInput;
 
-/* compiled from: StdDateFormat.java */
-/* renamed from: b.g.a.c.i0.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.i0.r, reason: use source file name */
+/* JADX INFO: compiled from: StdDateFormat.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class StdDateFormat extends DateFormat {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Pattern f4968j = Pattern.compile("\\d\\d\\d\\d[-]\\d\\d[-]\\d\\d");
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Pattern f4969k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final String[] f4970l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final TimeZone f4971m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final Locale f4972n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final DateFormat f4973o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final StdDateFormat f4974p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final Calendar f4975q;
     public Boolean _lenient;
     public final Locale _locale;
     private boolean _tzSerializedWithColon;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public transient TimeZone f4976r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public transient Calendar f4977s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public transient DateFormat f4978t;
 
     static {
@@ -81,17 +81,17 @@ public class StdDateFormat extends DateFormat {
         this._locale = f4972n;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static int m2204f(String str, int i) {
         return (str.charAt(i + 1) - '0') + ((str.charAt(i) - '0') * 10);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static int m2205g(String str, int i) {
         return (str.charAt(i + 3) - '0') + ((str.charAt(i + 2) - '0') * 10) + ((str.charAt(i + 1) - '0') * 100) + ((str.charAt(i) - '0') * 1000);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static void m2206j(StringBuffer stringBuffer, int i) {
         int i2 = i / 10;
         if (i2 == 0) {
@@ -103,7 +103,7 @@ public class StdDateFormat extends DateFormat {
         stringBuffer.append((char) (i + 48));
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static void m2207k(StringBuffer stringBuffer, int i) {
         int i2 = i / 100;
         if (i2 == 0) {
@@ -120,7 +120,7 @@ public class StdDateFormat extends DateFormat {
         m2206j(stringBuffer, i);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Calendar m2208b(TimeZone timeZone) {
         Calendar calendar = this.f4977s;
         if (calendar == null) {
@@ -208,7 +208,7 @@ public class StdDateFormat extends DateFormat {
         return this.f4976r;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Date m2209h(String str) throws ParseException, IllegalArgumentException {
         char c;
         String str2;
@@ -284,7 +284,7 @@ public class StdDateFormat extends DateFormat {
     
         if (r0 != false) goto L69;
      */
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -372,12 +372,12 @@ public class StdDateFormat extends DateFormat {
         return bool == null || bool.booleanValue();
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public StdDateFormat m2211l(Locale locale) {
         return locale.equals(this._locale) ? this : new StdDateFormat(this.f4976r, locale, this._lenient, this._tzSerializedWithColon);
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public StdDateFormat m2212m(TimeZone timeZone) {
         if (timeZone == null) {
             timeZone = f4971m;

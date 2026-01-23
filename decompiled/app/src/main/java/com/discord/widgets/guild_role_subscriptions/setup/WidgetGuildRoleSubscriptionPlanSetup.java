@@ -44,31 +44,31 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionPlanSetup extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildRoleSubscriptionPlanSetup.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildSubscriptionPlanSetupBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: createTierViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: createTierViewModel$delegate, reason: from kotlin metadata */
     private final Lazy createTierViewModel;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: setupViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: setupViewModel$delegate, reason: from kotlin metadata */
     private final Lazy setupViewModel;
 
-    /* renamed from: subscriptionPlanDetailsViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: subscriptionPlanDetailsViewModel$delegate, reason: from kotlin metadata */
     private final Lazy subscriptionPlanDetailsViewModel;
 
-    /* compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -85,8 +85,8 @@ public final class WidgetGuildRoleSubscriptionPlanSetup extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanSetup$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanSetup$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
     public static final class C84692<R> implements Func0<Boolean> {
         public C84692() {
         }
@@ -103,8 +103,8 @@ public final class WidgetGuildRoleSubscriptionPlanSetup extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanSetup$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanSetup$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
     public static final class C84701 extends Lambda implements Function1<GuildRoleSubscriptionPlanSetupViewModel.ViewState, Unit> {
         public C84701() {
             super(1);
@@ -116,15 +116,15 @@ public final class WidgetGuildRoleSubscriptionPlanSetup extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionPlanSetupViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetGuildRoleSubscriptionPlanSetup.access$configureUI(WidgetGuildRoleSubscriptionPlanSetup.this, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanSetup$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanSetup$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
     public static final class C84712 extends Lambda implements Function1<GuildRoleSubscriptionPlanSetupViewModel.Event, Unit> {
         public C84712() {
             super(1);
@@ -136,15 +136,15 @@ public final class WidgetGuildRoleSubscriptionPlanSetup extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionPlanSetupViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "it");
             WidgetGuildRoleSubscriptionPlanSetup.access$handleEvents(WidgetGuildRoleSubscriptionPlanSetup.this, event);
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanSetup$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanSetup$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
     public static final class C84723 extends Lambda implements Function1<GuildRoleSubscriptionTierViewModel.ViewState, Unit> {
         public C84723() {
             super(1);
@@ -156,14 +156,14 @@ public final class WidgetGuildRoleSubscriptionPlanSetup extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionTierViewModel.ViewState viewState) {
             WidgetGuildRoleSubscriptionPlanSetup.access$getSetupViewModel$p(WidgetGuildRoleSubscriptionPlanSetup.this).onTierUpdated(viewState.getGuildRoleSubscriptionTier());
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanSetup$onViewBoundOrOnResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanSetup$onViewBoundOrOnResume$4 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
     public static final class C84734 extends Lambda implements Function1<GuildRoleSubscriptionPlanDetailsViewModel.ViewState, Unit> {
         public C84734() {
             super(1);
@@ -175,7 +175,7 @@ public final class WidgetGuildRoleSubscriptionPlanSetup extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionPlanDetailsViewModel.ViewState viewState) {
             WidgetGuildRoleSubscriptionPlanSetup.access$getSetupViewModel$p(WidgetGuildRoleSubscriptionPlanSetup.this).onSubscriptionPlanUpdated(viewState.getCoverImage(), viewState.getDescription(), viewState.isFullServerGate());
             WidgetGuildRoleSubscriptionPlanSetup.access$getCreateTierViewModel$p(WidgetGuildRoleSubscriptionPlanSetup.this).setFullServerGating(viewState.isFullServerGate());

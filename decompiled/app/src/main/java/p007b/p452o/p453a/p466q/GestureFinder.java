@@ -4,23 +4,23 @@ import android.graphics.PointF;
 import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 
-/* compiled from: GestureFinder.java */
-/* renamed from: b.o.a.q.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.q.c, reason: use source file name */
+/* JADX INFO: compiled from: GestureFinder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class GestureFinder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean f14081a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @VisibleForTesting
     public Gesture f14082b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public PointF[] f14083c;
 
-    /* compiled from: GestureFinder.java */
-    /* renamed from: b.o.a.q.c$a */
+    /* JADX INFO: renamed from: b.o.a.q.c$a */
+    /* JADX INFO: compiled from: GestureFinder.java */
     public interface a {
     }
 
@@ -31,7 +31,7 @@ public abstract class GestureFinder {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final float m7392a(float f, float f2, float f3) {
         float fMo7393b = mo7393b(f, f2, f3);
         if (fMo7393b < f2) {
@@ -44,6 +44,6 @@ public abstract class GestureFinder {
         return (fMo7393b < f - f4 || fMo7393b > f4 + f) ? fMo7393b : f;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract float mo7393b(float f, float f2, float f3);
 }

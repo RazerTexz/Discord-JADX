@@ -7,30 +7,30 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3675h;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzae extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzae> CREATOR = new C3675h();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f20621j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final long f20622k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f20623l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final String f20624m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final String f20625n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final String f20626o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Bundle f20627p;
 
     public zzae(long j, long j2, boolean z2, String str, String str2, String str3, Bundle bundle) {

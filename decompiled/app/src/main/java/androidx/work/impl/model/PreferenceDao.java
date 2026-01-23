@@ -7,8 +7,8 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.view.LiveData;
 
+/* JADX INFO: loaded from: classes.dex */
 @Dao
-/* loaded from: classes.dex */
 public interface PreferenceDao {
     @Nullable
     @Query("SELECT long_value FROM Preference where `key`=:key")

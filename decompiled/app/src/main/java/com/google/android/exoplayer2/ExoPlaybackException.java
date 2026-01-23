@@ -10,7 +10,7 @@ import p007b.p225i.p226a.p242c.Format2;
 import p007b.p225i.p226a.p242c.p243a3.MediaPeriodId;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ExoPlaybackException extends PlaybackException {
     public final boolean isRecoverable;
 
@@ -30,13 +30,13 @@ public final class ExoPlaybackException extends PlaybackException {
         this(i, th, null, i2, null, -1, null, 4, false);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static ExoPlaybackException m8753b(RuntimeException runtimeException, int i) {
         return new ExoPlaybackException(2, runtimeException, i);
     }
 
     @CheckResult
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ExoPlaybackException m8754a(@Nullable MediaPeriodId mediaPeriodId) {
         String message = getMessage();
         int i = Util2.f6708a;

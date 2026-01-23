@@ -4,9 +4,9 @@ import com.discord.utilities.message.MessageUtils;
 import java.util.Comparator;
 import java.util.Map;
 
-/* compiled from: ChannelUtils.kt */
-/* renamed from: com.discord.api.channel.ChannelUtils$getSortByMostRecent$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.channel.ChannelUtils$getSortByMostRecent$1, reason: use source file name */
+/* JADX INFO: compiled from: ChannelUtils.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ChannelUtils3<T> implements Comparator<Channel> {
     public final /* synthetic */ Map $mostRecentMessageIds;
 

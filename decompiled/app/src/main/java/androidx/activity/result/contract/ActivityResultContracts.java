@@ -22,7 +22,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ActivityResultContracts {
 
     @TargetApi(19)
@@ -41,7 +41,7 @@ public final class ActivityResultContracts {
         }
 
         @Nullable
-        /* renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
         public final ActivityResultContract.SynchronousResult<Uri> getSynchronousResult2(@NonNull Context context, @NonNull String str) {
             return null;
         }
@@ -54,7 +54,7 @@ public final class ActivityResultContracts {
 
         @NonNull
         @CallSuper
-        /* renamed from: createIntent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: createIntent, reason: avoid collision after fix types in other method */
         public Intent createIntent2(@NonNull Context context, @NonNull String str) {
             return new Intent("android.intent.action.CREATE_DOCUMENT").setType("*/*").putExtra("android.intent.extra.TITLE", str);
         }
@@ -85,7 +85,7 @@ public final class ActivityResultContracts {
         }
 
         @Nullable
-        /* renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
         public final ActivityResultContract.SynchronousResult<Uri> getSynchronousResult2(@NonNull Context context, @NonNull String str) {
             return null;
         }
@@ -98,7 +98,7 @@ public final class ActivityResultContracts {
 
         @NonNull
         @CallSuper
-        /* renamed from: createIntent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: createIntent, reason: avoid collision after fix types in other method */
         public Intent createIntent2(@NonNull Context context, @NonNull String str) {
             return new Intent("android.intent.action.GET_CONTENT").addCategory("android.intent.category.OPENABLE").setType(str);
         }
@@ -151,7 +151,7 @@ public final class ActivityResultContracts {
         }
 
         @Nullable
-        /* renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
         public final ActivityResultContract.SynchronousResult<List<Uri>> getSynchronousResult2(@NonNull Context context, @NonNull String str) {
             return null;
         }
@@ -164,14 +164,14 @@ public final class ActivityResultContracts {
 
         @NonNull
         @CallSuper
-        /* renamed from: createIntent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: createIntent, reason: avoid collision after fix types in other method */
         public Intent createIntent2(@NonNull Context context, @NonNull String str) {
             return new Intent("android.intent.action.GET_CONTENT").addCategory("android.intent.category.OPENABLE").setType(str).putExtra("android.intent.extra.ALLOW_MULTIPLE", true);
         }
 
         @Override // androidx.activity.result.contract.ActivityResultContract
         @NonNull
-        /* renamed from: parseResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: parseResult, reason: avoid collision after fix types in other method */
         public final List<Uri> parseResult2(int i, @Nullable Intent intent) {
             return (intent == null || i != -1) ? Collections.emptyList() : getClipDataUris(intent);
         }
@@ -193,7 +193,7 @@ public final class ActivityResultContracts {
         }
 
         @Nullable
-        /* renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
         public final ActivityResultContract.SynchronousResult<Uri> getSynchronousResult2(@NonNull Context context, @NonNull String[] strArr) {
             return null;
         }
@@ -206,7 +206,7 @@ public final class ActivityResultContracts {
 
         @NonNull
         @CallSuper
-        /* renamed from: createIntent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: createIntent, reason: avoid collision after fix types in other method */
         public Intent createIntent2(@NonNull Context context, @NonNull String[] strArr) {
             return new Intent("android.intent.action.OPEN_DOCUMENT").putExtra("android.intent.extra.MIME_TYPES", strArr).setType("*/*");
         }
@@ -232,7 +232,7 @@ public final class ActivityResultContracts {
         }
 
         @Nullable
-        /* renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
         public final ActivityResultContract.SynchronousResult<Uri> getSynchronousResult2(@NonNull Context context, @Nullable Uri uri) {
             return null;
         }
@@ -251,7 +251,7 @@ public final class ActivityResultContracts {
 
         @NonNull
         @CallSuper
-        /* renamed from: createIntent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: createIntent, reason: avoid collision after fix types in other method */
         public Intent createIntent2(@NonNull Context context, @Nullable Uri uri) {
             Intent intent = new Intent("android.intent.action.OPEN_DOCUMENT_TREE");
             if (Build.VERSION.SDK_INT >= 26 && uri != null) {
@@ -287,7 +287,7 @@ public final class ActivityResultContracts {
         }
 
         @Nullable
-        /* renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
         public final ActivityResultContract.SynchronousResult<List<Uri>> getSynchronousResult2(@NonNull Context context, @NonNull String[] strArr) {
             return null;
         }
@@ -300,14 +300,14 @@ public final class ActivityResultContracts {
 
         @NonNull
         @CallSuper
-        /* renamed from: createIntent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: createIntent, reason: avoid collision after fix types in other method */
         public Intent createIntent2(@NonNull Context context, @NonNull String[] strArr) {
             return new Intent("android.intent.action.OPEN_DOCUMENT").putExtra("android.intent.extra.MIME_TYPES", strArr).putExtra("android.intent.extra.ALLOW_MULTIPLE", true).setType("*/*");
         }
 
         @Override // androidx.activity.result.contract.ActivityResultContract
         @NonNull
-        /* renamed from: parseResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: parseResult, reason: avoid collision after fix types in other method */
         public final List<Uri> parseResult2(int i, @Nullable Intent intent) {
             return (i != -1 || intent == null) ? Collections.emptyList() : GetMultipleContents.getClipDataUris(intent);
         }
@@ -327,7 +327,7 @@ public final class ActivityResultContracts {
         }
 
         @NonNull
-        /* renamed from: createIntent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: createIntent, reason: avoid collision after fix types in other method */
         public Intent createIntent2(@NonNull Context context, @Nullable Void r2) {
             return new Intent("android.intent.action.PICK").setType("vnd.android.cursor.dir/contact");
         }
@@ -367,13 +367,13 @@ public final class ActivityResultContracts {
         }
 
         @NonNull
-        /* renamed from: createIntent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: createIntent, reason: avoid collision after fix types in other method */
         public Intent createIntent2(@NonNull Context context, @NonNull String[] strArr) {
             return createIntent(strArr);
         }
 
         @Nullable
-        /* renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
         public ActivityResultContract.SynchronousResult<Map<String, Boolean>> getSynchronousResult2(@NonNull Context context, @Nullable String[] strArr) {
             if (strArr == null || strArr.length == 0) {
                 return new ActivityResultContract.SynchronousResult<>(Collections.emptyMap());
@@ -395,7 +395,7 @@ public final class ActivityResultContracts {
 
         @Override // androidx.activity.result.contract.ActivityResultContract
         @NonNull
-        /* renamed from: parseResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: parseResult, reason: avoid collision after fix types in other method */
         public Map<String, Boolean> parseResult2(int i, @Nullable Intent intent) {
             if (i != -1) {
                 return Collections.emptyMap();
@@ -442,13 +442,13 @@ public final class ActivityResultContracts {
         }
 
         @NonNull
-        /* renamed from: createIntent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: createIntent, reason: avoid collision after fix types in other method */
         public Intent createIntent2(@NonNull Context context, @NonNull String str) {
             return RequestMultiplePermissions.createIntent(new String[]{str});
         }
 
         @Nullable
-        /* renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
         public ActivityResultContract.SynchronousResult<Boolean> getSynchronousResult2(@NonNull Context context, @Nullable String str) {
             if (str == null) {
                 return new ActivityResultContract.SynchronousResult<>(Boolean.FALSE);
@@ -478,7 +478,7 @@ public final class ActivityResultContracts {
         public static final String EXTRA_ACTIVITY_OPTIONS_BUNDLE = "androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE";
 
         @NonNull
-        /* renamed from: createIntent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: createIntent, reason: avoid collision after fix types in other method */
         public Intent createIntent2(@NonNull Context context, @NonNull Intent intent) {
             return intent;
         }
@@ -521,7 +521,7 @@ public final class ActivityResultContracts {
         }
 
         @NonNull
-        /* renamed from: createIntent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: createIntent, reason: avoid collision after fix types in other method */
         public Intent createIntent2(@NonNull Context context, @NonNull IntentSenderRequest intentSenderRequest) {
             return new Intent(ACTION_INTENT_SENDER_REQUEST).putExtra(EXTRA_INTENT_SENDER_REQUEST, intentSenderRequest);
         }
@@ -543,7 +543,7 @@ public final class ActivityResultContracts {
         }
 
         @Nullable
-        /* renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
         public final ActivityResultContract.SynchronousResult<Boolean> getSynchronousResult2(@NonNull Context context, @NonNull Uri uri) {
             return null;
         }
@@ -562,7 +562,7 @@ public final class ActivityResultContracts {
 
         @NonNull
         @CallSuper
-        /* renamed from: createIntent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: createIntent, reason: avoid collision after fix types in other method */
         public Intent createIntent2(@NonNull Context context, @NonNull Uri uri) {
             return new Intent("android.media.action.IMAGE_CAPTURE").putExtra("output", uri);
         }
@@ -590,7 +590,7 @@ public final class ActivityResultContracts {
         }
 
         @Nullable
-        /* renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
         public final ActivityResultContract.SynchronousResult<Bitmap> getSynchronousResult2(@NonNull Context context, @Nullable Void r2) {
             return null;
         }
@@ -603,7 +603,7 @@ public final class ActivityResultContracts {
 
         @NonNull
         @CallSuper
-        /* renamed from: createIntent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: createIntent, reason: avoid collision after fix types in other method */
         public Intent createIntent2(@NonNull Context context, @Nullable Void r2) {
             return new Intent("android.media.action.IMAGE_CAPTURE");
         }
@@ -628,7 +628,7 @@ public final class ActivityResultContracts {
         }
 
         @Nullable
-        /* renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getSynchronousResult, reason: avoid collision after fix types in other method */
         public final ActivityResultContract.SynchronousResult<Bitmap> getSynchronousResult2(@NonNull Context context, @NonNull Uri uri) {
             return null;
         }
@@ -647,7 +647,7 @@ public final class ActivityResultContracts {
 
         @NonNull
         @CallSuper
-        /* renamed from: createIntent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: createIntent, reason: avoid collision after fix types in other method */
         public Intent createIntent2(@NonNull Context context, @NonNull Uri uri) {
             return new Intent("android.media.action.VIDEO_CAPTURE").putExtra("output", uri);
         }

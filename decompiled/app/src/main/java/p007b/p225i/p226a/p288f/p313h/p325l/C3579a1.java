@@ -6,9 +6,9 @@ import java.util.Objects;
 import p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3851u4;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3607c1;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.a1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.a1 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3579a1 extends AbstractC3851u4<C3579a1, a> implements InterfaceC3626d6 {
     private static final C3579a1 zzi;
     private static volatile InterfaceC3710j6<C3579a1> zzj;
@@ -19,19 +19,19 @@ public final class C3579a1 extends AbstractC3851u4<C3579a1, a> implements Interf
     private long zzg;
     private int zzh;
 
-    /* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-    /* renamed from: b.i.a.f.h.l.a1$a */
+    /* JADX INFO: renamed from: b.i.a.f.h.l.a1$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
     public static final class a extends AbstractC3851u4.b<C3579a1, a> implements InterfaceC3626d6 {
         public a() {
             super(C3579a1.m4527N());
         }
 
-        /* renamed from: A */
+        /* JADX INFO: renamed from: A */
         public final long m4544A() {
             return ((C3579a1) this.f10347k).m4537J();
         }
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final a m4545q(int i, C3607c1 c3607c1) {
             if (this.f10348l) {
                 m5318n();
@@ -41,7 +41,7 @@ public final class C3579a1 extends AbstractC3851u4<C3579a1, a> implements Interf
             return this;
         }
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public final a m4546r(long j) {
             if (this.f10348l) {
                 m5318n();
@@ -51,7 +51,7 @@ public final class C3579a1 extends AbstractC3851u4<C3579a1, a> implements Interf
             return this;
         }
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public final a m4547s(C3607c1.a aVar) {
             if (this.f10348l) {
                 m5318n();
@@ -61,7 +61,7 @@ public final class C3579a1 extends AbstractC3851u4<C3579a1, a> implements Interf
             return this;
         }
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public final a m4548t(String str) {
             if (this.f10348l) {
                 m5318n();
@@ -71,22 +71,22 @@ public final class C3579a1 extends AbstractC3851u4<C3579a1, a> implements Interf
             return this;
         }
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public final C3607c1 m4549u(int i) {
             return ((C3579a1) this.f10347k).m4542u(i);
         }
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public final List<C3607c1> m4550v() {
             return Collections.unmodifiableList(((C3579a1) this.f10347k).m4543v());
         }
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public final int m4551w() {
             return ((C3579a1) this.f10347k).m4532D();
         }
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public final a m4552x(int i) {
             if (this.f10348l) {
                 m5318n();
@@ -96,12 +96,12 @@ public final class C3579a1 extends AbstractC3851u4<C3579a1, a> implements Interf
             return this;
         }
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public final String m4553y() {
             return ((C3579a1) this.f10347k).m4533F();
         }
 
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         public final long m4554z() {
             return ((C3579a1) this.f10347k).m4535H();
         }
@@ -117,7 +117,7 @@ public final class C3579a1 extends AbstractC3851u4<C3579a1, a> implements Interf
         AbstractC3851u4.m5313r(C3579a1.class, c3579a1);
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static void m4522A(C3579a1 c3579a1, C3607c1 c3607c1) {
         Objects.requireNonNull(c3579a1);
         c3607c1.getClass();
@@ -125,13 +125,13 @@ public final class C3579a1 extends AbstractC3851u4<C3579a1, a> implements Interf
         c3579a1.zzd.add(c3607c1);
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public static void m4523B(C3579a1 c3579a1, Iterable iterable) {
         c3579a1.m4540O();
         AbstractC3733l3.m5051c(iterable, c3579a1.zzd);
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public static void m4524C(C3579a1 c3579a1, String str) {
         Objects.requireNonNull(c3579a1);
         str.getClass();
@@ -139,35 +139,35 @@ public final class C3579a1 extends AbstractC3851u4<C3579a1, a> implements Interf
         c3579a1.zze = str;
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public static void m4525E(C3579a1 c3579a1, long j) {
         c3579a1.zzc |= 4;
         c3579a1.zzg = j;
     }
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public static a m4526M() {
         return zzi.m5314s();
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public static /* synthetic */ C3579a1 m4527N() {
         return zzi;
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static void m4528w(C3579a1 c3579a1) {
         Objects.requireNonNull(c3579a1);
         c3579a1.zzd = C3749m6.f10094k;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static void m4529x(C3579a1 c3579a1, int i) {
         c3579a1.m4540O();
         c3579a1.zzd.remove(i);
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public static void m4530y(C3579a1 c3579a1, int i, C3607c1 c3607c1) {
         Objects.requireNonNull(c3579a1);
         c3607c1.getClass();
@@ -175,53 +175,53 @@ public final class C3579a1 extends AbstractC3851u4<C3579a1, a> implements Interf
         c3579a1.zzd.set(i, c3607c1);
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public static void m4531z(C3579a1 c3579a1, long j) {
         c3579a1.zzc |= 2;
         c3579a1.zzf = j;
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final int m4532D() {
         return this.zzd.size();
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final String m4533F() {
         return this.zze;
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final boolean m4534G() {
         return (this.zzc & 2) != 0;
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final long m4535H() {
         return this.zzf;
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final boolean m4536I() {
         return (this.zzc & 4) != 0;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final long m4537J() {
         return this.zzg;
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public final boolean m4538K() {
         return (this.zzc & 8) != 0;
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final int m4539L() {
         return this.zzh;
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final void m4540O() {
         InterfaceC3597b5<C3607c1> interfaceC3597b5 = this.zzd;
         if (interfaceC3597b5.mo4568a()) {
@@ -231,7 +231,7 @@ public final class C3579a1 extends AbstractC3851u4<C3579a1, a> implements Interf
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3851u4
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Object mo4541p(int i, Object obj, Object obj2) {
         switch (C3718k1.f10050a[i - 1]) {
             case 1:
@@ -264,12 +264,12 @@ public final class C3579a1 extends AbstractC3851u4<C3579a1, a> implements Interf
         }
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final C3607c1 m4542u(int i) {
         return this.zzd.get(i);
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final List<C3607c1> m4543v() {
         return this.zzd;
     }

@@ -4,9 +4,9 @@ import java.util.AbstractList;
 import java.util.List;
 import p507d0.p592z.p594d.p595g0.KMarkers3;
 
-/* compiled from: AbstractMutableList.kt */
-/* renamed from: d0.t.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.e, reason: use source file name */
+/* JADX INFO: compiled from: AbstractMutableList.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractMutableList<E> extends AbstractList<E> implements List<E>, KMarkers3 {
     public abstract int getSize();
 

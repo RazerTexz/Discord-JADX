@@ -9,29 +9,29 @@ import android.renderscript.RSRuntimeException;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
 
-/* compiled from: AndroidStockBlurImpl.java */
+/* JADX INFO: renamed from: b.h.a.a.a, reason: use source file name */
+/* JADX INFO: compiled from: AndroidStockBlurImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 @TargetApi(17)
-/* renamed from: b.h.a.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
 public class AndroidStockBlurImpl implements BlurImpl {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Boolean f5099a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public RenderScript f5100b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public ScriptIntrinsicBlur f5101c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Allocation f5102d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Allocation f5103e;
 
     @Override // p007b.p222h.p223a.p224a.BlurImpl
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2284a(Bitmap bitmap, Bitmap bitmap2) {
         this.f5102d.copyFrom(bitmap);
         this.f5101c.setInput(this.f5102d);
@@ -40,7 +40,7 @@ public class AndroidStockBlurImpl implements BlurImpl {
     }
 
     @Override // p007b.p222h.p223a.p224a.BlurImpl
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo2285b(Context context, Bitmap bitmap, float f) {
         if (this.f5100b == null) {
             try {

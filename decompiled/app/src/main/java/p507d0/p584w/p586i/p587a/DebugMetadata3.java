@@ -4,31 +4,31 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import java.lang.reflect.Method;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DebugMetadata.kt */
-/* renamed from: d0.w.i.a.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.w.i.a.h, reason: use source file name */
+/* JADX INFO: compiled from: DebugMetadata.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DebugMetadata3 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static a f25246b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final DebugMetadata3 f25247c = new DebugMetadata3();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f25245a = new a(null, null, null);
 
-    /* compiled from: DebugMetadata.kt */
-    /* renamed from: d0.w.i.a.h$a */
+    /* JADX INFO: renamed from: d0.w.i.a.h$a */
+    /* JADX INFO: compiled from: DebugMetadata.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Method f25248a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Method f25249b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Method f25250c;
 
         public a(Method method, Method method2, Method method3) {

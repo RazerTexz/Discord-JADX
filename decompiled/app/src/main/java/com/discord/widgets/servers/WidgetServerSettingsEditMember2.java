@@ -20,9 +20,9 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func6;
 
-/* compiled from: WidgetServerSettingsEditMember.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsEditMember.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEditMember2<T1, T2, T3, T4, T5, T6, R> implements Func6<MeUser, User, Map<Long, ? extends GuildMember>, Guild, Map<Long, ? extends GuildRole>, Long, WidgetServerSettingsEditMember.Model> {
     public final /* synthetic */ long $guildId;
     public final /* synthetic */ long $userId;
@@ -37,7 +37,7 @@ public final class WidgetServerSettingsEditMember2<T1, T2, T3, T4, T5, T6, R> im
         return call2(meUser, user, (Map<Long, GuildMember>) map, guild, (Map<Long, GuildRole>) map2, l);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetServerSettingsEditMember.Model call2(MeUser meUser, User user, Map<Long, GuildMember> map, Guild guild, Map<Long, GuildRole> map2, Long l) {
         Intrinsics3.checkNotNullExpressionValue(map2, "guildRoles");
         LinkedHashMap linkedHashMap = new LinkedHashMap();

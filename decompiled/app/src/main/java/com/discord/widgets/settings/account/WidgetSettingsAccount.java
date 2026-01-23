@@ -71,22 +71,22 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetSettingsAccount.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsAccount.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsAccount extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsAccount.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAccountBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_HINT_DATA_MANAGEMENT = "com.discord.extra.HINT_DATA_MANAGEMENT";
     private static final String EXTRA_REDIRECT = "extra_redirect";
     private static final int MFA_DISABLED_VIEW_INDEX = 1;
     private static final int MFA_ENABLED_VIEW_INDEX = 0;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetSettingsAccount.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -126,17 +126,17 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final ConnectedAccount contactSyncConnection;
         private final MeUser meUser;
         private final boolean ownsAnyGuilds;
         private final StoreMFA.State pendingMFAState;
 
-        /* compiled from: WidgetSettingsAccount.kt */
+        /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -178,22 +178,22 @@ public final class WidgetSettingsAccount extends AppFragment {
             return model.copy(meUser, state, z2, connectedAccount);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MeUser getMeUser() {
             return this.meUser;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final StoreMFA.State getPendingMFAState() {
             return this.pendingMFAState;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getOwnsAnyGuilds() {
             return this.ownsAnyGuilds;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final ConnectedAccount getContactSyncConnection() {
             return this.contactSyncConnection;
         }
@@ -232,19 +232,22 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v6 */
+        /* JADX WARN: Type inference failed for: r2v8 */
         public int hashCode() {
             MeUser meUser = this.meUser;
             int iHashCode = (meUser != null ? meUser.hashCode() : 0) * 31;
             StoreMFA.State state = this.pendingMFAState;
             int iHashCode2 = (iHashCode + (state != null ? state.hashCode() : 0)) * 31;
             boolean z2 = this.ownsAnyGuilds;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r2) * 31;
             ConnectedAccount connectedAccount = this.contactSyncConnection;
-            return i2 + (connectedAccount != null ? connectedAccount.hashCode() : 0);
+            return i + (connectedAccount != null ? connectedAccount.hashCode() : 0);
         }
 
         public String toString() {
@@ -261,13 +264,13 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public enum Redirect {
         SMS_BACKUP
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureAccountVerificationBanner$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureAccountVerificationBanner$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final class ViewOnClickListenerC97171 implements View.OnClickListener {
         public static final ViewOnClickListenerC97171 INSTANCE = new ViewOnClickListenerC97171();
 
@@ -277,8 +280,8 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final class ViewOnClickListenerC97181 implements View.OnClickListener {
         public ViewOnClickListenerC97181() {
         }
@@ -294,8 +297,8 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$10 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$10 */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final class ViewOnClickListenerC971910 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -316,8 +319,8 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$11 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$11 */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final class ViewOnClickListenerC972011 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -338,8 +341,8 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$12 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$12 */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final class ViewOnClickListenerC972112 implements View.OnClickListener {
         public final /* synthetic */ MeUser $user;
 
@@ -368,8 +371,8 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final class ViewOnClickListenerC97222 implements View.OnClickListener {
         public static final ViewOnClickListenerC97222 INSTANCE = new ViewOnClickListenerC97222();
 
@@ -383,8 +386,8 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final class ViewOnClickListenerC97233 implements View.OnClickListener {
         public static final ViewOnClickListenerC97233 INSTANCE = new ViewOnClickListenerC97233();
 
@@ -398,8 +401,8 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final class ViewOnClickListenerC97244 implements View.OnClickListener {
         public final /* synthetic */ MeUser $user;
 
@@ -420,8 +423,8 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final class ViewOnClickListenerC97255 implements View.OnClickListener {
         public static final ViewOnClickListenerC97255 INSTANCE = new ViewOnClickListenerC97255();
 
@@ -431,8 +434,8 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$6 */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final class ViewOnClickListenerC97266 implements View.OnClickListener {
         public static final ViewOnClickListenerC97266 INSTANCE = new ViewOnClickListenerC97266();
 
@@ -446,8 +449,8 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$7 */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final class ViewOnClickListenerC97277 implements View.OnClickListener {
         public static final ViewOnClickListenerC97277 INSTANCE = new ViewOnClickListenerC97277();
 
@@ -461,8 +464,8 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$8 */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final class ViewOnClickListenerC97288 implements View.OnClickListener {
         public ViewOnClickListenerC97288() {
         }
@@ -473,8 +476,8 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$9 */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final class ViewOnClickListenerC97299 implements View.OnClickListener {
         public static final ViewOnClickListenerC97299 INSTANCE = new ViewOnClickListenerC97299();
 
@@ -488,9 +491,9 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.settings.account.WidgetSettingsAccount$onViewBound$1", m10085f = "WidgetSettingsAccount.kt", m10086l = {65}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$onViewBound$1 */
     public static final class C97301 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 
@@ -536,8 +539,8 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final class C97311 extends Lambda implements Function1<Model, Unit> {
         public C97311() {
             super(1);
@@ -549,7 +552,7 @@ public final class WidgetSettingsAccount extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetSettingsAccount widgetSettingsAccount = WidgetSettingsAccount.this;
             Intrinsics3.checkNotNullExpressionValue(model, "it");
@@ -557,12 +560,12 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$showRemove2FAModal$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$showRemove2FAModal$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
     public static final class C97321 extends Lambda implements Function2<Context, String, Unit> {
 
-        /* compiled from: WidgetSettingsAccount.kt */
-        /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$showRemove2FAModal$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$showRemove2FAModal$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsAccount.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<DisableMfaResponse, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -574,7 +577,7 @@ public final class WidgetSettingsAccount extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(DisableMfaResponse disableMfaResponse) {
                 Intrinsics3.checkNotNullParameter(disableMfaResponse, "it");
                 AppToast.m170h(WidgetSettingsAccount.this.requireContext(), WidgetSettingsAccount.this.requireContext().getString(C5419R.string.user_settings_mfa_removed), 0, null, 12);
@@ -594,7 +597,7 @@ public final class WidgetSettingsAccount extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Context context, String str) {
             Intrinsics3.checkNotNullParameter(context, "<anonymous parameter 0>");
             Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_CODE);

@@ -12,9 +12,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsDeveloper.kt */
-/* renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupNoticesSection$noticesAdapter$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupNoticesSection$noticesAdapter$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsDeveloper4 extends Lambda implements Function2<LayoutInflater, ViewGroup, WidgetSettingsDeveloper.NoticeViewHolder> {
     public static final WidgetSettingsDeveloper4 INSTANCE = new WidgetSettingsDeveloper4();
 
@@ -27,7 +27,7 @@ public final class WidgetSettingsDeveloper4 extends Lambda implements Function2<
         return invoke2(layoutInflater, viewGroup);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetSettingsDeveloper.NoticeViewHolder invoke2(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics3.checkNotNullParameter(layoutInflater, "layoutInflater");
         Intrinsics3.checkNotNullParameter(viewGroup, "parent");

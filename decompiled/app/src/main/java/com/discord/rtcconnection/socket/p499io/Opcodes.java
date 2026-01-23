@@ -4,8 +4,8 @@ import java.util.Map;
 import p507d0.Tuples;
 import p507d0.p580t.Maps6;
 
-/* compiled from: Opcodes.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Opcodes.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Opcodes {
     public static final int CLIENT_DISCONNECT = 13;
     public static final int HEARTBEAT = 3;

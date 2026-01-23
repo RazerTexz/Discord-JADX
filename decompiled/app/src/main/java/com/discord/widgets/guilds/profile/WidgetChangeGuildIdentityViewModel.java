@@ -31,11 +31,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetChangeGuildIdentityViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChangeGuildIdentityViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventSubject;
     private final long guildId;
@@ -44,8 +44,8 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
     private boolean trackedModalOpen;
     private boolean trackedUpsell;
 
-    /* compiled from: WidgetChangeGuildIdentityViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentityViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentityViewModel$1 */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentityViewModel.kt */
     public static final class C87731 extends Lambda implements Function1<StoreState, Unit> {
         public C87731() {
             super(1);
@@ -57,14 +57,14 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetChangeGuildIdentityViewModel.access$handleStoreState(WidgetChangeGuildIdentityViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetChangeGuildIdentityViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentityViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -90,10 +90,10 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetChangeGuildIdentityViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentityViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetChangeGuildIdentityViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChangeGuildIdentityViewModel.kt */
         public static final /* data */ class MemberUpdateFailed extends Event {
             private final String errorMessage;
 
@@ -109,7 +109,7 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
                 return memberUpdateFailed.copy(str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getErrorMessage() {
                 return this.errorMessage;
             }
@@ -142,7 +142,7 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
             }
         }
 
-        /* compiled from: WidgetChangeGuildIdentityViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChangeGuildIdentityViewModel.kt */
         public static final class MemberUpdateSucceeded extends Event {
             public static final MemberUpdateSucceeded INSTANCE = new MemberUpdateSucceeded();
 
@@ -159,7 +159,7 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetChangeGuildIdentityViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentityViewModel.kt */
     public static final /* data */ class StoreState {
         private final Guild guild;
         private final GuildChannelsInfo guildChannelsInfo;
@@ -191,22 +191,22 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
             return storeState.copy(guild, meUser, guildMember, guildChannelsInfo);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final MeUser getMeUser() {
             return this.meUser;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final GuildMember getMember() {
             return this.member;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final GuildChannelsInfo getGuildChannelsInfo() {
             return this.guildChannelsInfo;
         }
@@ -269,10 +269,10 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetChangeGuildIdentityViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentityViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetChangeGuildIdentityViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChangeGuildIdentityViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final boolean canChangeNickname;
             private final NullSerializable<String> currentAvatar;
@@ -291,6 +291,7 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
                 this(guild, meUser, guildMember, z2, (i & 16) != 0 ? null : str, (i & 32) != 0 ? null : nullSerializable, (i & 64) != 0 ? false : z3);
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Loaded copy$default(Loaded loaded, Guild guild, MeUser meUser, GuildMember guildMember, boolean z2, String str, NullSerializable nullSerializable, boolean z3, int i, Object obj) {
                 if ((i & 1) != 0) {
                     guild = loaded.guild;
@@ -321,27 +322,27 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
                 return loaded.copy(guild, meUser2, guildMember2, z4, str2, nullSerializable2, z3);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final MeUser getMeUser() {
                 return this.meUser;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final GuildMember getMember() {
                 return this.member;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getCanChangeNickname() {
                 return this.canChangeNickname;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final String getCurrentNickname() {
                 return this.currentNickname;
             }
@@ -350,7 +351,7 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
                 return this.currentAvatar;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final boolean getDimmed() {
                 return this.dimmed;
             }
@@ -418,6 +419,12 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r2v13 */
+            /* JADX WARN: Type inference failed for: r2v16 */
+            /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 Guild guild = this.guild;
                 int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
@@ -426,20 +433,20 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
                 GuildMember guildMember = this.member;
                 int iHashCode3 = (iHashCode2 + (guildMember != null ? guildMember.hashCode() : 0)) * 31;
                 boolean z2 = this.canChangeNickname;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode3 + i) * 31;
+                int i = (iHashCode3 + r2) * 31;
                 String str = this.currentNickname;
-                int iHashCode4 = (i2 + (str != null ? str.hashCode() : 0)) * 31;
+                int iHashCode4 = (i + (str != null ? str.hashCode() : 0)) * 31;
                 NullSerializable<String> nullSerializable = this.currentAvatar;
                 int iHashCode5 = (iHashCode4 + (nullSerializable != null ? nullSerializable.hashCode() : 0)) * 31;
                 boolean z3 = this.dimmed;
-                return iHashCode5 + (z3 ? 1 : z3 ? 1 : 0);
+                return iHashCode5 + (z3 ? 1 : z3);
             }
 
-            /* renamed from: isDirty, reason: from getter */
+            /* JADX INFO: renamed from: isDirty, reason: from getter */
             public final boolean getIsDirty() {
                 return this.isDirty;
             }
@@ -495,7 +502,7 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
             }
         }
 
-        /* compiled from: WidgetChangeGuildIdentityViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChangeGuildIdentityViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 
@@ -512,8 +519,8 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetChangeGuildIdentityViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentityViewModel$saveMemberChanges$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentityViewModel$saveMemberChanges$1 */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentityViewModel.kt */
     public static final class C87751 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ ViewState.Loaded $viewState;
 
@@ -530,7 +537,7 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
         }
 
         /* JADX WARN: Removed duplicated region for block: B:7:0x005f  */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -559,8 +566,8 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetChangeGuildIdentityViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentityViewModel$saveMemberChanges$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentityViewModel$saveMemberChanges$2 */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentityViewModel.kt */
     public static final class C87762 extends Lambda implements Function1<com.discord.api.guildmember.GuildMember, Unit> {
         public final /* synthetic */ ViewState.Loaded $viewState;
 
@@ -576,7 +583,7 @@ public final class WidgetChangeGuildIdentityViewModel extends AppViewModel<ViewS
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(com.discord.api.guildmember.GuildMember guildMember) {
             Intrinsics3.checkNotNullParameter(guildMember, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetChangeGuildIdentityViewModel.access$getEventSubject$p(WidgetChangeGuildIdentityViewModel.this);

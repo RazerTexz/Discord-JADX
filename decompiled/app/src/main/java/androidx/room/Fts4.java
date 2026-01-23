@@ -7,10 +7,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+/* JADX INFO: loaded from: classes.dex */
 @Target({ElementType.TYPE})
 @RequiresApi(16)
 @Retention(RetentionPolicy.CLASS)
-/* loaded from: classes.dex */
 public @interface Fts4 {
     Class<?> contentEntity() default Object.class;
 

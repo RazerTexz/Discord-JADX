@@ -5,15 +5,15 @@ import com.discord.overlay.OverlayManager;
 import com.discord.overlay.views.OverlayBubbleWrap;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Animator.kt */
-/* renamed from: b.a.n.e */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.n.e */
+/* JADX INFO: compiled from: Animator.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1170e implements Animator.AnimatorListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ OverlayManager f1555a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ OverlayBubbleWrap f1556b;
 
     public C1170e(OverlayManager overlayManager, OverlayBubbleWrap overlayBubbleWrap) {

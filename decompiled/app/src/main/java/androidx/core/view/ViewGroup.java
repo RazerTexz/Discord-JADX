@@ -14,13 +14,13 @@ import p507d0.p578f0.SequenceBuilder3;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: ViewGroup.kt */
-/* renamed from: androidx.core.view.ViewGroupKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.view.ViewGroupKt, reason: use source file name */
+/* JADX INFO: compiled from: ViewGroup.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewGroup {
 
-    /* compiled from: ViewGroup.kt */
-    /* renamed from: androidx.core.view.ViewGroupKt$iterator$1 */
+    /* JADX INFO: renamed from: androidx.core.view.ViewGroupKt$iterator$1 */
+    /* JADX INFO: compiled from: ViewGroup.kt */
     public static final class C02881 implements Iterator<View>, KMarkers {
         public final /* synthetic */ android.view.ViewGroup $this_iterator;
         private int index;

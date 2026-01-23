@@ -8,8 +8,8 @@ import com.discord.analytics.generated.traits.TrackDispatchPatch;
 import com.discord.analytics.generated.traits.TrackDispatchPatch2;
 import com.discord.api.science.AnalyticsSchema;
 
-/* compiled from: TrackGlPatchStarted.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackGlPatchStarted.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class TrackGlPatchStarted implements AnalyticsSchema, TrackBase2, TrackDispatchBase2, TrackDispatchPatch2 {
     private final transient String analyticsSchemaTypeName = "gl_patch_started";
     private TrackBase trackBase;
@@ -17,7 +17,7 @@ public final class TrackGlPatchStarted implements AnalyticsSchema, TrackBase2, T
     private TrackDispatchPatch trackDispatchPatch;
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

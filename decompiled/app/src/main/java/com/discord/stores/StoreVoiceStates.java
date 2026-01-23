@@ -23,8 +23,8 @@ import p637j0.p642l.p643a.OnSubscribeToMap;
 import p637j0.p642l.p647e.UtilityFunctions;
 import p658rx.Observable;
 
-/* compiled from: StoreVoiceStates.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreVoiceStates.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreVoiceStates extends StoreV2 {
     private final HashSet<Long> dirtyGuildIds;
     private Long myUserId;
@@ -34,8 +34,8 @@ public final class StoreVoiceStates extends StoreV2 {
     private final HashMap<Long, HashMap<Long, VoiceState>> voiceStates;
     private Map<Long, ? extends Map<Long, VoiceState>> voiceStatesSnapshot;
 
-    /* compiled from: StoreVoiceStates.kt */
-    /* renamed from: com.discord.stores.StoreVoiceStates$observe$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreVoiceStates$observe$1 */
+    /* JADX INFO: compiled from: StoreVoiceStates.kt */
     public static final class C66281 extends Lambda implements Function0<Map<Long, ? extends VoiceState>> {
         public final /* synthetic */ long $guildId;
 
@@ -51,20 +51,20 @@ public final class StoreVoiceStates extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends VoiceState> invoke2() {
             Map<Long, ? extends VoiceState> map = (Map) StoreVoiceStates.access$getVoiceStatesSnapshot$p(StoreVoiceStates.this).get(Long.valueOf(this.$guildId));
             return map != null ? map : Maps6.emptyMap();
         }
     }
 
-    /* compiled from: StoreVoiceStates.kt */
-    /* renamed from: com.discord.stores.StoreVoiceStates$observe$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreVoiceStates$observe$2 */
+    /* JADX INFO: compiled from: StoreVoiceStates.kt */
     public static final class C66292<T, R> implements Func1<Map<Long, ? extends VoiceState>, Observable<? extends Map<Long, VoiceState>>> {
         public final /* synthetic */ long $channelId;
 
-        /* compiled from: StoreVoiceStates.kt */
-        /* renamed from: com.discord.stores.StoreVoiceStates$observe$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreVoiceStates$observe$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreVoiceStates.kt */
         public static final class AnonymousClass1<T, R> implements Func1<VoiceState, Boolean> {
             public AnonymousClass1() {
             }
@@ -74,15 +74,15 @@ public final class StoreVoiceStates extends StoreV2 {
                 return call2(voiceState);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Boolean call2(VoiceState voiceState) {
                 Long channelId = voiceState.getChannelId();
                 return Boolean.valueOf(channelId != null && channelId.longValue() == C66292.this.$channelId);
             }
         }
 
-        /* compiled from: StoreVoiceStates.kt */
-        /* renamed from: com.discord.stores.StoreVoiceStates$observe$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreVoiceStates$observe$2$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreVoiceStates.kt */
         public static final class AnonymousClass2<T, R> implements Func1<VoiceState, Long> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -91,7 +91,7 @@ public final class StoreVoiceStates extends StoreV2 {
                 return call2(voiceState);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Long call2(VoiceState voiceState) {
                 return Long.valueOf(voiceState.getUserId());
             }
@@ -106,7 +106,7 @@ public final class StoreVoiceStates extends StoreV2 {
             return call2((Map<Long, VoiceState>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Map<Long, VoiceState>> call2(Map<Long, VoiceState> map) {
             return Observable.m11074h0(new OnSubscribeToMap(Observable.m11058B(map.values()).m11118y(new AnonymousClass1()), AnonymousClass2.INSTANCE, UtilityFunctions.a.INSTANCE));
         }

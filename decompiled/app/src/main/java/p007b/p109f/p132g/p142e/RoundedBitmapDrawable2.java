@@ -13,21 +13,21 @@ import java.lang.ref.WeakReference;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: RoundedBitmapDrawable.java */
-/* renamed from: b.f.g.e.k, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.e.k, reason: use source file name */
+/* JADX INFO: compiled from: RoundedBitmapDrawable.java */
+/* JADX INFO: loaded from: classes.dex */
 public class RoundedBitmapDrawable2 extends RoundedDrawable {
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public final Paint f3370M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final Paint f3371N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final Bitmap f3372O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public WeakReference<Bitmap> f3373P;
 
     public RoundedBitmapDrawable2(Resources resources, Bitmap bitmap, Paint paint) {
@@ -46,7 +46,7 @@ public class RoundedBitmapDrawable2 extends RoundedDrawable {
 
     @Override // p007b.p109f.p132g.p142e.RoundedDrawable
     @VisibleForTesting
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo1113d() {
         return super.mo1113d() && this.f3372O != null;
     }

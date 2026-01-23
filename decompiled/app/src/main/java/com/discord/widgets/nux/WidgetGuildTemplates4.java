@@ -8,9 +8,9 @@ import com.discord.widgets.guilds.create.WidgetGuildCreate;
 import com.discord.widgets.nux.GuildTemplatesAdapter;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildTemplates.kt */
-/* renamed from: com.discord.widgets.nux.WidgetGuildTemplates$adapter$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.nux.WidgetGuildTemplates$adapter$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildTemplates.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildTemplates4 implements GuildTemplatesAdapter.Callbacks {
     public final /* synthetic */ WidgetGuildTemplates this$0;
 

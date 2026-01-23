@@ -3,9 +3,9 @@ package com.discord.rtcconnection.enums;
 import androidx.annotation.RequiresApi;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: ThermalStatus.kt */
+/* JADX INFO: compiled from: ThermalStatus.kt */
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(29)
-/* loaded from: classes.dex */
 public enum ThermalStatus {
     None(0),
     Light(1),
@@ -16,17 +16,17 @@ public enum ThermalStatus {
     Shutdown(6);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final int value;
 
-    /* compiled from: ThermalStatus.kt */
-    /* renamed from: com.discord.rtcconnection.enums.ThermalStatus$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.enums.ThermalStatus$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: ThermalStatus.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ThermalStatus m8500a(int i) {
             ThermalStatus thermalStatus;
             ThermalStatus[] thermalStatusArrValues = ThermalStatus.values();

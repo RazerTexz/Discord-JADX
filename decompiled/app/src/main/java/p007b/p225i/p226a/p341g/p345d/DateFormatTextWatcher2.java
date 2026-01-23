@@ -2,15 +2,15 @@ package p007b.p225i.p226a.p341g.p345d;
 
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: DateFormatTextWatcher.java */
-/* renamed from: b.i.a.g.d.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.d.d, reason: use source file name */
+/* JADX INFO: compiled from: DateFormatTextWatcher.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DateFormatTextWatcher2 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ long f11600j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ DateFormatTextWatcher f11601k;
 
     public DateFormatTextWatcher2(DateFormatTextWatcher dateFormatTextWatcher, long j) {

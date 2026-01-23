@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: OnBackPressedDispatcher.kt */
-/* renamed from: androidx.activity.OnBackPressedDispatcherKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.activity.OnBackPressedDispatcherKt, reason: use source file name */
+/* JADX INFO: compiled from: OnBackPressedDispatcher.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class OnBackPressedDispatcher2 {
     public static final OnBackPressedCallback addCallback(OnBackPressedDispatcher onBackPressedDispatcher, LifecycleOwner lifecycleOwner, boolean z2, Function1<? super OnBackPressedCallback, Unit> function1) {
         Intrinsics3.checkNotNullParameter(onBackPressedDispatcher, "$this$addCallback");

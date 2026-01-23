@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StreamFeedbackSheetNavigator.kt */
-/* renamed from: com.discord.widgets.voice.feedback.stream.StreamFeedbackSheetNavigator$enqueueNotice$showStreamFeedbackSheetNotice$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.feedback.stream.StreamFeedbackSheetNavigator$enqueueNotice$showStreamFeedbackSheetNotice$1, reason: use source file name */
+/* JADX INFO: compiled from: StreamFeedbackSheetNavigator.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class StreamFeedbackSheetNavigator2 extends Lambda implements Function1<FragmentActivity, Boolean> {
     public final /* synthetic */ String $mediaSessionId;
     public final /* synthetic */ String $noticeName;
@@ -32,7 +32,7 @@ public final class StreamFeedbackSheetNavigator2 extends Lambda implements Funct
         return Boolean.valueOf(invoke2(fragmentActivity));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(FragmentActivity fragmentActivity) {
         Intrinsics3.checkNotNullParameter(fragmentActivity, "fragmentActivity");
         StreamFeedbackSheetNavigator streamFeedbackSheetNavigator = StreamFeedbackSheetNavigator.INSTANCE;

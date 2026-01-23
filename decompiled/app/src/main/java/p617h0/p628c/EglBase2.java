@@ -7,16 +7,16 @@ import org.webrtc.EglBase10Impl;
 import org.webrtc.EglBase14;
 import org.webrtc.EglBase14Impl;
 
-/* compiled from: EglBase.java */
-/* renamed from: h0.c.n0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.c.n0, reason: use source file name */
+/* JADX INFO: compiled from: EglBase.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class EglBase2 {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static EglBase m10662a() {
         return m10663b(null, EglBase.CONFIG_PLAIN);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static EglBase m10663b(@Nullable EglBase.Context context, int[] iArr) {
         if (context == null) {
             return EglBase14Impl.isEGL14Supported() ? new EglBase14Impl(null, iArr) : new EglBase10Impl(null, iArr);
@@ -30,7 +30,7 @@ public final /* synthetic */ class EglBase2 {
         throw new IllegalArgumentException("Unrecognized Context");
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m10664c(int[] iArr) {
         for (int i = 0; i < iArr.length - 1; i++) {
             if (iArr[i] == 12352) {

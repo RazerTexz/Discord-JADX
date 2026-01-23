@@ -3,21 +3,21 @@ package p007b.p195g.p196a.p205c.p219i0;
 import p007b.p195g.p196a.p198b.JsonLocation;
 import p007b.p195g.p196a.p198b.JsonStreamContext;
 
-/* compiled from: TokenBufferReadContext.java */
-/* renamed from: b.g.a.c.i0.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.i0.t, reason: use source file name */
+/* JADX INFO: compiled from: TokenBufferReadContext.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TokenBufferReadContext extends JsonStreamContext {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final JsonStreamContext f4983c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final JsonLocation f4984d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String f4985e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Object f4986f;
 
     public TokenBufferReadContext() {
@@ -27,13 +27,13 @@ public class TokenBufferReadContext extends JsonStreamContext {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonStreamContext
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo1673a() {
         return this.f4985e;
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonStreamContext
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo1676d(Object obj) {
         this.f4986f = obj;
     }

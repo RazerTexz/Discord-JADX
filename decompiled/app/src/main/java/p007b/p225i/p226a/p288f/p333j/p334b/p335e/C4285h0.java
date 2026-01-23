@@ -10,8 +10,8 @@ import com.google.android.gms.nearby.messages.internal.ClientAppContext;
 import com.google.android.gms.nearby.messages.internal.SubscribeRequest;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* renamed from: b.i.a.f.j.b.e.h0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.j.b.e.h0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4285h0 implements Parcelable.Creator<SubscribeRequest> {
     @Override // android.os.Parcelable.Creator
     public final SubscribeRequest createFromParcel(Parcel parcel) {

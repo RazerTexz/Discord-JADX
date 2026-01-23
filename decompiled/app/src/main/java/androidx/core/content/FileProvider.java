@@ -26,7 +26,7 @@ import java.util.Map;
 import org.xmlpull.v1.XmlPullParserException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FileProvider extends ContentProvider {
     private static final String ATTR_NAME = "name";
     private static final String ATTR_PATH = "path";

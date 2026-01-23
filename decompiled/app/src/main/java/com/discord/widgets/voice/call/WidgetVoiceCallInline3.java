@@ -15,14 +15,14 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetVoiceCallInline.kt */
-/* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallInline$Model$VoiceConnected$Companion$get$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallInline$Model$VoiceConnected$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetVoiceCallInline.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetVoiceCallInline3<T, R> implements Func1<Channel, Observable<? extends WidgetVoiceCallInline.Model.VoiceConnected>> {
     public static final WidgetVoiceCallInline3 INSTANCE = new WidgetVoiceCallInline3();
 
-    /* compiled from: WidgetVoiceCallInline.kt */
-    /* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallInline$Model$VoiceConnected$Companion$get$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallInline$Model$VoiceConnected$Companion$get$1$1 */
+    /* JADX INFO: compiled from: WidgetVoiceCallInline.kt */
     public static final /* synthetic */ class C104221 extends FunctionReferenceImpl implements Function3<Channel, MediaEngineConnection.InputMode, StreamContext, WidgetVoiceCallInline.Model.VoiceConnected> {
         public static final C104221 INSTANCE = new C104221();
 
@@ -35,7 +35,7 @@ public final class WidgetVoiceCallInline3<T, R> implements Func1<Channel, Observ
             return invoke2(channel, inputMode, streamContext);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final WidgetVoiceCallInline.Model.VoiceConnected invoke2(Channel channel, MediaEngineConnection.InputMode inputMode, StreamContext streamContext) {
             Intrinsics3.checkNotNullParameter(channel, "p1");
             Intrinsics3.checkNotNullParameter(inputMode, "p2");
@@ -43,7 +43,7 @@ public final class WidgetVoiceCallInline3<T, R> implements Func1<Channel, Observ
         }
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetVoiceCallInline.Model.VoiceConnected> call2(Channel channel) {
         if (channel == null) {
             return new ScalarSynchronousObservable(null);

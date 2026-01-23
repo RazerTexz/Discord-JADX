@@ -3,9 +3,9 @@ package com.discord.widgets.voice.call;
 import android.view.View;
 import com.discord.models.user.User;
 
-/* compiled from: WidgetCallFailed.kt */
-/* renamed from: com.discord.widgets.voice.call.WidgetCallFailed$configureUI$$inlined$let$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetCallFailed$configureUI$$inlined$let$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetCallFailed.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetCallFailed3 implements View.OnClickListener {
     public final /* synthetic */ User $this_configureUI$inlined;
     public final /* synthetic */ WidgetCallFailed this$0;

@@ -30,43 +30,43 @@ import p007b.p109f.p187l.p189b.DefaultZoomableController;
 import p007b.p109f.p187l.p189b.GestureListenerWrapper;
 import p007b.p109f.p187l.p189b.ZoomableController;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ZoomableDraweeView extends DraweeView<GenericDraweeHierarchy> implements ScrollingView {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Class<?> f19628j = ZoomableDraweeView.class;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f19629k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final RectF f19630l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final RectF f19631m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public DraweeController f19632n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public ZoomableController f19633o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public GestureDetector f19634p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f19635q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final ControllerListener f19636r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final ZoomableController.a f19637s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final GestureListenerWrapper f19638t;
 
-    /* renamed from: com.facebook.samples.zoomable.ZoomableDraweeView$a */
+    /* JADX INFO: renamed from: com.facebook.samples.zoomable.ZoomableDraweeView$a */
     public class C10671a extends BaseControllerListener<Object> {
         public C10671a() {
         }
@@ -96,7 +96,7 @@ public class ZoomableDraweeView extends DraweeView<GenericDraweeHierarchy> imple
         }
     }
 
-    /* renamed from: com.facebook.samples.zoomable.ZoomableDraweeView$b */
+    /* JADX INFO: renamed from: com.facebook.samples.zoomable.ZoomableDraweeView$b */
     public class C10672b implements ZoomableController.a {
         public C10672b() {
         }
@@ -125,7 +125,7 @@ public class ZoomableDraweeView extends DraweeView<GenericDraweeHierarchy> imple
         this.f19634p = new GestureDetector(getContext(), gestureListenerWrapper);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8725a(@Nullable DraweeController draweeController, @Nullable DraweeController draweeController2) {
         DraweeController controller = getController();
         if (controller instanceof AbstractDraweeController) {
@@ -138,7 +138,7 @@ public class ZoomableDraweeView extends DraweeView<GenericDraweeHierarchy> imple
         super.setController(draweeController);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m8726b() {
         RectF rectF = this.f19630l;
         ForwardingDrawable forwardingDrawable = getHierarchy().f19511f;

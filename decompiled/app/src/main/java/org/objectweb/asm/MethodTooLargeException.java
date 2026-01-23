@@ -4,7 +4,7 @@ package org.objectweb.asm;
   classes3.dex
   discord-126021.apk:org/objectweb/asm/MethodTooLargeException.SCL.lombok
  */
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MethodTooLargeException extends IndexOutOfBoundsException {
     private static final long serialVersionUID = 6807380416709738314L;
     private final String className;

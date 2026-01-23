@@ -22,20 +22,20 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ChannelMentionNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelMentionNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelMentionNode<T extends RenderContext> extends Node<T> {
     private final long channelId;
 
-    /* compiled from: ChannelMentionNode.kt */
+    /* JADX INFO: compiled from: ChannelMentionNode.kt */
     public interface RenderContext extends BasicRenderContext {
         Function1<Long, Unit> getChannelMentionOnClick();
 
         Map<Long, String> getChannelNames();
     }
 
-    /* compiled from: ChannelMentionNode.kt */
-    /* renamed from: com.discord.utilities.textprocessing.node.ChannelMentionNode$render$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.node.ChannelMentionNode$render$1 */
+    /* JADX INFO: compiled from: ChannelMentionNode.kt */
     public static final class C69751 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Function1 $onClick;
 
@@ -51,7 +51,7 @@ public final class ChannelMentionNode<T extends RenderContext> extends Node<T> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             this.$onClick.invoke(Long.valueOf(ChannelMentionNode.this.getChannelId()));

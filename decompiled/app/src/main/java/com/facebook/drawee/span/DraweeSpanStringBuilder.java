@@ -20,22 +20,22 @@ import p007b.p109f.p132g.p138b.DraweeEventTracker;
 import p007b.p109f.p132g.p139c.BaseControllerListener;
 import p007b.p109f.p132g.p146i.DraweeSpan;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DraweeSpanStringBuilder extends SpannableStringBuilder {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19512j = 0;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Set<DraweeSpan> f19513k = new HashSet();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final C10645b f19514l = new C10645b(null);
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public View f19515m;
 
-    /* renamed from: com.facebook.drawee.span.DraweeSpanStringBuilder$b */
+    /* JADX INFO: renamed from: com.facebook.drawee.span.DraweeSpanStringBuilder$b */
     public class C10645b implements Drawable.Callback {
         public C10645b(C10644a c10644a) {
         }
@@ -73,16 +73,16 @@ public class DraweeSpanStringBuilder extends SpannableStringBuilder {
         }
     }
 
-    /* renamed from: com.facebook.drawee.span.DraweeSpanStringBuilder$c */
+    /* JADX INFO: renamed from: com.facebook.drawee.span.DraweeSpanStringBuilder$c */
     public class C10646c extends BaseControllerListener<ImageInfo> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final DraweeSpan f19517a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f19518b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f19519c;
 
         public C10646c(DraweeSpan draweeSpan, boolean z2, int i) {
@@ -121,7 +121,7 @@ public class DraweeSpanStringBuilder extends SpannableStringBuilder {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m8684a(View view) {
         View view2 = this.f19515m;
         if (view2 != null && view2 == view2) {
@@ -137,7 +137,7 @@ public class DraweeSpanStringBuilder extends SpannableStringBuilder {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m8685b(View view) {
         if (view == this.f19515m) {
             this.f19515m = null;
@@ -151,7 +151,7 @@ public class DraweeSpanStringBuilder extends SpannableStringBuilder {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m8686c(Context context, DraweeHierarchy draweeHierarchy, DraweeController draweeController, int i, int i2, int i3, int i4, boolean z2, int i5) {
         DraweeHolder draweeHolder = new DraweeHolder(draweeHierarchy);
         draweeHolder.m8693g(draweeController);

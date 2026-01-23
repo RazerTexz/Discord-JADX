@@ -1,23 +1,23 @@
 package p007b.p225i.p414e;
 
-/* compiled from: PlanarYUVLuminanceSource.java */
-/* renamed from: b.i.e.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.h, reason: use source file name */
+/* JADX INFO: compiled from: PlanarYUVLuminanceSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PlanarYUVLuminanceSource extends LuminanceSource {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final byte[] f13190c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f13191d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f13192e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f13193f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f13194g;
 
     public PlanarYUVLuminanceSource(byte[] bArr, int i, int i2, int i3, int i4, int i5, int i6, boolean z2) {
@@ -51,7 +51,7 @@ public final class PlanarYUVLuminanceSource extends LuminanceSource {
     }
 
     @Override // p007b.p225i.p414e.LuminanceSource
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public byte[] mo6915a() {
         int i = this.f13186a;
         int i2 = this.f13187b;
@@ -74,7 +74,7 @@ public final class PlanarYUVLuminanceSource extends LuminanceSource {
     }
 
     @Override // p007b.p225i.p414e.LuminanceSource
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public byte[] mo6916b(int i, byte[] bArr) {
         if (i < 0 || i >= this.f13187b) {
             throw new IllegalArgumentException("Requested row is outside the image: ".concat(String.valueOf(i)));

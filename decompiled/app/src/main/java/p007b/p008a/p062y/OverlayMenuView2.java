@@ -8,12 +8,12 @@ import kotlin.jvm.functions.Function4;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: OverlayMenuView.kt */
-/* renamed from: b.a.y.q, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.q, reason: use source file name */
+/* JADX INFO: compiled from: OverlayMenuView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class OverlayMenuView2 extends FunctionReferenceImpl implements Function4<Long, Guild, CallModel, RtcConnection.Quality, OverlayMenuView.C7085a> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final OverlayMenuView2 f2065j = new OverlayMenuView2();
 
     public OverlayMenuView2() {

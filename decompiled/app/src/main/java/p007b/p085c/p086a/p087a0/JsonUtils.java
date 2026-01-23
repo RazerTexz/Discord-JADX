@@ -9,16 +9,16 @@ import java.util.List;
 import p007b.p085c.p086a.p087a0.p088i0.JsonReader2;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: JsonUtils.java */
-/* renamed from: b.c.a.a0.p, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.a0.p, reason: use source file name */
+/* JADX INFO: compiled from: JsonUtils.java */
+/* JADX INFO: loaded from: classes.dex */
 public class JsonUtils {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final JsonReader2.a f2275a = JsonReader2.a.m616a("x", "y");
 
     @ColorInt
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m627a(JsonReader2 jsonReader2) throws IOException {
         jsonReader2.mo603a();
         int iMo609n = (int) (jsonReader2.mo609n() * 255.0d);
@@ -31,7 +31,7 @@ public class JsonUtils {
         return Color.argb(255, iMo609n, iMo609n2, iMo609n3);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static PointF m628b(JsonReader2 jsonReader2, float f) throws IOException {
         int iOrdinal = jsonReader2.mo613u().ordinal();
         if (iOrdinal == 0) {
@@ -75,7 +75,7 @@ public class JsonUtils {
         return new PointF(fM630d * f, fM630d2 * f);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static List<PointF> m629c(JsonReader2 jsonReader2, float f) throws IOException {
         ArrayList arrayList = new ArrayList();
         jsonReader2.mo603a();
@@ -88,7 +88,7 @@ public class JsonUtils {
         return arrayList;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static float m630d(JsonReader2 jsonReader2) throws IOException {
         JsonReader2.b bVarMo613u = jsonReader2.mo613u();
         int iOrdinal = bVarMo613u.ordinal();

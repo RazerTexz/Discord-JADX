@@ -3,9 +3,9 @@ package com.discord.widgets.user.account;
 import kotlin.jvm.functions.Function0;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetUserAccountVerify.kt */
-/* renamed from: com.discord.widgets.user.account.WidgetUserAccountVerify$sam$rx_functions_Func0$0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.account.WidgetUserAccountVerify$sam$rx_functions_Func0$0, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUserAccountVerify.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserAccountVerify5 implements Func0 {
     private final /* synthetic */ Function0 function;
 

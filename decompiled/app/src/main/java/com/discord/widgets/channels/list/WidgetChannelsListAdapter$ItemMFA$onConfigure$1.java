@@ -10,13 +10,13 @@ import p007b.p008a.p018d.AppHelpDesk;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListAdapter$ItemMFA$onConfigure$1 extends Lambda implements Function1<RenderContext, Unit> {
     public static final WidgetChannelsListAdapter$ItemMFA$onConfigure$1 INSTANCE = new WidgetChannelsListAdapter$ItemMFA$onConfigure$1();
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListAdapter$ItemMFA$onConfigure$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListAdapter$ItemMFA$onConfigure$1$1 */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class C74481 extends Lambda implements Function1<View, Unit> {
         public static final C74481 INSTANCE = new C74481();
 
@@ -30,7 +30,7 @@ public final class WidgetChannelsListAdapter$ItemMFA$onConfigure$1 extends Lambd
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             UriHandler uriHandler = UriHandler.INSTANCE;
@@ -50,7 +50,7 @@ public final class WidgetChannelsListAdapter$ItemMFA$onConfigure$1 extends Lambd
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(RenderContext renderContext) {
         Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
         renderContext.m8423b("onClick", C74481.INSTANCE);
